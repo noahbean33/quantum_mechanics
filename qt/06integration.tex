@@ -108,6 +108,32 @@ Let $(M,\Sigma)$ be a measurable space and let $A,A_1,\ldots,A_n\in\mathscr{P}(M
 \item if $s=\sum_{i=1}^n r_i \chi_{A_i}$ is a simple function in its standard form, then $s$ is measurable if, and only if, we have $A_i\in \Sigma$ for all $1\leq i\leq n$.
 \een
 \ep
+
+\bq 
+\ben[label=(\roman*)]
+\item We have $\chi_A : M \to \R$ with possible values $\{0,1\}$. Equipping $\R$ with its Borel $\sigma$-algebra w.r.t. the standard topology, $\sigma(\cO_{\R})$, we have:
+\ben
+\item $(\Rightarrow)$ We have
+\bse 
+A = M\setminus \preim_{\chi_A}([0,1)),
+\ese 
+but $[0,1) \in \sigma(\cO_{\R})$ and so $\preim_{\chi_A}([0,1))\in \Sigma.$ Then by property (ii) of a $\sigma$-algebra $E\in\Sigma$.
+\item $(\Leftarrow)$  Let $\alpha = [1,\infty)$, $\beta = (-\infty, 0)$ and $\gamma = [0,1]$. Clearly $\alpha,\beta,\gamma \in \sigma(\cO_{\R})$ and $\alpha\cup\beta\cup\gamma = \R$. Then 
+\bi{rCl}
+\preim_{\chi_A}(\alpha) & = & A, \\
+\preim_{\chi_A}(\beta) & = & \varnothing, \\
+\preim_{\chi_A}(\gamma) & = & M,
+\ei 
+all of which are measurable sets on $M$ and so $\chi_A$ is measurable.
+\een 
+\item First define $\widetilde{\chi}_{A_i} := r_i\chi_{A_i}$, which satisfies 
+\bse
+\widetilde{\chi}_{A_i}(m) = \begin{cases} r_i & \text{if } m\in A_i\\ 0& \text{if } m\notin A_i.\end{cases}
+\ese
+As $s$ is in its standard form we know $\widetilde{\chi}_{A_i} \cap \widetilde{\chi}_{A_j} = \varnothing$ for all $i\neq j$. Combining these two things, and defining $\alpha_i = [r_i,\infty)$, $\gamma_i = [0,r_i]$, the result follow from part (i).
+\een 
+\eq 
+
 \subsection{Integration of non-negative measurable simple functions}
 
 We begin with the definition of the integral of a non-negative, measurable, simple function.
@@ -143,6 +169,7 @@ Let $(M,\Sigma,\mu)$ be a measure space. Let $s$ and $t$ be non-negative, measur
 \el
 
 \bp
+\label{prp:MeasureIntegral}
 Let $(M,\Sigma,\mu)$ be a measure space and let $s=\sum_{i=1}^n r_i \chi_{A_i}$ be a non-negative, measurable, simple function $M\to \R$ not necessarily in its standard form. Then
 \bse
 \int_M\!s\,\d\mu = \sum_{i=1}^nr_i\mu(A_i).
@@ -322,10 +349,10 @@ Then, $\{s_n\}_{n\in\N}$ is an increasing sequence of non-negative, measurable, 
 \bse
 \int_{\N}\! f \,\d \mu =\lim_{n\to\infty}\int_{\N}\! s_n \, \d \mu = \lim_{n\to\infty}\sum_{i=0}^nf(i)\mu(\{i\}) = \sum_{i=0}^{\infty}f(i).
 \ese
-If you every wondered why series seem to share so many properties with integrals, the reason is that series are just integrals with respect to a discrete measure.
+If you ever wondered why series seem to share so many properties with integrals, the reason is that series are just integrals with respect to a discrete measure.
 \ee
 
-The monotone convergence theorem can be used to extend some of properties of integrals of non-negative, measurable simple functions to non-negative, measurable functions which are not-necessarily simple.
+The monotone convergence theorem can be used to extend some of the properties of integrals of non-negative, measurable simple functions to non-negative, measurable functions which are not-necessarily simple.
 
 \bl
 Let $(M,\Sigma,\mu)$ be a measure space, let $f,g\cl M\to \overline{\R}$ be non-negative, measurable functions and let $c\in [0,\infty)$. Then
@@ -735,6 +762,7 @@ and hence $f+g \in \mathscr{L}_{\C}^2$.\qedhere
 Ideally, we would like to turn all these $\mathscr{L}^p$ space into Banach spaces. Let us begin by equipping them with a weaker piece of extra structure.
 
 \bp
+\label{prp:NormLp}
 Let $(M,\Sigma,\mu)$ be a measure space and let $p\in[0,\infty]$. Then, the maps $\|\cdot\|_p\cl \mathscr{L}^p\to\R$ defined by
 \bse
 \|f\|_p:=
@@ -833,6 +861,12 @@ Hence, if $[f]\in L^p$ and $[g]\in L^q$, with  $\tfrac{1}{p}+\tfrac{1}{q}=1$ , t
 \bse
 \|[fg]\|_1\leq\|[f]\|^p\|[g]\|^q.
 \ese
+
+The equality holds if and only if $|f|^p$ and $|g|^q$ are linearly \emph{dependent} on $L^1$. That is, there exists non-negative real numbers $\alpha,\beta\in\R$ such that 
+\bse 
+\alpha |f|^p =_{a.e.} \beta |g|^q
+\ese 
+Note it is clear that $\alpha$ and $\beta$ cannot both vanish. 
 
 \bt
 The spaces $L^p$ are Banach spaces for all $p\in[0,\infty]$.

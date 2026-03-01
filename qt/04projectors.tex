@@ -67,7 +67,7 @@ Hence, by (the finite-dimensional) Pythagoras' theorem
 & = & \biggl\|\psi_{\perp}+\sum_{i=0}^n(\langle e_i | \psi \rangle -\gamma_i)e_i \biggr\|^2\\
 & = & \|\psi_{\perp}\|^2+\sum_{i=0}^n|\langle e_i | \psi \rangle -\gamma_i|^2
 \ei
-and thus $\|\psi-\gamma\| \geq \|\psi_{\perp}\|$ since $|\langle e_i | \psi \rangle -\gamma_i|^2>0$ for all $0\leq i\leq n$. Moreover, we have equality if, and only if, $|\langle e_i | \psi \rangle -\gamma_i|=0$ for all $0\leq i\leq n$, that is $\gamma = \psi_{\myparallel}$.
+and thus $\|\psi-\gamma\| \geq \|\psi_{\perp}\|$ since $|\langle e_i | \psi \rangle -\gamma_i|^2\geq 0$ for all $0\leq i\leq n$. Moreover, we have equality if, and only if, $|\langle e_i | \psi \rangle -\gamma_i|=0$ for all $0\leq i\leq n$, that is $\gamma = \psi_{\myparallel}$.
 \een
 
 To extend this to a countably infinite orthonormal set $\{e_i\}_{i\in \N}$, note that by part (b) and Bessel's inequality, we have
@@ -88,14 +88,14 @@ We will often be interested in looking at linear subspaces of a Hilbert space $\
 \bse
 \forall \, \psi,\varphi\in\mathcal{M}:\forall \, z\in \C : \ z\psi+\varphi\in \mathcal{M}.
 \ese
-Note that while every linear subspace $\mathcal{M}\subset \mathcal{H}$ inherits the inner product on $\mathcal{H}$ to become an inner product space, it may fail to be complete with respect to this inner product. In other words, non every linear subspace of a Hilbert space is necessarily a sub-Hilbert space.
+Note that while every linear subspace $\mathcal{M}\subset \mathcal{H}$ inherits the inner product on $\mathcal{H}$ to become an inner product space, it may fail to be complete with respect to this inner product. In other words, not every linear subspace of a Hilbert space is necessarily a sub-Hilbert space.
 
 The following definitions are with respect to the norm topology on a normed space and can, of course, be given more generally on an arbitrary topological space.
 
 \bd
 Let $\mathcal{H}$ be a normed space. A subset $\mathcal{M}\subset \mathcal{H}$ is said to be \emph{open}\index{open set} if
 \bse
-\forall \, \psi \in \mathcal{M} : \exists \, r>0 : \forall \, \varphi\in \mathcal{H} : \ \|\psi-\varphi\|<\varepsilon \, \Rightarrow\, \varphi\in\mathcal{M}.
+\forall \, \psi \in \mathcal{M} : \exists \, r>0 : \forall \, \varphi\in \mathcal{H} : \ \|\psi-\varphi\|<r \, \Rightarrow\, \varphi\in\mathcal{M}.
 \ese
 \ed
 Equivalently, by defining the \emph{open ball} of radius $r>0$ and centre $\psi\in\mathcal{H}$
@@ -145,6 +145,7 @@ is called the \emph{orthogonal complement}\index{orthogonal complement} of $\mat
 \ed
 
 \bp
+\label{prp:ClosedOrthogonal}
 Let $\mathcal{M}\subseteq\mathcal{H}$ be a linear subspace of $\mathcal{H}$. Then, $\mathcal{M}^{\perp}$ is a closed linear subspace of $\mathcal{H}$.
 \ep
 
@@ -153,7 +154,7 @@ Let $\psi_1,\psi_2\in\mathcal{M}^{\perp}$ and $z\in \C$. Then, for all $\varphi\
 \bse
 \langle\varphi|z\psi_1+\psi_2\rangle = z\langle\varphi|\psi_1\rangle +\langle\varphi|\psi_2\rangle =0 
 \ese
-and hence $z\psi_1+\psi_2\in\mathcal{M}$. Thus, $\mathcal{M}^{\perp}$ is a linear subspace of $\mathcal{H}$. It remains to be shown that it is also closed. Define the maps
+and hence $z\psi_1+\psi_2\in\mathcal{M}^{\perp}$. Thus, $\mathcal{M}^{\perp}$ is a linear subspace of $\mathcal{H}$. It remains to be shown that it is also closed. Define the maps
 \bi{rrCl}
 f_{\varphi}\cl & \mathcal{H} & \to & \C\\
 &\psi & \mapsto & \langle \varphi | \psi \rangle .
@@ -165,11 +166,49 @@ Then, we can write
 Since the inner product is continuous (in each slot), the maps $f_{\varphi}$ are continuous. Hence, the pre-images of closed sets are closed. As the singleton $\{0\}$ is closed in the standard topology on $\C$, the sets $\preim_{f_{\varphi}}(\{0\})$ are closed for all $\varphi\in \mathcal{M}$. Thus, $\mathcal{M}^{\perp}$ is closed since arbitrary intersections of closed sets are closed.
 \eq
 
+\br 
+Note that $\cM^{\perp}$ is also not open (which is not necessarily the same as closed). To clarify, equally the preimage of $\{0\}$ is an open set (as $\{0\}$ is open), however it is only \textit{finite} intersections of open sets that are open. So the inclusion of the intersection plays an important role. 
+\er 
+
 Note that by Pythagoras' theorem, we have the decomposition
 \bse
 \mathcal{H}=\mathcal{M}\oplus\mathcal{M}^{\perp}:=\{\psi+\varphi\mid\psi\in\mathcal{M},\varphi\in\mathcal{M}^{\perp}\}
 \ese
 for any closed linear subspace $\mathcal{M}$.
+
+\bp
+For any closed linear subspace $X\subset \cH$ its true that $X^{\perp\perp}=X$.
+\ep
+
+\bq 
+Let $x\in X$, then for all $y\in X^{\perp}$ we have $\la x,y\ra = 0$ and so $x\in X^{\perp\perp}$. This gives $X\subseteq X^{\perp\perp}$.\\
+Now consider $z\in X^{\perp\perp}$. As $X$ is closed from the above note we know it can be decomposed as $z = x + y$ for $x\in X$ and $y\in X^{\perp}$. We then have 
+\bi{rCl} 
+0 & = & \la y,z \ra \\
+& = & \la y, x + y \ra \\
+& = & \la y,x\ra + \la y,y\ra \\
+& = & \|y\|^2 \\
+\implies y & = & 0 
+\ei 
+where the last step comes from the definiteness of $\|\cdot\|$. So we have $z\in X$ and $X^{\perp\perp}\subseteq X$.
+\eq 
+
+\bp 
+\label{prp:DoubleOrthogonalClosed}
+For any linear subspace $\cM\subseteq \cH$ it is true that $\cM^{\perp\perp} = \overline{\cM}$, where the latter is the topological closure of the set.
+\ep 
+
+\bq
+We start with two observations: 
+\ben[label=(\roman*)]
+\item $\cM \subseteq \cM^{\perp\perp}$, which was shown at the start of the last proof (as there was no use of the fact that $X$ was closed there.
+\item If $\cM_1 \subseteq \cM_2$ then $\cM_2^{\perp} \subseteq \cM_1^{\perp}$, which can be shown easily.
+\een 
+First let's show that $\cM^{\perp\perp}\subseteq \overline{\cM}$. Clearly $\cM\subseteq \overline{\cM}$ (where the equality hold only if $\cM$ is closed), and so from (ii) we have $\overline{\cM}^{\perp}\subseteq \cM^{\perp}$, which in turn gives $\cM^{\perp\perp} \subseteq \overline{\cM}^{\perp\perp}$. But $\overline{\cM}$ is closed and so from the previous proposition we have $\cM^{\perp\perp} \subseteq \overline{\cM}$.
+
+Now we need to show the reverse inclusion. From \Cref{prp:ClosedOrthogonal} we know that $\cM^{\perp\perp}$ is closed. Then (i) instantly tells us that $\overline{\cM}\subseteq \cM^{\perp\perp}$.
+\eq 
+
 \bd
 Let $\mathcal{M}$ be a closed linear subspace of a separable Hilbert space $\mathcal{H}$ and fix some orthonormal basis of $\mathcal{M}$. The map
 \bi{rrCl}
@@ -195,7 +234,7 @@ Let $\{e_i\}_{i\in I}$ and $\{e_i\}_{i\in J}$ be bases of $\mathcal{M}$ and $\ma
 \item Let $\psi\in\mathcal{H}$. Then
 \bi{rCl}
 \mathrm{P}_{\!\mathcal{M}}(\mathrm{P}_{\!\mathcal{M}} \psi )& := & \mathrm{P}_{\!\mathcal{M}}\biggl(\sum_{\,i\in I}\langle e_i|\psi\rangle e_i\biggr)\\
-& ;= & \sum_{j\in I}\biggl\langle e_j \,\bigg|\, \sum_{i\in I}\langle e_i|\psi\rangle e_i\biggr\rangle e_j\\
+& := & \sum_{j\in I}\biggl\langle e_j \,\bigg|\, \sum_{i\in I}\langle e_i|\psi\rangle e_i\biggr\rangle e_j\\
 & = & \sum_{j\in I}\sum_{i\in I}\langle e_i|\psi\rangle\langle e_j |  e_i \rangle e_j\\
 & = & \sum_{i\in I}\langle e_i|\psi\rangle e_i\\
 & =: & \mathrm{P}_{\!\mathcal{M}} \psi.

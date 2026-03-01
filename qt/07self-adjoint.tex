@@ -217,7 +217,11 @@ Since $\psi$ and $\alpha$ above are ``dummy variables'', and the order of quanti
 \bse
 \forall \, \psi \in\mathcal{D}_{A} : \forall \, \alpha \in \mathcal{D}_{A^*} : \  \langle \alpha | A\psi \rangle =  \langle A^* \alpha | \psi \rangle.
 \ese
-By letting $\eta:=A^*\psi$ in the definition of $\mathcal{D}_{A^{**}}$, we see that $\mathcal{D}_{A}\subseteq\mathcal{D}_{A^{**}}$. Moreover, by definition, $A^{**}\psi:=\eta := A\psi$, and thus $A\subseteq A^{**}$.
+Then, taking the conjugate on both inner product terms and moving them across the equal sign, we have 
+\bse
+\forall \, \psi \in\mathcal{D}_{A} : \forall \, \alpha \in \mathcal{D}_{A^*} : \   \langle \psi | A^* \alpha \rangle = \langle A\psi | \alpha \rangle.
+\ese
+Now, letting $\eta:=A\psi \in \cH$ we see that $\psi \in \cD_{A^{**}}$, and so $\mathcal{D}_{A}\subseteq\mathcal{D}_{A^{**}}$. Moreover, by definition, $A^{**}\psi:=\eta := A\psi$ for all $\psi\in A$, and thus $A\subseteq A^{**}$.
 \eq
 
 \bc
@@ -237,6 +241,39 @@ Let $A$ be a densely defined operator.
 \item If $A$ is invertible and closable and $\overline{A}$ is injective, then $\overline{A^{-1}}=\overline{A}^{\,-1}$.
 \een
 \et
+
+These theorems are proved using a graphical formulation which has not been presented here, so in order to save space all the proofs are not given. However as a example of the technique, we shall provide the proof for $(i)$.\footnote{Many thanks to Alfredo Sepulveda-Ximenez for providing  \href{https://www.quora.com/Why-is-the-adjoint-of-a-densely-defined-operator-always-closed-How-do-we-know-that-A-even-exists-if-we-only-know-A-is-densely-defined-and-not-necessarily-closable}{a brilliant answer to this on Quora}.}
+
+\bq 
+Let $\cH$ and $\cK$ be two Hilbert spaces and let $A:\cH\to\cK$ be densely defined. We define the \emph{graph} of $A$ as 
+\bse 
+\Gamma(A) := \{ (h,Ah)\, | \, h\in \cD_{\cH}\}.
+\ese 
+In this context, we say $A$ is closed if and only if $\Gamma(A)$ is closed w.r.t. the product topology on $\cH\oplus\cK$. Next define the operator
+\bi{rrCl}
+\cJ  \cl & \cH\oplus \cK & \to & \cH \oplus \cK \\
+& h \oplus k & \mapsto & (-k) \oplus h.
+\ei 
+
+We now wish to show that $\Gamma(A^*) \cong [\cJ(\Gamma(A))]^{\perp}$, as the right hand side is closed due to the orthogonal projection, which gives us that $A^*$ is closed. 
+
+\ben 
+\item[$(\Rightarrow$)] Let $x\in\cD_A$ and  $y\in\cD_{A^*}$. We have $y\oplus A^*(y) \in \Gamma(A^*)$, and 
+\bi{rCl}
+\la y \oplus A^*(y) , \cJ (x \oplus A(x) \ra & = & \la y \oplus A^*(y), -A(x) \oplus x \ra \\
+& = & - \la y, A(x) \ra + \la A^*(y), x\ra \\
+& = & - \la y, A(x) \ra + \la y, A(x) \ra \\
+& = & 0
+\ei 
+and so $\Gamma(A^*) \se  [\cJ(\Gamma(A))]^{\perp}$.
+\item[$(\Leftarrow)$] Let $x\in\cD_A$ and $y\oplus z \in [\cJ(\Gamma(A))]^{\perp}$. Then, 
+\bi{rCl}
+\la y \oplus z , -A(x) \oplus x\ra & = & 0 \\
+\therefore \quad \la y, A(x) \ra & = &  \la z, x \ra, 
+\ei 
+which, from the definition of the adjoint, tells us that $y\in\cD_{A^*}$ and $z = A^*(y)$ and so $y\oplus z \in \Gamma(A^*)$ and $[\cJ(\Gamma(A))]^{\perp} \se \Gamma(A^*)$.
+\een 
+\eq 
 
 \subsection{Essentially self-adjoint operators}
 
@@ -283,7 +320,7 @@ Let $A$ be a densely defined operator. The \emph{defect indices}\index{defect in
 \bse
 d_+:=\dim (\ker(A^*-\mathrm{i})) , \qquad \quad d_- :=\dim (\ker (A^*+\mathrm{i})),
 \ese
-where by $A^*\pm\mathrm{i}$ we mean, of course, $A^*\pm\mathrm{i}\cdot\id_{\mathcal{D}_A}$.
+where by $A^*\pm\mathrm{i}$ we mean, of course, $A^*\pm\mathrm{i}\cdot\id_{\mathcal{D}_{A^*}}$.
 \ed
 
 \bt
@@ -326,7 +363,7 @@ Since $\beta\in\mathcal{D}_A$ was arbitrary and $\ran(A+z)=\mathcal{H}$, we have
 \bse
 \forall \, \varphi \in \mathcal{H} : \quad \langle \psi | \varphi\rangle= \langle \alpha | \varphi \rangle.
 \ese
-Hence, by positive-definiteness of the inner product, we have $\psi\in\alpha$, thus $\psi\in\mathcal{D}_A$ and therefore, $A^*\subseteq A$.
+Hence, by positive-definiteness of the inner product, we have $\psi=\alpha$, thus $\psi\in\mathcal{D}_A$ and therefore, $A^*\subseteq A$.
 \eq
 
 
@@ -340,6 +377,7 @@ A symmetric operator $A$ is essentially self-adjoint if, and only if,
 The following criterion for essential self-adjointness, which does require the calculation of $A^*$, is equivalent to the previous result and, in some situations, it can be easier to check.
 
 \bt
+\label{thrm:SymmetricEssentialSelfAdjoint}
 A symmetric operator $A$ is essentially self-adjoint if, and only if,
 \bse
 \exists \, z\in \C\setminus \R : \ \ker(A^*+z)=\{0\}=\ker(A^*+\overline{z}). 
@@ -347,37 +385,16 @@ A symmetric operator $A$ is essentially self-adjoint if, and only if,
 \et
 
 \bq
-We show that this is equivalent to the previous condition. Recall that if $\mathcal{M}$ is a linear subspace of $\mathcal{H}$, then $\mathcal{M}^{\perp}$ is closed and hence, $\mathcal{M}^{\perp\perp}=\overline{M}$. Thus, by \Cref{prp:kerran}, we have
+We show that this is equivalent to the previous condition. Recall that if $\mathcal{M}$ is a linear subspace of $\mathcal{H}$, then $\mathcal{M}^{\perp}$ is closed and hence, $\mathcal{M}^{\perp\perp}=\overline{\cM}$ (\Cref{prp:DoubleOrthogonalClosed}). Thus, by \Cref{prp:kerran}, we have
 \bse
 \overline{\ran(A+z)}  =  \ran(A+z)^{\perp\perp}
  =  \ker(A^*+\overline{z})^{\perp}
 \ese
 and, similarly,
 \bse
-\overline{\ran(A+z)} = \ker(A^*+z).
+\overline{\ran(A+\overline{z})} = \ker(A^*+z)^{\perp}.
 \ese
 Since $\mathcal{H}^{\perp}=\{0\}$, the above condition is equivalent to
 \bse\overline{\ran(A+z)}=\mathcal{H}=\overline{\ran(A+\overline{z})}.\qedhere
 \ese
 \eq
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -47,7 +47,7 @@ A \emph{normed space}\index{normed space} is a (complex) vector space $(V,+,\cdo
 \een
 for all $f,g\in V$ and all $z\in \C$.
 \ed}
-One we have a norm $\|\cdot\|$ on $V$, we can define a metric $d$ on $V$ by 
+Once we have a norm $\|\cdot\|$ on $V$, we can define a metric $d$ on $V$ by 
 \bse
 d(f,g) := \|f-g\|.
 \ese
@@ -124,11 +124,11 @@ We seek an $f\in C^0_\C[0,1]$ such that $\displaystyle \lim_{n\to\infty}f_n=f$. 
 \ben[label=(c.\roman*)]
 \item Fix $y\in [0,1]$ and $\varepsilon >0$. By definition of supremum, we have
 \bse
-f_n(y) -f_m(y) \leq \sup_{x\in[0,1]}|f_n(x)-f_m(x)| =: \|f_n-f_m\|_{\infty}.
+|f_n(y) -f_m(y)| \leq \sup_{x\in[0,1]}|f_n(x)-f_m(x)| =: \|f_n-f_m\|_{\infty}.
 \ese
 Hence, there exists $N\in \N$ such that
 \bse
-\forall \, n,m \geq N : \ f_n(y) -f_m(y)<\varepsilon,
+\forall \, n,m \geq N : \ |f_n(y) -f_m(y)|<\varepsilon,
 \ese
 that is, the sequence of complex numbers $\{f_n(y)\}_{n\in \N}$ is a Cauchy sequence. Since $\C$ is a complete metric space\footnote{The standard metric on $\C$ is induced by the modulus of complex numbers.}, there exists $z_y\in\C$ such that $\displaystyle \lim_{n\to \infty}f_n(y)=z_y$. 
 
@@ -173,7 +173,7 @@ Since $x_0\in[0,1]$ was arbitrary, we have $f\in C^0_\C[0,1]$.
 \ei
 Since $\{f_n\}_{n\in\N}$ is Cauchy by assumption, there exists $N_1\in \N$ such that
 \bse
-\forall \, n,m\geq N : \ \|f_n-f_m\|_{\infty} < \tfrac{\varepsilon}{2}.
+\forall \, n,m\geq N_1 : \ \|f_n-f_m\|_{\infty} < \tfrac{\varepsilon}{2}.
 \ese
 Moreover, since $f$ is the pointwise limit of $\{f_n\}_{n\in\N}$, for each $x\in[0,1]$ there exists $N_2\in \N$ such that
 \bse
@@ -359,6 +359,7 @@ Note that by taking $\{z_n\}_{n\in\N}$ to be the constant sequence whose terms a
 This lemma will take care of some of the technicalities involved in proving the following crucially important result.
 
 \begin{theorem}
+\label{thrm:BoundedLinearOperatorsBanach}
 The set $\mathcal{L}(V,W)$ of bounded linear operators from a normed space $(V,\|\cdot\|_V)$ to a Banach space $(W,\|\cdot\|_W)$, equipped with pointwise addition and scalar multiplication and the operator norm, is a Banach space.
 \end{theorem}
 

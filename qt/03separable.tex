@@ -8,7 +8,7 @@ A Hilbert space is a vector space $(\mathcal{H},+,\cdot)$ equipped with a sesqui
 & f & \mapsto & \sqrt{\langle f|f\rangle}.
 \ei
 
-Recall that a sesqui-linear inner product on $\mathcal{H}$ is a map $\langle\cdot|\cdot\rangle\cl \mathcal{H} \times \mathcal{H} \to \mathcal{H}$ which is conjugate symmetric, linear in the second argument and positive-definite. Note that conjugate symmetry together with linearity in the second argument imply conjugate linearity in the first argument:
+Recall that a sesqui-linear inner product on $\mathcal{H}$ is a map $\langle\cdot|\cdot\rangle\cl \mathcal{H} \times \mathcal{H} \to \C$ which is conjugate symmetric, linear in the second argument and positive-definite. Note that conjugate symmetry together with linearity in the second argument imply conjugate linearity in the first argument:
 \bi{rCl}
 \langle z\psi_1+\psi_2|\varphi\rangle & = & \overline{\langle \varphi| z\psi_1+\psi_2\rangle }\\
 & = & \overline{z\langle \varphi| \psi_1\rangle+\langle \varphi| \psi_2\rangle }\\
@@ -42,7 +42,7 @@ Then, by positive-definiteness of $\langle\cdot|\cdot\rangle$, we have
 \ei
 By rearranging, since $\langle f | f \rangle >0$, we obtain the desired inequality.
 \eq
-Note that, by defining $\|f\|:=\sqrt{\langle f | f \rangle }$, we can write the Cauchy-Schwarz inequality as
+Note that, by defining $\|f\|:=\sqrt{\langle f | f \rangle }$, and using the fact that $|\la f|g\ra | \geq 0$, we can write the Cauchy-Schwarz inequality as
 \bse
 |\langle f | g \rangle | \leq \|f\|\|g\|.
 \ese
@@ -344,7 +344,7 @@ Inner products on a vector space are sequentially continuous.
 \bq
 Let $\langle\cdot|\cdot\rangle$ be an inner product on $V$. Fix $\varphi\in V$ and let $\displaystyle\lim_{n\to \infty}\psi_n=\psi$. Then
 \bi{rCl}
-|\langle\varphi|\psi_n\rangle-\varphi|\psi\rangle| & = & |\langle\varphi|\psi_n-\psi\rangle|\\
+|\langle\varphi|\psi_n\rangle-\langle \varphi|\psi\rangle| & = & |\langle\varphi|\psi_n-\psi\rangle|\\
 & \leq & \|\varphi\|\|\psi_n-\psi\|
 \ei
 and hence $\displaystyle\lim_{n\to \infty}\langle\varphi|\psi_n\rangle=\langle\varphi|\psi\rangle$.
@@ -612,7 +612,7 @@ Note that a map $U\cl\mathcal{H}\to\mathcal{G}$ is called an \emph{isometry}\ind
 \bse
 \forall \, \psi \in \mathcal{H} : \ \|U\psi\|_{\mathcal{G}} = \|\psi\|_{\mathcal{H}}.
 \ese
-Linear isometries are, of course, the structure-preserving maps between normed spaces. We have shown that every unitary map is an isometry has unit operator norm, whence the name \emph{unitary operator}. 
+Linear isometries are, of course, the structure-preserving maps between normed spaces. We have shown that every unitary map is an isometry has unit operator norm, hence the name \emph{unitary operator}. 
 
 \be
 Consider the set of all \emph{square-summable} complex sequences

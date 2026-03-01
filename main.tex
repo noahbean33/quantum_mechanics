@@ -23,7 +23,11 @@
 
 \usepackage{amsmath,amssymb,amsthm,mathrsfs,amsfonts,xfrac,pifont} % For including math equations, theorems, symbols, etc
 
+\usepackage{bbold}
+
 \usepackage{cleveref} % More descriptive referencing
+
+\usepackage{physics}
 
 %page margins and paragraph indentation
 %\usepackage{geometry}
@@ -41,7 +45,7 @@
 \usepackage[retainorgcmds]{IEEEtrantools}
 \usepackage{etoolbox}
 %\usepackage{mathtools}
-\usepackage{emerald,xcolor,tikz}
+\usepackage{xcolor,tikz}
 \definecolor{lightergray}{rgb}{0.9,0.9,0.9}
 
 \usepackage{siunitx}
@@ -53,13 +57,105 @@
 \usetikzlibrary{positioning}
 %\tikzset{every picture/.style={remember picture}}
 \tikzset{>=stealth}
+\usepackage{pgfplots}
+\usetikzlibrary{patterns}
+
 
 \usepackage{cancel}
 \newcommand\Ccancel[2][black]{\renewcommand\CancelColor{\color{#1}}\cancel{#2}}
 
+\newcommand*\Laplace{\mathop{}\!\mathbin\bigtriangleup}
+
+\usepackage{scalerel,stackengine}
+\stackMath
+\newcommand\reallywidehat[1]{%
+\savestack{\tmpbox}{\stretchto{%
+  \scaleto{%
+    \scalerel*[\widthof{\ensuremath{#1}}]{\kern-.6pt\bigwedge\kern-.6pt}%
+    {\rule[-\textheight/2]{1ex}{\textheight}}%WIDTH-LIMITED BIG WEDGE
+  }{\textheight}% 
+}{0.5ex}}%
+\stackon[1pt]{#1}{\tmpbox}%
+}
+
 \makeatletter
 \patchcmd{\@IEEEeqnarray}{\relax}{\relax\intertext@}{}{}
 \makeatother
+
+\makeatletter
+\newcommand*{\boxwedge}{%
+  \mathbin{%
+    \mathpalette\@boxwedge{}%
+  }%
+}
+\newcommand*{\@boxwedge}[2]{%
+  % #1: math style
+  % #2: unused
+  \sbox0{$#1\boxplus\m@th$}%
+  \dimen2=.5\dimexpr\wd0-\ht0-\dp0\relax % side bearing
+  \dimen@=\dimexpr\ht0+\dp0\relax
+  \def\lw{.06}% linw width as factor for height of \boxplus
+  \kern\dimen2 % side bearing
+  \tikz[
+    line width=\lw\dimen@,
+    line join=round,
+    x=\dimen@,
+    y=\dimen@,
+  ]
+  \draw
+    (\lw/2,0) rectangle (1-\lw,1-\lw)
+    (\lw,0) -- (.5,1-\lw-\lw/2) -- (1-\lw-\lw/2 ,0)
+  ;%
+  \kern\dimen2 % side bearing
+}
+\makeatletter
+
+\makeatletter
+\newcommand*{\owedge}{%
+  \mathbin{%
+    \mathpalette\@owedge{}%
+  }%
+}
+\newcommand*{\@owedge}[2]{%
+  % #1: math style
+  % #2: unused
+  \sbox0{$#1\oplus\m@th$}%
+  \dimen2=.5\dimexpr\wd0-\ht0-\dp0\relax % side bearing
+  \dimen@=\dimexpr\ht0+\dp0\relax
+  \def\lw{.04}% line width as factor for height of \oplus
+  \def\radius{.5-\lw/2}%
+  \kern\dimen2 % side bearing
+  \tikz[
+    line width=\lw\dimen@,
+    line join=round,
+    x=\dimen@,
+    y=\dimen@,
+    baseline=\dimexpr-.5\dimen@+\dp0\relax,
+  ]
+  \draw
+    (0,0) circle[radius=\radius]
+    % -36.87 = -90 + 2 atan(1/2)
+    % 216.87 = 180 + 36.87
+    (225:\radius) -- (0,.5-\lw) -- (-45:\radius)
+  ;%
+  \kern\dimen2 % side bearing  
+}
+\makeatother
+
+\newcommand{\squig}{{\scriptstyle\sim\mkern-3.9mu}}
+\newcommand{\lsquigend}{{\scriptstyle\lhd\mkern-3mu}}
+\newcommand{\rsquigend}{{\scriptstyle\rule{.1ex}{0ex}\rhd}}
+\newcounter{sqindex}
+\newcommand\squigs[1]{%
+  \setcounter{sqindex}{0}%
+  \whiledo {\value{sqindex}< #1}{\addtocounter{sqindex}{1}\squig}%
+}
+\newcommand\rsquigarrow[2]{%
+  \mathbin{\stackon[2pt]{\squigs{#2}\rsquigend}{\scriptscriptstyle\text{#1\,}}}%
+}
+\newcommand\lsquigarrow[2]{%
+  \mathbin{\stackon[2pt]{\lsquigend\squigs{#2}}{\scriptscriptstyle\text{\,#1}}}%
+}
 
 \usepackage{wrapfig}
 \usepackage{textcomp}
@@ -167,7 +263,7 @@ colorlinks=true, linkcolor=black, breaklinks=true,
 bookmarksnumbered=true,
 %urlcolor=webbrown, linkcolor=RoyalBlue, citecolor=webgreen, % Link colors
 pdftitle={Schuller's Lectures on Quantum Theory}, % PDF title
-pdfauthor={Frederic P. Schuller, Simon Rea}, % PDF Author
+pdfauthor={Frederic P. Schuller, Simon Rea, Richie Dadhley}, % PDF Author
 pdfsubject={}, % PDF Subject
 pdfkeywords={}, % PDF Keywords
 pdfencoding=unicode, %
@@ -280,11 +376,52 @@ pdfcreator={pdfLaTeX/Overleaf}, % PDF Creator
 \input{qt/11spectral}
 \newpage
 
+\section{Stone's Theorem and Construction of Observables}
+\input{qt/12stonestheorem}
+\newpage
+
+\section{Spin}
+\input{qt/13spin}
+\newpage
+
+\section{Composite Systems}
+\input{qt/14compositesystems}
+\newpage
+
+\section{Total Spin of Composite System}
+\input{qt/15totalspincomposite}
+\newpage
+
+\section{Quantum Harmonic Oscillator}
+\input{qt/16qho}
+\newpage
+
+\section{Measurements of Observables}
+\input{qt/17measurements}
+\newpage
+
+\section{The Fourier Operator}
+\input{qt/18fourieroperator}
+\newpage
+
+\section{The Schrodinger Operator}
+\input{qt/19schrodingeroperator}
+\newpage
+
+\section{Periodic Potentials}
+\input{qt/20periodicpotentials}
+\newpage
+
+\section{Relativistic Quantum Mechanics}
+\input{qt/21RelativisticQM}
+\newpage
+
+
 \section*{Further readings}
 \addcontentsline{toc}{section}{Further readings}
 \input{biblio}
 \newpage
 
- \printindex
+%\printindex
 
 \end{document}
