@@ -1,0 +1,420 @@
+00:00:01
+[Music] so welcome to the final lecture of this series and um today I would like to point out where the subject is taken or was actually taken 100 years ago um because when quantum mechanics proper was born by schinger and then dck and Heisenberg and so on there was already the first re evolution in physics of that Century already had taken place Nam relativity and um so what we will do today uh we'll look at quantum mechanics in a relativistic context and uh that is a huge subject but in fact um it could be that only
+
+00:00:50
+small modifications to the existing formalism and equations would be necessary you add an extra term that extra term takes care of the relativistic effects well nothing could be further from the truth Quantum and relativistic quantum mechanics it turns out will be crucially different from non-relativistic quantum mechanics and today we'll discover also in a technical sense why and um so if we follow that route we first come to the kleang Gordon equation and then made D equation and so on that's all peanuts but then one
+
+00:01:23
+realizes that these equations so if you make the Shing equation relativistic this equation is no longer no longer has a probability interpretation so you know one thing is to have the dynamical equation that carries the solution or the the state forward and uh but the other thing is you must be able to interpret that physically and that miserably fails and in the beginning this was quite a puzzle but of course uh we can pinpoint exactly where it fails and why it must fail and there is no relativistic quantum
+
+00:01:58
+mechanics in the type of the in equation even with modifications the so-called kle Gordon equation and the D equation they are not solid quantum mechanical equations one is forced to go to Quantum field Theory so this is where the whole subject is going now um let's however review a little um so let's say start first with um heuristic deviation of the shinger equation so we go back to something we actually cast into an axium remember axium 4 was essentially the sheringer equation expressed in terms of
+
+00:02:46
+the um of a state row now it's easy to write down an axum but the question is how do you get there and the thinking goes as follows so shinger recognized now one can think about why that is true but we're not going to into that uh shuring are recognized that replacing the energy wherever it appears by my by plus I H Bar D by DT sorry I should say replace by and replacing the momentum in the eighth Direction so say in a three-dimensional space a is 1 2 3 replacing this by minus IH bar in the
+
+00:03:39
+direction of the eighth component this is the the T component of a of a wave function family that replacing e by that and P by that where in the energy momentum relation well the energy momentum relation of non-relativistic mechanics of non-relativistic mechanics and what is that well you know this is uh the total energy e is the kinetic energy so that's p^ 2 / 2 M plus the potential energy and making thereby a differential equation or differential operator yields the shinger equation so you do that on the left hand
+
+00:04:38
+side you get i h Bar D by DT well it needs to act on something you write a s and the right hand side you replace the P that yields a minus H bar squ by 2 m and then you have the lapasan here S Plus V of X acting on S and you know this is the Shing equation and uh we talked about these shinger operators and so on so that is how you can motivate this of course you have to think about this here well this here the P's go to this and the q's are multiplication that's the stone for nman theorem and um well
+
+00:05:17
+this is the extension so you get the Shing equation now for whatever reason he did that now assume somebody suggests this equation and says well I want complex representations of that something like this okay um how would you interpret this and now of course again you can invoke another axium our axium five and say well uh the interpretation is fixed to be such that this is a different row this is not our state row this is a probability density row you just take the absolute value squared of this field
+
+00:05:59
+you then get a real field so the result would be something from R3 to R and notably to r0 plus because the absolute value squared at every point x is of course a non- negative real number and you say I interpret this as a probability density in this case for a particle to be at the point x well you know that makes not much sense you have to make little integrals over little regions and then you get a finite probability this only probability density well one can say something like this but the question
+
+00:06:38
+is how on Earth do you get the idea how on Earth and um so when this equation is there um so question how does one get this idea to interpret row as such well if you want to interpret as a probability density you actually need two things first of all you must know that it's never less than zero that's for sure uh well this would be true by construction but so there's nothing else to be said but there's another problem if you integrate this row over all of R3 it better be one say okay I can always
+
+00:07:30
+arrange for that yes but that's kind of a static thing now imagine you let the time run you investigate how this changes if you look at this at different points in time then this integral better do not change you better keep one because otherwise you lose probability that makes not much sense right so the axium can be there as it is but you need to ensure this or it needs to be ured already otherwise the axum is a nice axum but it makes zero sense so what do you study well you take the equation as it
+
+00:08:10
+stands and you investigate its properties and it takes two lines to see that everything is well so let's do that and the reason why I do that is because in a second we'll go to the relativistic version of it and we'll see nothing is well and nothing can be repaired not in in a conservative sense so obviously thinking about the time evolution of that equation you have to study this equation because the left hand side is the change in the S the right hand side doesn't depend on the
+
+00:08:51
+what doesn't depend on the change in t so what we do we consider the shinger equation and it's complex conjugate so we write down I H Bar D by DT s equals minus H bar squ by 2 M laas plus v well we let it act on the side and I consider at the same time it's complex conjugate well there is no extra information in it it's the same equation put a bar here here is- h bar^ s by 2 the plus side bar the bar of course pulls in plus v SAR it's twice the same equation um now what I do on the right hand side
+
+00:09:44
+of the first one I multiply by the complex conjugate of the field so um I write Beyond this I add or I multiply with a sar here I multip mply by a sar and here I put a sar and in the other equation I multiply from the left it doesn't matter but I multiply from the left by a s there a minus a ai ai okay it's still only the shinger equation very simple uh conclusions from it um note that from the shinger equation this follows but not the other way around because at some points the S could vanish not everywhere so but
+
+00:10:42
+anyway that's that's a a conclusion and now what I do I calculate uh 1 minus 2 couldn't be easier could it okay what do we get we get I bar brackets Del t s * S Bar plus uhuh plus IH bars already out s delt S Bar close bracket that's the left hand side and on the right hand side I get um okay let me first minus H bar SAR by 2 m um you have a plus here no you have a you have a minus anything wrong no minus so now you subtract this from that there's a minus out so okay you get laas
+
+00:11:43
+S SAR minus s La plus SAR so note here you have a plus but there you get a relative minus sign but now this and that is the same thing so it ends so the potential doesn't play any role it's important so now we rewrite this a little first of all we kill an H bar it's easy kill the H bar and um now here we can also rewrite this guy um as a double application of a nabla if we put a momentum in there but um what I want to claim is the following I want to claim this equation must be something
+
+00:12:34
+like um well okay let's uh let's write this out first so here on the right hand side I pull the H in so I get a minus one over 2 m but I can pull the minus in as well it doesn't matter what do I want well it's so much doesn't matter so I leave the minus out but I write this thing as a Dell a acting on a minus I bar so this is where the other H bar goes um Del down a on the side uh acting on the Side Bar so now I have uh one minus too much so I get rid of that uh but then there is an I too much
+
+00:13:28
+I need to modify this so I get a minus I that's this minus now I do the S here and then comes the D A minus I bar aha hang on I put this out again okay so I guess this yields a plus here is that right now I got myself confused I'm sorry so this is right okay so now I go to this one I have a minus H bar by 2 m in front I write here minus D A minus IH bar d a s bar okay but if I did that I got rid of the H bar that's right um I pulled the minus in I think that was that move and then I have the I there that compensates
+
+00:14:37
+for that I think that that must be that must be it in any case what the claim is this is just to see more easily what the claim is if you Define row to be SAR Time s and you define a vector field coor field it has messed up with the indices here but that's because we don't write the metric explicitly uh so you write this as um uhhuh Del a s time S Bar minus s Del a sar something like that so now the i in front cancels uhhuh okay this is a little little messed up so maybe there's there's
+
+00:15:47
+there's an overall eye somewhere if you write this current then you can bring this to the form so have some factor in front here Alpha you can bring this to the form that the d by DT row plus the gradient of this Vector field of this current equal zero right so this guy here is that guy over here and uh so the only thing one has to get straight is the eyes there uh I think there is an so if you we kill this eye against that eye so this line no longer is valid this IE against that eye you have a
+
+00:16:36
+minus sign there then you get a relative minus sign in here if you want so you can pull it in here and there something of the sort then it would be rather the other way around here and uh you might have an overall ey here something like that you you figure it out okay this is now so you get this continuity equation what does that mean well it looks rather artificial we identified this guy here which you get from here because it's kind of like by the product rule this works like that but this thing on the right hand side
+
+00:17:13
+looks extremely in artificial right I mean why why do you write this down well the point is it doesn't matter what this expression is what you wanted to learn about is about the change in time of the row which you want to interpr as your energy density your your probability density so it actually doesn't matter what exactly here is as long as it can be written in the form down there and that's already clear in this line that you can pull this guy out and then there is something here so therefore this
+
+00:17:57
+means that if you take take the integral over all of space and you exchange it with the derivative row over all of space what is that that's the integral over all of space of the Del a of something of j a but if you go over all of space if this is over R3 then there is no surface term and this here is a pure surface term so the result is zero right aha so that means the integrated so the total probability does not change in time perfect and this is not a trivial result because our definition here only depends
+
+00:18:51
+the S as it depends on the spatial position X this has nothing to do with time you know that you have a spatial probability density the Shing equation evolves it further 10 seconds later it looks like this and that so the question of whether this is positive well that is true at any time is by definition because the absolute value is squared but the question of whether the total probability is conserved that's a question that has dynamical content you need to look at the evolution equation for that so in
+
+00:19:25
+fact so the upshot of this is the aums four and five um are consistent with the probability inst uh with the well they are consistent because five tells you how to interpret the whole thing okay so everything is well you can interpret the Shing equation according to this um probabilistic interpretation and you see it's this quadratic thing so this makes all the funny the funny effects right the the Shing equation itself forget about the blue SAR is a linear pde this is particularly simple lots of the quantum mechanic special
+
+00:20:16
+stuff comes in by interpreting the result this way okay good so that's it now in fact so second heuristic derivation of a relativistic quantum mechanics in fact when shinger thought about this stuff he did not write down the shinger equation because he thought why would I bother with the non-relativistic energy momentum um relation because he already knew it was the energ momentum relation of special relativity he wanted to implement so in fact the equation we're not now going to derive is the so-called
+
+00:21:05
+Klein Gordon will derive right motivate is the kle Gordon equation and it should be better called the shinger equation because shinger found it first but then he discovered a serious problem with it and that's why he abandoned it he went to non-relativistic case where the problem was not present okay so euristic deviation is this so you recall that in uh what is Newtonian phys what's this nonrelativistic physics mechanics well so what we already used nonrelativistic mechanics is you consider space time but Newtonian space
+
+00:21:47
+time uh which is a flat which is a smooth manifold and then there's a special thing there is something called an absolute time and mathematically speaking this absolute time is a smooth function on the manifold that has nowhere Vanishing gradient DT that's an absolute time so if Newton talks about an absolute time that is ticking and bl BL blop he means that he means to say that he doesn't have the mathematics to say it unambiguously but that's what he means and then Newtonian space time is not
+
+00:22:26
+equipped with a metric Newtonian space time is equipped with a so-called connection you cannot equip it with a metric makes no sense but there's a connection that's the connection when newon says a particle moving under the inference of no forces or saying a non-charged particle particle to which forces which forces can't can't move moves along a straight line you this first action defines what a straight line is and actually this here is the so-called parallel transport and that
+
+00:22:56
+defines geometrically what a straight line is so this is a torsionfree connection and uh then Newton talks about that time flows uniformly and that hardly means at the speed of 1 second per second what he means by that is that well he means it but he I I think Newton means a lot of this you you can read this um but but again he didn't have the the mathematics to say clearly uh time flows uniformly means this okay anyway that's Newtonian SpaceTime and if you use this here you can find a stratified Atlas such that a
+
+00:23:39
+picture of Newtonian SpaceTime is like this uh you have all your equal time surfaces there are there is such a thing as equal time surfaces because you have this uh absolute time and you have like a lot of R3 photographs for each point in time that's the picture of Newtonian space time and that's just what it is okay and also so SpaceTime is very often Associated to non- relativist to relativistic physics but that makes zero sense because it's just the right data structure to talk about what
+
+00:24:12
+happens where and when the so-called events now relativistic SpaceTime is distinctly different and uh well in principle you would have to be a Madman to change this picture because it makes so much sense right when happens what and the point is Einstein contrary to how it sometimes presented didn't think about space and time because he was so ingenious he thought about space and time because he had to because even within this picture Maxwell formulated his Maxwell equations which came out of observations of the
+
+00:24:52
+far and the aair law and if the mexel equations are right that Force us to a different picture Maxwell theory if right forces one to a dramatically different picture or different theory of SpaceTime and that's of course the relativistic SpaceTime of Einstein what is relativistic spacetime well you also know from the previous mechanics course from the last few lectures relativistic SpaceTime is also a smooth manifold of Dimension four but instead of the time the having absolute time and the connection there is one
+
+00:25:52
+single structure replacing the two and that is a so-called lorenzian metric lorenzian metric and lorenzian refers to uh its signature so it has a signature plusus minus minus for instance could also be minus plus plus plus anyway one sign like this the others differently and that and there's one more ingredient however it's the G that replaces both structures and from this G you can actually derive a connection on SpaceTime it's a very special one it's one that's torsion free and compatible
+
+00:26:31
+with this G and now the picture is dramatically different because at every point of space time you have in the tangent space so don't inter over interpret this picture this is a little cone in each tangent space in a tension space attached to here you have at every point in space time well first of all you have a double cone because you have a metric right um so it can look rather wild it's the Ein Ste field equation that governs how these look depending on the mattera content you can have a very not very you
+
+00:27:04
+can have a boring situation where they all where there is a coordinate system that they all appear like this but really this is always at this point in this tangent space at this point in this tangent space and so on and there is an extra structure here that we call Capital T which has absolutely or very little or nothing to do with this T this capital t is a nowhere Vanishing time like vector field that just can be used to select one of the halves and then you have something like this and that is the SpaceTime structure
+
+00:27:43
+right there's not one big cone like here or several big at every point there is a little cone that's the SpaceTime structure okay yes um so would you say that the t is then also derived from the G or you no the t is extra the t is extra the t is the big the little T the little T no there is no little T the little T is going little T is in this structure if you um took this to an extreme you could put a zero here and the cones would open more and more and more and it would look like this somehow
+
+00:28:18
+but this limit makes no more sense because in the limit this would no longer be a non degenerate metric if there's zero up here and then the whole construction breaks down so it's very difficult from this or subtle from this picture to get this as the limit case there are very quick arguments they look very good until you start pushing them okay no so it's really uh the the absolute time and the connection melt into one structure which is the lorenzian SpaceTime metric that is just the way it is
+
+00:28:53
+okay um and this T here is the the dirty secret of relativity Theory because in relativity we talk about time and here you can say what is forward in time and backward in time well a vector so that if you have a world line that runs in space time so it's the history of some particle histories look like little Curves in space time right that's the beauty of this data structure that everything that ever happened to the particle is in there so you play God you look at this and you you know what's
+
+00:29:23
+what's happening now the question is you can have a curve running like this or you can have a curve running in the opposite direction now also here you have a definition the curve in order to be the history of a particle must run forward but what do you mean by forward well it mean that the tangent Vector of the curve is everywhere if you apply the DT the gradient of the uh absolute time to it must be greater than zero this is the time orientation is also in this absolute time function whereas here in
+
+00:29:55
+in a lorenzian manifold there is no no such thing you cannot distinguish if you only look at the metric you cannot distinguish this part of the cone from this part well you have both parts but you cannot say one is pref is preferred over the other you need an extra nowhere Vanishing time like vector field if it's nowhere Vanishing uh then and it's smooth uh then it will consistently select one of the two cones by lying in it rather than in the other one so the problem of time not the problem of time
+
+00:30:29
+the the problem of direction of time what is the future and what is the past is brutally put on top of the SpaceTime structure right there are lots of thoughts you can have from thermodynamics what's the direction of the time Arrow right in which direction does it run in relativity this question is not resolved it's brutally solved by saying let's have an exra structure that says how it is okay good you need this because otherwise if you have the cones conspiring like this say oop uh like this say
+
+00:31:04
+um and out here they're like this and in there they're like that then you have a black hole because here so particles can only run forward right and if they're massive they must like run inside the cone and if they're massless uh they must run on the boundary of the cone okay you can only go in you cannot go out if you had the double cone well you could go in but why couldn't you go out you could right you need the time orientation to make the black holes black good anyway that's this structure
+
+00:31:41
+and you see we discussed the Shing an equation for almost the entire duration of the course we said an element of a Hilbert space is a function on such a Time slice and then at a later point you have a different function which corresponds to a different time slice but the objects always depend on the spatial coordinates you chose on the spatial section you chose here okay now here what on Earth how on Earth would that look like well the truth is you also choose spatial sections so you choose sections that
+
+00:32:19
+always lie here in the spatial part so it looks a little like this but you have many ways to choose them okay it's very complicated and um but at the end of the day what you need you will still even in relativity like in the in a non relativistic case your wave function so to speak will only depend on spatial coordinates but you can choose in a certain way you can choose which ones okay but the point is the time evolution is the one that will have to respect either such a slicing of space time or
+
+00:32:58
+such a picture okay I can't go into details but the this is to be encoded in the dynamical equation so if we want to find a relativistic version of the shinger equation we have to transfer what we did in section one which kind of has to do with this picture we have to transfer it to such a picture okay now um being a courageous physicist at the beginning of the 20th century you just said well I had a prescription for doing that in non-relativistic physics let's try precisely the same prescription I mean it's magic it has
+
+00:33:37
+nothing to do with logical argument it's just magic let's try the same prescription but let's start not from the non-relativistic energy momentum relation let's simply plug it into the relativistic one I mean all possible things could be wrong with that okay so this is uh so if you're a student and you come up with such an idea nobody had it before and you go to your supervisor he will say well you're quite naive but in fact you would also be quite right because it turns out that's
+
+00:34:10
+precisely the way it goes so um shinger quite courageously um tried so so what's the relativistic dispersion relation it's not e = p^2 2 m + V uh it's e^2 equals p^ 2 plus M2 so um one has to interpret this right and uh this is certainly if you set the speed of light to one let's do that it looks like that that's the relativistic energy momentum relation if you have zero momentum this is e^2 = M2 well because C is one there's a c here okay and then you no there's a c^ squ here no no
+
+00:35:08
+there's a c to the 4th right um you take the S this is e equal mc² if you have zero momentum that's the rest energy okay so this is the um the energy momentum the relativistic energy momentum relation and rather than plugging in his little scheme of letting uh e go to IH bar DT and letting the momenta go to minus IH bar Del a rather than plugging this into the non relativistic one he plugs it into here and what does he get he gets minus h bar^ s d by dt^ 2 equals right hand side minus H bar
+
+00:35:55
+squ Del a um plus well that's just multiplication ma a and well just to distinguish but it a prior it means nothing different he puts a field fi there so now I'm a little puzzled and that probably has to do with my choice of no it's perfect thank you okay so um I multiply the whole thing by minus one and I do this and I bring this to the form I factor out and for Simplicity I set H bar to one two it's just to see the gist of it not to have all this clutter okay you get d by DT twice minus you take this to the other
+
+00:36:46
+side d by da each of them twice d by da da F let's say something like this minus plus perfect plus m^ 2 5 equal Z and then you see well this is the dalom no this is the laian and if you take if you take this whole operator here you can call it box F so it's like the second time derivative but then minus the second der in the first Direction minus the second derivative in the second Direction and so on and you have the so-called Klein Gordon equation first found by shinger box Plus m² on f equals z so it's the free clang
+
+00:37:46
+Gordon equation because it has no interaction term ahuh now obviously L you do a derivation like this and you say okay hang on uh you took this energy momentum relation that applies in such a situation but does this really take care of everything it has to so the F depends on the ex's and on the T um but now this operator directly X and that on the T also the second time derivative you see the difference is in a shirting equation this was a first time derivative here this is the second one one can think
+
+00:38:25
+about you cannot have something that respects this structure without having the spatial and the Tim like derivative very strange wording but let's say it like this for for the sake of Simplicity having them on a similar footing it's not in the same footing on the same footing you would need a plus here then they would be indistinguishable they're not on the same footing they're on a similar footing because it's not the same to be outside the cone and inside the cone the outside of a cone is not a
+
+00:38:54
+convex cone right think of all of space and you take the the complement of this this doesn't look like this like the so they're on a similar footing the minus sign is tremendously important okay the minus sign ultimately comes from the Mixel equations okay if you have a plus there it would all be very different there would not be physics in the first place if you have a if you have relativistically a plus here you cannot say I have initial data and the equations evolve them to further data at
+
+00:39:23
+a later point which is the business of physics to predict the future uh if you have relativistic physics that should predict the future there must be a minus sign here so anyway so at first sight this looks not very different I mean you could even have the mass to zero you think it's not so different to the Shing equation there's just a second time derivative here but this second time derivative makes all the trouble here well let me first say a proper analysis of how you come to this equation would
+
+00:39:54
+actually require a study of the representations of the Symmetry group here and that's the pankar group by similar reasoning you could go to the shinger equation is only that then you would have to take the representations of the galile group right it's a non relativistic symmetry group The representation theory of the galile group is much more complicated than the already somewhat complicated representation theory of the pankar group which is the relativistic equivalent of it anyway uh a proper
+
+00:40:23
+analysis actually done by Wegner uh and I think he was an assistant professor in Princeton at the time he did that and that influenced particle physics throughout the entire 20th century and in Princeton they said it's not good enough for tenure so they didn't give him the professorship because it was just this group Theory nonsense but that actually in influenced the whole 20th century particle physics anyway so um Wegner did this and when he did it Einstein wrote him a letter before he
+
+00:40:49
+said You' got to be very very careful in doing this representation Theory and he answered yes I will be and um so not this kind of magic This Witch mathematics and physics but rather proper arguments lead you to precisely the same equation okay so this is an Outlook so I'm not developing that you need several lectures to do that um but this can also be seen like that it's just we don't know it's right well you trust me it is right so we now have this equation so shinger was very happy with that and uh
+
+00:41:22
+because in a non relativistic case it also worked I told you he first tried this then he tried the other thing and so on but now the question is can we give this F again a probability amplitude interpretation so is there some way some way to find an expression in terms of fi that can be interpreted as a probability amplitude and um the answer is no you cannot and it has to do no the the whole reason is the second time derivative here there actually two issues with this equation and any other relativistic
+
+00:41:59
+equation there's also a refinement of this one which is called the D equation I'll write it down in the end you all see that's the equation of a relativistic electron uh Maxwell's equations are already relativistic well that's where the whole thing started but none of them can be given none of the fields appear appearing in there can be given a probability interpretation and this is pretty bad because it means you have a relativistic equation but you don't know how to interpret the solutions well obviously
+
+00:42:34
+that cannot be the solution right that cannot be non- relativistic that cannot be relativistic quantum mechanics well let me first show you what the what the issue is and of course we today know what to do but it's a deviation from quantum mechanics it becomes a subject known as Quantum field Theory and the whole standard model of particle physics today is formulated as a Quantum field Theory okay so uh what's the issue here well um try to identify to identify a quantity row so analogous to before um
+
+00:43:20
+such that such that a the integral over spatial slices over this row is constant in time yeah constant in time you need that right um constant one and B um that row is everywhere non- negative because otherwise it's not a good probability density if it becomes negative we have a serious problem now let's try because we need both anyway let's try to look at number a number a well will be satisfied a will be satisfied if we find a now we call it a capital J mu right such that Del mu capital J mu
+
+00:44:28
+is zero well now the Del the MU runs from 0 1 2 3 well I can split this exactly as before I can say this a derivative in the zero Direction let's say derivative in time of the j0 component plus a derivative in the alpath direction well a direction sorry a runs from 1 to three uh of the three components here you see this is just another way this is just another way to split this because it's just a summation convention here right so if we find such a j mu we need that in order to satisfy
+
+00:45:12
+a uh now observe we do precisely what we did before we take the Shing uh the clang Gordon equation Box f+ m^ 2 f equals z and we multiply it from the right by a five bar and we take the complex conjugate of that equation box 5 bar plus m^2 5 bar equals z and we multiply it by five from the right now we subtract the second from the first what do we get well on the left hand side we we get box 5 * 5 bar minus five box F Bar and on the right hand side we get zero because the M terms don't see each
+
+00:46:13
+other so you look at this guy you see there no annoying eyes in here that's the uh that's why I got a little confused before but you can easily insert factors right I mean it's not use waste wasting time on that here um so you look at this guy and you note that if you introduce the following J mu mu running from 0er to three thus J mu Del mu equals z as we needed to satisfy a if the J mu is something of the sort uh Del mu f * F Bar minus f d mu F Bar because if we act on this with the D mu we get
+
+00:47:18
+twice the product rule but in each of those one term cancels against another one and the two terms that remain are these two terms okay so we see if we want to split this in the term of a continuity equation in order to now have this one here guaranteed by what is it the gaus theorem right this surface term Vanishing then we need to conclude that the row that we need IS F Bar Del 0 5 minus 5 Del z f bar because the row needs to be the J zero so this is our candidate and our only candidate for the
+
+00:48:21
+probability amplitude and in fact that looks extremely the same like in the shinger case right that we also had a cyar DT s and so on so you say yeah yeah yeah it's all similar a massive difference what's the massive difference the massive difference difference to non-relativistic case is that the shinger equation was of the first order in DT and this this equation is of the second order in DT I emphasized that before you remember what's the difference well the difference is if something is of the
+
+00:49:06
+first order in DT what can you prescribe as initial conditions well you can only prescribe the field itself at a certain point in time say the point in time zero if an equation is of the second derivative order you can prescribe as initial conditions concerning T you can prescribe the field and its derivative in T is that right always one derivative less you can prescribe than the equation has so that means in this case you can prescribe this value and that value at will you can prescribe them at will you
+
+00:49:47
+can arrange for thus one can arrange for for this row to be negative on some counts not all the time but at certain points in time for instance when you start well this is the big problem do you now see why I said it's the second derivative dependence on T that causes the problem because it allows you to make such choices the formula looks the same but now you can make more choices in initial conditions and if you can choose this as initial conditions you could also choose different initial
+
+00:50:29
+conditions and your Dynamics might evolve you there aha so what does that mean well it means it can only be this row because otherwise you don't have this preservation this conservation of probability but it's conservation of anything but not of probability density because it can get Negative this is a problem that cannot be repaired it cannot be repaired anywhere at the this level so the D okay so that's that's the that's the problem so it means you have a relativistic version of the shinger equation this
+
+00:51:05
+looks all very good it's co well covariant as they say it it works with the space temperature as a classical equation it works perfectly well but if you try to start uh interpreting this as a probability density or any construction it needs to be this construction you you you go wrong it doesn't work okay now um so there's a problem and this problem then extends and Dak recognized that the problem has to do with the second time derivative and so d by trying to solve this problem which he didn't solve that
+
+00:51:44
+way discovered another equation which nevertheless plays an important role okay so history is sometimes like this he tried to solve one thing in fact he solved another yes why you just put it on top of yes let let me explain what D tried to do very briefly and D invented a an idea to so-called CA of electrons have you heard of that the D C he invented that in order in the D equation to to kind of get around this problem by some extra assumptions um it's really not a good construction but but anyway so let's um go third
+
+00:52:36
+D equation so D then said okay it is the second derivative so his inside which is correct second time derivative causes the trouble as we now recover covered here so D's thinking was like this he says okay you have e^2 = p^2 + M2 he says I can't change that relativity is relativity so he said aha the second time derivative comes by replacing d e but I bar DT but annoyingly I have e squ here right so what do you do if you have e squ and you want e well you take the square root so D says Ah I get my first time
+
+00:53:30
+derivative back getting rid of this problem if on the right hand side I take the square root well the problem with that of course is that that means you get minus H bar squ well I now write this nuer operator thing right blah blah blah squar plus m s and then the square root out of that you can now start um expanding this into a series ious and you get higher and higher and higher derivatives is that clear if you expand around m² you get higher and higher higher derivatives and that's a theory with infinitely of
+
+00:54:05
+infinite spatial derivative order has also not particularly good and IR Rock said aha but maybe I can write the right hand side also as a first derivative and he invented something like the gamma matrices now the gamma matrices already take both sides into account so he involve he invoked actually Alpha and beta matricies and so on but uh so following this thought this thought he came to the following equation so this is dot dot dot okay takes one lecture to develop it it's not that bad but finally comes to the
+
+00:54:52
+equation I gamma mu Del mu Del mu uh the MU runs again from0 to three that's the time derivative and the three spatial derivatives there is a new object gamma mu that uh goes in summation Co with this minus M on some funny new s equals zero and he said this equation should be such that still it implements this relativistic um energy momentum relation and in fact you find that in order to do that and then you can take this operator multiply it from the left in a conjugated manner blah blah blah uh you can get that if
+
+00:55:34
+these gamas are not four numbers but if these gamas so the gamma 0er to gamma four if the gamma mes are 4x4 matrices so you have four 4x4 matrices that satisfy the following condition that satisfy gamma mu Gamma New so that's the MU new Matrix Matrix multiplied with the newth one plus the newth one Matrix multiplied with the m one is 2 times e muu what's E muu well ET muu is what you call the minkovski matric e m is a matrix indices muu with + one - one - one- one and this thing is called the D
+
+00:56:21
+algebra and if this is a matrix then uh for 4x4 Matrix that makes only sense if you have also here a 4x4 matrix it's the unit Matrix multiplied by m and the S is a four component object on which the Matrix acts by matrix multiplication as if it was a vector but in fact it's called a spinner and that has to do with transformation properties under space time Transformations I can't go into all of that uh but what we have here is the the equation and it gets a first time derivative that's what theak wanted
+
+00:56:57
+because he saw saw the second one is a problem he gets around the problem of the infinitely high spatial derivatives by having the ingenious idea uh of actually uh extending the field which is a one component field to a four component field and then he gets around this restriction I mean come on somebody writes down something like this to solve this problem you say okay any other crazy idea on top may be right it's not particularly plausible at the first at First Site it becomes even less plausible if I'm looking at this
+
+00:57:34
+you discover if there is matter there must be antimatter with certain properties okay and that's described at the same time by this equation you say Okay anything more exotic but then afterwards antimatter was discovered and the direct equation was a terrible success and and so on and so on and so on okay um so I mean these guys also particularly lucky that it works that way right today we understand a little better why it works but that's the D equation so now he has his first time derivative the question is is this
+
+00:58:06
+problem solved do you have a good probability interpretation for the S no you don't the problem persists so he did all of this he discovered antimatter and had the the theory of the relativistic electron that to the present day is the theory of the relativistic electron okay in its extension to Quantum field Theory we'll come to that but he didn't solve that problem so that means with the D equation you again make no reasonable predictions however here you can now think of a sea of D electrons that are
+
+00:58:41
+all already there and sometimes there is a hole where one kind of jumps up in this energy space and the hole then propagates itself that's then the antim and so it's a very I mean it's a very I don't know pictorial solution to the whole whole thing and you can think and interpret that way and that somehow works so sometimes the D equation is discussed as as one says in the subject as one particle equation this is the wave function you interpret in a certain way but you have to have this extra
+
+00:59:11
+ideas of how the situation is okay and then it kind of takes care of the problem however we now see the problem of this negative probability dens ities once you go to the relativistic case is even stable under removing what the apparent problem is so it the problem is the second time derivative but then if you get rid of that with Arcane extra constructions the problem somehow creeps somewhere else so this is where you say there is something we're not understanding here there's something
+
+00:59:50
+that's the problem resists well a problem sometimes proves its worth in research but by resisting your attempts to solve it and so at that point it's sometimes good to take a step back from the technicalities of all of this I mean you can read up on this the one particle shinger and clang Gordon and the D equation you'll find all kinds of stuff okay but now let's take a step back and think is there a deeper reason is there a very simple reason what is wrong why can't I find an
+
+01:00:24
+interpretation of this thing as the probability density for a particle to be somewhere and actually the sentence for a particle to be somewhere what turns out is the wrong thing is that you say for uh for one particle to be somewhere there is no one particle interpretation because one particle is to have one particle that is no longer a concept preserved under time so fourth the deep root of the problem well everybody on the street knows the deep root of the problem so the famous man on the street what does he say when you say
+
+01:01:15
+Einstein you tell me you say Einstein the man on the street says yes MC E equals mc² that's what the man on the street says and he's right and that's the problem if I have a particle or say you have two particles of a certain mass and you shoot them together and you do that with enough energy whatever happens when you shoot them together whatever the interaction is there's absolutely no contradiction to four particles coming out well somehow in different directions because of momentum conservation
+
+01:01:55
+but the point is particle number is not conserved particle number is no longer conserved of course not if you have two particles and you pump enough energy into them you have enough energy to create new masses because the M you have not particles of any Mass they come in certain discrete levels we don't understand why deeply uh but they do so if you shoot two electrons together at low energy they will stay two electrons but if you crush them together at very high energy you can get 20 and photons
+
+01:02:37
+and whatnot different particles that depends on the exact physics but the particle number is no longer conserved but this equation already carries that in it so it certainly carries it in it if you then also take the p squ on top if you so so that means what we were fundamentally mistaken about was to look for an equation in the relativistic context context that describes one particle fully relativistically because out of one particle can become 20 and so on energy wise so what you need you need to allow
+
+01:03:20
+for the possibility so need to allow for zero particles one particle two particle three particle four particles and so on particles at the same time so to speak so you need to have a thinking it's like I have space like R3 and I think the possibility that this chalk although it's here it could be over there that's why we have axes that go in various directions right if you imagine space as R2 you have a problem because it can go up you want to allow for it to go up well in quantum mechanics you want to allow for your
+
+01:04:06
+system not only be in the one particle state so to speak you want it to be able to jump from here to the two particle State and then to the three particle State and also you want to be able to think of no particles the vacuum how do you do that well the idea this lecture is only about ideas and telling a big story this can be uh written down in detail the idea is that the one particle sector you still one particle sector one calls this you we already know how that works we say Okay quantum mechanics happens on
+
+01:04:48
+the Hilbert space in a certain time lies and what is two particles well you know that two particles happen on the tensor product isn't that the case and three particles you have to alternatively look at the triple tensor product um so if you want to look at one or two particles you need to take the direct sum you need to add these two Vector spaces that means yeah you attach one to the other then you add this one and so you go on and you also want to talk about no particles and you just put
+
+01:05:31
+a complex the Hilbert space is just a complex line you put that there and this entire structure which you call the fox space f inherits from this Hilbert space has an inner product right this inner product we saw in the problems uh actually induces an inner product on the tensor product right so if you know what the inner product is on your one particle Hilbert space you already know what it is on the two particle Hilbert space and so on but then you can take the sum of these inner products roughly speaking and that way
+
+01:06:12
+you get an inner product on the entire Fox space what now what Sor no not a problem okay okay have fun thank you we will okay so what is this this is the kinematical structure that allows you to not think one particle one particle one particle one particle that allows you to think ah or two particles or by superposition you could have an element of the fox space which Li lies in here plus an element that lies in here would still be an element here you could have a superposition of having one particle and
+
+01:07:01
+two particles at the same time well as much as you can have a superposition otherwise within this hbert space because it's a big Hilbert space that you get but this is the kinematical structure of a multiparticle theory but not of a fixed number multi particle theory like we looked at so far but one where you have a variable number this fox Fox space have you heard the word word Fox space before this fox space here the way this is constructed this fox space is the way to think about several copies of a one particle system
+
+01:07:39
+and what we tried so far is to write down the kle Gordon equation or to write down the D equation as an equation that only that acts on an element only of this one particle hbert space and and that failed so the kle Gordon solution or D solution interpreted with this inner product and whatever you choose whatever inner product you choose yields you negative Norm States so negative probability densities this is nonsense okay that's what we discovered doesn't make sense the solution is to in a
+
+01:08:16
+specific way lift the equation acting on this object to an equation acting on an object that can be an of the entire Fox space First Step Second Step by Miracle well you can calculate it okay but now for the sake of argument by miracle that in once you lift that in a certain way to the entire Fox space and then you calculate Solutions and you evaluate them with this fox space in a product the problem is gone only positive probability densities that's the magic but it makes makes sense a relativistic quantum
+
+01:08:56
+theory cannot deal with one particle it cannot deal with 20 particles it must deal with any number of particles and depending on what happens that changes and it makes perfect sense that only once you take into account that the particle number can change which which corresponds to moving between the different sectors if you wish only then on that entire space do you find an inner product that has the desired properties that's the solution that's the solution to the thing now there is a slight difference between the kle Gordon
+
+01:09:27
+equation the kle Gordon equation requires that you take here the symmetri tensor products everywhere and that's then called the bosonic fox space sometimes indicated like Circle F now the um D equation if you try to to lift it in the same way it doesn't work it starts working no it does work doesn't start it does work once you choose the wedge product so the antisymmetrized tensor product here and then you get the so-called fonic Fox space okay so for the D equation and for the clang Gordon equation you have to
+
+01:10:10
+choose different types of tensor products in both cases these are indistinguishable particles you remember our discussion about the symmetric and the antisymmetric one and here you have fion the D equation describes perion there is no way to consistently lift the direct equation to the entire Fox space such that this gives positive uh um probabilities um unless you do the the wedge product here right so if you look at a book like pesin and sha Quantum fuel Theory it actually says well let's contest the Kang equation
+
+01:10:47
+everything goes fine with this fox Bas picture they don't say it's so explicitly unfortunately but then they tried it with the D equation it goes terribly wrong if if you take the symmetrized tensor product so the D equation does describes a firon it's already it's not well it's already in this one partic equation in a sense but its lift to the multi particle theory tells you that okay so you can imagine it took quite some while until people realized this because you can very
+
+01:11:14
+easily get stuck you try everything you say I did it right relativistically now I really try to find a probability inter interpretation of the glang Gordon field or of the D field and so on and you bang your head against the wall because you didn't take the step back well finally of course people did and say what's the deep and simple reason for this failing okay and so that's where maybe some physical intuition comes in you say well particle number is not concerned conserved but at first view you seem to
+
+01:11:42
+be doing everything right right but an implicit assumption that you describe one particle um did not hold okay and so today the entire um standard model of particle physics is made up of D particles like electrons and muons and so on one Kang Gorden field one only namely what's the one Kang Gorden field called that's in the standard model it's the higs the higs particle is a kle Gorden field and so uh the simplest of relativistic field equations only very recently one has any indication that
+
+01:12:20
+it's actually realized in in reality so far was only a toy model well if the higs is what people think it is but the direct equation for electrons so for all the spin one half particles we have and then we also have spin one particles those are the quantization and the lift to this of um well in um yeah essentially of Maxwell Theory so the theory the the electrodynamics you know in electronics you have an A mu field if you write down the field equations is in terms of an a mu sometimes they're
+
+01:12:52
+written in terms of E and B and that's equivalent to writing that in terms of f muu but really the field is this here it's a gauge theory in the field is that well uh the field equation for that if you quantize it is even more difficult because it's a proper gauge Theory um um can also be lift to something this it's again symmetrization and the quantum particles of that are called photons and then you start not looking at only these three equations but to introduce interaction terms and then in
+
+01:13:26
+the standard model you get interaction terms for instance between electrons and positrons those are the um is the matter and antimatter coming from the durak equation for instance you you start introducing interaction terms you couple these equations together and you all do this in lrange formul ISM uh and then you get well you can shoot say two electrons together and then something happens due to the interaction terms and the two electrons fly apart again and uh you want to calculate this is a very complicated calculation and if
+
+01:14:13
+the interaction you have is a weak for instance in electromagnetic interaction which they have what's the classical picture well the classical picture is they repel each other because they're both electrons right something happens they repel why do I draw this straight because this means far away from the interaction are area they again classically would say it's this right they do this because of the electromagnetic interaction that's classical classical explanation for what happens here but in fact the quantum
+
+01:14:46
+explanation is more complicated of course and if the interaction is weak what can you do you can do perturbation theory of what happens at the interaction Point okay and then when you do perturbation Theory there is a very clever way to arrange the different orders of perturbations higher and higher order perturbations that contribute and these higher orders but this is only a perturbation expansion it has no direct physical meaning although when I now draw the pictures you will say well now I understand this but
+
+01:15:21
+careful it's only a perturbation EXP tangent U but that's due to Fineman he said he saw that for instance for Quantum electrodynamics this is there comes an electron there comes another electron and they actually exchange a photon and then an electron flies out and flies out and this not even the zeroth order it's already the first order the zeroth order is the electron here immediately does nothing this one does nothing that's the first order then then comes the next the zeroth order
+
+01:15:55
+then comes the next order is a contribution like this then comes the next order is a contribution like this um something like down here well there many to the next order there could be a virtual electron positron pair like this it looks like that Chuck Chuck Chuck Chuck and so again everything in here is just a perturbation expansion to what happens in here here and there always these two in two out okay uh and this goes on to higher orders so it could then here look like like this so this is of the same order
+
+01:16:34
+as this one you see um this has 1 2 3 four vertices every vertex is weighted with the electron charge this is 1 2 3 four so these are fourth order contributions there may be several this is the second order contribution this is a zeroth order contribution this is an ex a perturbation expansion and Fineman rather than understanding where this comes from he wrote this down by intuition gave rules how to convert the diagrams in integrals you calculate the integrals and the result is uh a quantity which so called s Matrix which
+
+01:17:13
+you can interpret in terms of a scattering Matrix you understand uh what's going on there okay and so it seems like two electrons interact by Exchange ing a photon by exchanging a photon it produces this an or by exchanging two photons and on this higher and higher order Corrections this makes so much sense because now all of a sudden the interaction The Messengers of interaction is no longer mysteriously like the um there's an electron here electron there and they repel each other by by what by an electric field what's
+
+01:17:45
+an electric field what's happening here it's actually relativistically moving particles although if I say this particles here in this interior connection connections are so-called virtual particles that can um actually um violate their normal energy momentum uh relation and so on it's a complicated business however these are so-called Fineman diagrams and the fan diagrams are the are a clever way to order the expansion terms of such interactions and then the standard model is full of that
+
+01:18:20
+the other particles the W and the Z bosons um for instance and the gluons so w and z is for the weak force and the um and the gluons are uh for the quarks that hold the quarks together so that's the strong force all of these forces in the standard model uh are modeled by um by Vector Fields okay they're modeled by Vector so all the forces are modeled by Vector Fields all the um matter uh that one usually talks about like uh electrons muons and so on are modeled by D fields and only the higs is modeled by
+
+01:19:03
+a kin Gorden field why do we need the higs well in principle we would have to have so only the electromagnetic force has infinite reach gravity is not in the picture only electromagnetic force has infinite reach and can have a massless particle namely the photon making its interchange uh the weak force and the strong force they have very short reach okay and so the interaction particle would have to be massive the problem is then you would have to write down a kind of a massive version of the mexel
+
+01:19:33
+equations and quantize that that would be the proca equation that doesn't work for various reasons so higs had to invent the trick how you have an extra field which by spontaneous symmetry breaking as they call it gives the other fields effective Mass it's a very crazy idea it's a very crazy idea and it turns out to work okay um so anyway so this has to do with the the standard model of particle physics none of this would be possible without having this fox space picture here and you see here this is
+
+01:20:06
+happening all the time you start with two particles all of a sudden uh you have four or five or six and and so on depending on how you arrange these diagrams okay so in these interaction Theory you're always jumping between the different different Hilbert spaces okay so this is a very rough picture of what's happening there and that's the full physics of matter as we understand it today together with the forces and this is a relativistic picture and this is deeply relativistic so without relativity it simply wouldn't
+
+01:20:38
+look like that okay but that's the that's the way our world is is structured today and and how how our theory of it looks like right so you see what we discussed here the one particle hbert space and its inner product and maybe the tensor products and lifting inner products and all of that this is the building block from which you can very quickly understand all the rest okay so but we in this in these lectures we only considered this one particle case and it's only the beginning of the whole of the whole
+
+01:21:15
+picture okay but all the hard work is done once you understood Hilbert spaces and inner products and so on okay uh in this Quantum field Theory um it's very complicated because nice theorems that hold here no longer hold for the the field theoretic case especially diff um representations um so it in Quantum field Theory there's much more ambiguity if you say what's the most General thing I can write down and so on that is not as simple right and um so people tried in the uh well middle middle of the last
+
+01:21:56
+century uh they tried to systematically understand Quantum field theories and they say well let's put this on a proper axiomatic Foundation like we have in quantum mechanics then you get something called axiomatic Quantum field Theory it's a very beautiful subject because it really takes all the assumptions and in mathematically rigorous form treats them uh there are number of rather interesting results uh which are disastrous for everything that works because um for instance in order to do
+
+01:22:24
+these calculations you need something called the interaction picture and you need it because you treat need to treat these interactions the problem is exatic quantum field Theory tells you under these and those assumptions which are all assumptions you say yes of course we need that uh the interaction picture exists exactly if there are no interactions which is not particularly useful so that means in Quantum field theory in the Deep foundations of it although all of this works you have to you have to avoid looking too carefully
+
+01:22:55
+if you start looking as carefully as we looked at one particle quantum mechanics the whole thing explodes okay so in a sense there is not such a solid foundation of quantum field Theory as there is of one particle quantum mechanics hence in mathematical physics not always but many people concentrate on this case because that is a proper mathematical Theory soon as you go to Quantum field Theory all hell breaks loose okay uh however it's very likely that the situation is somewhat similar to say the D
+
+01:23:30
+distribution so it's just you need some new trick in looking at the mathematics and many modern research directions in Quantum field Theory or some at least go in that direction okay so you go to this next level everything works out perfectly so Quantum field so espe Quantum field Theory and in particular Quantum electrodynamics is the best physical Theory we we have now almost everybody nowadays uh says that about their Theory um but you can if you count in terms of calculating um things like the anomalous
+
+01:24:03
+Magnetic Moment of of the electron or something like this Quantum field Theory I think does it to nine digits uh uh after the comma and uh this is unprecedented okay so Quantum Fe Theory really works extremely well but if you look too closely at the riger we did it also gets gets a little fuzzy for instance if you evolved in Quantum field theory if you evolve this up to order 100 37 rather far from then on the Precision of the result goes down again so it's a serious that is actually perturbation
+
+01:24:44
+Ser it should get better and better better you the further you go but from 137 nobody calculates up to there uh this is already well there a little problem in in a gradate course if you go to two or three or four Loops it becomes a total expert subject it's very difficult so the more Loops you have the more integrals you have in there and it becomes impossible to calculate and higher Loop order Corrections is really to to punish some some gradate student um but really from a certain order onwards it it you can't do it
+
+01:25:15
+practically anymore but you can show abstractly that from 137 or something it gets worse again okay very strange stuff okay so so there's certainly something to be understood and and so on uh but what is done at CERN and and elsewhere and what you use in astrop partic oh there's no gravity in the picture this is the picture if you do this on actually on flat space time if you go to curved space time uh even the particle concept saying you have one the quantum state is interpreted as one particle or
+
+01:25:49
+two particles even that gets fuzzy you have funny things like the so-called unu effect where if you fly say even through flat space time uh you go with your detector through a vacuum so you say you have a state where all of this is zero and there's only a one from here you go through vacuum in a with a detector on a spaceship without a rocket you just go through space you detect nothing because there is no particle now there's somebody who goes accelerated say a constant acceleration in space time is a
+
+01:26:24
+hyperbola at constant acceleration and um he also has the same detector with him you measure no particles he will not only measure one or two or three particles he will measure any particle number at an energy distribution that's a thermal distribution so he will feel hot so many particles around at so many different energies so if you're an accelerated Observer according to Quantum field Theory the notion of there is a particle or there isn't depends on whether on your state of motion all inertial
+
+01:26:56
+observers agree how many particles there are but as soon as you accelerate who it gets tricky okay ultimately such effects also lead to uh if you add a black hole so now we are getting really into the thick of it the black hole you know things can only fall into the black hole but cannot go out because of the uh uh cones and very roughly speaking however you can have a pro where um you have a virtual you have kind of nothing and all of a sudden you would have the creation and the immediate anihilation of say an electron
+
+01:27:34
+okay uh that's called a vacuum bubble there's nothing then for short while there is something and then it inates there nothing there there more more interesting vacuum bubbles now this one doesn't exist um there's another interesting vacuum bubble thankfully if you calculate this stuff there lots of vacuum bubbles everywhere accompanying this but they all cancel against each other that's great that's why this works okay anyway I don't think uh if you're now near the
+
+01:28:01
+black hole you have this and it's it's not only an intuitive explanation there's a better calculation one can go in and can never come out and if this one is somehow pulled away I mean in reality nothing happens there's nothing coming out of the black hole but very rough speak it's a very rough picture you see that something's coming from a black hole and that's Hawking radiation okay but this can be calculated properly so kind of all these nice well nice or famous things like radiation of black
+
+01:28:28
+holes and the unu effect and all of that is just pushing this to the point where you also do it on curved SpaceTime and then you have all these these combined effects but in all of this what we did in this course the one particle quantum mechanics is an elementary building block the only thing that changes is that you start asking how to interpret it and you lift the equations to the to the entire Fox space okay so there are uh lectures on this uh uh well Quantum field Theory would be one lecture that
+
+01:28:59
+does that but also in modern cosmology you would have to consider such stuff so that is why you actually should uh attend that course maybe after Quantum field Theory course and inevitably it mixes with general relativity at some point okay so so this is then the the modern picture of where where this all leads and and that's where Modern research takes place and there are many open questions many open questions however they also dramatic successes for instance if space time expands which it
+
+01:29:29
+does there's a big bang not because we postulated but because if you calculate back with the answer equation there must have been one the big the space time expands and out of a vacuum out of having no particle you all of a sudden get particles and it depends on how the space time expands and you can calculate how much what is it hydrogen and helium or whatnot um is produced this way and you get a proportion from the evolution of the universe as we know it from general relativity that is precisely the
+
+01:30:01
+proportion some 60 40 of one against the other that is then when it burns in Stars which we know rather well how that works gives the heavier elements and the resulting abundance of elements that we see in the universe by spectro spectroscopy and so on rather coincides with this whole picture so so by starting in a vacuum and by an expanding space time thereby having particles produced I crazy that it fits together that well we even understand where this table is coming from even if at the Big Bang there was no matter at all the
+
+01:30:38
+universe expands and by using a structure like this one gets a little more complicated but not much this is essentially right what I'm telling you I mean nothing can be right that I tell in in in one hour in a subject that's not totally clarified but um okay this table is essentially there according to the modern picture of cosmology which is no invention other than general relativity and Quantum F theory on that curv background uh is generated from absolutely nothing okay this is the vacuum in the
+
+01:31:10
+beginning but it becomes today the nonvacuum in our interpretation there are perod of the evolution of the universe where you can't even say there's a particle or not because what is missing is a so-called time like killing Vector feel of those of you who know that because only that allows you to get identify hamiltonian and thereby particles and so on and so on and so on and so on so there are many many uh things but it's uh it's essentially this picture okay so we have a rather
+
+01:31:38
+comprehensive picture of many many questions that before any before general relativity in Quantum field Theory you didn't even dare asking where does matter mattera come from did did God put it there or was it always there or if the universe started in the Big Bang was all the matter already there and it now just reformed and so on no no the matter itself was generated from the vacuum it's not a postulate it's a conclusion so if any of this is is right and it seems to be right in in many in many
+
+01:32:07
+ways uh then we have uh fantastic answers of this type not only where space and time come from well it's the big bang you can say it's a non-explanation it's just a a diagnosis that there must have been an event like that or not an event anyway so gr predicts that um but also where the matter comes from and in all of that all these questions what's an inner product what's the probability what's the Hilbert space and so on all of that plays a role and really what we did and
+
+01:32:36
+the Precision to what we did it um becomes particularly important once you go to the to the fox space yeah questions of convergence and all of these things right so actually the way I presented it today with the Shing equation how you get it from the energ momentum and and then you get the probability interpretation it looks also light and oh why didn't you start the course with that it would have been so much more blah blah blah but the point is at the end of the day this is an approach that quickly runs against the
+
+01:33:04
+wall because uh you're not prepared to go the next few steps right and um so these These are the next few steps I think uh uh we stop it here we have another problem class on Thursday uh then during the um term break you'll get uh another problem sheet from me to test yourself uh and then as we agreed last week of the term break there will be the exam thank [Music] you
+

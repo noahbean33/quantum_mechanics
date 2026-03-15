@@ -1,0 +1,534 @@
+00:00:05
+[Music] so welcome everybody to the lectures on quantum theory as you know this is an integrated course that will be taught in half by an experimentalist Stefan Ginger and in half by me for the theory side of quantum theory and uh the two parts are obviously complementary so we make a big effort to harmonize the teaching of these two but it's not perfect and in fact it shouldn't be perfect because then we would sacrifice the respective contents for the harmony of the two lectures so as always it will be partly your task to
+
+00:00:44
+bring things in harmony by thinking about them working on the problems and so on nevertheless having said that uh the parts try to be in harmony because after all it's the same subject now quantum mechanics has a reputation for being very difficult and it really earns that reputation it is very difficult it's very difficult conceptually because unlike classical mechanics and maybe in part electromagnetism it really is very different from what we usually feel how the world is the point is that feeling
+
+00:01:19
+is wrong The World Isn't like we feel it is in classical mechanics and then the reason is why does classical mechanics work so well and the answer is because the masses invol involved in classical mechanics are comparatively large in fact not even for the stone that you throw it doesn't simply follow a trajectory it doesn't it doesn't follow a trajectory that's governed by Newton's axioms it doesn't follow a trajectory at all even the idea of a particle following a trajectory turns
+
+00:01:54
+out to be entirely wrong now you all know the double slit experiment you probably heard heard of that right in school who knows that everybody right so uh in a sense investigating or thinking about what the result means it means that an electron that you shoot an individual electron neither goes through one slit nor the other in a sense it goes through both slits and through none it's it's very complicated okay but the same is true if you would take a whale so you make a double slit sufficiently big slits and
+
+00:02:27
+you shoot a whale a fish right well it's of fish but nevertheless a big thing right a very you shoot the whale and the whale neither will go through one slit nor the other it's just that well so people did this up to uh uh molecules with I think 800 and something molecules I hope that's right well roughly that's right it's the theory part okay so it's it's it's roughly right uh that you can do this with very big molecules not only with electrons so the effect is there it
+
+00:02:58
+just becomes more and more difficult to set up the experiment and to really see the effect because the effect becomes the smaller the bigger the masses of the objects involved are but it's wrong for Wales classical mechanics is wrong for Wales it's wrong for electrons it's simply wrong it's totally wrong now um people discovered bit by bit what was wrong with classical mechanics and we will not follow this historical approach anyway it would be pseudo historical right going through
+
+00:03:30
+one experiment and you think it works like this then you go to the other and it also confuses one's thinking we can afford the luxury we have a wellworking theory of quantum mechanics well I'll start actually writing down what it actually is what we want so say section one the educated term for what you want okay so you want several things uh quantum mechanics thereby I mean the theory of Quant mechanics needs to account for I avoid the term explain needs to account for several things and I mention three
+
+00:04:15
+and the first one is that measurements of observables range over range unlike In classical mechanics not only over some interval I in R so I I underline this whole statement and uh I'll give an example for that so first of all In classical mechanics I remind you an observable was a map a map F that takes an element of the face space which in uh most cases is given as the coent bundle of some configuration space face space The Q's in the PS it takes an element from face space which are the states of the system
+
+00:05:41
+if you know an element in here you know the state in which the system is which is exactly the information you know in order to evaluate each observable of the system and takes this to the real numbers and because it's classical mechanics these maps at least are continuous all right I mean usually you want them to be differentiable and so on but they're at least continuous what does that mean well if you have the entire face space here and you equip this with the standard topology and you have a
+
+00:06:20
+topology on here uh it means you can only the image of this F will always be an interval on R it cannot jump so this continuity means that if you look at all the values this F could take for all the states so I plug the whole set in then what you get is an interval because of the continuity okay it's not possible for instance for the energy uh to get energies from 0 to 20 and then from 40 to 60 it's it's just not possible because of this continuity so consider for instance the two body
+
+00:07:07
+problem the two body problem for a potential all classical mechanics right for a potential V of R goes like -1 / R so the typical Kepler potential or as you met it in classical Electronics to electrostatic spherically symmetric potential to kolon potential so you know that if you have a two body problem that you can reduce it to a one body problem with an effective potential V effective which uh then if the angular momentum of the system is not zero will look roughly like this for angular momentum
+
+00:07:56
+L non zero you have an effect potential like this right and so this is the relative coordinate between the two there no color between the two ah between the two bodies and um now you know of course if you're here uh in this two body problem it's reduced to a one body problem uh then the system doesn't move and that's the circular motion so this is the exact circular motion now if you have an energy so this is if you have a total energy that is like here then the system will have the particles will Rel
+
+00:08:39
+have relative distance between this R minimal and this R maximal so if you have an energy like this so this was the energy for the circular motion if you have an energy like this then you get elliptic motion and that it's elliptic motion that discloses has to do with this being a 1 / R potential okay now if you go to this energy here which here happens to be zero uh then you actually get the parabolic motion so it's already scattering of one particle on the other and if you go to even higher energies
+
+00:09:15
+here then you can run in from Infinity you run out and you never come back the same as here but it's no longer parabolic it then actually so parabolic is a little bit more like so but then you actually get hyperbolic then you have the Hy parabolic motion right so this is what happens classically in a two body problem and if you look at all and my point is I want to come at to so the whole system has a total energy given by the hamiltonian In classical mechanics and if you now look at the values here
+
+00:09:49
+that the hamiltonian can take then you see the hamiltonian for any of the state of the systems what values can it take well any value starting from here okay up to up to Infinity right these are all the values it can take including this one so it takes all the values from an e minimum to infinity and that's of course an interval in R okay so this is an example so you have a classical system and an observable like for instance the energy but we could take any other observable will take values in an
+
+00:10:34
+interval a big interval maybe the entire real axis maybe a finite interval maybe a half infinite interval it will always take values in an interval that is what classical mechanics predicts and it doesn't matter whether this is a gravitational potential or whether it's a coolant potential so due to the electro magnetic interaction uh you will always get this result and so for any other classical problem you look at so given this situation it's quite understandable that if one makes a model
+
+00:11:18
+of an atom as having a nucleus that's positively charged and then uh and the number of electrons outside the nucleus that orbit the nucleus and in the simplest case the hydrogen atom for a simple model of a hydrogen atom consisting of a positively charged nucleus and an electron orbiting this where you then take the electromagnetic interaction if you think of this classically you get exactly the picture over there and you would expect to get all possible energies starting with a certain minimum energy any possible
+
+00:12:17
+energy because it's an interval up to Infinity so if we draw the classical potential okay so this is what we intuitively would say well that's exactly the case we look at over there but then you make a discovery you actually measure this so this is uh measurement and you make a remarkable observation well first of all for the hydrogen atom with this being the electron and hence having the mass of the electron and this being the proton having the opposite charge and the mass of the proton and on you get here
+
+00:12:56
+-3.6 electron volts as the lowest energy well that's just because a very special system it has a very special e minimal but then the next possible energy is not one a little bit higher a littleit a little bit higher but the next one is already only a quarter of this into the negative domain so if this is half only a quarter here that's that's the only next possible energy the electron can have how on Earth well that's the case it's the measurement tells you that of course you get this by looking at Spectra of
+
+00:13:32
+electrons that go to the next level and then uh sorry of photons um that are emitted if you fall from one level to the other one okay um then the next one okay as I write it down so there's a formula for it the energy there only discretely many energies in the negative domain it's minus 13.6 electron volt * 1 / n^ 2 so for n equal 1 it's this one so for n from n stars without the zero Nal 1 is this Nal 2 is only a quarter of this n equals 3 is only a 9th of this so you see it gets uh very quickly very close
+
+00:14:13
+to here that's the next possible energy the energies in between are simply not assumed big question mark but that is what you see in nature and you can see this here there is an accumulation point if you continue with n to larger and larger integers you come closer and closer to zero and zero is an accumulation point and then well that's only for the negative energies and from then on there is a Continuum of energies from then on only so I this energy this energy this energy and many many many
+
+00:14:50
+many many many more and from there on there is again all energies up to Infinity which corresponds to the scattering state so if it's not a bound state that the electron is bound if it's not caught by the nucleus then you can add infinitesimally more energy and that also exists as soon as you scatter it's continuous again so that looks more familiar but what does it help I mean there is this discrete stuff going on which simply doesn't possibly fit into this idea of an observable in this this
+
+00:15:29
+case of the energy it's a big huge question mark okay so this shows there is something going on here um so uh the conclusion is so it's conclusion a because this was item a for which we have to account we need entirely new mathematics in which uh a notion of observable can be defined that allows for a spectrum of measurement results and I use here the word spectrum in a colloquial sense well the whole spectrum of things right of numbers that can come out for an observable but in fact it
+
+00:16:48
+becomes the technical terminology we will call this a spectrum later on whole Spectra of a spectrum of measurement results for an observable and let me call the observable a I could also call it f and put a hat on it that's the standard thing that people take this F and put a hat on it and say this is the classic one with the hat it's the quantum one but because we do electron quantum theory we have hats then all over the place so I don't do that and it also suggests that somehow from the classical one you could
+
+00:17:19
+construct the quantum one what might call this quantization uh well that doesn't really fully work okay so let's not think of that let's think of an observable a um let's let me call it a Quantum observable a and what exact object that is using what mathematics that we will do okay I'll do actually in the second part of today's lecture um um that takes the form so the spectrum that takes the form you freely interrupt me so if anything is unclear you just speak your mind uh
+
+00:18:23
+you don't need me need to wait for me to pay attention to you you just talk if it's too much I'll stop you I mean this is small enough we should have a discussion of sorts okay that takes the form so we say with an observable there should be Associated a set of POS possible measurement results and that Set uh should consist of um a discrete part discrete part Union with A continuous part so we still have this continuous part of the POS possible measurement results but somehow we need mathematics in which we
+
+00:19:08
+can write such an object a such that associated with it is the set of all POS possible measurement results and this is very non-classically mechanical um so remark and I mean so far these are only symbols but these symbols will appear later on in the formalism in the mathematics um of course I could start out just doing the mathematics and then the symbols appear and then you don't know where the whole thing is going so hence i' rather tell you what it means physically you give you an example you
+
+00:19:39
+have a picture in mind but we'll soon enough come to the very precise formulation okay you will wish we come back to here okay so um so this a discrete so remark uh there exist examples of systems where now I just draw pictures to to be quick right where certain observables I mean this could be the energy or any other observable and each observable has a different Spectrum for particular system and you can have and now I I draw what was here the vertical axis uh I draw it like this so we had for instance
+
+00:20:19
+this here we had the smallest one then we have something that goes geometrically something like this accumulation Point uh and then you have a continuous Spectrum from here and that's EG the H atom we just had this I just write it down again so that you can compare the pictures we could have another system for another observable right I mean other system other observable other system other observable whatever that is mathematically yet um you could have for instance that you start with I don't
+
+00:20:53
+know why not with zero energy or let's say with uh well if I say zero energy there there must be a scale in and so on uh let's let's say with some mysterious number H bar that has action dimensions and a frequency something like this and that then goes in equidistant steps ta ta up to infinity and that would be for instance the quantum harmonical oscillator the quantum simple harmonic oscillator right so uh with a hook law or whatever but then the uh the energies really start here and go up like this so
+
+00:21:31
+this is uh totally impossible classically here this part looks classically but anyway you have this but then you can also have yet another system yet another observable or maybe sorry that would be the energy so in each case sorry this would always be the energy for this system so let's say other system not other observable but for other observables it's the same let me for fun for the simple harmonic oscillators also do the position observable we call it Q so you now do the harmonic oscillator
+
+00:22:01
+and you don't ask what are the possible energies well the possible energies we'll calculate this at some point but I now already tell you uh the possible energies have uh is that right something like that so the possible energies look like this now um but what about the possible positions of a Quantum harmonical oscillator well it turns out the possible positions are all so it can be that for a system that's a Quantum system like the harmonic oscillator so both of these are the harmonic oscillator Quantum harmonic
+
+00:22:38
+simple harmonic oscillator that some observable is quantized right has this discrete but you shouldn't use this word is this discrete Spectrum but another observable that's also of Interest where is the particle well it could be anywhere we'll be able to learn more about this but it's not like all observables are necessarily then have such a discret feature right I'm just pointing this out um I'm just giving you encyclopedic knowledge right I mean nothing I say you can understand you
+
+00:23:09
+must accept so we have a few examples in mind so that later on we know where the whole thing is going okay um so we have this now let's do yet another system let's take the hamiltonian of a simple model of a solid body so a solid body you can think of having consisting of many atoms that say in one dimension and then there is an electron that can travel along this something like that so you have a periodic potential in which the electron moves periodic potential if you thought about this classically and then you'll
+
+00:23:48
+find that the depending on the details of course but then you will find that there will be bands of possible energy so there will be several intervals right this always closed so there will be several intervals this is still not classical because classically the energy because of the continuity of The Observers would have to be one interval the possible values it couldn't just jump one interval then you make a jump you go to another interval so although this looks almost classical because it has no isolated
+
+00:24:25
+discrete uh values this observable also this is only possible Quantum mechanically right etc etc etc and there are also examples where in the continuous Spectrum you still have an extra discrete one embedded um are those open intervals or no these are closed so it turns out that this the spectrum of an observable will always be a closed subset of the real line that's a result we are going to get okay hence I drew it like this in the standard topology closed in the standard topology on the real
+
+00:25:09
+line okay good so all of this is uh possible and um well so this looks like uh a terrible task to construct mathematics that actually can do this and can also do the other two um things I'm going to say um and and we'll come to talk about that in the second half of today's lecture yes yes sure yes yes that's true but uh that's uh constrained by other considerations such as the camera operating properly and me keeping track of where the Blackboard is because I devote my entire attention to
+
+00:25:58
+you let's do it like this I know I yeah it's not ideal but that's why we changed rooms um so this Blackboard is even better than the still better than the other one okay um well second remark and that's in a sense that points to what we're going to do later um it turns out that self adjoined linear map on a complex Hilbert space will be a suitable um structure to describe or model uh observables in quantum mechanics so that means that the H's and the q's and the a whatever I wrote down these
+
+00:27:05
+are going to be selfadjoint linear maps on a possibly and in most examples infinite dimensional complex Hilbert space what that is we'll come to that I just point to that so the big mystery what is this if it's not a map from the face space to the real numbers that's continuous like in classical mechanics what is it it's a self adjoined linear map and it will be used in very different ways than we use the classical observables nevertheless they take the role whatever is left of the classical idea of
+
+00:27:40
+measuring things so on is encoded in these objects but in a very different way it's not that the domain are the possible States and the target of this these linear maps are the possible measurements no no no no it's not like this but this is the right structure that encodes all the information okay how exactly that works will set down as axioms okay so anyway we have this issue of the possible measurement results that we see in many many many experiments that simply cannot be accounted for by
+
+00:28:11
+classical mechanics and the notion of observables there so that needs to be changed B so quantum mechanics also needs to account for an irreducible it's not in a technical sense an irreducible impact uh that each measurement measurement has on the state we haven't talked about States in quantum mechanics yet on the state of a Quantum system so if I ask ask the question and I think of you classically and I ask what's your momentum right now whatever frame and so on what's your momentum
+
+00:29:06
+there's an answer to it and it will not change your momentum will also not change your position it won't change your state at all in quantum mechanics remarkably this is not the case and um let's do a look at a very concrete example so usually this is done with uncertainty relations and of course it has to do with that but the really the um The crucial Example The crucial experiment rather say is the famous Stan Gala experiment what do you do in The Stang Gala experiment well uh you take an
+
+00:29:48
+oven so it's like a pizza oven it's like this and in the oven unlike in the pizzeria uh you heat silver atoms you heat them and then they emitted from there because you put a little hole in there and then you take a screen with one little hole so that in a sense the silver atoms come out of there and then you subject them to an inhomogeneous that's very important you subject them to an inhomogeneous magnetic field question is who gets such ideas but anyway uh you do this an inhomogeneous
+
+00:30:35
+magnetic field uh whatever you need for that you need something like something like like like this here and then like this and you run currents through it and what not whatever you need to do ask the experimentalist you you produce an inhomogeneous magnetic field and you send this stuff through now um well we can just do the experiment I can't tell the outcome it's uh uh more humiliating to think about what would happen and then to see that it doesn't happen and so in order to subject ourselves to this humiliation um
+
+00:31:08
+we make a simple model uh of silver and the simple model of silver is that it has a core with many protons and uh neutrons as you would say and it has 47 electrons out here and of these 47 46 six arrange in such a way that they don't that their spin doesn't count so it's 46 but the 47th electron out here carries gives the whole thing a Magnetic Moment okay what's a Magnetic Moment a Magnetic Moment is something that contributes to the total to the total energy so there's a energy part for this whole thing but
+
+00:31:54
+then there is a part where you have the Magnetic Moment of this whole thing times the magnetic field you have a term like this did you see this in electrodynamics Magnetic Moment and coupling yeah something like this so you have something like this and if the whole thing worked classically then you would expect in this oven for all possible kinds of magnetic moments to be there because it's just an accident how this electron is arranged and how its spin is arranged okay now because this add to the energy
+
+00:32:29
+you shoot this through here see this okay uh you shoot this through here um you can look at the screen what happens and because there's a distribution and statistical and blah blah blah blah you expect that you get an impact pattern that looks a little like this so the ones that are a little bit deflected to up here have their Magnetic Moment like so the ones down here have it like so and all the others in the middle there's kind of a projection in this direction and you get kind of a smeared picture
+
+00:32:57
+like this okay okay because it couples to this inhomogeneous magnetic field because if you take derivatives to get the equations of motion you get derivatives of the B hence it needs to be inhomogeneous to contribute at all okay you expect this so this is the classical expectation if you have the simple model of the silver atom uh the point is it the problem here is not going to be that this is a simple model this is a good enough model okay the point is that this is not a classical system well nothing is a
+
+00:33:33
+classical system as I said not even a whale is a classical so you could heat whales and send them and so okay well of course not so simple but but okay so it goes through here well it's important because one often talks about the classical system and the quantum mechanical system well there is no classical system okay the classical system is what we call a classical system and think of as a classical system but you and I and the Blackboard and and the univis system they're all quantum mechanical as you
+
+00:34:01
+know okay now so so you get a you get a spectrum like this now however what really happens the experiment shows something different the experiment shows I I draw the same screen but it's really just replacing this screen the experiment shows there's impacts here well it's a bit distributed because it's experiment and and there's an impact here there's absolutely no impact in the middle and in fact you only get either this type or this type how is that possible okay I mean this is really a
+
+00:34:37
+big exclamation mark this is this is this is outstanding what right so for for future reference this is the the heart result and this is the W T fire result right um so he what what T right I mean how how is this possible and you say well it's again this quantum mechanical issue uh observables in this case the position of impact is discrete rather than an interval okay we already know yes that's right so it's again this this discrete thing so why do I give this example here well because this
+
+00:35:17
+apparatus is so nice we can learn even more from this so this is not the surprising bit okay but this is also what happens the surprising bit is what comes now so again this result is at this point not to be understood it's just to be noted that there is an issue because classically we need to expect something different abstractly because it couldn't be discrete values because of the continuity of the observable maps of the maps that represent observables but also not experimentally it's simply not the case that comes out
+
+00:35:51
+what the classical physicist would expect so again this is not the so remarkable result yet although it's again another instance of this quantum mechanical Behavior but um this becomes very interesting if one considers a succession of such Stern G a paresis right so let's draw this a little more little more schematically so we shoot silver atoms into a Stan G uh machine which is essentially um I need color next time uh which is essentially this machine here okay and so we shoot the ah no aha you
+
+00:36:54
+see so it's essentially this machine so we shoot something in and then well in reality two things come out namely this one or this one okay so if we do this either one type or the other type comes out what you shoot in goes either up or down okay and I should mention that this in homogeneous magnetic field you can of course take this apparatus and oriented in different directions maybe you have to drill a hole through here to send it in and blah blah blah but you can Orient this in Z Direction
+
+00:37:29
+let's say this was in the Z Direction but you could also rotate the apparatus and Orient it in the X direction or in the y direction again I don't know why people do that but if you do that you could take this sg1 but let's first not rotate it and what you do whenever this here comes out not whenever but where this comes out you put a little block so you say okay I blocked this out I I I I throw this away and then you arrange the next apparatus such that only the upper thing is fed into there so we
+
+00:38:05
+could call this if the apparatus is oriented in the Z direction we call this the Z Plus or the Z up it's one symbol is to zet up silver atoms and down here these are the ZET down silver atoms they just need a name okay and then you feed the Z up ones in another Stern Galla appar that's oriented in the same way that's oriented in the Z Direction and then what you will see is that only Z UPS come out 100% and no Z Downs come out you say well of course I filtered them out right I I it's not surprising okay it's not
+
+00:38:48
+surprising you say yeah well I took them out and then only the Z ups are left and then doing the same again yields nothing new and okay no surprise okay so let's do something different let's take the St galak apparatus in the Z Direction Let's block out the Z downs and let's only go let go through the Z ups and now we take another Stern Galla apparatus and we now Orient it in the X Direction so it's the same box just oriented a different way it goes to different way and now what you get is of
+
+00:39:25
+course a splitting in X up and X down if this was the X Z up Z down but X up X down is the same thing okay how much of which well it turns out experimentally so I should really emphasize this is all experiment uh what comes out is 50/50 you say ah okay not such a big surprise because we have many of these and then we filter out the ones that have the Z up but apparently the in the X direction of this Z up still 50 have an X up and the other 50 are X down what does it mean to be X up or X down it
+
+00:40:10
+means if an stal pares is put there these are the two that come out you see so the meaning and this is very physical you see um in physics you have always to ask if you call something X up or X down how would you measure whether it's up X up or X down Notions in physics need to be defined the central Notions by measurement prescriptions well I call something an X up if I feed it into a St gak apparatus oriented in the X Direction it comes up here comes out here rather than here okay that's the
+
+00:40:42
+whole meaning of X up X down and we want to figure out what does it mean to be Z up Z down X up X down anyway this is still okay okay but now comes the big surprise so we start the same we take the SG in a z direction we block out because we want to the Z down Direction only Z up we feed this like before into an sgx that's fine then there come out X ups and X downs and we could have the idea that we filtered out the Z downs and of the remaining Z UPS 50/50 are X up and X down that's right and we could
+
+00:41:25
+think now we're in a sense in a qu of the possibilities because if we now now we block this one out again and we feed this into here and this is again an SG in the Z Direction Z then X then Z again and if our idea of things being filtered out anduh just measured what is are true then there only the Z UPS left only the X up lefts so one would expect that something like uh only Z up come out but that's wrong 50/50 again Z Downs come out why is this remarkable well didn't we filter out all these ones with the
+
+00:42:12
+property Z down they were filtered out then the Z up share this property up down X up X down apparently and all of a sudden the Z Downs appear again what does this mean well one can analyze with this Stang Gala thing one can analyze lots of stuff and actually somebody who doesn't take it to an extreme there's uh other literature in this um C Sakurai uh modern quantum mechanics or something a sakur textbook um for further conclusions one draws out of this I just want to draw one conclusion draw one conclusion out
+
+00:42:55
+of it the measure must have an impact on the state because otherwise if this was just a filtering looking what is I just take the ones with Z up how would all of a sudden Z Downs be there again if I only took Z UPS uh our conclusion that we draw from it so that's conclusion B measurements why is this a measurement well because I can decide side of what I fed in whether it has this property or that property measurements have or change the state of a system and now there's this usual question well in classical mechanics too
+
+00:43:47
+in order to look where something is you have to shine some light on it the light gets reflected you collect it I mean that's how I see you right sunlight comes in it's reflected on your forehead goes to my eyes I see you're there it's kind of some radar principle okay uh and in principle uh the the radiation pressure of the sun pushes you a little bit away from where you are okay in principle but then I use less and less and less light and I push you less and less and less the beauty of this is
+
+00:44:13
+because it's only up down there is no being a little Z up or a little Z down there is nothing to be done okay so so this is really from this you see this like in no other case um this is not a matter of experiment Al um Precision this is just a fundamental thing measurements change the state of a system which means in a Quantum system you cannot simply look and after you looked you learned something which is then still be true but you look and whatever you learned afterwards what was true before in a sense the state before
+
+00:44:49
+is not the state after looking it's a mess right this is terrible because you see this is not what we expect it's not what we would like but that is how nature operates H okay so aha well we need to accommodate that in the theory that's the second the second bit here okay I present one more thing we desire and of course a complete analysis of all the experiments that are there and what you could learn from them and could be conducted and some people try it to in a sense derive quantum
+
+00:45:29
+mechanics the formalism from all the things you observe one can do this and this probably takes a whole semester and it has an appeal um however a theory is always more than just the predictions it makes maybe you remember from classical mechanics you can describe gravity as a force Newtonian gravity as a force you can alternatively describe it as a curvature of Newtonian SpaceTime both yields the same results okay so the question is gravity a force is more a choice you make of how you write it down rather than an insight
+
+00:46:07
+about nature so it means a concrete Theory you write down is always more than the sum of its predictions or like some people say uh for every phenomena or collection of phenomena in nature there's usually a whole number of different possible descriptions that all yield the same result so the theory is more than the result results it yields hence it would be very difficult to to derive a certain formulation of quantum mechanics probably impossible to derive a certain formulation mathematical formulation of
+
+00:46:38
+quantum mechanics from the collection of phenomena because that's simply not uniquely determined okay so we're not following this approach nevertheless I want to introduce a third uh desideratum and then I will resolve the whole business by writing down the axioms of quantum theory already in the language we're only going to develop so this is the next step of frustration okay uh however it will not be entirely without Insight because the key definitions I will already provide and I
+
+00:47:18
+will provide them in the final version so uh it's not a a simple version of quantum mechanics there also many books that feel they must first provide a somehow correct Theory which is not properly correct and then they refine this with time we're not going to follow this approach we're writing down the aims from the beginning in the final form and we will then work hard for the first half of the course we will work hard on understanding the mathematics um that are needed to work with this to understand it and to work
+
+00:48:01
+with it okay but before I come to that uh the third thing we want is the following so we need to accommodate fact C that even if the state even if the state of the quantum system and I haven't told you yet what is what I mean by a state I appeal to your physical intuition uh which is very dangerous in quantum mechanics but we'll have the aims later on even if the state of the quantum system so call it the state row it will later on always be called row even if the state row of the quantum system is
+
+00:48:45
+completely known could be for instance uh so not completely known would be some mix state that you um that you only know uh some statistics about it but even if the state of the quantum system is completely known the only prediction one can make for the measurement of some observable a is that the probability nothing but probability You can predict is that the probability that the measured number measurement appara always gives you something 20 20 Jewel or something like this that the measured number which
+
+00:49:58
+you know must be in the range of possible measurement results in the spectrum of the observable is the probability that the measured number lies within a borell measurable set e subset e of the real numbers this probability is as I said calculable predictable calculable calculable um uh denoted it gets a name uh it's called mu because mu stands for measure did you do measure theory in mathematical no you didn't okay we're going to to do that um so the basic idea is the following if you have a set and
+
+00:51:02
+in our case it will always be the real line um which is and on the real line there will be parts that belong to the Spectrum okay and what you want to know is you want to have a measure roughly speaking a volume of all possible subsets of the real line and it turns out that no such notion of volume exists such that with certain assumptions of uh translation in variance and blah blah blah such that you could assign to every subset of R consistently a volume you cannot you have to define a so-called Sigma algebra never heard that
+
+00:51:42
+term okay you have to define a so-called Sigma algebra which then uh uh encodes the so-called measurable sets sets to which you can assign a volume and then the measure is the volume of that set it is very and leads to the Le integral did you do the Le integral aha ah okay okay good good good but okay so I I'll have an extra lecture on this it's not a problem we'll we'll no but the point is you ask for a certain observable and for a certain State you get such an object this object is called
+
+00:52:18
+a measure that's a um mathematical notion and then you can evaluate the measure on a measurable set and if you do this over the real numbers and you construct these measurable sets in a certain way they're called Borel measurable sets it's a special implementation it's a little bit like the standard topology so you have the borell measure okay uh this probability is denoted by this and this thing you can calculate so you can say um what is the so I have a certain system say this
+
+00:52:50
+is about the energy you have this energy oper uh this is the spectrum of the energy what the probability that the measured energy lies within this subset e that's something you can calculate now if you're here in the domain where you have these discrete values you can of course well not of course but it turns out you can make this e small enough so that you can get the probability that you get this because there's nothing else in here but if you're in a Continuum uh it would be very silly to ask for the probability
+
+00:53:23
+that you get exactly this value you know this you have a an a fly comes and it sits down with equal probability anywhere on there for whatever reason um and then predict what is the probability that it sits down exactly there well the probability is zero right because it's a Continuum but it becomes meaningful if you say what's the probability that it sits down in a certain interval right so that is this whole idea with certain intervals and there where it's discrete this uh this reduces to the probability right so but
+
+00:53:55
+you see the fact that in quantum mechanics we have to at the same time deal with values that can be discrete have a discrete part as possible values that have a discrete part and a continuous part requires that we have one ma type of mathematics that copes with both and and this measure theory is that type of mathematics at this level okay and what I tell you is that you can always get this uh measure uh you can always calculate this measure here from a self adjoint operator and observable and from a state
+
+00:54:31
+I'll tell you in a second how states are modeled and only this probability can be calculated okay so you cannot say where will what will the result of will you get this value or will you get that value well with 20% probability you get this with you get this okay let me make an a remark before I for get it I should have made this earlier when you have this St Gala apparatus in the past it was very difficult to send individual atoms in and electrons and so on but today we can do that and it's not that there is kind
+
+00:55:11
+of one single atom is being smeared out it's not the case you shoot it in and if you send in a single one then it will PL end here and once you observe it you know it ended there that's it so it's not one is being smeared over two positions sometimes people well it's to wave particle duality and goes in and then there's smeared no no no one goes in and pick that happens do this experiment again Blick aha again do it again Blick say ah it always comes out Blick no now comes one down and in the long
+
+00:55:51
+run in the long run it's 50/50 okay very important to not think that there's something being one particle is smeared out into two it's totally not true nevertheless you do the experiment and once it came out you know where it came out and then you know oh this is the Z up observable or something like this but you cannot predict which is which is going to happen there are exceptional cases for instance if you put two stala apparatus of the Z type behind each other you know what's going to happen here you know
+
+00:56:28
+only Z up are coming out because you prepared the whole thing like this okay so you can prepare certain states where you know the outcome because the probability is 100 to zero well if it's 100 to Z you know what's going to happen but generically you cannot say which is which okay okay anyway so that's a s only this probability can be calculated uh in particular one cannot one cannot predict which concrete outcome a an isolated measurement will take well the only thing is you know if this is the
+
+00:57:25
+spectrum of the operator that you have there you could never have an outcome that's not contained in the Spectrum well that's not possible um but you will not know which of the remaining ones if it's more than one will actually happen this is even more annoying uhhuh this is even more annoying I'm sorry this is even more annoying since the impact that a measurement has on the state of the system so remember this we discussed under Point 2 this is already Point C what can be predicted under the point B
+
+00:58:38
+we discovered if you make an measurement it will have an impact on the system well it could be that whenever I measure the energy it has this and that impact on the system no it's worse the so I try to measure your momentum right so it could be that every momentum measurement pushes you in a certain direction that would be kind of under control it's worse I measure the momentum I have only a probabilistic outcome that I can predict what will happen but how your CH state is changed by the measurement
+
+00:59:09
+depends on the outcome that is really observed it's it's either this or that and you will be changed differently your state will be changed differently depending whether this comes out or that comes out but which of the two can only say with that probability you're going to be Chang like that with that probability you're going to be changed like this but I cannot predict before how the measurement will change your state it's terrible okay it's even more annoying since the impact that the measurement
+
+00:59:40
+has since the precise impact I should say so how exactly it impacts the state since the precise impact that the measurement has on the state of the system CB depends on the concrete outcome so the concretely measured value of that measurement well you can imagine if all of this is true and we don't know an example where it's not true in nature if this is all true the world view that follows from this and the effects in the phenomena that subject themselves to this kind of well principles in yeah
+
+01:00:29
+principle uh ways that will be a very different world from how we know it I look where you are what do you mean what do I mean by this right I mean and I change it thereby and I don't really know what comes it's terrible okay well it's terrible other people say it's beautiful because it's nature and so on but but as a classical physicist you say I mean this is really it's a disaster right so you see it's not so bad if the classical mechanics course didn't go so well because it's all wrong
+
+01:01:04
+okay so that's the reason why we teach first classical mechanics and then Corner mechanics okay good okay um well another fact is uh of course the probability that a system in the state row if you measure a that the outcome will be something in the possible outcomes is one all right okay okay okay so um uh so this ends my my short overview and again it doesn't claim to be to be complete it doesn't claim to have in in it all the seeds that you need for the aoms we're going to write down and in
+
+01:02:03
+fact I argued it probably cannot even have all in it that we will write down in the axioms because the axom are given in a very certain precise formulation right and there may and there certainly are other formulations that produce the same experimental results so you cannot derive the formalism from The observed results right it's a naive idea you look into nature and then you make the theory it's different you look into nature already with an idea of a theory and okay anyway so we're not going to
+
+01:02:34
+discuss this um but all I say crazy stuff like this crazy from the point of view of a classical physicist needs to be accommodated in what is to come and it justifies throwing away really everything we had in classical mechanics and um so uh V is wrong a suitable Theory a suitable Theory which up today up to today is still the prevailing Theory a suitable theory that accommodates all known experimental facts does it so you see uh what does it meaning people say this oh everything we know is accommodated for well maybe there are
+
+01:03:33
+some things that do not follow from this um but that we in a sense explain nevertheless with it but we explain it in a wrong way wouldn't be the first time in physics history that true facts are explained the wrong way and are taken as uh as support for the theory okay it could be that in the future certain things we will understand in a different way we say oh how could we not see that this not really blah blah blah blah blah okay so this should always be on your mind but of course not in Examination for the met for the purposes
+
+01:04:06
+of this course all I tell is true okay a suitable theory that accommodates all known experimental facts has been developed roughly uh from 1900 to 1927 um on the physics side um well of course it started with plank do do you know the story well read up on the story they're good books on it right I mean it started with Plank and then bore and so on but really if it comes to the to the math well mathematics if it comes to the formula you find in books uh it's essentially schinger Heisenberg and D rock that gave the
+
+01:04:56
+Theory its shape and on the mathematical side it was very early on uh seen by foron that whatever equations are written down there they need a very proper mathematical foundation and no for nman well it's always wrong if you say single-handedly so I should write in both cases and others and we're academically fully correct without adding any information whatsoever and others okay on the mathematical Side by Forman uh he invented a massive proportion of what today is known as functional analysis because he realized that as
+
+01:05:49
+little as you can write down Newton's Theory without knowing what a derivative is or a manifold as little can you write down Quant mechanics without knowing the basics and sometimes a little more than the basics of a field called functional analysis and the first half of this course will consist in the functional analysis we need to develop to even understand what we're talking about okay um this deviates not from all but from virtually all textbooks on the market but in this case there are textbooks and
+
+01:06:27
+next time I'll give a list there are very few textbooks that do it in this mathematically clean way now there's always the question in physics do you follow a mathematically rigorous path and then uh run the danger of not seeing the forest for the trees or do you give more intuitive picture and um well first of all it's uh my belief and that of of a number of other is that only what you can State clearly right can actually be understood and discussed and maybe falsified and second quantum mechanics
+
+01:07:04
+is so non-intuitive you can write down simple mathematical explanations for this stuff thinking it's all behaving like matrices and it's just all linear algebra and it's just Vector spaces as normal and so on uh the fact is simply not true it is simply absolutely not true actually apart from the spin one half system would spin up down that is mathematically correct in the way this is written down in most even Theory textbooks but if you want to do things like the harmonic oscillator where the
+
+01:07:38
+spectrum is not bounded now so the up down the spectrum is bounded this result and that result on the real line these are the set of uh values is a bounded set right there's an upper bound and lower bound to it but as soon as the set even if it's still discrete like say the energy of the Harmon oscillat that starts somewhere and then goes up like this goes up and up and up and up it's an unbounded spectrum and these operators so these these observables that have such an unbounded spectrum
+
+01:08:08
+they do not fit in any way into a matrix picture of observables or something like this okay it gets even worse if you look at the hydrogen atom where a part is discrete and then there's a continuous part to it also this doesn't fit into what normally people say you look at the ID values of The Operators have you heard that I don't know you have heard stuff like this yeah for the discrete Spectrum this is true but for the continuous Spectrum it fails to make any sense in the first place okay so and if
+
+01:08:40
+you then think of one of the biggest problems uh that people think they must solve namely the quantization of gravity even if you start with this very simplified quantum mechanics you will not survive the first day of calculation because simply quantum mechanics and for noyman figured it out almost 100 years ago right so in a sense you can say the philosophy of the course is I refuse to teach you something that's different from what was already clarified 100 years ago okay so we will do it the well
+
+01:09:11
+what one arguably from mathematical point of view calls the proper way the antidote and we'll do physics that's not it and I will give a mathematical presentation with mathematical arguments in fact it will be definition theorem proof definition theorem proof with very few exceptions okay but it's the only way to actually deal with the objects if you don't see the proofs you can never calculate a concrete example how would you you don't know how you deal with this it all becomes blah blah okay um of
+
+01:09:38
+course I will always elude to the physics and I will only pick from all that can be done here I will only pick what leads in a direct way to the physics and but anyway it's an integrated course so the antidote to the theory part is the experimental part right where you will see all these things um and um in order to make progress there you just use them in a certain way and very often you will say ah that is what he writes but what he really means is this okay no no I mean of course uh uh this is known also to
+
+01:10:10
+the other lecture right um but one needs to know both sides as a working physicist right but if in doubt and if you later on try to do new Theory or work on difficult problems you know where to come back to okay you're not left alone okay so this concludes the um the exposition of what we want to do Aha and there will be there will be problem sheets of course and um these problem sheets will be rather extensive in the number of problems usually uh but the problems will be very simple usually and some
+
+01:10:58
+reason one reason why they will bit more extensive in in number of prts is because I will always let you solve problems that I want you to solve for the uh for the idea of the ongoing Theory course but there will always be more less one page where you work out the simple version of what we do in general okay and the simple version actually only applies to uh uh systems with finitely many measurement results which apart from spin one half is almost none okay um but then the formula derived there are the formula you find
+
+01:11:32
+in the textbooks which are there applied to all the other systems as well somewhat unjustified but of course they appli it in such a way that uh things work out fine okay but for you it's important to know this is not really the truth okay this is just the wrong formula applied in a way that you're not hit over the head with a hammer for doing that okay um anyway so we we're trying to so there are several courses in one okay good [Applause] section two is the aums of quantum mechanics
+
+01:13:01
+so as I said I will first write them down in this unknown language or partly unknown language to you and then I will uh explain the most relevant terms by little clouds um and we'll come back to this okay so nothing I write down now is not complete or not true but of course I cannot now work out in one lecture all the consequences so the axum one is the following with every Quantum system there is associated a complex Hilbert space I'll explain in a second what a Hilbert space is is associated a complex Hilbert space but
+
+01:13:54
+we say for under it as an unknown notion um and that is actually a tuple consisting of a set age an operation plus an operation s multiplication and a so-called cqu linear inner product I'll explain that in a second with every Quantum system there is such a Hilbert space Associated this axim continues the states of the system so you see I talked about States before appealing to intuitive notion of that is what the system is like at the moment or something okay but careful the states of the system are all so they're all possible
+
+01:14:44
+are all positive trace class Trace class linear Maps row that are linear maps from this Hilbert space into the Hilbert space so they're positive and they're of Trace class and they're linear linear you might know for Vector space but what is positive and what is to be of Trace class we'll say it in a second for which now comes the final condition for which the trace of this map and I explain to you what the trace of a map there is equals one to be of Trace class means that the trace is defined in the first place and
+
+01:15:36
+you say well you always have a trace of a linear map well yeah on a finite dimensional Vector space sure but if it's an infinite dimensional hbit space like for the quantum harmonic oscillator like for the hydrogen atom well like for just anything but the spin one half system or spin three half one not kind of toy toy stuff okay you always have an infinite dimensional one so it's very important that this is of a trace class whatever it means I'll explain now that's the end of the axum
+
+01:16:06
+so the aums get what I declare to be a square okay um a remark is the following I mean really throughout the literature it's almost everywhere almost everywhere the sometimes people often people say the normalized uh elements s of the Hilbert space what does normalized mean well you have an inner product uh and normalized uh normalized means that the uh inner product of this with itself is one okay that is what we mean by normalized almost everywhere it is stated uh sorry almost everywhere it is
+
+01:17:10
+stated colon the normalized elements s h are the states of the quantum system false it's just not true these are the states of the quantum system um terminology a state is called Pure it's called a pure State and if it's not pure uh then it's defined as a mixed state well it's called a mixed state a state is called Pure a state row of course if I say here State whenever I use State I use this definition of State not not the one so let me put this in quotation marks a state row is called
+
+01:18:16
+Pure if there exists a sigh in the Hilbert space such that so what is a state a state is a linear map from H to H well as a linear map I must say it takes an alpha and it Maps it to re um to an element of H row of Alpha and this row is called Pure if there exists a sigh in h such that the row can be expressed entirely in terms of the S namely like this okay so this is just the one you plug in to get something out but this is the thing so there is for Pure States for Pure States so thus for Pure
+
+01:19:06
+states it is true that a state is associated with an element of the Hilbert space but there are many many many many different size with which which it is associated so it's not a one toone thing so to say the states are these normalized elements even if you normalize even if normalized is still many side that correspond to this one state and it's simply not true that the normalized elements of sigh would uniquely label a state and hence to be deserve to be called a state and even if they did they would most label the pure
+
+01:19:56
+States but there's also some called something called mixed States what that all means you'll learn later but states are pure or mixed and that is what they are okay so the elements of the Hilbert space are not the states of the system although it's very often stated please refer to axium one right so let's uh give some definitions um let's first look at the okay you know what um I know you hate it that is why I'm going to do it um I will not wipe everything I will just not wipe the
+
+01:20:52
+Notions I want to explain State we said okay positive traceless linear Maps Okay which the trace good so these are the underlined Notions that I didn't explain so um now it's childish I'm not going to do it sorry good it's the stuff you come up with when you sit and drink coffee and you think it's a good idea okay anyway so um we're talking about a complex Hilbert space so I I I should uh have the heading some definitions I just want to explain some some of the Notions that occur although
+
+01:21:57
+later on I could give them in the further development of the course one by one but probably already on the next problem sheet I will ask you to work this out in simple cases so I better provide it okay is there a question okay so a complex Hilbert space we said it's such a tuple consisting of a set h and a plus and S multiplication and the sesquilinear inner product so what this is It's H is a set nothing more the plus is a map that takes two elements of the set H back into H and the times is a map
+
+01:22:37
+that takes a complex number and this is why this is called a complex HT space that takes a complex number an element of H and takes it back to H in such a way that this set with these two operations satisfies the vector space axioms Nam the axum of a c Vector space uh and that is cany and Adu commutative associative neutral inverse and these tie these guys together they're these eight axioms if you don't know them blindly by heart waking up in the middle of the night review them so this is the first part
+
+01:23:15
+here it's a complex Vector space all right now what is this so that's the first ingredient for a complex Hilbert space the second ingredient is this guy here that's a so-call sesq linear sesq means one and a half it's cqu linear map uh these are open slots you can feed into it two elements of the set and you produce a complex number again because we're dealing with a complex Vector space and this say quinear map has several properties the first property is that if you have a fi and a s for any fi
+
+01:24:02
+s and not only writing down always writing down for any if you take these and you switch the order you get a complex number but you get the complex conjugate and in this course the con conjugate will be denoted by a bar uh sometimes I will write a star please tell me then to write a bar um because the star will be reserved for something different um then two is it's linear in the second slot that means if you take here A S one plus alpha s 2 where the alpha is a complex number actually any complex
+
+01:24:40
+number then you can pull this apart this will become f s 1 plus Alpha time f s 2 I'm wondering if you what is the a you add to get to the scal product it's nalization this is the Scala product you mean or you mean the S this is the S multiplication this is the scale scal there is none what do you mean by ordinary the one may learn at school ah no no no do you add one to get there was it the normalization I wonder no the normalization is with this one okay then so this is the one you there's no other
+
+01:25:33
+it's the S multiplication on this is the Scala product it's a cqu linear inner product okay has this property because of the first property if you do this in the first entry then an alpha bar is pulled out okay okay so this is this uh that's the linearity or the cqu linearity so this is called the her property this is the cqu linearity and then we have the positivity that s s is greater or equal to zero for all the s in h and the equal sign is assumed if and only if s is the zero Vector in ag
+
+01:26:14
+that is guaranteed to exist because of this okay that's a cqu linear map and now you say we have all the structures that appear in this quadruple up here uh defined but there is an additional requirement on Hilbert space and there's yet another one which we'll only introduce later the requirement is that this CES linear inner product space is complete so the third ingredient in requirement you need to check and in the future so I always think oh I need to check it but in the future you allowed
+
+01:26:59
+to use that's better uh is that uh the um space is complete completeness what does that mean completeness means um if one has a sequence in this H what is a sequence a sequence is a map that takes the integers to the space because then for every integer there's an element of the space if one has a sequence in h that we call Fi which satisfies the so-called kosi property or sometimes one says it's a kosi sequence which satisfies the kosi property namely what is this property namely um for every Epsilon greater than zero
+
+01:28:03
+so obviously real there exists an n in the integers a capital N in the integers such that for any pair of integers which are Beyond this one it is true that the norm I explain that in a second of the N members so I denote this f n and the MTH member is less than zero and at this point I need to tell you what the norm is but you already gathered that from the axum here in particular from the third one you know you can define a norm of s as the square root of s inner product with itself because the square root will
+
+01:28:52
+always be defined and the norm now really takes you from the Hilbert space into the real numbers okay and you know there further conditions for a norm and they're all Satisfied by virtue of these actions for the inner product so from the inner product a norm follows the opposite isn't true there is not for every Norm there is an underlying inner product that induces it uh that is only the case if the norm satisfies the parall identity the parallelogram identity that's absolutely correct
+
+01:29:25
+okay fine but here we start with this so let's not worry about it so the completeness means if one has a sequence of which one knows that if the sequence goes on you far enough into the sequence the elements of the sequence no longer lie further apart than any prescribed epsylon it's a kind of a weak convergence requirement but completeness means this suffices if one has one may already conclude and that's something special one may already conclude that the sequence converges in AG in ag right you can have a Ki
+
+01:30:19
+sequence on the say rational numbers but it will not Converge on the rational numbers because the limmit may be square root of two which is outside the rational numbers but the real numbers they are complete any CI sequence in the real numbers will converge against a an element uh of the real numbers that is so actually converges that's a different Criterion that means there exists a fi in the space itself not in an extension of the space not in a completion of the space which would R be would be a
+
+01:30:55
+completion of Q no but in a space itself the existing element F such that for every Epsilon greater than Z there exists an n in the r natural numbers such that for all n that are larger or equal than this n the norm of the difference of this F and the nth member of the sequence is less than Epsilon well it converges it converges in the standard topology on age that has been induced from this Norm because if you have a norm you can build the soft balls if you have the soft balls you induce the standard topology so I could have
+
+01:31:38
+written the sequence converges in the standard topology on age that has been induced by the norm which has been induced by this inner product okay whenever you have a convergence Series in any space it is automatically a CET sequence but that from kosi you can already conclude that it converges that's something special and that's something we require of the Hilbert space okay and that will be very important in many proofs in many proofs we will very quickly see that something is a cushy
+
+01:32:13
+sequence and say ah but then it converges that's great okay so it looks like always complicated to check later on it will help us to make conclusions we otherwise couldn't make and all you have to do once you start working with a Hilbert space that you say underlies the quantum system because that's your model of the quantum system you need to make sure that this works that this is true okay so that's the that's the hbit space um then there is this notion and this is the final definition
+
+01:32:44
+so there will be no further adaptations everything I tell you here you can learn commit to memory and not forget okay these are very important notes we're going to work with but we will revisit all of this and we will have examples and examples on problem sheets and so on okay so um you really need to to wrap your your head around this um this is going to stay very important okay so this is this Hilbert space concept and um right so you see this looks very different from manifolds right I mean
+
+01:33:30
+where on Earth are the manifolds here they're not there right later on for specific problems there is a field that's called geometric quantization it asks the question if I hand you a manifold that is the face space of a classical system simplec manifold and I hand you a function on it a Contin function on it ah a classical observable if I put that on the table the field asks the question how do you construct from these classical data how do you construct the appropriate Hilbert space the action says to every Quantum system
+
+01:34:12
+there underlies a Hilbert space well which one how do you construct it it's a very difficult question that's the question of quantization you start with a classical system and you make it into a Quantum system are you classical I think not no it's a very strange question because what you mean you start with a Quantum system and you make it into a classical system you make it into a Quantum system quantum theory is more than the classical theory if there was a map that you could take the
+
+01:34:42
+classical problem translate it into a Quantum problem in a sense one to one or uniquely well you very likely would be able to calculate it classically and then only translate the result right in fact this goes a long way this quantization idea but essential things do not really work out like one would like them to work out it doesn't mean that this is not a very important subject to answer the question well but now for an oscillator which hbert space I'm not answering this question with
+
+01:35:14
+this Axiom you have to keep that in mind so don't be discouraged at this point if you don't know how is to the system the qu the hilet space how does it arise from the system I have in hand at the end of the day it's a modeling question okay anyway we'll we'll we'll come to that okay so I just try to point out what uh you're not supposed to understand because it wasn't said so now I also talk this was the first part of the axum the second part of the axum talked about linear Maps now
+
+01:35:45
+of course you all know from Vector space Theory from linear algebra what a linear map is nevertheless I write it down again a linear map is a map a that goes from well not from the vector space into the vector space it goes only from a domain which may be a proper subset of the vector space into the vector space okay it goes from a domain here into there okay and uh we will only look at we will only look at densely defined densely defined uh linear Maps what does that mean well it means that the domain is a dense sub subset in
+
+01:36:42
+the vector space so that means that for every element um uh s in the vector space and for every Epsilon greater than zero there exists an alpha in the domain of the map such that the norm of the difference of Alpha and this element s in the full Vector space is less than Epsilon you can always you not every element in h is in da but for every element in h you find one in da that's arbitrarily closed like Q is dense in R the rational numbers are dense in the real real numbers so this is a little
+
+01:37:27
+cloud and um we will only look at densely defined oper so the da the domain is always dense in here in linear algebra you probably always look at maps from V to V or from V to W or something but this those were full Vector spaces this only needs to be a um a domain and this becomes important for infinite dimensional Vector spaces for finite dimensional ones you can always take the entire Vector space and for bounded operator one infinite dimensional ones you can always take the entire Vector space we'll come to this but for the
+
+01:37:58
+unbounded ones like think uh energy of the harmonic oscillator energy of the hydrogen atom B this will be a true a non a proper it will be a proper subset of this H but it will still be densely defined it's a very important notion okay okay so this is a linear map and of course linear means that if you apply it to five plus alpha s then you can pull it apart this is a of f plus Alpha a of s for all well you know Alpha in C and F and S in in h and so on that's a linear map as usual um a notation that's very often
+
+01:38:38
+used and which will also going to use more and more is that you actually write a s instead of a applied to S simply in order to spare some brackets okay so we'll just ASA a acts on s what does it mean it acts on well it means a is a map and it's fed s that's it so let's not confuse ourselves with new terminology uh of something acting on something it's a map okay that's the notation it's a linear map now there is the notion of a positive linear map that appears in the
+
+01:39:15
+definition of State uh a positive linear map is a map such that for all s well in the domain of a where else for all s it's true that s a s there I used the notation is greater or equal to zero uh so they would rather be called non- negative Maps but it's tradition to call them positive Maps okay that's it and then there's the final Criterion which I gave and that is that the a is of Trace class um a being of Trace class there different formulations for it um the one that's uh maybe in practice not always the the
+
+01:40:06
+easiest one to evaluate but easy one easi one to understand that suffices for the purposes of the next few problems and it's the full definition is as of Trace class if for any orthonormal basis e n where the N well the N come from a suitable range okay for a finite dimensional Vector space E1 E2 E3 but to e dim H right for infinite dimensional one it's E1 E2 E3 and the question is is this basis countable can you even label it by an integer if it is it's called a separable Hilbert space we we'll work on that
+
+01:40:49
+later on more probably if for any o n basis um where the n well goes over suitable range of the Hilbert space uh the um the series aha well the sum or the serus and there you see the the issue uh if it's a finite dimensional hit space then the N will run from one up to so it goes over all n if it's a finite dimensional one it will just be a sum of dim AG many terms uh namely of e n with um a n if this sum is less than infinity well I mean if this is a map and if this is on on the domain
+
+01:41:40
+ah okay now we have a is of Trace class and now we need an a that is defined on the entire Hilbert space so the domain needs to be the entire Hilbert space because otherwise you wouldn't know whether for a any o n basis this basis Vector happens to lie in the domain but because the a acts on it now I said it because the EA Maps it it must lie in the domain of a because it's for any o n basis I need to have an A can only be of Trace class if it's defined on the entire Hilbert space okay but now it's a
+
+01:42:14
+serious if this is an infinite dimensional Hilbert space which is the rule rather than the exception and then this is not a sum but it's a series and for a serious it May well diverge right but only if it doesn't diverge then uh if this is less than infinity then the trace of a is defined as exactly the sum so in other words an operator defined on the entire Hilbert space is of Trace class if the trace is finite for any o n basis that you choose and then you can show not only is it finite any o n basis but then it doesn't
+
+01:42:55
+even depend on the o n bases that's a simple exercise okay so this is to be of Trace class and that completes uh the first axium axium 2 the observables of a Quantum system are the self adjoint linear Maps a which each may have a different domain as long as it's dense in age from a to age and that's it those are the observables the only question that remains is what is this condition of self adjointness now this condition of self adjointness is a very subtle one very subtle and it will take us a lot of work to
+
+01:44:27
+really come to terms with this in a finite dimensional Hilbert space it becomes very simple and you work it out on the problem sheet and that is what's usually presented as the axium but that is really not true for unbounded operators infinite dimensional hbd spaces so this deserves us a box this the axium but now it deserves some explanation so definition um a linear map a densely defined on its domain um is called self adjoint if now this is now simple if it coincides with its adjoint map well if it
+
+01:45:22
+coincides with the ad joint itself Ed joint that makes a lot of sense with the Ed joint map and what is the Ed joint map the Ed joint map is a map that's called a star there is the star of course nothing to do with complex conjugation okay nothing nothing I emphasized this because in most books they say oh before it was complex conjugation now it's the star and it's somehow the same thing and in a matrix anyway if you also take the TR forget it okay it has nothing to do with complex
+
+01:45:50
+conjugation at least not at this point the join map a star well it's defined on what domain well on its domain on d a star okay so the Ed joint map can have a different domain which we call D of the H star into H what does it mean to coincide well to coincide means as a map this is the same as this one in order to be the same as this one the first thing that must Co inide are the domains right if so to coincide means that da star is the same as the da because if already the domains differ the maps
+
+01:46:35
+cannot be the same and then of course on these same domains also the a star acting on the S must be the same as a acting on the S and the S comes from da or it comes from da star it doesn't matter it's the same okay so actually I don't need this explanation I just emphasize it that coinciding means the domains coincide and the actual prescriptions for how objects are mapped coincide then an a is called self adjoined so self adjoint makes a lot of sense but what is the Ed joint definition and the subtlety is the
+
+01:47:16
+definition of this Ed joint um the ad joint a star d a star into h of a linear map a d a to H is defined by we Define this in two steps and the first step is I indeed construct the domain well if I want to tell you how it acts I need to tell you what it acts on so it's defined by the domain and the domain of the ad joint consists of all elements in the entire Hilbert space that's the reservoir from which we uh take this because it needs to be a subset so Al the sign H such that for all the alpha that lie in the domain of
+
+01:48:13
+the original map there exists an EA which can again be from the entire Hilbert space and that's the special thing that you allow here so much such that the following is true such that s inner product with a alpha now you see Alpha needs to come from the domain of a because a acts on it now you take all those sides that such that for all Alpha on which the a can act there is an EA in the whole Hilbert space such that such that the result of this X ction can be expressed in ter No Nonsense I'm sorry such
+
+01:49:01
+that this equals EA comma Alpha that's the condition I'm sorry such that instead of letting the a act on the alpha here you just leave the alpha and you somehow absorb this action by replacing the S by an eer one has to work a little with that in order to see what's happening second you define the actual action of the a star of the a star on such a s well of course the S must come from here right this comes from here you define it well you say for a s for Alpha that exists in ITA such as this is the case you define
+
+01:49:46
+this as EA and of course there's only the exists one you have to show that there no other one because otherwise this would not be well defined um we'll see uh this is well defined no because whenever I Define something in terms of something that I know to exist I still don't know it's the unique one that does it but one can show that is the case that's it so if you have a map and you want to check whether it's self adjoined you construct its ad joined in these two steps and then you check is this domain
+
+01:50:27
+the same as the original one well if it is and the operator a is symmetric well one could Define this or one evaluates this then you check this and then you know it's s a joint or it is not and it's very important I could have written here something different I could have written eer in da so instead of saying I I look at any eer in the whole Hilbert space I could look look only for eers that also lie in the domain of a that would be a domain that's of obviously possibly I don't allow so much it's
+
+01:51:08
+smaller because I say if there exists an eer yes so I allow more here there would be a domain that's smaller and that would not lead defining the Ed in such a way would lead to the wrong notion of self jointness if I say the wrong notion what I mean by wrong notion well it would not be guaranteed that the spectrum of such an operator which is the next notion we're going to define or maybe next time that the spectrum of an operator lies in the real numbers in fact one can show the spectrum of an operator on a hillt space
+
+01:51:44
+lies in the real numbers so the measurement values would later on saying qu mechanics are real if and only if not only if but if and only if the operator the linear map that describes the observable self adint map is well is self adjoined okay this is the key notion for finite dimensional Vector spaces this is Child's Play uh for not finite dimensional ones it definitely is not that is this so please bear with me for seven more minutes of course totally owe it to the the Blackboard erasing because I would like to complete
+
+01:52:32
+the axim but I will be very quick now axim 3 uh chalk the probability that a measurement of an observable a well now you know a is a selfed joint map on a system that is in a state row is in the state row yields a result measurement result 20 Jewel yields a result in the borell set e which is a subset of R you rely somewhere on the antenna right um is given by now is this object I told you you can calculate it now I tell you how to calculate it is the measure associated with that observable and that
+
+01:53:56
+state applied to the measurable set e and it's constructed as the trace of an object PA of e which I'm going to explain in a second row this is a linear map this is a linear Map There's a composition of linear Maps often people call it a product of these operators but it's a composition first you apply this one and then you apply that one one linear map after the other is a linear map aha we know that the row is of Trace class we could take take the trace of the row why because row is a state a state was a
+
+01:54:34
+positive linear map of Trace class aha but who tells you that the row after the PA is still of Trace glass in fact what we will see later we will see that this object PA which I'm also going to tell you what it is but not how exactly to Define it we will see that this PA of e is a so-called bounded operator okay and it's a fact that these two things that the composition of a trace class operator and the bounded operator it's effect we'll see that the composition is again Trace class oh thank God because otherwise we
+
+01:55:17
+couldn't take the Tracer okay fine so um so you see I mean this looks terribly technical but you can imagine what happens if you don't know these Notions then you start doing nonsense okay so this is this um the probability that you measure get a result measurement if you measure a for system in the state Row the probability that you get a result within the measurable set e is this um expression uh where now it comes this PA here is a map that goes from all possible sets all possible measurable sets all
+
+01:55:55
+sets to which you can consistently assign volume into um the bounded linear maps on H so we'll find this terminology later is the set well it's actually the banar space it's the banar space will come to this of bounded linear maps on H if I say operator I mean linear map it's a standard notion a standard terminology to call a linear map an operator where this is the unique is the unique that's important projection valued whatever that means I'm going to explain that later is the unique
+
+01:56:43
+projection valued measure so it's a measure in the measure theoretic sense that is associated associated with a selfadjoint map and only with selfadjoint maps so if the map wasn't self adjoined we wouldn't have a chance to write this down with a self adjoined map a according to and now comes the keyword according to the theorem in which the first half of this course will find its climax according to the spectral theorem and I write it down and it will be not understandable for you the spectral
+
+01:57:29
+theorem says that for any self adjoint operator a for any self adjoint operator a you can actually find projection valued measures one projection value measure PA such if you then take with respect to this measure the LEC stus integral over all Lambda and you don't understand this object that I wrote down you do not understand it then you can represent the a in this form and this is the analog in the infinite dimensional case of the diagonalization theorem for symmetric matrices or her Mission matrices on
+
+01:58:17
+finite dimensional Vector spasis we know the Matrix is her Mission blah blah blah then you can find an igen basis such that you have only entries on the diagonal if you express the map in terms of the bases as a matrix blah blah blah this is the five infinite dimensional version imagine for the Continuum not even an infinite dimensional Matrix would suffice because the Matrix has only discrete IG values you could never get a Continuum from a even bigger bigger bigger Matrix right hence you need entirely new mathematics is the
+
+01:58:48
+mathematics of the spectral theorem and this will actually be a central result and uh in the derivation of this result we learn to deal with these types of integrals okay and what it actually all means but what you see if you have a selfon map you can get the Pas and the Pas in physics feature here if you want to extract the probabilities you need this it's unavoidable okay that is this um now we have two further I I'm very sorry for running slightly over time this is uh just important to complete this
+
+01:59:41
+here so these were what I would call the kinematic axioms of quantum theory they tell you about all the objects that you use and how you evaluate if you have the state and if you have the operators or the observables so this is the kinematics and now follow two axioms short axioms on the Dynamics of the quantum system and they tell you how a Quantum system develops in time there's a natural end to the lecture because of the of the chalk um okay so the axium 4 is the axum for unitary Dynamics and they Prevail as long as or
+
+02:00:41
+uh during time intervals during time intervals T1 to T2 during which no measurement occurs you remember if you measure then you change the state but if you don't measure the state changes like in classic mechanics there's just some Evolution to it and uh the aim is that the state row of T2 at time T2 and the state row of T1 so this is is new before we just called it row now we make the row dependent on a time because a state is at a certain time now row as it depends on time at time T2 are
+
+02:01:36
+related through and now you will recognize this in a second the row at T2 is given by um the U of T2 minus T1 times the row of the T1 at time T1 time U inverse of T2 minus T1 where now what is this U where the U of T is the following map it's the exponential of i h bar h t h or should be over h bar of course so minus I over H bar HT where this is the energy observable of the quantum system it's the observable that gives you the energy so you see the energy plays big role for the evolution of the quantum system
+
+02:02:42
+because the state is evolved like this but the only question is what on Earth is the exponential function of a selfadjoint operator well for that matter what is a function of a self adjoined operator if this is a finite Matrix you can say well plug it into the serious expansion of the exponential for an unbounded operator that's to totally IL defined okay so where so again we have a where where if f is a function from R to C that then the F of a is defined as the integral minus infinity to Infinity F of
+
+02:03:28
+Lambda time DPA of Lambda and so here again you use the PA that come from the spectral theorem so this is the second time we need the spectral theorem in only in order to write down this U which is the operator that evolves the state okay and like in classical mechanics it's the hamiltonian that makes the evolution of the state in in this picture okay so this is the axium this is just how this system evolves if there is no measurement and the final axium five so so I'm sorry I probably forgot with the last axium to to box it
+
+02:04:14
+okay um this is just an explanation here and the final Axiom five you guessed it well it's called projective Dynamics or if you want to be more dramatic you can call it the collapse of the wave function um well there's nothing collapsing it's just a projective Dynamics and uh these Prevail or these um um um Step In in place of the unitary Dynamics as soon or when when a measurement is made at a time T subm so no longer is there the condition there is no measurement taking place it's quite the
+
+02:05:09
+contrary it's when a measurement takes place then I need to tell you I talked before about you I look at your momentum I have the momentum the state the moment his State before my measurement and there will be a state after the measurement what is the state after immediately after the measurement if I know the state before the measurement then the state row after immediately after the measurement of an observable a is row after is given as the quotient of PA a that is again the PA so I measure an
+
+02:06:09
+observable a and I again need these projection value measure measures PA leave a little space row before then there's again a PA and the row before is of course State immediately before measurement because you see if it's not immediately before after as soon as there's no measurement then again the unitary Dynamics take over so long there's no measurement unitary Dynamics then there is a measurement pack projective Dynamics this rule I'm going to finish it and then again the unitary
+
+02:06:48
+Dynamics takes over divided by the trace of the numerator so that's just some normalization thing but then here there's still something missing of e of e what is this we have to State before after the time we have from spect to theorem the projectors uh the projection valued measure of the a where and that's what I mentioned before where e is the um um smallest borell set in which the actual outcome that means you really did the measurement the actual outcome of the measurement happened I used the past tense
+
+02:07:47
+intentionally happened to lie so that's what I said before this the way the state before the measurement is mapped to the new state not only depends on the A on the observable I measure momentum say it also depends on what the actual outcome of the measurement was but I cannot predict what the actual outcome will be normally can only predict the probability that it's this which means I cannot predict how a measurement influences the state I know if I know what came out if I look at my measurement device I say oh I measured
+
+02:08:34
+his momentum was such and such uh then I know how his state has been changed according to this formula but if I don't read off what actually happened in this one instance where I sent this one hydrogen atom or whatever then I I wouldn't know this what I remarked before earlier where I said this is even more annoying you remember this is even more annoying that we cannot say which result is obtained Because the actual projective Dynamics collapse of the wave function whatever you want to call it depends on that
+
+02:09:10
+that's axum five and that concludes the axioms with this you can solve any quantum mechanical problem and develop the entire Theory the only thing that is left is to develop all the mathematics behind it in particular the spectral theorem
+

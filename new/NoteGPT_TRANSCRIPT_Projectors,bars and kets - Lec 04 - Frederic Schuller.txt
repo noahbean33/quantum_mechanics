@@ -1,0 +1,348 @@
+00:00:04
+[Music] so welcome to lecture number four of the quantum mechanics course today we talk about projectors bras and cats and the projectors play a key role in quantum theory and in fact uh we already saw that uh in the axioms and the deserve to be studied in detail and today we'll do that and essentially this is very cheap linear algebra up to the subtlety that we may deal with infinite dimensional subspaces and there is a little subtlety we have to take care of there so uh most of the first part of today's lecture will be
+
+00:00:49
+rather trivial up to one or two points which I would like to draw your attention to um that's the first topic of the lecture the second topic of the lecture are the so-called brass and cat so that's the D ra and Cat notation and um their definition is very clear and it's based on um the so-called Rees LMA that we're going to prove Reese like this on the Reese LMA they use in quantum mechanics um is very intuitive and that's the reason why people like it because you can write
+
+00:01:42
+projectors using the bracket notation in irresistibly Charming simple form well while the use is intuitive um its definition the definition of that use is rather cumbersome so if you really want to say how to use them then you have to invent all kinds of extra rules of how you deal with it and what you really mean by it and at the end of the day all of this is already in our standard notation without inventing lots of standard rule of extra rules uh so we will not use that notation so apart from an initial charm It
+
+00:02:37
+carries um it only causes trouble and misunderstanding and wrong intuitive conclusions and all of that will not use that notation but obviously I introduce it because the textbooks are uh covered with this stuff and of course people informally talk using the brass and cats uh but you will always want to trans translate this into proper notation and then you say oh is that what you mean oh now I understand okay or if that's what you mean well then I don't understand okay so U we have a fully developed
+
+00:03:11
+notation we don't need extra notation with hidden rules okay as intuitive as they may seem so uh we first start uh with uh projections and Pythagoras Theorem now obviously in finite dimensional HT spaces Vector spaces there's not much uh to be said uh nevertheless we will consider a separable Hilbert space so let H be H be a separable Hilbert space should I ever in the future fail to mention separable I meant to say it that H be a separable Hilbert space with the appropriate structure on it uh then
+
+00:04:03
+we have the following definition very simple definition um let s in h be uh well let s be in h then um and E in ag a unit vector meaning of course that the norm is one then we Define s parallel namely parallel to e um as that part of s which you obtain by projection to e in this fashion so that's just a definition uh is called the projection of s to e that's very simple and whatever is left so if you subtract from s this projected part you call the orthogonal complement okay so this is really
+
+00:05:33
+this is really very simple now here maybe it's important to note the order the S comes second so that this projection map taking s to S parallel is linear the S was in the first slot it would be anti-linear right so uh please keep the order in mind okay so now this is very simple this is for one vector and it's interesting to understand this for an entire well at most countable set of orthogonal vectors e is interesting to understand the extension of this Elementary or these Elementary definitions to at most countable
+
+00:06:35
+sets EI I where the I comes from an at most countable set capital I and obviously if we're dealing with a separable hbit space this orthonormal countable set May well be its basis so this definition comes in the form of a proposition because one cannot simply Define here one needs to prove that all the limits exist so proposition again let s be in age and let the e i with I from some I be an orthonormal set in age so not necessarily A basis yet for an at most countable set index set I then we have that a well you can still
+
+00:07:43
+decompose s or you can decompose S as S orthogonal Plus s parallel where the S parallel is defined as the sum of over all the i in I of projecting the s to the I element of this o n set times EI and you say well this is simply enough why is this not just a definition because it comes in form of a definition well here again you have this to be S minus s parallel well the question is if I is countable and not finite does this limit exist it could simply be that I CH such a set but this limit simply does not exist
+
+00:08:36
+right I need to check hence the whole thing is a proposition rather than a definition okay um and and that's something also to be proven if you take the S orthogonal uh and you take the bracket with the J basis element not basis element from this orthonormal set then you get zero so this needs to be needs to be shown uh then B we have Pythagoras Theorem Pythagoras holds how does it look like well it says that if you take the S Norm squared that is the norm squared of the orthogonal complement plus the sum
+
+00:09:30
+I in I of all possible absolute values squared EI s like this and that's obviously Pythagoras Theorem but now we could have countably many summons so it's it's a little more than Pythagoras Theorem extended to D Dimensions it's Pythagoras Theorem extended to countably well to infinite dimension on a separ separable Hilbert [Music] space now moreover there is a useful characterization of the parallel component of the projection to this set e so that's the third part of this proposition for
+
+00:10:48
+any gamma that lies in the span of all the Eis you remember that the span is the set of all all finite linear combinations of such vectors although these may may be countably many the span is the set of all possible finite linear combinations for any gamma in the span of the EI and let me just draw a finite dimensional picture in order to see what is meant here so if this is E1 and E2 but the point is that this is holds for infinitely many Eis if I have two Es and um say I'm in a three-dimensional
+
+00:11:33
+space in total okay and then I can look at a particular Vector S as I usually as we usually do and you can consider the projection of this sigh down here into this span okay but now imagine you consider an arbitrary gamma in the span so arbitrary gamma in the span may be that guy you agree that lies in the span that's the Sigh and the red guy here is what you we usually call S parallel right that is uh the projection into there and if you want to complete the picture although we don't really need
+
+00:12:17
+this at this point then this guy here would be S orthogonal okay so that's the situation you have the Sigh you have the projection into this span that's a s parallel defined here and you have an arbitrary gamma now the claim is for any gamma in the span uh we have the estimate that s minus the gamma so that's in a sense the distance of the s from the gamma so that's um well like and color is here let's take red again uh now let's let's take white uh so that's this one here s minus
+
+00:13:10
+gamma is this Vector here right s minus gamma is this one here and now compare the length in this intuitive picture of this one to the length of this s oforal and then you see ah this is is always greater or equal to S orthogonal length right so this s not orthogonal s parallel s parallel is the one vector the unique Vector in the span that is closest to this s because equality holds if and only if the gamma coincides with the side parallel so that's the idea that's the picture but of course the picture is
+
+00:14:06
+here drawn for three dimensions to Aid uh memorizing this but of course the claim is here that this is true for um for an arbitrary atmost countable index set okay so uh let's prove the whole thing let's start in the beginning and uh well actually the proof is extremely simple um because at first assume I is finite and then of course we may assume that I just goes up to some number n that's the index set and then the whole thing is really very Elementary uh linear algebra um we very quickly go through
+
+00:15:00
+this so uh these two guys are actually definitions um it is clear from these two definitions that this one holds so this is a definition this is a definition because of the second definition well the second definition is just this claim so nothing has happened okay nothing has happened if this is a finite sum because then I know it converges well it's a it's a sum it it's well defined the only thing one has to check is this guy here um well yeah that's not too tricky uh so let's plug
+
+00:15:32
+that in we use the definition from here it's s minus s parallel but the S parallel is I = 1 to n it's a finite sum of the EI comma s EI and that's uh in a bracket with an EJ and the J is arbitrary from I okay so um well now it's just a an application of of the rules here I can of course this is a finite sum I can pull this apart I can do all possible kinds of things um I could write uh s comma EJ minus now I pull the sum out is I = 1 to n well I pull this guy out remember that because
+
+00:16:21
+this is in the first slot pulling out a scaler requires that the scaler gets a bar right because the product is anti linear in the first slot um so you pull that one out and then you have an EI comma an EJ uh well then we assume that you have an orthonormal set so with this funny symbol Delta IJ you see that the sum only flips only has a contribution if the I is a J uh then you can use the property of the inner product that this actually equals s comma EI bracket like this sorry yeah EI like this with this
+
+00:17:01
+Delta i j the whole thing is zero this is what you wanted to show because this one is the S orthogonal okay so I mean this is really very very Elementary if the I is finite well similarly I'm not going to do that uh similarly prove Pythagoras for finite index set I okay in the future if things are that simple I will not show them but here I'll do that for a certain purpose you'll see in a second so finally the C part well we just start evaluating s minus gamma now the gamma is supposed to be in the span
+
+00:18:22
+of the E that means there exist coefficients gamma I such if I go over finitely many finitely many coefficients I can expand this in yeah since gamma is in the span of the EI by assumption right um so I can write this as S orthogonal Plus s parallel because of Step A minus well minus this this gamma uh but that amounts to if you look at this this is s oforal plus the sum well the S parallel goes from 1 to n EI s sorry s EI I minus now I put them all under the same sum I can certainly do this because a finite sum
+
+00:19:15
+otherwise I might worry about ordering ambiguities something like this here then the norm the norm closes well distribute it will squares here and then you use Pythagoras that we have just shown you know that everything that has an expansion in E is in the uh parallel complement is in the parallel part so this is this plus the sum of each individual contribution it's the EI s uh minus gamma i absolute value squared and this is from 1 to n and because these are all non- negative we have the estimate as claimed but all of this only
+
+00:20:05
+for finite index sets now we need to extend the results to I countable so that's the essential step you see the final case well there finite sums that's Child's Play but how what happens if you go now to countable well you know what you need to show based on the finite uh formula finite I mean for finite IND index sets we need to show that all limits exist because you can show all these formula and then you just showed them for the partial sums to so to speak so you definitely need to do this in a
+
+00:21:18
+finite case you need to do these finite calculations but once you did them you just see with all the um the limit exist so um here the only thing you need to check is whether this limit here exists whether you need to check whether I = 1 to n these partial sums over EI s EI you need to check whether the limit n to Infinity exists because this limit is exactly what we defined as s parallel right we wrote s parallel is the sum of all I in capital I of this thing so does this limit exist well um when do we know whether a sequence so
+
+00:22:20
+this is the sequence of partial sums we know a sequence converges if it satisfies the Criterion for convergence however this this is a sequence sequence of partial sums in our Hilbert space right it's a sequence in Hilbert space so do I need to show convergence or is it sufficient to show that this is a kosi sequence well of course it suffices to show that these partial sums are a crochet sequence why well because the hbert space is complete I know if it's a crochet sequence it's certainly
+
+00:22:59
+converges so you see now so far we had to prove something is is complete but now we're starting using it right okay so we need to show where this is a Cy sequence so it suffices to show that this sequence of partial sums is Kushi EXC yes you may you lift at least the Blackboard you don't need them anymore because you lift your Blackboard and then lift the old one so we could maybe see it from the backwards so because it's quite hard to read the last line okay so well you see okay so I I
+
+00:23:50
+can go up to here for the camera I don't want to move the Blackboard all the time because in the last row you can get up and get a a better angle okay also follows by this part C of the theorem okay so um well just consider uh just consider the following estimate we need to check it's a Ki sequence right so um just check what happens to if you start with i at some M and you go up to some n so take n greater or equal to M and check what you know about this guy what do we know about it from what we already derived so
+
+00:24:56
+far well we know that this is I sorry that this is I equal m to n of the absolute value of EI s absolute value squared right this is Pythagoras there's no par orthogonal part here and we know that this guy here is less or equal than the norm of s well this also Pythagoras right okay um well but that means so s is for any fixed s this is a number so this is a bounded sequence so from this we conclude this sequence is bounded from the fact that it has only non- negative summon we know that it's increasing it's
+
+00:26:02
+monotonic monotonically so it's bounded from above if you want to be very precise and it's monotonically increasing what do we know about a sequence that's monotonically increasing and bounded from above converges okay that's right if it converges it is certainly Ki because any convergent series is kosi but if this is Ki this sequence is kosi then this sequence in here is kosi hence the sum I equals m to n EI s EI is Ki hence it converges hence s parallel as defined in the theorem is
+
+00:27:08
+indeed an element of the Hilbert space that's it that's it so you see you really only have to do the stuff one usually does and there's only a very small extra argument that you have to provide in order to check whether your infinite sum really isn't element of the space where you claim it is an element of okay so very often again proofs in the separable Hilbert Space Case that's infinite dimensional only require a little extra work but that extra work is required in order to make the theorem
+
+00:28:09
+true rather than maybe falling into the Trap of stating something that's only true in the finite dimensional case and only very few Quantum systems that we actually want to look at in physics would then be treatable that would be a nice exam question right show this and that and uh you'll be very careful to not only check the finite case but to check existence of limits okay so um now we uh look at the relevance of closed linear subspaces of a hillt space H now our theorems will very often say something
+
+00:29:22
+about this set is closed and there's the closure of this set and so on and uh that's a little well maybe at first puzzling why a CL closure topological closure uh comes into the game and um what is the relevance of closed linear subspaces well it's this uh not any not any linear Subspace let's call it m of H what is a linear Subspace a Subspace is a subset but a linear Subspace is one where for all elements M1 M2 in the linear Subspace and for any complex number it's true that if m1 and M2 are in the
+
+00:30:11
+Subspace that M1 plus and that's the Plus on the Hilbert space Lambda times that's the times on the Hilbert space right uh that this linear combination is again in the Subspace so it's a sub Vector space a linear Subspace is a sub Vector space not any linear Subspace M&H that is sub Vector space is a sub Hilbert space which you might have assumed because well a Hilbert space has more structure than a vector space has also an inner product it needs to be complete with respect to that inner product uh
+
+00:30:55
+for it may fail so this m may fail to be complete ahuh so this is the problem of just taking a sub Vector space and we have a little LMA from topology which we're going to prove in order not to uh confine this to mystery uh LMA a closed subset so you see now we're no longer looking the linearity is not important at the moment a closed subset m h of a complete space is again complete aha so in order to preserve the completeness property we cannot take any old sub Vector space we need to take a
+
+00:31:55
+topologically closed subset okay and the topology we're talking about is of course the topology on H which is the soft ball open ball standard topology uh induced by the norm okay aha proof how can we see this it's quite instructive to see this well we want to show that a com a close subset m is complete if it's a subset of a complete space what do we need to do we need to consider a Ki sequence let called it s n um yeah uh in the Subspace if we are able to show that this kushy sequence
+
+00:32:50
+converges in the Subspace so that it has a limit that lies in the Subspace then the Subspace is complete right so if one says a kosi sequence converges well in the space whose completeness we want to show okay consider a Ki sequence we need to show that limit s n n to Infinity exists and is an element of the Subspace it it's not enough if it exists somewhere it needs to exist in M now since the sequence s n is a sequence in M it's certainly a sequence in h right so it's a Ki sequence in
+
+00:33:52
+h in the ambient space AG hence it converges in h so we know that the limit n to Infinity S N exists but we know only that it exists in h right it exists the limit exists in h the question is does it not only lie in h but does it even lie in the subset m of H in this subset of which all its members come from but does the limit also lie in there okay well if that is true now since m is closed so now we're going to use the closure condition a closed subset M uh what does it mean for M to be closed you tell me m is closed
+
+00:35:01
+topologically what's the condition for M being closed without that's right H without m is in the topology induced the standard topology induced on H since m is closed H without M and O is open right that's true now suppose we make an assumption which we're going to reduce to a contradiction okay now suppose the limit s the limit of s n is not an element of M so let's assume it is simply not true that it lies in M which would mean our theorem is wrong so it's proofed by contradiction now
+
+00:35:51
+suppose the limit is not in M well because H without m is open then there exists an open set u um in h without M that contains the limit right because if H without m is open and I have a point that's not in M it's an therefore the limit is an element in h without M if that is open around every point of an open set you find an open set that lies entirely within there right but then there exists an n in the integers such that for all n greater equal to n the nth element of the sequence lies in that open set because it's an
+
+00:37:00
+open set around the limit point the sequence converges in h the limit point lies in h even in h without M if you now know yeah well if you know that's an open set around the limit point then from a certain sequence member onwards all sequence members must lie in this open set okay but this U lies in h without M and at the same time the s n all lie in a in M why well because the S was a Ki sequence in m so it cannot be true that they all Li in m and from a certain member onwards they do not lie in M
+
+00:38:05
+contradiction hence our assumption is wrong hence is false so hence the limit n to Infinity S N is in M but that is what we wanted to show so the Ki sequence in M any Ki sequence in M because we made no special assumption as to what Ki sequence this is converges in M that's it it's a very simple topological fact based only on the definition of close subset and the um and the definition of convergence with respect to a topology okay so all is fine if in addition we require this linear Subspace
+
+00:38:53
+to be a closed linear Subspace in the sense of topology Nam that it's compl is open so corer from this simple fact a closed Vector Subspace or linear Subspace it's the same it's just different termin terminology for the same thing a closed Sim um linear Subspace m inh is a sub Hilbert space of of course with the inner product induced from H you just use the same inner product but you only apply it to the elements of M um and additionally if H is separable which you might have assumed I mean in
+
+00:39:44
+this theorem anyway yeah you can assume this I just emphasize it if H is separable then also m is separable obviously it is it's uh you can find a sub bases okay so now you understand why in many places we talk about closed subsets or we're interested if we construct something we're interested in checking whether the result of the construction is a close subset because it's then all also linear subset we know ah we have a sub Hilbert space why is so great to have a sub Hilbert space well for
+
+00:40:36
+instance you know you can choose an orthonormal basis on it right otherwise you have no justification you know that a separable hbit space has an orthonormal basis but if it wasn't a separable hilit space you had no justification assuming so so certain constructions you couldn't do by the way uh the converse does not hold so it's not true that only closed subspaces can be subh spaces um but uh that virtually never arises in practice okay so uh let's immediately proceed to orthogonal
+
+00:41:23
+projections so again if you have a thirst for physics uh I assure you projections are all you need or essentially what you need to extract um predictions from your calculations in quantum mechanics right to extract expectation values and things of that sort um so this very very important to study this so um now we extend this whole thing uh to the following um construction so definition let m in H ba in Brackets not necessarily closed so we will not assume this from the beginning not necessarily
+
+00:42:05
+closed however linear Subspace of H okay so you know okay it's linear Subspace but it may not be a sub hilit space so definition is then the set m orthogonal which is defined as the collection of all elements in the Hilbert space um such that for all m in M M SII or mu SI let's call this mu for all mu and M mu SI equal zero then the set m orthogonal is called the orthogonal complement [Applause] the orthogonal complement of M in h um property or properties m orthogonal is a closed linear
+
+00:43:31
+Subspace of M of H aha so although the set M we started from although the set M we look at whose orthogonal complement we consider may not be a closed subset once you take the aoral complement the aoral complement is a closed sub linear Subspace okay so that that's great so we know are the orthogonal complement of a linear Subspace is certainly a sub hilit space let's see why this is true well let's first check that M dual is a linear Subspace well this is very simple because uh let's take M1 and
+
+00:44:24
+M2 in m orthogonal no let's take s 1 and S 2 in M orthogonal right then due to the linearity of the inner product in its second slot however this is not so relevant here because you have a zero here so if it the S if I had defined the s in the first slot you could could switch it anyway and then the uh complex conjugate of zero is zero okay but uh in its second slot um S1 plus S 2 is also in the complement and also Lambda Time s 1 is an element of the complement for all Lambda in the complex numbers so that's
+
+00:45:18
+trivial because this inner product is linear in its second slot okay well uh it remains to show Closure to show that m orthogonal is closed well the first thing we note is that m orthogonal is the intersection over all mu in M of the pre image of the zero in the complex numbers under Maps Omega mu I'll say a word about this in a second where the Omega mu Maps right so the MU comes from M uh is a map from H to the complex numbers that assigns to each Alpha in h it assigns the complex number Mu Alpha
+
+00:46:29
+so why is this true well I the M orthogonal as you see from here is all the size such that is each side such that for all mu this condition is satisfied well this condition is that Omega mu of s is zero is that right so maybe to make this clearer I call this instead of alpha I call this s so this is this zero and one map picks a particular mu but the m orthogonal is all the size where this is true for all the me so it's the intersection of all those sets and the pre-image of Omega mu of the zero is exactly this condition that
+
+00:47:19
+the S belongs in here okay so this is just by definition this is just a rewriting of the definition of m orthogonal nothing more nothing less okay now um whenever you deal with topology and you deal with unions and and and uh intersections you know that the union the arbit and arbitrary Union of open sets is open but only a finite intersection of open sets is open however we want to show that this is closed and if we could show that each individual pre individual pre-image for a fixed me was a closed
+
+00:48:08
+set then we know arbitrary intersections of Clos sets are again closed okay so we already have we almost we would already be there if we H um we will already be able to show that this is closed if we only knew that this is closed for every mu in M because then an arbitrary intersection of closed sets is closed okay so this is why this is It's clever to re rewrite it like this it remains to show that m orthogonal is closed at uh suffices to show that for each mu in M the pre-image of the map Omega
+
+00:49:11
+mu of the set containing only the complex zero is closed okay so consider this set is a subset of the Hilbert space right because the map goes from H to C so we consider the entire Hilbert space without this pre-image Omega mu of the comple set containing complex zero obviously we want to show that this is open if we can show that this is open we show that this is closed what is this this is the set of all the s in ag for which the condition that qualifies you to be in here is not true well such
+
+00:50:02
+that for all no not for all mu there is not all mu we have a fixed mu such that mu comma s is not zero right because we take the complement if we didn't have the complement would be those where it is zero this is where it's not zero well but this can be Rewritten s in h such that mu SI is an element of any complex the set of any complex number without zero it can lie anywhere but there and this here is of course Omega mu of Si but hence this is the pre-image of Omega mu of C without the
+
+00:50:52
+Zero by the definition of the pre-image aha well but uh we know that this here is open because the one element set is closed in the standard topology on C so this complement is open in the standard topology on C which we're of course always employing on C but now Omega mu being just the map that takes a s to mui this is the inner product and the inner product is continuous in the second slot thus Omega mu is continuous thus we know here that the pre-image of a the pre-image of an open set with respect to
+
+00:51:56
+a continuous map is open because of continuity hence we know this is open in the topology on H since this is continuous and this continuity goes into here done thus we showed that any such preimage Omega mu of the zero is closed and here we have an arbitrary intersection of closed subsets well that is closed that was our claim any questions well if that's not the case let's have a seven minute break till half past and we continue so let's continue so definition the map p taking H down to
+
+00:53:36
+M that sends s to S parallel where the uh s parallel uh is defined by the set M here um let me see do I need a um closed set I think I want a closed set yes so H to M and let this be a closed linear Subspace so now I do no longer allow M to be just any linear Subspace now I want M itself to be a Clos linear Subspace if it's a Clos linear Subspace it's a sub hilber space that means there exists an o n basis for the M itself gree because it's a Hilbert space so there is a separable Hilbert space so
+
+00:54:32
+there's an o n basis for M and then this parallel is defined with respect to this o n basis you remember we defined the S parallel as this sum I in I where I is now the space could be the spaces EI s EI of M so this map p is called the orthogonal projector the orthogonal projector to the sub Hilbert space m and now you see if this wasn't closed you understand now this closure Criterion if it wasn't closed you were not guaranteed that you have an o n basis then you wouldn't know how to
+
+00:55:35
+define the S parallel in the first place okay it's called the orthogonal projector projector to the subh Hilbert space m it has the following properties and let's call this map P down M because it obviously depends on the choice of M the first property is that if you take pm and you execute it after itself again you still obtain the same map and sometimes this is written PM squared is PM of course the square is here the square with respect to composition the second property of this map is that for all s and fi in the
+
+00:56:37
+Hilbert space the inner product P of PM acting on S with Fi you can actually take the PM over here is s PM fi all this follows from the definition and the third property of this guy is that if you take the P not of M but of its orthogonal complement why may we do that well because if m is a linear Subspace which is certainly is then the complement is a linear Subspace a closed linear Subspace so where I wrote The M here I could also write the M orthogonal um this guy of course goes from H to m orthogonal and um it takes the uh s in
+
+00:57:32
+h to the S orthogonal we had before that's a simple consequence okay and fourth the PM map is bounded it's a bounded map from H to m you remember the symbol for the bounded Maps this curly L it's a bounded map and the proof is immediate and will be found on the problem sheet okay so there's not it's not a big thing um quite interesting is the converse quite interesting and heavily used is the converse so theorem let P not P subm but just a p map um that's a bounded map on
+
+00:59:10
+H have the properties First Property P after p is p second property for all scii in h the inner product P SI comma f is the same as s PF later on we'll call this self adjointness and we will call sorry equals P call this uh the projection property in the self adjointness but that will be more subtle is simple here the self adjointness because this defined on all of H we will come to that nevertheless at this point we we need like this um have the properties then the range or some people call it the
+
+01:00:11
+image of h under of Pi of p is closed and the p is the P from before so you have the P from before where you have a set down here where you put a closed set down here so the range the image is of course the P applied to the whole domain a claim this is closed and then the P you have must be the P that has been constructed in the way we did in the previous statement so for any map that's bounded and it has this property and that property you find a closed subset Nam the range of the map such that it's the projector to that
+
+01:01:15
+closed Subspace okay so any projector can be written like this right um so the moral is any projector is the orthogonal projector to sum uh sub hilit space and the sum is a slight understate M because we even know which one Nam the range of the map and it's good to practice this so the proof is on the problem sheet so this will be quite heavily used so um final section is the re slma bras and Kats so the re Slammer is saying about how you can understand the Dual space of a Hilbert space um but let's start
+
+01:03:25
+differently let's say consider um a Lambda in the Hilbert space so well Lambda is usually a complex number now Lambda is an element of the hbit space in this case so consider Lambda an element of the hilit space then you may Define a linear map let's call it l sub Lambda it's constructed from the Lambda it takes you from H to the complex numbers in the following fashion uh Alpha is being mapped to Lambda comma Alpha well this is clearly linear since the inner product is linear here in the second entry so this is a
+
+01:04:24
+linear map um it's it's also a bounded map how do we find out well we calculate the operator Norm of this guy do you remember what the operator Norm of a map was it was the supremum over all elements in its domain of the quotient you apply the map and in the resulting space you take the norm well because the complex number is the absolute value and you divide by the norm of the element right now this is the subp alpha in h of Lambda comma a of course was what we just defined now you know I'm I'm sorry and here we
+
+01:05:29
+have an absolute value and now we know from bessels inequality No Nonsense from Kushi Schwartz we know that this is less or equal to the subp alpha in h we take the norm of Lambda times the norm of alpha ided by Alpha so this is of course just the norm of Lambda but because you have a fixed Lambda this is of course less than infinity thus the L Lambda is a bounded map from H to C right and how do we write the set of bounded Maps we have another name for that the space of bounded linear maps from H to C the Dual space so dual space
+
+01:06:28
+H star so again I emphasize H star is not all linear functionals from H to C but uh in the context of banak spaces and hence of Hilbert spaces it's only the bounded linear maps from H to C I also emphasize as is shown in one of the problem sheets that bounded linear maps are always continuous Maps as well bounded implies continuous it's actually if and only if so okay so that means you can take an element of the Hilbert space and you can construct from it using the inner product a bounded linear functional big
+
+01:07:23
+deal well the question is is can any any um l in the Dual space so can any bounded linear functional from H to C be uniquely written as L is the L of some Lambda so the L Lambda is the construction we just made and can any L any bounded linear functional be written like this uniquely and there we have the Reese Lemma very short LMA it says yes okay that can be done and to the yes there belongs a y so prove so let's let's do this so we have to find for any l in any bound functional we have to find the Lambda
+
+01:08:31
+that does it well that's one way to show it constructively and that's what we're going to do so however there are two cases case one is that the linear functional we're looking at is the zero function what's the zero function that's the function that sends any hbit space element to zero in the complex numbers if that is the case um then take Lambda to be is zero in h and you're done because obviously the inner product of Lambda being Z comma something sends everything to zero
+
+01:09:06
+so that's the first case you're done by choosing Lambda to be the zero Vector however if that is not the case so if you have a linear bounded functional that's not the zero functional what can you do then well then you know that the kernel of this L you know what the kernel of a linear map is okay Pard me yes that that's that's the um well I write down that's the set of all the ages that are sent to Zero by the map right so then the kernel of the map being defined like this is of course
+
+01:10:00
+always a subset of the hill of the domain but in that case it's certainly a proper subset because um there are some s that are not being sent to zero because otherwise all the s would be sent to zero and then uh this would be the zero map okay okay now the kernel is of course a linear Subspace of H okay and in fact by its definition it's easy to see it's also a closed linear Subspace of H it's a sub Hilbert space so then the kernel is not the entire Hilbert space but from that it follows that the entire hbit
+
+01:10:53
+space can be written as the kernel of L plus the kernel of L the orthogonal complement why well that's the projection theorem we had earlier this is close close subset close sub Vector space so it's a sub hilit space these two together that's the decomposition we had before um as the whole Space one sometimes writes in a direct sum here Hilbert space can be decomposed like this but because this is not the High Hilbert space we conclude that the orthogonal complement of the kernel is
+
+01:11:33
+not just the zero um it's not just the zero Vector in h which it would be if it was the entire Hilbert space because the Dual of the entire Hilbert space is just the set with the element zero okay okay so if the orthogonal complement of the kernel is not only the zero then we can pick some Kai from the orthal complement of the kernel and somei that is not the zero in ag why can we do this well because the set doesn't only contain this one well I could maybe be very clear here and say it's more than this
+
+01:12:33
+right so now if you can pick a vector that's a nonzero Vector then without loss of generality w log without loss of generality can choose the side to be a unit Vector because if it isn't you divide it by its Norm and it becomes [Music] one so you see we have existence of such a vector and if we're now going to use it to construct something we better show Independence of the choice later on so there is whatever we're going to do there's some wellde issue hanging over our heads but uh we'll clarify that in
+
+01:13:25
+the end we just proceed at this stage H me question or okay so without loss of generality we can choose site to be a unit Vector uh and then take remember we want to take we want to provide some Lambda that does the trick well in this case in the second case we take Lambda to be the application of the abstract map that we're given now we're given some l in h star we apply it to thei what's the result well it lies in the complex numbers right uh then we can take the complex conjugate of it bar uh and we
+
+01:14:12
+can multiply it by the vectorai and what do we get well obviously we get a vector in the Hilbert space right I mean more precisely we get a vector in the Dual sorry in the orthogonal complement of the kernel which is of course part of the hilet space well we can do this and um why would we do this well obviously because that's our candidate um for the lamp that we need to prescribe in order to get our L uh for then let's consider l with this such chosen Lambda apply it to some Alpha which could be any Alpha in the
+
+01:15:04
+Hilbert space and compare the result to if you took the abstract map you were handed okay so if we can show that this difference is zero we showed that the L Lambda map is the L map which is what we want to show right okay so let's write this down what is this L Lambda on Alpha this is by definition um Lambda comma Alpha and the Lambda is this one so it's l ofai barai comma Alpha minus well L of alpha now Comes The Cheeky trick it's l of alpha Time 1 H did I want this ah yes I do yes yes okay good sorry
+
+01:16:28
+got myself confused for a second now this is just a complex number right we can let it jump out and then we let it jump in again but to the second slot so it's Kai L ofai Bar nothing anymore Alpha minus L of Alpha and we let this one jump into the second slot Cai L of alpha agree so it changes the bar because here it's anti-linear in the first but linear in the second slot so but now by linearity in the second slot additivity in this case only Cai you have L Cai Alpha minus L of alpha x so again emphasize the Cai is an
+
+01:17:28
+element of the orthogonal complement of the kernel right that's where we chose it from now if we could show so I first claim it and then I show it if we could show that this is an element of the kernel of L then I had an inner product between an element of the kernel and an element of the orthogonal complement so what's the result if that is true zero so that's what we want to show so it remains to be shown that this is true so how do you check whether this is an element of the kernel well you apply
+
+01:18:08
+the map and see whether applied to this object it yields zero well but because it's a linear map you can pull this out and you get l ofai l Alpha minus l Alpha L ofai all complex numbers and that is zero hence is an element of the kernel hence this is zero hence we found the Lambda well we didn't find the Lambda we found a Lambda because our choice ofai which we used to construct the Lambda well it was just some choice in the set so we need to finally answer the question where this is a unique Lambda we found
+
+01:18:58
+we certainly found one but do we find a unique Lambda in H or did we find this way a unique Lambda in h and mind you you could choose the differently but it will always yield the same Lambda by the above Construction so uh let Lambda 1 Lambda 2 be two such constructed vectors uh so that in particular L Lambda 1 equals L but the L lamb 2 reproduces the L2 then you have L Lambda 1 minus L Lambda 2 applied to some Alpha in the hbert space well you know it's zero because the maps both reproduce the same abstract
+
+01:20:22
+L but then you have Lambda 1 Alpha minus Lambda 2 Alpha is Lambda 1 minus Lambda 2 Alpha but this is true for all Alpha and H this is zero and because it's true for all Alpha and H You can conclude Lambda 1 is the same as Lambda 2 uh thus the whole construction is unique and the re LMA is proven remark the proof um provides for a bje from H to H star and um because of the construction here it provides for a linear bje from H to H star okay so this is why we can say the the H and the H star they're actually
+
+01:21:53
+the same space right they're they're isomorphic to each other as Vector spaces and um so that's this Duality and hence very often in quantum mechanics one does the following thing one says why would we bother about this complicated space H star if all it is it's obtained its elements are optained by taking element of h a unique element of H and write writing down a bracket where the first slot is filled with this element from H and the second slot is left open so that we have a linear
+
+01:22:34
+map so it's a a way to think about the age Duel of Hilbert spaces that seems to avoid having to understand the H star properly like we did we did a long time ago right so um D bra cat notation so the whole thing is is pretty clear um since for any element l in the Dual space there exists a unique Lambda in h due to the re Slammer and as we just showed such that L of alpha is the same as Lambda comma alpha or what we could also say is L open slot so the map L as such is L is Lambda comma open slot so the L acting on
+
+01:23:53
+something you leave this slot open here too you can plug in any element from H right so this is then a map from H to see because it can still eat something um D Rock suggested the um short [Music] notation L equals bracket Lambda and because some people write the inner product not with a comma but with a line here like this line and that is it and uh British humor has it that because this is a bracket well actually it's brackets but uh well let's say it's a bracket um then most obviously they
+
+01:24:47
+say the first half of it must be the bra and whatever comes behind is the cat and the left a c okay and of course bra has other meanings too but you don't want to think too much about this notation because I don't think it's politically correct nowadays anyway so so it's it's it's the it's the bracket and and you're supposed to um to write this like that and there's absolutely nothing wrong with it because of the Rees Lemma there's absolutely nothing wrong with it
+
+01:25:28
+okay so far and um he further suggested so far so good I I'm with him there so he further suggested to then write and now it becomes a little funny to take a Lambda in the Hilbert space and instead of writing the Lambda you already dress it with a cat so whenever other we other people that's us so whenever we write lamb as an element of age which is perfect notation we know exactly what it means to be an element of a set He suggests that you dress the lamb already with a cat why well because
+
+01:26:15
+he says the whole life purpose of such an element here and such an element there is that they meet right um uh uh then hooray uh if we have an l and we apply it to a s we can write the L like a Lambda say so and we can apply it to the S but if you don't write brackets and just apply it then the S looks like this according to the rule so that's the notation and then because quite obviously for some people double lines must become single lines it looks like this I mean this is not so wrong because it
+
+01:26:58
+says that if you have an inner product you can always consider this inner product as the application of the associated functional on the sigh in here yes you can again re tells you this is one to one this really fits together okay now obviously one could say well it's a little funny that use half a bracket whatever that means okay I mean obviously it's not half the inner product it's just it's just a notation it's a little funny to use it here because this has nothing to do with the
+
+01:27:34
+inner prodct here it makes more sense because really finding this duel you need the inner product to associate a duel uniquely with this Lambda okay so you see there is okay now you might wonder why on Earth would you want to do this why on Earth would you not would you exchange a beautiful clear thing a map that takes an element from the hillt space and Maps it to complex number only because you can during due to the re Lemma why would you interpret this thing in a sense always like uh uh uh compulsively as as this um as something
+
+01:28:10
+like this well there is an advantage to it and that Advantage is mainly one that you can memorize formula more easily okay but that's just for the little people right I mean you don't want you don't want to memorize formula easily right you want to memorize them right so the question is whether this easy memorizing comes at a cost well it comes at a terrible cost okay and uh so that's why so the easy memorization thing and uh uh is what people would like to get when they use the D BR head
+
+01:28:53
+notation well let me write down a few things because we're not going to use it anyway um I just make a few remarks of course you must be able to recognize what people mean and sometimes you will have to decide they write down this or that well is it this or is it that and sometimes it's not so clear so um this all is perfectly fine so there's nothing wrong with it at this point uh the gain is that some expressions are quite easily memorized using direct notation so for instance take this statement that any s
+
+01:30:07
+can be written in terms of an orthogonal basis as this decomposition I mean this is for advanced students because you have to remember that the S goes to the second slot and then this I here and the EI here and okay so I mean you memorize this formula anyway however um if you're inclined to to follow this direct notation you see aha hillt space element it gets dressed it was too naked before it gets a cat um now you have I in I now you say aha not not a problem here you have a a bracket anyway so let's write
+
+01:30:52
+this EI I well single lines are omitted first extra Rule and you write the EI here also with a well I should actually write like this um EI s you should write the e you should dress the EI as well so far nothing has happened because this is a vector this is a complex number vectors are multiplied from the left by complex numbers because you have an S multiplication nothing has happened I only I only dressed up the whole thing well that is not the uh the big achievement uh it goes further you say
+
+01:31:29
+aha but oh it would be also nice if um I wrote it like this EI EI and you put the S here or in other words you allow the cats to be multiplied also from the right by a complex number well in high school you do this right Vector * 2 is 2 * the vector or something like this well can do this so we invent an extra s multiplication that acts from the right with the complex number on a vector and yields exactly what the S multiplication from the left yields okay second extra rule you have to keep in mind you see
+
+01:32:11
+all these extra rotes you have to keep in mind in order to make sense out of this now it gets a little more interesting um because what you do then often is you write this is EI k bra EI and you say well quite obviously but I'm not so sure uh quite obviously you can take the sum out you first execute the sum uh and then you apply it to the S aha so what do we mean quite obviously because now I first take a sum over half an inner product and here there's also H okay so you say no no no we're not that
+
+01:32:53
+naive actually there's a tensor product involved okay let's do that so you write it like this which is actually which you will see very often I assume this expression you will see very often that this is written like this okay but remember up to this point we already had three extra rules the third extra rule I tell you now and that extra rule comes with a sub extra rule to interpret it I'm being mean right but it's it's a little like that right okay I want to make you sensitive for
+
+01:33:29
+all the extra implicit rules you have and then the question is if they're so implicit why do you have them at all if you don't need them in the first place but okay so um so the whole thing one says is no no no it's not that simple um or not that naive um what you actually have here where's the yellow ah what you actually do have here is um I'm sorry what you actually do have here is you have a tensor product here they say it's just a suppressed tensor product symbol okay we can live with
+
+01:34:09
+that so it was a suppressed tensor product symbol uh that that acts on the on the side ahuh okay we suppress this that was the third extra Rule now what is what tensor product is this well this guy here lives in h this guy here lives in h star agree because one is a cat and one is a bra so the whole thing and certainly the sum because that's the definition of the tensor product the sum this ele this whole element here is an element of that space ah that doesn't look too bad because um that's exactly what an
+
+01:34:46
+endomorphism is right it eats an element from age and produces an element from age and this is the decomposition however us if you have a tensor product of two maps F tensor G then you need to feed it with elements um uh Lambda mu and the definition is that the F acts on the first entry and the g acts on the second entry and in between here you have a multiplication okay um which if this these are maps that send you to C is the multiplication C and what not so actually we need to submit here not only
+
+01:35:25
+one element that can be eaten by the second one but we also need to submit in a first argument that can be eaten by the first one however there's the sub extra rule that it's not meant that way and that you keep the first slot open so actually the whole thing is meant I in I uh EI EI I tensor tensor EI so the whole thing actually keeps an open slot here uh and then submits this the s in there ahuh mhm okay so this is how it is meant if I also make this extra rule so my my counting is roughly about 4.5 extra rule
+
+01:36:18
+so far all right for what for what extra rules just in order to write that the identity on H is I = 1 to Infinity EI EI which looks pretty and you can say oh I just inserted the identity in front here well what hasn't been totally clarified yet is how does it work with the infinite sum can you actually pull in and can can you pull it out well of course you can if you think about it in the proper formulism you can prove all of this so if these were finite sums then okay if they infinite sums you need to check
+
+01:37:05
+anyway well you can check and it kind of works out and so on but it's a lot of extra baggage it's a simple notation which looks like you see the the appeal the appeal people talk about which I fully understand right of course I understand the appeal the appeal is this eats something from the right buy it and once it added it becomes a number and then you have vectors left okay but please please I mean it's this so difficult right and here and and and you see here the the you you submit
+
+01:37:38
+something which is a cat and and then maybe it comes in a bracket and it it's it's it's a mess right I I find it's a total mess and there are many other places if you want to talk about um self adjoint operators her Mission operators and so on well once you know everything is fine the notation doesn't produce inconsistencies anymore so if you know that all the objects you use already have all the properties you want from them in quantum mechanics the notation kind of works but how do you write down
+
+01:38:07
+the conditions using this notation because what if it doesn't work then the notation doesn't work so then we formulate conditions on our objects in terms of a language that only works if the objects already satisfy the condition is is all not so good right it's all not so good nevertheless it's heavily used and once you see something like this I think best the best thing to do is to say well this is meant in this way this is meant in that way and that is meant in this way and that is very
+
+01:38:37
+clear in the first place so you translate this into that and you're done and here we proved all the theorems okay so that's my argument and here you know the bracket is a linear by well is a cqu linear map from H cross H to C has these properties it's continuous you know what to do with the suon you know what this object is and nobody on Earth knows what this map is Sai goes to KI what is this right this is not a map this is not something that's happening what what's the meaning of this right it's just
+
+01:39:14
+notation why would you do that okay so so my point is yes this is heavily used in the physics literature yes you need to know how to deal with this is uh but no it doesn't clarify things at the end of the day it doesn't simplify things if you're really serious about the formula and what you're going to derive and proove it's not making it simpler it it's making it terribly complicated because why on Earth do I need a tensor product with with all of this in order to write down something as simple as a
+
+01:39:41
+basis expansion right so this is my little polemics against the D BR head notation which at times it's it's quite neat to to to understand you can insert this but really well if if if you can prove all the other stuff you don't need this really okay good so did you uh did you use that in the experimental part so far did you see a a brad no didn't do that much it was just at the very end of the lecture a few experimental facts and a little bit of Basics okay good good good okay so we're still ahead there's nothing
+
+01:40:21
+well I mean there's the problem because I obviously need to provide for the um for the experimental part I need to provide some theoretical bits um and but I'm happy so so so far there is we're not behind that's good that's good okay good so uh this actually completes our discussion and the techniques that we need to understand Hilbert spaces as far as we need them what we're going to start next time on Wednesday is we're going to look at self adjoint operators and we'll make very clear what the
+
+01:40:54
+difference between self adjointness and symmetry is symmetry almost looks like it it's what is usually substituted for self adjointness on fine Dimension Vector space is exactly the same thing of for bounded operators for unbounded operators like the momentum and the position and almost any operator in quantum mechanics if you're not just looking at a spin one half system right but any other system in quantum mechanics that's of interest in the lectures right harmonic oscillator hydrogen atom molecules whatnot okay uh
+
+01:41:21
+particle in the well all of that they uh heavily employ unbounded operators and we need to get self adjointness under control for all these cases and we need to get the spectral theorem we need to understand the generalization of the IG value uh de composition that you normally have right for finite dimensional Herm Mission matrices or real symmetric the real version of that you can decompose into IG spaces and you get a diagonalization of an endomorphism on a vector space uh in a certain basis
+
+01:41:54
+in the IG bases is diagonal and has the IG values on the on the diagonal right um so but this is only in the finite dimensional case and it doesn't even suffice well it doesn't suffice in the infinite dimensional case certainly not if your spectrum has a continuous bit because then the IG values can impossibly uh constitute a Continuum because your basis is at most countable so your Matrix if you think of matrices well you don't have any that's the point but if you thought you had any they
+
+01:42:25
+could go on forever you say well that's still countable right but the point is you provide Lambda 1 Lambda 2 Lambda 3 Lambda but how would you provide a Continuum of lambdas right you can't so the mathematics of matrices and projections to orthonormal Bases just thinking of matrices simply hits the roof it it's not sufficient it's not the right mathematics even though it almost looks like it could be but it's very simple to show that it cannot the right mathematics and in fact we
+
+01:42:57
+already um provide the groundwork to to really write down the exact definition of selfadjoint operators and they will then be decomposed via the so-called spectral theorem that's the next big uh goal we have we have to work a little until we arrive there um and that the the uh constructions in there like these me measures these projection valued measures from the axioms of the first lecture and the P subas the projectors the family of projectors associated with The selfed Joint map they will actually
+
+01:43:28
+fall out of the um spectral theorem and then we have really all elements together to understand mathematically what precisely these aims mean and then we're in a position to tackle all the physics problems okay so that's uh so of the first little part of the of the course uh is completed at this point now we do self adjoint operators and the spectral theorem then we review the and then we start exploiting all of this for physics okay thank [Music] you
+

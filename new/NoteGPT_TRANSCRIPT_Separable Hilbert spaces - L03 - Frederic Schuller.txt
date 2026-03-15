@@ -1,0 +1,366 @@
+00:00:00
+foreign and as I emphasized last time a Hilbert space is a special case of a banana space so uh recall that Hilbert space is a uh Vector space age equipped with a well we take a complex Vector space they're also real Hilbert spaces but we look always at complex hillbook spaces equipped with a then sesquilinear in a product which induces a norm which induces a norm with respect to which h is complete so we're guaranteed that every crochet sequence converges it's very easy to observe well I already said it because you have
+
+00:01:33
+this Norm defined on a Hilbert space and maybe by virtue of the norm of PSI so we'll usually denote the elements of a Hilbert Space by some Psi Phi color because this is defined like this and this is indeed a norm makes this into a banner space in particular makes the Hubert space into a banache space and thus we know from our work we did on Banner spaces um we know that everything we know about Banner space is already applies for instance we know that if we look at the set of bounded linear Maps
+
+00:02:29
+from the Hilbert space into itself and usually we last lecture we had here Banner spaces but the Hubert space is in particular a banner space we know that this space equipped with the operator Norm so let me maybe indicate this Norm by an H just for a while because it's the norm on the space age and here we have the operator Norm that we defined last time that's a different Norm than this one it's the one that's defined on this space okay we know that this is a banner space okay
+
+00:03:09
+so you see even if we start with Hilbert spaces as a special case you could say why would we ever look at Banner spaces well already the construction of the set of all bounded linear maps from H into itself carries the norm is a banner space but not a Hilbert space however there is a special type of Hilbert space and that because H is a banner space I know what H star is you remember what H Star Wars so this is point a point B H Star Wars what yes the Dual space but how is it defined to complex numbers no not quite not all
+
+00:03:55
+linear Maps all bounded linear maps please don't forget this this is all bounded linear maps from H to C so you quoted the linear algebra notion if you don't have an inner product if you don't have a norm then you can't talk about boundedness or not but if you do we explicitly restrict to bounded functionals bounded functions are also continuous that follows comes on the problem sheet we know that this space here equipped with the corresponding operator Norm which it is is also a
+
+00:04:29
+banner space because it's just a special case of the city well of this situation if I had a different Hubert space g here because the C is also a little bit space okay so you already learned that um remark we will see that the Dual H with the norm it carries is even a Hilbert space and somebody already said it last time that can only be so that means that there exists in inner product on this H star such that the norm on H star which we already have by virtue of the construction of the operator Norm
+
+00:05:24
+such that this Norm is given um by an inner product by the square root of an inner product okay and we will see okay so um but that prompts the more general question so um in order to see this so you see we're abstractly guaranteed it's a banner space but the question is is it even a Hubert space in order to see this uh more generally note the theorem the theorem is the following if a norm um on a vector space is induced by a cesqui linear in a product if and only if and if I say induced I could mean many
+
+00:07:01
+many things but I really mean in use like this okay you could induce it maybe otherwise if and only if the parallelogram identity parallelogram identity Norm of f plus G um plus the norm of f minus G equals twice the norm of f plus twice the norm of G holds and of course for all f and g in the vector space so if this parallelogram identity holds then the norm really comes from an inner product in this case when it does come from an inner product the inner product can be explicitly constructed up here constructed
+
+00:08:21
+as well you want to learn how an F with a G what the inner product is because we have a linear map it works as follows it's 1 4 bracket you take f plus G Norm minus F minus G Norm so the plus goes with the plus and the minus goes with the minus then you take plus I times F minus i g minus I times f plus I G close bracket so you see the minus I goes with the plus I and the plus I goes with the minus I on the right hand side you only use the norm but what you get is the inner product this is called a polarization Identity
+
+00:09:16
+or polarization formula but mind you if you didn't check that the norm satisfies the parallelogram identity you can write this down but the resulting object will not have the properties of an inner product so you need to check this first before this is true before this yields an inner product and then that is the inner product that induces that Norm ok so the proof of this is the on the problem sheet okay and the proof that H star The Duel of H um it's even a Hilbert space is afforded exactly like this and it's
+
+00:11:01
+also on the problem sheet okay so because we invested some work with the banner space um we don't have much work to do here okay and actually the whole uh under the this should all be the first section called relation between Hilbert and banner spaces so first section relation between Hilbert and bana spaces if you want to write that down okay so um there is an important estimate on Hilbert's spaces and that comes in the form of the theorem that F well let's take PSI and Phi PSI and
+
+00:12:00
+Phi absolute value of the inner product is always less or equal than the absolute than the norm of PSI times the norm of Phi so you see I now don't write sub H sub H because it's obvious so increasingly I will not mention explicitly what on what space the norm acts because you see on what space it acts so you have to see is this the norm on the Hilbert space is it the norm on the Dual space is it the norm on uh is it the operator Norm on some more General l space and so on okay so this is the crochet Schwartz inequality
+
+00:12:38
+Schwartz inequality okay okay and the proof is simple so homework all right um so this will often be used it's already last time we used one or the other inequality if we want to show something is squishy something converges and so on you know that in analysis these making these estimates improves and in calculations um that's part of the art of analysis right in algebra you always have equal signs that's very simple estimates are more of an art because you have to see okay right there are many estimates you
+
+00:13:25
+can make but there are rarely many equations you can write down okay so anyway this is a very very useful very useful estimate right so um are there any questions so far I think most of this you must have seen before it's only good to know that also in the infinite dimensional case with our inner product and the norm we have for instance very clear about the Dual spaces I mean only the bounded linear functionals very important so um normally you know that choosing a basis on a vector space is something that's a little bit well
+
+00:14:09
+vulgar um most things most statements are made beautifully without bases and they're actually much clearer without having chosen the basis however sometimes you want to have a basis and in contrast to what I just said some theorems and some statements are most easily written down using a basis and if you really want to write down a specific map or a specific Vector rather than an arbitrary vector you usually employ a basis and then you provide the components of that Vector if you will so we need to look at the concept of
+
+00:14:50
+basis and now you might think you already know this because a Hilbert space is a vector space in particular so you say well we know what the basis of a vector space is we even know what the basis of a vector space is if the vector space is infinite dimensional yes I believe you that the point is those are not the bases the quantum mechanics textbooks talk about nevertheless let's review the standard notion of basis and then let's talk about the other one so this section is um called Halo versus chowder
+
+00:15:32
+so what sounds like a boxing competition is in fact two different Notions of bases and I claim what you learned in your linear algebra lecture is the Hemel basis and you just called it bases okay the notion of faces for a naked Vector space V plus s multiplication by naked I mean it has not more structure than a vector space it does not carry a norm it does not carry in a product let alone such that it's complete you just have a naked Vector space is known from linear algebra which is the theory of vector spaces
+
+00:16:26
+first and foremost without any additional structure and it's the following it's very useful to to write it down again to really contrast this definition um a subset B well it's yeah B in the vector space is called the basis or let's write a hemo basis but again if you don't say hey Mo you probably say what is the right answer in the linear algebra examination it's called a heimel basis if well the first thing is if any finite and that's the key word if any finite even if the vector space is
+
+00:17:15
+infinite dimensional well we don't know what dimension is yet before we have a basis okay but if any finite subset so we can give it a name uh E1 to e n if it's finite it goes up to some n if any finite subset E1 to e n in the spaces set is linearly independent and let me write down once more what that means that means if you have to sum I equals 1 to n so if this happened to be n vectors and you look at Lambda i e i so these are vectors and these lambdas are complex numbers that that already implies that the
+
+00:18:04
+Lambda 1 the Lambda 2 up to the Lambda n are all zero where these are all complex numbers right you know this definition but if the basis has not finitely many we're not requiring that you take all the elements of a basis and go up to Infinity but you will require that any finite subset has this property then the B is called linearly independent a subset maybe not finite it's called linearly independent if any finite subset of it is linearly independent and the second condition is is called a
+
+00:18:45
+basis so it's the linear Independence now we come to the generating property if for any um V Vector in the vector space there exists and now a kind comes it exists a finite because again this finite thing there exists a finite subset let's call it again E1 to en but you see this n is not fixed it depends on on the V subset of B and corresponding well and complex numbers we're dealing with complex Vector spaces and complex numbers V up 1 to V up n as many as you have elements in here
+
+00:19:35
+such that the V can be written as a linear combination I equals 1 to This n v i e i and if they're linearly independent it's also unique I don't need to require that they can be uniquely written like this because that follows from number one that's it and that's how you use spaces okay in general and then you have definitions or terminology well um well and you can show okay there's lots to be said but criminology is if there exists a finite basis B then the dimension of the vector space
+
+00:20:23
+is defined as the size of the set B okay else it's called otherwise dim of the vector space is said to be Infinity okay now of course one has to show well definition of these numbers it could be that another basis has a number another number of elements or it's not isomorphic to the other bases as a set but that can all be shown so this is what you know and um however that's the important remark this is not the notion of bases that quantum mechanics books textbooks wish to talk about
+
+00:21:23
+that's a very important point because an amusing homework could be to go to the library and fall all quantum theory books that make that clear so just talk about basis but it's not quite that innocent for in fact on a Hilbert space and you could probably also do this on a banner space but let's specialize to Hilbert space for in fact on a Hilbert space eight plus times which is not quite as naked because it's closed in a Charming in-app product one may Define another notion or a modified a a a a
+
+00:22:15
+refined that sounds good a refined notion of bases and that's the definition I'm going to write down now and that's the definition we're going to use definition a subset s now we call it s the subset s of a Hilbert space is called a basis but not just any basis is called a basis and you distinguish it from that basis we call it a shorter basis is called a shaura basis and so you see from now on we'll only talk about chowder bases so if in the future I don't say chowder before it you should
+
+00:23:04
+always mentally insert it okay and whenever you think about naked Vector spaces you should mentally insert hemobases a subset is called a shower basis if well the first condition is unaltered the first condition is like for a hemal basis okay so for uh well same as for hemo basis only that now uh B is replaced by the S okay so require that any finite subset of this set be linearly independent nothing new well it's in the number two where the difference comes up second for any PSI in the Hilbert space PSI instead of
+
+00:24:01
+the V there exists and now comes the big difference here we set finite we still have finite in one but instead of finite here there exists accountable a countable subset you know what accountable subset is that's one where each element can get a number it's a sequence right a sequence of elements they exists a countable subset E1 E2 dot dot dot and it doesn't end or maybe it does end then it's finite count finite is part of countable but it could be infinite but countably so you can
+
+00:24:46
+give labels one two three and so on if there exists accountable subset in this basis set as and a sequence I should have also could have also said a sequence of vectors right it's the same thing and the sequence um PSI I um well I is the label of the sequence PSI i i in N well I should say I in one two if this terminates at some D then this terminates it some D if it doesn't it's say in the sequence of complex numbers foreign such that PSI equals and now we have two cases PSI could equal
+
+00:25:39
+sum I equals one two sum d PSI i e i and this is the case if um the um well if the base is here if the base is set s has finite size or if that's not the case then it goes up to Infinity PSI i e i else so this is the generic case okay so now you say okay why didn't we Define this like that in linear algebra any ideas yes of course you do in linear algebra you do deal with the infant dimensional Vector spaces if you give take the definition of a vector space as a set V with operations plus and S multiplication and you have
+
+00:26:50
+Kani and adul as your axioms says nothing about dimension maybe a specific linear algebra course Deals Only with that's true but linear algebra deals with infant dimensional Vector spaces as well no that's not the reason what of all I wrote down here can you not do if you don't have an inner product on your space or a norm then you have no topology if you don't have topology what don't you have what notion depends on topology that you might need here that's right continuity you don't need immediately
+
+00:27:42
+or you need convergence what is supposed to converge here aha is this serious it's a serious and seriouses are serious um so so the thing is I mean you don't know what this symbol means you can write infinity but what number do you assign to this so recall if you write something like this that the sum of N equals 1 to Infinity over some sequence of whatever here it's a sequence of vectors because this is a vector this is an element in h for each eye this is defined as the limit capital N goes to Infinity of the
+
+00:28:30
+partial sums where you go only to a certain member here but then you have to take the limit now this here each of these is an element in h do you agree because finite sums in a vector space you can add two together you can add three together but if you know how to add two you know how to add a finite number by induction but by induction you do not know how to add an infinite number maybe I should set up a warning sign so one warning sign is that if you have a linear map a okay and you let it Act
+
+00:29:10
+on an infinite sum PSI I right with our notation you cannot by linearity conclude that you can pull the sum out right you cannot because linearity is defined for a of PSI plus Phi is a of PSI plus a of Phi it's defined for two hence it's defined for a finite number n of summons but it is decidedly not defined for an arbitrary number well if you know that this means a limit and if you know that the a is continuous a continuous linear map then you can pull first the limit out then you have a
+
+00:30:06
+finite number in there naming the partial sums and then you can pull the partial sums out so this is not true for any linear map but for any continuous linear map you get a feel why we want H star to be the bounded functionals from H to C well because ballet also means linear it's on the problem sheet there you can then do it continues bounded is means continuous yes right and then you can do that because then you can pull the Limit Out huh so we're not going to be careless about this because this is very very
+
+00:30:40
+important okay so here you need a notion of convergence and on H so this requires a notion of convergence on age well if you made your vector space into a topological Vector space you gave it a topology well then all is fine so some people might say Ayah but every Vector space is some R to the N yeah every finite dimensional one but there you don't have a problem in the first place okay anyway so you need a notion of convergence and age which is precisely where the inner product comes in so in a
+
+00:31:26
+sense at this point here here the inner product is needed and hence this is not possible in linear algebra for a naked Vector space it's only possible on a Hilbert space it's a very subtle a very small thing that you very easily don't look at and the bases in quantum mechanics are like this now let me ask you you could of course say all right I have a Hilbert space and I have an inner product I could forget the inner product and provide a hammer basis for the silver space because I mean nobody
+
+00:32:10
+forces me to use the inner product I have a perfect notion of basis for a Hilbert space that does not employ the inner product and that's the handle basis so you could say okay why don't we choose the basis we already knew why do we need to invent a new type of basis well the point is you don't need to invent it but it's convenient for the following reason imagine roughly speaking I take one in the same Hilbert space a very specific one which spaces set is usually larger for the same
+
+00:32:47
+Hilbert space if I ignore the inner product and I provide a hemal basis B or alternatively if I use the inner product like this and I provide a shorter basis s which set include switch so what is so the question is what is true is B usually smaller than S or is s or smaller contained in b well very roughly speaking it's a very importation marks right no no it's not it's obviously wrong yeah yeah yeah okay okay no no forget the final one say it's an infinite dimensional Vector well okay
+
+00:33:44
+the wrong way around no but look this set hang on hang on a second so this set B this set B nothing is required of the set B here nothing is required of the set S I mean as far as its finiteness countability or anything is concerned this piece so far later on will specify to separate Heroes but so far this B could even be over countably infinite non-countably if you want to generate a vector what happens right here you can reach a vector possibly by taking the guys from s but infinitely many of them and taking a
+
+00:34:33
+limit whereas in the hamlet basis you need to reach the vector by writing down a finite combination so for instance assume you have a consider a shorter basis and assume a certain Vector is such that you do not reach it by a finite number of some summons but only by an infinite one well if that is true then the Hemel basis needs to provide that limit as an extra Vector in here because you would then have to reach it directly rather than getting it okay so in general the Hemel bases must be much bigger
+
+00:35:18
+because in the shower you can afford to choose fewer because some you hit by adding infinitely many is that clear we have more power in generating vectors you can generate vectors in a more powerful way here than there and hence you need less to generate it from so the American argument is if you're if you're an ingenious guy from very little you make a lot okay so that's the shorter the shoulder basis okay because you have many means of operating the hammer basis is a poor base no it's
+
+00:35:53
+not a poor basis it's a it's someone who's not very clever in using his or her resources you can only generate accurate resources in this way that you add finitely many okay so the point so the point the motivation the motivation for choosing the shoulder basis is a we can because we have sufficient structure and B it makes the bases smaller in this sense okay for a finite dimensional space there's no difference the concepts coincide obviously but for infant dimensional Hilbert space this is very important
+
+00:36:33
+okay so I'll formulate this as a remark since using the notion of a shoulder basis one has a more powerful means of generating a vector in a Hilbert space one needs less resources re-sources that is roughly speaking elements in s then one needs in a Hemel basis B less or equal right of course anyway how the bases are the bases that quantum mechanics textbooks talk about and you will find always the sums over vectors and so on well in some you find even integrals over vectors well that's a different
+
+00:38:47
+business that goes again in the direction of being a little bit floppy I will do this more precisely anyway so this is uh the basis get another remark shoulder condition 2 where we say you can generate like this can be rephrased as follows and I rephrase it not for rephrasing sake but because the important notion appears you can split it into two dot a first part is you define the span of a set of vectors Define the span Define the span of a set of vectors and the set could be a set m where m is some set of vectors and do
+
+00:40:00
+you see I assume nothing on M it could be even non-countable okay an arbitrary subset what is the span of an arbitrary subset of vectors the span of M we agree is the collection of all finite linear combinations of elements of M so if you want to look at the span you know what the span of three vectors is it's a linear combination any linear combination of the three vectors is the span of the three vectors the linear combinate the span of countably many vectors could give you countably many vectors and ask you to
+
+00:40:53
+write down the span well the span does not consist does not consist in the infinite sums you could build then it only consists in all the finite sums you could build and if in the future we talk about the span we will always use this definition for very good reasons and then 2B so this has nothing to do with this apparently because here we do exactly the opposite we we can also take the limits and to be is then the statement that the span of the shoulder bases is dense in age or in other words that if you take the span of the bases
+
+00:41:47
+which is how you usually think you think if you have a basis you take the span of the bases and then you have the entire space but because the span only takes the finite ones this would be a hamlet basis if I now require that the span of s b h if I require this then I get the Hamlet basis because then I only I must reconstruct every vector by a finite linear combination is that clear that that would be the Hemel basis so forget the dense thing and but the requirement here is that this be dense in here but it doesn't need to be this
+
+00:42:26
+thing it could be a subset but it didn't subset so if you take the topological closure of it it coincides so this is the topological closure okay so look that up if you don't know that notion it's logical closure so hence if we were dealing with Hemel bases we would never see disclosure symbols coming up these topological closure symbols and we deal with shoulder bases and you think oh so it's not the span of the base it's the whole space but only the closure of the span what is this
+
+00:43:02
+about well it's exactly this the span is the finite linear combinations and you want to admit that you hit an element not by a finite one but by a seek by the limit of a sequence hence you require this this looks more complicated at this level but it actually makes the whole thing simpler because the shorter basis needs less needs fewer elements well fewer you know in the set sense inclusion sense and whatnot okay so this is this condition here demystified and sometimes the second condition is just said so um the
+
+00:43:35
+substance called the shoulder basis if any final if any finite subset is linearly independent second if the span of s topologically closed is the Hilbert space and I tried to go step by step to get you give you a more Elementary feeling for what that means it all means the same okay it's actually very simple so don't don't lose your fear of this guy it means you complete this you don't only take the final at once you take sequences and the limits and that's this so there's one final Point uh that
+
+00:44:08
+Dominic convinced me of here um there is something incomplete about my definition of shoulder basis and Dominic's question was hang on All is fair enough but why wouldn't you simply if the if you have a certain shoulder basis is why wouldn't you simply take a shorter basis S Prime which contains all the elements in s from which these Eis are taken and you add as an extra vector some infinite linear combination which therefore is a new Vector in s well you say well because then you have
+
+00:44:51
+two ways of representing a vector this Vector PSI you could say it's simply one times this new element in the basis all you could say it's this series of the other elements in the basis or some other elements in the basis so you no longer would have uniqueness of coefficients of uniqueness of expansion and my immediate answer which I now increasingly believe is not correct um is well you go to the linear independent spit and you see that that can't be true but then Dominic's counter argument was
+
+00:45:25
+hang on you say the linear Independence is still defined looking at only finite subsets of the S and then of the S Prime so you could not compare with the series with the other one and see that one is linearly dependent of the other I believe that that is a correct objection and I for to be sure I would like to add just to be safe a third Axiom and next time I maybe show you the theorem by the third Axiom is redone no no I don't think so I think it's correct so the third one should be this is called the shoulder basis if all
+
+00:46:07
+of this is true and if s is a proper subset of some S Prime let me think if s was a proper subset of some S Prime no I want to say something like s is the smallest such um the smallest smallest such set so um s is the smallest such set okay that is that's not so easy it's not so easy to formulate it because you could choose an entirely different basis which is not even a subset but if let me leave it here so so I I do not allow you to add another Vector like this okay and it shouldn't have been
+
+00:47:24
+added before is this the smallest such set yes that's right that's right Yaya in principle that's right but see you could choose an entirely different basis from the start and then one is not included in the other so so another basis another shorter basis wouldn't necessarily be a superset completely different that's right the other basis or the other smallest phases yeah something like this something like this by proving the interfaces is a small subset as a larger substance
+
+00:48:20
+The Zone Lemma comes also in at some point um because this s might be non-countable let me leave it here like this because we're now going to specialize to separable Hilbert spaces where the S is required to be countable and that uh um I think that in the end lets you deal with AutoZone Slimmer in this case okay and it gets getting a little deep here um for me um um let me leave it like this as a as a safety net okay and next time I'll tell you more about it okay but I I also think there is
+
+00:48:57
+something to be said at this point I now agree this this uh is likely okay good okay so now uh next section is separable Hilbert spaces in quantum mechanics in quantum mechanics proper what do you mean by quantum mechanics proper uh I mean in contrast to Quantum field Theory um we always only look at separable human spaces hmm at separable Hubert spaces so what is that definition a Hilbert space is separable if it has a basis a shorter basis but if I had omitted it you would have inserted it if it has a shorter basis s
+
+00:50:27
+which is a countable so now we in this definition here we had countability but it was the accountable subset of the S and the count on an accountable number of complex numbers now we talk about the countability of s itself okay if the S is already countable um which is countable and which is b or for normal what does that mean to be orthonormal that is for any two e one E2 as okay if that is um for yeah for any E1 and E2 in s it is true that the inner product of E1 and E2 is either one that's the normal bit is
+
+00:51:39
+either one but that's only the case if E1 is already equal to E2 or it's zero otherwise that's an also normal basis that's the ortho so the first one is the normal and this is the normal and that's the also and it's for any pair right for any pair of vectors that this should hold now it's common it's common notation to write E I E J equals Delta i j where the Delta i j is exactly that I 1 if I equals J and 0 if I it doesn't equal J um this is of course all right because the
+
+00:52:38
+symbol Delta with two indices down can be defined like this but it is not this Delta with two indices down are not the components of the identity map on H with respect to the spaces you know if you have a linear map we're going to do this I put it on the problem sheet if you have a linear map and you have a basis you can express the base the linear map at least for bounded operators you can express it in terms of Matrix components right of the identity would need components one index up one index down if you remember
+
+00:53:27
+the classical mechanics course right it's an endomorphism blah blah blah blah blah well depending on notation um this one here is a bilinear form there's something by linear map something entirely different from an endomorphism okay so hence or a Delta The Chronic are Delta well The Chronic are Delta there's not no D chronica Delta and this has a lot to do with the space anyway so um I just mentioned this and of course I will also use the symbol because very very useful but really a
+
+00:53:55
+Delta up down is something entirely different from Delta down down take it really as a symbol people call The Chronic a symbol and as a symbol it's really good because it just means this and this is right okay but don't draw further conclusions from it if you didn't understand the remarks don't worry well everybody has its own idiosyncrasies and minus if the indices are placed wrong so it's my relativist training that makes me shiver um when I see that and of course it may lead to problems at some points and it's
+
+00:54:31
+almost undetectable if you don't are not aware of the problem you commit terrible mistakes and you can prove fantastic theorems thereby so anyway so um this is this now yes that's intentional so the Delta IJ are not the components of the it down age identity map on HD I mapped the that sends an element of H to itself PSI is being sent to psi by the identity map and not the components of the it down age with respect to these spaces thank you it's like when your grandfather starts talking about the war and he goes on and
+
+00:55:32
+on and on and on and you just ignore it okay or great grandfather I don't know we need to make an adaptation to the generation so now we look at separable Hilbert spaces and I said in quantum mechanics uh proper so that's the course here actually I think now that I wrote this down I probably forgot the word separable in the axioms did I when I said in Quantum mixed every quantum mechanical system that corresponds a Hilbert space did I say separable no please insert that in the Axiom because the Axiom should already say
+
+00:56:32
+that separable okay we look at separable Hilbert spaces it doesn't look to be such a fantastic restriction okay the basis can be encounter can be is countable only and so on the existing often normal basis um remarkably there is only one separable Hilbert space at all well if it's infinite dimensional right so um we only look at the infinite dimensional case because for the finite dimensional case it's clear anyway the finite dimensional complex Vector spaces are the C To The Ends right
+
+00:57:48
+and every complex Vector space it's finite dimensional is isomorphic unitarily isomorphic we'll talk about this in a second to see to the n but now you say yeah yeah okay you know this theorem for real Vector spaces every finite dimensional real Vector space is isomorphic bilinear maps bijective and so on to R to the n and that's the justification for people to write down matrices all the time and components of vectors and so on right and for infant dimensional Vector space is somewhat different but now we
+
+00:58:20
+look at separate at infinite dimensional Vector spaces but at Hilbert spaces in particular and even more particularly at separable Hilbert spaces how many are there and the answer is there's only one up to isomorphism and the exams Axiom in quantum mechanics says aha every Quantum system underlies so we have to show a theorem um well the claim is and uh we need two more little sections to uh show that this is true the claim is um every or any any infinite dimensional separable complex Hilbert space
+
+00:59:13
+let's give it a name h plus times is now comes the word you don't know yet is unitarily isomorphic and sometimes people call this unitarily equivalent unitarily isomorphic to the separable that's just the claim at this point Hilbert space of well that has a name is called L2 of the naturals natural numbers L2 the Space trailer of all square summable consequences complex sequences in C so what is this space so the space is called L2 the set is called L2 of n this contains all the sequences a what's
+
+01:00:22
+what's the sequence the map from the integers from natural numbers into the complex numbers and the condition it is its Square summable so if you take the the infinite sum so I don't know what what is n and includes the zero or not nobody knows uh n star does not include the zero therefore I start at one what's the D Norm um this one and this one does where you should study the German industry Norm on mathematics symbols which definition whose definition well the point is that okay so if you want to
+
+01:01:09
+be precise if you want the zero write the zero here but I think there is a German industry Norm so in in so International uh listeners to the video May laugh so there's an industry normally I think that it is an official definition almost state definition of one anyway so I mean it without the zero obviously okay so it's the absolute uh it's the AI absolute value squared this thing must be finite those are called Square summable sequences and we also need an inner product right well this is a set okay
+
+01:01:46
+this is a set now what do we need to make it into a Hilbert space well we need an addition how would we Define the sum of two sequences Well Point wise again right and the S multiplication tool so that's again the pointwise strategy to Define to inherit the addition and multiplication from here onto here for a sum for an addition s multiplication okay um plus times uh Point wise and that leads to an L2 of n with this plus and this s multiplication being a vector space well you need to check Kani and Adu
+
+01:02:28
+but why do you define the multiplication point for us the S multiplication so this is goes from L2 cross L2 to L2 and this goes from C cross L2 to L2 okay yeah yeah okay right and so what you need then so then you make it into a vector space and then moreover what we of course need you also need a um an inner product on this L2 and you need to define it and it's defined as I equals 1 to n you take the ith member of a you take the complex conjugate of it you take the ice member of B and the claim is this is a
+
+01:03:13
+sesquilinear product on L2 you can check that and the even bigger claim is um L2 L2 of n with this plus and this as multiplication and this SQL linear inner product is complete hence Hilbert and um and claim it's separable okay so I wrote down a very concrete and in fact rather simple right this is technically very simple it's just sequences a very simple space which I claim is a separable complex Hubert space called L2 of n so that's the the claim in the claim but the point is I say any infinite
+
+01:04:12
+dimensional separate complex tablespace is unitarily isomorphic that's the key word to this guy what does that mean thank you yes what is this unitarity condition or Unitarian unitary unitary equivalence what is it and in particular why would we ever look at it so that leads to the next section for unitary Maps unitary maps of the utmost important importance in quantum mechanics and one might think that this is a statement about nature but in fact it isn't it's a statement it's simply an outflow of the structure
+
+01:05:18
+we have because quite generally um one is interested for good reasons interested for obvious reasons Amy in the structure preserving Maps between um any two spaces of the same type okay quite generally what I mean by this is the following so let's look at a collection of spaces let's look at what the structure on this space is um let's look at what the structure preserving Maps would be preserving Maps and then let's look at the terminology so this is something that is worth thinking about once and then
+
+01:06:41
+you're never confused ever again in the future so the simplest set of space I mean space is a collect is a general notion a specific mathematical object would be a set m what's the structure of a set M well the only structure you have we have roughly speaking a measure of its size so this goes to set theory no cardinality and contour and bloop right what is to be known about sets about a set all you can really know is its size there's no further structure and the structure preserving Maps which in fact
+
+01:07:17
+define the size are the bijections the bi-directions that take a set into another set in such a way that it's one to one and onto so there is a pairing of elements by such a guy if if they exist such a bijective map between two sets then the sets are said to be of the same size hence size is preserved by these guys and we call these uh isomorphisms such Maps bijections are the isomorphisms and sometimes one adds other set isomorphisms ISO means the same and morph means form and isomorphism is
+
+01:08:05
+something that has the same form well because to a set to a set belongs its structure well you can become a little bit more General and to to stay within the levels of structure we had in this course you could for instance also equip the set with two more structures and you make it into a lecture space of course you could also have a group and other stuff right so there is stuff in between but that's not the point my point is that in a vector space um you have new structures you have an addition and you have an S
+
+01:08:40
+multiplication let's say it's a complex Vector space like we have it now in particular a vector space is a set but a vector space is small so if you now want to look at the structure preserving maps of this structure you certainly need to take the conditions you had for the weaker notion for the more General notion so you certainly structure preserving maps are still bijections but unique projections that also preserve these structures so if you go from one vector space m into another Vector space n by some Phi and these are
+
+01:09:16
+vector spaces you want to preserve the Plus on M and the Plus on n and so on in the sense that you could for instance add two vectors here on M and map the result or you map the individual vectors and you add the results and then that plus is a plus on n and so this is of course what we usually call the linear the additivity condition of a linear map and here you could have Lambda times m equals Lambda Phi of M and this s multiplication here is the S multiplication on M but this multiplic s multiplication here is the S
+
+01:09:56
+multiplication on n so you see the structure preserving maps on a vector space naturally are the linear Maps that is why linear algebra is full of linear Maps because linear algebra is the study of vector spaces and you look at the structure preserving Maps so this also has a trivial name sometimes people call this Vector space hyphoon isomorphisms because they do exactly this now I could continue with this and could put the norm and whatnot let's take the Hilbert space because that's our case
+
+01:10:35
+and I think these this triple um of examples makes my point already pretty clear I hope now let's add yet another structure let's add an inner product a cescue linear in a product so you of course still have to set structure of course you still have this structure I don't even need to repeat this what you have additionally here is the inner product that takes you from M cross M into the complex numbers in a certain way what are the structure preserving Maps well certainly it's still the bijections
+
+01:11:10
+certainly it's still the linear bijections because that you inherit from Hilbert space being a vector space in particular but there is one more structure that you would like to talk about a preservation of it and what you do you say aha and the additional condition is now that if you take an inner product and you mapped the vectors in there let's call them M1 M2 you first map the vectors by your map and then you take the inner product that should be the same as taking the inner product like this
+
+01:11:55
+because the result is in C so I can't apply the map Phi there again so it doesn't matter of whether you moved all the elements in the space the inner product is not affected by that okay um linear and now there is an additional thing we want to have we want it to be bounded we want this to be a bounded linear map okay and that is for certain reasons but you see the logic is pretty clear the more structure you have you always want to understand what preserves the structure and then it's clear I mean as
+
+01:12:32
+a physicist you immediately believe that if I say I describe something like in this coordinate system say or in that coordinate system you say well you can do what you like it doesn't change the physics okay and so this is exactly what this unitary what this unitaries do so if quantum mechanics is based on this structure and I can apply a map with this property and the structure as such is preserved then this is just bookkeeping which Vector I call which and so on roughly speaking okay we will never be interested in any
+
+01:13:07
+statement uh Beyond unitary equivalence right okay yeah yeah you can map this all to another apparently to another space but if this is a bi-direction all the structure is preserved through the glasses of Hilbert spaces there is no difference if you if I look at the Hilbert space through the glasses of set theory I don't see all this structure I only see the set if I look at the Hilbert space through the glasses of vector space Theory I see all of this but not the inner product and if I put on the sharpest glasses I
+
+01:13:43
+have for a particular structure at hand then I look at the isomorphism with respect to that and here it's tradition to call the Hilbert space isomorphisms to call them unitary Maps but this is just terminology what are the isomorphisms of topology bijection and continuous in both directions right because continuous pre-image of open sets are open sets it preserves the open sets right what are they called topological isomorphisms one calls homeo in German homuro in English homemade homeomorphisms and so on so there's kind
+
+01:14:27
+of some traditional nomenclature in that okay but the logic is Crystal Clear one could call all of them isomorphisms and always say for what structure so um in order to not have this definition squeezed somewhere there I write it down more clearly because it's a central definition for the whole subject obviously so mathematician who would have attamined a experienced pure mathematician who would have seen our first Axiom of quantum mechanics he would have immediately said oh unitary Maps must play an important role in the
+
+01:15:11
+theory because you always want to classify up to unitary equivalence because that doesn't make a difference through the glasses of the theory does it you see so a mathematician would have immediately captured that well now you you've got the the principle too okay so definition more precisely well it's actually not more precisely but it's more clearly written definition um let h and G B Hilbert spaces and of course there's an addition s multiplication on H there is another one
+
+01:15:48
+on G there is an inner product on H there's another inner product on G no I don't need to write this all down let H and G B Hilbert spaces then any U from the set of bounded Maps between these two Banner spaces you know bounded map which means you can see them as Banner spaces which they are right so nevertheless I this time not as a thinking but as an exclamation right bounded right bounded linear I didn't want to cross it out I wanted to underscore it okay but bounded bounded linear right
+
+01:16:32
+than any bounded linear map U preserving the inner product what does that is I.E U PSI U Phi equals Psi Phi obviously this is the inner product on G this is in a product on H and this must be true for all sci-fi in H is called ah any any bijection but that's uh yeah any bijection is called a unitary map remark obviously um if such U exists for any two or four given H and G um these two Hilbert spaces cannot be structurally distinguished from each other um by using only plus s multiplication
+
+01:18:34
+and the inner product of course you could now add further structure to one of these spaces right even further structure and then you could distinguish them so you could have a vector space and another Vector space that are isomorphic so you could have two Vector spaces that are isomorphic to each other at the level of vector spaces but when you equip one with one inner product in the other one with another inner product such that they are not unitarily equivalent so adding an inner product depending on how you choose it
+
+01:19:15
+may make the two not unitarily equivalent okay so but if you only look at and it's all the same here you could add yet another structure and then you can distinguish them again but looking through the glasses of Hilbert space Theory they're not distinguishable you know second remark by the polarization formula by the polarization formula it suffices to check whether a bounded U preserves the norm well I say the norm well preserves the norm on this preserves the Norms one should rather say because there are two
+
+01:21:03
+Norms in the game so you need to check whether you PSI the norm on G is the norm of PSI on H right I mean that's simply here you need to deal with for all sci-fi and age and here you only need to check for all PSI in h because bipolarization because the norm can be constructed from the in a product but then conversely from the norm you can reconstruct the inner product that suffices to show album should add here obviously if such U exists for H and G one should say then H and G are called unitarily equivalent
+
+01:21:55
+unitarily equivalent that was the notion I needed to Define right so two spaces are called unitarily equivalent if there is at least one and then usually many unitary map between them and importance is anything we're going to prove we can only hope to prove up to unitary equivalence because at the level of the structure unitarily equivalent spaces cannot be distinguished they may be written down in a different way but really for all it's worth for all the structure we have they are the same spaces
+
+01:22:43
+so that brings us to the final section it's not even a lie it's the final section five unitary equivalence of all infinite dimensional separable that's the key word here separable Hilbert spaces I think I I wrote down the theorem before right any any Hilbert space or remember the theorem any little bit space is unitarily equivalent sometimes one writes between the spaces then this symbol and it should have here the symbol with the subsequent Hilbert as Hilbert spaces not as Vector spaces but even as Hilbert
+
+01:23:45
+spaces they're unitarily equivalent that's the mathematical symbol that's what we say unitarily equivalent to L2 with the inner product on L2 that we defined okay foreign so please appreciate what an important result this is um because I mean separate Hubert space with all these conditions on and the question is how rich is this structure how many of these things are there well up to unitary equivalents up seen through the glasses of the theory and not more structure it's only one type
+
+01:25:06
+it's a classification right remark this is of course a rather strong well in a sense it's the strongest right this is of course the strongest possible classification result imaginable no the result could have been there seven types of Hilbert's space separate infant Dimensions several human space or there is an integer family of Hilbert's infinite dimensional separable Hilbert spaces okay you name it it could be terrible it could be non-classifiable like the question is how many different
+
+01:25:53
+topologies are there well we don't have the slightest idea how many different topologies there exists there's no classification of topologies right but this is the strongest possible classification is only one class okay done right it's not a big classification Theory but it's a very strong classification result okay so if you found the Hubert space that analyze your Quantum system you don't need to wonder whether there could be another one that could underlie the system okay
+
+01:26:28
+and essentially it's always L2 of n for any Quantum system however in order to deal with it it's clever to bring it in to write down different representations of it right they can come in different forms but structurally they're all the same okay that's really good okay so um that's the theorem so proof what do we need to show need to show that there exists a bounded a bounded linear map U well let's write it down immediately U that takes you from the Hilbert space into this L2 space into this smaller
+
+01:27:26
+there's also a capital L2 that's the Back Square integrable functions that's uh well I can't say it's something different because that will turn out to be a separable Hilbert space in for Dimension Hibbert space so it is like the small L2 of n okay um but that's another topic um so it is exists a balanced linear map H from L2 to n uh that is unitary that is unitary well unitary already includes this right so um yeah well such that that uh U PSI equals PSI the PSI on H but the U PSI on L2
+
+01:28:11
+uh well that's what we need to show um let's directly construct this map or explicitly construct this map so uh we reconstruct it like U from H to L2 of n uh an element PSI in age well I make a suggestion of how this map could look like I need to take an element here and I need to make an element into here what are the elements of L2 of n are complex sequences one element is a complex sequence this here what can I do well I choose an orthonormal basis choose some also normal shoulder what else basis
+
+01:29:06
+of H why can I do this why can I choose an orthonormal basis of age yes because we look at the separable Hilbert space so I should emphasize here again separable but since from now on we only look at separable right I will not always mention it exactly therefore I can so I choose one and I construct these objects e n comma PSI so take a PSI I take the N comma PSI and I make this into a sequence because for any n and n I have a number a complex number this is clearly a sequence in the complex numbers hence
+
+01:29:51
+it's an element right so this thing is a subset of the complex numbers um well it's a sequence hang on a second yeah and as the sequence as a sequence it's an element of L2 of n well the question is is this really true it needs to be a square summable sequence in fact um this sequence I need to look at the square summability one to Infinity e n comma PSI absolute value squared okay is finite how do we know this is finite normality is yeah that's how it that's how it goes that's right
+
+01:31:12
+I hang on a second shoulder base is also normal yes did I emphasize yes so one has that the PSI can be written because we have a shorter basis it can be written as e n comma PSI e n right this is easy to check you have to just deal with the limit and pull it out and Pull It in wherever you need and one has that the PSI can be represented like this so the expansion coefficients we were talking about before for an orthonormal basis they are given they are given like that and then you can check that because the norm of PSI
+
+01:32:18
+on age is certainly finite it follows that uh U of PSI is square sumable okay so why that just says that the map does what what is claimed what it does and um well and then you need to check a number of things yeah you can check that another map which I call innocently U inverse but it's just a name another map that goes from L to n into the Hilbert space how is this now going well I need to start with some sequence a n in here that's Square summable and I map it to [Music] um to the element in h namely the sum n
+
+01:33:11
+equals 1 to Infinity of a n e n that's the same o-n basis same or end basis E1 to well e now same or n base is e we had B we had before and again one control that this converges because this is square summable and so on and one can then show that u u in no U inverse uh acting on a PSI well let's plug it in for fun this is uh U inverse does this it takes n equals 1 to Infinity e n but it plugs in the sequence that comes from U PSI but the sequence that comes from U PSI is the E and PSI ah we know this is PSI so that means you
+
+01:34:06
+you inverse U PSI is indeed PSI that is U inverse U is indeed the identity on H right and thus uh U inverse is the inverse you can also check that you or you can also use check that you you inverse is the identity on L2 okay and this is of course if I write it like this what is the what is in between here it's a multiplication right no what is it it must be composition I mean what else it's Maps so in quantum mechanics people often talk about the product of operators they mean the composition of
+
+01:34:51
+course the product comes from the fact that if you have a composition you go to a basis and you have a bounded operator blah blah blah blah then you can represent this as a matrix multiplication and they call it the product and in fact it's just one map executed after the other so it's a composition that's what it really is okay nevertheless the term product is in heavy use but you know better it's the composition okay so check the data so this is really this means it's a bijection indeed okay
+
+01:35:24
+and we should check the unitarity bit uh well one could have proven immediately from the definition of what a unitary is that the operator Norm of a unitary map is always one um well we can see this as a corollary from what we're now going to write down because now calculate now calculate the operator Norm the operator Norm of U right so what what on what space is this Norm acting or what space is this the norm yes that's right from l h to L2 of n this this is the operator Norm on there and how is it
+
+01:36:21
+defined everyone operator Norm yes yes yeah um yes and this here is of course on L2 of N and this is over H right so we need to calculate this agree yes it's easy what do we know well we know that U is unitary so it preserves the norm that means this is sup F in H of UF is the same as f because U is unitary right so the result is one yeah it's a uni tearing one unit no hang on what what did I do here okay I'm sorry if U is unitary then this is one okay we wanted to show its unitary right
+
+01:38:16
+because I constructed a map between two spaces and I wanted to show that it is unitary um this is true if if U is unitary but we don't know yet foreign okay it's true it's inside full it's a nice thing to know because it justifies the terminology unitary but it's besides the point okay so let's continue with what we actually wanted to do what I actually wanted to do is I wanted to prove what I assumed I wanted to prove that this guy is this guy right so let's calculate
+
+01:39:24
+I'm sorry UF on the L2 of n space what is that well UF I need to write down what that is that is the or you say we always say use PSI and U takes aside to the sequence e n comma F right that was the sequence U take this tool and in n and then uh you PSI e and PSI and then of that we take the norm on L2 well of course the norm eats a sequence because it's the norm on the sequence space um but we can calculate the norm so that's the difference that's the definition of U of our U here
+
+01:40:17
+and now this is the definition of the norm on L2 it is I take the individual members of that sequence um so they're called the en comma size take the individual members and I up to an absolute square of them and that is the norm we have here right so that's one thing also calculate the norm of PSI on the h space the norm of PSI on the h space is certainly because I can write PSI as this guy is certainly like this aha now I need to work um how did I do this ah okay so the point of course is this the
+
+01:41:20
+sum here right [Music] um so I take here the limit of n to Infinity of no I take it inside that's the point so I have the norm I take the limit n to Infinity of the partial sums well that's no secret that's just the definition of the series right um agree nothing happened um well capital N here now I wish to pull out the limit from here why can I do that yes because the norm is continues we had this before Norm is continuous with respect to the limits in this space blah blah blah so that the whole thing
+
+01:42:18
+so equals limit is outside into Infinity of now inside I have only finite sums e n comma PSI e n mm-hmm and now there is a sum of vectors and there is a norm what do I know it's a finite sum of vectors well that means I have the triangle inequality I have it for two vectors then I have it for any finite number of vectors the Triangular inequality this is less or equal than Lim n through Infinity hmm sum n equals 1 to n over the individual norms agree that's the Triangular inequality uh yeah but then I have a list for equal to
+
+01:43:45
+I'm a bit puzzled so the you say the equality is assumed it's Pythagoras actually it's um if we had squares it would be Pythagoras is that right so Pythagoras is a plus b squared is a squared plus B squared isn't that Pythagoras if and only if a and b are orthogonal and you can of course extend that so I withdraw it's an equal sign and this is Pythagoras that does that if I put a square agree but then I need the square if you look puzzled agree or not agree square square square
+
+01:44:50
+[Music] yeah squares also continuous I can pull the limb out of the square I think this is right this Pythagoras in the upper left we're here well later I mean this is one this is where I calculate one thing and now I calculate another thing and you'll see I wouldn't have needed this first line I'm sorry okay so just it's true and then I say also calculate so I start here with PSI Square do we agree on all the steps this this here okay forget one Lambda then you would get Lambda squared
+
+01:45:44
+out no here you get a Lambda you get an absolute value of Lambda out if you put a Lambda here and then you get it Square ah okay now I see what yeah I will forget the first line I I wanted to go about this differently um let's calculate only what I'm calculating down here okay so do we agree on these steps any support us okay fine we have this well and now I pull out of this Norm one of the squared Norm so this is Slim n to Infinity sum n equals 1 to n Out of This Norm under the sum I pull out absolute value
+
+01:46:34
+of e n comma PSI squared because the square around and then there is the norm of E N squared but that's obviously one ok so this is the limit into Infinity of well this is sorry this is the secret the series N equals 1 to Infinity of the absolute value of e n comma PSI squared but this is the norm in the L2 space of the U acting on the side squared aha ah the A N squared to U PSI squared of course of course we now I understand the remark so in the beginning we defined a comma B to be this a i b i
+
+01:47:45
+this one bar and so on then of course if I now Define the a comma a it's the absolute value a squared but that's of course not the norm it's the square root it's the square of the norm and that is what you wanted to tell me thank you very much now I understand good okay fine we use it here and that's this so what did we show we showed that indeed the U preserves the norm that's it and that's what we wanted to show so there exists a unitary map we explicitly constructed it and that's it
+
+01:48:20
+[Music]
+

@@ -1,0 +1,342 @@
+00:00:08
+good morning welcome to lecture 18 which is titled to Floria operator and you probably heard of the Fourier transform well it's exactly the same the Fourier transform is an operator and in fact for instance you can calculate its spectrum then word transform some but somehow hides that fact we had this before with the BLT theorem which will also play a role in a it's the theorem on density find bounded linear transformations meaning bounded linear operators so the free operator will be today's topic and
+
+00:00:42
+in fact this is not for its own sake although you probably already met that in the experimental part of the lectures right you have Fourier transforms a momentum space and stuff like this did you meet that yes no you did not okay even better um so there is a purpose to this and the purpose is that with this lecture we start a new part of the course we start a systematic exploration of so-called Schrodinger operators and these Schrodinger operators are operators of the following form they of interest as hamiltonians of the
+
+00:01:41
+system but of course for the abstract theory doesn't matter whether you call that then the Hamilton or the energy observables the system but the idea is that if you look at operators with a certain domain it's always about operators on L true or some sub domain or R to the D a Schrodinger operator is an operator that acts on its domain like this that the operator applied to a function Tsai yields the following function minus H bar squared by 2m Laplace operator on sy at X plus v of x times I of X where this year as I just
+
+00:02:36
+said is the laplacian this is d by well is d in the first Direction squared plus d in the second Direction squared plus plus plus d in the death direction the deef slot i should say a square that's laplace operator and this years what one usually calls the potential it's just a name so that's a function from Rd into the real numbers and the significance of these Schrodinger operators is that they define the right hand side of the Schrodinger equation or if we express it in terms of our actions these are the
+
+00:03:29
+operators that for particles to live on some are d so the typical case would he equals three that particles that live on three-dimensional and three-dimensional real physical space so that quantum mechanics looks at the square integrable functions on there that the generator of the time translation so the generator of the unitary time evolution is of this form and we saw something like this before I think in one dimension this is of course the momentum operator squared by 2 M plus the potential so this really looks
+
+00:04:08
+like the classical Hamiltonian but made into an operator we talked about quantization and what it could mean a not mean well it's in a sense it defines quantum mechanical problems in r3 on r3 that also where the particle in question fields this potential okay so this is a very general interest and textbooks of course discuss a whole number of situations where this V of X is given and then you discussed that case in particular we also did that I took V of X to be M Omega squared x squared that
+
+00:04:48
+was the harmonic oscillator you can take this V of X and you did this in the experimental part I know you took this to be a central potential given by something like minus some constant 1 over X 1 square plus X 2 square plus X 2 12 squared square root so 1 over R if you wish okay it's the central potential there a particular central potential it's the Coulomb potential or the kepler potential but you applied it in electro dynamic the electro statics so it's the Coulomb potential these are all special
+
+00:05:21
+examples and of course the solution of the harmonic oscillators so for instance the eigen vectors vary wildly if you change the potential the eigen vectors of the harmonic oscillator are very different from the eigenvectors of say the hydrogen atom and so on ok so this is what this is and but the question is can we study this in a more somatic Manor or do we really have to go example by example well of course physics often demands you not to consider the problem in its general position as the mathematician
+
+00:05:58
+says that's the problem in general position what can you say about this in general maybe making assumptions on the potential and so on in physics very often we consider a problem in special position I'm interested in the hydrogen atom and then I don't care about the general theory but if we really claim to understand something about quantum mechanics we need to study this in higher generality in greater generality and and that's what we are trying to do in the next few lectures and the fourier
+
+00:06:27
+operator is an indispensable tool in conducting that study that's it okay so the fourier operator is an indispensable tool in conducting this study and it's also very useful sometimes may be indispensable in special problems so this is not only a tool for this general theory so let's start with the definition so ultimately we wish to define the free operate on all of l2 but initially we cannot and explicitly we cannot different very different than this we look at the Fourier operator on
+
+00:07:29
+Schwartz space so you recall that we defined what space s of our for the real line and we now extend the previous definition which you now had sufficient opportunity to practice extend the previous definition of short space on the real line to Swart space s on our D this is as simple it precisely the same idea as Ward's function as a function that decays sufficiently rapidly if you go to infinity and also has nice properties under differentiation precisely speaking a function that is at least smooth
+
+00:08:25
+that's the set from which we pick SWOTs functions we impose two times a countable infinity of conditions and we impose that the supremum if you look at any point X now on Rd we take the absolute value of an arbitrary power X alpha of X and an arbitrary derivative del beta acting on the function evaluating at X and we require this be less than infinity so this looks exactly like what I wrote before with the slight difference I now say this must be true for all alpha and beta that come from n
+
+00:09:15
+0 to the D power but is that supposed to mean well and what is suppose well if X is in Rd what do I mean by the alpha power of an RD element and the Alpha itself is a d tuple of non negative integers well very simply this is just very convenient notation what we mean by X to the Alpha again X in Rd an alpha in n0 cross cross so Cartesian product within 0d x what we mean by this the X has components X 1 X 2 X 3 up to X D right and we take the first component of X and raise it to the alpha first power because the Alpha is a deep
+
+00:10:12
+trouble and we take the second component of X and raise it to the Alpha second power times the dot we take the deep component and raise it to the alpha deep power this is what you can do and this is what this means it's called the multi index notation but it's simple and the del beta is similarly defined so in art on Rd you have partial derivatives with respect to the first slot with respect to the second slot and finally with respect to the death slot and you can take the first derivative be beta 1
+
+00:10:51
+times you can take the second derivative beta 2 times dot dot dot and finally you take the DS derivative beta D times that is what I mean by the symbol del sub beta where beta is in n0 and then D times the Cartesian product of it so you see for D equals 1 this is precisely the definition of Schwartz space over R this is Schwartz space over Rd this is of course something that we need in physics unless we always want to restrict to 1 that means spatially 1 dimensional systems which of course we're done
+
+00:11:35
+so with this definition this really goes exactly like in the one-dimensional case we have two important facts the first fact which will play a role later on is that the fraud space Rd lies dense where is a dense subset the dense subset of L 2 of our AHA so we see ah so we first are going to define the for you operate on a dense subset and then probably we will use one of our nice theorems to extend it but the explicit definitions on it then subset and the extension will be somewhat abstract and the second fact
+
+00:12:19
+is of course like in the one-dimensional case and in fact it's the rationale behind precisely this type of definition is that if you take Q and say the cave the cave components or K is from 1 to D if you take this operator and you act on a function f ah ha I should have said if F is into a short space if if it's an S of Rd then QK on F is an element of s Rd for anything 1 to D why do I write it in this funny way well because you know it would have been more intuitive to say if you multiply f of X by the cave variable
+
+00:13:16
+then that function is again in here but you know these are function values I would have to say well what is this function this is the function Q K on F evaluated at X so we have this typical problem if I want to say a function lies in the space I can't just write down the function values although this of course completely yields it ok so that's of course what we know so you can act with the position operator and you will not leave short space of course that we use several times it's the same in Rd and
+
+00:13:53
+similarly if F is in s Rd then follows that if you act with any of the momentum operators 1/2 D on F that result will still live in Rd again this is the very idea of the definition up there that s of R is not you don't leave it even if you arbitrarily often finitely arbitrarily often apply the position or the momentum operator so the definition of the free operator now is as follows as follows definition the fourier operator curl EF is the linear map curling F from s rd to s rd and what does it do well it takes an F here and
+
+00:15:01
+maps it to another such function in linear fashion it's an operator there's nothing else is not anything mysterious it's an operator and has a very specific form it's given as 1 over 2 pi to the D 1/2 there are various conventions in how to choose the prefactor here of what we're going to write down and this convention is called our convention ok it has the advantage that if you do the universe for a trans or operator it will have the same factors you don't have to think
+
+00:15:44
+about oh which one am i using any time you do a Fourier transformation it or its inverse you always put this factor ok it's our convention so then you take the integral over our de and aha I should say it goes to there aha you see standard problem everything is right but you see it coming so this is the function it goes to okay and that function is given by providing its values at a position X and that is given us 1 over 2 pi D 1/2 arrow points here times the integral R to the D now we need a new integration variable let's
+
+00:16:46
+call it Y and we go over e to the minus - I XY f of Y that's it so there's a free X on the right hand side yeah that's the one you provide here so the value of the new function at this point of the image function is just given by this integral the Fourier transform now there is you need to delete everything you know about it you heard of it or not yes you saw that and there's a lot of talk about it takes you from position space to momentum space okay so this kind of gives you the impression it
+
+00:17:37
+takes you from some space to somehow a different space or at least the underlying Rd is another Rd than this Rd no it isn't it isn't however in quantum mechanics sometimes it's intuitive to think about it that way but it simply isn't ok so a word on terminology and notation which one first well notation first notation so particularly in physics it is intuitive it is often intuitive to think of f as a function on position space so meaning that the argument that this F is f of X that the X in Rd is a position in
+
+00:18:53
+space while curly f of F the Fourier transform of F or the image of F and the free operator is a function on momentum space or frequency space or whatever your typical application would be so if you take a musical signal and you Fourier transform it you get the sense histogram of the frequencies that are in the signal so there is some some sense to that okay and with this interpretation goes the notation thus one often calls the variables as follows well I just copy this formula it's the Fourier transform of F we say it
+
+00:20:00
+actually lives on momentum space I mean this is classically speaking right so this is an RD element right equals 1 over 2 pi D 1/2 integral R to the D D to the D X now I can rename Y X because what I call X here it's now called why and then you have e to the minus IPX or I should have said this I XY what does that mean well that means X 1 Y 1 plus dot dot dot plus X my D and you say well of course I knew because the inner product well there is no inner product but it doesn't matter so that's the expression so it's e to
+
+00:20:43
+the DX e to the minus IP x times f of X right and so this is how you mostly see the Fourier transform you start with a function on position space as you call it you get a function on momentum space but really this has nothing to do with the operator it's just the interpretation in applications of this operator also in quantum mechanics where sometimes it can be meaningful to think that way but for instance I could equally apply the Fourier transform twice in a row I can do that so may I because I mean isn't the Fourier
+
+00:21:21
+transform something that eats the object or momentum on position space if I now act on it again then the first actually gave up object or momentum space am I even allowed to act on that with the free travel or do I need to act with the inverse Fourier transform to go back but of course you can act again why wouldn't you act again at once and then you act again right so this thinking you go from position to momentum space is too narrow it's just interpretation in some situations and obviously we don't want
+
+00:21:56
+to restrict ourselves by such a overly restrictive interpretation ok so this is more like notation and the word of warning but it needs to be mentioned so on that's notation the first notation the second is the age-old problem we already met with measures in which I briefly explained with the momentum operator of course we can write QK the case component of the momentum of the position operator acting on F we know what that is that is the object if you evaluate it at X it's given by X to the K times f of X but well what is
+
+00:22:45
+here in brackets that's an element of s of Rd and what is including the X and therefore also the right-hand side that's just the element of the real numbers right because yeah good stop now the fourier operator acts on this SRD set so it's meaningless formally it's meaningless everybody would understand what you mean but we want to be a bit more precise it's formerly meaningless to say the Fourier transform of F XK of XK times f of X what is that anybody can solve this exam problem but it's
+
+00:23:30
+meaningless because this is an element of of R and the Fourier transformation can certainly not act on it but it can act on QK of F clear it's very simple thing now it would be very very tiring if all the time if we have to do something by multiplication it's a bit more complicated like e to the kilala if you always have to define the action of an operator in this fashion and then to say it's the Fourier transformation of the such defined operator it's just a lot of writing ok so therefore to
+
+00:24:09
+lighten the notation it is sometimes useful to let an expression of the form f of X and then you put a hat over the whole thing including the X to let this mean a function of T well don't need to write the stress I mean by this I mean the F the free operator applied to the function f that is defined by the function values f of X this is of course terrible formally because on the left is an X appearing and on the right there is it okay so with more meaningful so this is what we what we say this is just a
+
+00:25:11
+short notation that I just explained it would be a little more meaningful what would become really meaningful if we wrote this as the hat over the assignment that an X is assigned and f of X that now makes sense because X is assigned f of X is an expression that doesn't depend on X it's a prescription for a map and the Fourier transform of that map it's written like this so maybe one could write this thing here up here better another alternative would be to write f of X is being sent to XK times f
+
+00:25:52
+of X that would make sense again because then you have a map in here but this is also a lot of writing right so we opted for so all of this at this doesn't make sense for the question mark is this is a very strange form of writing it but if you read it right you know what we mean okay so strictly speaking you can't ask for the Fourier transformation of 1 over x squared or something or anyway you can't but you cannot ask for that you can only ask for the function that has this function prescription ok so this is
+
+00:26:30
+the the hat notation and very often in books it even becomes the f that notation then of course you write F hat of P because the whole result depends on P this depends on P just another another variable okay okay good so so much about notation and it's confusions I try to avoid this but in some instances it will really be very cumbersome to to write a different thing so we have a little proposition which in fact is the key of what you use very often if you do very quick calculations in physics in quantum mechanics so let F
+
+00:27:18
+be a Schwarz function and let gamma be some mouth multi index in zero to the death Cartesian power then you have a that if you first take the derivative then gamma of f what does that mean well it takes you take the derivative in the first Direction gamma one times you take in the second direction gamma two times and so on you first take the derivative and then you take the Fourier transform of it what will you get well at the point P you will get the same as if you had taken aha let me yes I can write now
+
+00:28:10
+the I on the right hand side but I think it's more memorable for you if I put the eye on the left hand side so take minus I times this arbitrary derivative ah but then I have to take it minus minus I times to the order of this gamma which I'll explain in a second so what we'll explain now what does this order mean very simple the gamma is a tuple in n0d and the order of gamma is gamma 1 plus dot dot plus gamma d so you take all the opponents and you add them up obviously if you take the derivative in the first
+
+00:28:56
+direction gamma one times and then this derivative in the second direction gamma two times up to gamma B times in in total you took a gamma 1 plus theta plus gamma beef derivative makes a lot of sense that this minus I that usually comes with a single derivative if you think of the momentum operator comes with the same order so you do that and then you apply the Fourier transform and the result is that is the same as if you had first applied the Fourier transform to the F without doing this thing at P and
+
+00:29:37
+multiply the result by the P to the gamma meaning p1 to the gamma first power p2 to the gamma second power and so on what does that mean it means forget about the Fourier transform on the left hand side you can take here the momentum or a product of momenta and their powers on a function and that's a complicated thing because you have to derive and stuff like this but instead of doing that forget everything that's written there you could just take the Fourier transform of the function and
+
+00:30:20
+multiply it by P gamma that's multiplication and that result and that result are related by a Fourier transform the physicists say if this momentum operator product applying on position space the physicist says you can map the result momentum space where that action if you had first mapped to momentum space would have been represented by multiplication interesting because it seems like the momentum operator trends if I intertwine with this free operator it seems to become a multiplication operator like
+
+00:31:16
+before we had on position space there possessed the position operator acted as a multiplication operator but apparently with the Fourier transform I can do a transformation which is a unitary transformation as it will turn out right and represent the same operator in a different form in fact you can represent every self adjoint operator by a suitable transformation the free transformation is adapted to this momentum operator such as to represent any self adjoint operator by simple multiplication under a suitable unitary
+
+00:31:53
+transformation anyway so that is what one one says the momentum operator he even products of them are represented on momentum space by multiplications you say aha and what about the position operator is that then still also represented by multiplication was certainly not so you can ask the question what happens if you first take X to the gamma that means X 1 position to the gamma first power and so on on earth and then you take the Fourier transform you can ask the question for at the point P then ask the question how
+
+00:32:32
+does this relate to the expression where I first took the Fourier transform I keep saying transfer but it's right so the Fourier transform and how do I have to act on the Fourier transform if I now want to understand the position operator it turns out it's I naught minus I but it's I times the derivative of this thing and the gamma direction so it would really just exchange P and P and Q if I had a minus here but it doesn't exchange pink.you it makes the p2 multiplication operator
+
+00:33:10
+if you wonder it makes the position operator to what looks like a momentum operator up to us sign yes yes of course yes thank you exactly like this have you seen some behavior like this before where excess of thinking physicists where you have a pair QP and it's being mapped to a pair P minus Q no minus P Q what is that in classical mechanics that's a canonical transformation that's a canonical transformation on face space so this kind of simulates that anyway this is just not relevant for the exam
+
+00:34:22
+so you can cross it over okay good so we have this these two facts well let's very quickly proof that uh-huh okay well let's start on the left hand side F of minus I gamma del gamma F how do we want to do that in that well it suffices look it suffices to do this for so it suffices to do this for order of gamma is 1 and then I have to take one of the directions to the ones so there's a 1 here and I choose the case Direction obviously if I can do that I can do that I just have to repeat okay
+
+00:35:23
+so we look at this guy well what is it we evaluate at you saved that's then 1 over 2 pi to the D 1/2 integral R to the D D X D D to the D to the X e to the minus IPX and then we have a minus i DK on f at x what can we do so where do the functions f come from the functions f come from swap space so let's do an integration by parts how does that work well you get an overall minus sign now the derivative revolves over here it acts on here this is a function of X hmm so the X and D derives the cave component of X so it's
+
+00:36:32
+a minus I P K is a factor from here you have another - I from here the e to the minus IPX is of course recovered and there is the f of X plus you have a surface term you have to look at e to the minus IPX with all the garnish of the numerical factors times F but you look at this on the boundary of Rd well the boundary of Rd is far away and these are very rapidly decaying functions faster than any inverse polynomial and so you can drop the surface term then you have this thing they have a minus i
+
+00:37:22
+another minus I is a minus 1 you have another minus as a plus equals 1 over 2 pi e to the 1/2 integral aha and the PK can jump in front because the integral is over x PK e to the minus IPX f of X but if I then collect the factor in front of the integral this is PK Fourier transform of F at P which thankfully would be the claim if we had extended this to other two repeated application of this which you control by induction okay so this is the essential the essential calculation the rest is induction F of aha
+
+00:38:13
+you see here I already did what I wasn't supposed to do I wrote X to the gamma F what I said what do I mean by that this was meaningful because this is still a function but this is not the fact this is not a function to something very terrible so I have to correct this X assigned X comma F and with my previous notation I could call this X comma f of X hat on top okay sorry everybody means what you know let's be a little precise and then we can be sloppy but not in the other order okay so have
+
+00:38:49
+F now this makes sense again here and where am i exactly there so f of X is assigned X comma f of X also meaningful what is that that is 1 over 2 pi D 1/2 our convention are D D to the D X the result is supposed to be at P equals e to the minus IPX now I can write x comma aha and here we do the same logic we do it with the case component and that suffices X to the K F f of X now this is a similar trick equals 1 over 2 pi d 1/2 aardeen now it's very tempting to write something like D to the D X and say ah if I derive
+
+00:39:51
+this guy here with a factor of AI through spec to the case component of P so the standard notation would be something like this derived with respect to the faith component of P the object I mean - I px of course where I get is the e to the minus IPX times minus I times I is 1 times the cave component of the P of the X which is exactly what is written there so it's tempting to write this and of course again everybody understands it again looks a little like this is another space with other variables actually what
+
+00:40:34
+is much more meaningful the partial derivative acts on the cave component of a function right so I cannot let a derivative act on something where there's an X in it I can a derivative I get can act on a function but not on function values you agree it's F prime of X naught f of X prime but here we seem to do that everybody knows what you mean and please do it if you if you can't avoid it but actually much clearer is if you say you do the derivative in the case direction of the map here
+
+00:41:08
+that's understood as P is being sent to eat I to the e minus IPX because now even I understand what you mean there is a map that makes this thing X is a constant for this map obviously and you do the derivative with respect to the cave direction that is what this means but this is kind of high school a bad high school notation right bad to be associated with high school not with notation and and this is this is meaningful ok ok but in any case this is this rewriting here ok today what we want to do are we wanted to get no I
+
+00:41:55
+confused myself excellent ah derivative from the respect to P yes it's the derivative with respect to P so I can pull it in front of the integral because the integral has nothing to do with with the PE rile it's just a constant in there well of course you can argue with dominated conversions blue blue blue so you get integral rd e to the DX the eye jumps out to why would it blot each of the minus IPX f of X uh-huh and this is I Delta of the Fourier transform of F only after the derivative is being performed to
+
+00:42:48
+evaluate at P of course it's a derivative and again by induction the general result follows that's true for a is true as well so by induction the claims a and B follow so the number of properties for the Fourier transform you maybe saw that in the mathematics courses like there is convolution and is what happens if you shift function then you pick up a phase factor but if you take a function U evaluated at the multiple of its original argument well then you have the Fourier transform of
+
+00:43:40
+that as you evaluate the function at the inverse multiple of the the P you get times a factor so let's note two of the ones we we need quite often so it's yet another proposition I know this is all terribly boring but useful proposition so F in the in the short space of course so you have a is you take you see I use this funny notation again you take F not an X but you shifted by an amount a so you shift the function and then you take the Fourier transform of the function defined by those by this
+
+00:44:32
+prescription of these function values at P and what is that that's the Fourier transform of the unshifted function so f of X that function unshifted but you get a factor e to the I AP well yeah because this depends on P and this is the multiplication here e to the I AP so shift translates into a face you saw that before right find out where and be also interesting you take the free you take a function but you blow up well rather you shrink the functionalists on the x axis by giving a factor lambda and then you take the
+
+00:45:26
+Fourier transform of that function at P what does that give well that's something very typical look carefully it's the Fourier transform not of f of X but of f of X divided by lambda and yes the Fourier transform no hang on that's not true it's the it's the f of X Fourier transform and the P is divided by lambda isn't that right yes it must be right everything else makes no sense yeah that's right okay so you take the Fourier transform of the F but now the P is divided by
+
+00:46:04
+lambda that means if you shrink so again if lambda is 20 you have a function f of X that looks like this if you then evaluate it and you pretend you're already at 20 times the position where you really are then the function gets shrunk so for lambda greater one this shrinks the function along the x axis but then the Fourier transform it of it will be spread by the same factor or the inverse factor however you want to express that P axis okay so drinking in position space makes expansion in momentum space
+
+00:46:42
+the physicist says or rather this but there's also a correction factor and it's one over lambda to the dominant but that's just a numerical factor factors so it gets spread and at the same time if lambda is greater than one it gets shrunk like this to preserve the area under the function well the squared area to the integral over the square is preserved it's called Possible's identity and that will be instrumental later today okay so again proof from the definition immediately so you can do this as a as a
+
+00:47:27
+homework exercise that's good practice to work with the definition and then they're meaningful now this has to do well very roughly speaking this has well not very it really has to do this at the heart of the uncertainty relations just the uncertainty relation it's much more generally valid for any operators you don't have to be on l2 of some Rd and so on but on l2 of Rd this is in one way the expression of the uncertainty between position and momentum but again its uncertainty relation something much
+
+00:48:02
+more general but that's actually originally how Heisenberg is rumored I say it's rumored I mean people certainly know whether this is in what senses is true but I'm not a historian of science so modulo idealized history this is what Heisenberg said well look I mean we have these these relations here there is something with uncertainty and then he came up with his matrices and so on and so on I don't know whether that's the right order but it's a good fiction and so I tell it it so um let's look at the
+
+00:48:32
+inverse of the Fourier transformation in verse four a operator I should say the inverse of the free operator because you already have it well it either is invertible it has an inverse or it doesn't so there's nothing to be defined but there's a theorem that says the Fourier transform as it is defined explicitly on throught space is invertible and its inverse or no secret how that is denoted F inverse of F it's the following expression where we again define a point what we find we express
+
+00:49:36
+it point wise it's already defined the theorem at X or according to the physicist convention you go from X to P by the Fourier transformation you go back to the X space if you come back but again this is empty it's just maybe a mnemonic at best this is 1 over 2 pi d 1/2 beauty of our convention it's the same prefactor integral our D D to the D P now well because we're going back to X we integrate over P into the plus IP X okay so it's the inverse one that has the plus whereas the Fourier transform
+
+00:50:21
+has two minors remember okay remember times well you see this F was now the Fourier transformed one so we call it f of P so maybe maybe maybe just for pedagogical reasons let's call this to G because it could have been the G could have could be the S of an F okay but of course again this is empty this is just notation good so that's the theorem and that is interesting enough and the techniques we now need are interesting enough to prove it so they're all these physicists formulae around which of course right it's like
+
+00:51:10
+something like e to the IPX minus y is something like the delta function right I don't know whether you saw something like this integral over P over it but this is very convenient to use if you always use it in the same context and you learn the trade of the game but it's somewhat mysterious so well it's better to have a proper calculus that you know how it works and in fact in order to prove this theorem we need a lemma and dilemma is the following lemma if you look at the function exponential is very special
+
+00:51:53
+function exponential of minus that half but that is now just a complex number but in fact for technical reasons we have to restrict to the real part of Z being positive so it's the right half-plane of the complex right half plane of the complex plane without this axis so that's where the set may lie X minus that half times x squared well this x squared well I don't know do we do this in one dimension or what yeah let's do it in one dimension it suffices I mean this is true in D dimensions but
+
+00:52:46
+because of the structure of everything here it suffices to do it in one and then you decompose it for several so let's do it in D equals one and so the X simply comes from our okay but the X is supposed to become an RD element and in the general case the zet still remains just a complex number with positive real part you look at these things with the Gaussian right you know how that looks like this is something like this and if you make the Zep bigger you shrink it right so Big Z is something like like this big that as
+
+00:53:32
+small as it is like this well so that's that's the Gaussian and you take the Fourier transform of the Gaussian and what you get is a Gaussian but the zet jumped to the denominator there's still an x squared and here you get 1 over the square root of z now you probably did calculations like this before like your well no maybe you didn't okay so anyway that's that's the M that's this thing and if this is in D dimensions you get up to the power D here so let's maybe
+
+00:54:21
+write down that the dilemma in D dimensions so that you at least know how to generalize this okay then it looks like this and obviously the x squared in d dimensions is what you would suspect from undergraduate physics we mean of course this expression so uh-huh mm-hmm so proof of that well let's first define a function that I call the Gaussian controlled by Z and that's exactly left-hand side without the Hat X is supposed to be X of minus Z 1/2 x squared so the proof is now solidly in the equals 1
+
+00:55:21
+ok this is this function this Gaussian thing now you can derive it why not with respect to X so you take the derivative del well there's only one direction so I just write else del G Z and then we evaluate at X what is that well the right hand side with respect to X is minus is that the pool and the two cancel an X comes in front in a derivative times the outer derivative X of minus Z 1/2 x squared happy with that I think so equals minus Z times X times the Gaussian controlled by Z of X also true
+
+00:56:11
+huh looking at the equation in the Box we see it's a differential equation for this Gaussian so this is an OD for the Gaussian and we can actually for me it's an audit for the Gaussian no hang on no no what what am i doing no no I don't know no we have to think a little more we have to think a little more okay so we're not looking at the box yet I try to be too clever here so mmm yes yes yes of course okay mm-hmm so I want to rewrite this derivative action on this space I want to derive it
+
+00:57:22
+as a multiplicative action on the Fourier transformed bit but that's only true if I have a - I here right because - I'd L on the X space is the P on here but because I don't have the - I here I need to put an eye there and it becomes true you see that this is something we had in the proposition before mm-hmm and here I have x times GX you say well that's perfectly fine but I can rewrite this part as I times that - items the I times the derivative of the Fourier transform of the G set all evaluated at
+
+00:58:23
+P and then on the right hand side here if I take the - set as well I have this right hand side and I have this left hand side so this is by the two prepositions the second last one where I explained how you can represent the momentum and the position operator on the non Fourier transform function as multiplication respectively differential operators on the Fourier transform part transform part okay so now this is what I wanted now now I have left hand side a box equals it's not really a box equals this
+
+00:59:08
+thing so what is this this is a differential equation so this is an OD e the ordinary differential equation for the Fourier transforms of GZ so here we calculate the Fourier transform but first writing down an OD for that free transform which follows directly from the definition of this function and OD e that we can solve I'm puzzled no I'm not so um okay so there's a derivative there's the function itself so we resolve by separation which can be solved by separation so we have here the
+
+01:00:11
+del F of Lysette we can divide that by the f of v zet and this equals now i have to think about the signs I go there and I divide this through is an i it's a P it's by that it's a minus sign and it's divided by another I so it's minus P over that DP well because this years the derivative with respect to P so if I do this which calculus here where I am separate like this okay this is where your method cost comes in handy so you see you have this year and of course now you can do an indefinite integration on
+
+01:01:09
+both sides and of course what you get is you get on the left-hand side the logarithm of f of G Z equals the right-hand side you get minus 1/2 P squared over that plus a constant of integration and because we're complex here so it could be complex mm-hmm so now you can exponentiate both sides which yields f of g z equals plus or minus because i also get rid of the absolute value but anyway i have an e to the C the C can be complex well this all absorbs into a complex a times X of minus P squared
+
+01:02:06
+over 2 Z Oh doesn't look too bad because I was my claim I came the Fourier transform of this guy is some factor times X minus 1 over 2 Z x squared well that part I got what remains is to determine the a and of course this is at the point P and I should also say that's the point P okay so how do we get the a well now if I look at the Fourier transform you can evaluate the whole thing at the point P equals zero and the definition of the left hand side here is of course 1 over 2 pi to the D 1/2 okay we're in one
+
+01:03:05
+dimension careful when one dimension is just 1/2 integral R to the D D X DX e to the minus IPX of this guy is e to the minus Z 1/2 x squared that's it and the right-hand side is simply a times e to the tralala 0 is 1 so you have an expression for a but on the left hand side you also replace the P by 0 so then that factor is simply a 1 and you are left with the integral over well Rd is wrong as of course only our integral over our e to the minus Z 1/2 x squared well you find that this thing well this
+
+01:04:08
+you certainly did you certainly calculated once in your life for real that what this is and it is square root of time divided by Z to that no then right I think it's it it's it um uh-huh is it no I don't think it is it is you have to whatever is in front of this guy without the minors you have to divide through its 2pi over that so that's my rule so my rule is from my rules the truth e to the minus Sigma x squared DX is the square root of pi naught times Sigma but divided by Sigma that's it I
+
+01:05:09
+think that's right so if there's an extra two in there gotta take care of it this equals yeah exactly because other way haha otherwise this doesn't cancels what this yields is 1 over square root of Z ton so a is 1 over square root of Z which is precisely what the claim was in one dimensional table so that was just a lemma so the lemma was I know another we're not done we're not done so this is true for left in the real numbers but we will need it for complex set as well now this is not so simple because if you
+
+01:06:01
+have a complex number and you take a square root you have several possible branches so you have to in order to say what you really mean by the square root you have to place a so-called branch cut and in this case we place it along the negative real axis did you do some function theory you know branch cuts who knows that ok the rest doesn't ok ignore ok ignore that rule and the logic now here is that you can extend it since the integral above is holomorphic in that so this is a notion from functional analysis it
+
+01:06:52
+essentially mean it's complex differentiable in zet but in the complex numbers difference differentiability is a stronger notion than on the real numbers why could that be well because differentiation has to do with limits you take the limit of a differential quotient on the real line there are only two ways you can approach a point a left limit in a right limit and you know that the derivative only exists if the left limit of the differential quotient and the right limit coincide if the limit exists but
+
+01:07:23
+in the complex line you can approach this in many more ways than in the real line and that gives a stronger condition so differentiability on the complex plane of functions on the complex plane is a much stronger criterion than on the real line and in particular every complex differentiable function is Taylor differentiable is Taylor expandable so all differentiable functions are actually analytic ok there is a Taylor experiment it's very strong because the real life is absolutely not true and whole amorphous city is just a
+
+01:08:00
+learning term for exactly that fact it's differentiable it's telling expandable blah blah blah okay the integral is integral is holomorphic we can extend the result to complex it with real part greater than 0 ok this is really a technicality don't worry if you don't have the background proof so it's the proof of the actual theorem is to prove that F inverse is given is f inverse so how do you verify that something is the inverse well you apply it and you see whether it's the
+
+01:08:50
+identity if you apply it to the result of the first one so F inverse of F on F so say f is of X then F of F of P then F inverse of f of F is of X do that like this so you're back here equals now let's first work on the outer inverse Fourier transformation I just verify that as given it is that I use what is given in the theorem this see the theorem claims this 1 over 2 pi D 1/2 integral Rd some DP e to the plus I P XY plus 1 z inverse plus I P X and there we got an F of F of P and the DP
+
+01:09:52
+already wrote down D to the D P hmm ok not much happened I just wrote what was given in the theorem now if you continue from here and you just keep on calculating you get into trouble so what you need I will try what's written is true but you need to massage this expression a little one cost is a regularization maybe you insert a 1 here insert a 1 and this one has the rather the syncretic form that you say you insert the 1 in the form X of minus epsilon half P squared I think that's the form I used that's the clever one
+
+01:10:47
+year and well that's not a 1 but if you send the epsilon to 0 it is a 1 I mean what's the idea of doing something like that well it's supposed to help us with the convergence behavior to see the convergence behavior nothing happened ok this one this thing the limit is to be executed first and then you get a one and that's what it is but now think about it how does this guy looks look like and now it's important to really get the discussion right at P equals zero this is e to the 0 is a 1 and if P is bigger
+
+01:11:30
+than 0 whatever epsilon a step sign will only stretch or squeeze it the function will always lie below 1 agree it's a bell curve lies bad bell curve it lies below 1 if this this thing converges if this exists what it should be because the it lies this guy lies in s of Rd and we know we can do this transformation the plus or the minus just gives a minus or plus here we know that integral exists the question is is it the inverse you know this exists so you know if I take the product without the limit of
+
+01:12:10
+this guy with that guy the result will be a function that's dominated by the previous function so if the previous function whatever it is and you multiply by this all you do here you keep that value and here you will pull the previous function a little down right so certainly the product of the F with the X is dominated by this guy dominated lebesgue integral dominated convergence tells you you can pull out the limit beauty of the lebesgue integral and beauty of the construction of the sector
+
+01:12:50
+of this regularization factor are introduced so I to the limit in the end but meanwhile before I take the limit I always considered e to the DP X minus epsilon half P squared e to the IPX F of F of P so before I take the limit I now have this expression maybe I do this in blue again and this is a very general it seems you like something very exotic it's a very general trick is what we call regularization you have an expression which if you will really want to calculate it seems somehow technically not converging there's some
+
+01:13:41
+issue there and you make the expression more manageable by introducing a so-called regularization parameter that must be done in such a way that if you take the regulator if you have to limit immediately in front of the regulator you remove the regulator but it of course only makes sense if you control that you introduce a one like we did and then you have a theorem that tells you that you can first regulate then calculate and then take the limit again that that's the same as first taking the
+
+01:14:17
+limit and then calculate of course otherwise it's not an equal sign okay so sometimes this regularization procedure is surrounded by some mystery because you say who you regulate and then in the end you take the limit well why are you allowed to do that in this case it's dominated convergence the dominated convergence argument or theorem dominated convergence which we discussed earlier of the lebesgue integral you saw your first regularization in quantum field theory if you calculate stuff you
+
+01:14:54
+do this all the time okay okay good so you have this guy and now we as I said that the plan is to keep this limit till the end and only execute it in the end equals okay limit well I am running I look at this integral this is of course our to the D D to the D P X of minus epsilon half P squared e to the IPX now I also execute this Fourier transform and well strictly speaking the integrals over here well let's do it like this this is our D now this B I right call this D well the X is now dangerous
+
+01:15:37
+is dy because the X is already being used I need another integration variable e to the minus I P X because the Fourier transform there's a minus F of Y i py f of Y okay so in the next step I would like to pull this integral over Y D dy I want to pull it in front of the integral DV p which theorem if any allows me that Fubini Fubini allows you that so this is the integral rd d dy d DP X minus epsilon half P squared and now uh-huh what do I want yes I want to take this guy into here plus I P X I can do that
+
+01:16:59
+much to e functions okay it's 2e functions and then I have e to the minus I P Y FY hmm yes so I can now take this bracket here no this bracket there so all the peas are covered by that the wire is still outside and this wires outside well so here why is the free variable in the square bracket and what this is of course is this is X minus epsilon half P squared plus IP X Fourier transformed result evaluated at Y Y because this is a function of P parameter X nobody care yeah xx is free parameter X function of
+
+01:18:18
+P I can throw a transform it with e to the minus I P Y and that is now the Fourier transform acting on a function of P do you remember my comment in the beginning this is exactly the case will apply the Fourier transform put to a function of P we think no Fourier transforms applied to a function of X and the inverse is applied no no no it's just free right it's just a Fourier transform okay so this would be something where the intuitive physicist with all his intuition would get stuck so okay so we we just continue ah ha so
+
+01:18:59
+now we have to understand what the Fourier transform of this thing is now imagine the e to the plus IP X term wasn't there well we just calculated what that is in our little lemma what this thing is so let's write let's write down what it was if this extra term plus IP X was not there so would have a DD Y and then a 1 over the square root of the Z but is is now an Epsilon and so we have by square root of epsilon previous lemma x we know it's a Gaussian again but it's a Gaussian where you now divided by
+
+01:19:49
+epsilon so minus 1 over 2 epsilon jumped down like in the lemma and of course it's of y squared so this would be the result if there was not this additional bit now you can play a game I'm tired to drool because I did three times this morning about three different results but I'm confident the third one is the right one you do you add in what world binomial completion you know what I mean right so you you you you you add a term that makes this into a square of a sum or rather of a difference and then you
+
+01:20:32
+subtract it again in bloop bloop bloop bloop and what you get in effect if you do this first and you get the result this is y minus x squared so this extra bit has the task of shifting the Y by this free X parameter okay and then you have an F of Y I hope I didn't forget anything yes of course forgot something I forgot to carry the limits with me so the limit of course goes everywhere there so now we want to massage this way this crazy bit so we do a substitution integral to make the exponent simpler so we do a
+
+01:21:35
+substitution that says that equals that equals ah ah okay I'm sorry so if we're really in D dimensions and I use the lemma I have to write the square root of that which is your epsilon to the D power I remember so now we substitute that equals square root epsilon no power of Y minus X if we do that then of course the measure D DZ becomes square root of epsilon to the deef power dy D dy hmm should be right so what the integral becomes I repeat the left hand side F inverse of the F of the P of x equals integral Rd did I drop
+
+01:22:55
+aya and I dropped my I also Heidi died I should have taken this power of course also with me as you can easily see so this is limit epsilon 0 1 over 2 pi to the D 1/2 integral now we perform the substitution that leads to a yeah excellent so a square root of epsilon to the DS power from the measure not good of course I didn't want that why don't you complain of course want one over square root epsilon so it's one over epsilon to the behalf of course I want that because you see now in a
+
+01:23:57
+second so this is therefore 1 over epsilon know epsilon to the D half now because I have to replace the dy by DZ so this one's to move over here so it's a factor here hmm so we get this one from the measure but now consistently of course we have X - oh yeah we have a factor 1 over epsilon be half because it was there before and now it's the X of well if now the set is this expression over there divided by the epsilon because there's a square in front there isn't this is minus 1/2 Z squared am i
+
+01:24:47
+right times F and now I have to replace the Y but the Y is the Z plus the square root of epsilon that plus the square root of epsilon X if I solve for y no yes no come on X of square root of epsilon that is my next proposal you see this is how it went the whole morning so you solve for y that means you first multiply by the square root that Z and then you add yeah that's it ok that's this hmm and now well this is a zipped integral certainly I can now pull the limit in again and I get 1 over 2 pi D half suppose yeah
+
+01:26:13
+we're missing from the transformation we missed be 1 over yep right right there so we have to set the Fourier transform we replaced put 1 over 2 pi D ha so that's so thank that's cool dinner yes this one right because doesn't see the limit yeah yeah excellent okay I was unnecessarily thank you very much okay so that's good let's continue here so the point is you have this thing here now you have this integral D to the D that e to the minus 1/2 Z squared which can simply be calculated but you pull
+
+01:28:05
+the limit passed so this is epsilon goes to 0 epsilon D half by epsilon D half is gone and all that's left is f of X plus this guy now I can calculate this first which is of course nothing but f of X f of X will jump out of the integral the prefactor however that's thank you for the remark that's of course exactly here the square root of pi divided by the prefactor that is of course then pi times 2 and then it's the DS power because you have this integral d x and that of course cancels precisely this so we have f of X
+
+01:29:01
+so that means F inverse of F of F is f that's the claim okay so it's this fiddling around with these objects good I mean there's technically nothing I mean the interesting bit is this regularization idea and we're moving and not and the rest is well calculating right which is a challenge in itself but it's not a mathematical one so we come to the final statement for today and that's the very important way to look at the Fourier transformation it's the extension of the free operator to the
+
+01:29:58
+whole hilbert space l2 of Rd now we already know that the that F is densely defined simply because s the short space over Rd is dense and l2 are these which densely define the domain of F stems and now what circumstances can we extend a density find function to the whole Hilbert space yes if it is bounded if it is bounded so it's f bounded what you need to calculate we need to calculate the operator norm to check whether F is bounded calculate the operator normals if it's nice to understand that this is an operator with
+
+01:31:09
+trivial so the operator norm of F what is the upper named operator norm of F this is supremum over all s in the short space within the domain of course over the quotient of F apply it to F now divided by what is that well that's the integral over DDP absolute value of F of F of P squared divided by the integral D to the DX of absolute value of x squared right because you need to use of course the norm on s of R that has been inherited from the ambient Hilbert space l2 Rd mm-hmm what do we know about this
+
+01:32:30
+quotient well there's a theorem and it's called possibles theorem possible theorem says that you can take this integral the square integral of the Fourier transform of a function but that will be the square integral ball is the square integral over the function that's passed vault's theorem prove by direct calculation so Fourier transforming a function does not change the norm hence the operator norm of f is 1 I think what I wrote up here is not entirely right because this would be the
+
+01:34:04
+square of the norm right what I wrote here is the square of the norm is not the norm it's the square of the norm I have to take square roots but nevertheless the result holds true to operate enormous one so it's bounded haha so we have a densely defined bounded operator dense with the main tens on L true are these important tens in what in that Hilbert space so it follows again by the BLT theorem implies there exists a unique extension of f2 well F of course tool but now on all of our l2 of ardennes now you say
+
+01:35:44
+why didn't I write this down immediately in the beginning well the point is the explicit definition with the integral e to the minus IPX can only be executed on short space this is an abstract result it says it exists in its unique the extension but if you look at the proof of the BLT theorem that gave there's an explicit construction in there how that works so in practice what you have to do if you want to do the Fourier transformation so in practice or whatever practice means in theory in
+
+01:36:21
+practice if you want to do the Fourier transformation of an F that is in l2 but not in the short space what do you do well you have to approximate that guy you have to approximate it by as a limit in some way over some n to infinity of some functions FN where every single F lies in the short space and the limit equals the F that you look at you have to approximate the F by a sequence and Schwartz's why is there such a sequence that approximates it well that's precisely the statement or that extends
+
+01:37:14
+the 12 space lies dens in them but now it's a bounded function but a bounded function will of hunger bounded operators always continuous so the limit can jump out and this is always defined because every single FN is in short space so you need to approximate it and then you do the Fourier transforms of this family of the sequence and then you take the limit in the end and you that's the definition of this extension I mean this is how it always works okay you see I mean all all these things we
+
+01:38:01
+did that bounded operators are then continuous you need this in order to make sense out of expressions right so the sometimes a little sloppily defined Fourier transform you have it actually technically defined on your wall space but blt guarantees you unique extension to all of the hilbert space and that's the practical prescription how to calculate the Fourier transform of an only l true but not what function
+

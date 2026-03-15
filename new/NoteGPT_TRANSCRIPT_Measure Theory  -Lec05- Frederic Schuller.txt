@@ -1,0 +1,402 @@
+00:00:05
+[Music] so good morning and welcome to lecture five since you told me that you didn't do measure theory in uh your mathematics courses so far um we'll have a short interlude on that today and tomorrow we'll also look at leeg integrals um we do this uh for two reasons so we'll have a short so we have a short um recap of basic Notions of measure Theory uh without proofs um that has two reasons first of all we spend too much time on it if I provide all the proofs and uh the proofs are not that difficult and hence they
+
+00:01:00
+will go to a problem sheet the central proofs will go to the problem sheet but that will good be good practice short recap of the basic Notions without proofs for two reasons um the chief reason uh from the abstract point of view is that um uh the spectral theorem for self adjoined operators we're going to prove in the next few lectures um requires is as we already saw from the aims of quantum mechanics uh the notion of projection valued measures projection valued and the projection valued is just a small
+
+00:01:43
+modification projection valued measures and unless we know what a measure is and what a borell uh uh measure is um we're lost there and I rather explain it then to refer you to the literature um because that can be quite intimida ating if you start in the wrong point and the second thing is that the the uh most commonly um emerging infinite dimensional separable Hilbert space now you say hang on there is isn't there up to unitary equivalent only one such yes there is but then um separable um but then it depends on how
+
+00:02:38
+you represent it in order to make good use of it in physics the most commonly emerging infinite dimensional separ hbert space in quantum mechanics is the Hilbert space L2 on some Rd often D equals 3 um and informally speaking but not entirely correct this is uh called these are all square integrable functions on RD well not quite because um you have to take equivalence classes of all square integraal functions because if two square integraal functions are the same almost everywhere what does that mean well
+
+00:03:26
+we'll see uh then they belong to the same equivalence class and then they're counted as the same element of this that's the first thing and the second thing if I say Square integrable it is not square integrable with respect to the reman integral but with respect to the leeg integral and that makes all the difference you probably did in mathematics for physicists the uh a number of theorems telling you under what circumstances you can exchange integrals and limits or integrals and sums and so on and you know that if you
+
+00:03:59
+use the reman integral you have rather strong conditions like uniform convergence and stuff like this well the leeg integral heals this the leeg integral is a very proper notion of an integral which for reman integrable functions agrees with them but which no longer poses such strong conditions from a point of view of Lebec Theory virtually none on the functions in order to be able to exchange limits and integrals so that is what the physicists say for reasonably well behaved functions well you no longer even need
+
+00:04:33
+to say this you say for these and those functions without this rather uninsightful qualification of being reasonably behaved so the Lebec integral is the physicist's integral but it's also the mathem mathematicians integral because this space equipped with its inner product blah blah blah is only complete if you use the Le integral it wouldn't work with the reman integral okay it simply won't it's not a h space then okay so there is no way in quantum mechanics to avoid the Lebec integral
+
+00:05:06
+everything else is Child's Play Okay so we're going to do that and what we do today um is the um is the preparation for that so um we start with section one General measure spaces now the first definition uh we provide is that of a measurable space uh also called a sigma algebra and it looks a little like the definition of a topology but it's different so uh the basic uh definition is so let M be a set well a non-empty set then collection of subsets then a collection of could I have more quiet please
+
+00:06:13
+please then a collection of subsets small Sigma so that's a subset of the power set of M the power set of M contains all the subsets then collection of subset Sigma PM is called a Sigma algebra for M now this is very cryptic a very cryptic piece of terminology a sigma algebra for M but that's the traditional term is so not any collection qualifies like for a topology not any collection of subsets qualifies as a topology here um the the first requirement is that the entire set M also be part of the
+
+00:06:59
+collection the second requirement is that if a set a is part of this collection then its complement with respect to the set M also be part of the collection so if a set is contained its complement is contained very simple and the third requirement is that if you have a sequence an infinite or a finite sequence it doesn't matter A1 A2 dot dot dot they all lie in Sigma uh that's the first condition and um they're pairwise disjunct so AI intersection with AJ is the empty set for I not equal to
+
+00:07:52
+J then the union over all these um is again an element of the collection of the sigma algebra so any such choice of subsets like in a topology there are three conditions they need to satisfy in order to not be called a topology because they're different conditions in order to be called a sigma algebra so that's the key notion now um we'll see what one can do with the sigma algebra and why one needs one for certain purposes um and I will however first introduce some terminology that already
+
+00:08:56
+hints at that and which one should keep in mind so terminology so if you have an A in Sigma uh called is called a measurable set it's called a measurable subset in M okay so the whole thing we're going to do is we want to be able to assign and now I use the colloquial term volumes to subsets and naively one might think well you take a subset of an M they say m is R to the 3 or R2 or something why wouldn't we be able to assign a meaningful volume measure to any subset well it turns out that's not
+
+00:09:48
+meaningfully possible with all the conditions you have on that uh volume will be called a measure soon right it's just an example and it turns out you need to select a subset of all um yeah a subset of all possible subsets only the sets in a sigma algebra can be meaningfully uh assigned a volume a numerical number for the volume seven liters okay so that that's what's going to happen so that will be the purpose of this so the sigma algebra could be called instead of Sigma algebra which is
+
+00:10:22
+rather cryptic it could be called the set of all measurable subsets okay uh why you need these conditions we'll see and the pair M with a choice of measurable subsets M Sigma M with a choice of Sigma algebra is called is called a measurable and now I uh use color a measurable a measurable space so we already have a double work working of the word measurable if you can have a measurable set it's an element in Sigma and that pair is then called a measurable space okay um why I write this measurable here in Red is
+
+00:11:13
+because already in this headline I had General measure spaces not General measurable spaces well I'm not responsible for the terminology so don't shoot me I'm just pointing it out will soon Define what a measure space is a measure space will be a measurable space space plus a measure which is a map that assigns to each measurable set a number which then will be the volume of that set okay I'm just pointing it out uh Don't Shoot Me Okay um so this uh uh pair is called a measurable space
+
+00:11:49
+so a remark clearly uh taking Sigma to be the entire power set so it's a little like the uh discrete topology choosing the discrete topology if you choose all subsets they satisfy the conditions of a topology but choosing all subsets also satisfies the requirements of a sigma algebra is a sigma algebra um in general however and that's a remark I uh you're going to expand on on the problem sheet in general however it does not provide a useful Sigma algebra a little like the discrete topology doesn't provide a useful
+
+00:12:51
+topology right it is one but it's not particularly useful um useful Sigma algebra um if M is [Music] non-countable so for countable sets that means in Converse for countable sets that's very often a meaningful idea to do that but as soon as the sets are noncountable which is the case for any complex Vector space well it contains non-count many elements uh then that choice becomes rather rather problematic and and in useless okay but anyway that's that's just a remark so because you might say couldn't I just consider
+
+00:13:35
+every set a measurable set is well uh because it still satisfies this yes but it's not not not meaningfully so we will'll come to that okay so um the um so uh look for an example on the problem sheet and you may also want to uh read up on banarasi paradoxon which uses the axum of choice is often presented as something or historically as something that should cast doubt on the axum axum of choice in set theory Because by the axium of choice you can construct a subset of say R2 or R3 um that is not measurable in a
+
+00:14:20
+meaningful sense uh well anyway uh what one can look at if you take the axim of choice you can say the banaski Paradox and tells you for instance 4 R to the 3 or whatever uh you want to look at it um that you you rather pick a sigma algebra that's less than this okay so that's all justifying that one doesn't simply do the naive thing and chooses or tries to um establish all sets as measurable sets Okay so fine this is a definition um and we breathe life into it by the following definition
+
+00:15:00
+a measure a measure mu from Sigma to R um well I think we want R +0 A measure um is a hang on yes um is a map on a measurable space on the measurable space M Sigma is a map satisfying two conditions condition one is that the empty set which is always measurable because if the entire set is in there and it's complement that means the empty set is there the empty set gets measure zero okay that's very very reasonable um um I'm sorry I don't know why why I wrote this here I'm sorry I'm I'm going
+
+00:16:06
+well it's it's true what's written here but it's an unnecessary restriction I um I was getting ahead of myself so here in the definition it is of course because of this Union I could have written the disjoint Union that's true but it's not false but it's totally unnecessary to require this so if you have element in the sigma algebra then the union is in the sigma algebra if they have no intersection well there nothing goes double in the union but of course that would be eliminated by the Union in the
+
+00:16:38
+first place okay so I'm sorry this qualification was not necessary I was getting ahead of myself because that's obviously something you need now here um if you now have a sequence which could be a finite or an infinite sequence A1 A2 and so on that is in Sigma uh and that's pairwise disjunct so a i intersected AJ is the empty set for all I non J then the measure of the Union of those so we know that the union of such sets if they are measurable that the union is measurable that's axum three of the measure
+
+00:17:26
+measurable sets so we can even write this because you see the MU only eats measurable sets only elements of the sigma algebra so we have measurable sets the M can eat this and then this is equal to well equal to the sum all n greater equal to one of the measures of the individual sets and if there were not pairwise this junct then of course here you had a double counting that is eliminated here by the union so hence here we need this pairwise disjunct condition and this uh property is often called Sigma additivity uh but it's
+
+00:18:05
+rather reasonable could call it a reasonable condition right um so that's a measure and so you see the whole for a measurable space is that on it I can assign to each measurable set an actual number you could call it the volume of that set and that you can do in many ways now you might say well maybe isn't there an obvious volume well not quite for instance in probability Theory you do this a lot and there you may assign to a a set which is a collection of of events into um in probability Theory you could assign the
+
+00:18:45
+probability or the probability density on the set and so on okay so um it needn't be the physical volume if you wish and well in mathematics there's no physical volume in the first place okay um so this is a rather general not notion um but on RD we'll have a canonical measure the Le measure but we're come we're coming to that but uh we start in this abstraction in order to in order to be uh sufficiently prepared for all the applications of measure Theory we'll find during the
+
+00:19:19
+course and um well it's a rather intuitive subject and the style is essentially like topology so all of you know the definition of a topological space and continuous maps and so yeah okay well if not you you can ask me during the uh uh the problem class tomorrow okay um so uh we have the the terminology um the triple of a measurable uh space measurable space together with a measure this together is called a measure space so measurable is just this part and the measure space is the triple okay so probably that's the
+
+00:20:23
+reason why people call this is Sigma algebra instead of the set of measurable sets because they so any measurables around okay but I think even without the uh terminology you get the idea you equip a measurable space with a measure okay so now um I mean so far nothing happened I mean we only had theorems okay so we didn't leave out any any proofs um now we have some properties properties um of a measure okay um so the first property I I would like to to mention uh is the monotony monotony the monotony of the measure
+
+00:21:13
+means that if you look at um a set A1 that lies inside a set A2 and both of these of course are supposed to be measurable okay uh then it's follows that the measure of the set that is a subset of the other is less or equal than the measure of the superet okay um don't be fooled if this is a proper in uh inclusion it still could have an equal sign here because there could be just one point missing and the measure won't see it well that's inal speaking uh there could they could differ only by a so-called uh set of
+
+00:21:58
+measure zero we we'll come to that so don't draw false conclusions um from this H then there is a property of the measure that's called subadditivity well this is just a property what happens if you drop the pairwise disjunct condition so if you say okay you have a sequence of um you have some sequence of measurable set um if that is the case but you do not know whether they have a they're mutually disjoined uh well then you still know that the MU of the Union of those which is still guaranteed to be a
+
+00:22:41
+measurable set according to the third axum you can only conclude that it's less or equal than uh n equals greater or equal to one of the measure of the a n roughly speaking because on this right hand side you may overcount quite a bit because whenever uh two sets have a non-empty intersection of course that is not showing up in the union because the union will identify the points right uh but it will show up over here uh but so if you can't ensure this then you will greatly over measure the volume on the
+
+00:23:17
+right hand side hence you get this estimate however very often you you're only interested in the estimate so that's a meaningful um generalization question all AR who the sets the a n it's so one A N A A7 is I said it's a sequence a sequence it's a sequence yes yes countable yes that's the whole idea okay okay yes no no no so that when whenever I um I give numbers A1 a A2 A3 very obviously this is only a countable collection it's that's why I call it a sequence okay yes no no this is
+
+00:24:06
+intentional this is not uh well I'm I'm I'm trying to avoid Child's Play So if if this was important pardon me but it is important yes of course yes it is important hence it's defined that way so um three okay so we have something um um that we call uh convergence from above uh from from from below so um assume you have a sequence you have an increasing you have an in increasing exhaustive sequence of measurable sets that's a very important construction tool so what is that uh
+
+00:25:01
+that is A1 is contained in N2 is contained in A3 and so on so you have an increasing exhausting Ser sequence um that's the increasing bit and the exhaustive bit so increasing is this uh and exhaustive is that indeed if you take all of them together uh you recover the entire space okay that's the exhaustive thing h no not the entire I'm sorry um you you get a set a right so you get you get a say set a then if you take the limit n to Infinity of the measure of the a NS then you can pull the limit in so to
+
+00:26:02
+speak you get the MU of the a okay well the limit of n to Infinity is kind of meant in this way hence we write it we write it like this so this is the um continuity in quotation marks uh and convergence continuity I'm sorry continuity now because you can pull a limit in so it's continuity From Below okay and there's also a continuity from above which works with the intersection but there's an extra condition yes well if okay that's that's right well if you okay okay it depends
+
+00:26:56
+on your perspective you're right if if you start with this you say you you get a set um you if you change perspective and you say you have a set which is very often in practice the so your remark is correct but if you have if you start with a set you might wish to find a sequence that goes to the set because you might want to start on the right hand side and write it as the left hand side and then you need the condition that uh well I I could have instead of writing this cloud and making it a
+
+00:27:24
+condition you write it's not a proper condition it's more like a notation of what this a here means you would write down increasing exha sequence to the set a to the set a some something like this yeah yeah yeah yeah exactly and and you could also say an increasing sequence uh and then you write the union into here that's exactly right it's just I I chose this version which I agree may be a little misleading there um um um because very often you start with a set and then you want to find such a sequence to
+
+00:27:53
+start from the right hand side and then it's it's more meaningful to to to talk about it like this okay um so in a similar vein um we have yes a have to meas well it would automatically be because the a are a sequence of measurable sets so then according to the last axium it is measurable yes yes and if if you start here very obviously because otherwise you couldn't feed it into the MU so again if you start from there you say you want a measurable set and so on okay okay so then you have the
+
+00:28:31
+continuity From Below continuity from below so uh that would now be a decreasing from above from above you're very unforgiving today okay so continuity from above so you have a decreasing sequence that's enveloping um a set so um that's again the same remarks uh apply as to where you start and so on so you start with a A1 being a superet of A2 being a superet and so on uh they're all supposed to be measurable sets Okay of course um and uh well if you want for notation uh or uh depending on your perspective on
+
+00:29:26
+which side of the equation you start part uh you want that if you take the intersection of them all you get a now you could more meaningfully ask the question well if these are measurable is the intersection measurable too and uh well because the axum only talks about the atmost countable unions right um well you get the at most countable intersections too um that will be on the problem sheet uh by using the Morgans rule so I just uh remark this is in Sigma due to uh the Morgan rule well rule is actually a
+
+00:30:06
+theorem and actually this comes from set theory so the fact um so you know that right it's uh if you make an exclusion jump a union well in our case like this then that is the intersection the sign flip that's the intersection of all the complement or the other way around the complement of an intersection is the union of all the complements okay uh and that is at the end of the day uh this comes from uh from the axioms of set theory how you define the unions and so on and how unions are defined is in fact
+
+00:30:50
+an axium of set theory it's not as trivial as one might think from kindergarten Okay so so um so if you have something like this uh and and that's the important bit uh otherwise I could have said similarly for decreasing series and there is a condition and the condition is that the highest set here the biggest super Set uh that that has finite measure um ah I should have probably I said the MU goes to r+ Z is that right yes I shouldn't have said that so if you go back to to that um the
+
+00:31:33
+MU should go from Sigma to R Bar + z and the R Bar so it's first R Bar and we'll look at the R Bar soon um but the R Bar uh is um R Union with minus infinity and plus infinity okay so we invent two points called minus and plus infinity now you say well that's silly didn't we learn in school we shouldn't do that and rather if something takes infinite values somewhere we should rather take that point where it takes infinite values out of the domain right isn't that what you
+
+00:32:10
+do with 1 /x the function 1 /x you define it on R without the zero in order so it doesn't take infinite value well that's the alternative to that you say no I want to keep my domains untouched in this case what the sigma algebras are what the sigma algebra is what a measurable set is but I allow for uh the value Infinity okay um we'll see this uh in another place as well not only for the measure but also for measurable functions measurable Maps which we haven't defined yet but you can already
+
+00:32:44
+imagine if you have a definition a little bit like a topology and there you have continuous Maps you will certainly have maps that preserve that structure right so that those will be the measurable Maps we'll come to that okay anyway so here's the condition that the superet is already finite and then the same thing applies you can take the limit n to Infinity of all the measures a n and that's just the measure M of a but now a is the intersection right that's the continuity from above uh and well proof
+
+00:33:19
+problem sheet well that's the first thing we have to prove anyway so far uh there was nothing else so um there's a final important definition of this section so I squeeze it here a measure mu is called finite well some people call it Sigma finite because well measure mu is called finite um if and if I talk about a measure there's always an underlying measurable space so I do not always write this down so a measure mu is called finite if and now it's not for all but if there exists a sequence A1 A2
+
+00:34:09
+dot dot dot dot of measurable sets um such that if you now really exhaust with the Union n greater equal to 1 of the a 's really hits the entire space such that the MU of the a n is finite for All N in N so a measure is called finite or Sigma finite if there exists an exhaustive sequence that now exhausts the entire space such that every single of those measures is fite doesn't mean that if you go to Sigma of M it's finite okay so there a subtle it's a subtle definition here and we'll uh mostly look at finite
+
+00:35:14
+measures and that's an important tool for proofs are there any questions so far so we start with a set we make a selection of sets of subsets which we call measurable and in order for our theorems to work they need to satisfy certain conditions basic idea is not every subset can be meaningfully be called a measurable set for our purposes well once you've chosen these sets that are distinguished in this way that constitute a sigma algebra you may now choose on this measurable space a map me
+
+00:35:57
+which actually takes each such distinguished set and assigns it a number okay so far that that's it that's it so apart from the so for a while people thought that you can really assign to each subset a measure and that led to Great trouble right and the Breakthrough was to recognize no that's not possible not for the purpose you have in mind I mean of course you can Define anything but the question is can you then prove what you want to prove and does it have the properties you would like to have of
+
+00:36:40
+a measure that's the point right um so so that that's the only that's the key idea here simple right very simple so far and it remains simple all is simple well in teaching you only have one choice um you can either say oh this is going to be very complicated and then you hope that everybody will pay attention or you say this is going to be very simple I don't know whether it depends on your character or not the character of the audience I I I like to say it's very simple because then you
+
+00:37:20
+would feel embarrassed if you don't understand it so you'll go home and secretly study up right okay so you see psychological manipulation is uh present everywhere okay and so next section is called borell Sigma algebras aha we already know Sigma algebras and if I now talk about borell Sigma algebras apparently that's a specific type of Sigma algebras constructed in a specific specific way but because before we go and and they will play the main role okay so this was very general measure uh spaces so far
+
+00:38:05
+now we come to borell Sigma algebras but before I tell you what precisely a borell sigma algebra is we'll answer the question how does one specify in practice a sigma algebra well it's a little like in topology you know in topology for finite sets you can write down a collection of subsets and you check the aoms and everything is fine but if I ask you to write down the topology the standard topology of Rd you cannot do this explicitly what you do you define these soft balls or open balls right and then
+
+00:38:46
+Define a subset of Rd to be um open if around every point that exists a soft ball that lies entirely within the set and stuff you see and and of course all of this very intuitive and fine but then you have to prove that that really constitutes a topology but if I tell you do you have an intuitive overview over all open sets in Rd or let alone or even r or R2 actually the honest answer is no no not really because they can be very strange sets right very very strange stuff okay and with Sigma algebras it's
+
+00:39:24
+the same so of course we have intuitive notion of there's a subset and it's measurable it has a volume this one is measurable has a volume but they are very strange sets or collections of such sets and that's the point um that are measurable well again measurability is not the property of an individual set it's a property of a collection of sets agree right from our definition so so um um it's a little bit like vector space right I I talked about this before right if I just write down a certain
+
+00:40:00
+object and say is this a vector you need to say well I can't tell I need to have the entire space and then I know it's an element of that space But being an element of the underlying set of that space doesn't qualify it as a vector unless the whole set has this structure with the addition you understand so so it's it's you can't say oh this is a vector you can only talk about Vector spaces you can call the elements vectors and it's a little bit like this here you can't say oh how does a measurable set
+
+00:40:28
+look like you can only say this is a system of measurable sets right and if you then have such a system then you pick one then you call this measurable with respect to the system and so it's a okay and then um uh so you need to write this down concretely and it's sometimes rather difficult to get an overview and uh one way and of course one way is you already have a measure space we'll see that example too and from one measure space you construct another one that's called inheritance you know how good
+
+00:40:57
+that is if you're old enough okay so but um what if you don't have a measure space yet and you are a measurable or Sigma algebra yet and you want to start with one H and one very good way uh to do so is the following uh and it comes in the form of a theorem because it contains a claim it's a definition theorem the smallest Sigma algebra Sigma uh for a set M that contains it doesn't mean only contains but it contains in Brackets among other sets other subsets of M um a collection of subsets
+
+00:42:01
+e in the power set and I make no further assumption on this e i just pick a number of subsets of the big set this one that one and that one and now I want to find the smallest Sigma algebra that contains this is called Sigma well quite suitably of E so from these es must be in there and what are those well those are all those subsets of M well if it's supposed to become a sigma algebra of M it needs to contain subsets of M Well it can't contain all subsets of M then it would be the power set it's all those subsets
+
+00:42:47
+of M for which it is true that aha I should say the smallest Sigma algebra Sigma of E and that's uh Sigma of e that's its name is or is called defined as colon it must be true for all Sigma algebras Sigma of M that um uh with e in them that the a also lies in that one or in other words so equal or in other words it's the intersection of all Sigma algebras for M of course uh that contain that contain uh the set e okay um one can check and that's the claim that's hidden here uh one can
+
+00:44:24
+check that the this is again a sigma algebra so prove that Sigma of this e one calls this also a generating set I mean that's from real life you say well this set this set that set and that set I must have measurable for my application I must have that which is the smallest the most economical if you wish Sigma Algebra I can choose to have a consistent measurable space that contains those guys what it's called Sigma of this set I mean it's really very practical it's a generating set e
+
+00:45:09
+is called the generating set for the sigma algebra Sigma of e okay um so proof problem sheet that's very simple but we have a more far-reaching result theorem um every Sigma algebra can be written as the sigma algebra generated from some set it's not so surprising but uh it's good to know that it's almost trivial okay now this is something you can do in practice right and one thing you can do what you want to do very often you want to link certain Notions together and um this construction
+
+00:46:35
+immediately allows to link the Notions of topology and sigma algebras or topology and sigma algebra for a set M and that idea is the definition of a borell sigma algebra so you have to specify a sigma algebra right it's a choice you have set M and you need to make a choice of a system of measurable sets a choice of Sigma algebra now maybe earlier on in your problem you already made a choice name you made a choice for a topology okay so the definition is let m o be a topological space and the question is you already
+
+00:47:39
+made a choice for open sets couldn't you use that choice and that choice only to also Define measurable sets the answer is yes but it's a specific way to establish um a sigma Al algebra uh then Sigma of O so you take as the generating set all the open sets and the sigma algebra generated by this is called is first of all is a sigma algebra well that's clear uh it's called it's clear because of this definition and the little proof then Sigma of O is called the borell Sigma algebra of well of M O right I mean so
+
+00:48:35
+only a topological space can carry a borell sigma algebra because the whole idea of the borell sigma algebra is that you employ the open sets in order to generate it okay so you can do this the question is whether this is a particularly good idea well it turns out to be a brilliant idea okay okay so again why would one do this in the first place of course you could take a topological space and establish a sigma algebra on it that had has nothing to do whatsoever with the topology that's perfectly
+
+00:49:09
+fine however you could also have a Hilbert space with an inner product and you could establish on your Hilbert space with your inner product a norm that has nothing to do with the inner product you could do that but what formula you will not get the Ki Schwartz inequality where on one side you have the inner product on the other side you have the Norms because they have nothing to do with each other so usually if you have a strong structure that is able to imply another structure you will establish that other structure in such a
+
+00:49:43
+way that it's being induced now let's start with hbert space you have an inner product from that you induce the norm from the norm you would induce the standard topology by defining the soft balls using the norm once you have the topology you induce the the Bell Sigma algebra as the bell Sigma algebra so you only made once a choice namely for an inner product which is a very strong choice right if you made a strong choice you usually the weaker structures you derive from that what you usually cannot
+
+00:50:10
+do you can come cannot come from the weaker structures and imply the stronger structures obviously right again why would you do that you don't have to well because then you get the stronger theorems for the relation between these structures right so okay anyway so this follows standard procedure in mathematics to induce from given structures you have already chosen to not make yet another choice but to induce it now I point out I did not say very important I did not say the sigma algebra is constituted by the open sets
+
+00:50:44
+because that wouldn't hold true the uh um properties of O the topological aims are different from the aims for a sigma algebra right and you could not simply true Sigma to be equal to O that would lead to trouble in most cases right unless you have the discrete topology and then you get this this all subset uh uh Sigma algebra and so on no it is not Sigma equals o it's O is a generating system for Sigma and I'll make an example to point out that there are many non-open sets that lie
+
+00:51:23
+um many non-open sets that lie in the sigma in the borell sigma algebra of a topological space and we'll immediately make an example with the real numbers because those will play an important role as always you know if you do topology you look at the standard topology on the real numbers and even if you look at General topological spaces but then you make functions into the real numbers it usually then goes at some point without saying oh the real numbers they're equipped with the standard topology and
+
+00:51:53
+then your topology and so on okay and will will be the same here okay we we'll come to that so um let's call this an instructive example so let's take as the set M let's take the real numbers okay um let's take as the topology let's take the standard topology on the real numbers or sometimes I call this o standard or I call it OS it it depends on my mood okay so the standard topology the standard topology is the you know the standard topology right defined with the on r with the um with the absolute value on
+
+00:52:47
+RD with the norm okay that's the standard the standard topology now um what what you can do uh you can look so obviously clearly um if Sigma is defined as the one defined by all the open sets uh implies that's very simple that an interval AB any interval ab ab in r that any interval AB uh well I could even write our bar here because minus infinity and plus infinity is included but we don't need this at the point that any interval any open interval is an element of this uh of the such
+
+00:53:35
+constructed borell Sigma algebra so borell Sigma algebra well that's clear so if I said it's not equal to that but certainly it's contained right because we know this contains those but you can also look at if you know that all the open intervals are in it uh then by axium three of Sigma algebra um and the Morgan so because I'm converting a union into a intersection I know that I can take open intervals a - 1 / n b uh for n in the integers and I can take the intersection of any of those so this
+
+00:54:28
+would be my set a n my set a n is defined like this it's clearly measurable it's in Sigma of O why is it well it's in Sigma of O because it's an open interval every a n is an open interval for any n greater or equal to one you agree now I take an at most countable according to the aim intersection of such well it's like the union but the complement you go in the Morgan rule it's the same thing okay so remember in topology it's not the same thing in topology you have arbitrary
+
+00:55:03
+unions of open sets are open but only finite not even countable only finite intersections here you have countable unions and countable intersections of measurable sets are measurable sets Okay so there's no trouble here okay so we do this but we all know what this is so if I take all these intervals I I can draw a picture so this is the point B Well I this is the point B is not in the interval um this is the point a say and a - 1 / n say this is a step one that would be this point but it's not in so
+
+00:55:40
+this is a - 1 over n so obviously this is the one on the real is a distance one on the real axis so okay if this is a Aus this and then the a - 1 / n then uh is a a half then it's this interval then it's a quart a third then it's this interval then it's a quarter and so on if you take the intersection of all those you know you will end up with the interval that contains the point a so this is a b ahuh so for instance for instance the half open intervals are also in the sigma algebra well it's not
+
+00:56:29
+difficult to see that also the closed intervals are in there and many many many other sets and it's so many sets it's very difficult to to really get an overview of what sets are measurable right but it's all it's defined so when you have the tools to prove it as difficult as it may be to see or to have an idea of what all the open sets are you have a mechanism to this well defined right you know what you you can check it and so on but intuition is rather difficult or concrete list okay
+
+00:57:02
+so this is not more abstract or less abstract than topology I'm just mentioning this in order to to warn against going home and asking how what is a measurable set don't ask this you should ask what is a measurable space and the elements are called measurable sets Okay good um and that's a very uh a very important example uh these um half guys here because obviously you can take many such half closed intervals and you get a very good idea of the real line um because you can take this one and you can cover now I
+
+00:57:40
+draw it a little bit like this you can of course cover the entire real line by taking uh left close right open intervals they they neatly fit together okay that very often is very useful okay so so these in particular are interesting and uh after a well I guess we need only uh a seven minute break till five pass uh I'll tell you how with this idea you get the leeg measure on the real numbers and on RD any more questions here so let's meet at five past okay good good okay so um so we discussed measure spaces and we
+
+00:58:24
+discussed how you can generate a measurable space a sigma algebra from a topological space how do you construct a concrete measure so we only constructed the sigma algebra from the open sets how can you construct a measure well that greatly depends on the space you're looking at and uh a very important notion is the Le measure but you can't have it on any set m in fact it's like the standard topology well you could have it on the metric space you have it on R you can have a le le measure it's only for a
+
+00:59:04
+very special type of sets it's the Rd okay so if your set is m equals Rd then we can talk about the Le measure okay for other sets it's simply not there okay maybe this can be slightly generalized there's a Le integral it's again n terminology there's a Le integral you can Define on measurable functions from any measure space to the real numbers blah blah blah but the Le measure as such is one on RD okay so this is uh a special construction of a measure and uh you wouldn't be surprised
+
+00:59:53
+that it's uh well that's already said it's on RD for Su D um and it is on the sigma algebra that's generated by the standard topology on RD but the question is what is this measure uh then the map um Lambda now we called a measure me but because this is a very special construction the me deserves a new name I could write mu Le well let's do that mu leeg uh Rd and so on uh but this will be generally called Lambda uh and sometimes if you wish to emphasize that you're on RD rather than R you also write Lambda
+
+01:00:58
+up D but it doesn't mean the measure to the D's power it's just the name for the measure okay anyway uh this map that goes from Sigma o uh into somewhere here um defined by well what does it need to do it needs to take an um uh and ah defined by it's already defined by uh taking the open intervals aha now we have to need more space uh defined by um I take those subsets of Rd that can be written half open interval A1 B1 Cartesian product with half open interval A2 B2 cartisian product dot dot
+
+01:01:54
+do dot uh D many cartisian products to a d b d uh it's uh not difficult to see how that looks like in R2 this would be and a every a AI less or equal less than b bi equal equal is bad well yeah well could could be equal empty set you don't know what I'm going to write it could but then empty yeah it's empty anyway I'm not finished yet so um after I wrote here we can discuss um it's obviously something like this right it's a box in r d uh and always the the the lower the lower limit the
+
+01:03:02
+lower one is included okay so it's it sets like this defined by if already you fix it here and this is now just uh B1 - A1 time dot dot dot time BD minus a d so you take the naive uh kindergarten volume of just saying this distance times this distance and so on where by distance uh you mean the real number that's the difference between the two end points okay so um the the me is the unique map and that's the point and that's surprising uh that this is the unique map well it could be that there are many
+
+01:03:46
+measures which on this set yield this kindergarten volume but somehow globally on all the other sets in here right I mean these are only very specific it's only very specific sets in here obviously they generate the whole Sigma o as well but um anyway you fix it on these special sets and there is a theorem and that we're not going to prove and rather the existence and the uniqueness of this measure uh this is some more work okay so this is not a minor result it won't go to the problem
+
+01:04:23
+sheet also not to the exam okay so but the point is there is a unique such measure okay that does what you expect it to do now there isn't all so this blah blah blah is called and hence it deserves the name the Le measure on RD okay so a remark so if you only start with r with the set R uh and the addition on it and the multiplication and an absolute value so you take the field r with an absolute value then from this obviously you you can construct the standard topology from this you can construct the
+
+01:05:30
+borell sigma algebra and you can also from alone this guy here remarkably yeah uh you can construct the LEC measure so if you know R like you know it in when is that 10th grade or something okay um if you know R like this then you already have a full uh measure space you have r with the um with the borell sigma algebra and the LEC measure okay so recover this in this case and and obviously on RD uh you then need a a d here and you need an absolute value uh and then exactly the same applies okay so this just shows that
+
+01:06:30
+what you always thought is the volume of simple subsets of Rd this is all recovered by these constructions as much as in topology choosing the standard topology on RD you recover the high school Notions or the undergraduate Notions of continuity for instance and convergence okay so so these we start very general and then we go more and more specific and the specificity here lies in this being the borell sigma algebra uh and being in this being the leeg measure now if we're not on some Rd then you well you could still make
+
+01:07:13
+the Bal Sigma construct Bal Sigma algebra if you know a topology for the space and so on okay and we'll have opportunity to use both but from now on we'll have the tcid agreement there's the tcid agreement well by writing spelling it out that it's a tcid agreement it no longer is but anyway from from now on we have the tested agreement that Rd always be equipped if the need arises um with the Bell Sigma algebra Sigma of O Rd standard and the Le measure okay and the need arises exactly
+
+01:08:22
+if you in some definition or some statement you had to assume that there is some bell Sigma algebra and or some measure okay and um final remark or well two remarks remarks one well obviously and that I can really say that's not to be proven really it's obvious obviously uh Lambda is a finite measure so please check that and um the second is an alternative characterization well unique characterization that's the whole point unique characterization of the leeg measure is that it is the measure the
+
+01:09:23
+measure that is invariant under translations of the measurable sets under transation of on the translation so it means Lambda of a measurable set a to whose every point you add a v Accord according to the addition on RD to the component wise addition so you have a set and you shift the whole set by D that's my short notation for that okay so this contains elements in Rd you know how to do that so that this is the same as Lambda of a for all a in the sigma algebra and for all V in Rd and which
+
+01:10:23
+sends the unit cube 01 to the D cartisian power to + one so that's another unique characterization of the leeg measure okay so fourth section is measurable Maps that's something new measurable Maps so uh again standard philos philosophy I explained this already last time I believe the standard philosophy is study spaces of a certain structural type by studying Maps between them that in a meaningful sense preserve the structure so study measure spaces like this one m and you have a sigma on M and
+
+01:11:19
+you have a mu on M you have a sigma algebra on a set and you have a measure with respect to that uh you could study maps that go from here to another set n that carries of course generically a different Sigma algebra and a different measure um so study Maps now strictly speaking uh a map doesn't map you from here to there um a map maps you takes elements from the underlying set to the underlying set but then you may employ the extra structure to impose a condition on the map and that's what we're going to do here um as
+
+01:12:06
+in topology you have continuous maps that preserve uh the topology well by pullback so you do here for measurable Maps it looks exactly like the definition for a continuous map only that it employs the Notions of measure spaces so definition a map F from a set n into a set M into a set n because that's what a map is but now we have M and N equipped with uh each a sigma algebra and a measure a map F from n to n is called measurable and you can't say this uh without saying with respect to Mu M and
+
+01:12:57
+mu n and no that's not true haha haha okay we're not quite there yet I'm sorry um for the measurability uh you do not need this structural element yet for the measurability you only need the measurable space not the measure space okay good uh with respect to Sigma M and sigma n as much as a continuous map is with respect to the respect topologies okay measurable if well for all measurable sets in the Target it is true that the pre-image of that measurable set with respect to the map f is a measurable set
+
+01:13:44
+in the domain well this is one to one the definition of continuous map only with topology replaced by Sigma algebra and continuous replaced by measurable so that is a measurable map okay um well you immediately see that this is compatible with borell with choosing a borell sigma algebra that's made from open sets right and you would then immediately see uh uh that um um continuous Maps uh are actually measurable continuous maps are not the only measurable Maps but they in particular are measurable now okay so this by this
+
+01:14:36
+general standard philosophy it makes sense to Define such structure preserving Maps between such structures and maybe it is also meaningful to also called immeasurable because apparently everything is measurable called measurable in this Theory okay but it has a deeper reason because these are the maps if they go to the real numbers or the extended real numbers are bar these are the maps with which with one minor extra condition Beyond measurable the measurable maps are the ones we can integrate okay uh so that that's the
+
+01:15:15
+meaning because finally want a theory of integration and so far we we measured sets we can now measure here we can well if we once we have a measure we can measure sets on on the domain we could measure sets on on the target um anyway we'll come to that but just that you have the perspective the measurable maps with minor additions with the small minor addition uh of of some finiteness uh they will be the ones we will later on be able to integrate okay okay so um this is this and uh we have
+
+01:15:52
+dilemma um to show that f is measurable with respect to the respective uh um Sigma algebras it suffices to check whether now it comes it suffices to check whether for all sets a you see checking something for all sets in an unwieldy object like a sigma algebra is a hard task but it suffices you check all the sets in a generating set of the algebra where the algebra on N is given by this generating set and now it comes in handy so if you know if you generate an algebra like this this then you only need to check for those in
+
+01:16:57
+here which is considerably less if you're clever than the whole set uh you check there whether the pre-image of f a is again in Sigma M okay that suffices you cannot at the same time check whether this is an element of a generating set of here because the pre-image can be rather we uh weird okay but it's actually from this LMA that immediately see ah if this is a bell Sigma algebra then the generating set is the open sets and then this is just the condition of um of a continuity okay so that means a
+
+01:17:37
+continuous map in particular will be measurable you know where the word coroller comes from what that is well in in in Rome you were invited to to to a dinner and you were the guest you got a little uh uh woven thing of of of green green plants whatever on your head Laurel crown or something like this and that was the gift you got as a guest and so the coroller is the gift you get from some theorem or some some definition almost for free because uh well you have to entertain uh the host but otherwise it's for free okay and so
+
+01:18:17
+coroller is a simple simple conclusion yeah more question uh with that LMA is that an equivalent so does f measurable imply or is it just no it suffices to check so that's that's the same the same condition when whenever this is true then this is true and the other way around is obvious so that from this this follows is obvious because this is a subset from here but the other way around is the statement so that's um uh it's measurable it suffices yeah well it suffice is exactly like sufficient
+
+01:18:55
+condition but the other direction is is immediate okay good okay so coroller uh well the first one is uh any continuous map is measurable with respect to the borell sigma algebras why does this make sense well in order to talk about a continuous map you need a topology on the domain and the target once you have topologies you have the Bell Sigma algebras on the domain and the Target and so it makes sense a continuous map is measurable with respect to the Bell Sigma algebras it wouldn't make without further
+
+01:19:41
+explanation it wouldn't make sense to say any continuous map is measurable with respect to another Sigma algebra because you need to link the continuity to the measurability and that you do by the borell sigma algebra and and the other statement is that any monotonous map monotonous these are just examples right any monotonous map uh say F from R to R right um is measurable well that's more interesting because I mean it can be monotonous but it could have many many uh places where it jumps where it's non continuous right
+
+01:20:23
+and um well why is this proof why is this do you have an idea I guess it has something to do with the um what we proved earlier with the um with the uh open sets yeah yeah well so so the general hint is that the pre-image of an interval could be anything if it was any map but for for a mon monotonous map the preimage of an interval is an interval and because open intervals left half open right half open uh or closed intervals because they're all measurable right with respect to the leeg measure
+
+01:21:23
+uh not not measure nonsense with respect to the um uh to the Bell Sigma algebra again the measure doesn't come in um because the preimage of an interval is an interval this follows and so there there there many more so it's by no means are the continuous and the monotonous functions the only measurable functions but there're two immediate examples okay uh very important uh and again zero surprise to you if you remember uh the compos theorem on the composition of continuous maps for precisely the same
+
+01:22:03
+reasons okay um the composition f after G uh from a set uh a to a set C of two measurable Maps uh F from uh B to C and G from A to B is again measurable and the proof like the proof of some others which I didn't point out in in in detail uh a proof is on the problem sheet but it's not no surprise so the measurability is preserved under composition of maps Okay that's of course very useful so mind you I I said that the measurable functions up to small extra conditions condition will be the one
+
+01:23:18
+measurable Maps into our bar will be the ones that we can Le integrate um those will be many more than can be reman integrated okay and it's a very proper notion of of integral and I'll explain next time How precisely how precisely that works um and it's the notion I emphasize again I said it before it's the notion of integral we need in order to define the square integrable functions of quantum theory right because the the other set of square integral functions or equivalence classes thereof if you use the reman
+
+01:23:51
+integral it it wouldn't be a Hilbert space it wouldn't be complete right so there's no no escaping this um but then again you feel at home when next time I'll well probably quote the theorem only um that any reman intable function is also LEC integral but the LEC integral has this nice properties under exchanging limits and and and serious and so on it's very nice okay it's just a better it's a superior notion of integral for any practical purpose so not only for physics but also in
+
+01:24:25
+mathematics you use the Le integral because it just has the by far more clear definition and more more powerful definition but also much better much nicer properties okay so um now uh I I wrap up with with two more um small sections so that section five is um push forward push forward of a measure now as I said before well and as you know from experience very often if you have a space equipped with a structure and you have another space not quite equipped with that much structure you may be able
+
+01:25:13
+to inherit the structure from one space to the other space then topology you have for instance you have a topological space you take a subset where you can inherit a top topology on the subset it's the subset topology okay it's the intersection of all the open sets outside with with that set you need to show it's the topology again you could also in topology say how do I have to choose the topology on the domain if I know the topology on the target such that a specific function I want to be
+
+01:25:43
+continuous is continuous it's called the initial topology the other way around how do I have to choose the topology on the target if I have a topology on the domain such that a specific function or even a collection of function is continuous that's called the final topology there are many many constructions you can come up with you always have to show that your construction then satisfies the conditions of the object you want to construct and it's no different for measure spaces there are many many ways
+
+01:26:11
+you have a measure here you want to induce it there and you have to there many ways you can go to the literature and see how how how you do this and then there may be even several ways you inherit in a certain situation a measure or a topology and so on then it depends on what theorems you want to hold for the result okay so it's a standard game and I present just one way to inherit a measure which we're going to use anyway as an example but don't think this is the only one and it's a very natural way
+
+01:26:39
+to inherit a measure if you're given a measurable map between two spaces um but it's by far not the only one okay so take it more like an example in spirit but one we're going to use Okay so um let M Sigma M and mu well let me write M Sigma mu be a measure space measure not measurable that would only be this part but a measure space it carries it's easy to to remember because it's a measure space if it has a measure okay and otherwise M Sigma is only a measurable space let this be a measure
+
+01:27:23
+space and let N tow nothing further be a measurable space so in a sense the measurable space um there you know which sets could be fed into a measure but you don't have the measure you say oh yeah that's the set for which I could give a consistent notion of volume or measure but it don't didn't prescribe which one I know the sets whereas a measure space you know the sets which can be assigned a volume or measure volume is the more intuitive term and you also know which volume which set has
+
+01:28:09
+okay so in sense this is the more politically correct one because this one says measure in liters right instead of gallons whereas here you know oh yeah we know these sets are are measurable they have a volume but we're not saying whether we measure in liters or G so I suppress any comments to gender Theory okay so um uh so assume you have this and further you assume that you have a measurable map let F going from n to n be a map a measurable map let F from n to n be a measurable map I could have also said Let It Be
+
+01:28:54
+measurable then you have a measurable set a measurable space a measurable map uh it's getting confusing but you always have to have the right definition in mind further let m f to n be a measurable map and so the idea is well F takes me from here to here could F take this one on its shoulders and carry it from here to here okay could I push forward so this is equipped with a sigma albra and the measure this is only be equipped with a sigma algebra which I called to well I need to have this already being equipped with the sigma
+
+01:29:31
+algebra because otherwise I couldn't talk about this being a measurable map right because measurable map uses the sigma algebras but not the measure now the question is if I have a measurable map can a measurable map carry this me here and I get a me here induced from this mu and the specific measurable map yes uh then the so-called push forward I think uh so push forward is is more like a term uh that's very generic because this principle you have very often in in differential geometry those
+
+01:30:10
+of you who took the uh my classical mechanics course you can push forward uh vectors along um uh along smooth Maps or differentiable maps and so on you can pull back co- vectors and here it's measures are pushed forward in this way along measurable Maps um uh and this push forward is called uh F star mu um it's just a name so this is one symbol F star mu um is a measure on uh n to well it better be is a measure on ow defined by well and now you help me so what do I need to do so this F star mu this new
+
+01:31:04
+measure is a measure on tow so it needs to go from here to somewhere here and it needs to take any measurable set a in this Sigma algebra and it needs to send it to a number like this and the only ingredients you can throw into your meal is the measure mu that goes from Sigma to there and is the measurable map F that goes from M to n now you tell me how to define this so This goes to F star mu eating a needs to produce such a thing and you now tell me how to define this with only these ingredients yes uh
+
+01:31:53
+of the preimage of a yeah mu of the preimage of a under F oh why can I feed the pre-image into the MU so the MU lives on here but it can only eat measurable sets why do you know that the pre-image of a f is me the map is measurable yeah because the map is measurable so that is why you need the measurable map because otherwise you wouldn't be guaranteed that uh the pre of a measurable set in N tow is actually a measurable set in M Sigma right it's the only thing you can write down right really without further
+
+01:32:32
+structure so uh you could say it's a very natural construction and obviously in this definition uh there is implied a statement um a theorem um namely that this is indeed a measure uh so this is a definition that you have to prove and the proof is the problem sheet okay so this is one way to inherit a measure and it's one we're going to use okay now I wrap up by um the definition of a set of measure zero and the terminology almost everywhere which is probably something you heard before but just for
+
+01:33:51
+completeness I still suppressed the remark okay so um that's section six sets of measure zero and almost everyone so almost everywhere is a phrase that is applied in various circumstances but it always always always has to do with sets of measure zero definition let M Sigma mu be a measure space a set with a collection of sets to which we can assign a volume and an actual assignment of a volume to all the elements in the sigma let this be a measure space then um a set a that is measurable I'm
+
+01:35:12
+sorry in s a sigma a set a that is measurable is called a set of measure zero or maybe you can call it a null set that's a little clever and well I guess it's shorter a set of measure zero null set or German ner well if surprise surprise mu of a is zero okay that's a set of measures Z so it is a subset obviously the empty set is a set of measure zero but the whole point is there may be sets that are not the empty set and still have measure zero okay so remark uh there may be others well maybe
+
+01:36:20
+other null sets I call them null sets I mean the other thing is incredibly long to spell out they many other maybe other null sets than just the empty set right the empty set is one is is immediate from well it's not immediate it's the definition of measure it's the first axum of the definition and the whole point is there are sets that themselves are not the empty set but have measure zero what's special about them well uh from the set theoretic perspective nothing from the measurable space
+
+01:36:56
+perspective something because at least they are measurable and from the measure space perspective they're invisible okay so seeing through the glasses of the measure they don't count okay so they are the uh The Unwanted no they're not well in a sense they're also unwanted in some cases um and we mod them out for instance in the set of square integraal functions and so on but anyway it's it's an important notion and many things we're going to prove in measure Theory and that will carry over
+
+01:37:27
+to to integrals and so on um is that many statements hold almost everywhere and that's the final bit of terminology for today terminology um a condition uh EG equality or convergence or dot dot dot whatever okay a condition uh is said to hold now it comes almost almost everywhere and that is most common is almost always uh abbreviated a do e dot almost everywhere is set to hold almost everywhere if it holds for all uh m in the set in question so there's always an underlying set m in our measure space if it holds for all m
+
+01:38:43
+in M without [Music] um n where without some n no could be without some n uh with mu of n is zero so that means a condition is said to hold almost everywhere if it holds for all elements of the underlying set m except for some elements which however together must constitute a set of measure zero okay then it holds almost everywhere okay and so we have equality almost everywhere and uh usually one so let me write down two examples um I mean it's really very simple so um let uh f from M to n and G from M to n be
+
+01:40:30
+maps and let M be equipped with a sigma algebra and a measure but n can be any set any naked set then um we say f equals g of course you could say F equal G if M was only a set as well well uh that would not use the the measure and the mor Sigma algebra but if you now f equals e almost everywhere so you write this qualifier under the equal sign what we mean by this by definition is um there exists some n in Sigma and no n is bad there exists some a in Sigma I'm sorry for choosing n over there there
+
+01:41:34
+exists some a in Sigma with mu of a equal zero such that for all m in M without this zero Set uh it's true that F of m equals g of M and this this is the equality that you can have on on on sets n so this the equality on N well but that's just equality I mean I don't need to confuse you here okay so you see in order to decide almost equal for two functions uh from M to n you need a complete measure space as the domain uh and similarly you could ask if you have a sequence of maps m to
+
+01:42:22
+n and um you have a map F from M to n so there's an entire sequence of maps n and n and M is a topological space and N is a topological space then you can of course decide on uh whether one ah okay uh uh yeah Maps Okay maps possible but that's a little um uh uh overdone uh let's take um I'm sorry I'm sorry uh let's take sequences in a set okay no no no let me think what what do I want what do I want no I want okay okay I want to Define that one map goes converges against another map almost
+
+01:43:25
+everywhere but then a sequence of maps I need a sequence of maps I'm sorry so you could talk if um you could talk about this converging against this right uh this would be convergence and you know how it works uh you have it needs to converge pointwise at every point of M this needs to converge okay so you say this converges by definition if and only if uh for all m in M uh FN of M converges against F of M so this is now because you fix the M this is now a sequence in n and you need to topology on N uh to talk
+
+01:44:14
+about its convergence so you need uh M to be a set and if you just want standard conver and you need n to be a topological space so that you can decide on this convergence but now we want to have the almost everywhere everywhere uh convergence pointwise uh and then that's if you exclude a zero set a in Sigma such that mu of a is zero uh but that's in m so here you need a measure space in order to start talking about almost everywhere convergence pointwise okay so I mean yeah whatever you need you get it
+
+01:45:01
+this way and whenever you see almost everywhere you have to think okay what are the objects and where is it exactly in what structure do I need where okay and then you figure that out and you work from the not almost everywhere notion then you see it's this you only need to set in the topological space you go to the almost everywhere notion you see where to take out a null Set uh zero set of measures zero then you know well on that space you certainly need this space to be a measure space okay and
+
+01:45:30
+that's it and that will appear very often questions see you tomorrow with the LEC [Music] integral
+
