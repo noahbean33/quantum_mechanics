@@ -1,0 +1,193 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 6}
+\lhead{Quantum Mechanics --- The Theoretical Minimum}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\title{\textbf{Lecture 6: Entanglement and Composite Systems} \\ \large Tensor Products, Two Spins, and the Collapse of the Wave Function}
+\author{Based on Leonard Susskind's \textit{The Theoretical Minimum}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Photon Emission and Energy Levels}
+% ============================================================
+
+Consider a spin with Hamiltonian $H=\frac{\omega}{2}\sigma_z$, giving energy levels $E_\pm = \pm\frac{\omega}{2}$.
+
+\begin{itemize}[nosep]
+    \item A spin in $\ket{\uparrow}$ (upper level) can emit a photon of energy $\omega$ and transition to $\ket{\downarrow}$.
+    \item A spin in $\ket{\downarrow}$ cannot emit (no lower state available).
+    \item A spin in a superposition $\alpha\ket{\uparrow}+\beta\ket{\downarrow}$: with probability $|\alpha|^2$ it emits a photon of energy $\omega$; with probability $|\beta|^2$ it does not emit.
+    \item The \textbf{average} energy emitted equals the classical expectation---but each individual event is all-or-nothing.
+\end{itemize}
+
+% ============================================================
+\section{2. Collapse of the Wave Function}
+% ============================================================
+
+Between measurements, the state evolves unitarily via the Schr\"{o}dinger equation.  At the moment of measurement of observable $L$:
+
+\begin{enumerate}[nosep]
+    \item The system is in some state $\ket{\psi}=\sum_i \alpha_i\ket{\lambda_i}$ (expanded in eigenstates of $L$).
+    \item Measurement yields eigenvalue $\lambda_k$ with probability $|\alpha_k|^2$.
+    \item Immediately after, the state \textbf{collapses} to $\ket{\lambda_k}$.
+\end{enumerate}
+
+This ``collapse'' is \emph{not} governed by the Schr\"{o}dinger equation.  To understand it fully, one must treat the apparatus itself as a quantum system and analyze the \emph{composite} system (system + apparatus) using unitary evolution.
+
+% ============================================================
+\section{3. Combining Quantum Systems: The Tensor Product}
+% ============================================================
+
+\begin{definition}[Tensor product]
+Given system $\mathcal{A}$ with state space $\mathcal{S}_A$ (dimension $d_A$, basis $\{\ket{a}\}$) and system $\mathcal{I}$ with state space $\mathcal{S}_I$ (dimension $d_I$, basis $\{\ket{i}\}$), the \textbf{combined} state space is the tensor product
+\[
+    \mathcal{S}_{AI} = \mathcal{S}_A \otimes \mathcal{S}_I,
+\]
+with dimension $d_A \times d_I$.  Its basis vectors are all pairs $\ket{a,i}\equiv\ket{a}\otimes\ket{i}$.
+\end{definition}
+
+\subsection{3.1 Inner product on the tensor product}
+\[
+    \braket{b,j}{a,i} = \delta_{ab}\,\delta_{ij}.
+\]
+Two composite basis states are orthogonal unless \emph{both} labels match.
+
+\subsection{3.2 General state}
+\[
+    \ket{\psi} = \sum_{a,i} \alpha_{ai}\,\ket{a,i}, \qquad \alpha_{ai}\in\mathbb{C}.
+\]
+
+% ============================================================
+\section{4. Two Spins}
+% ============================================================
+
+Label the spins $\sigma$ (Alice) and $\tau$ (Bob).  Each lives in $\mathbb{C}^2$.  The combined space is $\mathbb{C}^2\otimes\mathbb{C}^2 = \mathbb{C}^4$ with basis:
+\[
+    \ket{\uparrow\uparrow},\quad \ket{\uparrow\downarrow},\quad \ket{\downarrow\uparrow},\quad \ket{\downarrow\downarrow},
+\]
+where the first arrow refers to $\sigma$ and the second to $\tau$.
+
+A general two-spin state:
+\[
+    \ket{\psi} = \alpha_{\uparrow\uparrow}\ket{\uparrow\uparrow}
+    + \alpha_{\uparrow\downarrow}\ket{\uparrow\downarrow}
+    + \alpha_{\downarrow\uparrow}\ket{\downarrow\uparrow}
+    + \alpha_{\downarrow\downarrow}\ket{\downarrow\downarrow}.
+\]
+
+% ============================================================
+\section{5. Product States vs.\ Entangled States}
+% ============================================================
+
+\begin{definition}[Product state]
+A state $\ket{\psi}$ of the composite system is a \textbf{product state} if it can be written as
+\[
+    \ket{\psi} = \ket{\phi}_A \otimes \ket{\chi}_I,
+\]
+equivalently, the wave function factorizes: $\psi(a,i) = \phi(a)\,\chi(i)$.
+\end{definition}
+
+\begin{definition}[Entangled state]
+A state that is \textbf{not} a product state is called \textbf{entangled}.
+\end{definition}
+
+\subsection{5.1 Example: product state}
+$\ket{\uparrow}\otimes\ket{\rightarrow} = \frac{1}{\sqrt{2}}\bigl(\ket{\uparrow\uparrow}+\ket{\uparrow\downarrow}\bigr).$  
+Alice's spin is definitely up; Bob's is a superposition.
+
+\subsection{5.2 Example: entangled state (singlet)}
+\[
+    \ket{\text{singlet}} = \frac{1}{\sqrt{2}}\bigl(\ket{\uparrow\downarrow}-\ket{\downarrow\uparrow}\bigr).
+\]
+This cannot be written as a product.  Neither spin has a definite individual state.
+
+% ============================================================
+\section{6. Observables on Composite Systems}
+% ============================================================
+
+\subsection{6.1 Alice's observable in the combined space}
+An observable $L$ belonging to Alice acts on Alice's indices and is the identity on Bob's:
+\[
+    L_{a'b',\,ab} = L_{a'a}\,\delta_{b'b}.
+\]
+
+\subsection{6.2 Expectation values in a product state}
+In a product state $\ket{\psi}=\ket{\phi}_A\otimes\ket{\chi}_B$:
+\[
+    \expval{L}_\psi = \expval{L}_\phi,
+\]
+i.e.\ Alice's expectation values are the same as if Bob did not exist.  Likewise for Bob's observable $M$:
+\[
+    \expval{M}_\psi = \expval{M}_\chi.
+\]
+
+\subsection{6.3 Product of observables}
+For a product state:
+\[
+    \expval{LM} = \expval{L}\,\expval{M}.
+\]
+The expectation value of the product equals the product of expectation values---the variables are \textbf{uncorrelated}.
+
+% ============================================================
+\section{7. Correlations and Entanglement}
+% ============================================================
+
+\begin{definition}[Correlation]
+The \textbf{correlation} between Alice's observable $L$ and Bob's observable $M$ is
+\[
+    C(L,M) = \expval{LM} - \expval{L}\expval{M}.
+\]
+\end{definition}
+
+\begin{itemize}[nosep]
+    \item For product states: $C(L,M)=0$ for all $L,M$.
+    \item For entangled states: there exists at least one pair $(L,M)$ with $C(L,M)\neq 0$.
+\end{itemize}
+
+\subsection{7.1 Singlet state correlations}
+In $\ket{\text{singlet}}=\frac{1}{\sqrt{2}}(\ket{\uparrow\downarrow}-\ket{\downarrow\uparrow})$:
+\begin{align}
+    \expval{\sigma_z} &= 0, & \expval{\tau_z} &= 0, \\
+    \expval{\sigma_z\,\tau_z} &= -1. &&
+\end{align}
+Correlation: $C(\sigma_z,\tau_z) = -1 - 0 = -1 \neq 0$.  The state is entangled.
+
+In both terms of the singlet, the two spins are always opposite.  The product $\sigma_z\tau_z$ is $-1$ with certainty---the singlet is an \emph{eigenstate} of $\sigma_z\tau_z$.
+
+% ============================================================
+\section{8. Summary}
+% ============================================================
+
+\begin{enumerate}[nosep]
+    \item Measurement collapses the state to an eigenstate; this is not described by the Schr\"{o}dinger equation but can be understood by including the apparatus in the quantum description.
+    \item Composite systems are described by the \textbf{tensor product} of individual state spaces.
+    \item A \textbf{product state} factorizes; an \textbf{entangled state} does not.
+    \item In a product state, subsystem observables are uncorrelated: $\expval{LM}=\expval{L}\expval{M}$.
+    \item Nonzero correlations $C(L,M)\neq 0$ signal entanglement.
+    \item The singlet state of two spins is maximally entangled, with perfect anti-correlation in every spin component.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,423 @@
+00:00:01
+[Music] Stanford University all right uh there was a there was an issue that came up the last time and I didn't understand the question there was a question that kept coming up and I didn't understand what it was until the very end of the uh class uh and it was an interesting and a good question so I want to go over it uh because it is important it had to do with spin in a magnetic field emitting a photon and I maintained that if it emits a photon remember the um the the way we set things up we said let's take the
+
+00:00:45
+hamiltonian to be Omega over 2 let's say Sigma Z that has two igen values plus Omega over 2 and minus Omega over two so the two I values let's call it E1 for energy the lower of the two igen values is minus Omega / 2 and the upper one uh is Let's see we could call this e minus and e+ is plus Omega over 2 so there are two energy levels if we drew an energy level diagram energy we would have two igen values it would be zero over here but that would not be one of them and then we would have one over here Omega over
+
+00:01:29
+two and minus Omega over 2 all right now what can happen under such under we are not we have not studied this process yet but let's talk about it for a moment given two states like this it is possible for an atom or a spin or or a system with energy levels like this to emit a photon emit a photon and go from the upper one to the lower one if it's in the upper if it's in a lower State obviously it cannot emit a photon doesn't have the energy to do it but if it's in the Upper State it can
+
+00:02:02
+emit a photon and that Photon will have the energy difference between the upper and lower state so we'll have an energy of frequency or energy Omega sorry not frequency it will be frequency but more important it will have energy of Omega there's an har bar missing I've been setting har bar equal to zero no h bar equal one I've been setting H bar equal to one uh it's really H bar Omega but I'll continue to set H equal to one because we're all grown ups and uh we're not
+
+00:02:40
+we're not afraid of setting H bar equal to one right what it was Zero last quarter it was Zero last quarter yes it was Zero last quarter that's correct right okay so we draw a picture with a photon a transition and a photon being emitted now somebody said what if the spin was not pointed up or down what if it were pointed here's the z-axis what if it were pointed well let's say this way along the x- axis and then it emitted a photon would it not emit a photon of half the energy namely Omega over two and the answer is
+
+00:03:23
+no it would not emit a photon of energy Omega over two let's talk discuss first what what happened classically classically if we had a rotor a spinning rotor in a magnetic field that had an energy which was the typical energy would be the co proportional to the cosine of the angle between the axis of the spin here's the axis of the spin here's the magnetic field uh the energy of that rotating object would depend on the orientation of the spin relative to the magnetic field the energy would be minimum down and it
+
+00:04:02
+would gradually increase until it were up all right that's number one number two classically and Quantum mechanically classically the actual value uh Quantum mechanically the expectation value of the spin precesses around the B axis with frequency Omega that also happens classically it's in the classical mechanics not notes in the Pome bracket um section where we studied exactly that question it wasn't called spin it was called angular momentum the spinning top uh does exactly the same thing and that
+
+00:04:46
+spinning top if it really is a little electromagnet a little um uh magnetic system rotating it will radiate in the process of going around with frequency Omega it will emit radiation at what frequency Omega it'll emit fre radiation at the and how much radiation will it emit now it's classical it's not emitting photons it's emitting classical radiation and it will gradually as it emits radiation fall over until it gets down and then no more radiation how much energy will it emit all
+
+00:05:28
+together and the answer depends on the angle uh that it's started at if it starts up it will emit all together an amount of energy that's proportional essentially Omega if it's pointing down it will emit no energy if it's pointing horizontally it will emit let's say Omega over two so there'll be a continuous possible value of emission of radiation at the same frequency Quantum mechanically it can only emit a photon with whatever energy that Photon has and the answer is a diff it's a it's a related but
+
+00:06:11
+different answer if it emits it will emit a photon of energy Omega on the other hand the probability of whether it emits is not one necessarily in fact let's suppose that the initial state is some Alpha up plus beta down if Alpha and beta are equal that corresponds to being oriented along the x-axis if Alpha is 1 and beta is zero that's pointing up if Alpha is zero and beta is one that's pointing down an up electron or an up spin will emit a photon of AEG Omega of frequency Omega of energy Omega so if there was
+
+00:07:04
+just the upstate yes indeed it would emit Omega if it was the down state it emits nothing if it starts in the superposition of States then with probability Alpha star Alpha it emits and with probability beta star beta it doesn't emit what is the average energy given that there's a probability Alpha star Alpha that he Ms with a a photon of frequency Omega energy Omega and beta star beta that emits nothing what is the average energy and the average energy is the same as the classical energy the average energy is the same as
+
+00:07:45
+the classical energy but each individual event emits a photon of either either emits no Photon or emits a photon of energy Omega okay so this was a who asked the question question somebody here asked the question yeah is that the that yeah okay so that's the that's the upshot and it's sort of internal consistency of quantum mechanics now of course to really yeah um if if the uh electron will will emit a photon when it goes down in energy presumably it could observe a photon yes yes that's correct how
+
+00:08:29
+precise would would that Photon have to be to Omega uh that depends on the lifetime of the state and which in turn depends on how strongly coupled the uh depends it depends on the magnitude of the dipole moment the stronger the dipole moment the magnetic dipole moment the faster it will emit the faster it emits in other words the shorter the lifetime of the excited state will be it's the inverse lifetime which sets the scale of exactly what you're asking the the uh the Precision with which you have to be at
+
+00:09:06
+exactly uh uh there's a spread in the energy levels there's a spread in the energy levels or an uncertainty in the energy levels and the uncertainty in the energy levels is inverse to the um to the lifetime of the state so right so you're absolutely right there there is a spread and uh it's governed by the energy time uncertainty principle but we're not there yet okay whether we get there or not I don't know okay is this phenomenon of um of photon emission what's used in to create an apparatus to
+
+00:09:43
+detect in what apparatus to create to create an apparatus that detects spin of an electron that's one way that's one way to do it that's one way to do it I decided not to think about that as an apparatus because I didn't like it it didn't satisfy the rule that um that if you measure a component of spin you leave the system with exactly that uh that and I after thinking about it I decided that did not qualify as a genuine uh uh measuring apparatus yeah so uh we're going to come
+
+00:10:21
+we're going to come to measurements and the meaning of measurements in a little while but uh would assum it's a half an hour gone already um okay if there are no more questions I want to move on to the subject of entanglement I had a few words to say about the collapse of a wave function let's let's just talk about for a moment the idea of collapse of the wave function we talked about how Quantum States evolve according to the Schrodinger equation and that is the way they evolve but that's the way they
+
+00:10:59
+evolve between events where somebody or something a detector or an apparatus or just some other system an external system interacts with uh with the original Quantum system so we have a Quantum system we have other things in the world including observers and including apparatuses and just including other things if we take away all the other things the system might be left in some State and the system will then evolve according to the Stringer equation and then we may be bring back the other things the other things might be an
+
+00:11:41
+apparatus where did our apparatus go our apparatus is hiding but uh but um it could be our apparatus or something else but let's say it's an apparatus and the apparatus measures some specific thing then what happens during the course of the interaction with the apparatus is a measurement takes place and the system is left in an igen State corresponding to the particular outcome so for example we might start let's suppose we want to measure L and our system after a while might be in a state some summation over I a bunch
+
+00:12:23
+of complex numbers Alpha subi times igen vectors of L igen vectors of L with uh with igen value Lambda subi okay what's the probability for the outcome of the experiment the system got here by evolving using the Schrodinger equation we started it out we evolved it with a schinger equation here's what we got at the end of the day and now we make a measurement of L and we get some specific value of Lambda random we don't know what it's going to be but it's going to be something let's say it's
+
+00:13:02
+Lambda 7 we measure Lambda 7 thereafter or right after that the system is in state Lambda 7 the course of the operation of measurement is not governed by the Schrodinger equation for the system it's governed by the nature of the measuring process and it simply tells you that you'll come out with one of the igen values as the measured value and the state Vector will be just one of these which one random random depending on the measurement now that's funny because you might think look F well first of all
+
+00:13:47
+let's give it a terminology the terminology is the wave function has collapsed around one point it has collapsed around one single igen value you can't predict which one but all of the structure here with all the other ones becomes irrelevant and only one state pops into existence so to speak all right now what's wrong with this what's wrong with this um well Absol there's absolutely nothing wrong with it it's a correct description of the measurement process but what uh is very unsatisfying about
+
+00:14:23
+it is after all apparatuses are just Quantum systems uh why do we have two rules for the way systems evolve one the Schrodinger equation and one this arbitrary collapse of the wave function and the answer is that we if we want to think Quantum mechanically about the whole system of system plus apparatus that's fine we can do it and I hope we'll get to it tonight and then it's pure schinger equation but we cannot separ separate the system into just system and apparatus we have to think about the
+
+00:15:04
+whole Quantum system as being system plus apparatus that raises the question immediately right now how do you combine systems together if you have more than one system it could be an electron Spin and the apparatus we have two systems now imagine we had a good quantum theory of the apparatus the apparatus is a physical system Quantum quantum Theory governs it how do we describe the combined system where we take two components one spin one apparatus put them together how do we make it into a single Quantum system and then how with
+
+00:15:43
+that single Quantum system do we describe this process of measurement that is a very it has confused generations of physicists partly because bore was very uh stubborn about this and didn't really quite have it right and um he was a nice man he was a very nice man I'm very glad I never met him no he was a nice man but the thing is he was also a very stubborn man and uh in this particular thing you he was most mostly right but uh here and there he was wrong and there was a apparently it was very tough to be around him when
+
+00:16:25
+he was people tried to explain to him over and over again you have to think of the combined system and you have to think of the combined Quantum system if you want to understand the quantum mechanics of measurement and he said no he didn't believe that anyway um combined system we have two systems now let's just not worry about what they are they are two systems we'll get more specific in a moment but let's give them names let's call one of the systems a and a does not stand it could stand the
+
+00:16:59
+apparatus but it doesn't have to it's just a system a and we'll call the space of states of system a s Suba s Suba could stand for system a but now I have it to mean the space of quantum states of the system a and we have another system I'm going to call I uh it's another system I with its own space of States I this the the system a has states which are labeled by a basis of States you choose a basis of states in the system a and you label them a a can go from one to whatever the number of
+
+00:17:45
+states of system a is whatever the dimensionality of the space of States a is and system I has States I any any state of system a if you didn't have I would be a superposition of these basis States any state of system I would be a superposition of these basis States okay how do we put the systems together and make a single Quantum system well I'm going to tell you what the rule is I'll give you a cookbook rule but it's it's it's pretty uh compelling and it is the way real things work okay you build
+
+00:18:29
+a space of states of the system a i which means a and I together both of them that space of states is called mathematically it is what is called the tensor product I'll tell you what it means in detail but it's the tensor product of the two space of States sa this is the symbol for tensor product SI now what does a tensor product mean well it means something very simple it means you construct a new space new mathematical space whose vectors are labeled by a value of a and a value of I in other words you pair off the basis
+
+00:19:20
+vectors in all possible pairings one from a one from I and you construct a basis which is labeled AI if this let's suppose the dimensionality of this space is D Suba and the dimensionality of this space is d sub I or d sub I guess it's capital A I want here d sub capital A and D sub capital I in other words the number of orthogonal states of each one of these separate then what's the um what's the dimensionality of the tensor product da time di I you get to pick one from a and one from I like in the
+
+00:20:11
+Chinese restaurant one from a and one from I okay and how many are there all together da * di that's why it's called a product because the dimensionality is uh is a product so this is Da time di in Di diality these are the basis States for the tensor product okay they're labeled with two indices now you think of them as an orthonormal basis orthonormal in the following sense if you take two such vectors Ai and let's say BJ where b is another one of the basis vectors of A and J is another one of
+
+00:20:57
+the of these what's the inner product between these let's take these to be um Ortho let's take these to be uh normalized vectors what is the inner product between them and the rule for a tensor product is the inner product between this and this of course we have to make a bra Vector out of it in order to um in order to take its inner product but if we made a bra Vector out of this and took its inner product with this one the rule is that the inner product is zero unless a is equal to B and I is
+
+00:21:30
+equal to J in other words unless they match okay if they don't match these might be observably different for example if this B was the same as this a but I was not the same as J then one half of the system here would be would uh would be there would be observable differences associated with observable dist differences in the subsystem I so in order for them to have an overlap B must equal a and j must equal I and then they're observably uh the same Vector excuse me are these arbitrary vectors A and these are basis
+
+00:22:14
+vectors these are part of an ormal basis yes you could pick any orthonormal basis for this one and any orthonormal basis for this one yeah yeah but you could pick any any orthonormal basis from this one and any orthonormal basis from this one and put them together this way and you'll get the same result doesn't matter which basis you pick but uh but let's pick a basis to be concrete let's pick a basis if a and I are not the same as both B and J the inner product is zero I can write an equation for
+
+00:22:49
+that BJ AI is equal to Delta chronica Delta AB chronica Delta i j if I is not equal to J or a is not equal to B this is zero it's only non zero if I is equal to J and a is equal to B so these vectors formally by construction by construction which means you're simply assigning values to things now but in a way that uh that uh is useful the these vectors form by definition or by construction an orthonormal basis for the combined system and this this makes sense um as you've defined it it's
+
+00:23:45
+dependent upon the basis but I still it does but actually as I defined it let's put it this way the words depended on the basis the construction in the end doesn't the construction in the end doesn't and that's not hard to show this is however keep in mind that these basis vectors are not all of the vectors in the tensor product you can then take any linear combination of these basis vectors and they're also a vector in the tensor product so the general Vector in the tensor product is
+
+00:24:18
+of the form sum over I and a alpha let's call it some i a i a a general linear combination with coefficients that depend on what's inside here times the vector times the basis vectors now the answer is if you were to have chosen another ve another basis another set of bases you would have gotten except exactly the same vectors except they would have been written differently they would have just been written in a different basis of the combined system changing basis for the individual systems corresponds to a
+
+00:24:57
+basis change for the combin system okay so that's that's good and we now have the idea of a tensor product and I'm going to give you a concrete example now the concrete example is the next most complicated Quantum system namely two spins well it's debatable whether it's the next most complicated or the next the next most complicated and the reason I say that is because two spins have four basis vectors you could imagine a system with only three basis vectors and such systems exist but
+
+00:25:32
+um but since we're trying to learn how to combine systems let's take two systems and combine them each of them being a spin so what do we have we have an electron nailed down at this position over here and it has a spin which we're going to call Sigma and it has three components Sigma X Y and Z so Sigma x y and z okay and we have another one over here we need a name for it now I toyed for a while with calling this one Sigma 1 and this one Sigma 2 but there were too many there were too many indices then I had
+
+00:26:13
+Sigma 1X Sigma 1 y bad so I decided to give this one another name and the Greek letter that comes after sigma is Tao I don't know if it's the next letter it's the one in the English alphabet that's T yeah so the next one I think in the Greek alphabet is Tao and I simply call this one TOA how many components does to have well TOA is also a spin so it also has three components X Y and Z supposing I choose for the basis vectors for each of these the up and down bases vectors in other words the
+
+00:26:54
+states in which Sigma Z is up or down and the states in which to Z are up and down then our basis vectors for Sigma are up and down our basis vectors for too are exactly the same up and down and maybe in order to indicate that these are vectors for the system to and these are vectors for the system Sigma let's use a slightly different kind of bracket notation here let's use a cur let's use a curly uh bracket I'm going to give that up very shortly I just want to I just want to point out to you that these are
+
+00:27:44
+different in these and down so good what is the basis vectors for the combined system if we put the systems together what are the basis vectors for the combined system there are four of them 2 * 2 is four and what are they they are states in which both spins are up it's one of them one Spin and I'll always take the first entry here to correspond to Sigma and the second entry to correspond to towel up down down up and down down that's that's the four basis vectors each basis Vector carrying two
+
+00:28:33
+labels now a a sigma label and a towel label that's the idea and it's a know it's a very reasonable idea yes suppose these two component systems interact doesn't that change things Som no the basis vectors stay the same but the linear combination of basis vectors that they're describing the system will change yeah so any state in the space can be written as an alpha up up time up up plus an alpha up down up down plus an alpha down up down up plus an alpha down down down down that's the most General thing we
+
+00:29:28
+can write right it's called sigh the answer to your question is if you started out with a particular linear combination let's say for example just Alpha up up up up both spins up and you let them interact then in general what will happen is these coefficients will change in fact it could even happen that after a Time Alpha up up might go to Alpha down down in other words two spins up might interact in such a way is to just uh wind up down that would not be a change in what the basis vectors are it would
+
+00:30:05
+be a change in what the alphas are okay so uh all right now there are several questions we can ask incidentally one of the one of the um criteria for doing this correctly is that if we take the combined system but then we only do experiments on one of the halves of it the other one doing whatever it's doing and they're well separated from each other let's suppose they're well separated from each other and we do experiments on only one of them the answers that we get should be the same
+
+00:30:49
+answers that we got when we didn't even think of it as a combined system if we have a theory of Sigma which we've talked about now for five weeks I think and we know all about it we know how to do experiments on it and now we think of it as half a system composed of Sigma and too but Sigma and TOA are far from each other let's say they're not interacting with each other substantially and we do exactly the same experiments that we've been talking about up till now we should get the same
+
+00:31:17
+answers so we should put these things together in a way which makes sure that the earlier um issues the earlier description of either subsystem is still correct now I'm not I'm not going to bother proving that I think you'll get the idea and you'll see how it works and the way we are putting things together does guarantee that okay now we can go in two directions from here we can talk about the space of states or we can talk about the observables and we're going to do both we're going to do both but I'll
+
+00:31:50
+take a vote how many people want to talk about the space of States how many want to talk about the observables we'll talk about the space of States first you knew I was going to do that come on you know I going to do that all right uh yeah one question are we allowed to pick left and right for the second what oh yeah yeah yeah sure there are there are yeah supposing we wanted um supposing we wanted a state which was left for Sigma and up for to all right so this would be an ex this would be a state which would be prepared
+
+00:32:32
+we have two apparatuses now I'm always uncomfortable with the word apparatuses I always think it should be apparati but I don't think that's right we have two apparatuses one that we apply to Sigma the other that we appli to toao and we now take our apparatus one apparatus the sigma apparatus we point it in the let's say the XY AIS the not the XY along the x- axis and the other one and we point along the z-axis and we wind up discovering that Sigma was along the x-axis with plus1
+
+00:33:07
+and to was along the z-axis also with + one so that means that Sigma was up but too was right how do we make a state which is so the answer is this you I'll tell you what you do but we'll we'll eventually have a mathematics to this Sigma is definitely up but to is a linear superposition of up with down easy you just take up up plus up down square > of two 1 overun of two you can think of this another way you can say the think of it as a product a product of up for Sigma and right for
+
+00:34:12
+too now what is right right is up plus down right right right is up plus down so this can also be written as up times and I'm going to put a big square bracket around it up squiggly bracket plus down but if I want to normalize it I should put a square root of two downstairs so we just think of it as a product of Sigma up and to in the along the right direction but that's the same thing here uh we have 1/ < TK of two up up that's this one one and 1/ < TK of two up down that's
+
+00:35:02
+this one okay I'm not sure if this answered your question or not I think it probably partly did yeah okay right and you know okay this kind of state is called a product State it's a product state in which you know exactly what's going on with Sigma namely it's in the up direction and you know exactly what's going along on with to it's in the right direction there's a product State and and it's simply two separate things which were prepared independently and here it
+
+00:35:34
+is um a product state is by definition a product let's write the most General product State the most General this is not a this this is not the most General product State the most General product State can be written as follows Alpha up up plus Alpha down down that's for Sigma and then for too let's call it beta let's call the coefficients for for to let's call them beta beta up up squiggly plus beta down down what does this mean this means that Sigma was prepared in this particular
+
+00:36:26
+linear combination here it might have been by holding your detector in some funny angle and this one is the response to holding the tow detector at some other angle had you had only one of these not the other you would just have written this down had the other one you would have written this down together you write down the product that's the rule okay that's the rule and of course you know ultimately these rules are the rules because they agree with experiment but uh but it's a pretty plausible rule
+
+00:37:00
+this is a product we could also write it Alpha up beta uptimes up up plus Alpha up beta down up down do I need to write the rest of it well I will plus Alpha down beta up down up plus Alpha down beta down down down all right now of course this is of the form of a general Vector but there's something special about the coefficients here the co the the coefficients factorize into and and uh uh therefore this is in a certain sense special to some extent let's see if we can quantify how special yeah what kind of vector product
+
+00:37:56
+is that that's that's a product this is an element of a tensor product and it's the tensor product of this Vector with that Vector it's a vector drawn in the composite system as a tensor product of a vector describing one system and a vector describing the other system so strictly speaking the tens of product is usually used for the whole space but then you would say this is a product state within the tens of product space and I I'll just call a tensor product state or product
+
+00:38:30
+State it's not General and to see how non-general it is we can count parameters given a general system a general State Vector how many parameters how many independent parameters does it take to describe it and the answer is four complex numbers Alpha up up Alpha up down Alpha down up Alpha down down I am not assuming that it has this special form just general four numbers four complex numbers is eight real numbers but I but that's a little too much because we should assume that the state is
+
+00:39:11
+normalized so that's one constraint and we also know the overall phase is not important so when you count parameters you always subtract two one for the normalization and one for the phase 8 - 2 is 6 six real parameters describing a general state of two spins how many here well the state describing the sigma particle that has two real parameters four real parameters for Alpha up and Alpha down but then we subtract two same thing here this is a normalized state and its overall phase doesn't matter this is a
+
+00:40:00
+normalized state its overall phase doesn't matter altogether for real parameters it's the same four real parameters that you might have guessed if you just said I have two spins each spin had two parameters necessary to write down its state two real parameters the real parameters could have been the polarization directions of the spin the axis along which the spin is oriented or so there are four four parameters here but six parameters here that simply proves that not all states are product States in fact Most
+
+00:40:37
+states are not product States we're going to talk about some non-product states soon enough but this is the notion of a product State and in the product State we can really think of separate states for each of the particles or each of the subsystems but for a more General State you can't really divide it into a state for one subsystem and a state for the other subsystem they're entangled they're entangled in a more elaborate and more more uh um I don't know what the word is entangled they're entangled in a more
+
+00:41:16
+entangled way we're going to discuss that entanglement that's a very important concept of course okay so that's two spins how many parameters 6 versus 4 they're entangled right we've talked about product States and that's what we know about the space of states of this system it takes six parameters to describe it but only four parameters if it's a product State product states are the ones for which you can separately say there's a state for one system and a state for the other
+
+00:41:46
+system end of story okay now let's talk about observables now we come to observables what are the observables for this composite system well they must be the same observables as for the separate systems by themselves in other words Sigma X Y and Z and to X Y and Z they are the things you could measure with two apparatuses of the same kind as we used in our experiment on one spin we now have two of them and so we have Sigma X Sigma Y and sigma Z and tox toy and to Z let's see if we can figure out how these operators ought to
+
+00:42:41
+operate on the states of the combined system all right now you can sort of guess I'll spell it out but here's the rule let's take Sigma X and let's apply it to a state of the sigma system obviously it belongs with the sigma system if it applies to up it gives down if it applies to down it gives up you can check that that's the fact that Sigma X is equal to 0 1 1 0 this off diagonal character means it takes up to down and down to up right this is what Sigma X does ordinarily if we only
+
+00:43:30
+had one subsystem here's what it does on the combined system Sigma X on any Vector which begins with up and has anything let's see uh which one was a and which one was I second one was i t went with I or to went with to was I okay so Sigma X when it acts on up I all it sees is the up all it sees is the first thing here and it's completely passive with respect to the second index in other words it doesn't even notice a second index it leaves it the same it doesn't change it but it does whatever
+
+00:44:20
+it should do on the first entry likewise Sigma X on down I equals up I you just take what it did for the Single part for the single uh spin space and you just think of the other index as a kind of spectator that just goes along for the ride doesn't do anything on the other hand oh let's do one more Sigma let's one more Sigma Sigma Z on up I well what does Sigma Z do when it gets when it acts on up Sigma Z is 1 minus one 0 0 it just gives back up with value one so that's just up I and what about Sigma Z on down
+
+00:45:26
+I well what happens when Sigma Z hits down minus down so this gives minus down I how about Sigma Y what does Sigma well Sigma y does something very much the same as Sigma X except it throws an I not this I but the numerical complex number I throws it around because what is it Sigma X this is Sigma Z Sigma X was 1 - one and sigma y was equal to minus i i0 0 Sigma y also flips up to down and down to up but it throws in grous eye here and there okay so that's that's what Sigma does now how
+
+00:46:12
+about too well towel does exactly the same thing except that the first entry becomes The Spectator and only the second entry gets uh gets acted on so let's uh let's do this one how let's say x on a up a could be anything now a can be up or down doesn't matter tox on a up is equal to a time down and to x on a down is equal to a up all right let's do to Z on a up equals a up and t z on a Down is equal to minus a down and you could figure out the action of um of the Y components of the
+
+00:47:38
+spin uh straightforward with this definition it's quite clear that if you're talking about an observable associated with Sigma that the tow degrees of freedom are completely passive nothing happens to them the IG vectors of the components of Sigma are simply product states of the igen vectors of Sigma times any Vector for too in other words for example the igen vector the igen vectors the IG Vector yeah vectors of let's take Sigma y ordinarily the igen vectors of Sigma y are 1 I or 1 minus I I can't remember which one
+
+00:48:39
+has igen Value Plus One or minus one but one of the others right uh that means that means the linear combination up plus I down that's an igen Vector of Sigma y if you want the igen vector of Sigma y when we're talking about the composite system it's exactly the same except you put an Al an i in here I guess an i in here and an i in here same I same I so for example it could be up up plus I down up or up down plus I down down the I is a spectator it just goes along for the ride anything which was an
+
+00:49:22
+igen Vector for the single system remains an igen Vector for for the single system except you have to add in the index for the other particle for the other uh for the other subsystem and that's all there is to it with these definitions as I said it's pretty clear that the separate subsystems uh behave uh independently quite independently as long as you don't let them interact and uh and feel each other or do something interesting with each other as long as they are kept separated okay
+
+00:50:04
+um other questions question um those equation Sig X acting on U Down Sig X yeah shouldn't shouldn't those since you have Sig X acting on up Vector should result in a super position of Stace no no Sigma X expanded up in terms of the I states of of Sigma X right well let's just do it by matrices Sigma X is 1 1 0 0 up is one Zer okay up is one Z what happens this times this is zero this times this is one so up has gone to down okay likewise if we put a zero here and a one here this would become a one
+
+00:51:08
+zero so it just takes one zero and flips it to a 01 and uh back and forth like that in general of course you would be right but for for this particular uh case uh it just gives you back I I see how the ones and zeros work out but I'm trying to map that into the physical situation where you're you're making measurement of the X Direction State that's this way this doesn't say this doesn't say uh let's see this doesn't say one Zer and Z1 are igen vectors of Sigma X far from it it's
+
+00:51:46
+about as far from an IG Vector as you can can get when you act with Sigma X on this one you get a completely orthogonal state so this is not the rule that says this is not the equation that says that 01 or one Zer are igen vectors uh an igen Vector is a vector which is kept in the same direction by action of the operator this is as far as you can get from that the operator acts and gives you something orthogonal and that's okay all right you'll have to you'll have to work that out is a linear uh superposition of left
+
+00:52:25
+and right it is indeed it is right right right that's correct that that sort of connects to my question before class which is so is there any physical meaning to applying an operator to a non-an vector well what is that operation equate to most of the times that's just an auxiliary operation in some calculation or other um well it doesn't have any particular special physical meaning but in this particular case what it tells you is 01 and one Z are about as far from igen vectors as you can get
+
+00:53:21
+and what it tells you is that um if you measure Sigma X in an igen state of Sigma Z it's as random as it can be okay it's as random as it can be all right we're going along good yeah so in this product notation that you have what happens if I have Sigma X tox operating on in the product first equation that you have tox some Au gives you ad what happens yes what happens if I had Sigma X and tox operating on a mean Sigma x times tox okay we could work that out let's do it it's it's a little bit
+
+00:54:15
+late it's five minutes later in the notes but uh let's do it right now since we're at it let's take Sigma X tox and tell me what Vector you would like to apply it to how about how about up up let's do up up what does tox do let's see I keep forgetting no this one the the one on the left is Sigma right the this one's Sigma and this one's to right okay all right so we start with too and we hit this what does tox do it operates on this one and leaves this one alone so this gives us do I have it
+
+00:55:21
+wrong yeah it operates on this one and leaves this one alone right okay so it gives Sigma X I have not act acted with that yet times now to X flips this one so it's up down okay now what does Sigma X do it flips this one so it just gives down down kind of boring but that's what it does let's do it the opposite order let's take PX * Sigma X on up up what does it do it does exactly the same thing Sigma X hits one of these and flips them and then tox comes and hits the other one and flips it so when tox *
+
+00:56:20
+Sigma X acts it gives exactly the same thing as Sigma x * tox commutator of Sigma x with to x equals zero no difference between the order of operations let's try it for Sigma x * to Z okay let's do it for Sigma X time t z and see what we get oh I have not proved this because I only exhibited for one particular state in order to argue that Sigma X x * tox equal tox * Sigma X whoops you would have to show that they give the same thing when acting on any basis Vector it's enough to show that
+
+00:57:14
+they give the same thing on basis vectors all right but that's pretty easy not hard to do you can do it on any basis vector and you'll find out that the order of operations doesn't matter in fact the same is true if you take Sigma x times let's say t z let's do it again shall I take a different Vector let's take some other Vector instead of up down let's take um down up and see what it does and then we'll do it in the opposite order all right what does to Z do when it hits
+
+00:57:47
+this Vector here it only acts on the second entry and it's a z component so it just gives plus one on an R right so this just gives Sigma x times down up to Z on up gives up so that just goes right through then what does Sigma X do when it hits down up this gets to be a little bit go gobbly g at this point my tongue starts uh um rebelling what does Sigma X do when it hits to when it hits this guy it just flips down to up it gives up up right let's do it in the opposite order to Z Sigma X on down up all right first
+
+00:58:46
+Sigma X that flips down to up so it gives us to Z times up up and then to Z just gives one when it hits the RP so it gives the same thing again and you can sort of see why if if they're acting on the on separate indices here it doesn't matter which way you order them this is very general it doesn't matter which state you take it doesn't matter which component you take any component of T Sigma commutes with any component of to you can check that just by knowing how they act all right so we can say Sigma
+
+00:59:28
+anything I'm not sure what to call the index here Sigma I don't want to call it I we've already used I for something but uh uh Sigma n Sigma to M for any n and M they commute the meaning of that is that if you have two separate subsystems which are combined in this way the observables for one and the observables for the other can be simultaneously measured in particular if you took the systems and far apart from each other and you treat them as a single Quantum system you would expect that measuring
+
+01:00:13
+one of them doesn't interfere with any measurement of the other one and that's what this says that measuring a sigma does not preclude measuring a tow and and vice versa for any components of them so in that sense they behave like independent systems you can make any measurement on Sigma and any measurement on to yeah so what we got so far as we got these observables on each independent part of the you know on each piece of the system then we can think about an observable as one part is happening in
+
+01:00:49
+this system it's as happy as it was before you added the other subsystem yes yes that's a good question are there observables which are somehow more intimately connected with having both of them the answer is yes for example Sigma times too Sigma time too Sigma X time to X or Sigma x * t y that sort of thing um are observables that somehow know more intimately about the combination of both of them and they know in particular about entanglement you started with independent you just said spin sign
+
+01:01:35
+spin now how are you how are you linking them so that they depend on each other we Haven yet we haven't yet what we've done up till now is do all the ingredients which tell you that as long as you do separate experiments separate operations on the two subsystems that they will behave exactly as they would have had the other system not been there but now you can ask what about are there more are there more in particular in particular if the system is the combined system if it's in a product state if it's in a product state
+
+01:02:14
+so that each component has its own State Vector then the quantum mechanics of each one of them is separate from the other they don't interfere with each other they don't know about each other in in any way that's what this prescription insures no no they're not entangled yet not if they're product States now what we found out is a that the products that the product states are a four parameter set we found out also that the full space of States has six parameters so there are apparently states which are
+
+01:02:45
+not product States those are the states which have to varying degrees a degree of entanglement I'm going to write down now the most entangled state and we're going to examine it a little bit and see in what way it's odd up down there are many highly entangled States maximally entangled States I'm writing one one particular one minus and I'm putting the minus here uh just because I happen to know that it's a a particular has a particular property which is not so important at this stage but let's uh
+
+01:03:29
+let's put the minus there minus down up one over < TK of two of course 1 over > two times the whole thing now this state is interesting it has the property that if you me well it has a correlation if you know that to is down then Sigma must be up on the other hand if you know that to is up then Sigma must be down now what does that mean mathematically we're going to find out exactly what that means mathematically this is not a product State there is no way that this can be written as a product of one state
+
+01:04:18
+it's a sum or or difference in this case of two product States but it is not a product State how can we tell how can we tell tell so let's consider the expectation value in a state of the components of Sigma let's go back to the one subsystem to the one system quantum mechanics one Spin and let's ask what do we know about that in particular I'm interested in expectation values of in any state take a state and take the expectation value of all three components this is the average
+
+01:05:14
+value I'm not multiplying or anything I'm just considering them individually can they all be zero can they all simultaneously be zero for uh for an ordinary state of uh you know for the ordinary two parameter family of states of a single system should we take a vote or should I just tell you the answer is no they cannot all be zero and here's the reason um well the reason is given any state there is always a Direction in space in three-dimensional space a direction for which Sigma in
+
+01:06:02
+that direction the component of Sigma in that direction is definite and equal to plus one given any s this is what I told you in the very beginning of the lecture or maybe even before the lecture given any state there is some linear combination of sigmas which is definitely equal to + one in that case if I find that particular combination of sigmas Sigma NX you know do Sigma into n that particular linear combination its expectation value can't be zero because it's definitely up along those that
+
+01:06:41
+direction so the answer is given any state there is always some direction let's call it sigma. n that depends on S it depends on s sigma. n for which this is not only not zero but it's equal to plus one the a the average of sigma. in is of course if sigma. in is definite if it's known and there's no ambiguity about it then the average is just equal to the value that uh that it's known to be so there's always some in all right for any s there exist exists an in such that this is
+
+01:07:33
+true therefore it cannot be true that all of these can simultaneously be zero for a state of a single spin you can't measure them all simultaneously but if I give you a state I tell you the state then I can then you can tell me what direction of space should you Orient your detector so that the answer comes out plus one okay for example I mean I could just give you up okay so what direction if I gave you up what direction should uh should you Orient your detector along the z-axis what if I gave
+
+01:08:16
+you up plus down with sare < TK of two what direction should you Orient your uh detector to make sure that you get plus one along the x- axis right what if I gave you up plus I down I don't know some some either plus y or minus y okay I forget which one given any combination there are enough directions that you can find the direction for which Sigma in that direction is definitely + one and therefore it cannot be the all of these expectation values are all zero why because you know that sigma. n is equal
+
+01:09:02
+to + one and that's of course just a linear combination of these okay so there so as I said it's impossible if we have just a state of one spin isolated by itself it's been prepared somehow uh however it's prepared there exists a direction in which the spin is definite and not equal to zero okay um what about the state what about the state by now let's take Sigma and ask whether any of the components of Sigma have a nonzero expectation value in this state what I'm going to show
+
+01:09:48
+I'll tell you the answer right now we're going to show that all three components of Sigma have zero expectation value in this state that means the state cannot possibly be a product State a product state is one in which each component behaves as if it were just a state of the subsystem by itself this state is going to behave in a way that no simple product State could possibly behave we're going to find and so let's do it let's do it um okay let's put but the square root of two here is
+
+01:10:27
+not important that's that's not the important thing we have up down minus down up we're going to take the expectation value so that means we have to make a sandwich the sandwich will have up down minus down up and in the middle here we're going to put a sigma we could do the same with too we get the same answer so let's put Sigma Z first let's put Sigma Z here and see what we get first we act with Sigma Z and what does Sigma Z give when it when it hits up down it just gives up down right all
+
+01:11:13
+right all right so this just gives up down but what does it what does it give when it hits this guy over here minus down up but there's already a minus down up so there's a plus there's already a minus the minus gets killed that's over here and that's the inner product let's put some bracket around it that's the inner product with up down minus down up okay let's calculate it what's down up with up down zero what's down up with down up one so we get a one what's down up
+
+01:11:55
+with up down oh oh I got something wrong here what did I do here this should be up down right yeah up down Okay so let's go back up down with up down is one up down with down up is zero what about down up with up down zero what about down up with down down one but there's a minus sign here so this is orthogonal to this the inner product is zero and it says that the expectation value of Sigma Z is equal to zero Sigma Z in this state not any state but in this state is zero let's try Sigma
+
+01:12:46
+X let's try Sigma X next and see what we get so we have Sigma X here all right let's build our sandwich again we have a minus sign here and what happens when Sigma x equals up down it hits up down it flips up to down Sigma X is the flipper and it flips the first entry here so it flips the first entry to down and flips this entry to up we taking the inner product with this Vector over here so let's see are is there anything in common over here with something in common here no so there's no way to get
+
+01:13:30
+an inner product down up with down down a zero etc etc again this is zero so Sigma X is equal to zero expectation value okay what about Sigma y let's put Sigma y there Sigma Y is also a flip-flop operator it flips up to down and down to up but with an I I don't remember which where the ey goes it either goes here uh here something something like that but whatever it does it flips this up to down so we get a down down and it flips this down to up so we get an up up again no inner product is zero so there
+
+01:14:20
+we are all three components have zero expectation value but that's funny because we proved well we didn't prove but I told you told you that if I take any any state of a single spin it is never the case that all three sigmas have zero expectation value what's the lesson the lesson is that there are states of the composite system that can in no way ever be thought of as separate seate States for the two subsystems that's what entanglement is uh that's an example of entanglement
+
+01:15:09
+yeah so one thing you didn't show here but maybe it's obvious is that if you do have a product State then it will satisfy the same property where one of them will be yes that's correct that's correct well if you show it for the single spin by itself then remember the other index just goes along for the ride so however you derived it for one spin by itself you'll do exactly the same derivation except put a put a sort of spectator index uh to ride along with it so yeah it's obvious that if it's
+
+01:15:46
+true for one subsystem by itself that it will be true for the composite what's not obvious is that it's true for one subsystem okay so yeah so that's an exercise that's an exercise to show uh to show that all three components of a of the spin cannot of the um expectation values cannot be zero and that there's always a direction in which it's maximum question um so how do you put a system in this strange State yeah it's a very natural state to have I'll I'll tell you
+
+01:16:22
+um if you have to spin and the two spins are interacting with each other they will have a um in particular if they're little magnetic moments then they will have an interaction with each other which will prefer to make them anti-align now this is anti-aligned up down this is anti-aligned down up and in fact this combination here has the lowest energy this combination has the lowest energy it has less energy than up down plus down up so if you bring these two spins together and you wait a while they'll radiate a photon
+
+01:17:05
+eventually and come to the state so it's actually not at all hard to get this kind of state it's rather easy to get this kind of state and uh we'll we'll discuss that when we talk about interactions but it's a typical situation that this is what a result if if you take two spins put them together and let them come to equilibrium by radiating a photon yeah a long time first of all how close you bring them together second of all how big the um the magnetic dipoles of the spin arm
+
+01:17:46
+uh and that has to do with the strength of coupling to the electromagnetic field so you know ordinary laboratory situation uh in an atom the electrons are close enough together that they will radiate a photon in not too long a time to uh to achieve this U so-called singlet State this is called a singlet State singlet I'm not going to tell you why right now uh there are four basis vectors Al together the reason that this one is called a singlet is because there are three others which are the triplet
+
+01:18:31
+okay yeah well not not at the moment but eventually I will tell you the answer though uh if you think of these as little angular momenta and you put them in up down minus down up the total angular momentum is zero if you put them down up plus down up the total angular momentum is one and energy is often proportional to angular momentum so uh uh but yeah we can come to that eventually we'll come to that it's it's a fair question but uh let's not try to answer it right this minute yeah uh if if you take a general
+
+01:19:08
+state of of two systems um like we had uh is it possible to change the basis such that one basis creates a Subspace of product SP product States and the other is purely intended States you're asking whether the notion of entanglement is an invariant notion the answer is yes the answer is yes there's a very definite quantity that you can calculate called the entanglement entropy which measures the strength of entanglement which is not dependent on any particular basis now I might tell you right
+
+01:19:43
+now this state okay this state does have a special feature that up down plus down up wouldn't have supposing you took the state and this is good homework assignment up and down individually for both Sigma and to can be Rewritten in terms of left and right for example uh up is left plus right uh down is left minus right or whatever it is square roots of two are there but uh you know what I mean okay supposing I write this state I plug in every place I see down left minus right and every place I
+
+01:20:19
+see up left plus right what do I get out of this the answer is very simple I get Left Right minus right left supposing I rewrite it in terms of in and out what do I get in out minus out in so the structure that the state has the nature of it is actually the same in every basis in every basis it looks the same and that would not be true for up down plus down up that down up and up they would they would uh they would um uh okay they would get mixed up with other states there are three other states this is one there are three
+
+01:21:10
+others the three others are well obviously there were three others and they mix up with each other when you change the basis but this is not obvious this is not obvious at all all right let's do one last thing I'm not sure whether it'll be the last thing or not I think it's probably the last thing for tonight um let's ask now about one of these observables which is not an observable that can be identified with either subsystem but which is somehow got to do with both and let's look at its expectation
+
+01:21:44
+value a very simple example let's take let's take the expectation value of the product of Sigma Z * to Z we'll do that one we'll do Sigma x * tox and maybe we'll do Sigma x x t y or or Sigma we'll do we'll try some examples let's take the expectation value of this now to do this we again make a sandwich and uh all right so let's do it up down whoops sorry now I should put the square root of two in the reason I should put the square root of two in now is because I'm
+
+01:22:45
+not going to get zero so if I really want to get the numerical number I want to put that square root of two in and here we have up down minus down up also overare < TK of two so in fact I can take the square root of twos and put them all into a factor of 1/2 here this is the expectation value in the singlet State we take the singlet State and we take Sigma Z * to Z let's see what we get all right first of all when Sigma Z when to Z acts what does it do do you remember I don't oh yes to Z doesn't
+
+01:23:31
+flip it just gives you a sign which is Plus for this one and minus for this one so we can remove the to Z just by putting a minus sign here right did I do that right H let me see k z t z acts on down to give minus down it acts on up to give up so it has no effect on this term and it changes the sign of this term I think I did it right no yeah okay minus now what about Sigma Z what does it do it flips the sign no it doesn't flip it um gives Plus on this one and minus on this one so it changes the sign of this
+
+01:24:33
+one okay now we have to put it together we have up down up down with a minus sign so minus one we have down up with down up minus one cross terms give nothing up down with down up gives nothing down up with up down gives nothing there are two terms you get a 2 over two two- 2 over 2 equals minus1 what does it say this is kind of interesting um the expectation value of Sigma X by itself was Zero the expectation value of to X by itself was Zero the expectation value of Sigma x * tox is -1 let's see if we can see why look at
+
+01:25:28
+the state here in this component over here obviously sorry this was Sigma Z Sigma Z Sigma Z we were talking about Sigma Z are opposite in both contributions here Sigma Z time Sigma Z for this piece is minus1 why is that this one's up this one's down down if Sigma Z is Plus for this one Sigma Z is minus for this one the product is negative the product is negative one for this one also in fact if you think about it this state is an igen Vector of Sigma Z times to Z what's the igen value minus one so in fact this state is
+
+01:26:21
+a state in which if you measured the product Sigma Z toi you would get minus one every single time so the expectation value is minus one nevertheless the expectation value of the individual Sigma X sorry Sigma Z's and T Z's is zero all right so this is uh this is beginning to get some some of the flavor of what an entangled state is the it simply doesn't behave like you might expect two separate systems which are just uh independent and have always been independent uh they behave let's try
+
+01:27:08
+this is this is undoubtedly going to get boring now but let's do it anyway this is plus minus we go back to the original sandwich but instead of let's instead of Sigma Z Let's do let's do um Sigma X tox all right so Sigma X time tox it's easy to figure that out tox flips the second entry Sigma X flips the first entry all right so this object here simply flips both entries without changing any signs it flips no entry at all uh it uh what I say it um yeah so what does it do it looks like
+
+01:27:57
+it interchanges these two right interchanges these two makes this one minus and this one plus now what's the inner product up down with minus up down minus one down up or minus down up with down up minus one again again -2 over 2 = -1 same exact thing as and what would you guess about Sigma y toy now there's nothing special about the y- axis same thing also has an expectation value equal to minus one so all right this again this telling you very clearly this can't be a product state for a product State the
+
+01:28:53
+expectation value of a product like this would just be the product of expectation values and that's not what's going on here so this is a highly entangled State about as entangled as you can get um we take the product of two observables so that's two two operators ESS so I think how I should think of that physically is that one observation Follow by another observation uh in this case you in this casee remember no you don't think of not in general no in general it's just another operator if
+
+01:29:31
+it's her Mission it's another observable it can be measured but in this case since all sigmas commute with all TOS you can think about measuring them both simultaneously all right and in fact if you measure them both simultaneously you will simply discover the obvious fact that they are oppositely oriented all right let's do one more let's do since I haven't worked it out and I never worked it out I'm going to work it out right now let's do to uh Sigma x * to Z let's do Sigma X oops what what did I
+
+01:30:07
+write here Sigma X to X all right let's do Sigma x times to Z and see what we get I don't know the answer so let's do it I have a suspicion of uh no I have a suspicion okay we'll find out what happens when t z acts on this guy here t z is just changes the sign right t z just if it's down you get minus one if it's up you get plus one say it again oh I flipped them around yes you're right good yeah okay okay so to [Music] Z sees the down here and makes it minus down it sees the up here and leaves it
+
+01:31:06
+alone okay now what does Sigma X do Sigma X flips the first entry and so it gives minus down down minus now let's see it flips minus up up right and we have to take the inner product with this guy over here well nothing over here matches anything over here so we see that the answer in this case is zero you see the answer is zero uh the expectation value of Sigma X time to Z or any non equal ones that's equal to zero what does it say well I don't know the main reason I did it is because I was
+
+01:32:01
+curious what the answer was but I also did it just as an illustration of the Machinery of calculating an expectation value but these ones tell you clear things what they tell you is that in a very definite sense the any given component of Sigma and to the X component or the Y component or the Z component are oppositely oriented uh it's obvious here that for the Z component they're oppositely oriented huh this is opposite to this this is opposite to this so in any of the component State vectors here they're
+
+01:32:42
+oppositely oriented but we also found something else out we found out that they're oppositely oriented in the X bases or in the Y bases any one of the bases if you measure any one of the the spins any component of the up spin basically it automatically tells you what the other one is what this is telling you since it's telling you that the product is always equal to minus one in fact this is an igen Vector of the product of any of these products it tells you if you measure any component
+
+01:33:15
+for one of them that you will get exactly the opposite if you measure the upper one the other one it's a correlation it's a correlation a statistical correlation that if you measure one of the components of spin of of Sigma then that and also the same component for the other one they'll be opposite because it doesn't tell you much if you measure the X component of this Spin and the Y component of that spin that it doesn't tell you much but it does tell you that if you measure the
+
+01:33:47
+same component of either of them they will come out opposite yeah job so it appli I mean he dealing with a system where these two spins are areed in opposite direction and it seems like it would be an up down kind of state is that right or is that no the kind of states that Bell dealt with were entangled States up down minus down up it's exactly what he's dealt with yeah will any interaction lead to a state like this this yeah almost any interaction between the spins will lead to a state like
+
+01:34:29
+that um yeah but did you say it's a statistical correlation yes it's a statistical correlation that um statistical look at this to some extent it's similar to a trivial observation you know the way I like to phrase it is I have a nick I have a a penny and a dime in my pocket all right I put my hand in my pocket I take them out I don't look at them without looking at them I give one to Alice and one to Bob and then I tell Alice and Bob to take off and uh you know go uh go to the moon and go to
+
+01:35:11
+wherever you want to go then it's going to be the case that if Alice looks at her coin she instantly knows what Bob's coin is right she sees if I got a dime he's got a penny If he if I got a penny he's got a dime uh that in itself is not surprising there's nothing uh in the past they were together some correlation was established what was the correlation the correlation was a correlation that if Alice has a dime then Bob has a penny and vice versa no other possibilities were possible
+
+01:35:56
+so it was a correlation between uh Alice's coin and Bob's coin and it was an anti-correlation if we called heads and taals plus and one plus one and minus one then if Alice's was plus one Bob is minus one but the opposite is also possible they don't know in advance and yet when Alice is far away and when Bob is far away Alice looks at a coin and she instantly knows what Bob is I assure you that does not violate the special theory of relativity and this kind with this kind of correlation is
+
+01:36:34
+a this is called Einstein Rosen Podolski correlation or entanglement um this is the Quantum version of that same nickel and dime story Penny and dime story real nickels and real real properties yeah yeah no there there is certainly a difference there is certainly a difference but just the idea that by looking at something at one place you instantly know something that you didn't know a second ago about the other place that's just statistical correlation it's a tremendously common thing in physics there's nothing special
+
+01:37:07
+about it the question is what is it that's special and different about um about this entanglement and that's where John Bell found something interesting he didn't find nonlocality and we're going to talk next time about what nonlocality means in physics and what it was exactly that John Bell found um but I'm going to tell you right now it was not nonlocality it it looks like nonlocality and the reason is because you're trying to apply classical reasoning what what John Bell said is you can't apply
+
+01:37:44
+classical reasoning to Quantum systems that's what it came down to Quantum systems are quantum mechanical and if you try to apply classical reasoning you're going to find inconsistencies okay I can say it another way I'll tell you another way here's a way to say it um imagine you had a computer and you try to simulate on that computer the quantum mechanics of a single spin now here's the way you would simulate it you would be able to instruct the computer to orient its um apparatus in an
+
+01:38:26
+arbitrary Direction in other words you would put in coordinates for a direction and when you put in the coordinates for the direction the computer would do some calculation appeal to a random number generator and spit out a plus one or a minus one there would be an algorithm that would say that if you do it over again immediately that you'll spit out the next same number number again and that if you do it again you'll spit out the same number again but you might then say all right now let me make
+
+01:39:02
+it more interesting by adding in a a mathematical magnetic field which allows the spin to process what would you do you would solve the sh the computer would solve the schinger equation find out what the state was after a little bit of time calculate the probabilities for up and down or whatever you decide to measure calculate the probabilities appeal to the random number generator and spit out a number that was statistically exactly what you should get on the average from quantum mechanics somebody who came to this
+
+01:39:39
+computer and started playing with it and doing these experiments rotating his apparatus in different directions uh turning on magnetic fields in other directions waiting varous amounts of time and then telling the computer measure this or that component would reproduce exactly quantum mechanics at least to the extent that random number generators are possible they're not exactly possible but you know you can make pretty good random numbers all right so that would be a Quantum that wouldn't be a quantum
+
+01:40:11
+computer that would be a classical computer simulating Quantum Behavior where somebody doing a little experiment on it could be fooled into think thinking that it was actually dealing with a single electron inside the computer and doing a Quantum experiment it couldn't tell the difference now the question is could you do the same thing for two spins in particular I want to do the same thing for two spins and I want to do it in such a way that one of the spins all of its data is located in one
+
+01:40:49
+computer and all of the data for the other spin is located in the other computer now I can bring the computers together have wires connecting them and so forth for a while do arbitrary things and then cut the wires and separate them can I simulate the quantum mechanics of the two particle system in such a way that it would appear that one of the computers contained one particle and the other computer contained the other particle now remember this is a classical computer two classical computers and the answer is that the
+
+01:41:26
+only way you could do it would be to have wires connecting the computers at all times you could not do it unless the computers uh were capable of interacting directly at a distance but that does not mean that um that the system is non-local non-local means that signals can be propagated from one place to another what it's telling you is you simply can't simulate quantum mechanics in a local Way by a classical computer the logic of quantum mechanics is different it simply does not allow itself to be
+
+01:42:07
+faked by a computer unless that computer is connected over large distances to everything in the world quantum mechanics manages to do the same thing without having wires connecting things however you can ask the question does that constitute what physicists call nonlocality or what Einstein would have called nonlocality it does not it does not constitute in any way the ability to send a message from one place to another uh but we're going to come to that we'll deal with that uh no it it is fundamentally the
+
+01:42:45
+inability to simulate quantum mechanics by classical computers unless the classical computers are hooked up in a highly non-local ways for more please visit us at stanford.edu
+

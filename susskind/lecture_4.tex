@@ -1,0 +1,184 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 4}
+\lhead{Quantum Mechanics --- The Theoretical Minimum}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{postulate}{Postulate}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\title{\textbf{Lecture 4: Principles of Quantum Mechanics} \\ \large Postulates, Time Evolution, and the Schr\"{o}dinger Equation}
+\author{Based on Leonard Susskind's \textit{The Theoretical Minimum}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. The Postulates of Quantum Mechanics}
+% ============================================================
+
+\begin{postulate}[Observables]
+Every observable (measurable quantity) is represented by a \textbf{Hermitian operator} $L$ acting on the state space.
+\end{postulate}
+
+\begin{postulate}[Eigenvalues as outcomes]
+The possible outcomes of measuring $L$ are its \textbf{eigenvalues} $\{\lambda_i\}$.
+\end{postulate}
+
+\begin{postulate}[Distinguishable states]
+Physically distinguishable states---those that can be unambiguously told apart by some experiment---are represented by \textbf{orthogonal} vectors.
+\end{postulate}
+
+\begin{postulate}[Born's rule]
+If the system is in state $\ket{A}$ and observable $L$ is measured, the probability of obtaining eigenvalue $\lambda$ is
+\[
+    \boxed{P(\lambda) = \bigl|\braket{\lambda}{A}\bigr|^2,}
+\]
+where $\ket{\lambda}$ is the normalized eigenvector of $L$ with eigenvalue $\lambda$.
+\end{postulate}
+
+\noindent The quantity $\braket{\lambda}{A}$ is the \textbf{probability amplitude}; its absolute square gives the probability.
+
+\subsection{1.1 Degenerate eigenvalues}
+If several eigenvectors $\ket{\lambda_1},\ket{\lambda_2},\dots$ share the same eigenvalue $\lambda$, the total probability is
+\[
+    P(\lambda) = \sum_k \bigl|\braket{\lambda_k}{A}\bigr|^2.
+\]
+
+\subsection{1.2 Results are real}
+Since observables are Hermitian, all eigenvalues are real---consistent with the postulate that experimental outcomes are real numbers.
+
+% ============================================================
+\section{2. Time Evolution --- Classical Recap}
+% ============================================================
+
+In classical mechanics:
+\begin{itemize}[nosep]
+    \item States are updated deterministically from one instant to the next.
+    \item \textbf{Reversibility} (the ``minus-first law''): distinguishable states remain distinguishable under evolution; information is conserved.
+\end{itemize}
+
+% ============================================================
+\section{3. Quantum Time Evolution}
+% ============================================================
+
+\begin{postulate}[Time-evolution operator]
+The state at time $t$ is obtained from the state at time $0$ by a \textbf{linear operator} $U(t)$:
+\[
+    \ket{\psi(t)} = U(t)\ket{\psi(0)}.
+\]
+The same $U(t)$ applies to every initial state.
+\end{postulate}
+
+\subsection{3.1 Conservation of distinguishability}
+If $\braket{\phi(0)}{\psi(0)}=0$, then $\braket{\phi(t)}{\psi(t)}=0$ for all $t$.  More generally, the inner product is preserved:
+\[
+    \braket{\phi(t)}{\psi(t)} = \braket{\phi(0)}{\psi(0)}, \qquad \forall\; t.
+\]
+
+\subsection{3.2 Unitarity}
+Inner-product preservation requires
+\[
+    \bra{\phi(0)}\,U^\dagger(t)\,U(t)\,\ket{\psi(0)} = \braket{\phi(0)}{\psi(0)},\qquad \forall\;\ket{\psi},\ket{\phi}.
+\]
+\begin{theorem}
+This holds for all vectors if and only if
+\[
+    \boxed{U^\dagger(t)\,U(t) = \mathbf{1}.}
+\]
+Such an operator $U$ is called \textbf{unitary}.
+\end{theorem}
+
+% ============================================================
+\section{4. Infinitesimal Time Evolution and the Hamiltonian}
+% ============================================================
+
+\subsection{4.1 Setup}
+For an infinitesimal time step $\epsilon$:
+\[
+    U(\epsilon) = \mathbf{1} - i\epsilon\, H + \mathcal{O}(\epsilon^2),
+\]
+where $H$ is some operator.  The Hermitian conjugate is
+\[
+    U^\dagger(\epsilon) = \mathbf{1} + i\epsilon\, H^\dagger + \mathcal{O}(\epsilon^2).
+\]
+
+\subsection{4.2 Hermiticity of $H$}
+Imposing unitarity $U^\dagger U = \mathbf{1}$ to first order in $\epsilon$:
+\[
+    \mathbf{1} + i\epsilon(H^\dagger - H) = \mathbf{1} \quad\Longrightarrow\quad H^\dagger = H.
+\]
+Hence $H$ is \textbf{Hermitian}.  Since Hermitian operators represent observables, $H$ is itself an observable---the \textbf{Hamiltonian}, identified with the energy of the system.
+
+% ============================================================
+\section{5. The Schr\"{o}dinger Equation}
+% ============================================================
+
+Starting from
+\[
+    \ket{\psi(\epsilon)} = (\mathbf{1} - i\epsilon H)\ket{\psi(0)},
+\]
+rearrange:
+\[
+    \frac{\ket{\psi(\epsilon)}-\ket{\psi(0)}}{\epsilon} = -iH\ket{\psi(0)}.
+\]
+Taking $\epsilon\to 0$:
+\[
+    \boxed{i\frac{d}{dt}\ket{\psi(t)} = H\ket{\psi(t)}.}
+\]
+This is the \textbf{time-dependent Schr\"{o}dinger equation} (with $\hbar=1$).
+
+\subsection{5.1 Interpretation}
+\begin{itemize}[nosep]
+    \item The Schr\"{o}dinger equation governs the evolution of an \emph{undisturbed} system (no measurement taking place).
+    \item It is deterministic in the state vector, but the state vector encodes \emph{probabilities}, not certainties, for measurement outcomes.
+    \item It is the quantum analogue of the classical equations of motion.
+\end{itemize}
+
+\subsection{5.2 Time-translation invariance}
+If $H$ does not depend explicitly on time, the system has \textbf{time-translation invariance}, and energy is conserved.  A time-dependent $H$ (e.g.\ a changing external field) breaks energy conservation.
+
+% ============================================================
+\section{6. Finite-Time Evolution}
+% ============================================================
+
+For time-independent $H$, repeated application of infinitesimal steps yields
+\[
+    U(t) = e^{-iHt}.
+\]
+This exponential is defined by its power series and is manifestly unitary since $H$ is Hermitian:
+\[
+    U^\dagger(t) = e^{+iHt} = U^{-1}(t).
+\]
+
+% ============================================================
+\section{7. Summary}
+% ============================================================
+
+\begin{enumerate}[nosep]
+    \item Four core postulates: observables are Hermitian operators; outcomes are eigenvalues; distinguishable states are orthogonal; probabilities follow Born's rule.
+    \item Time evolution is generated by a linear, unitary operator $U(t)$.
+    \item Unitarity is the quantum version of information conservation (reversibility).
+    \item Expanding $U$ for small times reveals the Hamiltonian $H$---a Hermitian operator (the energy).
+    \item The Schr\"{o}dinger equation $i\frac{d}{dt}\ket{\psi}=H\ket{\psi}$ determines how states evolve between measurements.
+\end{enumerate}
+
+\end{document}

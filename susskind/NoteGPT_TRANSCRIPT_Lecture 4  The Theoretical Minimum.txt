@@ -1,0 +1,432 @@
+00:00:01
+[Music] stanford University okay let's uh let's uh go on in fact let's let's forget for the moment the spin system we'll come back to it for sure um probably tonight in fact definitely tonight but let's remind ourselves of I think I wrote down four principles of quantum mechanics last time and I want to write them down again and uh then uh move on to a fifth principle in fact they're not all independent uh it's easier for me to explain them one at a time than to try to derive from
+
+00:00:54
+the minimal absolute minimal number of them and I don't think there's any particular advantage in doing that so um so we'll just write down all the principles that I wrote down the first one is that observables observables are the things that you measure they could be called measurables and if I if I had if it was up to me I would have called them measurables but uh they were called observables observables are represented and I'll just use the equal sign to indicate that observables are
+
+00:01:27
+represented by hermission operators i'll use the symbol L for the moment for hermission operator not all operators not all linear operators are hermission and it will not always be the case that the symbol L will stand for a hermission operator but right now L stands for a hermission operator any hermission operator every observable is identified with a hermission operator now the question of whether every hermission operator is a thing which can be measured is a generally hard question and you have to you know what can and
+
+00:02:01
+can't be measured depends on what kind of materials you have available all kinds of things generally the um the abstract rule that uh that or the folk rule let's call it is that any hermission operator is identified with an observable and someday somebody will figure out how to measure it okay but uh the other way that any observable is identified with a hermission operator that's for sure um the igen values of a hermission operator let's call them lambdas lambda is the igen value of l
+
+00:02:41
+the igen values represent the possible numerical values that l can exhibit when it's measured okay so I en values values of L which equal lambda no they represent the possible observed or the possible outcome of experiment possible outcome of an experiment to measure L of L measurement okay I think we had a third one along the line here yeah physically distinguishable states now let's let's just see what physically distingu distinguishable states mean um certainly up and down are physically
+
+00:03:51
+distinguishable and the meaning of saying two states are physically distinguishable is that there exists a measurement of some kind that you can do that can tell you the difference between an upstate and a down state in other words somebody hands you a spin from out of their pocket and they say "I created this spin i prepared it in a state which is either up or down can you do an experiment to unambiguously tell me which one it is?" Yes you tilt your apparatus until it's pointing along the
+
+00:04:30
+z-axis and you make the measurement if the state was up you will get plus one if the state is down you will get minus one no ambiguity the same is true for left and right different measurement different thing that you would measure you would measure the x component and you would tilt your apparatus along the x-axis but same uh same deal on the other hand supposing somebody that same person came along and said "Here I'm going to give you a spin here it is and that spin I either prepared up or I prepared it
+
+00:05:10
+right i am not going to tell you which way I prepared it i'm not going to tell you which way I tilted my apparatus when I did the experime when I did the preparation i'm just going to tell you it's either left sorry it's either up or right can you do a experiment which will uniquely tell you the difference the answer is no for example supposing you decide to measure the spin along the z-axis well if it's up you'll get plus one if it's right with 50% probability you'll get plus one so you can't be sure
+
+00:05:48
+whether you uh whether you uh whether you were up or right what do you get if you oriented at 45° still you would have a probability for yeah yeah yeah uh it would not be unambiguous right okay so the next postulate excuse me in your last statement that's assuming that it was prepared along the z-axis if it had been prepared along the x- axis then it if you if you measured the x- axis first you that difference the if you measure the x- axis first you'll find something out but uh you could have found out
+
+00:06:35
+exactly the same answer if it was along the z axis in either case there is some probability of getting the same answer whether it was up or right there's no experiment you can do which unambiguously will uh will determine which it was all right so that leads to the notion I'm not going to try to give a a more precise uh definition of it that leads to the notion of physically distinguishable states by which is meant that there exists an experiment or a set of experiments that can unambiguously determine which of the
+
+00:07:18
+two states you're talking about the next postulate is that physically distinct or physically distinguishable states are represented by orthogonal vectors okay okay so physically distinct distinct distinguishable same thing little easier to write distinct physically distinct states imply orthogonality all right I said that observables are hermission operators i could have just said linear operators let's leave it at linear operators for the moment but let's add a postulate that the result of every experiment every
+
+00:08:14
+simple primitive experiment is a real number if it's a real number if it's a complex number it really means that two things two independent things were measured the actual results that come out of your apparatus that come out of your um uh you know well the needles on your apparatus they're real numbers so I'll add that as a postulate the results of experiments are always real numbers and therefore the iigen values of observables are real numbers now that does not prove that the operator is a
+
+00:08:47
+hermission not enough not enough the other added thing is that the various igen vectors with different igen values physic physically distinguishable states are orthogonal okay that's this third postulate and that tells you that observables are hermission operators it's the hermission operators whose igen values are always real and whose en vectors are orthogonal that's necessary and sufficient uh so this one as I said they're not all completely uh independent of each other [Music]
+
+00:09:31
+one two three and let's write number four now i forgot what four is oh well uh um yeah what was for Yeah ah the probability the probability principle okay the probability principle it's al it's also called Bourne's rule max Bourne Bourne's rule let's just call it Bourne bourne rule but it's a rule for probabilities so far none of this has much content the added content well no it has content but the real bite here is uh for the prediction of probabilities for various experiments
+
+00:10:29
+and the Bourne rule is the rule for how to calculate probabilities the Borne rule says if you if your system has been prepared in state A all right system in A and you measure L the observable L now I'm using interchangeably the physical idea of the observable with the operator which represents it i'm not going to make a special language where the operator will always be called the operator and the observable with L same they they they come in pairs all right so if you if the system has been prepared in state A and
+
+00:11:24
+you measure L you measure L the outcome is going to be one of the igen values so the only question you can ask is what is the probability that you get the answer lambda okay one of one of the specific values the answer is the probability the probability that you get result lambda that's the probability that you get out of the various igen values that you get lambda is equal to the square of the inner product of the state vector that the system was in with the igen vector corresponding the normalized
+
+00:12:13
+igen vector all vectors are normalized now uh the inner product of a with lambda squared a with lambda the inner product sometimes incidentally the the inner product is called the overlap it's a measure if we said that orthogonal orthogonality is complete distinguishability uh unique and uh complete distinguishability then a lack of orthogonality represents to some extent the the the inability to make the clear distinction between two states yeah all right so this is this is yeah question if well I
+
+00:12:58
+I'm surprised to see lambda represented as a vector because it's a value no no all right the notation is every value is associated with an igen vector i'll just write E vector and the notation is that the vector labeled by lambda is the igen vector associated with the igen value lambda that's a good point i mean that you know um the problem with trying to be a purist about notations is that notations get very complicated and they get so complicated that they're difficult to read there are too many uh indices
+
+00:13:41
+there's too many different letters you have to use so yeah sometimes we use a slightly excuse the word bastardized notation uh where uh where we conflate a symbol for a vector with a symbol in this case for an igen value uh good okay uh yes that's the probability principle or B's rule and let's just look at it for a minute you might ask why the square why the square of the absolute value well in general these overlaps are neither positive not even real in general overlaps between two vectors are not
+
+00:14:23
+necessarily real in fact in general they're not they're comp we're talking about a complex vector space and if the components of the vectors are complex and generally inner product will not even be real let alone positive okay on the other hand the square of the uh or the absolute value of the square the square of the absolute value of the inner product that is real it's not only real it's also positive okay so this has a chance to be a candidate for probability whereas the inner product itself doesn't the inner
+
+00:14:58
+product itself is called a probability amplitude so a probability amplitude is a thing that you square in in the sense of absolute value to compute a probability needless to say the um the justification for these principles in the end is experiment on the other hand you could ask how much can I bend them and still make physical sense out of the predictions the answer is nobody has ever found a way to change the rules of quantum mechanics and still preserve um a reasonable reasonably logical structure so you'll eventually
+
+00:15:32
+get familiar with these principles yeah which of these uh principles took you from several possible outcomes to one actual outcome well okay if A is an igen vector of L of L if it is if the if the state starting state of the system happens to be an igen vector of L then it will only have an inner product with one of the igen vectors right so that's again these are good questions say if you say L cat lambda equals lambda cat lambda it kind of shows yeah that's right excuse me is it what if lambda is an value for
+
+00:16:19
+multiple vectors all yeah still the rule is is the same uh but what you right okay I'll give you two answers the first answer is Don't worry about the case where the igen values may be the same because it's very special but that's not good enough let me uh let me let me say what the right answer is the right answer is if if you want the probability for a given value of lambda and there's more than one igen vector with the same value of lambda then you add them you simply add
+
+00:16:54
+the sums of the squares of the uh just probability addition um so the questions tonight are really good uh yeah and what about the case where a has overlap of several different Yeah yeah then you then you then you take the sums of the squares of them you take the sums of the square if there are several different vectors all with the same igen value first of all you make them perpendicular to each other you can always make them perpendicular to each other different values no no even if they're the same
+
+00:17:26
+igen value uh there's the theorem okay let's go back to the theorem the theorem says that the igen vectors with different igen values are orthogonal it doesn't tell you anything about the igen vectors for the same igen value all right so supposing you have two igen vectors with the same igen value then it's also true that any linear combination of those two igen vectors is also an igen vector with the same igen value for example let's suppose lambda lambda 1 and lambda 2 now these
+
+00:18:02
+are not two different values of lambda these are the same value of lambda but two different igen vectors maybe we should write it like this lambda 1 and lambda 2 two different igen vectors both exhibiting the same igen value then you can take any what what that means is that L on lambda 1 equals lambda * lambda 1 L on lambda 2 equals lambda lambda 2 multiply this by any complex number alpha this one by any complex number beta and add the two equations what you find is that L on the linear combination the linear sum alpha lambda
+
+00:18:55
+1 plus beta lambda 2 is equal on this side now you have lambda times the same thing as in the bracket here in other words if you have two igen vectors with the same igen value you can add them with arbitrary coefficients and they remain igen vectors now given two distinct vectors given two distinct vectors and all the possible linear combinations of them you can always find perpendicular combinations you got this one you got this one now we can always add them or subtract them with coefficients to make
+
+00:19:32
+them perpendicular so the rest of the theorem is that if the two igen values are the same you have the freedom to choose two vectors which are perpendicular which are orthogonal all right in the end of the day to summarize a theorem is that um given a hermission operator its igen vectors can be chosen so that uh so that they form a basis so that they're orthonormal perpendicular to each other and normalized okay so where were we um that was an interruption but I don't remember where I was that's the problem
+
+00:20:16
+with interruptions um we just finished Bourne's rule h you were just talking about Bourne's rule yes I was talking about Bourne's rule right oh good okay so now if you happen to have several Igen vectors let's say lambda 1 and lambda 2 both with the same value then you construct the overlap of the state vector with lambda 1 you construct the overlap of the same of the state vector with lambda 2 you square this one you square this one and you add them in other words you simply add the
+
+00:20:53
+probabilities uh for the two possible ways that you could get the same uh lambda just the sum of probabilities thank you Sanjay you're already too late i already got Oreos but uh my wife would say this is probably healthier than Oreos yeah it is what yeah eat the Oreos excuse me okay yeah go ahead loud and clear could we say um also that the reason why those things are squared regardless of whether they're complex or not is so that the total probability adds to one right yes mhm right we know it's the sums of the
+
+00:22:04
+squares of these things which add up to one for normalized states for normalized vectors that's right i'm not sure which which one implies which but clearly they fit together very nicely good okay question is it possible to get an unambiguous result from an unprepared experiment i'm not sure what an unprepared experiment means but I think I think what you're asking is supposing somebody gives you a spin and they don't tell you anything about how they prepared it they just say "Here it is i give it to you i
+
+00:22:49
+tell you nothing then it is not possible to find an experiment which has an unambiguous answer another good point okay now now we need to come to a new idea and a new question in classical mechanics all of this this whole story here was summarized uh when I uh showed you a heads and a tail and I said those are the two possible states of a simple system i didn't we didn't talk about measuring it you know it was all sort of obvious and we didn't have to uh because we know that measuring is doesn't do very much
+
+00:23:43
+to a system you measure but you uh that doesn't change the system in any way here we come to a much more complicated story but the story up till now is really the quantum mechanical analog of just specifying that you have a collection of states the next question we asked was how do states change with time that we called in the classical case dynamical laws of motion or dynamical laws of nature or whatever the rule for how a state changes if you remember there were some examples uh the coin a simple example would be
+
+00:24:22
+put the coin down and the rule is nothing happens it just stays the same way well that's pretty trivial another possible law is in each interval of time and we have a a strooscopic time that we can imagine and in each interval of time it flips up heads tails heads tails heads tails that's a perfectly good law uh we talked about the concept the same concept in the context of a die with six faces or any number of faces including continuous infinity same basic idea the laws of physics are an updating from
+
+00:25:00
+instant to instant of a configuration they tell you how the configuration changes and if you have good laws in classical physics they're deterministic they tell you how the state changes but also another rule and the other rule we called reversibility reversibility was basically just the idea that states don't run into each other that states which are distinguishable namely different heads and tails are distinguishable are two states which are different will evolve mathematically and stay
+
+00:25:38
+different all right that was the idea of reversibility and what it comes down to is exactly that that if you know the state at any instant you not only will know what comes next but you will also know what came before because there's no uh chance that states run together uh and uh two different states giving you the same outcome then you wouldn't be able to tell where you came from so reversibility is the idea we also called it information conservation and I suspect I referred to it as the minus
+
+00:26:13
+first law minus first because it comes before everything else quantum mechanics also has a rule of both reversibility and information conservation you can call it the minus first law uh but it comes down to the same thing states which are distinguishable in the sense that I said that there exists an experiment that uniquely distinguishes them stay uh distinguishable all right so now we want to talk about how states evolve with time we're going to come back and discuss this in the context of
+
+00:26:56
+the spin it's the simplest system of quantum mechanics and it's a good idea to get it all down for that but let's talk about it uh more generally okay here is the postulate the postulate is that if you have the if you have a system at time at some specific time let's call it at time zero and I'm going to start changing my notation for states instead of calling them a and b I'm going to start using a uh a notation which is more or less a standard notation in quantum mechanics
+
+00:27:29
+call them pai pi is a Greek letter and psi is a commonly used letter to represent the state of a system now the states of systems do change with time so you have to think of these these vectors as being functions of time they evolve so let's put that in here in the following way s of S of T this simply represents a state which changes with time which state could be any state it's not the same after a certain time as it was to begin with but we're following one specific state of a system
+
+00:28:10
+that's been prepared and then allowed to evolve by whatever means things evolve all right the postulate is that s of t can be obtained from s of zero this means time zero by an operation on s of zero a unique definite operation which is governed by the laws by the quantum mechanical laws for that system so we have to do something to the vector doesn't doesn't stay the same so let's represent what we do by the operation of some kind of operator now incidentally we didn't have
+
+00:29:02
+to start with time uh zero we could have started with time uh something else and evolved by amount t so this t here really represents the time of evolution from the initial state to the final state or not necessarily final but the state at some time the basic postulate two basic postulates the first is that u is a linear operator that U is a linear operator and the same U for any state whatever the initial state is you put that here and you hit it with the same U the same operator in other words there is a this is called the time
+
+00:29:45
+development operator it's a linear operator uh and it evolves a state from one instant to another you could try to ask what would happen if you made a more general hypothesis for example you might have the hypothesis that U depends on the initial state or you might have the hypothesis that U is an operation but not a linear operator some other kind of operation you can try it you'll very shortly run into big troubles with all kinds of things it's been tried i guarantee you it's been tried and
+
+00:30:21
+repeatedly every so often some physicist will uh try to invent something and then some other person will come along and say "Look that has troubles with locality or it has troubles with causality or it has troubles with probability interpretation." And uh you're free to try i've given up trying i I actually never tried uh right okay so u is a linear operator with all the rules for linear operators but one other thing and that's this idea of conservation of information or conservation of
+
+00:31:04
+distinguishability that if you have two states two different states of the same system and you evolve them let's call phi of t fi capital phi that's given by the same u of t the same operator times phi at time zero Then if fi to begin with is orthogonal to sigh in other words if they're physically distinguishable to begin with then they will remain orthogonal for all time is there anything to the fact that she used uppercase letters on the left and lower case again the Greek letters are
+
+00:31:50
+uppercase on the left and lower case on the right is that just I guess I'm sloppy no right all right so orthogonality breeds orthogonality physically distinct states evolve to physically distinct states uh distinguishability remains intact it's the immediate analog of the minus first law of classical mechanics so let's see if we can find out what it says oh incidentally it's very easy to prove from that well what does it say it says that if s and fi were initially orthogonal I'm all right
+
+00:32:42
+no if they're initially orthogonal if then don't ask me to make capital letters it's it's much quicker to make the lowercase ones but uh I mean capital here i mean uppercase then this is true and it remains true for all time it's an easy exercise i will leave it to you to prove that if orthogonality is preserved that you can say a stronger thing it's implied by this you can say if you take any two vectors which may or may not be orthogonal the inner product between them stays constant with time there's a
+
+00:33:28
+nice little trick you take any two vectors you expand them in basis vectors and then you assume that the basis vectors remain orthogonal with time then you can prove that the inner products of any two vectors is time independent so it follows from the orthogonality the um the evolution of orthogonality that the inner product between two states remains the same the overlap between them remains the same there's a sense in which the overlap between two states is a is of course a measure of their similarity and what it
+
+00:34:05
+says is the degree of similarity remains the same okay let's see if we can figure out what that means for you what it says let's let's rewrite this by plugging in for phi of t and s of t the product u * phi and u * s but before we do we have to remember that we have to flip this equation whoops chocolate par is this chocolate yeah it is chocolate we have to flip it from a cat vector to a bra vector equation okay so let's do so this is s of t equals s of 0 not times u but times what
+
+00:35:06
+u dagger the hermission conjugate not the compass it's related to the complex conjugate but the hermission conjugate all right so now we plug this into this equation here and what it says let's write it out do a little bit of eraser for arbitraries they don't have to be orthogonal whatever they are they have some inner product that's equal to s of zero u dagger of t u of t five of zero all I've done is plug in for phi u of t for s u dagger of t now the product ud dagger times u is another operator
+
+00:36:11
+what is the product of two operators we didn't talk about this but the product of two operators is a very simple concept uh you take a linear operator and you apply it to a vector and then you take the result and you apply another operator to it the process of repeatedly applying two operators gives you an operation which is called the product of the two operators so that's what this is first you hit fi with U and then you hit the result with your dagger and what this says is that for any fi and sigh any fi and sigh at
+
+00:36:48
+all that when you plug in here u dagger and u the product of you dagger and u you get something which is exactly the same as had you not evolved the state the inner product stays the same whoops I think I made a mistake one of these should be five right all right so that's the principle of conservation of overlap if you like well here's a theorem I we don't need to this is again very very easily proved by going to a basis very easily proved that if the matrix elements this is called
+
+00:37:38
+the matrix elements or the uh the product like this if um this equation is true for any pair of vectors other words I I'll write the I'll write the theorem in general if you have an operator Let's call it K for U dagger u and for any pair of vectors s ki is equal to sci for any pair of vectors whatever it follows that k is the unit operator the unit operator is the operator which does nothing just gives you back the same vector so it follows then that U dagger time U must be the unit operator that's the
+
+00:38:30
+content of conservation of overlap u dagger of T for any T time U of T is equal to the unit operator meaning the operator which does nothing just gives you back the same vector question mhm can you then say that one is the inverse of the other in matrix algebra yes you can okay yes you can indeed right let's examine this a little bit now in particular let's examine it for very very small time for very small time in other words where you only evolve the system by a tiny little incremental time
+
+00:39:23
+let's call the incremental time epsilon right let's write that u of epsilon now first of all what is u of zero no time evolution at all just one just a unit operator so for a very small epsilon u must be itself close to the unit operator plus a small deviation presumably of order epsilon and that will be right it will be of order epsilon so there will be something of order epsilon times another operator here i'm going to make use of freedom and uh that I have and I'm going to put a minus sign here we're going to put
+
+00:40:13
+an operator over here this minus sign has no content yet unless I know what the operator is over here the minus sign it just absorbs into the definition and I'm also going to put an I here again there's no content yet because I haven't told you anything about H h is some operator epsilon time H is just an operator and I epsilon H is just an operator so I have not really said anything other than for small epsilon the operator U is close to the identity how close of order epsilon and then there may be additional things
+
+00:40:54
+of order epsilon squared epsilon cubed but we're going to drop them and study this equation oh I should we should name we should give a name to this equation here more specifically we should give a name to operators which satisfy this rule u dagger time U is equal to one or as was said that U dagger the hermission conjugate of U is the inverse of U such operators are called unitary u is a unitary operator so this is again this is a restatement of the principle of conservation of uh of overlap all right let's now
+
+00:41:42
+apply this equation this condition to u of epsilon and see what we find out about h okay so let's bring it over to this blackboard u of epsilon is equal to 1 - i epsilon h now let's do it over here all right what about ud dagger ud dagger is the hermission conjugate the hermission conjugate of one is just one but then we have to complex conjugate plus i epsilon and then we have to hermission conjugate h okay all right so here is ud dagger and here is u and now let's multiply them together and set the result equal to one
+
+00:42:26
+to order epsilon to order epsilon okay so what do we have we have u dagger is 1 + i epsilon * h dagger time 1 - i epsilon h that has to equal 1 and now just expand it out to order epsilon 1 plus i epsilon h dagger minus h equals 1 as I said through that's to the approximation that epsilon is so small that it square can be completely ignored compared to order epsilon right so the ones cancel and basically what we find is that h dagger minus h has to be zero this we we canceled out the ones we get
+
+00:43:32
+zero on the right hand side and so to order epsilon uh h has to equal h dagger this is the condition that H be hermission okay now I didn't call it H for hermission i called it H for something else i called it H for Hamiltonian okay what it has to do with the Hamiltonian of classical mechanics will eventually become clear right the Hamiltonian for classical mechanics also enters in to the equations for how systems evolve from one instant to the to to the next but of course that's not a good enough
+
+00:44:14
+reason to call this the Hamiltonian we want to see that it enters the equations in a way very very similar to the way uh the Hamiltonian enters into classical mechanics and it does uh it is also the thing which it's hermission right that means that it's an observable or it could be an observable it's a hermission operator it could be an observable and it isn't observable it's the Hamiltonian it's the energy hamiltonian and energy are the same this is what the energy of a system
+
+00:44:51
+is it's the Hamiltonian which generates the evolution of state vectors according to this rule here yeah it could be any hermission operator at the moment now what determines what hermission operator you put there well it can't be yes it can be any hermission operator associated with the system you're studying right uh if we're studying a system of one spin we want to make it up out of operators that are associated with the spin uh so yes it can be any operator but it's uh either experiment
+
+00:45:30
+or some this the same things which govern why you choose one Hamiltonian or loanian in classical mechanics either experiment some prejudice about the way things work some symmetry principle whatever uh whatever you have that might give you a clue as to what h is at the end of the day you may have to resort to experiment to find out but uh But um whatever whatever it is okay so uh that's right so now let's let's rewrite our equation let's rewrite question yeah so when you do that expansion like that
+
+00:46:09
+normally then uh h is a constant that's what you normally mean when you do that first order expansion so it' be it's h of h is an operator i mean it's a it's not a function of time when in that case right okay not a function of epsilon the situation with a possible explicit time dependence of h is the same as in classical physics in classical physics h can depend on time for example if you have a particle moving in a magnetic field and the strength of the magnets is being varied with time by changing the current
+
+00:46:49
+through the electro romagnet then the Hamiltonian for the particle moving in a magnetic field is time dependent okay otherwise if you have the if the parameters of the problem are not varying with time then you say the Hamiltonian is not time it's exactly the same exact do you say h of zero yeah yeah no that that's right that that's right in principle h could be a function of time let's take the case where it's not and what that corresponds to is the situation where the parameters
+
+00:47:25
+of the problem are not time dependent where in classical physics we called it time translation invariance okay remember in classical physics uh time translation invariance which means like every time is the same as every other time okay you do the experiment the same experiment at a later time will have the same output as the as the identical experiment at an earlier time the statement of that principle time translation and variance is that H does not have explicit dependence on time it's just an operator which doesn't
+
+00:48:06
+depend on time as I said you can imagine situations where you're ramping up the current uh an electromagnet or the universe is expanding or god knows what there's some explicit time dependence then h can be time uh time dependent now do you remember what happens to energy conservation if the Hamiltonian is time dependent down the drain right same thing here if the Hamiltonian is time dependent and we haven't yet seen why why there might be a conservation of energy we'll come to that but
+
+00:48:40
+um all right okay so let's come back then to this equation over here question what happens at the long time what happens small for the small epsilon time sorry what say it again this is for the small infinite decimal small yes yeah we'll come to that basically you just multiply them together all right we we'll come to that okay or you can think of it another way after you've updated by a small amount of time you just do it again and again and again right uh you just do it repeatedly but we can use this to derive
+
+00:49:19
+a differential equation for the way the state changes with time let's do that um let's do that okay so let's look at the state of the system at a time epsilon and this time epsilon could be thought of as a time epsilon right after some arbitrary time which I'm going to call zero but it doesn't matter so I of epsilon is equal to 1 - i h epsilon minus i h epsilon time s let's say at time z or another way to say it is that s of epsilon minus s of zero this is the small incremental change in the state
+
+00:50:17
+vector That's equal to minus I epsilon operation by h on s now as I said the this zero here doesn't have to be zero it could be any time as long as epsilon is epsilon units after the starting time okay let's divide this equation by epsilon you're allowed to do this because you can multiply vectors by numbers so we're just multiplying both sides by 1 over epsilon 1 over epsilon times this whole thing okay what's this thing on the left hand side 1 over epsilon times the difference of two
+
+00:51:04
+things which are by which at two slightly different times that's just the time derivative of this vector we haven't talked very much about taking derivatives of vectors but it's clear you can do that you can take the difference between two vectors that's perfectly well defined uh they will be close to each other if epsilon is small if you divide by the small epsilon you'll get something which on the right hand side is just the time derivative of s the time derivative of s equals minus i
+
+00:51:49
+h s at any given time it doesn't as I said it doesn't have to be at time zero at any given time if you want to find out how the state of the system changes over an incremental time interval this is your this is your equation completely analogous to the way you update classical systems but because because knowing the state vector is not the same as knowing the values of the uh experimental outputs of experiments you can know the state and still there can be ambiguity or uncertainty in the
+
+00:52:31
+value of an experiment this tells you how states change but it doesn't tell you how the results of experiment change the experiment results of experiments are still statistical but with a continuously updated state vector okay this is this equation has a name of this equation is the generalized time dependent Schroinger equation this is the general form this is the Schroinger equation specific versions what Schroinger wrote down was a very specific version of this we're going to come to that later in in a course but
+
+00:53:10
+this is the general idea the rate of all right I don't need to say it again this is what it is but of course in order to use it you have to know what h is question so all of this is dependent on the reversibility of the system is that right yes so I guess or the conservation of inner product right so I guess stepping back how does that match the fact that if you take an up vector and a down vector and you measure them along the horizontal axis they sort of both end up you know in sort of I guess to be
+
+00:53:47
+inable states that's a good question you have to remember when you do that you're intervening with an apparatus in order to follow the system under those circumstances you have to include the apparatus as part of the system you cannot interact with the system and not include the things which are interacting with it in the system classically it's not such a bad uh sin but quantum mechanically if something interacts with a system strongly enough to to affect it well strongly enough to
+
+00:54:27
+measure it you have to include it as part of the system now this is the way a system evolves if it's isolated and completely not in contact with anything else we will have to come back to ask how it evolves what happens when you put it in contact with a measuring apparatus we'll have to have a model for how measurements take place but this is the way the system behaves if nobody disturbs it during the course of the evolution from time zero to time t okay we'll have to come back to that
+
+00:55:04
+it's an important question oh boy yeah really just two assumptions well maybe three first is that time evolution takes place by a linear operator called U and that operator is independent of a state that it's acting on okay with me okay uh that's the first statement the next statement is that inner products are conserved with time and that tells you that U is unitary okay from that we went over to here and discovered that for the small little incremental change is governed by a hermission
+
+00:55:55
+operator okay so we get to the idea of a Hamiltonian and then we just rewrote that and said look the small little incremental change could be thought of as 1 over epsilon times the time derivative of the state vector okay so this this is uh this is the Schroinger equation how do you uh solve the problem if there's a long time interval not a short time interval you basically solve this equation and we'll talk about how you solve this equation we'll do so for lots of examples but um okay to go
+
+00:56:46
+on and explain what this has to do with classical mechanics or what it has to do with the corresponding concepts in classical mechanics we need a couple of ideas uh about how you relate classical ideas to quantum mechanical ideas we need the idea of what is called the expectation value of an observable it's a bad name it's a bad name because the expectation value as defined may have very little to do with what you expect the experiment to give uh this doesn't have much to do with quantum mechanics it's just an issue of
+
+00:57:29
+probability theory i think we've talked about this before but I'll just remind you if you have a probability distribution which looks like this then the least likely answer that you could possibly get is right over here it's also the expectation value so it's it's a poor a poorly chosen terminology the right terminology should sometimes some uh some fancy people I won't name Murray Galman but uh some fancy people like to call it the expected value well it's even less the
+
+00:58:06
+expected value than it is the expectation value it's the average value it's the average value and the average value of something can be a value which the thing can't even take on the possible value that it couldn't even have the average value for example if you assign assign heads plus one and tails minus one and you flip the coin what's the average zero but you can't get zero so it's got nothing to do with the expected value of an experiment uh but nevertheless it's
+
+00:58:37
+called the expectation value and we will we will call it the expectation value but it's the average value let's talk about the average value of a observable given a particular state all right so our state is a I said I was going to change the sigh but sometimes I will sometimes I won't could we go back to the expectation value maybe I I think I just have to clear my head of statistics but when I look at that picture you draw I a frequency distribution so to me it's the middle is not the
+
+00:59:18
+average it really is the expected value it's the value that's going to occur most frequently no no definitely not this one here it never occurs never ever ever let's even make it worse okay what are the X and Y values what do the X and Y axis represent i keep saying P is the probability x is some variable something that you measure this could be the probability for finding a particle at different locations okay all right it could be that for some particular state the probability let's
+
+00:59:55
+let's make it symmetric about the origin just to it could be that the probability distribution looks like this i mean I meant to make this symmetric and is really very very zero in a neighborhood of the origin here there's no sense in which x equals 0 is expected you can do the experiment forever and ever and ever and you will never get x equals z you'll either get an x somewhere in here or here so to call it the expect the expected or the expectation value is sort of a misnomer it is the average value
+
+01:00:40
+defining averages in a very particular way now uh for many many smooth probability distributions in particular probability distributions that don't have big holes in them something like this let's say it can very often be the case and very often is the case that the uh that the probabil that the um that the average value is the most likely value to get so it's it's this they call it the mode the most likely value what's the peak the peak there is the most likely value uh yes by definition the top of the peak
+
+01:01:17
+is and in many many cases if you have nice simple probability Gaussian probability you know bell-shaped curves and so forth then the expectation value or the average value is usually quite close to the a average and uh peak value and so forth they're all usually close to each other but certainly there can be violent uh exceptions the coin or the spin which can only be plus one and minus one and never zero the expectation value and the average value are quite different okay but that that's just a little sermon and
+
+01:01:54
+gave me a chance to badmouth my friend Marie Galman question if you take a a spin where the apparatus is perpendicular then the probability is 50% but you make it very unlucky you hit a million ups in a row the average would be up but that's not accurate yeah well okay it depends on what you mean by average there's a notion of average which is strictly mathematical and we're going to write it down in a minute uh there is a unwritten law which I think it's safe to say nobody really
+
+01:02:36
+understands but uh it's the law of large numbers that if you do a thing enough times how many times I don't know if you do a thing enough times you do an experiment enough times uh the average gotten by averaging The results of your experiment will be equal to the average defined mathematically to within what to within the margin of error what is a margin of error there's a specific number does it really mean that every time you do it the answer will come out within the margin of error no all right so we're
+
+01:03:18
+assuming standard probability theory that if you do a a thing enough plus this extra little ingredient this extra physical assumption I don't know I don't even know what to call it that if you repeat an experiment enough times the average of your data will be the mathematical average can anybody prove that no that's a uh that's a law of large numbers theorem or something like that no no no no there's nothing you can do to prove it the reason you can't prove it is because sooner or later
+
+01:03:53
+somewhere's in the multiverse somewhere's there's going to be an exception to it no matter how many times if you do it a zillion times a zillion is a number incidentally it's not it's not infinity a zillion is one with a logarithm of a zillion zeros after it or something like that i don't know uh right if you do an experiment if you and uh and there's enough repetitions of it eventually somewhere someplace there's going to be a violation of it this is closely connected to um to the second law of
+
+01:04:25
+thermodynamics you know there was a principle the second law of thermodynamics says that the entropy never decreases boltzman was never able to prove that and he finally realized that the right law is the entropy probably never decreases except when it does which is rarely except when it does so I am not going to try to give you an explanation of why probability theory works this is to me very puzzling but uh we will assume probability theory works the statement that it works is the same as the statement that the average
+
+01:05:01
+of your data will be for a big enough experiment will be the mathematical average all right so let's talk well let's come over to the side here first and just say supposing we have a collection of uh uh we have a probability distribution for some variable let's say for lambda lambda one of the igen value going to measure an igen value of l suppos supposeding we have a probability for lambda there it is right there the thing I called prob of lambda uh probability for lambda and lambda can take on a whole
+
+01:05:36
+bunch of different values lambda subi let's call them so this becomes the probability for lambda sub i then the average the definition of the average is the sum over i of lambda i times the probability for lambda i that's the definition of the average and we'll represent the average by the symbol the bracket symbol well why it's labeled by the bracket symbol we'll come to okay but that's the definition standard probability theory definition of the average of a quantity the
+
+01:06:18
+quantity times the probability that the quantity takes on that particular value summed over I and as I said that's standard definition of average okay uh what is the average in a state a of the observable lambda so let's say that a is expanded in a basis which basis the basis of igen vectors of l of of uh of l right remember l is a hermission operator it's igen vectors form a basis you can expand vectors in an orthonormal basis so let's write this in the form alpha subi sum over i lambda
+
+01:07:07
+subi remember that the lambdas are an orthonormal basis what is the probability lambda in the state I probability for lambda I is equal to alpha* i alpha i right I maintain oh this is the probability and the average of lambda let's call the average of lambda is the sum over i lambda sub i alpha i* alpha i all I've done is plug In let me prove that this is the same thing as taking the vector A the bra vector A and sandwiching between the bra vector A and the K vector A the operator L the operator L is the operator whose
+
+01:08:10
+igen values are lambda let's see if we can prove that it's actually quite easy all we do is say let's just plug in let's come to another blackboard plug in and uh and see if we can prove that all right so let's calculate this creature over here a is this summation and let's use also that the bra vector A is the summation over I of lambda sub I alpha* I all right so we make a sandwich the sandwich is the sum over I and J why there are two sums one for the bra cat one for the bra and one for the
+
+01:09:03
+cat lambda subj alpha* j this is the bra vector a and then we put l there and then we put the k vector alpha i lambda i just pure pluginology now what is l when it acts on lambda subi lambda subs are the igen vectors of L so when L acts on lambda subi we still have some I J lambda J alpha* J alpha I and now L hits lambda I and it gives us lambda subi times lambda I now all this junk in here is just a number for each I and J for each I and J this is just a number so that means we are called upon
+
+01:10:07
+to take the inner product of lambda I with lambda J what is that right it's one or zero depending on whether I equals J or not given that this sum the double sum collapses to a single sum in which lambda I and lambda J are identified and this just becomes sum on I lambda I well okay let's uh cut uh let's cut through some of the steps if if J is not equal to I you get nothing if J is equal to I the inner product is just one so this just becomes the sum over I alpha* I alpha I lambda I which is
+
+01:11:01
+exactly what we have over here so we've proved this relationship here that the average of any observable is just the sandwich the bracket the bracket the bracket the bracket the bracket made out of sandwiching L the observable between a bracket between a bra and a cat okay that's the the same bron ket the bronet associated with the state of the Right that's where this notation of uh bracket bracket comes from okay that's a good thing to know that if you want the average of a quantity just sandwich it
+
+01:11:47
+between the bracket the bracket representing the state any questions about that okay now I'm going to tell you what we're going to do what we're going to do is we're going to try to find equations governing the time evolution of these average values the idea is that under suitable reasonable circumstances if the probability distributions are nicely shaped if they have a sort of nice bell-shaped curve that um that by calculating the time evolution of averages you're doing something pretty
+
+01:12:34
+close to what classical physics uh would instruct you to do about calculating the equations of motion uh of the classical system the way averages tend to evolve in time as I said under suitable circumstances follows equations which look very very much like the corresponding classical equations all right so our next goal is to try to find the rules for the time evolution of these average values expectation values and that's not so hard we have it we have all the equipment we need to do that and let's see if we can do
+
+01:13:22
+it all right so at any given time at any given time the average of lambda is given by s of t that's the state vector at time t the operator l representing the observable times s of t in other words I've just plugged in for a the actual time dependent state of the system this is the average of l as a function of time i don't know what should we call it but let's call it uh okay it's the average of L as a function of time again this is a kind of a wrong notation it's not the average of
+
+01:14:07
+L of T it's the average of L as a function of time we could uh we could put the T outside the bracket that's non-standard subt but why don't we just go with standard notation standard notation and And remember well okay I I'm not going to do it i'm going to just call it average of L as a function of time okay as a function of time it is a function of time that's the main thing it's a function of time you could do something else we could call it Lbar another notation for average is to put a bar on
+
+01:14:51
+top of something that's another notation for average standard notation and we could just call it LB bar of t means the average as a function of time let's let's do it that way what would we like to do with this we'd like to find equations of motion for it in other words we'd like to find out how it changes with time by differentiating it with respect to time i want to take this quantity and differentiate it with respect to time so let's call it L dot now we have bars with dots on top of
+
+01:15:23
+them l dot of T is the time derivative of this now L of T that's just some fixed operator it's some fixed definite operator all of the time dependence is in the state vectors the state vectors change with time the operators those are fixed those are definite operators so let's see if we can take the time derivative of this here thing the time derivatives act on the s of t's when you take the time derivative of a product and this can be a product of vectors it can be a product of
+
+01:16:00
+numbers it can be a product of functions well functions uh the rule is always the same it's the time derivative of one times the other plus the time derivative of the other times the one that's very general so this is going to equal then d si by dt the bra vector l si plus s l dt oops I erased a very important equation or else I buried it under the uh under the um blackboard let me write it over here dt is equal to minus ih s that's what we're going to stick in over here so we we begin to see that the
+
+01:17:02
+Hamiltonian is going to tell us something about how average values change with time the Hamiltonian of classical physics tells us how the corresponding quantities change with time the Hamiltonian of quantum mechanics would tell us how the averages change with time right we're going to also need the bra version of this so let's write the bra version of this the bra version of it is d by dt of the bra vector s of t is equal plus i uh plus i si h h is hermission and so we don't have to hermission conjugate it it is her
+
+01:17:50
+mission but we do have to change the sign of I when we go from bras to cats okay so now we're just going to plug in let's just plug in and we'll get L dot yeah right l dot okay let's do this one first over here this one is going to be plus s and there's a minus sign minus sign from here minus I s L H S S that's what we get from here how about the other one the other one is plus I s H L S or I times the expectation value we have S here S here we have S here S here i * H L -
+
+01:19:11
+LH S how about HL minus LH is that zero why not HL who cares which way we order through well operators don't necessarily commute commute means that you can freely interchange the order of them in general this is true of matrices products of matrices don't necessarily commute sometimes they do and in particular an operator commutes with itself l* L - L * L that That's okay you can do it there l * L - L * L is zero okay so is H * H - H * H but in general L * H is not equal to H * L it
+
+01:20:12
+may be but typically not what is this animal called h * L minus L * H it's called the commutator of the two okay so this is a definition given two operators let's well they could be just H and L the combination HL minus LH is written with a square bracket H comma L and it's called the commutator commuting has something to do with passing uh freely between each other exactly what it has to do with taking the subway in New York i don't know people but uh uh but it's called the
+
+01:21:07
+commutator and so what we have here is the equation that the average of L at any given time sorry the average of the time d the time derivative of the average is equal to s comma theta h l s but this object over here is just the expectation value of commutator of h with l so we can think of this as an equation relating the time derivative of a certain average to the average of another quantity we could I did I did is it plus it's plus I I did I or we can write L do of T is equal to I well average times average of the commutator
+
+01:22:17
+HL L and I'll indicate that by a bar on top of it so we have equations of motion now for averages in terms of averages if the probability distributions for everything are nice and peaked then we really can just say approximately nice and peaked so that the averages are close to to the to the highest point on the curve and the curve is reasonably narrow so there isn't an enormous amount of uncertainty then this basically says that the time derivative of the classical or the time derivative
+
+01:22:58
+of the approximate L of T is equal to the approximate average of commutator of H with L and someone writes this of course is not quite right but right anyway L dot is equal to I * commutator HL now as I said this has to be taken with a little grain of salt uh what it means is an equation among averages means an equation among averages but it's often just written in this form l dot is equal to h * l okay okay now before we finish I want to remind you of a classical mechanics equation of motion it's the equations of motion
+
+01:23:47
+represented did in terms of posome brackets do you remember pone brackets good old pone brackets fish brackets what were the pone equations of motion anybody remember and if you right right d by dt exactly d by dt of a classical function and this could be a classical function of q's and p's in classical mechanics we have q's and p's l incidentally is a standard notation for angular momentum this could be the angular momentum but uh right now I'm just using it to represent any
+
+01:24:43
+observable uh d by dt of l is equal to a certain par bracket and the parome bracket is the pos bracket of l with the hamiltonian remember that probably some of you don't but I'll advise you to go and look it up it's in the last It's in the next to last lecture of a classical mechanics uh on plus brackets uh and I will not go through it here i just wanted to remind you of it and I want you to notice the similarity where is it did we did we erase it i think I erased it the similarity of this
+
+01:25:32
+with DL by DT average value is I minus I or plus I I lost back plus I I times the commutator of H with L now incidentally okay let's let's just point out one thing plus brackets have the property that if you interchange the two expressions what happens to the plusone bracket it just changes sign so do commutators hl minus lh if you interchange the order of them change sign so we can also write this as minus L with H commutator of L with H there's a remarkable similarity and it suggests
+
+01:26:28
+that we identify the plusone bracket with minus I times the commutator now I've left out a discussion of something i just realized it just now and I've completely forgotten about it what happened to H bar what happened to H bar we've been working in units in which H bar is one i've been working in units in which H bar plunk's constant is one the question is if we were to reinstate Plunk's constant and make it not equal to one where would it go in these equations and what's that
+
+01:27:13
+yes it goes in Schroinger's equation that's correct but how do how do how do we trace it let's see how do we trace it here is the equation here i told you that H has the significance of a Hamiltonian and therefore it has units of energy so let's look at this equation the S cancels out on both sides as far as units go the units of this S are the same as the units of this S and so the right hand side of the equation apart from the size has units of an energy the left hand side of the equation has units
+
+01:27:48
+of inverse time inverse time and energy don't have the same units inverse time is inverse seconds and energy is jewels or whatever so we have an equation here which doesn't make good dimensional sense we need a constant in here and the constant we have to put a constant in here uh let's see where does a constant go does it go on the right hand side or the left hand side where does Plunk's constant go right hand side or left hand side either what either if it goes in one place in one thing
+
+01:28:28
+then it goes in the inverse in the other place okay so here's all you have to know is that plunk's constant has units of energy times time plunk's constant has units of energy times time uh so let's see so energy times time so we want to put plunks constant here energy times time over time is equal to energy that's where plunk's constant goes into these equations uh and I apologize for having completely forgotten about it but that's where it goes and if we follow it through the
+
+01:29:08
+equations no doubt it appears over here uh I think it appears in the denominator here yeah you see I got everything right except where I have h I should have h over h bar right we could rewrite this this way h over H bar so in all of my equations wherever we wrote H the Hamiltonian we really should have if we want to keep the units straight H over plunks constant and that goes straight through to here so really the right equation including the constants is the LDT is one is one over H bar here 1 over plunk's
+
+01:30:02
+constant plunk's constant is a small number so this looks like it's very big but on the other hand this is L * H - H * L in classical physics that would be zero so whatever this is classicalally it's zero and quantum mechanically it must be a small correction to the classical physics to the extent that quantum mechanics is a small correction to classical physics and so the commutator is itself something which is typically small and of order h bar so that allows us then to guess to guess an
+
+01:30:41
+identification between commutators and plus brackets now I'm this this is non-intuitive at the moment it's just a uh just looking at two equations and saying look if there's going to be any connection between quantum mechanics and classical mechanics then there must be a connection between the plusone bracket and between the plusone bracket and the commutator namely plus bracket must be equal to minus i over h har time commutator or it's usually written written the other way commutator is I H
+
+01:31:27
+bar times plus ohm bracket commutator is a small thing because there's an h bar there plus oh bracket in classical physics is not a small thing it's some number i mean it's some characteristic quantity which is not neither small nor big and in the same units the units that you do classical physics the standard units meters seconds whatever commutators are very small that's because they're almost zero a * B minus B * A is almost zero okay i No I don't think so i think I uh
+
+01:32:05
+we had a minus I on this side minus I over H bar multiply by H bar and now multiply both sides by i and use that minus i * plus i is one yeah right it was dra who recognized this connection and built his quantum mechanics out of it he built his quantum mechanics out of um making an identification of plusone brackets with with uh with commutators but of course the foundations of the subject um quantum mechanics is a consistent subject without having to make any reference to classical physics the right
+
+01:32:49
+way to think about things is that quantum mechanics comes before classical mechanics commutate is before plus own brackets you have to derive classical physics as an approximation to uh to quantum mechanics so here we see some formal similarity at this point here we have no idea why this commutator should have features in common with a plus bracket before we go let me just say let's let me write down some of the features of commutators and plus brackets to remind you uh and again all of this should be at
+
+01:33:36
+this stage should be a little mysterious what what is this funny connection between pos brackets but uh but uh let's pursue it anyway okay let me remind you about uh about posome brackets first of all if I have two quantities I'll call them A and B now or maybe A and B I use for let's just call them L and H they don't have to be the Hamiltonian and anything special they're just L and H all right the first thing is the plusone bracket of L with H is equal to minus the plusone bracket of H with
+
+01:34:16
+L okay the commutator of L with H is minus the commutator of H with L so that's a parallelism that we can begin with now let's take some other uh let's take some other properties of plusone brackets um there's a lot of properties of plusone brackets but let me just uh write one or two more if I have two operators or two not operators but two quantities let's call them L and M okay L time M is itself a classical quantity and I can compute its poson bracket with H does anybody remember the
+
+01:35:08
+answer i'll remind you i'll tell you go look it up get the this is um important it's L it's a plus bracket of L with H time M plus L times a plus bracket of M with H now in classical physics the order of multiplication doesn't matter so you can bring the m on the left or the right it doesn't matter you can bring the L on the left or right it doesn't matter but this is the relationship for the product of two variables the plusone bracket go back go back to the next to the last lecture and
+
+01:35:55
+uh check this out this was one of the defining not one of the defining one of the properties of home brackets you can do the same you can ask the same question over here supposing you have L M and you take its commutator with H what do you get all right this is an exercise this is an exercise and all you do is you write that this is equal to L MH minus H LM and now you start just juggling and uh adding some terms subtracting the same terms and eventually you'll discover that this is the same as this
+
+01:36:38
+same relationship that this is equal to L times the commutator of M with H plus uh commutator of L with H time M the way to do this is just write L MH minus HLM and then write out these guys here this is L MH minus LHM plus LHM minus HLM four terms here two will cancel in pairs and you'll just get this back it's it's it's a onestep thing it's a really easy thing okay so you you begin to see some pattern that plus brackets and uh and commutators must somehow be closely related the
+
+01:37:37
+last thing I'm going to show you tonight is about energy conservation now we're not going to to to consider the most general concept of energy conservation we're simply going to ask is the average of the energy conserved with time we have not even really gotten to what it would mean for energy itself to be conserved in any deeper way but we can ask we have all the ingredients now which will allow us to ask how the average of here's how an average of any quantity changes with time no here it is over
+
+01:38:22
+here we can now specifically ask how the average of the energy changes with time let's do it the energy I claim is the Hamiltonian okay or its definition if you like what is energy it's Hamiltonian so let's check and ask whether energy is conserved if energy is the Hamiltonian this equation would read the time derivative of the average of the Hamiltonian is equal the minus i over h bar times the commutator of the Hamiltonian with itself the Hamiltonian with itself it's H * H minus H * H h * H is the same as H
+
+01:39:11
+* H well quantum mechanics is not that weird you know it's weird but h* h is the same as h time h so this is zero whatever the Hamiltonian is its average its average its expectation value with time is always zero and so it's conserved in that sense at minimum in that sense there's a stronger sense in which it's conserved and we'll come to it but even this weaker sense is kind of interesting and it tells us we're on some kind of right track to be able to compare quantum mechanics and classical
+
+01:39:56
+mechanics okay uh I'm gonna stop now and take a few questions and yeah um here [Music] probably i just mean the average i mean the average defined uh defined as summation of probability of lambda times lambda okay so um I don't know what's the standard symbol in statistics for an average in the sense they use they do what first moment of the distribution the first moment of the distribution yeah okay yeah yeah okay so um I'm used to just calling it lambda brackets e brackets of lambda e
+
+01:41:10
+bracket of lambda and that stands for what the the average expected value expected value even though it's not the expected value you don't expect to get it yeah yeah okay um you've never seen the expect the average value of a bar on top of it yeah yeah i mean it's normal convention is that it means the sample mean like the average in okay yeah when I use the term average I will mean this it's also called the expectation value and I will freely interchange the drack notation for the average
+
+01:41:48
+with the bar notation okay and if that's not uh if that's not standard according to um statistics books too bad um so over here you wrote down the Schroinger equation yes and then you wrote down uh the uh how did you go from the left hand equation to the right hand equation was that complex conjugation or was that hermission conjugation hermission conjugation but remember that H is her mission we proved that that was that was the condition of unitarity that H is her mission but how come you
+
+01:42:32
+you you interchange the order of SI and H but not DDT and where where where on on the left side equation you got DDT s ddt is the operator this one here yeah yeah the time derivative of a bra vector is a bra vector the time derivative of a k look the time derivative is just another way of talking about differences the difference of two bra vectors is a bra vector the difference of two k vectors is a k vector okay in the limit the difference becomes the time derivative or the derivative so the derivative of a bra vector is a bra
+
+01:43:12
+vector the derivative of a k vector is a k vector if you want to take this K equation what is the bra that goes with this K the bra that's dual to this K is the time derivative of the corresponding bra vector so since time's not an operator you don't have to worry right time time is just think of this as taking the difference of two vectors yeah it's just a difference of two vectors uh right exactly and uh again quantum mechanics is weird but uh taking the difference of two vectors
+
+01:43:51
+and replacing it by a derivative when the difference is small uh that's perfectly legitimate you said that the form of Hamiltonian we will choose depending on symmetry considerations well yeah in in in the derivation here we did not put any symmetry consideration so far no so why is it then that we are getting energy conservation out how come we're getting what energy conservation out how do we know that it's corresponding to energy well we don't know that it's corresponding to energy until we do a
+
+01:44:24
+lot more we don't know that we can define it to be energy the Hamiltonian but that's not satisfying we want to see in cases where we understand the classical physics and we understand what energy is we're going to want to see that the quantum mechanics of the same system the classical system is an approximation to the quantum mechanical system physics is really quantum mechanical under certain conditions such as a system is heavy uh basically that that it's heavy that it's big that it uh uh large masses then the
+
+01:44:59
+system behaves approximately classically which means that the average values move in ways which are consistent with the classical equations of motion we're going to want to see that when uh that when we study such big heavy systems that uh that the thing that we call the quantum mechanical Hamiltonian is essentially closely connected with the thing that we call the classical Hamiltonian but we'll come to that we can't do everything all in one night at the moment I'm just s showing you similarities and uh we're
+
+01:45:33
+going to want to do better than that whether we'll actually get to do better than that I don't know we can't do everything but [Music] uh that's the logic yeah i'm getting way back to the electron spin i I think when we left off the last lecture you were going to show what the probability is to off yeah uh right i had saved some time to do that but I run Well I think I've done enough for tonight um who was it who sent in the solution to it uh Yeah yeah well done right so uh but we'll we'll do it
+
+01:46:14
+we'll do it i I just I've run out of steam um right we'll come back to that we're going to come back to that um so how can your postulates work without a collapse postulate what's that how can your postulates work without a collapse postulate well we really want we really want to derive the collapse postulate but the derivation is deeply connected with something else that we haven't come to yet and I think we're going to come to it next time entanglement uh the measurement process is really a
+
+01:46:49
+process of establishing entanglement between a system and an apparatus and until we've talked about um the entanglement process I think uh until we do we uh simply have to adopt the language of collapse but uh next time next time next time remind me about collapse i'm close to collapse so okay for more please visit us at stanford.edu
+

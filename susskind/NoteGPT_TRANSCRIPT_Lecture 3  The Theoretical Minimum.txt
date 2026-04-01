@@ -1,0 +1,396 @@
+00:00:01
+[Music] Stanford University all right little a ma a mathematical interlude we're going to be begin with mathematical interlude is again about linear algebra about Vector spaces but about the idea of operators but before we do I want to let before we get to operators I want to say a few more things about vectors A few more bits about the mathematics of vectors most of these bits have to do not so much with deep uh mathematics as with good notation good notation is worth an awful lot when you can just
+
+00:00:45
+manipulate symbols in ways uh that are sort of pre-arranged and uh and do it easily and comfortably there's an enormous benefit in that for doing abstract mathematics certainly but also the abstract ractions the mathematical abstractions of physics the abstractions that we're going to talk about were largely due to Der Paul dur who really was the one who saw into the way that quantum mechanics really fits together so let's talk about that we have a space of states the space of states which we'll come back to is as
+
+00:01:21
+I said a linear Vector space meaning to say that you can multiply states by numbers to get new States new ve and these are abstract vector vectors abstract vectors maybe I throw maybe I throw too much in when I say the space of States just abstract vectors you can multiply them by numbers in our case complex numbers and you can add them and there are two kinds of vectors there are the bra vectors and the C vectors they're roughly speaking related by complex conjugation uh and a vector space has a
+
+00:01:55
+dimensionality the dimensionality is the maximum number of orthogonal vectors that you can find in that space and once you know what the dimension of the space is you can look for a basis of vectors the basis of vectors is a mutually orthogonal collection of normalized get the terminology down orthonormal basis Ortho means that they're all orthogonal to each other normal the word normal means normalized and normalized simply means that the vectors are of unit length a collection of them that is maximal in
+
+00:02:33
+other words that you can't find anymore because there are no more directions left that defines a basis and the number of them is equal to the uh the dimensionality of the space given such a basis you can make you can write any Vector in the space as some kind of sum over those basis vectors so we can write for any Vector a that it's equal to sum sum over I I here stands for the basis vectors oh of course a basis is not a unique thing just as there are many sets of mutually orthogonal vectors in three-dimensional
+
+00:03:09
+space there are many sets of mutually orthogonal vectors in uh in an abstract Vector space but we pick one we pick a set having picked that set and we label it I we can write any Vector as a sum Alpha sub I exactly those Alphas which uh which we refer to a moment ago Alpha subi a set of complex numbers a set of complex coefficients times the I basis Vector the I basis Vector uh uh I'm labeling I this is a k representation but now what we can do with this is we can take the inner product with it I want to try to
+
+00:03:55
+calculate these Alpha subis in terms of some Quant quantities involving the vectors themselves all right so what we do is we take the inner product of both sides of the equation with the basis Vector J the K Vector J on the left hand side we get the inner product of the vector a which is the thing we're trying to express and that's equal to the sum of a i Alpha sub I times the inner product of the vector J with the vector I but the inner product of the vector J with this Vector I is either one or zero
+
+00:04:38
+it's one if I and J are the same vector and it's zero otherwise why because they're orthogonal if I is not equal to J and then normalized namely of unit length if I does equal J so this bracket over here this product of bras and KS is just the chronic symbol Delta Del j k Sorry Delta ji0 or one and when you do the sum it just picks out one and only one contribution the contribution in which I is equal to J so on the right hand side you just get Alpha J no sum the sum has collapsed to one term and that's now
+
+00:05:22
+equal to J A all right so what have we learned we've learned that the coefficient here in the expansion of any Vector is just the inner product of the J Vector with the target Vector with the the vector we're trying to describe uh the fact that I wrote A J there is irrelevant it could also be Alpha I doesn't matter which I or which J the I coefficient is in in a product now I can use that to rewrite the sum up here I now know what the alpha subis are they're these guys over here so let's
+
+00:06:09
+rewrite this sum over I I'm going to start with Alpha I oh sorry with I and then write Alpha subi I'm going to write Alpha subi next to it over here in the opposite order that that's that's allowed nothing uh nothing non-commutative at this stage now now I want to write Alpha sub I so I write I a that's a basic formula that any Vector can be Rewritten in terms of its coefficients or in terms of its inner product with the basis vectors times the basis vectors themselves Su over I it's kind of a
+
+00:06:56
+pretty formula and it comes back over and over again what it says is whenever you see this summation of I * I in that form you can sort of throw it away it's just a equals a but it's an expression for a vector in terms of its components all right so that's uh one simple fact the same thing is true for bra vectors exactly the same thing is true for bra vectors and you would write it in the following form a bra Vector is also a sum of I of the inner product of the bra bra Vector with the basis vectors times the
+
+00:07:45
+basis bra vectors the basis bra vectors are just the complex conjugates if you like of the basic the basis K vectors both of these equations are true and we're going to find out that they're enormously useful they're enormously useful and Powerful even though they were very very simple all right now we come to the notion of linear operators States in quantum mechanics are vectors and we saw a little bit about how that works in the case of a single spin observables observables mean the things
+
+00:08:25
+that we measure the things that we measure the objects that we measure the quantities that we measure the observables are related to linear operators in the space all right so what is a linear operator and it'll take us the rest of the evening to understand in any detail what it has to do with observables so put that out of your head for the moment we're just doing a mathematical interlude now what is the notion of a linear operator a linear operator is is a process if you like which you apply to
+
+00:09:06
+vectors somebody or other I can't remember who it might have been John Wheeler like to describe these things as machines he would say a linear operator is a machine with two um little ports in it into one port you put an input vector and then you turn the wheel and out comes an output vector so it's an in it's a thing which acts on an input Vector to give an output Vector so let's uh let's call m a linear operator linear is linear will come to so far we're just talking about operator
+
+00:09:47
+a machine in goes one end out comes another end and we'll talk about what it means for it to be linear linear in a minute all right so m is some operator and that means that given any Vector when M acts on it it simply gives another Vector unique given any a it gives a unique B that does not mean the converse may not be Converse opposite I don't know may not be true it may not be uh that given a B on this side that there's only one unique a that gives rise to that b but it is true that M
+
+00:10:32
+applied to any Vector a gives a unique reflection of a which is the process M acting on a now what does it mean for M to be a linear operator well first of all M can act on Z * a where Z * a is a vector in fact let's write the let's write that uh yeah M can act on Z * a z * a is itself a vector because you're allowed to multiply vectors by complex numbers Z is a complex number the rule about linear operators is if they apply on constants times Vector they just give back the constant times what they would
+
+00:11:22
+have given on a all right so it just means that a z a complex number a complex number can be brought through m m acting on twice a gives twice what M would have given on a m acting on 3 * a gives three times what M gives on a m acting on I times a the complex number of I just gives I times whatever M would give on a that's the first rule about linearity and the second rule about linearity is that if M acts on the sum of two vectors A+ B then what you get is just the sum of what the machine spit out for a and what
+
+00:12:14
+the machine spit out for B what the machine spits out when you put in a plus b is just the sum of what comes out M * A+ m times B and that's it that's that's the notion of a linear operator there's no more to it than that uh or at least that's the full set of uh rules about linear operators now let's see if we can be more concrete about them and see if we can learn to manipulate with them let's suppose that M * a equals B here I've used b as a as a piece of the input but now B is the output A and
+
+00:13:10
+B are just letters I can use them any way I want M * aals B I'm interested in the component of b along the axis I by that I mean these objects over here the alphas they are the components of the vector a along the various basis Vector directions so Alpha subis are the components of the vectors and I'm interested in the components of the output Vector I would like to know in a concrete way what are the components of B so to find out I just project them onto the direction i a m i all I've done is in both sides of
+
+00:14:05
+the equation project or to project this does take the inner product with the vector I this by definition is beta I in other words if I were to expand B in the same way I expanded a I would use the coefficients beta I that's what we learned up on the top board this is beta I how about over here what can I do with this to rewrite things in terms of components I want to rewrite everything in terms of components so they actually become arithmetical operations that you can do well here's where we use this
+
+00:14:43
+trick that whenever you see a vector a you can substitute for it a [Music] sum let's do that right in here where a is let's substitute I I have haven't substituted yet now the summation variable is not I in this case I I've used as the external non-s summation variable here so let's sum over J doesn't matter what we call a summation variable J A I've stuck in for a the sum of the components times the J Vector times a j basis Vector but now a * J go up to the top again that's just Alpha
+
+00:15:37
+J so we now have a formula completely in terms of components this is i m j I'll get to this in a minute but it's a number inner products are numbers M * J is a vector and you can take its inner product with I right M * J is a vector and vectors K vectors have inner products with basis vectors times J A or times Alpha J that's equal to Beta I so all we have to do is give this object a name what is this object just I tell you again you have some operator it's an abstract entity you have a collection of
+
+00:16:32
+basis vectors you apply the abstract operator to the vector J and take its inner product with I and call the thing m j it's a number it may be a complex number but it's a number in other words it's possible to characterize linear operators by what I call their Matrix elements these are called The Matrix elements of the linear operator M this times Alpha J summed over J I left I left out the sum over J here let's put it back in sum on J is equal to Beta I if somebody hands you the collection
+
+00:17:20
+of MJS and somebody hands you a vector in the form of its components you can then start sweeping through it and calculating what the components of the output are in terms of the input m j is a matrix it has two indices it's a square Matrix if the dimensionality of the space is n then m is an n m is an N byn Matrix a square matrix it's a square Matrix Alpha can be regarded Ed as a column Alpha can be regarded as a column and the output is also a column it's a column because a was a k
+
+00:18:09
+vector and B was a c Vector all right so another way to write the same thing this is one way to write M * AAL B well here's one way to write it abstract here's another way to write it as a concrete sum and the Third Way is to recognize that this is just the multiplication of a matrix times a column Vector you write the Matrix M by displaying all of its components M11 M12 M13 dot dot dot M21 M22 dot dot dot dot dot dot dot dot it's just an array that exhibits The Matrix elements we now learn to call
+
+00:18:56
+these The Matrix elements of M times the column Vector a alpha 1 Alpha 2 dot dot dot alpha n and what is the rule this this of course is supposed to result in an output which is beta 1 beta 2 dot dot beta n all right what's the rule that's implied by this equation over here it's very simple if you want the first entry over here you take the first row and you take its inner product with a column here m not the inner well you can call it the inner product M11 alpha 1 plus M12 Alpha 2 plus M13 Alpha 3 right down to the
+
+00:19:45
+bottom that's exactly this formula M12 sorry M11 alpha 1 plus M12 Alpha 2 and so forth is exactly the standard rule for multiplying a matrix by a column Vector all right so now we have a third way to represent the action of a matrix on a vector this is less abstract it's concrete if you know the Matrix elements you know exactly what to do with them the only thing about it is it does depend on a particular choice of your basis vectors the specifics of the Matrix element here and the column Vector will
+
+00:20:31
+depend on your choice of once you pick a a basis you stick with it but you could have chosen a different basis in which case these components would have been different The Matrix elements would have been different after all the Matrix elements are themselves related to the basis vectors and so you lose something and you gain something by going to a matrix type representation what you lose is the geometric idea of a relationship between two vectors that's independent of the basis Choice what you gain is a computational
+
+00:21:12
+actual mechanical algorithm for producing or for the machine itself here is the machine the machine is a matrix and what it does is it grinds through M11 alpha 1 blah blah blah blah blah then it goes to the next row does the thing again goes to the next row does the thing again and just spits out the final answer these things are of course also true for ordinary vectors in three-dimensional space they're not the specific uh we tend not to use them as much in three-dimensional ordinary vectors but they're quite um essential
+
+00:21:52
+to in quantum mechanics yes this may be getting ahead um could the choice basis factors ever make a difference to whether or not you can see the solution to a problem well all right the precise way you ask it whether it can make a difference to the way you see through a problem certainly a wrong choice of basis can leave you uh completely confused I think what you really meant is can can different choices or bases lead to different physical answers and that had better not be then you're doing
+
+00:22:24
+something wrong yeah yeah it's often the case that that a convenient choice of basis will make your computations especially simple uh and a bad choice of basis might make them horribly complicated that's true but uh but at the end of the day the answers should not depend on it the result of an experiment okay so now we have we have the idea of a linear operator operating on a and several different uh versions of it question yeah is it legitimate it seems that within a definition linear operator you have an
+
+00:23:08
+operator that gives you a cat Vector from a bra Vector Vice ver no no no no no no no no no linear operators act on K vectors to give K vectors complexation that's right complex ah very good all right let's yeah um the simplest kind of uh of linear operator is just multiplication by a complex number I just multiply a by a complex number and get uh get another Vector it's basically the same Vector but uh twice as long or something that is a linear operator you might ask whether complex
+
+00:23:46
+conjugation is a linear operator I take I take the components of a vector and replace them by their complex conjugates the answer is no it is not uh and you can check the definitions multiplying the components of the vector or not multiplying them by complex conjugating them is not what it does do is it takes a vector and it's a different kind of machine complex conjugation it's a machine which takes a bra Vector to a k vector or a k Vector to a bra vector and that's a that's strictly it's called an
+
+00:24:24
+anti-linear operator uh it's not anti-linear I mean it's just it's it's not the opposite of linear it's just a word well the reason it's a word the reason it was called an anti-linear is because the process of complex conjugation is in some deep way related to anti particles but uh we're not there yet um yeah all right now let's talk let's talk about K ve uh sorry bra vectors so far we have defined our linear operators to act only on K vectors but every linear operator can
+
+00:25:06
+also be given a definition we need a definition of course we haven't defined it yet we need a definition but there is also a definition of Any Given linear operator acting on a bra Vector okay let's see if we can uh concoct a definition and then we'll stick with that definition what might be the rules for the action of that same linear operator when it acts on a bra Vector first of all the standard notation and it's very very good to keep track of notation and to use the same notation
+
+00:25:48
+over it's not only neat but it keeps uh keeps things uh in order when you act on a bra Vector put the corresponding operator on the right right side of it all right it gives something take that something and take its inner product let's put a bracket around it to indicate that M acting on a is itself an entity and now let's take its in a product with another Vector B well if I removed the bracket here I would have a which would look like this a m b and I really wouldn't know if what I'm
+
+00:26:35
+supposed to do is act with M on B and then take the inner product with a or act with M on a and then take the inner product with B the answer is with the standard definition of how linear operators act to the left on bra vectors it doesn't matter in other words we Define the action of an m on an a to the left such that and I'll show you that we can always do this such that it doesn't matter which way we do it okay a MB is the same as a m b uh that you can remove the brackets okay let's see that we can do this in
+
+00:27:31
+order to see it let's start with the definition this way let's start with a definition this way where's my I don't ah okay start with a definition this way and now I'm going to use that trick up on the top where you write a vector by inserting this there's a name for this operation here it's called inserting a complete set of states complete simply means it's a basis it's called inserting a complete set of states it did nothing it took a and it rewrote a but it rewrote a in
+
+00:28:10
+terms of its components so let's do that over on B over here we can do the same thing over here we can write that this is equal to B J J summed over J I'm not going to write the summation signs maybe I'll put them I'll put them at the end out here summation I and J all right so this is the same Vector as B then put M there let's put the bracket around it put M there and now do exactly the same thing on the K Vector remember the K Vector can also be expanded in the same way so here we go
+
+00:28:53
+a i i what do we see here we see this is Alpha star I why did I put the I why did I put the star there because the bra vectors are complex conjugates there's Alpha I there's an m j i in a product of i m * J and then there is B J that's all we have here this is summed on I and J M with I on the left and J on the right that's m j j beta Alpha I and you can see from the way that we've written this that it doesn't matter if I first sum over J and think of M as acting on on on the K Vector
+
+00:29:55
+beta or I sum over I and think of M as first acting to the left on Alpha you get the same answer it's just a double sum over I and J you get the same answer and so if you define you in other words you can would not you can Define m in such a way that it doesn't matter which order not which order or way you put the brackets that eases your life you don't have to remember whether you meant MX on B and then you take the inner product with a or MX on a and then you take the inner product with B same
+
+00:30:34
+thing okay but there is a there is that's it's a power of a nice notation but now let's consider another question supposing that the linear operator M on a gives B incidentally I'm using A and B all over the place in different ways there it was just two vectors here a is the input Vector B is the output Vector so let's suppose that the machine M when you stick a into it outs spits B we could ask what's the corresponding uh bra Vector relationship is there a linear operator which has the
+
+00:31:30
+property that when it acts on I'm not going to call it m yet it's not M let's call it scripty m is there for every M which acts on a to give B is there a corresponding scrip the M which acts on the corresponding bra vector B to give the corresponding bra Vector over here well yes there is and we're going to figure out how to figure out what it is soon enough but it is not the original m one example would be what if M was just multiplication by a complex number then what would script the M
+
+00:32:24
+be multiplication by the complex conjugate number so whatever m is it's not necessarily the same as script the M it would be the same as script the M if it was comp if it was multiplication by a real number but if it's multiplication by a complex number then in general well in general it will not give uh the same relationship we would normally just put a complex conjugate sign if we want it to operate on the in the other direction all right the notation that is standard is to say that the operator which went
+
+00:33:01
+acting to the left is the reflection if you like is the Duel of the oper of the op operator M acting to the right that is not called M it is called M dagger the dagger is a m is a operative version of complex conjugation it's an operative version of complex conjugation or Matrix version of complex conjugation it's called hermiss conjugation but we uh we'll get to these fancy words soon enough well okay this is abstract but let's see if we can get to a concrete notion MJ the abstract operator is
+
+00:33:50
+equivalent to a concrete Matrix if I give you the concrete Matrix then I'm giving you m the question is in terms of that concrete Matrix is there a concrete Matrix for M dagger and the answer is yes how do we find it we find it just by proceeding Dead Ahead I would like to know what the uh The Matrix elements let's see which way I did it yeah yeah this is what I would call the IJ Matrix element of M dagger I don't know what M dagger is yet I have a suspicion that's something to do with complex
+
+00:34:43
+conjugates but this is its Matrix elements concrete set of numbers uh can we find out what they are all right uh yeah I think we have to step back for a minute let me suppose that M acts on the basis Vector to give I prime I prime is just the result of sticking the basis Vector into the machine into the M machine and this is what comes out let's suppose that's the result okay now let's take j m i that's equal to j i Prime all I've done is take the inner product with J here's the Matrix element of the
+
+00:35:34
+Matrix M and it's just this inner product it's that was a trivial operation I didn't do anything okay I didn't do anything very significant if this is true then by definition then by definition M dagger acting to the left what does m dagger acting to the left give on I okay look at this equation here M dagger when it acts to the left gives the bra Vector B right so that's what all that dagger does is it sort of turns the equation over so what does m dagger acting on I give it gives the bra Vector I
+
+00:36:25
+prime if M dagger on the bra I it must give the bra Vector I prime it just flips the equation from bras to cats so what we have over here then is I prime J that's the Matrix element that's this Matrix element over here okay so let's look what we have we have the Matrix element of M is the inner product of J with I Prime The Matrix element of M dagger is the inner product of I Prime with J what's the relationship between these two transpose transposing complex conjugate just a complex
+
+00:37:20
+conjugate if you take two vectors A and B and you think of them in the opposite order the bra a time a k b versus the bra B * the k a the relationship between them is just complex conjugation so this here is just the complex conjugate of this so what we've derived is that the Matrix element the IJ Matrix element of M dagger is the complex conjugate of the J he Matrix element of M so if I know the Matrix elements of M what do I do to get the Matrix elements of M dagger it's very simple you complex conjugate but that's not
+
+00:38:19
+quite enough you complex conjugate and you interchange I's and J's you interchange I and J okay another way to write it is that M dagger i j is equal to mji Star so now we know a lot we know we know how to construct operators which act to the left to do the same mapping that they did when they went to the the right they map the bra a to the bra B if the original operator did the same thing on the cats all right that's the notion of hermiss conjugation this is called hermiss conjugation the word
+
+00:39:14
+[Music] hermiss is named after some mathematician whose name was hermite and her Mission uh conjugation is the process of interchanging I and J and taking its complex conjugate in terms of matrices if I have a matrix this is an easy way to remember it M11 M12 dot dot dot M21 M22 if that's the Matrix representing M then the Matrix representing its conjugate its Herm mission conjugate is to Simply interchange rows and columns that means reflecting it about the diagonal and then complex conjugating interchanging I and
+
+00:40:12
+J that's like interchanging M12 with M21 you just flip it about the diagonal and you complex conjugate it so if I want the Matrix elements of the Herm mission conjugate well I I can't say it anymore just just do what I said you interchange rows and columns and you complex conjugate interchanging rows and columns is the same thing as reflecting about the the diagonal right you reflect about the diagonal let's do it and then you complex conjugate Let me Give an example supposing I have the
+
+00:40:54
+Matrix two 6 + I uh 6 + I * 7 4 - I and N 9 plus I okay 9 plus I what's the hermiss conjugate of that all right you first flip it flipping it leaves the diagonal elements in place and interchanges the off diagonal elements so you flip it 2 9 + I 6 + uh I * 7 4 - I what is that process called of flipping it like that transpose that's called a transpose so flipping is a transpose but then you have to complex conjugate it complex conjugating just means wherever you see I put minus I so this becomes 4 + I 1 - 7 I and 9 - I and
+
+00:41:56
+that's the The Matrix that represents the hermiss conjugate of the original Matrix so it's easy this it's uh it's easy it's concrete and it's also abstract it has an abstract side the hermiss conjugate just allows you to turn an equation from a braet a bra Vector to a c vector and in terms of concrete Matrix elements you flip I and J and you complex conjugate and that defines M Daga now as I said in general these matrices are thought of as complex objects and the notion of complex
+
+00:42:43
+conjugation is replaced by this hermiss conjugation simultaneous flipping and uh right now what is a real number a real number is one which is its own complex conjugate if I write that Z is equal to Z Star you jump up and you say that is a real number there's a corresponding notion for operators it's the notion of an operator which is its own Herm Mission conjugate an operator which is its own Herm Mission conjugate that means you interchange and complex conjugate and you get back to the same thing that is called Herm
+
+00:43:28
+Mission Herm mission is the analog for matrices or the analog for operators of real all right so what it says a Herm Mission Matrix now let's specialize to the case of Herm Mission matrices and just spell out her mission for you permission for matrices is the analog of real for numbers a Herm Mission operator or Matrix is one which is equal to its own Herm Mission conjugate in terms of matrices it's m j is equal to mji Star let's try to see if we can construct a Herm Mission Matrix in uh
+
+00:44:24
+yeah let's see if we can construct a Herm Mission Matrix the first thing about Herm Mission matrices is their diagonal elements are always real take a diagonal element for a diagonal element I and J are equal i j is the same as j i if on the diagonal so that says that for the diagonal elements they're always real so Herm Mission Matrix first of all has real diagonal elements uh 1 7 I don't know I like s uh minus 2.6 on the diagonal off the diagonal they have the property that when you reflect them they
+
+00:45:08
+simply complex conjugate so if we were to put I over here we would put minus I over here for a Herm Mission Matrix if you were to put 4 minus I over here you would put four plus I over here and if you had five over here you'd put five over here all right so Herm Mission Matrix has the property first of all diagonal elements are real and the off diagonal elements not symmetric but a different kind of symmetry a symmetry where when you reflect them they complex conjugate that's called a Herm Mission Matrix a
+
+00:45:47
+Herm Mission Matrix has an enormous importance in uh hermiss matrices have enormous importance in quantum mechanics they represent the observable quantities the measurable quantities the things that you can measure we're going to come to that and we're going to do a bit of that especially for the single spin I hope tonight but before we do we have to know a little more about Herm Mission matrices in particular we need a concept the concept of igen vector and igen value right now I know that I'm going
+
+00:46:22
+fast and I know I'm quite aware that if you don't know these ideas is you're going to have to uh uh struggle tonight to keep up but there there standard ideas there are lots of textbooks on linear algebra you can find it and you can sit down quietly and uh and learn these ideas in about two hours I would say two three hours okay so let's talk about her Mission well let's first talk about igen vectors and igen values we can even think about these things incidentally in ordinary
+
+00:47:10
+three-dimensional space where the vector space is just the space of ordinary three vectors uh there are operators they're represented by matrices and those operators operate on vectors to give other vectors and typically if a matrix is at all interesting or if an operator is at all interesting whatever it mean to be interesting well if it's at all a little bit complex it will generally have the property that if you put a vector into the machine the vector that comes out will be pointing in a
+
+00:47:43
+different direction that will be generally true generically true uh so directionality is not preserved by linear operators as a rule on the other hand there may be particular vectors and typically there are particular vectors uh that uh when you apply a matrix those vectors will depend on which Matrix you're talking about or an operator there may be specific vectors associated with a specific operator that do simply get multiplied by numbers in other words they come out in the same direction an
+
+00:48:21
+example uh an example of a operation a linear operation on a vector is a rotation about an axis that can be represented by a matrix um in three dimensions if you rotate the vector space about some axis then generally speaking an arbitrary Vector will wind up in a different direction however there is one particular direction for which that doesn't happen namely along the axis of rotation if you rotate about the axis of rotation the vector comes out pointing in the same direction it comes out of
+
+00:48:56
+multiple of itself now in this case simply equal to itself all right so that's the that's the notion of the igen vectors of an operator they are the vectors if there are any they're not necessarily any for example in rotations about two and two Dimensions there are no igen vectors there are no directions which come out in no directions which come out unaffected but so in general it may or may not be uh uh igen vectors but if there are igen vectors they're defined in the following
+
+00:49:31
+way again I'm going to use M for the generic operator M acts on an igen Vector let's call the Igan Vector I I for igen now of course I is not for igen igen begins with an e but I'm going to call it I anyway all right if n acts on one of its igen vectors igen vectors are not things which are independent of the matrices given a mat a matrix or an operator it has certain igen directions or certain igen vectors and the rule is or the definition is the set of vectors which just get multiplied by
+
+00:50:20
+numbers let's call for the I igen Vector here the igen value is called Lambda I and it simply multiplies the input now different igen vectors of the same Matrix will have different igen values there may be and in general that's that's the generic situation if there are several igen ve vectors they will have different igen values however the igen vectors are not completely unambiguous if you take an igen vector and multiply it by a number the result is still an igen Vector with the same
+
+00:50:59
+igen value If I multiply this equation by a complex number Z I can bring the complex number Z through and I'll find out that any numerical even complex numerical multiple of an igen Vector is also an igen Vector uh so strictly speaking you should talk about igen directions the set of vectors uh is uh uh including or not worrying about their length so to speak but in any case this is the direction of an this is the definition of an igen Vector all right some matrices have igen vectors other matrices don't have igen
+
+00:51:44
+vectors there is something important about Herm Mission matrices or Herm Mission operators Herm Mission operators not only have igen vectors they have a complete set of igen vectors complete means that there are enough of them to expand any vector and even better they have an orthonormal family of igen vectors in general the different igen vectors will have different igen values as I said but it will be true that if a matrix is Herm Mission it has and the dimensionality of the spaces in there will be in mutually
+
+00:52:25
+orthog igen vectors in other words the igen vectors of Herm Mission matrices Define a basis I'm going to let you Pro prove part of that theorem it's a very easy theorem to prove and I'm going to prove the other half of it I'll prove the half that says that if you have two igen vectors with different igen values and that's the generic situation that the igen values are all different if you have two igen vectors with different igen values we will prove that they're orthogonal to each
+
+00:53:02
+other your job is to prove that you won't run out of igen vectors until you have n of them it's not hard it's not hard in any case it's true all right so let's prove that if we have two IG vectors let's m is a Herm Mission all right let's m is Herm Mission m equals a Herm Mission Matrix I use Matrix and operator synonymously which means that m equals m Daga okay let's suppose that m is hermiss and it has an igen value Lambda I the first observation is that the igen
+
+00:53:47
+values of Herm Mission matrices are real that that even comes before what I said previously if there is an igen value it is real okay how do we prove that it's real let's let's prove that it's real well let's take this equation and flip it over into a bra equation to flip it over into a bra equation I flip I I take M and I replace it by m dagger well that's not going to do much because m is equal to M dagger and on the right hand side I flip I and what do I do with Lambda in
+
+00:54:33
+general complex conjugate complex conjugate Lambda R so far we haven't proved that it's real right every time you flip uh from bras to cats you have to complex conjugate all the numbers that are there all right but now assumption m is Herm Mission so it's equal to its own om Mission conjugate and now we have this equation now let's take the inner product of both of these equations with I and the upper equation we're going to take the inner product on the left with I and what does
+
+00:55:21
+that give us that gives us I I time Lambda I let's do the same thing over here except now multiplying on the right this and this are obviously the same M with I on the left and I on the right is the same as this but this is not obviously the same not unless Lambda is equal to Lambda the star II here is the same as I I here that cancels out and therefore we come to the conclusion that if a matrix is Herm Mission if it's equal to its own Herm Mission conjugate then its igen values are equal to their own complex
+
+00:56:15
+conjugates and they are real igen values are permission matrices are real that's the first step now let's prove that if we have two different igen values the corresponding igen vectors must be orthogonal now remember what orthogonal means from a physical point of view it means physically distinct that there's an experiment that you can do to distinguish the two of them unambiguously that's what orthogonality means from a physical point of view let's prove that the igen vectors of M
+
+00:56:50
+with different igen value are orthogonal different Dion value physically distinguishable you should keep that in your head okay so here we are let's let's start with M on I equal Lambda i i and m on J equals Lambda J J two different D vectors I and J first thing we'll do is turn this one over and turn it into a k equation ah a bra it is equation we'll take this one and turn it into a bra equation so that looks like this J M dagger but M dagger is the same as m equals the real number Lambda J igen
+
+00:57:41
+Vector igen values of permission matrices are real times J now here we have okay so we we have two equations what can you do to them so that we can relate them what we can do with them to relate them is to multiply this one by J on the left and this one by I on the right and we will get the same expression on the left hand side of the equation so let's do that j j i i what we have on the left is the same on the upper and lower equation what we have on the right is not necessarily the same so let's require that it's the same
+
+00:58:41
+requiring that it's the same says that Lambda I minus Lambda J times the inner product of J with I must equal Z I've I've just written a fanc I've just written that this is equal to this and then transposed all right so Lambda IUS Lambda J * the inner product of j i equals z well if the product of two things and I have two things Lambda I minus Lambda J and the inner product of J with J If the product of two things is zero it says unambiguously at least one of them is zero it usually says one of them is zero okay
+
+00:59:29
+the inner product of I and J may or may not be zero but let's take the case where we know that the igen vectors correspond to different values of the igen ve sorry that the igen values are different that's what I'm interested in I'm interested in igen vectors corresponding to different values of the igen value so by assumption Lambda I is not equal to Lambda J the conclusion is that the inner product of I with J must be equal to zero so what does that mean that means that I and J are orthogonal
+
+01:00:06
+so we now have a theorem the igen vectors of Herm Mission matrices with different igen value are orthogonal uh let's uh just take the generic case where all of the igen values are different we can come back to what happens when some of them may be the same that's not not not important right now if all the igen values have to be happen to be different than each other then all the igen vectors are mutually orthogonal to each other if there are enough of them and your job is to prod prove there's enough
+
+01:00:42
+of them they form a basis in other words this collection of things called I and J here is a special case of the kind of basis which we labeled with small inj but it's the Bas basis of igen vectors it's the basis of igen vectors of the Herm Mission operator as I said Herm Mission operators will be identified with observable quantities and to say that igen vectors are orthogonal has something or other to do with physical differences that are measurable unambiguously between those uh those states of the
+
+01:01:21
+system okay we are now prepared to state the principles of quantum mechanics we have enough mathematical information or enough mathematical formalism to State the entire show we can put on the Blackboard now what quantum mechanics is and what it says and uh what the rules are or what the correspondences are what the mathematical sorry what the um what the physical meaning of these various things are you won't get the you won't understand this the first time around it'll be foreign it'll be peculiar what
+
+01:02:05
+is he talking about but of course we'll work it out in examples and we'll see how the ideas work so don't get Disturbed if what I throw at you now uh sounds a little bit meaningless that's okay by the time we're finished with some examples it should be clear how we use this all right first of all there are measurable quantities the result of a measurement is always a real number it takes at least two measurements and two somehow two compatible measurements two measurements that can both be performed
+
+01:02:39
+simultaneously to measure a complex number right the basic ingredients and basic measurables are real numbers that's what comes out of your detector you can measure two of them if you can measure two of them if it's possible to simultaneously measure two things and put them together into a complex number but it really is just two measurements so each measurement each thing that you measure has a real result associated with it the physical measurables they're called observables in quantum mechanics
+
+01:03:14
+they're called observables the things that you can measure the observables are identified with Herm Mission matrices or Herm Mission operators observables whoops not Q where did I get Q from I won't write equals are represented by we'll just put an arrow are represented by Herm Mission linear of course operators first statement let's just think in studying the spin in a uh in a uh in a in a rough and loose way we sort of identified some observables the observables that we identified were the components of the
+
+01:04:16
+spin the observables that we could identify or associated with our apparatus Point your apparatus in some direction and measure the spin along those directions we said we called if we measured the spin along the z-axis we called it Sigma Z we can measure it or we could turn our apparatus on its side and measure Sigma X or we can turn apparatus um uh from the x- axis to the Y AIS and measure Sigma y we talked about uh those things we didn't talk about sigmas being Herm Mission operators in fact we didn't talk about them being
+
+01:04:56
+operators at all but we did talk about measuring them these will become Herm Mission operators in time okay all right next the possible values that a given observable can take on what are they for Sigma Z what are the possible plus one or minus one right okay the possible observable values measured in an experiment those observable values are the igen values they're real because the matrices are Herm Mission the igen vectors what about the igen vectors the igen vectors correspond to States states vectors States vectors
+
+01:05:56
+the igen vectors are the states in which the corresponding quantities are definite in other words in which the measurement of them is unambiguous oh well let's let's uh yeah let's uh let's follow through on this here a little bit for all three of these observables the igen values had better be plus or minus one okay now let's come to the igen vectors the igen vectors for example the igen vector with a given igen value is a state of the system where if you measure that particular
+
+01:06:32
+observable you will definitely get the igen value associated with that igen Vector so the igen vectors those are I think I have it backwards we should put igen vectors on this side and on the left side the physical meaning of them the physical meaning is States in which observable has unambiguous unambiguous result example we talked for example about the states up and down those are states in which Sigma Z had definite values when you're up Sigma Z is definitely one when you're down Sigma Z is definitely minus one any
+
+01:07:50
+other Vector Sigma Z is statistically uh uh either plus or minus one but with a Randomness okay so up and down must be the igen vectors of Sigma Z left and right were the states in which Sigma X was unambiguously either plus one or minus one so left and right must be the igen vectors of Sigma X whatever Sigma X is we're going to try to figure out what Sigma X is knowing its igen values knowing it igen values and its igen vector s and what was the other three the other two called in and out I think yeah in
+
+01:08:31
+and out were the igen vectors of Sigma y so we have three connections and now a fourth connection given a general State not an igen Vector not an igen vector given a general State a somebody made an electron or a system of some sort and left it in the state a then we can talk about what is the probability that we measure the igen values of M at different values there may be several different igen values in this case they would be plus one and minus one but more generally thousand igen values a million igen values whatever
+
+01:09:28
+whatever the number is labeled by the uh the label I what is the probability that when you measure M you get Lambda I that's the last piece of uh thing here so on the left hand side we put probability physical meaning probability and I'll write it just as the probability to measure I no to measure Lambda I I'm sorry to measure Lambda I that the result of the experiment comes out a particular igen value of the observable m whatever m is that is related not related to it's essentially equal to well two pieces
+
+01:10:21
+comes in two steps first you calculate if you have the the the vector a the vector which you start that's the state of the system you take its inner product with the igen vector I the projection of a onto I the component of a in the I Direction now that in general is a complex number that is not the probability you multiply it by its own complex conjugate to get a real positive number and that is the probability we can multiply this by its complex conjugate or we can just write it I a this I a and AI are complex conjugates
+
+01:11:05
+of each other we can also write this as the absolute value of I a squared the individual components before we Square them are called amplitudes they're called probability amplitudes probability amplitudes are things which you multiply by their complex conjugates to find probabilities they're real they're positive and that's the fourth the fourth postulate of quantum mechanics now they're not all independent uh I use them because uh because they're reasonably intuitive in fact you can
+
+01:11:47
+probably get rid of at least two of them and prove them from the other from the others but we don't need to do that this is a good starting point um and these are the basic four postulates of quantum mechanics okay the other postulate is that when you measure a quantity you prepare the system in a state of definite value of that quantity I won't bother writing that down when you measure something you are in effect pushing it into a state of definite value of that quantity depending on what
+
+01:12:23
+the outcome of your experiment is if your outcome measures some particular if the outcome of an experiment is some particular igen value that means you pushed the system into the state into the igen state of that quantity with that IG value I won't write that down it takes too many words to write it down it's under the P the the probability I yeah uh next to the P what is that I can't with your handwriting p o p o b Pro it's probably probable probably probability yeah this reads the probability of
+
+01:13:11
+measuring Lambda oh it is Lambda I Lambda I the probability of measuring Lambda I is the square of the inner product of a with I it's if you like it's the projection of a onto the I direction or the component of a in the I Direction now there's an implication here there's an implication here about the nature of State vectors coming from the assumption that total probabilities are equal to one be normalized what that I just said they have to be normalized yeah yeah let's uh let's work that out
+
+01:14:00
+if you want the total probability to add up to one then you want the sums of all these objects when you sum over I over the various possible values of that you can measure you want that to equal one so you want the sum of I for any allowable State a we want the sum of a i i a to equal one now I is a basis and if you go up to the top equation there you have equations which tell you how to deal with exactly this combination what is the sum of a i of i i a it's just a so what this says is that
+
+01:15:03
+the inner product of a with itself should equal one the total length of a should be equal to one that's not too surprising that that's what this says this says the sums of the squares of the components of a add up to one for ordinary vectors that would just say the length of the vector was one and that's what this says the length of a is equal to 1 it's equivalent in terms of the alphas we got rid yeah the alphas are up there also it's equivalent to the sum of alpha star I Alpha I equals
+
+01:15:37
+1 well I capital I and so there is one combination of the alphas this is one real equation it's not a complex equation it's a real equation and that means there's one real combination of the alphas which has to be constrained Alphas are not completely free or the alphas are not completely free the roughly speaking the sums of their squares or the sums of them times a complex conjugate has to add up to one so that means there's less uh fewer independent quantities than you thought there is another fact which we
+
+01:16:22
+have not gotten to yet we will get to it um you can sort of see it from here all probabilities any probability that you ever may want to measure or that you ever may want to uh uh to calculate or compare with experiment is always connected with a real quantity like this the collection of such real quantities uh is invar under a certain operation the operation is multiplying the state vector by a phase everybody know what it means to multiply a number a thing by a phase you multiply it by an e to the I
+
+01:17:07
+Theta if you multiply all the components of a by the same overall phase then every probability is unchanged every probability is unchanged uh even if you rotate bases it's unchanged So Physical quantities don't respond to a change of the phase that means there are two fewer degrees of freedom two fewer parameters in the specification of a state than the collection of complex numbers that would define a vector in the abstract space two one is the phase the overall phase and the the other is
+
+01:17:53
+the magnitude of it we'll come back to that okay that uh that's taken us a long way um You probably uh saturated but I'm not so we're going to continue I'm on a high questions um probability also has to be can't be negative it has to yeah yeah that's right so these These are always positive okay think times it's complex conjugate is always positive is the evolution postulate uh is what is the what the evolution we haven't yeah we we haven't gotten to that yet how how things change with time
+
+01:18:33
+yeah no we're at the level now of where we were in classical physics when we just said the state of a system is just a point in a uh among a set of things that's about where we are that's how that's how far we've gotten we've not talked about how how things change in particular how the states of system systems change we'll come to that can so uh back the beginning when we had this example of um you know measuring these cubits and you had um the apparatus at an angle and you and you
+
+01:19:09
+got the cosine of theta right so we're going do it okay what okay I guess my question was that that we got we somehow got the idea that cosine of theta is going to be the average of your measurements should it be cosine squ no I see why I see where you're going but okay not right can you say that last po posture one more time so I can get when you measure something you push it into the state you are measuring no when you measure something you get a result the result is statistically uh determined meaning to say that you may
+
+01:19:54
+get one result you may get another result but once you get that result then you know what state the system is in it's in the igen state of the quantity that you measured with the igen value that came up on your on your detector remember when we had our apparatus and we measured Sigma Z we said that not only measures Sigma Z but It prepares the system in a state of definite Sigma Z it leaves it over in a state in which Sigma Z is definite for the next measurement that means it leaves it in an igen state of Sigma
+
+01:20:38
+Z okay let's see if we can apply this to to the spin system we get a very general formulation and now we want to try it out and see how it works all right so the I want to start with the three observables sigma X Sigma Y and sigma Z and see what I can learn about them first of all Sigma Z now let's start in the basis associated with the measurement of the spin along the z-axis let's take that as the appropriate basis uh Sigma Z has two igen vectors by from the experiments that we talked
+
+01:21:38
+about we would have learned have we done the experiment that Sigma Z has two igen values and two igen vectors the two igen vectors we've called up and down and they're associated with Sigma Z equals + one and minus one those must be the igen vectors of Sigma Z and igen values and so we can immediately say Sigma Z times up is equal to up+ one time up why because the measured value when we measure Sigma Z is going to be + one that's the igen value and up is the igen vector because in the UP State
+
+01:22:21
+Sigma Z is definite what about Sigma Z on the down state what should I write there is Sigma Z definite in the down state yes it's always minus one it's going to be minus one and that means the igen value is minus one time down it's not Sigma Z * down equals up that wouldn't be an igen Vector an igen Vector has the property that when the operator acts on it it gives the same direction back times the igen value so here is what we know about Sigma Z okay let's see if we can compute its
+
+01:23:04
+Matrix elements and exhibit it as a matrix but when I say exhibited as a matrix I have picked I must pick a basis I'm going to pick the basis up and down first of all One Thing Up and Down are orthogonal to each other they must be according to these principles because if Sigma Z is an observable it corresponds to a hermiss matrix if there are two different igen values the igen vectors must be orthogonal for Herm Mission Matrix and so up and down we first of all learn that up and down are orthogonal that's
+
+01:23:45
+one fact so it doesn't matter whether we write up down or down up I mean we could write it in the opposite order let's see if if we can compute The Matrix elements The Matrix elements are just the array that we get when we consider the four possibilities they're going to be 2 x two matrices and the four possibilities are going to be first of all we take the inner product of this back with up that'll be the up up Matrix element or the one one Matrix element what is that going to be uh to find let's I'm not sure I want
+
+01:24:22
+to uh let's let's do it over here let's calculate up Sigma Z up that's equal Sigma Z acts to the right to give us up + one well plus one is just one times up just the inner product of up with itself and since up is a basis Vector it's normalized and and this is just equal to one its magnitude is equal to one I can choose it to be equal to one uh it's positive yeah it's positive it's real and it's just plain one so up here in the up up or the one one place it's
+
+01:25:11
+just one now let's what about the off diagonal element the off diagonal element that's that's an off diagonal element there that's going to be equal to the inner product of downward up what's that zero over here I would get exactly the same thing if I put down over here and up over here then I would use this equation over here let Sigma Z act on down and then take its overlap with up and I would get zero again and the last one is down Sigma Z down what is that well you go over to here
+
+01:25:55
+Sigma Z * down is minus down so this is just equal to minus down down and what's that minus one so this is the Matrix that's associated with Sigma Z when it acts on a vector on a column Vector in particular when it acts what is the column Vector that's associated with up it's just a one in the top and a zero in the bottom all right so let's just try this one zero what do we get we get 1 * 1 is 1 0 * 0 0 we just get the same Vector back that's good okay same thing we'll get it's
+
+01:26:44
+guaranteed that we'll get the right that the igen vectors are what they're supposed to be namely just up and down and that the igen values are plus one and minus one in the right way all right so we found one of the sigma matrices Sigma Z these are of course well not of course they're called the POI matrices Sigma X Sigma Y and sigma Z let's see what we can find out about Sigma X now I'm using if I use the X basis if I use the basis of left and right of course I would just find exactly the
+
+01:27:22
+same thing but I want to stick with the up down basis I want to stick with the up down basis but find out what the Matrix elements of Sigma X are now what is the property of Sigma X the property of Sigma X is that its igen vectors are left and right so for example Sigma X on right that equals right and what about Sigma X on left equals minus left those are the two possible values that Sigma X can take on left and right are the igen vectors in other words the states in which Sigma X has definite values plus one and minus
+
+01:28:08
+one and this is what I know about Sigma X but I want to find its Matrix elements in the up down basis so what I really want then let's uh let's come over to here and see if we can compute in the same basis what did I do with the the poly Matrix did I erase it I worked so hard to get it Sigma Z is equal to 1 - 1 0 0 now we want to try to get Sigma X so the first step is raise the black oh is erase the erase the Blackboard and let's start one by one there are four Matrix elements Let's uh do them
+
+01:28:58
+one by one up Sigma X up now what we have to know is that up is equal to left plus right over theare < TK of two you remember that we originally defined left and right to be up plus or minus down over the < TK of two but then we can solve for up and down in terms of left and right down down is left uh sorry it's right minus left with a notation we had last time it was down no sorry it's right minus left over < tk2 so all we have to do is plug them in on the left here we have left you
+
+01:30:01
+know I'm going to I'm going to abuse notation and just write this as left plus right over Square < TK of two this is a meaningless uh symbol but you I think you know what I mean I mean the bra Vector left plus the bra Vector right over the < TK of two but uh too many vertical strokes and I get confused so let's just write it as left plus right over the > of two Sigma X left plus right over squ < TK of two first of all I can take out this is the what is this thing this is Sigma X
+
+01:30:39
+up up there it is it's the up up entry one that goes up in here all right first of all there's a factor of two that I can take out square root of two from here and a squ > of two from here that's alog together 1/2 and now let's look at this what happens when Sigma X hits left it gives back left except with a minus sign what happens when Sigma X hits right it gives back right with a plus sign so when Sigma X acts on this what it winds up giving you can take the sigma X away and just remember what it
+
+01:31:23
+does it gives right minus left instead of right plus left it hits the vector right and gives plus one it hits the vector left and gives minus one again these are not things to be numerically added these are vectors the right Vector minus the left vector and now what we have to do is take the inner products well the inner product of right with right right is what one the inner product of right with left is zero the inner product of left with right is zero and the inner product with left with left minus one when you account for this
+
+01:32:08
+minus the result is they cancel all right 1 minus one or equivalently the in a product of um of of a well okay zero Z so first of all there's a zero over here that's the up up Matrix element it's easy to get the down down Matrix element the down down Matrix element you would do exactly the same thing you except that you would start with right minus Left Right minus Left Right minus left Sigma X and then you would say that when Sigma X hits right it's plus right when it hits left it gives minus left so
+
+01:32:54
+when Sigma X acts it takes right minus left to right plus left and what's the inner product of right plus left with my right minus left zero again right with right is one left with left is minus one and the cross terms are just zero so there's a zero over here now looks like all we're going to get is zeros but that can't be right so let's try let's try up down all right we try up down let's put up down there up will be right plus left we'll have Sigma X and then down is Right minus
+
+01:33:40
+left what happens when Sigma X hits right plus left it makes right minus left and now what's the inner product the inner product of right with right is one the inner product of minus left with minus left is also + one so they add and again the cross terms between right and left are zero so we get two / two which is one get a one up here and if we work it out we'll get another one over here all right so now we've got Sigma y let's just stop for a minute and say what is it that we have we have a pair
+
+01:34:33
+of linear operators or a pair of matrices whose igen vectors are this fellow's igen vectors here are up and down this fellow's zigen vectors are right and left they're exactly what we were talking about on the previous Blackboard the states in which the observables have unambiguous results are the igen vectors so that's where we are now the last one is Sigma y okay what do we know about Sigma y I'm Not In and Out are the igen vectors the one we just did is Sigma X right when we
+
+01:35:17
+just Sigma X you Sig y you Sig y oh Sigma X sorry thank you actually don't think I wrote Sigma y I think I just failed to cross the X I think I don't know maybe I wrot Sigma y all right the next one is Sigma Y and here I'm going to leave some of the some of the algeb this is very easy to you but let's see what the uh what the rules are oh in incidentally uh no I think we're okay we don't we we know the rules okay so there was in and out I cannot remember which one was which uh so I'm going to fake it and if
+
+01:36:14
+it comes out wrong it comes out wrong um I think in was up plus I think itimes down and out was up minus I * down and I think I left out factors of square < TK of two inally you can check that in and out are orthogonal to each other okay there there's in and out can we find a matrix which in and out AR vectors with I value plus one and minus one it's getting late it's very easy leave it to you I will simply tell you what that Matrix is it's Unique it's Unique if you know the igen
+
+01:37:35
+vectors and you know the igen values it's Unique one way of doing it is to solve for up and down in terms of in andout once you've solved for up and down in terms of in and out and you know how the Matrix acts on in and out you're finished the last one in the multiplet here now I am writing Sigma y similar to this one but it's O minus I and I all right so a little exercise you don't really need to go and prove this you can do a different thing you can take this Matrix and show that these are
+
+01:38:20
+the igen vectors of it you just show that these are the igen vectors of it you take this Matrix and show that it's igen vectors what is that mean it means that it's IG vectors are 1 I and one minus I the square root of two doesn't matter igen vectors are igen vector they don't care about the square root of two these are the three poly matrices that represent the components of a spin in different directions uh I think I think uh that's enough for tonight what I was going to do and I have in my notes was exactly
+
+01:38:56
+this question what happens if you have a component of spin along an arbitrary Direction can we show using what we know that the pro we'll do this next time we'll do this next time if we have a component of spin along an arbitrary Direction and we want to calculate using the principles we want to calculate what the probability is for the measurement of Sigma Z in various either plus or minus we should be able to do it we have enough information I think it's probably more than uh than we can yet handle for
+
+01:39:34
+tonight think we did a lot for tonight probably more than reason Am I Wrong to use need to be negative to make those two work does one of the U's need to be negative no no you know what you're missing you're missing that you have to complex conjugate if you want the inner product of in without you multiply 1 * 1 and then add I not time minus I but I * plus I yeah yeah the only way that somebody like me knows so quickly why what you're thinking is having made the same mistake of course
+
+01:40:26
+sometime in the past okay all right we'll finished for tonight I think unless there's questions for more please visit us at stanford.edu
+

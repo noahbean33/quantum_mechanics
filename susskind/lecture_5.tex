@@ -1,0 +1,171 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 5}
+\lhead{Quantum Mechanics --- The Theoretical Minimum}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+
+\title{\textbf{Lecture 5: Uncertainty and the Schr\"{o}dinger Equation} \\ \large Commutators, Simultaneous Measurability, and Spin Dynamics}
+\author{Based on Leonard Susskind's \textit{The Theoretical Minimum}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Simultaneous Measurability and Commutators}
+% ============================================================
+
+\subsection{1.1 When can two observables be measured simultaneously?}
+
+If two observables $L$ and $M$ can be measured simultaneously, the system must be left in a state that is an eigenvector of \emph{both} operators.  This requires the existence of a complete basis of \textbf{simultaneous eigenvectors}.
+
+\begin{theorem}
+Two Hermitian operators $L$ and $M$ can be simultaneously measured if and only if they \textbf{commute}:
+\[
+    \boxed{[L,M] \equiv LM - ML = 0.}
+\]
+\end{theorem}
+
+\subsection{1.2 Proof sketch}
+Suppose $\{\ket{i}\}$ is a complete set of simultaneous eigenvectors:
+\[
+    L\ket{i} = l_i\ket{i}, \qquad M\ket{i} = m_i\ket{i}.
+\]
+Then
+\[
+    ML\ket{i} = m_i l_i\ket{i} = l_i m_i\ket{i} = LM\ket{i}.
+\]
+Since this holds on every basis vector, $ML = LM$ on the entire space.  The converse also holds: if $[L,M]=0$ then a common eigenbasis exists.
+
+\subsection{1.3 The uncertainty idea}
+When $[L,M]\neq 0$, there are \emph{no} simultaneous eigenstates.  Measuring $L$ and then $M$ disturbs the first measurement.  This is the origin of the \textbf{uncertainty principle}: certain pairs of observables cannot both have definite values at the same time.
+
+\medskip
+\noindent\textbf{Example:} The Pauli matrices satisfy
+\[
+    [\sigma_x,\sigma_y] = 2i\sigma_z, \qquad
+    [\sigma_y,\sigma_z] = 2i\sigma_x, \qquad
+    [\sigma_z,\sigma_x] = 2i\sigma_y.
+\]
+No two spin components can be simultaneously definite.
+
+% ============================================================
+\section{2. Review of the Schr\"{o}dinger Equation}
+% ============================================================
+
+\subsection{2.1 Time-dependent form}
+\[
+    i\frac{d}{dt}\ket{\psi(t)} = H\ket{\psi(t)},
+\]
+where $H$ is the Hamiltonian (Hermitian).  This governs the evolution of a system \emph{between measurements}.
+
+\subsection{2.2 Derivation recap}
+\begin{enumerate}[nosep]
+    \item States evolve by a unitary operator: $\ket{\psi(t)}=U(t)\ket{\psi(0)}$.
+    \item Unitarity ($U^\dagger U=\mathbf{1}$) ensures distinguishable states stay distinguishable.
+    \item For small $\epsilon$: $U(\epsilon)=\mathbf{1}-i\epsilon H$; unitarity forces $H=H^\dagger$.
+    \item Taking the limit gives the Schr\"{o}dinger equation.
+\end{enumerate}
+
+% ============================================================
+\section{3. Time-Independent Schr\"{o}dinger Equation}
+% ============================================================
+
+The Hamiltonian $H$ is an observable representing \textbf{energy}.  Its eigenvalue equation
+\[
+    \boxed{H\ket{E_i} = E_i\ket{E_i}}
+\]
+is the \textbf{time-independent Schr\"{o}dinger equation}.  The eigenvalues $\{E_i\}$ are the allowed energy levels; the eigenvectors $\{\ket{E_i}\}$ form a complete orthonormal basis (the \emph{energy eigenbasis}).
+
+\subsection{3.1 Time evolution of energy eigenstates}
+If $\ket{\psi(0)}=\ket{E_i}$, then
+\[
+    \ket{\psi(t)} = e^{-iE_i t}\ket{E_i}.
+\]
+The state acquires a phase but its physical content (all probabilities) is unchanged: energy eigenstates are \textbf{stationary states}.
+
+\subsection{3.2 General solution}
+Expanding an arbitrary initial state:
+\[
+    \ket{\psi(0)} = \sum_i c_i\ket{E_i} \quad\Longrightarrow\quad
+    \ket{\psi(t)} = \sum_i c_i\,e^{-iE_i t}\ket{E_i}.
+\]
+
+% ============================================================
+\section{4. Time Evolution of Expectation Values}
+% ============================================================
+
+For any observable $L$, the expectation value evolves as
+\[
+    \frac{d}{dt}\expval{L} = \bra{\psi}\bigl(-i[L,H]\bigr)\ket{\psi},
+\]
+or more compactly,
+\[
+    \boxed{\frac{d}{dt}\expval{L} = -i\expval{[L,H]}.}
+\]
+
+\subsection{4.1 Consequences}
+\begin{itemize}[nosep]
+    \item If $[L,H]=0$, then $\expval{L}$ is \textbf{conserved} (constant in time).  In particular, $\expval{H}$ is always conserved (energy conservation) since $[H,H]=0$.
+    \item This is the quantum analogue of the classical result that a quantity whose Poisson bracket with the Hamiltonian vanishes is a constant of the motion.
+\end{itemize}
+
+% ============================================================
+\section{5. Application: Spin in a Magnetic Field}
+% ============================================================
+
+A simple Hamiltonian for a single spin in a magnetic field along $z$:
+\[
+    H = \frac{\omega}{2}\,\sigma_z, \qquad
+    E_+ = +\frac{\omega}{2}\;(\ket{\uparrow}), \qquad
+    E_- = -\frac{\omega}{2}\;(\ket{\downarrow}).
+\]
+
+\subsection{5.1 Time evolution}
+Starting from a general state $\ket{\psi(0)}=\alpha\ket{\uparrow}+\beta\ket{\downarrow}$:
+\[
+    \ket{\psi(t)} = \alpha\,e^{-i\omega t/2}\ket{\uparrow} + \beta\,e^{+i\omega t/2}\ket{\downarrow}.
+\]
+
+\subsection{5.2 Precession}
+Compute expectation values:
+\begin{align}
+    \expval{\sigma_z}(t) &= |\alpha|^2 - |\beta|^2 = \text{const}, \\
+    \expval{\sigma_x}(t) &= 2\operatorname{Re}\!\bigl(\alpha^*\beta\,e^{i\omega t}\bigr), \\
+    \expval{\sigma_y}(t) &= 2\operatorname{Im}\!\bigl(\alpha^*\beta\,e^{i\omega t}\bigr).
+\end{align}
+The spin expectation vector traces out a circle in the $xy$-plane at frequency $\omega$---this is \textbf{Larmor precession}, exactly matching the classical result for a magnetic dipole in a uniform field.
+
+% ============================================================
+\section{6. Summary}
+% ============================================================
+
+\begin{enumerate}[nosep]
+    \item Two observables can be simultaneously known iff their operators commute.
+    \item Non-commuting observables (e.g.\ $\sigma_x$ and $\sigma_z$) lead to \emph{uncertainty}: no state has definite values for both.
+    \item The time-independent Schr\"{o}dinger equation $H\ket{E}=E\ket{E}$ gives the energy spectrum.
+    \item Energy eigenstates are stationary; general states evolve as superpositions with time-dependent phases.
+    \item Expectation values evolve via $\frac{d}{dt}\expval{L}=-i\expval{[L,H]}$.
+    \item A spin in a $z$-directed magnetic field precesses in the $xy$-plane at the Larmor frequency.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,186 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 1}
+\lhead{Quantum Mechanics --- The Theoretical Minimum}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{postulate}{Postulate}
+\newtheorem{definition}{Definition}
+
+\title{\textbf{Lecture 1: Introduction to Quantum Mechanics} \\ \large Systems, States, and the Qubit}
+\author{Based on Leonard Susskind's \textit{The Theoretical Minimum}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Classical Mechanics Recap}
+% ============================================================
+
+Classical mechanics rests on a small number of intuitive concepts:
+
+\begin{itemize}[nosep]
+    \item \textbf{System} --- a closed, isolated entity whose evolution we wish to predict.
+    \item \textbf{State} --- a complete specification of the system at an instant of time (an element of the \emph{space of states}).
+    \item \textbf{Equation of motion} --- a deterministic rule that \emph{updates} the state from one instant to the next.
+\end{itemize}
+
+\subsection{1.1 Discrete examples}
+The simplest classical system is a \textbf{coin}: the state space $\{H, T\}$ contains exactly two elements.  Two possible laws of motion:
+\begin{enumerate}[nosep]
+    \item \emph{Nothing happens}: $H\to H$, $T\to T$.
+    \item \emph{Oscillation}: $H\to T\to H\to T\cdots$
+\end{enumerate}
+For a \textbf{die}, the state space has six elements $\{1,2,3,4,5,6\}$.
+
+\subsection{1.2 Continuous example}
+A particle on a line has the state space $\mathbb{R}^2$, the \emph{phase space} $(q,p)$ of position and momentum.
+
+\subsection{1.3 Classical logic of propositions}
+Propositions about a system correspond to \emph{subsets} of the state space:
+\begin{itemize}[nosep]
+    \item \textbf{AND} $\longleftrightarrow$ intersection of subsets.
+    \item \textbf{OR} (inclusive) $\longleftrightarrow$ union of subsets.
+    \item Two propositions are \emph{mutually exclusive} if their intersection is empty.
+\end{itemize}
+
+% ============================================================
+\section{2. Visualization and Abstraction}
+% ============================================================
+
+Our neural architecture is hard-wired for three spatial dimensions.  We cannot truly visualize even two-dimensional space in isolation---we always embed it in three dimensions.  For phenomena beyond everyday scales (subatomic particles, high velocities), abstract mathematics \emph{replaces} visualization.  This warning is especially important for quantum mechanics.
+
+% ============================================================
+\section{3. The Qubit --- The Simplest Quantum System}
+% ============================================================
+
+\begin{definition}[Qubit]
+A \textbf{qubit} is a quantum system whose measurement yields exactly one of two outcomes.  We assign a degree of freedom $\sigma$ with
+\[
+    \sigma = +1 \quad (\text{``up'' / heads}), \qquad
+    \sigma = -1 \quad (\text{``down'' / tails}).
+\]
+Equivalently, we write $\ket{\uparrow}$ or $\ket{\downarrow}$.
+\end{definition}
+
+% ============================================================
+\section{4. The Apparatus and Measurement}
+% ============================================================
+
+An \textbf{apparatus} $\mathcal{A}$ is an idealized measuring device with:
+\begin{itemize}[nosep]
+    \item An \emph{orientation} (``this side up'').
+    \item A \emph{window} that displays a number: $+1$, $-1$, or blank (before interaction).
+\end{itemize}
+
+\subsection{4.1 Measurement as preparation}
+\begin{enumerate}[nosep]
+    \item Start with a qubit in an unknown state.
+    \item Bring the detector close; the window displays $+1$ or $-1$.
+    \item Repeat immediately: the \emph{same} result is obtained every time.
+\end{enumerate}
+Thus a measurement both \emph{determines} and \emph{prepares} the state.
+
+% ============================================================
+\section{5. Directionality of the Qubit}
+% ============================================================
+
+\subsection{5.1 Flipping the detector}
+If the apparatus initially reads $+1$ and is then turned \emph{upside down} ($180^\circ$), it reads $-1$.  This reveals that the qubit possesses a \textbf{spatial directionality}---it behaves somewhat like a vector.
+
+\subsection{5.2 Rotating by $\mathbf{90^\circ}$}
+Prepare the qubit in $\ket{\uparrow}$ (verified by repeated measurement with the vertical detector).  Now rotate the detector to the \emph{horizontal} ($90^\circ$):
+\begin{itemize}[nosep]
+    \item Each individual measurement yields $+1$ or $-1$ (never $0$).
+    \item The result is \emph{random}, with equal probabilities.
+    \item Over many trials, the \textbf{average} is
+    \[
+        \expval{\sigma_x} = 0.
+    \]
+\end{itemize}
+Classically, the horizontal component of a unit vector pointing up \emph{is} zero.  Quantum mechanically, the individual result is always $\pm 1$, but the average reproduces the classical expectation.
+
+\subsection{5.3 Arbitrary angle $\theta$}
+Rotate the detector by angle $\theta$ from vertical.  Prepare the qubit up and measure repeatedly:
+\[
+    \boxed{\expval{\sigma_\theta} = \cos\theta.}
+\]
+This is exactly the component of a unit vector along the detector axis---but each single measurement is still $\pm 1$.
+
+% ============================================================
+\section{6. Key Observations}
+% ============================================================
+
+\begin{enumerate}[nosep]
+    \item \textbf{Reproducibility}: Repeating the \emph{same} measurement on the \emph{same} qubit yields the same result.
+    \item \textbf{Disturbance}: After measuring along one axis, a subsequent measurement along a \emph{different} axis gives a random result.  Measurement \emph{changes} the state.
+    \item \textbf{Statistical behavior}: Averages of many measurements reproduce the classical vector-component rule $\expval{\sigma} = \cos\theta$, but individual outcomes are always $\pm 1$.
+\end{enumerate}
+
+% ============================================================
+\section{7. The Space of States is Not a Set}
+% ============================================================
+
+In classical mechanics the space of states is an ordinary \textbf{set} (points in phase space, faces of a die, etc.).  In quantum mechanics, the space of states is a \textbf{vector space}.
+
+\begin{postulate}
+The states of a quantum system correspond to vectors in a \emph{complex vector space}.
+\end{postulate}
+
+The classical logic of sets (AND $\leftrightarrow$ intersection, OR $\leftrightarrow$ union) is replaced by the algebraic structure of a vector space.  Only in certain limiting cases does the quantum description reduce to a classical set.
+
+% ============================================================
+\section{8. Preview: Complex Vector Spaces}
+% ============================================================
+
+A \textbf{complex vector space} is a collection of objects (vectors) that can be:
+\begin{itemize}[nosep]
+    \item \textbf{Added}: $\ket{A} + \ket{B} = \ket{C}$.
+    \item \textbf{Multiplied by complex numbers}: $z\ket{A}$, \; $z\in\mathbb{C}$.
+\end{itemize}
+Concrete representation: column vectors of complex numbers,
+\[
+    \ket{A} \longleftrightarrow \begin{pmatrix} \alpha_1 \\ \alpha_2 \end{pmatrix}, \qquad
+    \alpha_1, \alpha_2 \in \mathbb{C}.
+\]
+
+\subsection{8.1 Dual (bra) vectors}
+Every ket $\ket{A}$ has a corresponding bra $\bra{A}$ in the \emph{dual} space, related by complex conjugation:
+\[
+    \bra{A} \longleftrightarrow \begin{pmatrix} \alpha_1^* & \alpha_2^* \end{pmatrix}.
+\]
+
+\subsection{8.2 Inner product}
+\[
+    \braket{B}{A} = \beta_1^*\alpha_1 + \beta_2^*\alpha_2.
+\]
+Properties:
+\begin{itemize}[nosep]
+    \item $\braket{A}{B} = \braket{B}{A}^*$.
+    \item $\braket{A}{A} \geq 0$ and real --- interpreted as the \emph{squared length} of $\ket{A}$.
+\end{itemize}
+
+\subsection{8.3 Orthogonality and dimension}
+Two vectors are \textbf{orthogonal} if $\braket{A}{B}=0$.  The \textbf{dimension} of the space is the maximum number of mutually orthogonal (nonzero) vectors.
+
+\medskip
+\noindent\textit{For a single qubit, the state space is a \textbf{two-dimensional} complex vector space.}
+
+\end{document}

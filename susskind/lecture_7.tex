@@ -1,0 +1,170 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 7}
+\lhead{Quantum Mechanics --- The Theoretical Minimum}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\title{\textbf{Lecture 7: Entanglement and the Density Matrix} \\ \large Wave Functions, Reduced Descriptions, and Quantum Correlations}
+\author{Based on Leonard Susskind's \textit{The Theoretical Minimum}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. The Wave Function}
+% ============================================================
+
+\begin{definition}[Wave function]
+Given a state $\ket{\Psi}$ and a complete orthonormal basis $\{\ket{a,b,c,\dots}\}$ labeled by eigenvalues of commuting observables, the \textbf{wave function} is
+\[
+    \psi(a,b,c,\dots) \equiv \braket{a,b,c,\dots}{\Psi}.
+\]
+It encodes the same information as $\ket{\Psi}$; every observable's expectation value can be computed from it.
+\end{definition}
+
+The state can be reconstructed from its wave function via
+\[
+    \ket{\Psi} = \sum_{a,b,c,\dots} \psi(a,b,c,\dots)\,\ket{a,b,c,\dots}.
+\]
+
+\subsection{1.1 Examples}
+\begin{itemize}[nosep]
+    \item \textbf{Single spin}: basis $\{\ket{\uparrow},\ket{\downarrow}\}$; wave function $\psi(\sigma_z)$ takes two values.
+    \item \textbf{Two spins}: basis $\{\ket{\uparrow\uparrow},\ket{\uparrow\downarrow},\ket{\downarrow\uparrow},\ket{\downarrow\downarrow}\}$; wave function $\psi(\sigma_z,\tau_z)$ is a function of two discrete variables.
+    \item \textbf{Particle on a line}: basis $\{\ket{x}\}$; wave function $\psi(x)$ is a continuous complex-valued function.
+\end{itemize}
+
+% ============================================================
+\section{2. Expectation Values via the Wave Function}
+% ============================================================
+
+For an observable $L$ with matrix elements $L_{a'a}=\bra{a'}L\ket{a}$ (restricting to a single label for clarity):
+\[
+    \expval{L} = \sum_{a,a'} \psi^*(a')\,L_{a'a}\,\psi(a).
+\]
+This is the master formula from which all measurable predictions follow.
+
+% ============================================================
+\section{3. Composite Systems and the Wave Function}
+% ============================================================
+
+For a composite system of Alice ($a$) and Bob ($b$), the wave function is $\psi(a,b)$.
+
+\begin{definition}[Product state]
+The wave function factorizes:
+\[
+    \psi(a,b) = \psi_A(a)\,\phi_B(b).
+\]
+\end{definition}
+
+An \textbf{entangled state} is one where no such factorization exists.
+
+\subsection{3.1 Observables on composite systems}
+Alice's observable $L$ has matrix elements
+\[
+    L_{a'b',\,ab} = L_{a'a}\,\delta_{b'b} \qquad\text{(identity on Bob)}.
+\]
+Bob's observable $M$:
+\[
+    M_{a'b',\,ab} = \delta_{a'a}\,M_{b'b} \qquad\text{(identity on Alice)}.
+\]
+
+% ============================================================
+\section{4. The Density Matrix}
+% ============================================================
+
+When Alice has access only to her subsystem and cannot perform experiments on Bob, she needs a reduced description.
+
+\begin{definition}[Alice's density matrix]
+\[
+    \boxed{\rho^{(A)}_{a,a'} = \sum_b \psi^*(a',b)\,\psi(a,b).}
+\]
+Bob's variables have been \textbf{summed over} (``traced out'').
+\end{definition}
+
+\subsection{4.1 Properties}
+\begin{itemize}[nosep]
+    \item $\rho^{(A)}$ is \textbf{Hermitian}: $(\rho^{(A)}_{a,a'})^* = \rho^{(A)}_{a',a}$.
+    \item $\operatorname{Tr}\rho^{(A)}=1$ (normalization).
+    \item For any Alice observable $L$: $\expval{L} = \operatorname{Tr}(L\,\rho^{(A)}) = \sum_{a,a'} L_{a'a}\,\rho^{(A)}_{a,a'}$.
+    \item $\rho^{(A)}$ contains \emph{all} statistical information Alice can ever extract from her subsystem alone.
+\end{itemize}
+
+\subsection{4.2 Product state}
+If $\psi(a,b)=\psi_A(a)\phi_B(b)$, then
+\[
+    \rho^{(A)}_{a,a'} = \psi_A(a)\,\psi_A^*(a') \cdot \underbrace{\sum_b |\phi_B(b)|^2}_{=1} = \psi_A(a)\,\psi_A^*(a').
+\]
+This is a \textbf{pure-state} density matrix: $(\rho^{(A)})^2 = \rho^{(A)}$.
+
+\subsection{4.3 Entangled state}
+For the singlet $\ket{\Psi}=\frac{1}{\sqrt{2}}(\ket{\uparrow\downarrow}-\ket{\downarrow\uparrow})$:
+\[
+    \rho^{(A)} = \frac{1}{2}\begin{pmatrix}1&0\\0&1\end{pmatrix} = \frac{1}{2}\mathbf{1}.
+\]
+This is a \textbf{maximally mixed} state: Alice's subsystem appears completely random.  She has \emph{zero} information about her spin alone, even though the composite state is a perfectly known pure state.
+
+% ============================================================
+\section{5. Correlations Revisited}
+% ============================================================
+
+\begin{definition}[Correlation]
+\[
+    C(L,M) = \expval{LM} - \expval{L}\expval{M}.
+\]
+\end{definition}
+
+For the singlet:
+\begin{align}
+    \expval{\sigma_z} &= 0, & \expval{\tau_z} &= 0, & \expval{\sigma_z\tau_z} &= -1, \\
+    \expval{\sigma_x} &= 0, & \expval{\tau_x} &= 0, & \expval{\sigma_x\tau_x} &= -1.
+\end{align}
+Every pair of matching components has correlation $-1$.  This is \textbf{maximal entanglement}: knowing one spin's measurement outcome determines the other's with certainty (opposite result).
+
+\subsection{5.1 Criterion for entanglement}
+A composite state is entangled if and only if there exists \emph{at least one} pair of subsystem observables $(L,M)$ with $C(L,M)\neq 0$.  Equivalently, the reduced density matrix $\rho^{(A)}$ is \emph{not} a pure state (i.e.\ $\operatorname{Tr}(\rho^{(A)})^2 < 1$).
+
+% ============================================================
+\section{6. Key Conceptual Points}
+% ============================================================
+
+\begin{enumerate}[nosep]
+    \item A composite system can be in a definite pure state $\ket{\Psi}$ while each subsystem has \emph{no} definite state of its own---only a density matrix.
+    \item This was Einstein, Podolsky, and Rosen's (EPR) central puzzle: ``We can know everything about the whole and nothing about the parts.''
+    \item The density matrix formalism makes it precise: the subsystem's statistical description is obtained by tracing over the other subsystem's degrees of freedom.
+    \item Entanglement is \emph{not} the same as ``sharing a state''---it is the failure of the wave function to factorize.
+\end{enumerate}
+
+% ============================================================
+\section{7. Summary}
+% ============================================================
+
+\begin{enumerate}[nosep]
+    \item The \textbf{wave function} $\psi(a,b,\dots)$ is the set of expansion coefficients of $\ket{\Psi}$ in a chosen basis.
+    \item The \textbf{density matrix} $\rho^{(A)}$ describes a subsystem by tracing over the inaccessible degrees of freedom.
+    \item In a product state, $\rho^{(A)}$ is pure; in an entangled state, it is mixed.
+    \item Nonzero correlations between subsystem observables are the signature of entanglement.
+    \item The singlet state is maximally entangled: every component measurement is perfectly anti-correlated, yet each individual spin appears maximally random.
+\end{enumerate}
+
+\end{document}
