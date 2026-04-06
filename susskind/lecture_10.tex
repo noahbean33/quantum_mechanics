@@ -41,14 +41,14 @@ A relativistic one-dimensional particle with Hamiltonian $H = cp$ (with $c$ a co
 \end{itemize}
 
 \subsection{1.1 Instability from negative energy}
-If negative-energy particles exist, the vacuum (zero energy) is \textbf{unstable}: particle--antiparticle pairs can be created, lowering the total energy without bound.
+If negative-energy particles exist, the vacuum (zero energy) is \textbf{unstable}: you can take empty space and start putting in particles of negative energy, lowering the total energy without bound.  Energy conservation requires creating positive-energy particles too (e.g.\ photons), but the net effect is unlimited pair creation---the vacuum ``boils.''
 
 \subsection{1.2 Dirac's solution (for fermions)}
-\textbf{Fermions} obey the Pauli exclusion principle: no two particles can occupy the same state.  Dirac proposed that the vacuum is the state in which \emph{all} negative-energy levels are filled (the ``Dirac sea'').
+\textbf{Fermions} obey the Pauli exclusion principle: no two particles can occupy the same state.  Dirac proposed that the true vacuum is the state of \emph{absolute lowest energy}, in which \emph{all} negative-energy levels are already occupied (the ``Dirac sea'').
 \begin{itemize}[nosep]
-    \item No further negative-energy particles can be added.
-    \item A ``hole'' in the filled sea behaves as a positive-energy antiparticle.
-    \item This picture applies to fermions (e.g.\ electrons, neutrinos) but \textbf{not} to bosons (e.g.\ photons), since bosons have no exclusion principle.
+    \item You cannot add any more negative-energy particles---every state is taken.
+    \item A ``hole'' in the filled sea behaves as a positive-energy \textbf{antiparticle} (e.g.\ the positron).
+    \item This picture applies to fermions (electrons, neutrinos) but \textbf{not} to bosons (photons), since bosons have no exclusion principle---you could dump unlimited bosons into the same negative-energy state.
 \end{itemize}
 
 % ============================================================
@@ -163,7 +163,35 @@ Separation of variables $\psi(x,t)=\phi(x)\,e^{-iEt}$ yields the time-independen
 The allowed energies $E$ and corresponding eigenfunctions $\phi(x)$ depend on the specific potential $V(x)$.
 
 % ============================================================
-\section{5. Course Summary and Outlook}
+\section{5. Ehrenfest's Theorem: The Classical Limit}
+% ============================================================
+
+Using the Schr\"odinger equation, one can derive how expectation values evolve:
+
+\subsection{5.1 Velocity equation}
+Differentiate $\expval{\hat{x}}$ with respect to time.  After substituting the Schr\"odinger equation and integrating by parts, the potential energy term drops out (it is pure imaginary), leaving:
+\[
+    \boxed{\frac{d}{dt}\expval{\hat{x}} = \frac{\expval{\hat{p}}}{m}.}
+\]
+This is exact---no approximation was made.  It says the velocity of the center of the wave packet equals the average momentum divided by mass.
+
+\subsection{5.2 Force equation}
+Similarly, differentiating $\expval{\hat{p}}$:
+\[
+    \boxed{\frac{d}{dt}\expval{\hat{p}} = -\expval{\frac{dV}{dx}}.}
+\]
+This is Newton's second law in expectation-value form: the rate of change of average momentum equals the average force.
+
+\subsection{5.3 When does classical mechanics emerge?}
+The expectation value of a function $\expval{f(\hat{x})}$ is \emph{not} the same as the function of the expectation value $f(\expval{\hat{x}})$.  They agree when the wave packet is well-localized compared to the scale on which $V(x)$ varies.  This requires:
+\begin{itemize}[nosep]
+    \item \textbf{Heavy particles}: large $m$ implies small $\Delta x$ (from $\Delta x\,\Delta p\sim\hbar$ and $\Delta p = m\,\Delta v$).
+    \item \textbf{Smooth potentials}: features in $V(x)$ much broader than $\Delta x$.
+\end{itemize}
+When $\Delta x$ is much larger than the features of the potential (light particles, sharp potentials), the wave packet breaks apart---this is the quantum regime.  Example: Rutherford scattering---alpha particles hitting a tiny gold nucleus scatter in all directions because the nuclear potential is sharp compared to the wave packet.
+
+% ============================================================
+\section{6. Course Summary and Outlook}
 % ============================================================
 
 Over ten lectures, the foundations of quantum mechanics have been laid out:
@@ -178,6 +206,9 @@ Over ten lectures, the foundations of quantum mechanics have been laid out:
     \item \textbf{Continuous systems} (particles) use infinite-dimensional Hilbert spaces; Fourier analysis connects position and momentum representations.
     \item The \textbf{uncertainty principle} $\Delta x\,\Delta p\geq\frac{1}{2}$ follows from $[\hat{x},\hat{p}]=i$.
 \end{enumerate}
+
+\medskip
+\noindent\textbf{Other conjugate pairs} satisfying uncertainty relations: angle--angular momentum ($\Delta\theta\,\Delta L\geq\hbar/2$), energy--time ($\Delta E\,\Delta t\geq\hbar/2$, where $\Delta t$ is the time for the wave packet to pass a point), and field--field derivative in quantum field theory.
 
 \medskip
 \noindent Topics \emph{not} covered but essential for further study: the harmonic oscillator, angular momentum, hydrogen atom, identical particles, and quantum field theory.

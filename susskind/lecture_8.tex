@@ -35,9 +35,9 @@
 % ============================================================
 
 \begin{itemize}[nosep]
-    \item Entanglement between two spins that interact and then separate \emph{can} be reversed if both spins are brought back together and the interaction is undone (time-reversed).
-    \item If one particle is lost (thrown away, sent to infinity), the remaining particle is left in a mixed state described by its density matrix---the entanglement is effectively \textbf{irreversible} from the remaining particle's perspective.
-    \item Measurement is a special case: the apparatus entangles with the system, and the resulting entanglement is practically irreversible because the apparatus has enormously many degrees of freedom.
+    \item Anything that can happen, the opposite can happen: two spins that come together, interact, and become entangled \emph{can} be disentangled by reflecting them, bringing them back together, and running the interaction in reverse.  In principle, entanglement is \textbf{reversible}.
+    \item However, if one of the entangled particles is thrown away (sent to infinity, lost to the environment), the remaining particle is stuck in a mixed state described by its density matrix.  From its perspective, the entanglement is effectively \textbf{irreversible}.
+    \item Measurement is a special case: the apparatus (with enormously many degrees of freedom) entangles with the system.  There is no practical way to reverse this entanglement---``unscrambling the egg''---which is why measurements appear irreversible even though the underlying evolution is unitary.
 \end{itemize}
 
 % ============================================================
@@ -58,16 +58,28 @@ Then Alice's density matrix satisfies
 \]
 \end{theorem}
 
-\subsection{2.2 Proof outline}
-\begin{enumerate}[nosep]
-    \item Write Alice's new density matrix:
-    \[
-        \rho'^{(A)}_{a,a'} = \sum_b \psi'^*(a',b)\,\psi'(a,b).
-    \]
-    \item Substitute the unitary transformation for Bob's variables.  Two sums appear (one from $\psi'^*$, one from $\psi'$), each involving $U$ and $U^\dagger$.
-    \item The unitarity condition $\sum_b U^\dagger_{\tilde{b}b}\,U_{b b'} = \delta_{\tilde{b}\,b'}$ collapses the double sum.
-    \item The result is identical to the original $\rho^{(A)}_{a,a'}$.
-\end{enumerate}
+\subsection{2.2 Proof}
+Bob applies unitary $U$ to his subsystem.  The composite wave function becomes:
+\[
+    \psi'(a,b) = \sum_{b'} U_{bb'}\,\psi(a,b').
+\]
+Its complex conjugate (with index $a'$):
+\[
+    \psi'^*(a',b) = \sum_{\tilde{b}} U^*_{b\tilde{b}}\,\psi^*(a',\tilde{b}) = \sum_{\tilde{b}} U^\dagger_{\tilde{b}b}\,\psi^*(a',\tilde{b}).
+\]
+Now compute Alice's new density matrix:
+\[
+    \rho'^{(A)}_{a,a'} = \sum_b \psi'^*(a',b)\,\psi'(a,b)
+    = \sum_b \sum_{\tilde{b}} \sum_{b'} U^\dagger_{\tilde{b}b}\,U_{bb'}\,\psi^*(a',\tilde{b})\,\psi(a,b').
+\]
+Perform the sum over $b$ first:
+\[
+    \sum_b U^\dagger_{\tilde{b}b}\,U_{bb'} = (U^\dagger U)_{\tilde{b}b'} = \delta_{\tilde{b}b'} \qquad (\text{unitarity!})
+\]
+This collapses the double sum, giving:
+\[
+    \rho'^{(A)}_{a,a'} = \sum_{b'} \psi^*(a',b')\,\psi(a,b') = \rho^{(A)}_{a,a'}.\;\qedsymbol
+\]
 
 \subsection{2.3 Physical interpretation}
 \begin{itemize}[nosep]
@@ -87,7 +99,7 @@ Einstein, Podolsky, and Rosen (1935) highlighted the following paradox:
 A composite system can be in a state of complete knowledge (a pure state $\ket{\Psi}$), while \emph{each} subsystem is in a state of complete ignorance (maximally mixed density matrix).  We know everything about the whole and nothing about the parts.
 \end{quote}
 
-This violates classical intuition about ``elements of reality,'' but it does \emph{not} violate locality as defined by the no-signaling theorem.
+Einstein called entanglement ``spooky action at a distance'' (\textit{spukhafte Fernwirkung}).  But ``action at a distance'' in physics means the ability to \emph{affect} a distant system---e.g., Newton's gravity, where shoving the Sun would instantly change Earth's orbit.  Entanglement does \emph{not} allow this: the no-signaling theorem proves that Bob's manipulations leave Alice's density matrix unchanged.  The ``spookiness'' is that the correlations are stronger than any classical model can produce (Bell's theorem), not that signals travel faster than light.
 
 % ============================================================
 \section{4. Simulating a Single Spin Classically}
@@ -126,9 +138,13 @@ Now Alice and Bob each have a spin, and the spins may be entangled.  The classic
 \end{itemize}
 
 \subsection{5.3 The locality constraint}
-The simulator can reproduce all quantum predictions, but the central computer must communicate with both Alice and Bob.  If we demand that Alice's and Bob's simulators be \emph{separated} with no communication between them (only pre-shared classical information), then \textbf{Bell's theorem} proves that the quantum correlations \emph{cannot} be reproduced.
+The simulator works because the central computer has a \emph{single} random number generator connected by wires to both screens.  What if we try to separate the computers?  Copy the four $\alpha$'s into both machines, cut the wires, and give each machine its own independent random number generator.
 
-This is the deep content of Bell's theorem: no local hidden-variable theory can reproduce all predictions of quantum mechanics for entangled systems.
+The problem: for a singlet state, if Alice measures $\sigma_z=+1$, Bob must get $\tau_z=-1$.  But with independent random number generators that don't communicate, there is \emph{no way} to enforce this correlation.  Each machine will produce random results with no correlation to the other.
+
+You might try to pre-program correlated outcomes, but \textbf{Bell's theorem} shows that no such pre-programming (``local hidden variables'') can reproduce all quantum correlations simultaneously for all measurement orientations.
+
+This is the deep content of Bell's theorem: \textbf{no local hidden-variable theory can reproduce all predictions of quantum mechanics for entangled systems}.  The message is not that the world has hidden wires, but that \emph{quantum logic is fundamentally different from classical logic}.
 
 % ============================================================
 \section{6. Summary}
