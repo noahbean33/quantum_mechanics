@@ -1,0 +1,336 @@
+00:00:01
+welcome back this is my final video on Quantum Spin and in this video I finally going to talk about the measurement process now anyone will tell you that the measurement process in quantum mechanics is a very strange thing but in some sense it's not quite as strange as many people make it out to be so I think there are a lot of features of quantum measurement which you know confus people because they're not fully explained in usual introduction to the subject so in this video I really want to try to get
+
+00:00:35
+at you know what is a Quantum measurement and how does it work and in order to do that I'm going to begin by looking at this one example of a Quantum measurement namely the stern gerlock experiment and by looking at the stern grock experiment in a lot of detail we'll be able to extract some very important lessons about Quantum measurement and really get under the hood and see how it works in general now the stern girl like experiment uh gives you a way to measure the spin of a particle so here's the basic setup
+
+00:01:12
+so we start with some sort of particle emitter and the way in which this works isn't we're not really going to be too concerned about this but essentially your particle is going to come out of this submitter it's going to here go be going to the right and then it's going to enter a Zone with a varying magnetic field so more specifically let's think about this magnetic field as pointing upwards so upwards meaning in the Z Direction and imagine that the Z component of this magnetic
+
+00:01:52
+field is varying with Z so varying with height so in other words the partial derivative of the Z component of the magnetic field with respect to the height Z is not equal to zero so the magnetic field is you know it could be weaker at the bottom and stronger at the top or something like that and in a bit we'll talk about how you could create such a magnetic field but okay but yeah in this orange region we have a varying magnetic field somehow and our particle enters this Zone and then depending on whether
+
+00:02:33
+the particle is spin up or spin down it's going to either go upwards or go downwards so for instance maybe if it's spin up it'll go up and if it's down it'll go down and then here we have a back wall of some sort and the particle will then hit the back wall so if we just send our particle you know through this device we can look in the back wall to see okay was it spin up or spin down now let me briefly refresh you on why a varying magnetic field will make the particle go in a different direction
+
+00:03:07
+depending on its spin So In classical mechanics there is an equation for the force of a magnetic field on a Magnetic Moment it's f equals the gradient of mu do B so here mu is the Magnetic Moment of the particle and depending on the direction of the spin of the particle this Magnetic Moment will be pointed a different direction so actually in my last video I derived this equation uh In classical mechanics so if you you know are curious about where this equation comes from you can watch my last video and at the end
+
+00:04:03
+of uh my last video I I gave a derivation of where this comes from but let's just take it as a given for here now you may or may not remember that In classical physics this Magnetic Moment Vector mu for a Charged spinning particle is equal to the charge of the particle Q over 2 m times the angular momentum Vector of the particle I now in quantum mechanics you know for an electron for instance there's this other factor out front called G where G is the G factor and it's approximately
+
+00:04:42
+equal to two for reasons having to do with special relativity and stuff but I talked about that in a previous video too so let's not get into that but yeah so in any case if the particle intuitively is spin up then the Magnetic Moment Vector is pointed up so let's say you know that that was the case then this mu Vector would have components of 0 0 and then its magnitude mu so this is you know just sort of thinking intuitively if the particle is is pointed up now in this case the force on the
+
+00:05:17
+particle f is equal to the gradient of and now you see mu dob is just going to be mu as in you know the magnitude of the MU Vector so mu time B subz so mu * the Z the Z component of the magnetic field and now we can actually just rewrite this as Mu times the gradient of B subz and if we're imagining you know let's say that this is only varying with height let's just say that you know B subz only depends on Z then this equals mu * partial B subz partial Z yeah so we can see that there's going to be a force on this
+
+00:06:13
+particle if you know the magnetic field is changing more and furthermore if the particle was spin down if it was pointed in the other direction then we would have a minus sign here right we'd have a it would be pointed downwards and there would be a minus sign here A minus sign here and a minus sign here so if the particle is spin up the force will be in the opposite direction from if the particle is spin down all right so let me just clear a little bit of this stuff off let me get rid of this
+
+00:06:55
+too now that was a bit of classical intuition but let's talk about what happen Quantum mechanically so Quantum mechanically the state of our particle is going to be given by a vector of two functions so we'll have one function called the spin up wave function and another function called the spin down wave function the spin up wave function you know depends on time and the spatial coordinate X same thing for the spin down one and this will tell you the probability density of finding your particle spin up
+
+00:07:37
+or spin down in a particular location at a particular time so for instance the absolute value of the spin up wave function of tnx squared this is the probability density of finding the particle to be spin up you know with respect to the Z Direction so this so when I'm saying spin up and spin down I implicitly mean with respect to the Z direction to we spin up at location X X at time T and then you know for the spin down wave function you know the same thing would give you the probability density of finding the particle spin
+
+00:08:43
+down at location X at time T now I talked about this a lot in my last video but in many cases you can think about particles in quantum mechanics as traveling in gausian wave packets so these wave fun functions will be these you know little complex uh wave packets you know traveling with some velocity and you know the absolute value kind of has like a bell curve shape and let's say we're drawing this spin up wave function in red or like maybe let's say we're drawing the real part of the
+
+00:09:18
+spin up wave function in red and the real part of the you know spin down wave function in blue so it'll be right on top of each other basically so when the particle is emitted the spin up and spin down wave functions you know will will be like the same function but as the wave packet continues to travel to the right and enters the zone of varying magnetic field then the spin up wave function and the spin down wave function will evolve in different ways the spin up wave function will sort of go basically on
+
+00:09:54
+this upwards trajectory and the spin down wave function we'll go on this downward trajectory so that means for instance that if you look at say this position right here so like this position in Space X right here um the value of the spin-up wave function at this particular position will be pretty appreciable um but meanwhile the value of the spin down wave function at this position will be very small be negligible so you know and meanwhile at this particular position here um at you know the time in which
+
+00:10:34
+the wave packet is you know getting there the the value of the spin up wave function at this position will be negligible meanwhile the the value the absolute value of the spin down wave function here will be appreciable so in other words you know once you've gotten to this point in time when the wave packets are kind of like this um there's a lot of probability that this SP that if the particle is spin up it's going to be you know in this region up here and if the particle is spin down it's going
+
+00:11:01
+to be in this region down here but they'll be spatially separated now while talking about this there's something I want to point out classically when you have that the Magnetic Moment Vector is proportional to the uh angular momentum of your spinning particle you know your spinning particle in classical mechanics you know could be spinning in any direction like this L thing could be anything so you know the particle could be spinning up like that or it could be spinning at an angle or so you know so on and so forth and In
+
+00:11:38
+classical mechanics you would instead inspect instead of getting these two different uh you know places where the particle could hit the back wall instead because the angular momentum could you know really be have any value it could the particle could hit the back wall at any of these at any of these uh you know Z coordinates but the thing is that in quantum mechanics a particle can only be spin up or spin down with respect to a particular axis and because we have that you know there's a force
+
+00:12:17
+that depends on the spin of the particle and there's only two options for the spin of a particle in One Direction because of quantum mechanics it can only go on the up path or the down path but this was originally very confusing for people they didn't realize they couldn't figure out like wait why is the particle only hitting the back wall at like you know two locations why couldn't it be like any location and this was one of the experiments that really got people to realize wait a second there's this
+
+00:12:44
+thing called spin and it has all this these properties and so on and so forth now obviously there's nothing special in particular about the Z Direction it's because we specifically made you know this magnetic field to have some changing Z component in the Z direction that is singling out the Z direction if we had instead you know made a different apparatus with maybe instead of you know said it had some the magnetic field was mostly in the X Direction and this change with X then we would be measuring the component
+
+00:13:18
+of the spin along different directions and um yeah so it doesn't it's not like a fundamental fact that you know there's nothing special about the Z Direction fundamentally it's just more of how we set up this particular device but the point is that you have to pick some axis along which to measure your Spin and once you pick some axis there are only two possible spins for that axis now there's something really important I have to bring up about how the stern gerlock experiment was originally done
+
+00:13:49
+historically see in the original Stern GC experiment they used silver atoms right they didn't use electrons so throughout this series I've usually talked about you know single electrons with spin but they they use silver atoms and in fact this experiment wouldn't really work if you just use electrons and the reason that it wouldn't work if you used electrons is because of the Loren Force law so the Loren Force law if you recall is that the force on a moving charge in a magnetic field is Q the charge V cross
+
+00:14:25
+the magnetic field B so here we have you know this experiment if this particle were an electron we would have a moving charge in an external magnetic field it would feel some deflection force and this force would actually be pretty strong in other words you know it would get deflected off to some crazy Direction and wouldn't hit the the back wall nicy like this right and the thing is that this deflection wouldn't depend on the spin of the particle right both particles would basically be deflected
+
+00:14:55
+by the the Loren's Force law in the same way so in order that we don't you know get this extra deflection in some crazy other direction we use electrically neutral silver atoms right silver atoms have the same amount of positive charge as they have negative charge so whereas this Q for an electron you know wouldn't be zero for a silver atom it would be zero now at this point a lot of you are probably scratching your heads and saying you know H well well wait a second all of this stuff that we've
+
+00:15:26
+talked about up until now you know how electrons for instance have magnetic moments and so forth you know this all applied to Elementary particles like an electron but a silver atom is not an elementary particle it's made up of many other particles you know it's made up of electrons and protons and neutrons so so how can we really just treat a silver atom in much the same way that we were sort of thinking about electrons you know with just a single Spin and it turns out that it's important that we
+
+00:16:01
+have specifically here a silver atom and not you know any arbitrary atom see there's something important about silver atoms which is that well the atomic number of silver is 47 so there are 47 protons and therefore 47 electrons but more importantly if you look at how many uh electrons are in each shell each orbital shell of the silver atoms it turns out that the silver atom has one veence electron so it has one electron in the unfilled shell and I know we haven't talked at all about atoms and shells and stuff but you
+
+00:16:43
+know just kind of take it in and you know see what you can see what you can glean from this discussion so if you know you have some silver atom and it has all of these you know paired up electrons in its filled shells so when electrons pair up you have one spin down and one spin up and you know these get grouped together so you have all of these paired electrons but then after all of that at the end of the day you still have one unpaired electron and the thing is that these paired electrons actually cancel out so the angular
+
+00:17:23
+momentum of the paired electrons you know you have one spin up and one spin down those cancel out and it's really just this extra leftover valence electron in the unfilled shell that accounts for the spin of the whole silver atom now you know you might also wonder like wait what about the protons and neutrons those are also spin one half particles you know what about those and the thing is like yes okay that's absolutely true protons and neutrons do have um you know Spin and they have magnetic moments but the thing is that
+
+00:17:58
+see how this Magnetic Moment is like basically the charge time L 2m so in quantum mechanics these spin 1/ half particles all have an L an angular momentum of basically H H bar over two yeah so H bar being planks reduce constant and the electron and the proton both have the same angular momentum you know H bar2 but the thing is that the electron has a much smaller Mass the proton is about 2,000 the mass of an electron so therefore the Magnetic Moment of a proton is going to be much less and therefore the force you know on
+
+00:18:46
+the silver atom due to the Magnetic Moment of the protons and neutrons that's not really going to matter nearly as much as it will um as due to this tiny little you know one valence electron so all told you can really just you know treat the silver atom as just having a spin given by one valence electron but it turns out there's actually one other more important thing which is that this valence electron is in the S state of the atom now I can't really get into it now but but basically you know there
+
+00:19:23
+are different shells to the to the um you know that the electrons can being there's like s which is the lowest one and there's p and d and so forth and as the electron is in a bigger and bigger shell it's basically like it's further and further away from the nucleus so like if maybe this is the nucleus you know as the electron is has a smaller and smaller you know s is the smallest shell and the electron is sort of closest to the nucleus then for the bigger shells it kind of gets further
+
+00:19:56
+away but more importantly this s shell actually if you when you think about it you shouldn't really think of it as orbiting the atom so whereas the other shells have electrons you know orbiting the atom they're sort of classically you can think of them as orbiting like a planet but really really they're more like you know you know the whole wave function is surrounding the atom in some way and I mean it's sort of like spinning in some sense there's going to be somewh anyway I don't really want to get into it but
+
+00:20:30
+the point is that the point is that only the S orbit orbital has no orbital angular momentum so therefore you know you really can just think of as as the intrinsic spin uh angular momentum from the electron and there's no extra funny business from the fact that you know well maybe the electron has orbital angular momentum um if it was in a different shell then yeah it would but that's not the case for silver so silver is really the go-to atom for the stern gerlock experiment here all right now the next thing I want
+
+00:21:09
+to discuss is the magnetic field in the stern GIC experiment so you know how does it get there in particular I said that there was a reg of space in which there was a varying magnetic field so now I want to discuss how an experimentalist would actually create a region of space with a varying magnetic field so in order to do that let's briefly remember how a pherom magnet Works a permanent magnet like the sort of magnet that you'd find on your refrigerator magnet so in a magnetic material like a pherom magnet what ends
+
+00:22:04
+up happening is this material will have a bunch of atoms and these atoms will each have a spin and in a ferromagnetic material what happens is all the spins for reasons having to do with the property of the material will all be aligned in the same direction so throughout this series of videos I've usually been thinking about the behavior of spin in an external magnetic field you know in examp in the stern GIC experiment we're thinking of a single atom being influenced by an external magnetic field but it's
+
+00:22:38
+important to remember that uh you know particles with spin also create magnetic fields right so for instance in our toy model of a loop of current you know this Loop of current also creates its own magnetic field around it um and we haven't been thinking about that but it's important to remember that that that happens too so in particular the direction that these you know spins are pointed in will be the direction of the magnetic field there so within the magnet the magnetic field lines are going to look kind of
+
+00:23:22
+like this they're going to be bunched together and all pointed in the same direction of the spin which are all aligned with each other so this will be so these are the field lines of the magnetic field B now let me ask what are these magnetic field lines going to look like outside of the magnet so if we draw the magnet here again we know that inside the magnet the magnetic field lines are going to look like this all close to each other and bunched up together okay and to complete the picture all
+
+00:24:08
+that we have to do is remember that the magnetic field is Divergence less so this is one of Maxwell's laws sometimes people say it's uh the same thing as saying that there are no medic magnetic monopoles but pictorially it means that the field lines of the magnetic field don't start or end anywhere so now if we just try to complete the picture in such a way that these field lines don't start or end anywhere we're going to naturally get a picture that looks kind of like this so these ones are going to have to loop
+
+00:24:51
+back around oops like that and the one in the middle will go off to Infinity so it's okay for the field lines to go off to Infinity CU you know that's not really starting or ending anywhere and yeah we have to also draw arrows to indicate the direction of the field okay so now that we've remembered how magnets work let me ask you a question What If instead of having a rectangular shaped magnet what if we had a pointed shaped magnets so it kind of looked like this like a house well we know that inside of the
+
+00:25:39
+magnet we have to draw all the field lines right next to each other and bundled up together like this I'll draw a little arrows okay and now next we know that we have to connect up all the field lines so that none of them start or end anywhere they all loop around so that will look kind of like this okay that's pretty good now note how the field lines are bending away from the magnet in this pointed region here so um actually let me let me draw that explicitly so let me just move this over here and let me just
+
+00:26:49
+draw a here a you know rectangular top of a magnet like this and then versus a pointed top of a magnet out of the rectangular magnet the the field lines will look like this okay and then out of the point at top the field lines will look like this they'll kind of Bend away uh right after they exit the magnet so so you see how they're how they're bending away sooner they're spreading out more right near the magnet than here I see these field lines are spreading out more right near the magnet in the
+
+00:27:49
+pointed uh case rather than in the uh rectangular case so now that we're familiar with how the magnetic field is affected by the pointed shape of the magnet let's think about what the magnetic field will look like for this configuration of magnets which I am about to draw all right so I just made these drawings and let's first look at this picture I have on the right here so here I have this sort of 3D picture of these two magnets I've labeled where the North and the South poles are of both magnets
+
+00:28:26
+and you can see that this top one has has a pointed shape and this bottom one has a rectangular shape so you see that they're also you know long they're they're sort of long in this way but you know we'll get to that in a second so if we look at a crosssection it will look like this uh picture right here so we can see that the top magnet right which has the North Pole you know on the bottom the field lines coming out of the the top pointed magnet will out um from the magnet you know uh a lot because you know it's a
+
+00:29:08
+pointed magnet but on the bottom one because it's a rectangular shape it won't spay out as much so you can see the field lines will kind of come out of the top one and then spay out and then go into the bottom one now if we were to have had two rectangular magnets right without a pointed shape then the field lines would have basically just went straight down there wouldn't really have been any of this spaying out so why is this important well due to this spaying out you can see that the field lines
+
+00:29:42
+are more dense up top and they are less dense on the bottom and this is all because we have a pointed magnet up top but a rectangular magnet on the bottom now because the density of field lines is proportional to the strength of the magnetic field you can see that the magnetic field is stronger you know up top like stronger up here and weaker on the bottom so that means that you know as you can see well maybe if we're looking at sort of like this region here you know in this region here the magnetic field is
+
+00:30:28
+pointed down there's only a a z component to the magnetic field but the magnetic field at like this point for instance is going to be stronger than the magnetic field at this point so that means that we can see that basically there's a magnetic field only point in the Z Direction and partial B subz over partial Z is not equal to zero right for this for this configuration here where whereas for this configuration here with two rectangular magnets we would instead have that partial B over partial Z well that would
+
+00:31:08
+basically be that' basically be equal to zero right for this configuration so okay what does this have to do with the stern G like experiment well as you might have guessed if we create this configuration of magnets like this like I've drawn for us all right and then we have our particle emitter that emits our you know electron this will be the region or okay any or silver atom or whatever this will be the region which will create the varying magnetic field which will make the electron or the
+
+00:32:01
+particle or whatever you know Bend upwards or downwards so in other words this this apparatus this pointed and non-pointed magnet is how you create this region of a magnetic field that I was talking about earlier so now I have fully described to you you know how the different elements of the stern G like experiment work with that final piece of the puzzle you know squared away now I now want to talk about some more General aspects of quantum measurement and because we you know can understand how the stern glic
+
+00:32:37
+experiment works now um we now have some sort of basis to understand some more General things about Quantum measurement so now I'm going to talk more generally about Quantum measurement now that we have sort of understood all the components of the stern glic experiment so lessons to be learned about Quantum measurement okay so when I introduced the measurement process in my first video in this series I said that if you have the state s with components Alpha and beta and you measure the spin of the
+
+00:33:39
+state along the z-axis the probability of detecting the spin to be spin up would be the absolute value of Alpha squ and the probability of detecting it to be spin down with the absolute value of beta squ now from my description back then it sounded like measurement was an instantaneous process you know that one moment your state hadn't been measured and the next moment it had been measured but this should have you know seemed a bit weird because in general we expect processes to take time that
+
+00:34:11
+includes measurement measurement is a process and it seems as though that should take some length of time and the first thing I want to point out that we can see pretty clearly from the stern GIC experiment is that indeed measurements take a length of time to perform they're not instantaneous processes and we can see that straight from the fact that you know once the particle is emitted it has to you know it takes a bit of time for to travel from the emitter all the way to the back wall you know this this process takes
+
+00:35:02
+some time now the next thing I want to address is that technically speaking our measurement is not 100% accurate and here's what I mean by that so you know we've sort of been drawing these you know trajectories that the particle will go on and it'll hit the back wall you know may maybe at this position or at this position but we know that the particle doesn't travel along a well- defined trajectory it you know travels as a little wave packet and this wave packet will have some position
+
+00:35:37
+uncertainty so for instance maybe the spin up wave function you know the absolute value of the squared in terms of it Z dependence you know it could be proportional to something like e to the Z SED or rather maybe Z minus Z kn squ over 2 Sigma squ where Z is you know maybe one of these positions here and sigma is the position uncertainty so really what it'll look more like is there'll be these sort of two gausian bumps right and you know this is where the top particle this is where the spin
+
+00:36:26
+up uh particle would hit this is where the spin down particle would hit but you can see that as the value of Z gets far away from you know this bottom position here this top position here it doesn't actually go literally to zero it just drops really really low so there is actually some nonzero probability that this spin down particle here could actually be found you know appear it's a pretty small probability um especially I mean because the value of Z is going to be much further away from the peak than
+
+00:37:02
+Sigma but it's still some nonzero probability n the less having said that you can still get the measurement to be as precise as you want by making the two magnets you know longer and longer so you know if you're the the magnets that the particle will pass between if we keep making just you know the length you know the length of these magnets longer and longer then the particles will you know will split further and further apart from each other so you know if we make them even longer you know maybe one Peak you know will be
+
+00:37:48
+all the way over here and the other Peak will be all the way over here so we can we can see how we can make the measurement as as precise as we want by you know doing stuff to the device and it should also be said that um the longer we make this the long the longer it'll take for this measurement to occur so you can see that you know if we were to say you know you know cut the experiment in half right here and make it shorter then there would be more overlap between the wave functions but if we do the full
+
+00:38:25
+length of the experiment you know then there'll be less and less overlap so in this casee the longer that the measurement takes to perform the better and better it's getting so the next lesson is that measurements may not be 100% accurate now there's another point I would like to make which might be pretty obvious too but I just want to emphasize It Anyway measurement is not some mystical magical thing you know some poor experimentalist had to actually figure out how to build this apparatus
+
+00:39:19
+and how to actually conduct these measurements in real life so while we may often speak in terms of you know poly matrices and linear operators and you know solving for igen vectors and igen values or what have you you know these are just intangible mathematical abstractions nobody has ever seen a poly Matrix in the real world nobody has ever you know seen an igen value people have seen magnets and in fact creating these real world real world measurements takes a lot of knowledge about the physics of
+
+00:39:53
+the object you're trying to measure and it takes a lot of you know creativity in order to actually pull it off so this third lesson is that measurement is not some mystical thing so there's one last lesson I'd like to say uh that's going to be a lot more involved than the other three so let me first write it out and then I'll you go into more detail so this last lesson is measurement works by entangling the degree of Freedom you want to measure with some other degree of freedom
+
+00:41:28
+now this is the first time I've used the word entanglement in my series here so I many of you might not understand everything I'm about to say right now but you know just try your best so actually let me make a new okay new screen so this is all about the role of entanglement in Quantum measurement so now the stern gerlock experiment is meant to measure the spin of a particle I.E what a physicist might call the spin degree of freedom however in order to do this it exploits a totally different degree of
+
+00:42:35
+Freedom namely the spatial position of the particle so this is actually how all Quantum measurements work you use some degree of Freedom you're not particularly interested in here it's the position of the particle in order to measure the degree of Freedom that you are interested in which here is the spin so what do I mean by that let's first think about a particle with some position but no spin so position without spin in other words this particle can you know have some location in space but
+
+00:43:14
+you we're not describing its spin so the state of you know this particle would just be given by a single wave function so in other words it takes this wave function takes in a position vector and outputs a single complex number so a state is a function which takes in a single Vector in R3 three real numbers and outputs a complex number so we might write the state you know like this like this is the wave function now this is the state of a particle with position and no spin but what about spin
+
+00:43:58
+without position so that's kind of a funny thing to say but this is sort of like what we were doing uh in our first few videos in this series you know we were just describing the spin of the particle and not worrying about its location so in that case our state is just a vector with two complex numbers for components so so our state will just be a single complex Vector so in other words it will be an element of the vector space C2 you know C two complex numbers and maybe we could you know write
+
+00:44:44
+this state as I don't know well SI spin that's just my notation for for this Vector here now what about in the case that our particle has has both Spin and position then our state is given by two wave functions so a spin up wave function and a spin down wave function so in other words it's a vector of wave functions so now we can think about our state as being a map so this state well how should I write this I guess I we'll just write uh our state I'm sort of reusing this whatever the state is a map from
+
+00:45:44
+R3 to C2 it takes in a position and outputs two complex numbers a vector of complex numbers okay now why did I write all this out I wrote all this out because I'm trying to bring to your attention that in a pretty precise way if you multiply the position notion of a state with the spin notion of a state you get a notion of a state that incorporates both Spin and position so at this point I now have to introduce the concept of a Hilbert space and that sounds sort of intimidating but it's not really so let's first look well
+
+00:46:24
+okay let's first look at the spin uh stick St so you see how all states are just two-dimensional complex vectors we can say that you know every state lives in something that I'll call H Subs spin now this is the Hilbert space this is what you might call the Hilbert space describing the spin degree of Freedom all it is is it's just a set of all of the two-dimensional complex vectors so in this case h sub spin it's just the same thing as C2 all the two-dimensional complex vectors now what about the
+
+00:47:07
+position degree of Freedom well the position State also lives in a Hilbert space and let's denote this as H position and this Hilbert space is equal to all of the functions from R3 to C so I haven't really I haven't really said anything yet all I've done is defined the the space of states where here this sort of describes this describes what I might call call the position degree of freedom and the spin degree of Freedom now this notion of a state which has both Spin and position lives in a
+
+00:48:23
+Hilbert space well I'll just call it h the full hbert space and and this is really why it's good to you know to find these hbert spaces because there's an operation well I'll just write it out so the full H is equal to H sub position and then tensor product H sub spin so the nice thing about these Hilbert spaces is that you can tensor product them together to get a bigger Hilbert space and in some sense this tensor product you know in this symbol is just a circle with like an X in it this sort of multiplies Hilbert
+
+00:49:07
+spaces together so if you multiply the position degree of Freedom by the Spin degree of Freedom you know then you get you know you know both degree degrees of freedom in one Hilbert space and you know this Hilbert space H is just all of the functions from you know R3 to C2 now um at this point I guess I should give a very brief introduction to the tensor product so you know so obviously won't be a full treatment but you know I'll just talk for a minute about uh what the tensor product is
+
+00:49:49
+so so the tensor product and the symbol is this circle with an X so in some sense the tensor product is an operation that just sort of mushes two things together it just sort of smashes you know two sorts of things together and you know you just sort of say they obey some rules so I think it's easy to easier to see with some examples so for in instance the spin up State this lives in h sub spin the spin down state you know also lives in h sub Spin and let's say we have two different wave functions um I'll write them
+
+00:50:51
+as s up this is just a single function i' I'm just sort of labeling it s up and let's say this lives in just H sub position so it just it outputs a single complex number and let's also say that side down is a wave function that outputs a single complex number and this also lives in h sub position so what this tensor product symbol does is it says that you can take a state in in you know one hbert space you know maybe H you say h position and you could take a state in h Spin and you just sort of smash them
+
+00:51:34
+together using this tensor product thing right here so say that we take the wave function labeled s spin up and we tensor it together with the spinup state now this can be thought of as a state which lives in h sub position tensored with h spin you know there's not really anything else to say this is just sort of a a gluing uh symbol that you know makes a new thing and that can be kind of confusing for people because they might sort of ask like well wait a second what really is the tensor product you know it
+
+00:52:23
+just it is this it lets you take two states and just sort of mush them together but there's something else interesting about the tensor product which is that you can add together two things which have been tensored product which should be tensored together so let's also say we take the spin down lab uh wave function and we tensor that together with the spin down state now the thing that you know some people get confused by is that this is completely loud so you can both tensor stuff together and then add stuff that
+
+00:53:06
+has been tensored together and this in fact is a totally General State that lives in this Hilbert space H sub position tensored H sub spin in other words for any um state that lives in this Hilbert space you can always write it in this form with some sort of you know State here and some sort of State here now because of that because we can write every state in this form we can just say well you know there's going to be one sort of wave function which is you know attached to the spin up State and one wave function
+
+00:53:47
+that's attached to the spin down state so therefore all states are in a way just given by two different wave functions and therefore we we can rewrite the state like this you know one wave function up top and one wave function in the bottom you know a two component wave function and it's a two component wave function because H sub spin is a two-dimensional Vector space now there's one final thing I should mention about the tensor product which is that it has what is called the distributive
+
+00:54:31
+property so what do I mean by that well in regular multiplication the distributive property is that a * b + C = A * b + a * C in other words you can bring the multiplication uh into the parenthesis and you know act with it on both of the things that are being added so the same thing is true of this tensor product so in our example here if you have some wave function and then tensor producted with an arbitrary sum of a spin up State and a spin down state so here Alpha and beta are two complex numbers and this is an
+
+00:55:19
+arbitrary you know spin State we can distribute the tensor product among the addition so we can rewrite this as Alpha the coefficient times the wave function tensored with the spin up State and then I'm running out of space plus beta times the wave function again tensored with the spin down state so this is called the distributive property and it's another you know rule that this tensor product has okay so now that I have probably confused you let's return back to the physics which should hopefully uh be a bit more
+
+00:56:08
+understandable so now let me redraw the stern G like experiment with a few things labeled so here we have our magnetic field and you know here we have the path of the part I but now let me label three wave functions so here I have three gausian wave packets you know I'm just sort of drawing the profile of the wave packet and let me label this you know this wave packet here which has a velocity you know moving to the right and everything let me call this s initial so that little I is for initial
+
+00:56:57
+and I'll label this one over here s initial and then I'll label this one up here s final up and this one here s final down so when I say these are wave functions I mean they are single component wave functions not two component wave functions so for instance s initial is a function from R3 to C not R3 to C2 so I'm just sort of labeling these wave packets these little wave functions with s initial SF final up and S final down in order to get two component wave functions you got to tensor these
+
+00:57:44
+together with the spin up and spin down States now let's think about this particular State s initial tensored together with the spin up state now this state has you know the position state of this you know s initial this wave packet over here and and it's spin up now under time Evolution so under time whoops Evolution this state here will evolve into s final up tensored with the spin up state so you know by time Evolution I just mean that the state moves to the right then it enters this magnetic field
+
+00:58:43
+here and then you know evolving via P's equation which we talked about in the last video it'll you know get moved up now the other option is that we have S initial tensored with the spin down state and then under time Evolution this becomes s final down tensored with a spin down state so now that we looked at these two cases let me now ask about what happens to you know the general initial State you know starts s initial and then tensored with Alpha time spin up plus beta time spin down so this is a state
+
+00:59:51
+which you know starts out here you know moving to the right and everything but it has an arbitrary spin state so by the distributive property this equals Alpha Time s initial tensored with the spin up State plus beta Time s initial tensored with the spin down state now the question I'm posing is what is this state become under time Evolution so note that this state is just you know the complex number Alpha times this you know initial state right here plus the complex number beta times this state right
+
+01:00:45
+here the important thing to realize is that time evolution is linear so I mean as I've discussed previously if you have the hamiltonian H time evolution is given by exponentiating the hamiltonian H and importantly this thing right here this is just a linear operator that so you know I don't want to you know get into too much detail if you you know haven't seen this before you know you can watch some of my previous videos but the main important thing is that if you have a linear combination of two states those under
+
+01:01:32
+time Evolution time evolve into the linear combination you know of the time evolution of the of the two things it was a sum of so that was kind of confusing but you know it just means that in this case this time evolves into Alpha times s f up oh I should have wrote of x there well oh well Alpha you know SF up tensored with spin up and then plus beta time SF down tensored with the spin downstate right because you can just time evolve this thing and time evolve this thing and add them together okay
+
+01:02:30
+let me just get rid of this okay so I want you to notice something interesting about you know these two different states over here so this state here is just the tensor product of one state with another state right you take two states and you tensor them together now this final State isn't like that you see because well here we have a tensor of one thing another thing but then there's a sum and then the tensor of another thing and another thing so the state on the left is just a tensor of two things but the state on
+
+01:03:07
+the right isn't because there's this sum here now you might be saying well wait a second if you distribute the tensor product couldn't you say that this state here is also the sum of two things that are you know the tensor product you know just like we did earlier and the answer is yes but importantly this state can be written as just the tensor of two states which is a very special property and this final State here the state on the right that cannot be that cannot be done with this state here in other words
+
+01:03:39
+there's no way to write this state as you know just a tensor of one state with another state and the reason for that is is very simple it's just because SF up as a function is not equal to s f down right and more importantly I suppose it's that they're actually not proportional to each other so if this is the symbol for proportional to they're not proportional to each other so if you were to you know do out this distribution here you would get you know well Alpha you get alpha s initial for the
+
+01:04:22
+spin up and you'd get beta s initial for the spin down but importantly these two things would be proportional to each other right because I mean Alpha and beta are complex constants not functions right so yeah so it's very special that this state on the left here can be written as the tensor product of two states and the state on the right can't now it's at this point that I'm finally going to introduce a very important uh piece of terminology you see this state on the right here is what
+
+01:04:59
+we would call entangled whereas this St on the left here is what we would call not entangled so we say that a state is entangled when it cannot be written as just the tensor product of two states if you've got to have a plus sign somewhere in there you know between the tensor products then we say it's entangled now a helpful way to think about what entanglement means is that you can think of it as a lot like being correlated so entanglement is sort of like correlation so obviously there's a
+
+01:05:49
+lot of stuff to entanglement I don't want to just say entanglement is correlation but it's it's a good start so you see if you have a state that's entangled it means that you know one degree of freedom of this state is correlated with another one so in this case we can see that the position of the particle is correlated with whether it's spin up or spin down so if you havep so you know if you take this state and you happen to find it you know up here if you happen to find it up here then that you know
+
+01:06:22
+means that it's spin up its position is correlated with its spin that's what this sum here really means whereas for this other state here the one that's not entangled um if you know something about its position that doesn't actually tell you anything about its spin see if it's spin up or if it's spin down its position state is going to be the same so entanglement is really just like correlation so thinking back to the stern glic experiment we can see that the role of the stern glic experiment is to take you
+
+01:07:08
+know a particle state where the position and the spin degree of Freedom are not entangled and to use this clever apparatus that then entangles the position degree of freedom with the spin degree of Freedom so we see that the role of this measurement apparatus is to take a state which is not entangled and then entangle it so measurement is really like entanglement which is a lot like correlation so the point of a measurement is to correlate the degree of Freedom you want to measure which here is spin with some
+
+01:07:57
+other degree of Freedom which here is the position of the particle that's what a measurement really is if you think about it now this is a very important point about measurement that measurement works you know through entanglement and even if you didn't understand everything I've been talking about you know just tuck this in the back of your head and maybe a bit later you know when you get older you realize like wow okay yeah now I get it um let me mention something else about entanglement which is that here
+
+01:08:24
+I've sort of defined tlement as a binary thing like this state here is entangled this state isn't entangled and it is true that entanglement the you know whether or not a state is entangled that's binary but you can also sort of make you know uh measurements of how entangled something is like gradation so you know even if some even if something is entangled it's possible for it to not be entangled very much and you know the way you can sort of see it is in this example um it has to do with the inner
+
+01:09:01
+product of s f up and S F down so if we take the inner product of of you know these two things and you know let's just say we take the absolute value of this squared you know this is just sort of an impromptu measurement of entanglement but you know it's pretty good for now uh if this if this inner product is much less than one so there's like almost no overlap between between this and this then we would say that that uh that this state is very entangled right so that would make that' be a good measurement if this
+
+01:09:47
+inner product is really small much less than one that would mean the state is very entangled but if the state was but if this uh overlap was maybe more like oh I don't know say it was like 0.8 like pretty close to one then that would be actually not a very good measurement that would mean there would be a lot of overlap the state would be entangled but it wouldn't really be that entangled so yeah so there there is such a thing as gradations of entanglement now there's one very important final thing I have to talk
+
+01:10:21
+about and unfortunately I won't be able to talk about it in a completely satisfactory way but I now want to discuss Quantum measurement collapse now we just discussed how the S initial tensored with the alpha spin up plus beta spin spin down state becomes Alpha Time s final up tensored with spin up plus beta Time s final down tensored with spin down we just described you know how this happens but if you really think about it this right here is not really what happens during a measurement because this state here is a
+
+01:11:31
+superposition of the particle both you know being you know here on the wall and spin up and here on the wall and spin down right this is a superposition of these two eventualities but that's not what we see what we actually see when we do a measurement is we either see the particle here or we see the particle here so instead of having a 100% chance of this evolving into this you know what we actually see is an absolute value of alpha squar probability of this evolving into s final up tensored with spin
+
+01:12:20
+up and an absolute value of beta squ probability of evolving into s final down tensored with spin down so why does this happen why don't we see this final state but instead we see one of its two components with some probability now some of you might have noticed that this question I'm asking here why don't we see the super position but only its components this is essentially uh Schrodinger's cat Paradox you know why can't you see the cat in the half dead half alive State why you
+
+01:13:06
+why do you only see it in the alive or the dead State this is sort of you know a mini version of of that problem now I won't be able to give you a fully satisfactory explanation of why this is and that's because nobody can it's a truly deep mystery at the heart of quantum mechanics called the measurement problem the problem of why the quantum State collapses however I can give you a little bit of the answer maybe even more than half of the answer the reason you don't see the superposition the entangled state is
+
+01:13:45
+because it is actually further entangled with the surrounding environment so get rid of this we really shouldn't think of the hbert space as being you know H position tensored with h spin right we should really think of the Hilbert space as being these two things further tensored with some hbert space that describes the quantum state of the surrounding environment so I write andv for environment so let's think about what happens when our particle actually hits the back wall so the back wall is you
+
+01:14:35
+know also made up of quantum particles you know atoms and these atoms also have wave functions so when the particle hits the back wall it will displace you know some of the atoms that comprise the wall and those atoms which got displaced will therefore displace other atoms and so on and so forth and eventually this displacement will you know spread to the air molecules in the room and the and these you know this displacement will have a sort of exponential runaway effect in the environment so the evolution of the
+
+01:15:13
+state here is actually going to be different because of the environment so it's not really going to be like this it's going to be more like this like what I'm about to write here so this initial State here should also be tensored with some initial environment state so I write e and environment initial initial environment State and this will evolve not into this but into well this first component tensored with some final environment State I'll write F comma up so what the environment will
+
+01:16:02
+be if the particle hits the back wall you know in the upper position and then on the bottom we have to tensor it with e andv final down where generically what you're going to find is that the product of the final environment state if the particle hits the back wall in the upper position so environment f up with environment F down you know the absolute value of this in product squared is generically going to be much less than one in fact I'll write like three of the so like really really
+
+01:16:50
+really small and this is just because the environment you know the the stuff surrounding the experiment and the room and the building and you know the state whatever um the environment has a lot of degrees of freedom and in general you know because the environment is kind of chaotic um these two St these two states you know environment f up and environment F down they're sort of going to be two random States out of the environment and any two random States in a very high dimensional Hilbert space
+
+01:17:27
+are going to have very very very little overlap so right so you can see that the the final state is further getting entangled with the environment and entangled very strongly so you know it's not just that you know this and this are in tangle it's that it's further in tangle with this there's sort of a a three things getting entangled here so from this brief overview I've given you you can sort of get an inkling that we don't see the entangled superposition State because the
+
+01:18:02
+environment itself measures our whole experiment in the sense that the environment you know becomes entangled with it so this story I've been laying out here of environmental entanglement this is the story of quantum decoherence is is a very very important thing Quantum decoherence it's all about how stuff in quantum mechanics gets entangled with the environment and in doing so seems more and more like classical physics in the sense that you know particles you know will seem to be in one position not in two positions and
+
+01:18:44
+so on so I haven't fully explained Quantum decoherence here I've just sort of given the main idea um that environmental entanglement prevents you from seeing you know superpositions that that seem weird but hopefully I've sufficiently peaked your interest so that you know you go and look it up for yourself cuz it's a very very important process and it's really why we don't see quantum mechanics in a regular life it's it's really due to Quantum decoherence there's a there's a really
+
+01:19:16
+good book about decoherence written by a fellow named Max ailan uh schlow power it's is called Quantum decoherence uh if you want to learn more about it I think this book is definitely the the best place to learn it I I highly recommend this book but yeah that's the end of this video thank you so much for watching and in fact this is the end of my entire series on Quantum spin W what a journey it's been making these videos I had no idea it would take me this long to finish them all but I kept realizing I
+
+01:19:51
+had you know so many more things to say the thing about this uh this subject you know just Quantum spin is that you can really get a sense of all of quantum mechanics just by studying this one sort of very simple system and some in some sense the simplest system just you know just uh two dimensional complex vectors you know very closely you know and in this and in this example the whole world of quantum mechanics just opens up you can learn about basically every facet in in quantum mechanics you know just for this
+
+01:20:27
+one simple example so if you've watched you know some of these videos you will have actually learn stuff that applies to way more than just Quantum spin you'll you'll you're basically ready to learn um more or less anything in the subject of quantum mechanics you know we've sort of taken this very unified path through it that that passes through you know all sorts of amazing subjects anyway thank you so much again again I hope you felt as though this was a valuable experience and I'll see you
+
+01:20:59
+again next time
+

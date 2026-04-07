@@ -1,0 +1,249 @@
+00:00:00
+in this video I am going to tell you about the poly matrices and what they have to do with quantum spin and Anthony Oh a lot with quantum spin extremely extremely important and if you don't know what matrices are don't worry because I'm going to explain what they are but if you do know what they are also don't worry because it's not going to be boring I've tried to make this video interesting to both people who don't know what matrices are ahead of time people who do know what matrices
+
+00:00:31
+are ahead of time the thing is that quantum mechanics as we'll see is really just glorified linear algebra and matrices fit into the subject in such a natural way that that explaining them really isn't a burden at all I'm going to start off my discussion of the poly matrices by showing that they give us an efficient way to calculate expectation values of spin measurements having said that as the video goes on I hope you'll see that there's a lot more interesting stuff about the poly matrices than just
+
+00:01:06
+that they give us an efficient way to calculate something but for now let's just start off by talking about the expectation values so say you have an electron with a quantum spin state sy with components alpha and beta and you do a spin measurement along the z axis we know that the probability of finding the electron in the spin up state along the z axis is equal to the absolute value of the inner product of the spin up state along the z axis with sy squared which is just the absolute value
+
+00:01:44
+of alpha squared we also know that the probability of measuring the spin down state along the z axis is just equal to the absolute value of the inner product of the spin down state limb is the axis with sy squared which is just equal to beta squared now let's say that if the experimenter were to measure the electron the spin up state they were to say that that electron had to spin a plus 1 and if they measured it in the spin down state were to say they like trying to spin a - one the question is what is the expected
+
+00:02:20
+value of spin for the state and the answer is pretty straightforward it's just plus one times the probability of a spin up measurement minus one times the probability of a spin down measurement and we can see pretty easily here that that's just equal to the absolute value of alpha squared minus the absolute value of beta squared and we can see that it was pretty easy to figure out the expected value of spin for a measurement along the z axis and the reason for that is basically because we've written a state in such a way that
+
+00:03:10
+we can immediately see what its components are in the basis of spin up States and spin down states along the z axis right we know we can write sy as follows and this means that if we were to take for example the inner product of sy with the spin up state this would just be equal to whoops that would just be equal to alpha times the inner product of the spin up state with the spin up state plus beta times the inner product of the spin up state with the spin down state but we know that the inner product of
+
+00:03:55
+the spin up state with the spin down state is 0 while the inner product of the spin up state with the spin up state is 1 so this is just equal to alpha but there is nothing fundamentally special about the basis of spin States along the Z direction if for example we had a state sy that was equal to alpha sub X times the spin up state in the X Direction plus beta sub x times the spin down state in the extract then it would be very easy to see what the expectation value of spin for measurements in the x-axis would be so
+
+00:04:37
+the expectation value of spin along the x-axis would just be alpha sub X or the absolute value of alpha sub x squared minus the absolute value of beta sub x squared and to that end let's actually see how we could write the spin up state along the z direction as a sum of the UP State in the X direction and the down state in the X direction so the spin up state along the Z Direction is equal to 1 over root 2 times the vector with components 1 over root 2 and 1 over root 2 plus 1 over root 2 times the vector
+
+00:05:30
+with components 1 over root 2 and minus 1 over root 2 right because this whole thing is just the vector with components 1 0 and that's just the up state in the Z direction anyway it's no secret that this is just 1 over root 2 times the spin up state in the X Direction plus 1 over root 2 times the spin down state in the X direction let's actually do the same thing for the down State in the Z direction so that's just equal to 1 over root 2 times the vector with components 1 over root 2 and I'm sorry jump the gun
+
+00:06:17
+of it and 1 over root 2 minus 1 over root 2 times the vector with components 1 over root 2 and minus 1 over root 2 right because this whole thing is just 0 is this a vector with components 0 and 1 and this is just equal to 1 over root 2 ooh times it's been up stating the x-direction minus 1 over root 2 times the spin down state in the x-direction likewise actually let's do the same thing for the Y direction just to just to be fair to the good old y direction so the spin up state in the Z Direction
+
+00:06:59
+is equal to make sure I get this right yeah ok well 1 over root 2 times the vector components 1 over root 2 and I over root 2 plus 1 over root 2 times the vector with components 1 over root 2 and minus I over root 2 which is just 1 over root 2 times the spin up state in the Y Direction minus 1 over root sorry plus 1 over 2 times the spin down state in the Y direction and then last but not least the spin down state in Z Direction is equal to no yeah negative I over root 2 you gotta be clever now cuz we got all
+
+00:07:54
+these eyes around times the vector with components 1 over root 2 it's getting a bit cramped and I over root 2 plus I over root 2 times the vector with components 1 over root 2 and negative I over root 2 and let's just see okay the top component is just going to be okay the top components just 0 and the bottom component is 1/2 plus 1/2 right ok good so this checks out and this is equal to minus I over root 2 times the spin up State the Y component plus I over root 2 times the spin down State in the Y
+
+00:08:48
+component anyway let's get back to the expectation value so if you have a state SCI which is alpha times the spin up state is eaten plus beta times the spin down state in the Z direction then as we just saw we can write it so funny - you can write this as follows one over two times the spin up state in X Direction plus one over root two times spin down state in the X Direction that's just another way of writing this right here plus beta times one over two times it's been up state in the X
+
+00:09:33
+Direction minus one over two times the spin down state in the X direction and then we can collect like terms and find this is equal to one over two times alpha plus beta times the spin up state in the X Direction plus one over root two times alpha minus beta times the spin down state in the X direction so we can now see that you know if we write our state initially in the Z basis and we can see what alpha and beta are we've now found what alpha sub X and beta sub X are so therefore the expectation value
+
+00:10:24
+of spin in x axis or a long x axis is equal to the absolute value of or actually let me write it this way is equal to 1/2 times the absolute value of alpha plus beta squared minus 1/2 times the absolute value of alpha minus beta squared right so that was the result that was trying to show all right so let's take a bit of a breather we just saw how to calculate the expectation value for a spin measurement along the x but there's a better way now I'm not gonna say what this operator Sigma sub X
+
+00:11:13
+is but let's say that we had an operator Sigma sub X that was a function from C 2 to C 2 now by this notation I just mean that Sigma sub X is a function that takes in an element of C 2 so it takes in a spin vector and it outputs a spin vector so let's say that we had this function Sigma sub X that satisfied two properties the first one being that it's what we call linear linear so Sigma sub X acting on Phi 1 plus I 2 is just equal to Sigma sub X acting on sy 1 plus Sigma sub X acting on site 2 and the second
+
+00:12:12
+property which is more special is that when Sigma sub X acts on the spin up state along the x axis the result is just plus 1 times the spin up state along the x axis and I could have just written this as you know this spin up state along the x axis but I just want to draw attention to that plus 1 out front even though it doesn't really make too much of a difference so okay so that's how it acts on the spin up vector and on the spin down vector it's equal to minus 1 times the spin down vector
+
+00:12:54
+right so I haven't told you what Sigma sub X is I'm just saying let's say there were such an operator that had these two properties now say we had a state's I written in the X basis with components alpha sub X and beta sub X oh just while I'm writing this let me mention that the dual vector of SCI is equal to alpha sub X bar times the dual vector of the Upstate in the X Direction plus beta sub X bar times the dual vector of the downstate in the X direction and the reason that these two
+
+00:13:42
+our complex conjugated is because you have two complex conjugate all the components when you take the dual of a vector but okay we'll come back to that in a second anyway Sigma sub X acting on sy which we can write sy in terms of its components can be easily calculated because Sigma sub X is linear so you can just act it on both of these vectors individually and then add them together now when Sigma sub X X on the up state it just does it just leaves it the same but when acts on the down state it negates it so
+
+00:14:29
+we can immediately see oops I shouldn't even write that that this is equal to alpha sub x times the Upstate in the X Direction minus beta sub x times the down state in the X direction alright so because of the nice properties that Sigma sub X has we can immediately write how it acts on the state because we've written it in a friendly basis now if we compute the inner product of sy with Sigma sub X acting on sy well this is just equal to alpha sub X bar I'm just writing out the dual state and I'm just
+
+00:15:19
+writing out Sigma sub X acting on sy and this is all pretty easy to compute there are four terms but we have all sorts of nice relations like the inner product of the spin up state with itself is one and the inner product of the spin down state with the spin up state zero and you know stuff like that so immediately see that this is actually just equal to alpha bar sub x times L right alpha sub X bar times alpha sub X minus beta sub X bar times beta sub X which is just equal to the absolute value of alpha sub x squared minus the
+
+00:16:13
+absolute value of beta sub X squared which is equal to the expectation value of spin measured in or measured along the x axis all right so now you can see why I've been talking about this operator Sigma sub X so much when I haven't even said what it is yet the thing is that if you calculate the inner product of sy with Sigma sub X acting on sy you immediately get the expectation value of the spin measurement in the X direction but the thing is that you don't actually have to know you don't need to know what alpha
+
+00:17:01
+sub X and beta sub X actually are once we know what Sigma sub X is we'll automatically know that this quantity is the expectation value without having to go through you know all the rigmarole of finding alpha sub X and beta sub X all right so you're excited are you ready for me to tell you it's Sigma sub X's all right I'm gonna tell you it's Sigma sub X's so it turns out that Sigma X is actually very simple it's just the function that takes the vector with components alpha and beta to the vector
+
+00:17:36
+with components beta and alpha it swaps the two components so let's check that it has the properties we want the first one is that it's linear so if we act Sigma X on the sum of two vectors so here's the sum of two vectors one with components alpha when beta one moving components alpha two beta two we can add the two vectors together into one vector with components alpha 1 plus alpha 2 and beta 1 plus beta 2 and then swapping the upper component with the lower component as Sigma sub X does we find that it's equal
+
+00:18:21
+to the vector components beta 1 beta 2 and alpha 1 plus alpha 2 and then whoops and this is just equal to the sum of the vectors with component beta 1 alpha 1 and beta 2 alpha 2 and finally this is just equal to Sigma sub X acting on alpha 1 beta 1 plus Sigma sub X acting on alpha 2 beta 2 so yes it is linear just as you wanted now the more special property is that if we act it on the spin up state in the X direction it should leave it unchanged right and if we acted it on the spin down state in
+
+00:19:15
+the X direction it should negate it so first let's let's see if let's see what happens here so the spin up state is components 1 over root 2 and 1 over root 2 but those are but the top component equals the bottom component so when we swap them it stays the same so this is indeed just equal to plus 1 times the spin up state which is just what we wanted and likewise we act on a spin down state which has components 1 over root 2 and negative 1 over root 2 when we swap them we just find that it's equal to negative
+
+00:19:57
+the vet itself right because when we swap them it's the same as negating them and this is just equal to negative 1 times the spin down state which is exactly what we wanted so this Sigma X here is exactly what we wanted all right so we've been beating around the bush but now it's finally time to talk about matrices so and don't be scared by the way so Sigma sub X can be written as a matrix I haven't told you what a matrix is yet by the way but you're about to see one for yourself so Sigma sub X can
+
+00:20:38
+be written as the following matrix now once I tell you what this expression means you will immediately see that Sigma sub X acting on alpha and beta equals beta alpha this is just a new notation that's just a new way of writing this exact same thing so let me talk for a moment about matrices in general so right here I have a general two-by-two matrix because there are two rows and two columns now you should really think about a matrix as a function which takes one vector to another so here we have a column vector
+
+00:21:32
+and here we have our matrix and this is gonna and this matrix is going to take this column vector to a new column vector and the new column vector it's going to take it to is just the one with components a times alpha plus B times beta and C times alpha plus D times beta right this is the rule so we can see that the tricks with components 0 1 1 0 acting on alpha beta is equal to okay so we have a times alpha right but a is 0 so that doesn't matter but then we have B times beta and B is 1 ok looking good so far
+
+00:22:28
+ok then down here right we have C times alpha but C is 1 we're not but anyway you can see C is 1 but D right D times beta D is 0 new york times beta so this is equal just to the vector with components beta alpha just as we wanted so in principle I've told you really all you need to know about matrices but or all I told you you know matrices AK done vectors if I want to give you a little like tip I guess or not tip but I want to just give you a little bit of advice ok I'm gonna tell you how I multiply
+
+00:23:17
+matrices in my head ok and hopefully that will be useful to some people your you should come up with your own way to like do this quickly but here's how I do it so I sort of like picture like this column vector as kind of like the bottom of a stamp and I kind of like pick the stamp up this is just what's going on in my head when I'm multiplying matrices so I kind of like pick up this stamp actually let me literally draw this as the bottom of a stamp with a handle right so here's the handle of the stamp
+
+00:23:55
+and I sort of picture taking this stamp and stamping it on these two rows you know first I stamp it on the first row then I stamp it on the second row so when I stamp it on the first row I just there's just an alpha next to the a and a beta next to the B so the first component whoops already screwed up is a help it is eight times alpha plus B times beta and then when I stamp it on a second one then there's an alpha next the C and a beta next to the D so C times alpha plus D times beta all right
+
+00:24:38
+and that's just how I multiply these things in my head so maybe that will be useful to some people now remember earlier when I showed that the expectation value of spin in the x axis was equal to 1/2 times the absolute value of alpha plus beta squared minus 1/2 times the absolute value of alpha minus beta squared let's see what expression for the expectation value we get using Sigma sub X so if we have that sy has components of alpha and beta then the inner product of sy with Sigma sub X
+
+00:25:31
+acting on sy is just equal to the row vector with components alpha bar and beta bar and then the matrix whoops with components 0 1 1 0 and then the column vector with components alpha and beta and this is just equal to this and the dot product or the inner product of these two vectors is alpha bar times beta plus beta bar times alpha and this is a different expression than this right certainly this one seems a lot simpler but I just felt like showing you that closing the circle a bit and showing you that these two things are
+
+00:26:24
+exactly the same so so okay so the question is does this equal alpha bar times beta plus beta bar times alpha so if we rewrite the expression I'm just rewriting history writing whoops yeah this top expression right now if we so okay this has four terms new expanded out fully and this has four terms when you expand it out fully so these four terms are alpha bar alpha plus alpha bar beta plus beta bar alpha plus beta bar beta and these four terms are alpha bar alpha minus alpha bar beta minus beta bar alpha plus beta bar beta
+
+00:27:36
+you notice that there's a minus sign right here so this term cancels with this term this term cancels with this term and all of here we have 1/2 of this term and minus 1/2 of this term so yeah we can actually see that these two things are the same but notably actually as promised I think you can agree that this expression is a lot easier so so we've spent a lot of time talking about measurements in the x-direction but we have two other perfectly good axes to talk about right we have the Y direction
+
+00:28:23
+in the Z direction so what are the matrices that will give us the expectation values in those directions well for the Y Direction Sigma the matrix will call Sigma sub y has components 0 negative I I and 0 seems pretty cool and the matrix in the Z direction definitely the simplest set all of them has components 1 0 0 and negative 1 so just as we have previously showed that Sigma sub X acting on the spin-up direction the X Direction it's plus 1 times this very same vector and acting on the spin down Direction down vector
+
+00:29:16
+in the X Direction is minus 1 times the very same vector we should show the same analogous thing for these other two matrices so that's what I just want to show right now so we're checking we're just checking that these two matrices really do work as they should so to start off Sigma sub y acting on the spin up vector in the Y direction that's equal to matrix with components 0 negative I I and 0 acting on the vector with components 1 over root 2 and I over root 2 okay actually I'm only gonna do
+
+00:30:03
+this this first time but picture picking up this stamp right and we're picking up the stamp the components are 1 over root 2 and I of root 2 and we're gonna stamp it on this top one right and that gives us 0 times 1 over root 2 minus I times I over root 2 and now we're gonna stamp it on the second one and that gives us whoops that gives us I times 1 over root 2 plus 0 times I over root 2 and this is equal to okay negative I times I is 1 so 1 over root 2 and the bottom here just so I have root 2 and ya that is just equal
+
+00:31:12
+to the spin up vector in the Y component right this vector is just the same as this vector ok so from here on out you're gonna have to do all the stamping in your head but okay let's see what happens when we act with the Sigma sub y on the spin down vector in the y direction so that's just zero negative I I on 0 here we have 1 over 2 and negative I of root 2 the negative I makes all the difference so are you stamping all right so stamp in your head with me right we got 0 times 1 over root 2 minus I times
+
+00:32:01
+negative I over root 2 and then we have I times 1 over 2 plus 0 times negative I of root 2 and that's equal to negative 1 over root 2 top and I over root 2 in the bottom and up that's just equal to negative 1 times 1 over root 2 and negative I over root 2 and ya that's equal to negative 1 times the spin down state in the Y direction so yay ok this matrix checks out now let's see what's up with the Z direction so ok one thing so you see that the diagonal components right the going from the top left to the
+
+00:32:59
+bottom right are the only nonzero the only are the only nonzero components actually I should say entries so yeah so I guess I should just say that the four numbers and the matrix are called entries I shouldn't have called them components but anyway when you have only zeros on not on the diagonal it's really easy to multiply matrices so Sigma sub Z acting on 1 and 0 now I might as well just Sigma sub Z acting on the spin-up vector this is just 1 zero zero negative one acting on one zero you can just multiply this number
+
+00:33:45
+by this number and this number by this number that's just a simple thing about using completely diagonal matrices so so one times one is sorry whatever it's your there my bad so one times one on the top and negative one times zero on the bottom you don't even have to this is just a quick thing to keep in mind when you only have zeros on the off diagonal terms anyway this is just one zero which is just plus one times the spin up state along the z direction okay which is just what we wanted now
+
+00:34:28
+what about the spin down State along the Z direction well should be pretty easy to see that when we act with Sigma sub Z on the spin down state we have 1 times 0 and negative 1 times 1 which is just equal to 0 and negative 1 which is just equal to negative 0 and 1 which is equal to negative 1/2 times the spin down state along the z direction so ok all three of these matrices work as intended and these are called let me choose a special color these are called the three poly matrices now just to belabor the point the expectation
+
+00:35:28
+value of spin along the x axis is the inner product of sy with Sigma sub X acting outside along the y axis you just got to put Sigma sub y in there miss apply and along the z-axis you just got to put Sigma sub Z in there anyway I spent a lot of time in my life with these poly matrices and I gotta say there's something about the algebra of these poly matrices there's just really charming to me even the name poly matrices is it's just a very pleasing name to me when I think of these poly
+
+00:36:19
+matrices the one word that really comes to mind is cute I think these things are just late I think they're really cute right you know there's all these ones and zeros and the second one is this eye and you know it kind of looked like you know looks like little figures right you know maybe like they have like you know a little face many other I don't know if anyone else feels this way but I have always felt it I just think these things are a lot of fun somehow they're very they're very pleasing to me Oh anyway
+
+00:36:52
+that's enough fun time to get back to business all right so it's time for me to tell you some extremely important terminology and I guess half a you will already know this but when you have an equation like Sigma sub y acting on the spin down state in the Y Direction equals negative 1 times the spin down state in the Y direction when you have an equation like this you have a matrix acting on a vector and it equals a constant times the same vector you would call this vector you'd call it
+
+00:37:36
+an eigenvector right so you would say that this vector is an eigenvector of Sigma sub y you would also call this value right here it's negative 1 you would call that an eigenvalue now apparently I looked it up and apparently eigen is I think a German word which means same so it actually makes a lot of sense so you would cut this is called in other words a same vector so to speak because when the matrix acts on this vector the vector stays the same it's just multiplied by a value and I guess there'd be the same
+
+00:38:38
+value like the value with which it's the same yeah yeah that's just extreme that's extremely important terminology if you didn't know that all right now I want to talk about matrix multiplication in general and even if you know about matrix multiplication I have a point two talking about this so I might advise still to not stop watching mhm but okay say that a is an M by n matrix so as per convention M is the number of rows and n is the number of columns that means as per standard notation if you
+
+00:39:27
+have a IJ where I is an integer that goes from 1 to M and J is an integer that goes from 1 to N 8 you see that a IJ is the I J entry of matrix a so for example if M equals 3 and N equals 2 then a would look something like this it would be a 3 by 2 matrix hence component would be a 1 1 a 2 1 a 3 1 a 1 2 A 2 2 and a 3 2 now matrices can be multiplied together but only if they have the right dimensions so let's say a is an M by n matrix and B is an N by L matrix because a because the number okay because the
+
+00:40:40
+number of columns of a is equal to the number of rows of B you can multiply these two matrices together and you would write that as a B so the way you should think about this or one way you can't think about this is that when you have an M by n matrix and you multiply it by an N by L matrix you kind of contract the two the two ends right so you could track the number of columns of a with number of rows of B and the overall result is an M by L matrix so a B is an M by L matrix and the rule for
+
+00:41:30
+calculating a B is as follows the IJ ahthe component of a B is equal to the sum from k equals 1 to n of a I K times B KJ all right so you can see that K right which is in the summation a kind of dummy in a kind of dummy index right because it's within the summation you have to add n things together to calculate the IJ a--the component of a B right so every I keep calling components really should call them entries every entry of a B you have to sum and things together and that's sort of how like
+
+00:42:25
+this n right here your disappears so you can see that you know because I had to be an integer from 1 to M and this J had to be an integer from 1 to L you can see that this overall a B really is an M by L matrix just as you know we said it would be alright so if you didn't already know what matrix multiplication was ahead of time it might just seem like I was defining some random rule but it's actually basically what we were just doing earlier so here's the thing a column vector can be thought of as an M
+
+00:43:17
+by 1 matrix so remember that the first number is the number of rows and the second number is the number of columns so if we so a column vector is just one column likewise a row vector is a 1 by M matrix because the first number is the number of rows and a row vector is just one row so if you have a square matrix in M by M matrix and you multiply it by a column vector which is M by 1 then when you contract the two middle indices the overall result is an M by 1 matrix which is just a column vector so we can
+
+00:44:08
+see that when we multiply a column sorry when we multiply a square matrix by a column vector the result is another column vector and this might help you and just to you know connect things up this whole contracting the middle indices thing right where this M we have to have the number of rows sorry the number of columns of our matrix equal the number of rows of our column vector that's what we need in order to get our stamping procedure to work so say we had a three by three matrix right and we were to multiply it by a column
+
+00:44:54
+vector with three rows when we lift up this column vector right like this we meet in order okay in order for our stamping procedure to work we need each of the three rows of our column vector to match a column of our matrix and that's just what we need in order for our stamping procedure to work right so in other words you should think of this contraction right here is just the same old stamping we were doing earlier now there's something else you can do once you think about vectors as matrices say
+
+00:45:40
+that you had a row vector which is a 1 by M matrix and you were to multiply it by a column vector which is an M by 1 matrix contracting the 2m s you can see that the overall result is a 1 by 1 matrix which is also just known as a single number and that makes perfect sense what we've been doing this whole time so if you had a row vector for example which had three components and a column vector with three components then this whole thing right here is just a number and the quote-unquote stamping
+
+00:46:19
+procedure where you were to I guess bring up this column vector right here and then stamp it that's just the inner product that we've been doing this whole time now there's something else interesting that you can do with a row vector and a column vector that a lot of people don't mention which is that if you do this the other way if you take a column vector which is an M by 1 matrix and you multiply it by a row vector which is a 1 by M matrix see here you had the row vector on the left and the
+
+00:46:54
+column vector on the right and here you have the column vector on the left and the row vector on the right totally different because here the one contracts with the one and the overall result is an M by M square matrix so let's actually let's actually see how that would work so say that you had a column vector components a and B and you had a row vector with components C and D now this this whole thing we're gonna see is a two by two matrix now what is the two by two matrix well because we're you know let me just write
+
+00:47:46
+it again because we're only contracting one index we don't actually have to add anything up to calculate any particular entry of our resulting two-by-two matrix there's going to be no addition so how it's going to work is basically we're just gonna take like we're gonna take this vector right and we're gonna sort of put it here twice and then we're going to take this vector and we're gonna put it here twice and we're just going to multiply the entries of this vector with
+
+00:48:34
+the entries of this vector when they overlap so the answer is gonna be a times C or actually let me just put it this way let me put this one in first right so I'm gonna start filling in a B a B but I'm not done yet because now I got a multiply it by C and D and C and D so okay so this is how you take a row vector and the column vector multiply them in the other order and the result is a square matrix so it's very interesting to see that from the general matrix multiplication rule there are so many different
+
+00:49:20
+operations that are special cases of that one general rule now the really important thing about matrix multiplication is that it's associative so associative this is just a vocabulary word which means that if you have three matrices a B and C that can be multiplied together because the you know assuming a b and c have the right dimensions to be multiplied together you have a B times C is the same thing as a times B C in other words the order in which you multiply matrices doesn't matter you can multiply a and B first
+
+00:50:12
+and multiply it by C or multiply B and C first then multiply that by a and the end result will be exactly the same so right so let's say a has dimension P times Q a is PQ B is Q times R C is R times s and because here we have Q and Q here and R & R here these can be multiplied and the way we have two way we want them to be and the total matrix ABC the ijs component of that is equal to the sum from l equals 1 to q right so first I'm doing this sum so from so from l equals 1 to Q of so
+
+00:51:24
+sorry another some right now we're doing the our sum from k equals 1 to r a i l b lk c k j so alright so this is this is ABC and if you notice you can actually if you switch the order of summation which you can always do you could write this for example as the following right so the thing is that I wrote this all in parentheses because as you can see we're summing over the dummy index L and L is only inside the parentheses so that's why I'm allowed to draw those parentheses anyway this whole thing is
+
+00:52:39
+just the IKS component of a B so you can see that this as we've written it here we first do the multiplication of a and B and then we multiply it by C so that's one way we could do it but we could also yeah okay but we could also do the summation in a different way we could have the sum over L first and then have ail out here and then in parentheses do the sum from k equals 1 to r of b lk c KJ so see now I'm summing over the dummy index K and K only appears inside the parenthesis so she why did I erase that
+
+00:53:46
+so well this was the ikf component of a and B this is the LJ ahthe component of C of B and C or BC so just from rearranging those summations right just from rearranging the summations we have proved associativity an interesting thing is that just as we've rearranged the order of summation if you were to compute this product like this and then compute it like this you would actually be doing summations in a different order as if if you actually had real matrices a B and C in front of you to compute it in these two different
+
+00:54:38
+ways would actually be to some stuff in a different order just as we've written the sums in a different order here all right so by now you're really confused you're you're saying I just want to learn about quantum mechanics and now you're like doing all this horrible stuff with matrices but now I'm going to tell you the point that I've really been wanting to say this whole time so say that you have a column vector which is an M by 1 matrix right that's a column vector and then you have a row vector o
+
+00:55:13
+vector which is a 1 by M matrix it's a row vector and then you have another column vector which is an M by 1 matrix once again so there are two ways that you could evaluate this product of matrices the first way is by contracting these two M's and the whole result is a one by one matrix which is just a number and then contracting this one with this one that's really just multiplying a constant by a matrix this whole thing is an M by one matrix which is just a column vector all right so that's the
+
+00:56:02
+first we could do it but the other way you could do it is by contracting this one right here and this whole thing is an M by M square matrix and now contracting this M with this M multiplying this square matrix by a column vector the end result is an M by 1 matrix aka a column vector and by associativity we know that these two things are exactly the same all right now having said all of that I now want to compute the following the following thing it's coming back to quantum mechanics as you
+
+00:56:57
+can see I want to compute the following thing now you see this is a row vector and this is a column vector likewise this is a row vector and this is a column vector so this whole result is going to be a two by two matrix so this is just equal to column vector with entries 1 over root 2 1 over 2 and then 1 over root 2 and 1 over root 2 and then here we have 1 over root 2 minus 1 over root 2 and 1 over root 2 minus 1 over root 2 and then we're gonna we're gonna multiply these in the way I said earlier we're first
+
+00:58:00
+you know we're first you take this and you you put it here in here and then you take this and you put it here and here so let's do just that 1 over root 2 1 over 2 over 2 1 over 2 that's that was me putting that in the two spots and now I'm gonna put this in the two spots so times 1 over root 2 1 over root 2 oh I didn't even write a 2 there got kind of bored ok whatever to 1 over root 2 and now we're gonna do this one so - so got 1 over 2 minus 1 over root 2 1 over root 2 minus 1 over root 2 and then here we
+
+00:58:57
+got 1 over root 2 minus 1 over root 2 1 over root 2 minus 1 over root 2 so I guess this got a little messy but this these are where the dividing spaces are anyway this is just equal to 1/2 1/2 1/2 1/2 minus 1/2 minus 1/2 minus 1/2 and 1/2 and this is just equal to 0 1 1 0 and that is just equal to Sigma X Wu now it seems pretty mystical right that this thing equals Sigma X but actually if you think about it a little harder it makes perfect sense because if you were to take actually let me just if you were
+
+01:00:10
+to just take this thing right and you were to put for instance a the spin down state in the X direction right here right this would equal the following the following thing right and then this right here is one but this right here is zero so this whole thing then equals just negative the spin down state in the x-direction right and likewise if you were to put in the spin up state in the x-direction then you would have just got you know the same state out because see there's a negative here but there's no negative
+
+01:01:10
+here any case so this result is just you know exactly the same as this equation that we already had so in other words the associativity of matrix multiplication is what allows us to manipulate this notation in such a nice way and as I'm sure you could guess this relationship is also true for the Y direction and for the Z direction so now let's show it for the other directions so the only wrinkle is that in the Y direction you got a complex conjugate the dual vectors but that's a fact that
+
+01:01:56
+we're already very well acquainted with by this point so here we have 1 over root 2 pi of root 2 1 over root 2 negative I over root 2 minus 1 over root 2 negative I over root 2 1 over root 2 I over root 2 and then we have 1 over root 2 pi over 2 1 over root 2 I over root 2 and then 1 over root 2 negative I over root 2 1 over root 2 negative I over root 2 minus 1 over root 2 negative I over root 2 one over root two negative I over root 2 1 over root 2 I over root 2 1 over root 2 I over root 2 this is equal to 1/2
+
+01:03:09
+minus I over 2i over 2 and then 1 over 2 minus 1/2 I over 2 negative I over 2 and then 1 over 2 and that is just equal to 1 oh it's just equal to 0 negative I I 0 oh my god its Sigma sub y equal Sigma sub y which is exactly what we wanted now Y is always the hardest one but now we're gonna do Z Z so anything involving Z is always really easy it's the treat at the end so now we're going to compute the following matrix okay so that's equal to 1 0 0 1 minus 0 1 0 1 that's equal to oh man I actually screwed it up
+
+01:04:25
+Wow I shouldn't have been so dismissive ok the main obstacle is your own ambivalence okay so here we have 1 times 1 1 times 0 0 times 1 0 times 0 minus 0 times 0 0 times 1 1 times 0 and 1 times 1 so that's just 1 0 0 0 minus 0 0 0 1 equals 1 0 0 negative 1 and what do you know Sigma sub Z tada actually let me just sneak in another funny little point which is that if you were to make each of these minuses a plus so we had plus here plus here and plus here they would all be equal to the same matrix which was one zero zero one
+
+01:05:30
+and I claim that this is true due to the conservation of probability that in any along any axis the probability of measuring something up plus the probability of measuring something down always has to be one so I claim that now I'll let you ponder this for yourself you could actually check this for yourself that adding them instead of subtracting them all here this matrix that's just sort of interesting thing that I kind of want to wedge in here but I'm going to move on so one final piece
+
+01:06:08
+of terminology sometimes I feel like I'm like a vocabulary teacher but okay so you remember how this is called an inner product and it's kind of a stupid name right inner product well it's about to get a lot less stupid because this thing right here what do you think this is called all right guess it's called an outer product which actually I find kind of nice you know because these are facing inwards and these are facing outwards and as a notation you know I approve of this I think that's pretty
+
+01:06:48
+smart so okay inner product outer product that's all I wanted to say well I've said everything I wanted to say about poly matrices I hope you can agree they're lots of fun even though we spent such a long video talking about them strangely we haven't even scratched the surface of their importance in general I'll just say a few words about it so you can look this stuff if you look this up if you want but they're really important for the LI algebra whatever that is of su to
+
+01:07:18
+whatever that is and they're really important for representation theory and what it really means to be a spin 1/2 particle in the first place but I'm not going to talk about that right now although all of our talk about eigenvectors and eigenvalues you know that will not have been for not right let me just pose a leading question right say you have a unit vector in 3d space with components and x and y and z now what is the spin state that could be said to be rightfully pointing in this direction in space right so far I've
+
+01:07:54
+only talked about spin States pointing on the x axis y axis and z axis but what about pointing in any arbitrary direction the answer is that it's the state which is the eigenvector whoops which is the eigenvector of this matrix right with eigenvalue 1 so the eigenvector with eigenvalue 1 of this matrix right here is the state which is which you which which you could say is pointing in this direction in real space so my next video and the Bloch sphere is gonna be about all that but I know this
+
+01:08:33
+is veno long and intense video so it made it this far give yourself a real pat on the back and before you you know rush to watch the next one make sure you do something restorative to you know get your brain back in order alright thank you for watching
+

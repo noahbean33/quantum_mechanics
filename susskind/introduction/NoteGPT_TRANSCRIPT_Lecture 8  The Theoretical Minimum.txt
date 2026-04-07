@@ -1,0 +1,471 @@
+00:00:05
+Stanford University was talking about what happens during or from beginning from before a measurement to after a measurement they were talking about what happens to the evolution of an isolated black hole left to itself between the time that it was prepared and the time it was measured okay uh nevertheless I could answer the question is is entanglement inevitably irreversible if two things which are not entangled come together interact with each other do whatever they do and become entangled is it irreversible not
+
+00:00:47
+necessarily anything that can happen the opposite can happen and now we're not talking about an external apparatus measuring a system we're s simply talking for example about two spins two spins interact with each other come together go off and they're entangled what happens is it possible to disentangle them by for example reflecting them letting them come together and interact again can they become disentangled yes yes there's no rule that says entanglement is uh is irreversible on the other hand if an
+
+00:01:26
+entanglement happens and you take one of the electrons off and throw it away then the other one is stuck there left being entangled with a thing that just is um not going to come back not going to come back unless of course somebody out there throw reflects it back in so yeah entanglement is re is reversible but as far as you're concerned the measurements that you do are irreversible that's a very peculiar situation and you have to think about it to understand what it means uh we're
+
+00:02:05
+going to move we're going to move off the question of these very simple systems spins sometimes called cubits uh tonight at some point but I want to just uh uh go over just very briefly I think I probably discussed this in class last time but nevertheless it's so important that I'm that uh that I want to um hammer on it first of all there was a notion of a density Matrix if we have two systems Alice's system and Bob system and Alice is and Bob system are far away from each other so that Alice
+
+00:02:43
+doesn't get to do any experiments on Bob system Bob doesn't get to do any experiments on alysis system but they're entangled either they are or they are not entangled they may be entangled is there a description that Alice by herself uses to describe just just her subsystem the answer is yes and the working description of her subsystem is called the density Matrix so let me just review that very very quickly and uh go back over some Concepts if the wave function of the Alice Bob system the combined
+
+00:03:22
+system of Alice's subsystem and Bob's if the wave function is called s of a and b b for Bob a for Alice then Alice's Alice's density Matrix Alice's density Matrix is defined to be siar the complex conjugate of the wave function all right now let's say row it's row called the density matrix it's indicated by row it has subscripts a and a prime because it's a matrix but it doesn't have anything to do with Bob so it's purely a matrix with respect to Alice's variables let's indicate that
+
+00:04:07
+by calling this Alice's density Matrix and it's given by SAR of a a prime B I always get confused yeah a prime s of ab summed over Bob's variables it doesn't depend on Bob's variables because they've been summed over when you sum over something it no longer depends on that set of variables so this is only a function of Alice's variables and it contains all possible all possible um statistical information that Alice can ever know about her half of the system unless Bob comes and interacts with her
+
+00:05:06
+system of course if Bob comes from wherever he is and gives her system a shot of some sort that will change her density Matrix but as long as Bob stays away from her system Bob's in paloalto Alice is on Alpha centuri as long as Bob does not interact directly with her system her density Matrix doesn't change no matter what what Bob does let me give a little proof of that uh let's take Bob's sub subsystem to not be so narrow as just to be the little spin that he's carrying around
+
+00:05:45
+and also Alice's let's imagine that Alice's subsystem consists of everything in Alice's neighborhood everything that she can have any contact with and everything in Bob system is uh everything everything in Bob's neighborhood maybe even including Bob and now Bob is going to do something he's going to do something interact of course he can only interact direct interact May mean he may turn on in a magnetic field he may do all sorts of things uh to change the evolution of his
+
+00:06:23
+subsystem he's going to make a subsystem evolve in some way what are the way which Bob can cause his subsystem to evolve many many ways but whatever they are they are always governed by unitary matrices let's come over here and forget Alice for a minute and ask what Bob can do to his subsystem he has a wave function let's leave Alis out of the picture Al together just let's suppose that Bob has a wave function and he's going to manipulate his system somehow he's going to manipulate the
+
+00:07:00
+system somehow and send it to a new wave function the rule is the new wave function of his subsystem must be related to the old wave function by a unitary operator unitary operators are the things which govern time Evolution go back remember about time Evolution unitary operators and that means that s of B becomes replaced by some over B some unitary Matrix BB Prime s of B Prime in terms of wave functions and matrices this is the description of what happens to Bob's Matrix sorry Bob's column Vector this is basically Bob's
+
+00:07:51
+column Vector describing his half of the world or his system and to find out what happens to it no matter what he does even if he doesn't do anything uh but let's suppose he does something if he does something it generates a unitary evolution of his wave function now how do we describe the same thing in the composite language in the composite language if the wave function is s of A and B Alice's and Bob's variable what happens to it when Bob manipulates his half of the world exactly the same thing with Alice's
+
+00:08:34
+variables being just Spectators just being passive Spectators so s of A and B just becomes s of whoops let's put in there b Prime this is sum of B Prime this is a function of B and you sum over B Prime okay that's again a sum of a b Prime of U of B and B Prime s of A and B prime a just passed through Alice knew nothing whatever about uh about this whole process her subsystem was not in any way influenced her her um index or her part of the wave function her half of the dependence of the wave function was uninfluenced by
+
+00:09:24
+Bob's manipulation so let's go back and take the manipulated wave function is the manipulated wave function let's call it s uh manipulated the manipulated wave function of b and a of A and B that's this it's been modified by the action of Bob's unitary operator okay now let's recalculate let's recalculate Alice's density Matrix after all Alice's density Matrix contains all information that she can ever know about her half of the world and so let's see what happened to it
+
+00:10:16
+well we first of all have to take the manipulated size star we we still have some over B but now we take the manipulated size star oh we haven't written size star sorry about that we have to write size star manipulated of and we want to know about it with index a prime and B A Prime and B and that we get just by complex conjugating this tells us how side changes let's just work out the complex conjugate that's the complex conjugate of a prime where is it A and B Prime this is a this is a prime and B
+
+00:11:05
+just a prime and B but here since B Prime is a summation variable we do not want to write B Prime here B Prime was the summation variable used over here let's just invent another one called bble Prime we're going to be that's going to be a summation variable in a moment and U complex conjugate of uh B and B Prime yeah U complex conjugate and of course there's a sum over B Prime here and the only reason I called it B Prime instead of B Prime was so as not to confuse it with B Prime here's one
+
+00:11:49
+sum and here's a separate sum right now here's something what do we know about unitary operators unitary operators our operators that if we interchange B if we interchange the two indices and complex conjugate what happens that's called it's called the inverse operator or the Herm Mission conjugate for a unit in general it's called the hermiss conjugate specifically for a unary it becomes the inverse operator let's just call it the conjugate if I un complex conjugate and interchange
+
+00:12:37
+these two sorry B Prime B Prime B then this becomes Herm Mission conjugate all right so this is the usual story if operators operate to the right on K vectors the corresponding action on bra vectors is given by the um by the her mission conjugate all right so now all we have to do is plug this in we plug this in for the left for the for the manipulated SI star that's summation over b b Prime uh SAR of a prime and B Prime Times U Dagger of BP Prime and B that's a nuisance too many indices for
+
+00:13:36
+me to be comfortable in the Blackboard but I think this is worth doing now what about SII SII is the other half that comes into the uh density Matrix and that's U BB Prime s of what s of A and B Prime complicated little mess oh when what are we summing over we're summing over all the B's basically yeah we're summing over this B over here let's put a b summation here we were summing over B Prime to get the manipulated wave the complex conjugate but we also have to sum over B Prime
+
+00:14:25
+here sum over all the B's in sight each B is a summation variable by the time we're finished all right but now look at what we have it looks complicated but what is this thing over here well not quite yeah one is uh essentially correct but of course what you mean is the unit Matrix this is the product Matrix of UD dagger this is a unitary Matrix so UD dagger is used inverse B Prime B BB Prime this is just just the chronica Delta B Prime B prime it just instructs you to set B Prime equal to B
+
+00:15:09
+Prime when you do the sum when you do one of the two sums let's say the bble prime sum so all of this then becomes sum over B Prime well let's see what have we got we've we've said bble Prime yeah we've done the sum of B that's done no sum over B we just did it and now we set B Prime equal to B Prime s star of a prime B Prime s of A and B Prime that's it now it doesn't matter whether we call B Prime B prime or whether we call it B because it's a summation variable so
+
+00:15:55
+let's do that let's just call it B and what do we have we have exactly I hope I pray the original density Matrix so Bob no matter what he does as long as what he does is described by a unitary Matrix Bob will have absolutely no effect on Alice's density Matrix does not matter whether they're entangled or not nowhere did I specify that this was a product state that is what physicists call locality the inability of Bob to influence any statistical prediction of Alice's by doing a manipulation on his
+
+00:16:44
+own degrees of freedom locality is not violated this form of locality this form of locality is not violated in any way by the phenomenon of entanglement that's the technical argument okay notice that it does depend on unitarity so and what did unitarity do with unitarity had to do with conservation of pro of um of uh distinctions what I call the minus first law at least in its quantum mechanical version so there a funny in an interesting interplay funny interesting interplay between the conservation of
+
+00:17:28
+Distinction on the one hand and locality if Bob somehow had access to changes which were not described by unitary operators this would not have become the unit Matrix over here and the final density Matrix would Alice's final density Matrix indeed would have been modified this is interesting the way the whole thing holds together this is why it's so hard to change quantum mechanics you want to play play a little game Let's uh let Bob let's let Bob's Evolution not quite be unitary only
+
+00:18:05
+approximately unitary well then immediately you start sending signals faster than the speed of light how by instantly modifying Alice's uh density Matrix so things hold together tightly and it's hard to change them um good so yes so so is it correct to say that if bomb's um Matrix is unitary the evolution Matrix yeah can't do he's not really able to touch his system he's not able to he's not able to change Alice Alice's system he's changed his own system by doing something and that
+
+00:18:53
+doing something was described by this unitary Matrix okay that that that's the part that excuses me if it's if he's doing something isn't he going to be violating unitarity no um for example he might be turning a magnet he might be turning a magnet in such a way that it has an influence on his spin what does that influence it will change the state of the spin for example yeah if you have a spin in a given Direction and it's coupled to a magnetic field and you and you turn the magnetic
+
+00:19:28
+field field in some way you'll typically change the evolution of that spin okay so Bob can do that he can um change a magnetic field that's acting on a certain spin the result will be to change the way the spin evolves that will change his own measurements of the spin of his spin if he does ACT by rotating a magnetic field which is mathematically described by some sort of evolution doesn't matter what some sort of evolution it's described by a unitary operator then uh then he does change the results of
+
+00:20:13
+his own measurements for examp he he rotates the magnetic field but he doesn't rotate his apparatus the result is that he going to change the probability distributions of his own spin but he will not change any of the probabilities of Alice's spin okay so so are you saying quantum mechanics is always Obe locality morality defined by the inability of Bob to influence Alice's measurements okay yeah now the question so what's the big deal is that what you're G to ask I was um guessing what you were
+
+00:20:55
+going to ask why don't you ask it s single particle wave function put a photon through a beam splitter it goes off in two different directions you catch it at one detector faster than the speed of light the wave function collapses whoa whoa whoa who what you you do what you you detect a photon at one detector yeah the the wave function at the other detector collapses to zero instantaneously I showed you what happens the density Matrix of the other system does not change period really average measurements don't
+
+00:21:35
+change what what what happen I know I know I know people look I'm doing my absolute best to tell it to you as it really is and to cut through the crap that's out there to cut through the crap that's out there because there is a huge amount of of there is a pile a mile high and we somehow want to cut through that this is the mathematics of cutting through it now nevertheless there were some pretty damn smart people who are uncomfortable about something something that they call nonlocality I mean you know Einstein was
+
+00:22:20
+no jerk he was pretty smart and uh they didn't call him Einstein for nothing that's my favorite joke John Bell was pretty smart they didn't call him Einstein though yeah so there's something going on there's something going on yeah go ahead this goes back to or I want to get I'm reviewing last week so uh make it quick to me this this is real clear I think um and that is the your idea of loc locality means that the the state don't affect each other words there's there's two things the
+
+00:23:04
+density yeah and and it seems that in uh the confusing part of quantum mechanics is that those two different things get mixed up somehow is that accurate or no it's fuzzy but it's true that it up a lot so I will try to I will try to tell you as I understand it what the concrete operational facts are right so I I told you last time I was I was a little bit um tired last time and I'm not sure I was completely clear so I going to go over it again because it's very very interesting uh and it really is at the
+
+00:23:48
+heart of all of the confusions about confusions I mean I must say including my own internal confusions about uh quantum mechanics when I first learned about her Einstein Rosen podowski that was the discovery well I don't know if it was I don't know if it was a discovery I think maybe schinger said some things about entanglement but it was Einstein Rosen and Podolski who really called attention to how peculiar it was basically what they said is we have a very funny situation here where although we can
+
+00:24:19
+know everything that can possibly be known about a composite system we know nothing at all about its constituents that's crazy that violates my sense of reality that violates my sense of uh of what it means to know what a system is doing violates all sorts of things I remember when I first heard about it it was actually before John Bell sometime in the 60s when I was a student no I wasn't a student I was a young assistant professor and I started to think about it and I thought about it a lot and
+
+00:24:49
+tried to figure out what it means um I was sort of inclined to try to think about it in terms of simulating quantum mechanics and I still am what are the limits if if if quantum mechanics is so very strange and so very different than classical physics does it mean that you can't fool somebody into thinking a system is quantum mechanical if all you have your resources are entirely classical and the answer is yes and no so I know I talked about this last time but it really is at the center of things
+
+00:25:24
+so let's go back over it quick quick as I can we're going to build ourselves a Quantum simulator I think somebody built one on the uh on the site I came across it about an hour ago who who's that yeah does does it work uh not well it it doesn't actually simulate yet not yet but is that picture is that picture your picture there was a picture of Einstein and Heisenberg and Einstein says I don't like this and Heisenberg said what uh Einstein says I I think I'm not going to
+
+00:25:52
+like this yeah right oh yes right I think that captures it why go on but okay let's let's talk about the nature of quantum simulators all right first of all I just want to simulate a single spin I think I told you how to do it but let's uh write down the steps we have a computer screen there's our computer screen on the screen we have a picture of a detector not a detector an apparatus and the apparatus can be oriented in any direction in three-dimensional space we need to do some three-dimensional
+
+00:26:32
+graphics here and it has a window and the window shows one of three possible States one is called blank B that's the uh that's the detector or the apparatus before it's uh interacted with anything so it can be b or it can be plus or minus one B is not important it's just uh to say before the detector interacts with anything there's a button over here called M and um the operator of the system of the computer game basically all he ever gets to do is press M and then look at the result of the an m stands for
+
+00:27:12
+measure it performs a measurement now over here connected to the computer by wires uh by cables uh connected to the screen by cables is a computer and the computer stores information in its memory and the basic information that it stores is two complex numbers Alpha up and Alpha down those are supposed to be the components of the wave function of the spin I didn't say yet that there was a spin here but that's what we're that's what we're talking about Alpha up and Alpha down the
+
+00:27:47
+computer only can generate Alphas which satisfy Alpha star Alpha up plus Alpha star Alpha down is equal to one whenever whenever it generates them it uh and it can do something else can do two other things it can update the alphas by solving the schinger equation for them there's some hamiltonian for example it could be that the spins are in a the spin is in a in an imaginary magnetic field in which case the alphas would change with time the computer knows how to do that it knows how to solve
+
+00:28:23
+Schrodinger's equation computers can solve Schrodinger's equation beautifully and it updates these as a function of time updates them according to the rules of quantum mechanics one other thing the cables are instantaneous they convey information instantly all right so we'll have one more element the other element will be a random number generator let me just say some words about random number generators random number generators sounds like we're introducing quantum mechanics no we don't need quantum
+
+00:28:58
+mechanics uh you can simulate to a very very high degree of confidence Rand a sequence of random numbers or random number generator purely out of classical uh classical considerations you know how to do it you take the digits of pi or whatever and uh you make something that looks would fool anybody including a sophisticated mathematician into believing uh that you were generating a set of random numbers so there's a random number generator in the computer all right the operator starts by initializing the system and and
+
+00:29:34
+initializing the system uh simply means starting out some orientation for the detector for the apparatus doesn't matter what and setting the alphas to some initial values uh he can plug in what he wants to the initial values to be or the computer just sets them according to whatever rule it likes the then the system runs for a period of time an indeterminant period of time updating the alphas until the operator decides to press m a certain amount of time is elapsed the operator decides how much time and presses M at that point
+
+00:30:22
+the random number generator generates a plus one or a minus one but with probability Alpha star Alpha up that it's plus one sorry Alpha up Alpha up star that it's plus one or else Alpha star Alpha down that it's minus one remember the sum of these two alpha star Alphas add up to one so with with armed with the random number generator the computer sends a signal with a probability of the appropriate probability to the detector and the detector detects or registers what the computer sent it okay
+
+00:31:06
+that's one measurement now as soon as that happens the computer reinitializes the alphas how does it reinitialize the alphas if the detector detected plus one then it sends back a message it doesn't really need to send back a message after all this message got from here to here all right so the computer over here knows whether it got plus one or minus one if the detector saw + one then it sets Alpha U Back to one and sends Alpha D to zero in other words it does what we call collapsing the wave function according
+
+00:31:50
+to the result or according to the outcome of the measurement it reinitializes the Alphas so whatever was measured you start with probability one for the outcome and probability zero for the what shall we call it the anti- outcome and then it runs again solves a shinger equation does it again the operator makes a ramp makes whatever decision he likes I mean what makes him decide to pressure to press M he's an experimental physicist what makes experimental physicists do what they do I don't really know but uh but he does
+
+00:32:32
+what experimental physicists do now and then he presses M and does the whole operation over again oh sorry before he does he may decide to rotate the apparatus now the computer in here knows what the orientation of the apparatus is so when it calculates it not only Cal calculates the updated Alphas but it also calculates the probabilities for the rotated detector to detect whatever it's going to detect that's all algebra and a little bit of uh that's that's purely algebra the computer makes the kind of
+
+00:33:15
+calculations that you did presumably did makes the kind of calculations to calculate what the probability would be that if the detector was rotated in some arbitrary Direction then uh then what's the probability that it will get up or down now who is it that decides to rotate the computer well it's the operator again the experimentalist the experimentalist not only can press M but he can also reorient the detector anytime he wants this is about as much as an experimental physicist can do with that
+
+00:33:55
+spin rotate the apparatus measure rotate the apparatus again measure right and what's the result of the outcome of this the outcome of this is indistinguishable from what the experimental physicist examining the spin would see so we've simulated quantum mechanics all right now we want to know whether we can simulate quantum mechanics of two spins one on Alice's side of the world over here and one on Bob's side of the world yeah um I don't understand the purpose of the button m in our in our uh in
+
+00:34:35
+other words when when he decides to push it some amount of time is involved yeah has that has that affected anything going on in the computer yeah the computer has been updating all this time right but when we talked about our basic model of how spin Works time did not come into it at all we we did talk about hamiltonians we talked about hamiltonians and how hamiltonians update the state of a system you're right we didn't discuss how a uh we didn't discuss much about hamiltonians for
+
+00:35:09
+spins yes we did yes we did I believe I described a spin and a magnetic field and how the average spin processes we did but if we didn't have the magnetic field because that's how we started out talking about all this stuff right then then time is not a should not be a factor okay I understand thank you m right now there's no real magnetic field there's just an imaginary magnetic field that the computer knows about and where does that come into it it comes into the solution the the nature of the
+
+00:35:44
+exact shinger equation okay now we do this over here and precisely the same thing over here except instead of Alphas we have betas beta stands for Bob exactly the same setup replicated twice Bob does his measurement Alice does her measurements they're perfectly happy each one says I have a spin it's quantum mechanical they don't talk to each other and each one says my spin is in a state the language that we would describe this by Quantum mechanically is they have simulated a product State a product
+
+00:36:36
+state in which Bob's sorry Alice's wave function is this and Bob's wave function is this and the combined system is in a product State supposing now we want to simulate a any state a more complete description that includes entangled States well we can do it this way let's start with a way that's sort of guaranteed to work we take the computer and we put it in the middle a single computer we can think of a single computer if we like as a pair of computers connected by wires but just by
+
+00:37:12
+the fact that they're communicating with each other and interacting with each other really makes them a single computer and in that single computer we now store four complex numbers the four complex numbers that we store in there are Alpha up up Alpha up down Alpha down up Alpha down down these complex numbers here are not necessarily products in fact let's assume they're not products in other words that this is not a product State let's assume it's a highly entangled State even a highly entangled state is
+
+00:37:50
+described by four complex numbers like this that's what's in the computer and what does a computer do with it it evolves the Schrodinger equation first of all we initialize same deal we initialize we start with some Alphas the alphas are allowed to run according to whatever Schrodinger equation describes them and at the end either Bob or Alice or both without knowing what the other one is doing press or as the case may be don't press their me measurement buttons once the measurement button has been
+
+00:38:32
+pressed an instantaneous signal goes back to the computer the computer grinds out its random number generator and whichever side was measured sends a signal to the detector with appropriate probability either plus one or minus one and then reinitializes itself reinitializes itself in a way that doesn't touch for example if Alice does the experiment then it doesn't touch Bob's end of things if Bob does the experiment the computer reinitializes his half of the wave function which is another way of
+
+00:39:13
+saying it throws away the piece that you didn't measure throws away the pieces you didn't measure and renormalizes the wave function so that the total probability is one exactly the same thing there's no no real difference with a single system you can simulate it and you can simulate it in a way which would describe all the possible things that Alice and Bob could measure in whether or not the system was um was entangled okay where is where do we get in trouble we get in trouble if after
+
+00:39:48
+initializing we try to separate the computers and break the wires for example here's what we might do get given these Alphas we might put them into both computers take the set of Alphas that we generated put this one into this computer this one into this computer now since the computers are not going to talk to each other they have to have separate random number generators the random number generators will not talk to each other each one contains the Full entangled State and then we go through the same
+
+00:40:26
+operation what's going to happen happen the computer is simply going to forget for example for an highly entangled State let's say the entangled state is the singlet State then the right answer would be that if Bob and Alice both measure they should get opposite values for any spin if they measure the X component of spin they should get opposite values if they measure y components of spin they should get opposite values but if when we separate them they have separate random number generators and the random number
+
+00:41:03
+generators don't talk to each other then guess what's going to happen there's going to be no correlation of any kind between what Bob measures and what Alice measures no Bob May measure plus and Alice may also measure plus because their random number generators are not connected to each other and so even though both computers may know about the full of the system if the random number generators don't talk to each other then the results of the experiments will not contain the correlation the correlation that Bob and
+
+00:41:41
+Alice could later come together and Report Bob would say my first experiments are a plus if things were working right then alysis should say my first experiments are a minus and so forth and so on that c corelation will not be there once you try to separate the computers are the random numbers correlated if you don't separate the computers wa you can have you can have uh you can have a single random number generator that sends out signals to both computers if it sends out a signal plus one to this computer it sends out a
+
+00:42:19
+signal minus one to that computer so all you need is a single random number generator but it has to be able to talk to both computers all right so there's got to be wires in the world there's got to be wires in the world connecting this side and this side if for no other reason then they can both connect to the same random number generator you you've got four Alphas there but it sounds like you just described that the alphas are independent now you've got to think about it yeah yeah yeah yeah yeah yeah
+
+00:42:54
+well that's that's sort of right once you've separated them then what happens next after some measurements are made doesn't preserve the relationship between them they become disconnected from each other yeah so think about it a little bit I mean even better try to simulate it this is this I've never tried but I don't think it should be that hard if you can do a little bit of computer programming I've I've simulated much harder things than that when uh when my son was a little kid
+
+00:43:28
+we had this thing called basic anybody remember basic and he and I designed a basketball game and it had friction and it had uh much harder than this so that was my last experience ever programming anything have a quick uh scenario and I think you will learn a lot by trying to simulate this okay you have a detector called a cell phone and I get a signal from Alice or Bob about the some random event it could be a spin let's suppose we're we're will you please speak concretely we get a signal from Bob of
+
+00:44:04
+some random event what does it mean okay can you please be exact I will be very precise very exact I'm getting two text messages one from a one from B okay and they can have a value of one or a zero each of them okay and I I get a million of these things and I noticed distribution that the a signal is about a 50% chance of being yes one or zero same with the be signal okay it could be from a spin yes yes okay go ahead now I look at the correlation it turns out that whether it's a or b the other one
+
+00:44:42
+is the same in other words it's correlated a correlation of one that's in the real world of entangled States right now this could be we don't know where it's coming from I'm just getting information so so I get an information so a comes through I don't look at it B comes through I know it's a 50/50 chance I don't look at it but as soon as I look at a I know what B is so the wave function completely changes now the the example I'm using is not a state I'm just Bob and Alice or sexing twins one's
+
+00:45:13
+a boy once a girl you got to hurry up because I got to get on to particles so there is nothing magical about that there is nothing weird about that if it's correlated like that it's very probable they're identical twins instead of fraternal twins so what am I missing what is weird about that if you don't find it weird good what's weird is that you can't simulate it classically without having a uh Central processor connected by wires that's what's weird about it so so
+
+00:45:52
+don't don't those wires that connect the two distant computers represent non-locality oh okay now we ask all right those wires are there for goodness sake surely Bob can send a message through the wires to Alice that takes no time at all because they're instantaneous yeah true enough If This Were a real computer setup but if Bob is restricted to only do the things which quantum mechanics allows him to do if he is restricted by the rules of quantum mechanics then we find out amazingly that Bob can
+
+00:46:32
+never send a message through the wires that violates locality why because all Bob can do is manipulate his own system with unitary operators and so that's what's Curious here um does that mean that the world is filled up with wires that we can't see I don't think that's the message I think the right message but of course here you can hear with there's room for debate what the right message of all of this is um the message I take away from it is basically quantum mechanics cannot be
+
+00:47:10
+simulated by a classical system the logic is too different the structures of the two theories are too too different and I don't take away the message that the world is full of wires that if only we could access them we could send messages back and forth other people do uh but I think at least if we know how to do quantum mechanics we'll agree on the facts we may disagree on basically whether there are or are not wires there are there really wires there or are there really not wires there well
+
+00:47:42
+perhaps the culprit is the word really but uh but this is this is oh oh there is one other element to it which is quite interesting um we've made an assumption that Bob and Alice get to kind of randomly make decisions about when to uh press the button about what orientations about what to decide to measure Bob sits here and says okay northwest southeast or whatever makes these random decisions according uh to the principle of Free Will so to speak that's fine as long as Alice and Bob are outside the system and not part
+
+00:48:32
+of it we don't need to ask uh the question of Consciousness and the question of free will will'll just admit that Alice and Bob can make random decisions about when to went to measure various things it's obviously a pretty good approximation but once we take Alice and Bob and put them into the system so that they are governed by the laws of physics then things get a little bit touchy what do we mean by saying that Alice can decide to do this or Bob can decide to do that and that I think is where the
+
+00:49:08
+possible loopholes in all of this can come from that uh now I I don't want to get too deep into heavy philosophical discussions of uh of all sorts of psychological and questions of Consciousness I don't know the answers that's that's it I don't know the answers beyond what I've told you uh I'm certain of two things about it I am certain that there are a lot of people who think they do know the answers and I'm also certain that they don't question um actually not a
+
+00:49:45
+question comment um if you Google for Quantum Randy challenge you'll find a blog entry that has the setup for this simulation really yeah for the for the entangled case it doesn't solve it it says if you can here's a program yeah your challenge is to put fill in this blank place I see and if you can he'll give you a million dollars hey okay actually he won't give you a million dollars somebody in Sweden will give you a million dollars yeah okay that's very interesting okay so I'm not the first
+
+00:50:24
+one to well I bet I was the first one to think about it this way but I've been telling this people for 50 years h no I don't know I I probably wasn't I I think I think maybe bore thought about it this way who knows doesn't matter um let's uh we we we could spend the rest of Eternity talking about spins there so why because they really are interesting but uh you know we want to get to something else we want to get to particles we want to get to more complex systems the most complex system we've
+
+00:50:56
+disc discussed this two spins four-dimensional Hilbert space uh we've gotten about to the point where in classical physics we got through the first lecture the first lecture was about these simple discrete systems and then we rather immediately moved on to continuous motion of things like particles moving continuously with an infinite and not just an infinite but a continuously infinite range of possibilities that's where we have to go now now fortunately we've set so much of the apparatus of quantum mechanics that
+
+00:51:29
+we can do it fairly quickly we there's a little bit of subtlety about replacing sums by integrals that's about it that's about the nature of the subtlety sums and integrals we've expressed the general principles of quantum mechanics and then exhibited it in uh in a variety of simple spin system examples now we plunge right in to quantum gravity no yes we'll plunge right in to the problem of a single particle moving on a one-dimensional axis okay uh we'll take the axis to be
+
+00:52:18
+infinite although we if we uh that's mostly because I don't have time to be more careful if we want to get anywhere we're going to have to to um uh be uh slightly less mathematically rigorous right so we have and in order to be rigorous you really have to contain a system in a finite volume and so forth but we don't need to do that so we have a line infinite line along that infinite line one particle can exist we won't do two particles yet one particle can exist in one dimension
+
+00:52:58
+and that line is labeled by a coordinate X let me not write down the coordinate X but also the states of the particle the states of the particle are also labeled by the position of a particle now here we are departing from classical logic In classical Logic the states of a particle are labeled by a position and a momentum uh if we were talking about the states of a spin we would say the state of a spin is described by all of the or maybe at at least two of the components of spin but we can't do that in quantum
+
+00:53:40
+mechanics we can't specify two components simultaneously same in classical mechanics specifying as you I'm sure you know specifying the position and the momentum is too much uh and we'll see how that works we'll see how that works but for the moment let's take it as a postulate that a complete description of the state of a particle and you can't get any more out uh is for example to know that it's located at a position X and if it's located at position X we'll describe
+
+00:54:11
+that by a k Vector the K Vector X that's the state of a particle when it's located at position X now of course we can consider more complicated more complicated States linear superpositions of these in quantum mechanics we are always allowed to make linear superpositions and so the space of states is bigger than just the space of particles located at definite positions let's call the General State Sai this is the General State of a particle doesn't mean anything now it's just an abstract symbol and it's a
+
+00:54:54
+vector in some Vector space the Vector space now has a continuously infinite number of basis vectors now strictly speaking that's a mathematically bad thing but we're going to play that game if you want to understand more deeply uh the mathematics of quantum mechanics you go and you learn about Hilbert Bas all right but we're not going to do that tonight all right so the General State of a particle is called sigh remember what the wave function of a system is the wave function of a system in a particular
+
+00:55:28
+basis is the projection of the state onto the basis vectors and we call that s of a now we come to a particle the basis of states are the position states and what is the wave function the wave function is the inner product of the state Vector with the igen vectors of position and that's called s of x that's the wave function that's the classical not classical but that's the standard quantum mechanical wave function of a particle it plays the same role as in the simple systems we've
+
+00:56:12
+discussed the inner product of the state Vector with a now we can say a little more in this context the probability that the system whatever it is exist property a is given by this thing squared in fact it's given by SAR of a s of a that's the probability that the system is um that the outcome of an experiment to determine whether the system was had property a that's the probability likewise in exact parallel the probability to find the particle at X is equal to SAR of x Time s of X I really haven't done anything that we
+
+00:57:01
+haven't done before now in quantum mechanics like in any other sensible statistical Theory the sum of all probabilities should add up to one so the sum of s star s should add up to one but when probabilities refer to a continuous variable we don't talk about the probability that the particle is located exactly at point x that's too sharp the probability that a thing is located exactly at any given X is zero we talk about the probability that it's located within a range of X or better yet we talk about the density of
+
+00:57:42
+probability we talk about the probability density and we integrate this over a little range of x to find the probability that you're in that range of X we do something like that here if we want want to know not whether the system is definitely specified at a but we want to know whether it's in a range of a we we sum over them but uh here we sort of have to do it total probability equal to one that's the condition that the integral of SAR of x s of X DX is equal to one total probability of the system has to add up
+
+00:58:24
+to one and the only as I said the only new thing here is that we have to replace sums by integrals and that does make mathematical subtlety that we have to worry about but it's sort of in the mathematical details okay what about the inner product between two State vectors one at X and one at X Prime well here we go back for inspiration right back to uh right back to this case Zero if a is not equal to a prime and one if a is equal to a prime and we're not going to be able to quite get away with that here
+
+00:59:27
+we're not going to quite be able to get away with the statement that x x Prime is equal to 0 or 1 we are going to say that if X is not equal to X Prime then it's zero but we're not going to say that when it's equal to X Prime that's it's one that would not lead us anywhere what we're going to say is that it's a function which vanishes unless equals x xal x Prime but has area one under it we'll see how that works out we'll see what that does for us in a moment what it really comes down to is a
+
+01:00:15
+different normalization here but again the basic idea that states are orthogonal If X is not equal to X Prime that we will retain but the numerical value of what we get when X is equal to X Prime we're going to take to be slightly different and in fact we're going to invent a function not we are directed the direct Delta function x - x Prime the direct Delta function is not a real mathematical function although by now I think mathematicians have defined it uh to death so that it is a real
+
+01:00:51
+mathematical entity uh but for our purposes we can think of it in a very simple way it's a function which is zero well let's say let's take Delta of X not Delta of x - x Prime this is basically Delta of x - 0 x Prime Z the function Delta of X it's a function which is zero unless X is equal to zero that's the same as saying this thing is zero un less as X is equal to X Prime so if this is X it's Z everywhere except xal X Prime and at xal X Prime it's a very high narrow
+
+01:01:35
+Spike how high and narrow high enough and narrow enough that the area under it is one unit that means if it's approximated by a narrow interval of size Epsilon that it has height one over Epsilon and then you imagine the limit where you take Epsilon smaller and smaller one / Epsilon higher and higher always keeping the area under it equal to one that's the dir Delta function directa Delta function zero everywhere is except when xals X Prime infinite in some sense when X is equal to X Prime but in such a
+
+01:02:13
+way that the area under it is equal to one okay all right now let's use this to further elaborate on what the meaning of s X's I'm going to guess and then we're going to check I'm going to guess that the meaning of s of X is the following that if I want to write a general State Vector Sor that I can think of it as a sum over the basis vectors but not a sum an integral of course an integral because uh the basis vectors are continuous DX of some coefficients some coefficients well
+
+01:03:05
+let's no let's write it this way s is equal to an integral DX of some set of coefficients I'm going to guess what they are I'm going to guess that the S of x times the I times the um the State the quantum state where the particle is located at X but then we're going to add them up for different X's there's exactly the same thing that we did for ordinary Quantum systems except this was replaced by a sum all right now I've given you two distinct definitions of s of x one is
+
+01:03:48
+that it's the inner product of the state Vector with the igen vector X I'll call it the igen vector of X the other is that it's the expansion coefficients in writing S as a sum over vectors now if you're a little bit uncomfortable with the idea of a continuous basis of vectors that you integrate over you're in good company the mathematics of this is um as I said by now it is been made rigorous but it's it's it it's um it took pages and pages and pages and pages and books and books and books on
+
+01:04:30
+something called distribution Theory to make sense out of this with Precision but it's pretty intuitive it's pretty intuitive and we'll we'll stick with that all right so let's calculate oh let's put a prime here this is a sum an integral it doesn't matter uh it doesn't matter what you call the integration variable let's call it X Prime and now let's calculate the inner product of X with S as I said there were two different definitions of s of X let's check that
+
+01:05:00
+they're the same so here we have it integral d x Prime s of X Prime in a product of X with X Prime what's the inner product of X with X Prime I think I wrote it someplace where is it I think I erased it that's equal to the in to the integral DX Prime s of X Prime Delta of x - x Prime okay what is that all right first of all Delta is a function which is zero everywhere at except that xal X X Prime so that means that in doing this integral here you'll only get a contribution when X Prime is
+
+01:06:03
+equal to X that means the answer is going to come out to be proportional to S of X furthermore the area under this Delta function is exactly one if we imagine that this Delta function is a pinched narrower and narrower High Spike so that the area under it is one then this integral would tend to S of X the rule is if you have an integral over a Delta function like this it simply picks out the value of the integration variable where the Delta function vanishes sorry where the argument of the Delta function vanishes where x - x
+
+01:06:49
+Prime vanishes that's where the function is not zero and the integral of a function with a Delta function just gives you the value of the function at the point x that's a rule we might as well write that down let's write that down as a rule integral Delta of x - x Prime f of x Prime is always equal to F ofx it picks out the value X Prime equal to X that's a part of the definition of the Delta function okay so it's just equal to S of X and we find mind consistency that the thing that we
+
+01:07:29
+called s of X over here is the same as the thing that we called s of X over here all of this has its exact parallel for the uh for the ordinary systems bottom top integral on bot bottom board yeah so I'm looking at s of X Prime Times the C the C Vector X and adding them up superposing I'm trying to figure out where are the which are the uh which are the basis vectors these are the basis vectors all right let's let's compare that with s is equal the sum over a a prime let's call it a
+
+01:08:08
+prime s of a prime a prime okay if we use the fact that a and a prime are orthogonal and do exactly the same thing except replacing sums by integrals we will also find that uh that that the s that appears here is the same as the inner product of s with the basis vectors so I've really done nothing that we haven't done before I appreciate it's a little possibly a little unfamiliar uh but all it is is same thing we've done before so so the the S of X Prime sort of plays the same role as the Alas and
+
+01:08:55
+some other the X Prime plays the same role as the a prime here yeah the S plays the same role as the S the sum is replaced by the integral sum over a prime is replaced by integral the X Prime and otherwise it's exactly the same now let's calculate the inner product one quick question it may be nitpicking or something but on the left hand side where you have the draax formula lower right hand corner yeah you've got a vertical line between the AIS over here in the middle formula there's no vertical line thank
+
+01:09:44
+you okay good cuz it could have been a line or I got you got you got you right nope absolutely how about the inner product of two vectors well the inner product of two vectors is some inner product but one way of calculating the inner product let's go back to ordinary uh to ordinary quantum mechanics ordinary means for the uh discrete systems here we don't need this right now how do we calculate the inner product let's take the let's take it all right inner product of s with Fi we first write s and fi as sums over
+
+01:10:25
+the Bas basis vectors so this is equal to sum over two sets of basis vectors A Prime and a s star of a prime time a prime that's the bra Vector we complex conjugate of course when we deal with bra vectors that's the S half of it and then the F half of it is the sum of a a of f of a time a five of a being the coefficients of the F Vector s star being the coefficients of the S um bra Vector all right now the F of a is just a number SAR of a is just a number and the inner product of a prime with a is
+
+01:11:18
+just the chronica Delta so all of this adds up to sum of SAR of a prime F of a and then a chronica Delta of a and a prime which is exactly the instruction to set a equal to a prime now I think you've seen that before this is simply the rule about row vectors if SAR of a is represented by a row Vector SAR of A1 blah blah blah blah blah and F is represented by a column Vector then this is is just the rule to take this times this plus this time this plus this time this plus this times that so this is the common Garden
+
+01:12:04
+variety quantum mechanical in a product I'm not going to we don't need to go through the same exercise here we can immediately write down what the result is going to be just by analogy it's almost not even an analogy it's just replacing wherever we see A's put X's and wherever we see some putut integral the inner product of two State vectors for a particle on a line is integral DX SAR of x f of x it satisfies incidentally one of the basic rules of inner products what happens to an inner
+
+01:13:00
+product if you interchange the two vectors what's the relation between the inner product SFI and the inner product F SI complex conjugation now what would happen in here if you interchange s with Fi you'd wind up writing F star here and S here that again would be the inpr uh the complex conjugate and for exactly the same reasons all right so this is equal to this for both discrete systems and for these continuous systems inner products the inner product of a vector with itself is the norm of the
+
+01:13:49
+vector and just as in previous examples you normalize the vector to one to Express the fact that total probability adds up to one so not much difference just a difference of um of notation and um what's I think what gets to be confusing about it is you know both of these things you know about these simple row vectors and column vectors and you know about functions but you're not used to thinking of fun functions as vectors or maybe you are if you are good but if you're not used to using F thinking of
+
+01:14:31
+functions as vectors F of XS or function s of x's then you have to get used to it but it's not but functions are vectors in a vector space you can add them you can multiply them by complex constants uh and you can add them you can um multiply them by numbers and so they satisfy the axioms of a vector space space of function f is a vector space now sometimes you may want yeah in more classical mathematics would would you put as the limits of integration minus and plus infinity you would which incidentally says
+
+01:15:13
+something it says that we shouldn't be thinking about functions which grow at Infinity for example right we should be only thinking about functions which are square integrable now we're going to have to we're going to have to modify that square integraal means you square them this is called squaring them that the integral exists functions which grow at Infinity won't do that now those are crazy because so would say that all of the if you had functions which grew at Infinity where would the probability be
+
+01:15:47
+the probability would be all located uh off at infinity and that's not what we want we want to be talking about probability distributions which a total finite probability under them so uh that means we should take perhaps with a grain of salt the idea that we can write down any function but for the moment we're we're going to be a little bit loose about that okay I I think I'll slow down here for a few minutes and let you digest that and ask uh for questions yeah no no no no no I yeah go ahead no I I I didn't want I I
+
+01:16:35
+meant about this but okay maybe this is quick it seems like just about everything must be entangled with something almost all the time is that oh yeah yeah yeah you're entangled with all sorts of things in the environment and we haven't talked about the importance of a complex environment uh it's not so important in the very foundations of the subject but it is important to why we see the world the way we are that we're constantly being bombarded and getting getting entangled with
+
+01:17:07
+things um has a theory of distribution's been useful for physicist or is it just oh boy certainly well okay so so it's not just some U it didn't just clean up the the direct Delta function issue Oh you mean has well oh that I I see what you mean mean you mean has it done anything else besides clean up the I don't know I don't know I don't know I think it's made rigorous a set of Concepts that physicists use all the time uh has it uh really changed no no it um the theory of
+
+01:17:49
+distributions yeah I'll tell you what what it did for math for physicists it uh made them have to argue less with mathematicians it was one of the many examples where mathematicians got dragged screaming and kicking by physicists uh of course the opposite also happens but uh it was an example where mathematicians at first looked at this thing and said what are you crazy that doesn't make any sense it's non-rigorous and uh and in time they came to peace with it through defining it in in their own way but no I I don't
+
+01:18:35
+think the mathematical structure of it has influenced physics as much as you might have expected uh unfortunately because there are big problems of confusion related to it in Quantum field Theory and it hasn't resolved those problems okay okay next place we want to go is observables we want to talk about observables and give some examples of observables observables are linear operators what are linear operators acting on a space of functions they're operations on the state on a function
+
+01:19:22
+that gives another function if you have a linear operator let's call it m for some reason I've saved L to stand for observables and I've used previously M for a general linear operator so let's continue to do so whatever m is it's a machine and thought of as an abstract operator in a space it takes a state Vector into another state Vector S Prime let's say or a vector in the vector space but it it also can be thought of as a thing which acts on Wave functions every state
+
+01:20:06
+has a wave function that describes it and the um the machine oh that's why that was why we called it m yes I remember now we called it m for machine the machine can also be thought of as acting on a wave function to give another wave function so let's think of it that way uh let's think of it in concrete terms as an action that we do on a wave function to produce another wave function now it's linear linear means that when it acts on the sum of two functions it gives back the sum of the results it means that if
+
+01:20:46
+it acts on a function which is a numerical product a numerical multiple of some function it gives back the same numerical uh multiple all the ideas of what a linear operator are continue to be exactly the same let's talk about some linear op oh oh okay that's that's the notion of a linear operator now what about a Herm Mission linear operator I'll tell you the definition of Herm Mission we we've talked about it before but I'm going to give it to you in a condensed form the condensed form
+
+01:21:20
+is also true for all of the vector spaces we've studied and you may recognize it uh if not go back and prove that it follows from the previous definitions a Herm Mission operator Herm mission for operators is roughly speaking the analog of real as opposed to complex okay here's what's true about Herm Mission operators if you have a Herm Mission operator which I will now call L then it has the property that if you take if if you act on a wave function s or state Vector s and take its inner
+
+01:22:00
+product with Fi that that is equal to s l f but not quite what do I have to do with it complex conjugated now if L were not let's go back a step supposing ill was not her Mission would this be right not quite what we have to do we'd have to put a dagger here in other words we'd have to roughly speaking complex conjugate L okay if L is Herm Mission then the rule for that is that it's mate it's Matrix elements it's in it's um when sandwiched when sandwiched in opposite
+
+01:22:48
+order you don't have to complex conjugate L because it's already the analog of real this is the condition that an operator is Herm Mission that's important because Herm Mission operators are the class of observables okay so let's work out one or two Herm Mission operators while we're at it uh I guess we'll need we may need this so let's work out a couple first of all one of the simplest things that I can do to a wave function I don't know what's they there are many simple things I can do to
+
+01:23:27
+it but a very simple thing is to multiply it by X an even simpler thing would be to multiply it by a simple number but let's take slightly more complicated multiply it by X multiplying by X gives back a function so this is at minimum an operation on a function is it linear sure it is if x multiplies s of X let's say plus 5 ofx it gives x s of X Plus x f of x in other words when it acts on a sum it gives the sum of the results if it acts on a numerical multiple of a s it gives back the the
+
+01:24:11
+numerical multiple so it's a linear operator question is it her mission is it a Herm Mission operator okay so let's check here's what we have to take we have to take s in a product of X Time 5 that's this one oh sorry I think I I think I wanted to do it the other way FX SI the top FX s and ask whether this is true or not we'll check in a minute no X is not a number X is a function X we've multiplied one function by another function that takes functions to functions X is not a number it's a
+
+01:25:08
+variable any given value of it is a number but it's a machine that takes the function s of X and replaces it by x s of X all right so let's calculate the wave function of the uh K Vector is x s of X the wave function of the bra Vector is f star of X the inner product is let's put some brackets around it bracket this is a c Vector inside the Red Bracket and this is a bra vector and the rule for taking the inner product whoops I think I interchange star and not star but the rule for taking the
+
+01:25:54
+inner product is to integrate so let's get rid of the bracket here and just integrate the X oops sorry DX all right that's in this order what about this order this order over here the inner product without the star without the star the thing we're going to compare it with is the same thing except with siar X 5x well look at it is this integral the complex conjugate of this yes it is a complex conjugate of f star is f the complex conjugate of s is s star and what about x x is its own complex
+
+01:26:46
+conjugate so yes indeed X is an operator which satisfies the basic rule of permission an operator that if you interchange the S and the FI it complex conjugates all right if yeah what observable does X correspond to position it is the position is the Delta function a igen vector of position well maybe we'll come to that next time I think I won't yes it is but uh but we'll come back to that X is an observable what does it correspond to it corresponds to position of a particle we will prove
+
+01:27:32
+that by showing that the igen vectors X that the vectors X are igen vectors of that operator but not right now we'll do that the next time it's easy it's trivial a stupid question so am I correct in assuming that when you write X up there it's implied that that is really F ofx the x is a function of x x is an an F ofx yes it's implied that that X is a function of X it has a whole bunch that's right it itself is a function which is multiplying another function all right so it's an operation
+
+01:28:13
+on a function which gives another function yeah that's exactly right let's take another operation or operation at differentiation if I differentiate a function I get a function that's the first test of whether it's an operator if I differentiate the sum of two functions I get the sum of derivatives if I differentiate a numerical multiple of a function I get the numerical multiple of a derivative it's a linear function is it a Herm Mission operator so here we have to here we have to get
+
+01:28:50
+ourselves a fresh Blackboard and check once and for all whether it's well check whether it's her Mission okay what happen what is let's call the derivative operation let's call it capital d d on S gives us some S Prime what about wave functions D when it acts on S of X by definition now this is the definition of how D acts it simply gives the S by the X I may sometimes lapse into calling this partial derivative with respect to X that's fine doesn't matter there's only one
+
+01:29:42
+X so it just differentiates it creates a new function it's a linear operator is it Herm Mission okay so let's write down the two two sides of the Herm Mission condition here and see if they're the same that's all that's all there is to it the left side is integral F star of x times the operation D on S which is just d s by DX what's the other way of doing it or the right hand side the other way of doing it is integral SAR not not doing the same thing doing something different s star of x d by
+
+01:30:33
+DX and the question is whether this is the complex conjugate of this so let's write equals with a question mark we don't know complex conjugate so let's let's do this integral over here first of all the thing in the bracket here is just equal to integral s of x d f Star by DX just complex conjugate the complex conjugate of a product is just the product of complex conjugates so the thing in the bracket is s of x d f Star by DX and we're ask asking whether this is equal to this they look similar this has a s this
+
+01:31:30
+has a s this has a f star this has a five star but unfortunately this one has s differentiated and this one has s you know what I mean SII and fi how do you go from this to this integration by parts and integrate like this assuming what are we assuming when we say we can integrate by Parts we're assuming that far away the integral the uh the functions go to zero that the endpoint contributions from integration by parts don't give us anything well of course the functions must go to zero far away because the
+
+01:32:15
+integral of the total thing must be one so we can integrate by Parts everybody know what integrating by Parts is if not find out fast it's simply a rule I'll tell you what the rule is you can shift the derivative from one if you have a product the X this is DX here if you have a product s of x times a derivative of f star of X then you can simply shift the derivative from one function to the other but it's at a cost a cost a minus sign right good so this is equal to minus the integral F star of
+
+01:32:58
+X DC by DX whoops we're in bad shape this is integral F star D DX this is minus the integral of f star DC DX they are not equal in fact worse than that they're absolutely the opposite of each other opposite in the sense of the negative of each other can we fix it well no we can't fix this but we can redefine an operator which is Herm Mission the redefined operator which is her mission is not derivative it is minus I the minus sign doesn't matter you can put I or minus i d by DX okay so let's go through it again and
+
+01:33:50
+check whether now it's her Mission this is the new thing that we're going to call and we're going to give it a different name I'm not going to call it D because it's not derivative it's minus I * the derivative anybody have a good suggestion for what I might call us P brilliant P P4 momentum momentum right and if I really wanted it to be momentum with units of momentum what else would I put there where right or left right well you can put on the left but then you put better put it
+
+01:34:32
+downstairs all right but we're not going to worry about har bar we're going to use our usual Convention of ignoring har bar for the moment p is minus i d by DX let's see what happens over here we have to replace this by an i over here minus I thank you minus I what about this one we've complex conjugated everything we better change the sign because the complex conjugate of minus I is plus I and so let's let's let's do it this way minus I and we should get plus I here if it's
+
+01:35:23
+her mission why because in the process of taking the complex conjugate every I gets converted to a minus I and every minus I gets converted to a plus I is it true now yeah why because this is equal to minus this that's what we proved over here okay so if we stick an I here because I changes sign on the complex conjugate this little operation here tells us that minus i d by DX is a Herm Mission operator it's a little odd isn't it that minus i d by DX should somehow be a real thing should represent a real thing and
+
+01:36:11
+that d by DX should not but let's uh let's check something out let's check something out right now let's just uh we're going to finish up in a moment uh we haven't talked about expectation values yet tonight but I think you can guess how to think about them expectation values in the state s of an observable L are just the sandwich composed of SII on both sides and L in the middle so let's take the expectation value of momentum it's integral SAR of x s of x X and then according to the rule here p
+
+01:36:58
+is minus i d by DX is this real or imaginary you're wrong it's real so let's prove that it's real I hope it's real God I hope it's real okay all right so let's integrate by parts all right this is equal first of all let's take out the minus I minus I integral s star of X DCI by DX now let's integrate that by Parts this is equal to minus I and then we can switch the derivative we can switch the derivative to the starred variable integral the S Star by DX Time s of
+
+01:38:01
+X but then in doing the integration by parts we have to change the sign so here we have a little theorem the integral of this thing here with a minus I is the integral of this thing here with a plus I what's the complex conjugate of this whole thing the complex conjugated you replace S Star by S well s is over here you replace the S by the the S by the X by the S Star by the X and you replace minus I by plus I this over here is the complex conjugate of this can everybody see that or shall I
+
+01:38:56
+explain it further let's put a minus I out here and write that this is equal to DCI by this is just gives us DCI by DX minus I DCI by DX this is clearly the complex the integral are complex conjugates of each other the S by DX is the is the complex conjugate of this that one's a complex conjugate of this and I and minus I are complex conjugates of each other so given that this is the complex conjugate of this and they're equal to each other what do you say about a thing which is equal to its own complex
+
+01:39:40
+conjugate it's real so we prove a rather startling fact that the integral of SAR of x minus I DCI by DX is real no yes I did yeah right and again it's because when you integrate by Parts you pick up an extra minus sign so instead of this thing being minus its complex conjugate it's plus its complex conjugate okay so what did we learn we learned that this is a Herm Mission operator it's a Herm Mission operator and therefore an observable in quantum mechanics the next time we'll explore a
+
+01:40:32
+little more we'll discuss what this has to do with Foria transforms we'll discuss questions about what the probability for finding the particle at different locations are but then we'll also talk about what the probability for having different momentum are and then we'll move to the schinger equation we'll move to the evolution of the um of the wave function this after all Now is really in the classic sense of the word a wave function and we'll think about how it evolves with
+
+01:41:06
+time oh one other thing we we could do it tonight I think I think we're probably uh at the point of diminishing returns are you exhausted we could do one more thing let me do one more thing for you let's calculate an interesting quantity and why it's an interesting quantity we'll come through in a moment so let's take a quantity which seems very dull but which is interesting and calculate it it's the commutator of X with p take any wave function whatever it is s of X anyone
+
+01:41:55
+and we're going to do two things with it we're first going to multiply it by X and then we're going to multiply it by minus i d by or operate with minus i d by DX all right this can be called PX operating on S this is p this is x in the order first X then P then we're going to calculate at the other way x p on S what is that let's on the other half of the Blackboard over here we're going to write X Time - i d by DX s of X and see what we get in fact what we're going to do is
+
+01:42:42
+we're going to compute the commutator which means we're going to calculate this one with a plus sign I'm going to calculate this one with a plus sign and this one with a minus sign all right so this one with a minus sign but before we subtract them let's just calculate them all right this is just minus I and now the derivative of a product the derivative of a product this derivative here now has to act on the whole result of X acting on S of x x acting on S of X gives a new wave function and
+
+01:43:19
+then P acts on it so what do you get when you hit the product you get two terms the first term is the derivative of x * s derivative of x is just one so the first term is just s of X and the second term is plus x d SI by thex everybody agree with that okay the derivative hit X and left s and then the derivative hit s and left X that's this side over here now what about this side over here here the D by DX doesn't act on X it just acts this way it just acts on S of X and gives us minus i d by
+
+01:44:08
+DX s of x h x sorry xus i x d Side by DX now let's subtract them let's take this one with minus and this one with plus this corresponds to taking the commutator of X with P acting on S of X commutator of X with p is another operator and it acts on S of X what do we get when we subtract uh let's see this one now has to come with a plus sign since we're subtracting since we're subtracting we have to change sign here and this term cancels uh yeah this term cancels goes away and all we're left
+
+01:45:06
+with is s of X that's all we're left with this term cancels and we're just left with what is it i s of x i s ofx all right so here's what we found for any s of X whatever for any s of x the commutator of X with P acting on S of X just gives is it plus I I think it's plus I S of X now if an operator acting on any wave function gives another Operator Let if the operator XP acting on any wave function is the same as I acting on that same wave function for any a function whatever it
+
+01:45:56
+follows that this operator is equal to this operator another way of saying it is if XP minus I put it all in a big bracket when it hits any way function at all gives zero then it means that this is zero there's only one operator which gives zero when it acts on every state on every Vector okay there's no Vector which escapes when this thing hits it right the implication is that this thing is zero there's only one operator which annihilates which kills every vector and it's a zero zero so XP minus or
+
+01:46:41
+commutator XP is equal to I if I put back the H bars there would be an H bar here yeah I bar we've seen things like this before you may have to go back to your classical mechanics we've seen things before like this we've seen Pome brackets which had similar relationships the Pome bracket of X with p is equal to one earlier in this course we discussed the part the potential relationship we had reason to discuss why commutators it had to do with Schrodinger's equation go back but we discussed the relationship
+
+01:47:41
+that there might be a relationship between commutators and plus own brackets and in particular the relation involved this IH bar this is actually where dra began his discussion of quantum mechanics he said there must be something analogous to a Pome bracket in quantum mechanics and the only thing you could think of which had the right algebraic structure it was anti-symmetric it uh it had a certain mathematical structure was the commutator and he postulated that commutators and Pome brackets were
+
+01:48:16
+related with each other through an IH bar and then proceeded to go exactly backwards from the way that we went he said if this is the if this is the plus own bracket then this must be the commutator and so there must be an operator P whose commutator with X is I and he went back through the operation and discovered that P was minus i d by DX so he went in the opposite direction we discovered P by just playing a game said let's see how about this operated d by DX what does it do what we found is
+
+01:48:52
+that it was was not her Mission we had to multiply it by I to make it her Mission we explored it a little bit found out some interesting properties of it but the most interesting property is that its commutator is equal to ihar which uh suggests that it's connected with the Pome bracket the classical Pome bracket being uh being one okay of course the upshot of it is and of course we need to do a lot more to um to convince ourselves that the operator minus I by DX really behaves like quantum mechanical momentum we
+
+01:49:32
+can't just say oh it looks like a looks like a Pome bracket it must be the quantum mechanical momentum we have to show that wave packets move with velocities that are governed by uh by the by this that the thing be that it's conserved that it has all the properties of momentum but we will be some connection between this abstract operator um minus I derivative with mass and what and what and the idea of mass well we would like to show that in some way that it is uh that it's the mass times the
+
+01:50:12
+velocity so what we'll try what we'll eventually show is that if you have a wave packet in other words a s of X which is a concentrated uh distribution like this that that wave packet moves along the x-axis with a velocity which is given by the expectation value of this momentum operator divided by the mass that's what we would like to show that the velocity with which this wave packet propagates along the axis that velocity you can call the group velocity it's usually called the
+
+01:50:48
+group velocity the velocity that the group of waves moves along times the mass of the particle is equal to the expectation value of the momentum now once we do that then I think we're uh we're and that it's conserved that'll take us a long way to calling it momentum uh at some point we have to say quantum mechanics is more fundamental In classical mechanics and the definition of momentum should be through quantum mechanics and then we should show it behaves in a certain way when particles are heavy and
+
+01:51:22
+so forth okay for more please visit us at stanford.edu
+

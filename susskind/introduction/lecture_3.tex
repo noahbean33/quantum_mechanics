@@ -1,0 +1,329 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 3}
+\lhead{Quantum Mechanics --- The Theoretical Minimum}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{definition}{Definition}
+
+\title{\textbf{Lecture 3: Linear Operators and Observables} \\ \large Matrices, Hermitian Conjugation, Eigenvalues, and the Pauli Matrices}
+\author{Based on Leonard Susskind's \textit{The Theoretical Minimum}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Expanding Vectors in a Basis}
+% ============================================================
+
+Good notation is worth an enormous amount---Dirac's notation allows us to manipulate abstract quantities efficiently and correctly.
+
+Let $\{\ket{i}\}$ be an \textbf{orthonormal basis} ($\braket{j}{i}=\delta_{ji}$) of dimension $N$.  Any vector can be expanded as
+\[
+    \ket{A} = \sum_{i=1}^{N} \alpha_i \ket{i}, \qquad \alpha_i = \braket{i}{A}.
+\]
+The second equation follows by taking the inner product of both sides with $\bra{j}$: the orthonormality condition $\braket{j}{i}=\delta_{ji}$ collapses the sum to a single term $\alpha_j = \braket{j}{A}$.  Substituting back:
+\[
+    \boxed{\ket{A} = \sum_i \ket{i}\braket{i}{A}.}
+\]
+The formal identity $\sum_i \ket{i}\bra{i} = \mathbf{1}$ is called the \textbf{resolution of the identity} (or \emph{insertion of a complete set of states}).  This is an enormously useful trick: whenever you see a vector $\ket{A}$, you can ``insert a complete set'' by replacing it with the right-hand side.  The same holds for bra vectors:
+\[
+    \bra{A} = \sum_i \braket{A}{i}\bra{i}.
+\]
+
+% ============================================================
+\section{2. Linear Operators}
+% ============================================================
+
+John Wheeler liked to describe a linear operator as a \textbf{machine}: you put a vector into one port, turn the crank, and a (generally different) vector comes out the other port.  Given any input $\ket{A}$, the machine produces a unique output $\ket{B}=M\ket{A}$.  (The converse need not hold: different inputs may produce the same output.)
+
+\begin{definition}[Linear operator]
+A \textbf{linear operator} $M$ is a map from ket vectors to ket vectors satisfying two linearity rules:
+\begin{align}
+    M\bigl(z\ket{A}\bigr) &= z\,M\ket{A}, \quad \forall\, z\in\mathbb{C}, \\
+    M\bigl(\ket{A}+\ket{B}\bigr) &= M\ket{A} + M\ket{B}.
+\end{align}
+In words: complex constants can be pulled through the operator, and the operator distributes over sums.
+\end{definition}
+
+\noindent\textbf{Examples.}
+\begin{itemize}[nosep]
+    \item Multiplication by a complex number $z$ is a (trivial) linear operator.
+    \item Complex conjugation is \textbf{not} a linear operator---it maps kets to bras and violates the first rule ($z^*$ appears instead of $z$).  It is called an \emph{anti-linear} operator.
+\end{itemize}
+
+\subsection{2.1 Matrix elements}
+Given a basis $\{\ket{i}\}$, the operator $M$ is fully characterized by its \textbf{matrix elements}:
+\[
+    M_{ij} \equiv \bra{i}M\ket{j}.
+\]
+This is a concrete complex number obtained by: (1) applying $M$ to basis vector $\ket{j}$ to get a new ket, then (2) taking its inner product with $\bra{i}$.
+
+If $M\ket{A}=\ket{B}$, insert a complete set of states on $\ket{A}$:
+\[
+    \beta_i = \bra{i}\ket{B} = \bra{i}M\ket{A} = \sum_j \bra{i}M\ket{j}\braket{j}{A} = \sum_j M_{ij}\,\alpha_j,
+\]
+which is simply matrix--column-vector multiplication:
+\[
+    \begin{pmatrix}\beta_1\\\beta_2\\\vdots\end{pmatrix}
+    = \begin{pmatrix}M_{11}&M_{12}&\cdots\\M_{21}&M_{22}&\cdots\\\vdots&\vdots&\ddots\end{pmatrix}
+    \begin{pmatrix}\alpha_1\\\alpha_2\\\vdots\end{pmatrix}.
+\]
+The rule for the $i$-th output component: take the $i$-th row, multiply element-by-element with the column, and sum.
+
+\medskip
+\noindent\textbf{Basis dependence:} The specific numbers $M_{ij}$ depend on the choice of basis.  A different basis gives different matrix elements for the same abstract operator.  This is analogous to how the components of a vector change when you rotate your coordinate axes.
+
+\subsection{2.2 Bracket removal rule}
+An important consequence of the definitions: for any vectors $\ket{A}$, $\ket{B}$ and operator $M$,
+\[
+    \bra{A}M\ket{B}
+\]
+is unambiguous---one may first apply $M$ to $\ket{B}$ (acting right) or first apply $M^\dagger$ to $\bra{A}$ (acting left); both give the same complex number.  This can be proven by inserting complete sets of states and reducing everything to sums over matrix elements.  It is one of the great conveniences of Dirac notation.
+
+% ============================================================
+\section{3. Hermitian Conjugate (Dagger)}
+% ============================================================
+
+\begin{definition}[Hermitian conjugate]
+For every operator $M$ acting on kets, there is a unique operator $M^\dagger$ (the \textbf{Hermitian conjugate}, or \textbf{adjoint}) defined by: if $M\ket{A}=\ket{B}$, then $\bra{A}M^\dagger = \bra{B}$.
+\end{definition}
+
+\noindent In other words, $M^\dagger$ ``flips the equation from kets to bras.''  The dagger operation is the operator analog of complex conjugation for numbers: just as every complex number $z$ has a conjugate $z^*$, every operator $M$ has an adjoint $M^\dagger$.
+
+\subsection{3.1 Derivation of matrix elements}
+If $M\ket{i}=\ket{i'}$, then $M^\dagger$ satisfies $\bra{i}M^\dagger=\bra{i'}$.  Therefore:
+\[
+    (M^\dagger)_{ij} = \bra{i}M^\dagger\ket{j} = \braket{i'}{j} = \braket{j}{i'}^* = \bigl(\bra{j}M\ket{i}\bigr)^* = M_{ji}^*.
+\]
+So:
+\[
+    \boxed{(M^\dagger)_{ij} = M_{ji}^*.}
+\]
+Recipe: \textbf{transpose} (swap $i\leftrightarrow j$) and \textbf{complex conjugate}.  The transpose interchanges rows and columns (reflection about the diagonal); then you conjugate every entry.
+
+\subsection{3.2 Example}
+\[
+    M = \begin{pmatrix}2 & 6+i\\7 & 4-i\end{pmatrix}
+    \;\xrightarrow{\text{transpose}}\;
+    \begin{pmatrix}2 & 7\\6+i & 4-i\end{pmatrix}
+    \;\xrightarrow{\text{conjugate}}\;
+    M^\dagger = \begin{pmatrix}2 & 7\\6-i & 4+i\end{pmatrix}.
+\]
+
+% ============================================================
+\section{4. Hermitian Operators}
+% ============================================================
+
+\begin{definition}[Hermitian operator]
+An operator $M$ is \textbf{Hermitian} (self-adjoint) if
+\[
+    M = M^\dagger \quad\Longleftrightarrow\quad M_{ij} = M_{ji}^*.
+\]
+\end{definition}
+
+Hermitian is the operator analogue of ``real'' for numbers ($z=z^*$).  Properties of a Hermitian matrix:
+\begin{itemize}[nosep]
+    \item \textbf{Diagonal elements are real}: $M_{ii} = M_{ii}^*$, so $M_{ii}\in\mathbb{R}$.
+    \item \textbf{Off-diagonal elements} come in conjugate pairs: $M_{ij} = M_{ji}^*$.  Reflecting about the diagonal and conjugating returns the same matrix.
+\end{itemize}
+
+\noindent\textbf{Example:}
+\[
+    \begin{pmatrix}1 & i & 4-i\\ -i & 7 & 5\\ 4+i & 5 & -2.6\end{pmatrix}
+\]
+is Hermitian: diagonal entries ($1,7,-2.6$) are real; $(1,2)$-entry $i$ and $(2,1)$-entry $-i$ are conjugates; etc.
+
+\medskip
+\noindent\textbf{Central role in physics:} Hermitian operators represent \emph{observable} quantities---the things you can measure.  The result of any measurement is a real number, and Hermitian operators guarantee real eigenvalues.
+
+% ============================================================
+\section{5. Eigenvalues and Eigenvectors}
+% ============================================================
+
+\begin{definition}[Eigenvector, eigenvalue]
+A nonzero vector $\ket{\lambda}$ is an \textbf{eigenvector} of $M$ with \textbf{eigenvalue} $\lambda$ if
+\[
+    M\ket{\lambda} = \lambda\ket{\lambda}.
+\]
+The operator merely \emph{rescales} the vector without changing its direction.  The eigenvectors are the special directions that the machine $M$ does not ``twist''---they come out parallel to how they went in.
+\end{definition}
+
+\noindent\textbf{Examples.}
+\begin{itemize}[nosep]
+    \item A rotation about an axis in 3D: the only eigenvector direction is the axis of rotation (eigenvalue $+1$).  All other vectors get rotated to different directions.
+    \item In 2D, a rotation has \emph{no} real eigenvectors (no direction is preserved).
+\end{itemize}
+
+\noindent\textbf{Note:} Eigenvectors are defined only up to a multiplicative constant.  If $\ket{\lambda}$ is an eigenvector, so is $z\ket{\lambda}$ for any $z\neq 0$, with the same eigenvalue.  Strictly speaking, one should think of ``eigendirections.''
+
+\subsection{5.1 Spectral theorem for Hermitian operators}
+
+\begin{theorem}
+If $M$ is Hermitian on an $N$-dimensional space, then:
+\begin{enumerate}[nosep]
+    \item All eigenvalues $\lambda_i$ are \textbf{real}.
+    \item Eigenvectors with \textbf{distinct} eigenvalues are \textbf{orthogonal}.
+    \item There exists a \textbf{complete} orthonormal basis of eigenvectors (i.e., $N$ of them).
+\end{enumerate}
+\end{theorem}
+
+\noindent This is perhaps the most important theorem in quantum mechanics.  It guarantees that the eigenvectors of any observable form a basis in which you can expand any state, and that measurement outcomes (eigenvalues) are always real numbers.
+
+\subsection{5.2 Proof: eigenvalues are real}
+Start from $M\ket{i}=\lambda_i\ket{i}$.  Flip to bra equation (Hermitian conjugate):
+\[
+    \bra{i}M^\dagger = \lambda_i^*\bra{i}.
+\]
+Since $M=M^\dagger$, both the ket and bra equations involve the same operator $M$.  Sandwich with $\bra{i}$ on the left and $\ket{i}$ on the right:
+\[
+    \bra{i}M\ket{i} = \lambda_i\braket{i}{i} \quad\text{(from the ket equation)},
+\]
+\[
+    \bra{i}M\ket{i} = \lambda_i^*\braket{i}{i} \quad\text{(from the bra equation)}.
+\]
+The left sides are identical.  Cancelling $\braket{i}{i}\neq 0$ gives $\lambda_i = \lambda_i^*$, so $\lambda_i\in\mathbb{R}$.\;$\square$
+
+\subsection{5.3 Proof: eigenvectors with distinct eigenvalues are orthogonal}
+Let $M\ket{i}=\lambda_i\ket{i}$ and $M\ket{j}=\lambda_j\ket{j}$ with $\lambda_i\neq\lambda_j$.  Flip the second equation to a bra equation:
+\[
+    \bra{j}M = \lambda_j\bra{j} \quad\text{(using $\lambda_j^*=\lambda_j$ since eigenvalues are real)}.
+\]
+Now compute $\bra{j}M\ket{i}$ two ways:
+\[
+    \bra{j}M\ket{i} = \lambda_i\braket{j}{i} \quad\text{(act $M$ right)}, \qquad
+    \bra{j}M\ket{i} = \lambda_j\braket{j}{i} \quad\text{(act $M$ left)}.
+\]
+Subtracting: $(\lambda_i - \lambda_j)\braket{j}{i}=0$.  Since $\lambda_i\neq\lambda_j$, we conclude $\braket{j}{i}=0$.\;$\square$
+
+\medskip
+\noindent\textbf{Physical meaning:} Orthogonal eigenvectors correspond to \textbf{physically distinguishable} states---states that can be told apart with certainty by a single measurement of the observable $M$.
+
+% ============================================================
+\section{6. The Postulates of Quantum Mechanics}
+% ============================================================
+
+With the mathematical machinery in hand, we can now state the core postulates:
+
+\begin{enumerate}[nosep]
+    \item \textbf{Observables are Hermitian operators.}  Every measurable quantity (observable) is represented by a Hermitian operator on the state space.
+    \item \textbf{Eigenvalues are the possible measurement outcomes.}  The only values that can result from measuring an observable $M$ are its eigenvalues $\lambda_i$.  Since $M$ is Hermitian, these are real.
+    \item \textbf{Eigenvectors are states of definite value.}  The eigenvector $\ket{i}$ corresponding to eigenvalue $\lambda_i$ is the state in which the observable $M$ has the unambiguous, definite value $\lambda_i$.
+    \item \textbf{Probability rule.}  If the system is in state $\ket{A}$ and we measure $M$, the probability of obtaining eigenvalue $\lambda_i$ is
+    \[
+        P(\lambda_i) = |\braket{i}{A}|^2 = \braket{A}{i}\braket{i}{A}.
+    \]
+    The complex number $\braket{i}{A}$ is called the \textbf{probability amplitude}; you square its magnitude to get the probability.
+\end{enumerate}
+
+\noindent\textbf{Normalization.}  Since probabilities must sum to 1:
+\[
+    \sum_i P(\lambda_i) = \sum_i |\braket{i}{A}|^2 = \braket{A}{A} = 1.
+\]
+Physical states are unit vectors.  The overall phase $e^{i\theta}\ket{A}$ is physically equivalent to $\ket{A}$ (all probabilities are unchanged).
+
+\noindent\textbf{Measurement as preparation.}  When you measure $M$ and obtain $\lambda_i$, the system is left in the eigenstate $\ket{i}$.  The measurement has \emph{prepared} the system in that state.
+
+% ============================================================
+\section{7. Application: The Pauli Matrices}
+% ============================================================
+
+The three spin components $\sigma_x,\sigma_y,\sigma_z$ are Hermitian operators on $\mathbb{C}^2$.  We work in the $\{\ket{\uparrow},\ket{\downarrow}\}$ basis and compute each matrix from its known eigenvectors and eigenvalues.
+
+\subsection{7.1 Computing $\sigma_z$}
+We know: $\sigma_z\ket{\uparrow}=+1\cdot\ket{\uparrow}$ and $\sigma_z\ket{\downarrow}=-1\cdot\ket{\downarrow}$.  The matrix elements:
+\begin{align}
+    (\sigma_z)_{\uparrow\uparrow} &= \bra{\uparrow}\sigma_z\ket{\uparrow} = +1\cdot\braket{\uparrow}{\uparrow} = +1, \\
+    (\sigma_z)_{\uparrow\downarrow} &= \bra{\uparrow}\sigma_z\ket{\downarrow} = -1\cdot\braket{\uparrow}{\downarrow} = 0, \\
+    (\sigma_z)_{\downarrow\uparrow} &= \bra{\downarrow}\sigma_z\ket{\uparrow} = +1\cdot\braket{\downarrow}{\uparrow} = 0, \\
+    (\sigma_z)_{\downarrow\downarrow} &= \bra{\downarrow}\sigma_z\ket{\downarrow} = -1\cdot\braket{\downarrow}{\downarrow} = -1.
+\end{align}
+Therefore:
+\[
+    \sigma_z = \begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+\]
+
+\subsection{7.2 Computing $\sigma_x$}
+The eigenvectors of $\sigma_x$ are $\ket{\rightarrow}=\frac{1}{\sqrt{2}}(\ket{\uparrow}+\ket{\downarrow})$ with eigenvalue $+1$ and $\ket{\leftarrow}=\frac{1}{\sqrt{2}}(\ket{\uparrow}-\ket{\downarrow})$ with eigenvalue $-1$.  To find the matrix elements in the $\{\ket{\uparrow},\ket{\downarrow}\}$ basis, we express $\ket{\uparrow}$ and $\ket{\downarrow}$ in terms of $\ket{\rightarrow}$ and $\ket{\leftarrow}$:
+\[
+    \ket{\uparrow} = \frac{1}{\sqrt{2}}(\ket{\rightarrow}+\ket{\leftarrow}), \qquad
+    \ket{\downarrow} = \frac{1}{\sqrt{2}}(\ket{\rightarrow}-\ket{\leftarrow}).
+\]
+Compute $(\sigma_x)_{\uparrow\uparrow}$:
+\begin{align}
+    \bra{\uparrow}\sigma_x\ket{\uparrow}
+    &= \tfrac{1}{2}(\bra{\rightarrow}+\bra{\leftarrow})\,\sigma_x\,(\ket{\rightarrow}+\ket{\leftarrow}) \\
+    &= \tfrac{1}{2}(\bra{\rightarrow}+\bra{\leftarrow})(\ket{\rightarrow}-\ket{\leftarrow})
+      \qquad\text{[since $\sigma_x\ket{\rightarrow}=\ket{\rightarrow}$, $\sigma_x\ket{\leftarrow}=-\ket{\leftarrow}$]} \\
+    &= \tfrac{1}{2}(1-1) = 0.
+\end{align}
+Similarly $(\sigma_x)_{\downarrow\downarrow}=0$.  For the off-diagonal:
+\begin{align}
+    \bra{\uparrow}\sigma_x\ket{\downarrow}
+    &= \tfrac{1}{2}(\bra{\rightarrow}+\bra{\leftarrow})(\ket{\rightarrow}+\ket{\leftarrow}) = \tfrac{1}{2}(1+1)=1.
+\end{align}
+By similar calculation $(\sigma_x)_{\downarrow\uparrow}=1$.  Therefore:
+\[
+    \sigma_x = \begin{pmatrix}0&1\\1&0\end{pmatrix}.
+\]
+
+\subsection{7.3 Computing $\sigma_y$}
+The eigenvectors are $\ket{\text{in}}=\frac{1}{\sqrt{2}}(\ket{\uparrow}+i\ket{\downarrow})$ with eigenvalue $+1$ and $\ket{\text{out}}=\frac{1}{\sqrt{2}}(\ket{\uparrow}-i\ket{\downarrow})$ with eigenvalue $-1$.  Solving for up and down in terms of in and out and proceeding as above (left as an exercise), the unique result is:
+\[
+    \sigma_y = \begin{pmatrix}0&-i\\i&0\end{pmatrix}.
+\]
+
+\subsection{7.4 Summary of the Pauli matrices}
+\[
+    \boxed{\sigma_z = \begin{pmatrix}1&0\\0&-1\end{pmatrix}, \qquad
+    \sigma_x = \begin{pmatrix}0&1\\1&0\end{pmatrix}, \qquad
+    \sigma_y = \begin{pmatrix}0&-i\\i&0\end{pmatrix}.}
+\]
+Each is Hermitian ($\sigma_i = \sigma_i^\dagger$), each has eigenvalues $+1$ and $-1$, and each has orthogonal eigenvectors forming a complete basis.
+
+\subsection{7.5 Eigenvalues and eigenvectors summary}
+\begin{align}
+    \sigma_z: &\quad \ket{\uparrow}\;(\lambda=+1),\quad \ket{\downarrow}\;(\lambda=-1). \\
+    \sigma_x: &\quad \ket{\rightarrow}=\tfrac{1}{\sqrt{2}}(\ket{\uparrow}+\ket{\downarrow})\;(\lambda=+1),\quad \ket{\leftarrow}=\tfrac{1}{\sqrt{2}}(\ket{\uparrow}-\ket{\downarrow})\;(\lambda=-1). \\
+    \sigma_y: &\quad \ket{\text{in}}=\tfrac{1}{\sqrt{2}}(\ket{\uparrow}+i\ket{\downarrow})\;(\lambda=+1),\quad \ket{\text{out}}=\tfrac{1}{\sqrt{2}}(\ket{\uparrow}-i\ket{\downarrow})\;(\lambda=-1).
+\end{align}
+
+\subsection{7.6 Key algebraic properties}
+\begin{itemize}[nosep]
+    \item $\sigma_x^2 = \sigma_y^2 = \sigma_z^2 = \mathbf{1}$ (squaring any Pauli matrix gives the identity).
+    \item $\sigma_x\sigma_y = i\sigma_z$ (and cyclic permutations: $\sigma_y\sigma_z=i\sigma_x$, $\sigma_z\sigma_x=i\sigma_y$).
+    \item No two Pauli matrices commute: $[\sigma_i,\sigma_j]\neq 0$ for $i\neq j$.  This non-commutativity is the mathematical expression of the fact that you cannot simultaneously know two different components of spin.
+\end{itemize}
+
+% ============================================================
+\section{8. Summary}
+% ============================================================
+
+\begin{enumerate}[nosep]
+    \item Any vector can be expanded in an orthonormal basis: $\ket{A}=\sum_i\ket{i}\braket{i}{A}$.  The resolution of identity $\sum_i\ket{i}\bra{i}=\mathbf{1}$ is an indispensable computational tool.
+    \item \textbf{Linear operators} map kets to kets; they are represented by matrices with elements $M_{ij}=\bra{i}M\ket{j}$.
+    \item The \textbf{Hermitian conjugate} $M^\dagger$ is obtained by transposing and complex conjugating the matrix.  It ``flips'' ket equations to bra equations.
+    \item \textbf{Hermitian} operators ($M=M^\dagger$) have real eigenvalues and orthogonal eigenvectors---they represent observables.
+    \item The \textbf{postulates of QM}: observables $\leftrightarrow$ Hermitian operators; measurement outcomes $\leftrightarrow$ eigenvalues; probability of outcome $\lambda_i$ is $|\braket{i}{A}|^2$.
+    \item The \textbf{Pauli matrices} $\sigma_x,\sigma_y,\sigma_z$ are the Hermitian operators for spin components, each with eigenvalues $\pm 1$, derived from the known eigenvectors.
+\end{enumerate}
+
+\end{document}

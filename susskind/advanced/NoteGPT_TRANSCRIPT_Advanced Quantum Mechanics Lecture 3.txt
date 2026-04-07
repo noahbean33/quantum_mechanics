@@ -1,0 +1,444 @@
+00:00:01
+[Music] Stanford University okay if we're ready let's go then we talked last time about angular momentum operators and I started to show you how the algebra of the angular momentum operators Works how multiplets with different angular momentum have certain numbers of states and the states form they call multiplets I'll come back to them in a minute but let's just talk more generally about what angular momentum is about uh a good example is an object a particle moving in a central force
+
+00:00:54
+field here's the center particle moves around in a central force field uh it has a radial position and an angular position the angular position really means two angles an as athal and a polar angle so it's a three-dimensional system and the angular momentum is conserved the angular momentum is a vector and the angular momentum always is in the plane perpendicular to the motion plane perpendicular to the orbit so there's the angle angular momentum the orbit the orbital plane is perpendicular to it and because the
+
+00:01:36
+angular momentum is conserved as a vector the orbital plane is also conserved the orbital plane stays the same but of course the radial position moves around in a circle not a circle take it back moves around in some orbit that's classical that's classical Quantum mechanically the particle is described by a wave function the angular momentum operator has to do with the angular dependence of the wave function in general the wave function in a situation like this would be a function of position of course it's always a
+
+00:02:19
+function of position could be a function of X Y and Z but you could also write it as a function of the radial coordinate the radial distance and two angles Po and as AAL angle we talked a little bit the first time maybe the first time maybe the last time I can't remember we talked a little bit about angular momentum in two Dimensions let's go back to that for a moment if everything was in two dimensions then the angular momentum would just be the generator of rotations about uh about the perpendicular axis
+
+00:02:55
+here and its structure as a quantum mechanical operator would just be angular momentum is equal to Min - I time the derivative with respect to the angle that's the analog of momentum being minus I * derivative with respect to position what it tells you is how the wave function changes with angle so let me just remind you if you look for angular momentum igen States then what you're looking for is functions which satisfy minus I d by D Theta let's say functions of R and Theta in two Dimensions we don't have to
+
+00:03:40
+worry about fi just R and Theta and if we're looking for an igen Vector of the angular momentum we want to set that equal to a number the the igen value L Time s of R in Theta that's a little differential equation and it doesn't really depend on r r is just a spectator here R um derivative is with respect to Theta so this is an equation about the Theta dependence and it doesn't really care about R we know what the solution of equations like this is the solution is s equals e to the
+
+00:04:24
+i l Theta e to the i l Theta where Theta has where L has to be an integer an integer in order that the wave function comes back to itself when you go around the closed uh closed curve well what about the r dependence what should the r dependence be this doesn't tell you what the r dependence is so the answer is you have an angular momentum igen function no matter what let's not use the same function let's use a different function let's call Kai of R any wave function that looks like e to
+
+00:05:05
+the I Theta it doesn't matter what its R dependence is it will be an angular momentum IG state so angular momentum has to do with the angular dependence of the wave function the um the radial dependence is irrelevant to the angular momentum it may be relevant to the energy but it's not relevant to the angular momentum and the same is true in three dimensions in three dimensions angular momentum also has to do with the angular dependence and there are particular wave functions generally arbitrary functions of radius
+
+00:05:48
+doesn't matter what they are times specific functions they're usually called y of theta and F which are analogous to the e to the i l thetas and those wave functions are the things which determine the angular momentum of the state they are the things which change when you rotate the configuration and angular momentum has to do with rotating configurations so when we talked about angular momentum igen States we were really talking about these functions of theta and fi now it's awkward to worry
+
+00:06:31
+about Theta and fi we don't have to what we did last time was we used a bunch of Tricks so let me go back to those tricks and remind you but keep in mind at every stage what we're talking about is the angular dependence of wave functions okay let's uh let's recall what we learned last time we started with the angular momentum operators LZ LX l y we found out that they have certain commutation relations LX with l y equal I LZ there's H bars in here but I'm not going to belabor them I don't care about
+
+00:07:26
+them right now LX l yal i LZ and cyclic permutations to more like it all right then we started to play some games we played some games because draak taught us to play those games not because any of us would have been smart enough to figure them out ourselves I don't know maybe we would have who knows uh but the trick was to construct well to pick one of the operators and work in the basis of that operator in other words pick LZ Z and work with igen vectors of LZ with igen value M we don't know off hand what the
+
+00:08:10
+spectrum of IG values is but let's just postulate or let's just Define the IG values to be Little M forget for the moment whether they're integers or not they may or may not be integers but this defines the igen vector of LZ with igen value M and we worked in that basis and we found to our great joy that the operators LX plus or minus i l y which we called L plus or minus had some nice properties were useful uh I'm not going to write down the proper properties you have them written
+
+00:09:00
+down from last time I hope they follow the properties follow it's commutation properties they follow from the commutation properties of the L's but here's what we learned we found out that if we start with an igen Vector of LZ with igen value M and we hit it with l+ I guess forgot whether we put the pluses and minuses upstairs or downstairs doesn't matter what did that do that gave us another igen Vector with n + one we worked out that was a that was a consequence of the simple algebra of these commutation
+
+00:09:46
+relations we worked it out by just sticking in the uh sticking in the equations it was a couple of lines and we found out that l+ is a raising operator this is called a raising operator if this is if this line represents the spectrum of possible values of M is zero so forth this tells us that we found another igen Vector which is one unit up it has not yet told us anything about whether the M's are integers or not but it tells us that if we find one we can find another one by hitting it with l+ likewise we can
+
+00:10:33
+find another one by hitting it with L [Music] minus so L pluses and L minuses are operators which take you up and down the spectrum of uh of igen values of LZ okay that was the first thing that we discovered from the algebra of these things the next thing we asked was well does this go on forever and ever and ever it will go on forever and ever and ever unless it comes to an end how can it come to an end the only way it can come to an end is If l+ instead of giving another nonzero igen Vector gives us
+
+00:11:17
+zero that's the only way it can come to an end and if it does come to an end and typically they do come to an end if it does come to an end that's the end of the spectrum r ing that you get by raising and let's suppose that's over here then we have things separated by an integer but we have one more thing that we know we know that the z-axis that there's nothing preferential about the plus Z axis if we simply rotated the whole picture around and replace the plus z-axis by the minus z-axis all the rules
+
+00:11:57
+would be the same so for that reason the Spectrum has to be symmetric about the origin anything you can say about LZ you can say exactly the same thing about minus LZ because they just related by rotation so if the Spectrum ends at some point here it has to end going downward at exactly the same point except reflected now each action of l+ minus displaces You by an integer how is it possible to come to an end with the ends being symmetric like this if they have to be integers for example if this point
+
+00:12:40
+was at 3/4 here and you kept going down down down down down you would never come to minus 3/4 is that right yeah you you'd never come to uh yes you'd never come to minus 3/4 the only way that it can happen that you can end and be symmetric is if you start at an integer that's one possibility let's say this is integer two here and then end at minus 2 that's one possibility and the only other possibility is that you start at a half integer for example the simplest case would be that the Spectrum ends at a
+
+00:13:24
+half and ends in the other direction at minus a half that's still separated by an integer in that case l+ would take you from the Lower State to the Upper State L minus would take you from the upper state to the Lower State but what would happen if l+ hit the upper state would give zero if L minus hits the Lower State it would give zero so that's the way we know what the spectrum of the angular momenta is the spectrum is either integers or half integers and each collection of States like this if it ends it ends at some
+
+00:14:09
+highest point which is usually called let's forget the half IND case the half integer case will come back to us but not uh probably not tonight let's take the integer case all right could end over here here zero 1 2 3 1 two 3 and over here so there'd be how many states 1 2 3 4 5 six seven states here seven possible States the highest state has the maximum value of M before it's killed by the next action of the operator the maximum value of M is called l l equals the maximum value of M for that
+
+00:15:06
+particular collection of States minus L is of course the minimum value of M and so the values of M go from minus L to plus L and then nothing beyond that from above nothing Beyond it from below how many states is that Al together if you go from minus L to plus L 2 L + 1 okay so a multiplet a collection of States uh is characterized which which um with a given value of well we'll see what they have a given value of but a collection of states of this type A multiplet has typically two l+ one States 2 L +1
+
+00:16:04
+States that's the first thing we find number could have it that's the other sure that's just L equals infinity right that is it is a possibility but uh um it's uh not one that we're going to worry about the pathological there isn't a pathological for a variety of reasons the number a lot of the reasons that they're pathological but among other things energy usually P depends on the angular momentum as you increase the angular momentum keeping other things fixed the energy goes
+
+00:16:51
+up and um uh if you're interested in states of fin energy then you're not interested in states with infinite angular momentum okay let's do one more little exercise what characterizes these multiplets well I'll tell you what characterizes these multiplets it's the magnitude of the angular momentum all of the states in this 2 L + 1 collection have the same value of the magnitude of the angular momentum now what do we mean by the magnitude of the angular momentum what we mean by the
+
+00:17:33
+magnitude of the angular momentum is exactly what you would mean in classical physics or I should say the square of the magnitude of the angular momentum it's the magnitude of the angular momentum Vector squared and that's equal to lx2 + L y^ 2 + LZ squared the only difference between classical physics and quantum physics is these are now operators they're not just numbers in the usual sense they're quantum mechanical operators and let's see what we can find out about l s in particular l s for a
+
+00:18:13
+multiplet of 2 L + one States in other words supposing we have a multiplet which terminates from above at L terminates From Below at minus L what can we say about its l s okay so here's the tricks and they're all tricks but they're nice tricks this is equal to lz2 now first classical lx2 + L y^ 2 that's plus LX + i l y do I want that no I want LX minus i y time LX + i y this is lx2 + L Y and the cross term zero classically so this is a correct equation classically it's not quite
+
+00:19:07
+right Quantum mechanically and the reason is that LX and l y don't commute we actually have an extra term here we have the extra term let's see what it is it's I LX l y That's this product and then minus i l y LX so it has the commutator of LX l y in it sorry the Comm of LX and l y yeah in other words we've overshot by writing in LX - i l y * LX + i y we have to subtract this minus I commutator LX l y that's just the extra piece that's there because LX * l y Y is not equal to
+
+00:20:00
+l y * LX okay so that's straightforward but what is the commutator of LX with l y LX with l y is I LZ so this is equal to LZ 2 now we're going to get an I from the LZ there's an I here and then there's another I from the commutator I * - I is Plus + 1 so this will give me plus LZ LZ 2 plus LZ and then we have plus lus * l+ okay you with me that's l s the square of the angular momentum now let's apply that let's take this operator and apply it to the maximum highest M
+
+00:21:09
+State m equal l m = l so let's take this L2 on l l is the highest state there okay what do we get we get lz2 on L plus LZ time L plus L minus l+ time L okay first of all what is this script L here it's an igen Vector remember what it stands for it stands for the igen vector of LZ with the highest possible value in this multiplet what is LZ LZ is equal to little l in the state up here LZ is equal to little L let just go back a minute too many letters I'm sorry if there so many letters but uh that's just
+
+00:22:18
+the way it is LZ or the state M was defined to be an igen Vector of LZ that's what this says in particular the top IG Vector here we can just substitute for M we substitute l so here we have it LZ on L is just the numerical number L on L what about LZ squ it's just L squ you're just hitting it with the operator LZ twice the first time you hit it it gives you an L the second time you hit it it gives you another l so that's l s okay that was easy but what about this here guy what are we going to do about
+
+00:23:08
+it it's zero why because l+ when it hits the top runs out of states that was the definition of the top here the definition of the top state is that l+ gives zero so we can just erase this and now we've learned something that this state L is an igen Vector of the square of the angular momentum let's write it this way let's write it down l^2 + L time l or better yet L * L + 1 just to remind you where it came from an l s came from here and an L came from here l^2 + L is L * L + 1 so what do we
+
+00:24:10
+find we find out that the states in this multiplet here the top state there the top the highest state there has an igen value of l^2 which is L * L + 1 the square of the angular momentum for that state is not little L squar it's almost just little L squar there's a little Quantum correction here if we were doing classical mechanics we would expect that the square of the angular momentum would just be the square of the uh of the angular momentum about the z-axis for the top state there incidentally the
+
+00:24:54
+highest state is like the state rotating about the z-axis where all of the angular momentum is in the vertical Direction that's why it has the highest value in the other direction it would be smaller okay so we find a little surprise it's not just L2 it's l * L + 1 but then there's another surprise and this is something this is a nice little exercise for you to do yourself it's very easy but I'll let you work it out yourself every one of these states in this same multiplet have exactly the
+
+00:25:27
+same value of l s they all have the same magnitude for the square of the angular momentum basically what this multiplet is is it's a quantum mechanical version of a state with a given angular momentum except in any possible Direction they all have the same L squared the same square of the angular momentum but they have different projections onto the z-axis what's new in quantum mechanics is that the projection onto the z-axis is quantized comes in integer multiples okay so that's that's what we know about angular
+
+00:26:07
+momentum question yeah um could you state a little bit more I didn't I don't understand the words that you said in terms of the little exercise where you do oh okay good yeah here's the exercise okay let's good what we've shown is that l^2 on the maximum igen Vector is equal to l * L +1 on l in other words that this IG Vector here happens also to be an igen Vector of the square of the angular momentum next step I would like to show that L -1 also equals L * L +1 * l minus1 in other words that the next
+
+00:27:12
+state down has exactly the same value for l s okay how do you do that well you say start with L2 and now hit this with L minus on l L minus on L is the state L minus one and we want to prove that's that that that's equal to l * L + 1 * l - on L that's the thing you want to prove okay can any body guess how to prove it does the algebra here suggest anything I'll tell you what it suggests to me it suggests to me that we figure out what the commutator of L2 with L minus is imagine we
+
+00:28:15
+discovered imagine we discovered a marvelous fact which I'm not telling you is true it's true though that L2 and L minus commute supposing we discovered that then I could say that this was also equal we're trying to prove this relationship I would then say that this is equal to l minus * L 2 L right but what's l s on L line on the let's see what do we want to do here um if this commutes with this we can push this through here that's then equal to l * L + 1 yeah we would have proved this
+
+00:29:23
+relationship we would have proved this relationship we would have proved that this is equal to L minus * L * L + 1 L which is exactly what this says so if we can prove that l^2 commutes with L minus then we can prove that the state L + one is also an igen Vector of l^2 what about L minus 2 what about the next state down same thing we just go down till we run out of states [Music] um here's the okay here's the exercise the exercise is to prove that l s commutes with any one of the components
+
+00:30:14
+of angular momentum let's call it l subi LX l y l l0 if it commutes with any of the components then it will certainly commute with l+ and L minus L plus and L minus is just LX Plus I plus orus i l y so there's an exercise prove that L2 commutes with any one of the L's um all right so here's what we found from the things that I showed you plus the little exercise that you can do yourself is that when you find a multiplet like this going from L to minus L such that there's no more above it and no more
+
+00:30:59
+below it you found not only igen vectors of LZ igen vectors for which LZ is equal to M but you've also found igen vectors of the square of the angular momentum with igen value L * L + 1 where L is just the maximum value of n so for each one of these little L's there are two l+ one States and they all have the same squared angular momentum roughly speaking they have the same squared angular momentum because they just tilted tilts away from the vertical axis that's a rough statement that's Quantum mechanically it's a
+
+00:31:48
+little trickier than that but that's the classical analog that uh that by rotating and changing the Z component of the angular momentum you haven't changed l s okay so that's what we know about angular momentum multipet yeah um can you raise the board uh to show your uh factorization so when you factor lx2 plus L y^2 you could have just as fairly gotten L plus L minus as the operator and then I would have had the opposite sign here yeah it would it would have given you exactly the same thing if you had
+
+00:32:27
+the L if you had the L minus to the right you would want to hit it on the lowest State instead of the highest state but the sign of this would change it would all work out all work out the same way it's a good question but uh okay so what we found is that there are collections of functions of the angles these igen vectors are functions they're functions of the angles why because rotation only it affects the angular dependence their functions and what what characterizes them a value of M the igen vector of
+
+00:33:19
+LZ so whatever they are they functions which have a little subscript M and that's the component but they also have they're also igen vectors of l s or in other words they can be characterized by a little L and they're called y LM and their functions of theta and F you know what these things are called y LMS of theta and F spherical harmonics they're functions on a unit sphere functions of theta and F and they're the analoges on the sphere of e to the plus or minus I Theta i i
+
+00:34:13
+l i l Theta they're the threedimensional analoges this is the two dimensional functions strictly speaking these are functions on a circle so they're onedimensional functions but think of of them as functions for a two-dimensional problem these are the corresponding functions for the three-dimensional problem and we don't really care very much about exactly what they are we're going to finesse exactly what they are we're never going to really need it we could figure out what these functions
+
+00:34:45
+are but we don't never going to need it all we ever have to really know is that for every little value of L there are 2 l+ one of them the 2 L plus one of them have magnetic quantum numbers M that range from 0 to L and to minus L and that the square of the angular momentum is L * L + 1 that's all we're ever going to have to really know um to do atomic physics okay any questions about the structure of angular momentum multiplets and they all have the same energy they all have the same energy and the reason
+
+00:35:32
+is because the angular momentum commutes with the hamiltonian that means when you when you apply L to a function it doesn't change the uh the energy so they all have the same energy at least for a problem of a central Force for Central Force the angular momentum commutes with a hamiltonian and that's enough to prove that all of these have the same energy okay no questions we'll move on in fact let's move now to the central Force problem now I'm going I'm not going to take you through all of the
+
+00:36:16
+manipulations involving partial derivatives all over the place with respect to Theta and fi and so forth we're going to do this by using a little bit of intuition from classical physics and and work out with a a tiny bit of cheating the cheating is going to be to use classical physics to make a guess or two but the guesses are well motivated and we can um we can do this rigorously what is what we want to do we want to solve the Schrodinger equation for a problem with a hamiltonian which is p ^2 over 2 m now P
+
+00:36:57
+stands for the three components of of of momentum so it's a vector P ^2 over 2m kinetic energy plus some potential energy which only depends on the radius Central Force problem later we'll be specific about what central Force problem of course what we're going to think about is a kulum force uh but for the moment let's not uh let's not specialize and let's do classical physics first okay first statement the angular momentum is conserved now you could check it you could work it out by working out the
+
+00:37:43
+equations of motion and seeing that the angular momentum is conserved you can also just say angular momentum is conserved whenever you have rotational symmetry and that's correct the same statement is saying that you have momentum cons ation whenever you have translation invariants it's n's theorem classically Quant heavy heavy scone that's a good scone man all right so let's believe angular momentum is conserved angular momentum is a vector oops excuse me R cross p it's conserved that means its magnitude
+
+00:39:03
+is conserved but also its direction is conserved and that means as I said before that the plane of the orbit is also conserved so once we know the plane of the orbit is also conserved and that everything is rotationally symmetric we might as well classically put this whole thing in in the XY plane so there's our orbit orbits do not have to be circles most orbits are not circles in fact for a general problem most orbits won't even be closed if you take a general potential most orbits will not be
+
+00:39:49
+closed they will they will process about um the axis of the orbit will process we're not going to worry too much about whether the orbits are closed it's not our concern right now now next let's look at an orbit here's R and let's put the momentum over here the momentum is along some direction it's in the plane because we because we know that the motion is in a plane so so it's in the plane and it's pointing in some direction it may or may not be perpendicular to R in fact it could even
+
+00:40:34
+be um the velocity could be a long R there are Orbits for example which just go back and forth through the origin uh so there's no rule that says that the momentum is perpendicular to R there is a rule that says the angular momentum is perpendicular to both R and momentum but that's we're finished with that okay let's take the the uh the momentum vector and decompose it into a angular part let's call it the Theta component P Theta and a r component so the momentum has two components one along the angular
+
+00:41:15
+Direction and One along the r Direction what about p^ s p^ s is the sum of the squares of both of them so H is p r 2 plus P Theta 2 / 2 m and that's it but what about the angular momentum the magnitude of the angular momentum the magnitude of the angular momentum is p Theta * R is that clear to you that P Theta * R is the angular momentum R cross p r cross P the magnitude of it is the magnitude of R times the magnitude of P Theta so the magnitude of the angular momentum is equal to P Theta * R
+
+00:42:14
+everybody magnitude P Theta time r or another way to write it is that L first of all L2 is equal to P Theta 2 * R 2 and now let's write P Theta 2 is l^2 over R 2 that was easy and let's stick it into the hamiltonian p r^ 2 plus P oh this is not I I'm sorry you didn't correct me plus v of R okay p r s well that's just PR r s h is p r 2 over 2 m but what about P Theta squar P Theta squ is l^2 / R 2 plus v of r let's erase all of this now look at what we have we have a problem which for all practical purposes
+
+00:43:48
+could be thought of as a problem in one dimension namely the radial Direction PR S Plus a potential energy V of r plus another term in the potential energy remember that L is conserved so once you pick l once you know what the angular momentum is it doesn't change on you so once you know what it is you can freeze it and you can say the hamiltonian of this system is just p r 2 as though it was just a one-dimensional problem plus an extra term which goes like 1 / r squared plus the original V of R what is
+
+00:44:25
+this term called physically what is it is it is it attractive or is it repulsive how do you tell whether it's attractive or repulsive it's attractive why do you think it's attractive potential energy one of R squ gets bigger As you move away so sorry r Square gets bigger As you move away 1 / R 2 decreases as you move away so which way is this Force pushing you forces push you towards smaller energy forces always push you toward smaller energy that's why they're minus the derivative of the potential with
+
+00:45:16
+respect to position this is pushing you away from the origin what kind of thing is this pushing you away from the origin there was nothing in this problem that pushed you away from the origin what is it yeah sure it's centrifugal force or this is the potential energy that's associated with a centrifugal force and it gets very big when R gets small when R gets small for fixed angular momentum for fixed angular momentum it really repels you away from the origin and so if an object comes in
+
+00:45:50
+with a given amount of angular momentum it can't get very close to the origin what it does is swing around the origin okay so this is what keeps the particle from getting to the origin and it is the centrifical force there's only one situation where it's not there when is it not there for l equals 0 right for l equals 0 and then for l equals 0 we're talking about an orbit which just goes through the origin back and forth and back and forth through the origin it has no angular momentum
+
+00:46:30
+and this term isn't there but as long as there's any angular momentum then it can't get to the origin because there's this huge repulsion effect it's not a real repulsion it's the centrifugal force but it's there P of R what about P of R that's just the momentum associated with the r Direction okay let's go one one a little more a little bit more with a classical physics let's plot this effective potential energy this becomes the effective potential energy for the one-dimensional
+
+00:47:12
+problem it has the ordinary potential energy plus the centrifugal barrier this is called the centrifugal barrier and it looks like this let's suppose V of R is attractive for example it could be the attraction the electron to the proton uh then V of R would look something like that let's do it a little better V of R would be negative because it's ATT traction and it would be 1 / R so it would look something like this now what of that's V of R what about l^2 over R 2 well the depending on L whether or not for any L
+
+00:48:00
+except l equals z it's going to blow up at the origin like 1 / R 2 and then fall quickly to zero in fact if V of R is the potential it goes like 1 / R it falls more slowly than the centrifugal barrier centrifugal barrier Falls very quickly to zero 1/ R 2 and V over r a little more slowly what does the combination of them look like well the combination of them which is dominant at small R for small R which one is bigger 1 / r s or 1/ r 1 r s is much bigger so uh very close to the origin this is the dominant thing
+
+00:48:46
+what about for large R if V is 1 / r supposing v is the coolon potential 1 / R is bigger than 1 / r s so ASM totically far out the Kone potential wins and what happens in between what happens in between looks like this now okay so what kind of motions do you have we have an effective problem which is completely one-dimensional now it only depends on the r axis and all of the angular story is fixed by the angular momentum so once you know the angular momentum it becomes a one-dimensional problem what do you
+
+00:49:34
+think Motion in this kind of potential looks like well the simplest kind of orbit or the simplest kind of motion would just be equilibrium down at the bottom of the potential that's an orbit in which R doesn't change it's a circular orbit okay that's a circular orbit what other kind of orbits can you have well what other kind of motions could you have in a potential which looks like this basically you can have oscillations back and forth oscillations which go back and forth take the particle from a minimum
+
+00:50:14
+distance from the origin to a maximum and back again so these are orbits which go from a minimum distance to a maximum distance and back again for the Kum potential they would be the elliptical orbits and that's the classical physics in a nutshell that's the classical physics what about the quantum physics for the quantum physics we have a wave function the wave function instead of we don't have a particle position we don't have a momentum we have a wave function and the wave function is s of R and also
+
+00:50:54
+angles but the angular structure structure is totally taken into account by knowing the angular momentum if we know the angular momentum then we know that the angular part of the wave function is just one of these spherical harmonics which I've erased but uh that's gone but we don't have to worry about it it's a one-dimensional problem s of R and what does it satisfy it satisfies the shring or equation that h on S of R let's say the time independent shinger equation what is the time
+
+00:51:39
+independent shringer equation what do you put on the right hand side the energy and it determines the igen values and the IG vectors of energy now what is h h begins with PR squar what is PR PR R is of course I D bydr as always in quantum mechanics a component of the momentum is I bar time derivative with respect to the the corresponding coordinate so p s here's PR s PR s is going to equal minus because of two factors of i h bar squ I'm putting in the H bars now second derivative with respect to
+
+00:52:33
+R that's the first term in the hamiltonian I I left something out I left out twice the mass whose Mass might I be talking about incidentally the planet Mercury more likely the electron for this discussion but it could be the planet Mercury 2 I don't think we would bother doing quantum mechanics then D2 by D r^ 2 that's the first term in the hamiltonian the second term in the hamiltonian is exactly what's written there plus 1/ 2 m L2 over R 2 but what is l s now we come back to here L2 is not little l s it's l * L + 1
+
+00:53:27
+why because this is the square of the angular momentum what appeared there was the square was lx2 + L Y2 + lz2 and so this becomes L * L + 1/ r 2 that's one of the effects of quantum mechanics just to change L2 to L * L + 1 and finally plus v of r R and you can plug in your favorite potential into there what do we do with it we act on S and S is now a function of r s of r s of r s of R equals e s of R and that's our Schrodinger equation the solutions of equation are the igen vectors of energy
+
+00:54:30
+with given angular momentum and um the igen values are the energy levels I have a feeling I left out some H squares in here um I probably did because where did it come from it came from P Theta squared it's probably an H bar squar in here too if you track it I think yeah yes all right that's what we would like to solve we'd like to solve this find the energy levels of an atom we would like to find the wave functions of an atom we'd like to know what the electron probability distribution is
+
+00:55:20
+like and so forth okay so we're not going to do that we're not going to do it because it's just a matter of solving different IAL equations and this is not a course in differential equations but we can still sort of scout it out and yeah for a given L MH I think again all the vales the same energy Lev yeah all of all of those all of these levels here the 2 L plus one them have the same value of little L and therefore the same energy oh okay yeah so you were able to replace um l s with l l +1 because s is a linear
+
+00:56:13
+combination of the M's this but that applies to any value of L we said right yeah so if we know the angular momentum if we know the angular momentum quantum number of the wave function then we can plug it in what L is really the maximum value it's the maximum mean value for that multiple yeah there are wave functions of any angular momentum but they come in these and the pattern is that they come in these 2 L +1 multiplets the 2 l+1 one multiplets are the quantum mechanical analog of if you
+
+00:57:00
+find a wave function and you rotate it around right this tells you what the energy levels are associated with a given LR and now you want to solve it okay too hard to solve for most potentials most potentials you write down you'd have to solve it numerically the coolum potential happens to be solvable if you want to solve it the solutions to this equation are called Gigan b pols or Gigan B functions good luck look up Gigan B functions you we learn very little from it I used to know what a gig and B about
+
+00:57:48
+polinomial is I do not anymore okay let's look at the at the effective potential what we're doing is we're solving the Schrodinger equation in a potential which looks like this we're solving the Schrodinger equation for a problem which effectively has a potential energy which looks like this and we want to know what kind of wave functions and what kind of energy levels will it be okay if you know anything about solving Schrodinger equations then you know that given L with given l in
+
+00:58:29
+other words with given the potential you know that first of all typically there are more than one bound State a bound state is a state which is confined with a wave function which doesn't leak out too far they correspond to discrete energy levels and you know that the thing which characterizes the energy level is the number of nodes in the wave function does everybody know what a node is a wave function which pass which doesn't which is never zero let's say it's always positive has no nodes if it
+
+00:59:07
+goes up goes down passes through the origin and then it has one node so here are some functions with different numbers of nodes here's oops here's a function with no nodes here's a function with one node how about a function with two nodes a function with two nodes goes up comes down goes back up and comes back down the number of nodes are what characterize the different energy levels of a solution to the Schrodinger equation the more nodes the higher the energy why do why would it be that the
+
+00:59:49
+more nodes the higher the energy what's that yeah something like that yeah the more nodes the faster it Wiggles the faster it Wiggles the the large of the momentum momentum is characterized by Wiggles the wave functions of momentum States wiggle the higher the momentum the faster they wiggle the more they wiggle the more nodes they're going to have so generally speaking it's a theorem it's actually not it's a theorem the lowest energy state in the given potential has no nodes the first excited
+
+01:00:29
+state has one node the next excited state has two nodes eventually you may or may not run out of um of solutions but they're ordered according to the number of nodes so let's start let's see now what we can say about the the spectrum of an atom it doesn't have to be a realistic atom this could be an atom with uh one over R potential like a realistic atom it could be 1/ root of R it could be uh e to Theus R but some potential what can we say let's see if we can organize the energy levels and the
+
+01:01:08
+states of the atom okay let's see how I did this yeah let's plot horizontally the different angular momenta the little L's little L L equal 0 0 L = 1 L = 2 L = 3 and so forth now each one of these L's has its own Schrodinger equation remember the Schrodinger equation involves L as a parameter so each L may have several bound States several Solutions let's take L equal 0 L equals 0 will have a lowest energy State let's see what are we plotting here let's plot energy energy
+
+01:02:15
+vertically okay there'll be the lowest energy level it has no nodes and L equals zero so it's someplace over here okay what's the next state with L equals 0 the next state with L equals 0 has a node in it same potential one node so it's up here over somewhere how many states are there for every for for l equals z each wave each case has one state L * L + 1 is 1 when L is equal to zero is that right no no no no 2 L + 1 is a 2 L 2 L 2 L + one is uh right 2 L + 1 is one so every one of the states with L equals
+
+01:03:05
+z one node two nodes three nodes and four node they all have one state associated with them and they there some they're not equally spaced they are whatever they are whatever they are okay those are the energy levels with zero angular momentum now let's go to angular momentum one at angular momentum 1 there is also a state with one with no nodes we solve the same Schrodinger equation except with Lal 1 here L * L + 1 when L is equal to 1 1 * 2 is 2 right 1 * 2 is 2 on the other hand for L equal 0 this was
+
+01:03:50
+Zero okay so same Shing equation different value of L at Lal 1 we will also find things with one node will their energy be larger or smaller than the L equals z state with no l with no node just a wild guess yeah it's got angular momentum it's you know it's swinging around there it's got angular momentum and besides which this is a positive term in the hamiltonian so how could it possibly lower the energy and it can't so the L equals one state with no nodes will lie somewhat
+
+01:04:29
+above the the corresponding state with L equals 0 likewise the K the state with two nodes this one lies above this one will lie above this one and just by virtue the whole Spectrum may move over but it will move up a little bit because the angular momentum is higher how many St are there at each one of these levels I've drawn a little Dash here to indicate a possible energy level a an energy level but what is its degeneracy how many states are there at each one of those dashes 2 L + 1 three so we should really
+
+01:05:18
+draw these as three little dashes if I was trying to separate them and indicate three states each one of these is a triplet okay what about at L equals 2 at L equals 2 we' put in a little more angular momentum surely we've raised the energy again and in fact we will have how many states will there be for each state at Lal 2 five 2 L + 1 so when we go up to L equal 2 let's move them over a little bit L equal 2 we will have go up a little bit and we'll have five states 1 2 3 4 5 1 2 3 4 5 and so it
+
+01:06:02
+goes Lal 3 2 L + 1 let's see 3 * 6 seven states and so forth and that's about what it looks like that's about what the general solution looks like for sort of arbitrary potential at some point when the energy gets too high just like in classical physics what happens when the energy gets too high for an orbit around the sun es it Escape it exceeds ESC escape velocity and it's no longer bound to the uh to the sun likewise when the energy gets too high the electron escapes and so there's
+
+01:06:47
+a bound a bound to the energy up here no States above there are actually bound so all about states have basically negative energy the Energy starts it should be goes negative down here and this is what the spectrum of a of anything an entral Force looks like the Kum potential has a very special feature it's almost accidental it's not exact it is an exact statement about the non-relativistic kulum potential but it is not an exact statement about atoms the statement I'm going to tell you it's violating by
+
+01:07:26
+every possible correction to the uh to the simplest theory of the atom uh it's a violated by the finite size of the nucleus it's violated by relativistic Corrections it's violated by the fact that the electron has a spin which couples to the or everything in on Earth violates it so it's something of an accident it's very special to the kulum force and it goes as follows the first level here which has moved up a little bit this is the zero node State the zero node state for l equals 1
+
+01:08:08
+happens to be have exactly the same energy as the one node state for l equals z here's the one node state for l equals 0 the zero node state the first one that occurs for Lal 1 occurs at exactly the same energy as the one node state for l equals z that's a mouthful what about the two node State the two node the sorry the one node state of L equals 1 occurs at the same energy as the two node state of L equals z exactly the same uh exactly the same for the simple kulum force and so on and so forth this
+
+01:09:00
+is a pattern now you go to Lal 2 the Lal 2 zero node state in other words the lowest L equal 2 state has exactly the same energy as which is this now this is this is no node one node two nodes it's up here and there are five states 1 2 3 four five what about the lals 3 the Lal 3 begins up here seven states 1 2 3 4 5 6 7 and so forth that's the pattern and it's an accident it's not completely an accident nothing in mathematics is ever an accident but you can say things are accidental when you know just small
+
+01:09:46
+changes in the potential or small changes in anything uh ruin it and this in that sense is an accident I'm not going to uh I'm not going to prove it it sounds like an extra symmetry law it sounds like extra degeneracy it sounds like there degeneracies between states uh it it is a symmetry but it's a rather bizarre one it's a rather bizarre one that you would never notice if you were thinking about this as I said it's very special to the kolom potential and is not exact so I think we won't bother proving it it's a
+
+01:10:22
+nuisance to prove um but it is a fact it's a very special fact about the special one over R potential so there it is that's the Spectrum what is the degener the degeneracy the degeneracy at each level here's the lowest energy level there's only one state it has angular momentum zero it's called the ground state it's the lowest energy state of the atom If This Were the hydrogen atom for example it will be the most deeply bound State then you go up one level you go to the first node of the zero angular momentum
+
+01:11:06
+state or no nodes for the angular momentum and how many states do you get this is one this is four how about the next one up 1 2 3 4 5 6 7 8 nine nine states at the next level anybody want to guess what the next one is 16 is right so for the coom potential for the coom potential the states of the generate like this and the degeneracy is always the square of some integer you say you mean the atom approxim the hydrogen atom approximately satisfies this uh it's a very good approximation but all kinds of things
+
+01:12:05
+violate it relativistic Corrections and as I said just the finite size of the nucleus is enough to disturb this now the nucleus is very very small why does the finite size of the nucleus disturb it the F the nucleus is a little ball of charge we've pretended the charge was a point at the center okay that would give us exactly the coolum potential if the charge would distributed over a little ball the potential energy would be slightly different than the exact Kum especially when you get into the
+
+01:12:39
+nucleus the electron can pass through the nucleus it's just a ball of charge the nucleus is just a ball of charge the electron is repelled uh sorry it's it's attracted to the to the nucleus and it can pass through the nucleus when it passes through the nucleus it senses the fact that the charge distribution is not the perfect 1/ R Square 1 over R potential if the potential is anything but 1 / R this degeneracy fails so because the nucleus has a finite size there's a very very slight
+
+01:13:15
+deviation away from this now the nucleus is 100,000 times smaller than the size of the atomic wave functions so the nucleus is very small and this is a very negligible effect but the only point is just that this is something of an accident and not particularly deep I don't know anything deep about it uh the fact that it has this kind of degeneracy and that's your spectrum of the hydrogen atom that's the spectrum of the hydrogen atom in the idealized approximation non-relativistic perfect kulum
+
+01:13:51
+potential okay one state the ground state four states above it nine states above that is that the way real atoms work no it's not the way real atoms work real atoms have two degenerate ground States eight first excited States 18 next excited States 32 next excited States and so there's something missing in this analysis by a factor of two spin yeah spin right so we haven't talked about spin and I think we won't tonight that's all of this is of course just trickery for solving the Schrodinger equation let me
+
+01:14:53
+write the schinger equation in its original form form before we went to angular variables it wouldn't be particularly helpful to try to solve it but we might just try to work to write it down p^2 means px^ 2 + p y^2 + pz2 it can also mean p r 2 + P Theta squ but it means px2 plus py so this really means minus what is it HR squar D2 with respect to x^2 plus D2 with respect to y^2 plus D2 with respect to z^2 of S Plus V of R * s equal e that's the equation we really set out to solve solve it by going first to Polar
+
+01:15:45
+coordinates or radial coordinates radial and Ang angular coordinates and then using the algebra of the angular momentum to deal with the angular parts of it and it's very simple the angular parts of it are all subsumed by saying you work with angular momentum igen States L2 is the thing that comes in and L2 is nothing but L * L + 1 by that time you're down to a one-dimensional schinger equation and you use whatever mathematical uh strategy you know for solving such things once you get it down to one
+
+01:16:26
+Direction it's just an ordinary differential equation it's not even a partial differential equation you only have derivatives with respect to R so so at worst it's it's a numerical problem question yeah first is the difference between the idealized SCH law what you measure is is that could that be a way of determining the size of the nucleus no no there are too many crap uh Corrections which are much bigger no I just point out the the nuclear size because it's an easy one to
+
+01:17:06
+think about but it's it's minuscule no the second question is you get back to the very beginning between classical mechanics and quantum mechanics the biggest difference is capital l s is equal to little l s in clal and it's equal to L * l- Quantum what's what's capital Lal little L little L + 1 right no right Big L S is L * L + 1 yeah yeah I just said it wrong yeah um and that difference is caused by the fact that the things don't commute yeah mhm it's in other words it's a little
+
+01:17:52
+Quantum correction okay right question right it's a little Quantum correction yeah yeah do wave functions have compa support no no they're spread but they but they fall off very rapidly As you move away from uh compact support would literally mean they go to zero outside a certain distance statement that the wave function as compact support would mean that it's zero out past a certain point but it's exponentially small they did they decrease exponentially so for practical purposes if you go out sort of
+
+01:18:32
+past a certain distance each wave function becomes negligibly small does that answer your question yeah but there is some nonzero probability find something arbitrarily far away but it goes to zero exponentially with distance right question yeah um when L is zero little L yeah um the shape is not like this it's just the cool potential right oh yeah yeah yeah yeah good that's right when L that that's right when L is zero then there's no centrifugal barrier right so what is the meaning of
+
+01:19:07
+the stable point in this case you mean you mean the point at the origin no before it was in this well okay now the well is gone yeah that's right that's right so classically it would just go to the center it would just go to the center and sit at the center Quantum mechanically it can't both sit at the center and it would go to the center not only go to the center but it would be at rest at the center the the state of lowest energy would be at the center where it would have Nega negative Infinite Energy you
+
+01:19:41
+would lower the potential energy by getting to the center and you would lower the potential energy by making the momentum zero you can't have both you can't have the momentum and the position definite there's a compromise in compromise is for the wave function to have a little bit of spread away from the origin here the the the Schrodinger equation has a solution and the solution has some sort of exponential um exponential tail but it's concentrated near the center it's the uncertainty principle
+
+01:20:17
+which prevents it from sitting literally at the center yeah yeah you motivated your classical mechanics yeah yeah we certainly did was that the trick you used to make for lack ofer no no no I okay this is motivated by classical mechanics up to here okay but classical mechanics motivated p^2 over 2 m where P was a vector and allowed us to write this down once we write this down we have a very very precise quantum mechanical problem an exact Schrodinger equation um I did a little bit of guesswork in
+
+01:21:08
+going from here to here classically it's completely rigorous to go from PX s+ p y^ s+ pz s to go to p r s + P Theta 2 you have to justify uh the step Quantum mechanically all right but that's that's something would take an hour at the Blackboard and you wouldn't learn very much from it another question if I made please uh you have Z there which implies three dimension but you said you reduced it to two Dimensions by going only R Anda um classically classically classically Quantum mechanically the
+
+01:21:51
+wave function fills up three dimensions every wave function fills up three dimensions classically and the trick is to say angular momentum is conserved that means the plane of the orbit is conserved just change coordinates so your XY plane is in the plane of the um of the orbit can't do that Quantum mechanically but you did no I didn't no I didn't but the fact that you can't do it believe it or not is just the statement that l s is replaced by L * L + 1 yeah it's it's these other lxs and Lys
+
+01:22:36
+creeping into uh yeah if you could just put in for l s LZ s then it would just be little l s the fact that it's three-dimensional comes back at you just from the L * L + one yeah this is more I think what you'll do with the harmonic OS is there always a raising and lowering operator looking no only when you're very lucky and uh I would say basically physics has been lucky this way twice but however the harmonic oscillator piece of luck is very pervasive almost everything in nature can be well approximate or many things
+
+01:23:21
+in nature can be approximated by harmonic oscillators for example even the um go not l equals z but go to the higher angular momentum States and the higher angular momentum States the potential looks like this and there are orbits which oscillate back and forth at the bottom here and the simplest approximation to those orbits is to treat them as a harmonic oscillator so there's all kinds of places where are harmonic oscillators and because of that the trick of whatever trick whatever trickery goes
+
+01:23:57
+into the harmonic oscillator is very pervasive but uh there are not many mathematical cases where raising and lowering operators or sometimes they call lad operators only when you're very lucky um okay uh that uh that that does it for atoms for the moment we're going to come back to atoms we're going to talk about spin we're going to talk about the fact that the electron is a fon instead of a boson and how that determines atomic structure a little bit uh and how atoms radiate and give off
+
+01:24:37
+photons all that stuff will come back to but let's forget atoms for the time being and come to the harmonic oscillator I said everything in physics which has an equilibrium if you disturb the equilibrium a little bit chances are it's going to behave like a harmonic oscillator so it's a very pervasive thing and the model for it is just a particle or a weight on the end of a spring um we're going to simplify it a little bit some of the parameters aren't terribly important we imagine a
+
+01:25:25
+weight hanging by a spring it has an equilibrium position and the deviation from the equilibrium position not the deviation from the from where it's hanging but the deviation from the equilibrium position we'll call that X I'm going to take the mass of the weight to be one now we can redo it for other masses it doesn't uh it's a little exercise to do it uh but uh you won't there's nothing new nothing new happens so the mass is one and the spring constant the spring constant k k is a standard terminology
+
+01:26:16
+for a spring constant will call Omega squared we're going to find out in a moment that Omega is the frequency of oscillation okay but the spring constant is Omega squar what is the energy of a classical oscillator the energy or let's call it let's give it its name the the hamiltonian the hamiltonian is the usual P squ now p is onedimensional it's just the momentum the X momentum P ^2 over 2 m that means p t^2 / 2 m has been set equal to 1 plus K Omega 2 x^2 / 2 let's work out let's just check that
+
+01:27:15
+this is right what we're going to do is work out the Hamilton equations of motion if you don't remember Hamilton's equations of motion it's okay I'll tell you Hamilton Hamilton's equations of motion are DH by D DP equals x dot and d h by DX equal minus P dot how many people remember minus P dot thank you everybody remember that of course you do okay let's check let's see what we get d h by DP is equal to X do the H by DP is p so this says that P equals x dot right that's not too bad momentum is
+
+01:28:07
+equal to Velocity what happened to the mass oh I said the mass equal to one so that's okay it's all right I'm a physicist I'm allowed to do that P is equal to x dot that's good now what about the H by the X the H by the x is Omega squar X plus or minus minus okay let's check Newton's equations let's calculate the acceleration the acceleration is x dot that's P dot but P dot is equal to uh P Dot do I have the sign wrong here d h by DX = minus P dot = + Omega x^2 the H by
+
+01:29:04
+the x is plus Omega x^2 so x dot is equal to minus Omega 2 x x dot is minus Omega 2 x that's the equation of an oscillator with frequency Omega okay everybody recognize it X do is minus Omega 2 x acceleration M was set equal to 1 acceleration is equal to restoring force with as I said K is equal to Omega squ okay so this is the right hamiltonian for the harmonic oscillator and now what we want to do is find all its energy levels igen vectors and find out what it does Quantum mechanically classically we know
+
+01:30:00
+what it does it swings back and forth with frequency Omega okay let's see what we can do with it it's the sum of squares what do you do with the sum of squares you factor it everybody knows that you factor the sum of squares well not everybody knows that D knew it all right so let's write first of all a 1/2 downstairs and let's write p + I Omega x * P - I Omega X is this looking familiar not from the harmonic oscillator but from about an hour ago LX Plus i l y and LX minus i l y yeah okay so let's do this is this
+
+01:30:53
+right yeah that's right I'm also going to put uh yeah I'm going to put an Omega downstairs and an Omega upstairs only because it's convention okay now let me not put those omegas I'll do that later is this right Quantum mechanically corre no because there's a term P * x and x * P but they don't cancel because X and P don't commute so let's see so what do I have to subtract here I have to subtract minus one2 from here and then I will have I now we have om Omega we have x * P - P * X
+
+01:31:57
+x * P - P * X and I think the I think I have it right I've subtracted it because it was appearing in here in in an unwanted way so I've subtracted it and now I use one more thing this is the commutator of X and P what's the commutator of X and P I I've dropped H bars all over the place we'll put back the H bars later okay XP minus PX that's I commutator of P of X with P equals I strictly i h bar if I wanted to keep the um uh why is that true hm why is that true you know remember that no from two years
+
+01:32:57
+ago I'll that's the basic economical commutation relations of a coordinate and its corresponding momentum case it's the one dimensional case yeah one dimensional case it's not PX no then you have a problem why uh then it'll be zero hm x commutes with p y and pz yeah so this is yeah but this this is X and PX there's only one coordinate in this problem that's what I'm saying that's the one dimensional case you had the other dimensions you would have to clarify if you had other dimensions you
+
+01:33:40
+have to worry about them you don't okay this is the onedimensional harmonic oscillator so what is XP minus PX all right let's keep the H bar around for a second uh we'll keep the H bar around for a second later on we'll drop it but um uh it's i h - I * I is plus I so this becomes plus h Omega / 2 okay this is a constant this is a constant what's it called it's got a name it's called the Zero Point Energy it's there even when the harmonic oscillator is in its ground state we're
+
+01:34:37
+going to see that even in its ground state where this is zero everything else is zero this Still Remains why is there a ground state energy well let's um let's ask why is why does a harmonic oscillator have a ground state energy why isn't the Energy Zero what's the energy of the ground state classically zero how does it get to be zero well the ground state is just the oscillator at rest P equals 0 at position zero both of these are zero Quantum mechanically you can't have both
+
+01:35:16
+X and P be zero simultaneously furthermore both of these are positive and therefore they can cancel each other so there's got to be a little bit of energy in the ground state it's the Heisenberg uncertainty principle which tells you that you couldn't have had zero energy in the ground state okay but once you know that here let the hamiltonian is this thing over here plus a constant okay let's drw let the constant may or may not be important but it's just an additive number every energy
+
+01:35:53
+level has an extra H Omega over 2 we're not going to lose anything terribly important if we drop it um I'm going to drop it but later on we can come back and add it back in as an overall additive constant in the energy yeah um can you say anything further by the fact that it comes out to be positive instead of negative okay it couldn't have been negative because X2 + p s is positive the energy is X2 + P sare that's a positive definite operator it can't come out to be negative
+
+01:36:33
+right all right so let's concentrate on this thing over here let's forget where it came from we forgetting where it came from and we just want to know what's the properties of this operator here's a certain operator it is the hamiltonian apart from the S I'm going to say it once more there an additive constant and now I'm not going to say it again until I put it back eventually but this is the hamiltonian okay and we want to understand what its spectrum is what its igen vectors are what is its
+
+01:37:09
+properties we have two operators it factorizes very nicely it makes sense to give these operators names and I'm going to do something just for future benefit I'm going to put an Omega up here and I'm going to put a square root of Omega down so here's what we're going to do we're going to put a square root of 2 Omega downstairs and a square root of 2 Omega downstairs here you see what I did I took the two that was downstairs and I split it between these two and I took the Omega
+
+01:37:45
+which I stuck upstairs and split it between the two factors again this is the standard way that even the classic iCal harmonic oscillator is often written in this way we need to give these guys names pus I Omega X over < TK 2 Omega and p+ I Omega X their role is going to be exactly the same as the raising and lowering operators in the uh in the angular momentum case it's going to take us up and down a ladder this time it'll be a ladder of energy levels not a lat of angular momentum okay so let's give them names
+
+01:38:30
+A+ is equal to p + I Omega X over < TK of 2 Omega and a minus is the same thing but with a minus IX over < TK of 2 Omega they are hermiss conjugates of each other they're her mission conjugates of each other because one plus I Omega x- I Omega X and we can now write that the hamiltonian is Omega * A+ a minus that is really simple except who knows what's buried in the A+ and the a minus it's a it's a it's a crappy looking thing for sure to have square roots of Omega and square roots of two
+
+01:39:23
+but it's turns out not to be so crappy okay what what should we do with these a pluses and a minuses what what would D do yeah I do that but uh but probably stare at it for a while say I can't figure out the igen values he would commute them you would commute them you would say what's the commutator here I have a hamiltonian which is A+ a minus I don't know much about A+ and a minus but let's figure out what the what their commutator is I'm bored I've got nothing else to
+
+01:40:07
+do I I like this I like to sit around and commute things okay so let's let's take the commutator of a minus with A+ okay that's going to be commutator of now there's going to be a two Omega downstairs right two Omega downstairs 1 over two Omega and then there's going to be the commutator of P minus I Omega x with p + I Omega X now who commutes with who here or who doesn't commute with who who doesn't commute with whom all right P doesn't commute with x and x doesn't commute with P that's all
+
+01:41:03
+x commutes with X and P commutes with P so what do we have here we have equals 1 over 2 Omega now we have an i Omega let's take this let's take let's take this one here first then we have a minus I Omega minus I omeg GA from here and then the commutator of X with P what's the commutator of X with p i so that gives us an i i * - I is + 1 we have an Omega over Omega all together this is just 1/2 but that was only one term that was this commutator of this one with this one the other one is the
+
+01:41:58
+commutator of p with I Omega X it's exactly the same if you work it out you'll see it's exactly the same number and so all together you get two of them plus a half and the commutator is one we now know two things turns out this is enough this is really all you have to know you can throw away everything else the hamiltonian is Omega time A+ a minus and the commutator of a minus with A+ is 1 there's one more fact here and it's the fact that A+ and a minus are herian conjugates of each other that
+
+01:42:46
+plays a role okay good let's give this thing a plus a minus by itself a name let's call it capital N it even gets simpler now the commutator of H of H is Omega time n and the next step of course if we had if we were direct would be to start commuting in with A+ and in with a minus it's a good thing to do it's a good thing to do you'll find out that the commutator algebra is very simple but I don't think we have to do it I think we we can um proceed without doing that let's see what we can
+
+01:43:35
+learn first of all this inob is a Herm Mission operator if you take an operator times its own hermiss conjugate it's always hermiss that's something you can check that means n has a complete set of igen vectors well of course n is Herm Mission it's basically apart from the Factor Omega it's the hamiltonian it started Herm Mission it stays Herm Mission so N is a Herm Mission operator and that means it has a complete set of igen values and igen vectors what we want to do is find those igen values and
+
+01:44:08
+igen vectors those igen values and igen vectors are the energy levels and igen states of the of the hamiltonian okay so let's uh let's see what we can learn we want to find the igen values of n once we know the igen values of n we know everything we want to know so let's suppose that n has an igen Vector called little n and that the igen value is just little N I haven't made any assumptions about whether little n is an integer or anything else I've called it n because it is an integer but we
+
+01:44:48
+haven't we haven't proved that let's just call it little n Big N is an operator it's a plus a minus little n is an igen value this is the igen value equation okay and we can also write it in another way we can write it A+ a minus on little n is little n * n I've just written that big n is a plus a minus right these two equations are the same thing now let's take the commutation relation here let's write it out a minus A+ minus a A+ a minus equals 1 but let's take this operator this
+
+01:45:40
+equation and operate on the state n and see what we get all right you agree with this equation it's just a commutation relation a minus A+ a plus a minus equal 1 but then hus what's that thank you yeah good and let's multiply it I'm looking at I'm staring at it trying to figure out what to do with it I know what I really want to do with it what I want to do with it is I want to apply A+ what I want to do is show that A+ will increase the energy I want to show that A+ is a raising
+
+01:46:41
+operator so what I want I want to concentrate not on N but on A+ time n so I have to multiply it by A+ this is my goal to show that A+ * n is something interesting that raising with this A+ operator does something interesting okay so now we have an equation let's see what we get um first of all we have A+ a minus A+ that's the first term here on N now what about the second term minus A+ ah what's A+ a minus on N right so this is minus A+ minus n A+ * n I've written that a plus a minus on N
+
+01:47:44
+just gives me a numerical Factor n so that's this over here I still have the A+ and that's over here and finally on the right hand side I have a + * n okay let's shift this over to the right what happens if I shift this over to the right here I have A+ * n and here I have n * A+ * n what do I get n + 1 oo that's good let's see this one got shifted over to the right it gave me this n and the other one gave me the one but what about this one over here A + * a minus is the operator capital
+
+01:48:48
+N this is the state that I'm interested in so n on this state A+ on N let's put a circle around it is equal to n + 1 times that same state so guess what I found pretty much what was expected that the raising operator gives me a new igen Vector of capital N with an igen value one unit up okay so here's what what we found pictorially if I plot on the vertical axis here the igen values of n then if I find one little n then there's another one above it and another one above it and another one
+
+01:49:45
+above it unless of course I run out but we're going to prove that we can't run out there's another one above it and another one above it each one being shifted by one unit n n n plus1 n plus2 and so forth so if I find a solution an igen value n there'll be another one at n+1 there'll be another one at n+ 2 another one at n+ 3 and furthermore you go from one to the other by applying the operator A+ A+ takes you from an igen Vector with igen value n to an igen value n+ one and
+
+01:50:27
+so forth these of course have higher and higher energy because the energy is just Omega time n what about going down how do you go down what's the thing that takes you down a minus so it's a straightforward thing to prove that um same deal that a minus on N takes you down how far down can it take you can it take you indefinitely down why not because the harmonic oscillat hamiltonian is positive it's only got positive terms you cannot get to negative values the operator is a positive definite operator which means
+
+01:51:22
+it only has um positive igen values in fact it's a theorem that if you multiply an operator by its own conjugate by its own Herm Mission conjugate its igen values are positive or at worse zero or at worse zero so it can't go indefinitely down there's got to be a last one that last one is called the ground state and it's usually labeled o you can't go indefinitely down what does that mean what takes you down is a minus so a minus on N takes you to n + one n minus one or it takes you to
+
+01:52:08
+zero or it just kills a state so there's nothing below it those are the only two mathematical possibilities a minus takes you down or you just run out of states there are no States below it that's what what happens a minus on O is just zero so there's nothing down below n equal Z the first the first state corresponds to n equal 0 n equals z question yeah uh if if we take n and we apply a minus get to nus one and then if we apply a plus to that n yeah but then A+ Aus * n is n * n let's do it
+
+01:53:00
+again the of a plus a minus is n rather than one so if we're app a minus and then a plus is that one or n okay so let's be careful Let's uh I've been a little bit careless I've written that A+ on n is equal to n + 1 but I haven't discussed the normalization of these states the normalization of these states is not n m equals Delta n m there's a numerical Factor there's a numerical factor and if we wanted to keep track of that numerical Factor I'm quite tired now and I think
+
+01:53:52
+we have have to quit but there is a square root of n + 1 here * n + 1 now try your trick again and see what you get and I think it's also true that a minus on N I think gives you square otk of n * n minus1 if I'm not mistaken I think that's correct now what do you want to do you want to try you want to try a + * a minus on N was that the was that the game somebody asked me okay let's see what we get all right A minus on N gives me we're going to have A+ then we're going to have square < TK of n
+
+01:54:47
+nus1 now what happens when A+ hits n minus one here it gives me another square root of n so this gives me two factors of square root of n * n so I was a little bit sloppy I didn't tell you what the normalization of the states were the states are not normalized uh by by that I mean they're not uh chronica Delta normalized then normalized to some weird factors with square roots of n andm uh when we need that and we will need it we'll we'll write it down but I um I was uh it's getting a little too
+
+01:55:33
+late to for all possible details okay yeah oh incidentally yeah just one point um notice that this equation here says that when a minus hits the ground state it does give zero yeah uh does the ground state have to be zero or can it be above zero above zero what well no it has to be zero it has to be zero is that clear why it has to be zero well here yeah um uh yeah that's let's see um well is Z yeah Vector is ifus one is zero Z we can prove it I'm a little bit tired now and I don't know what the proof uh
+
+01:56:31
+proof is but that's a good question uh it is the answer is zero the answer is that the spectrum of capital N here is all of the integers starting at zero okay so that tells us that the energy spectrum is Omega times an integer there is an har bar in here and I'll I'll go through the H bars I'll tell you where the H bars are hiding next time but um it tells you that the energy spectrum is Omega times an integer plus the famous 1/2 har bar Omega that we threw away so there's the ground state Energy
+
+01:57:09
+Plus on top of it the spectrum of integer space levels that's the harmonic oscillator and um we'll play with bit more but more important we'll use it to solve some important problems okay for more please visit us at stanford.edu
+

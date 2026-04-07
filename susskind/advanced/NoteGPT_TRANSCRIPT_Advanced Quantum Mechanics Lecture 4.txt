@@ -1,0 +1,411 @@
+00:00:01
+[Music] Stanford University uh harmonic oscillator Let's uh just very briefly review the harmonic oscillator because it's going to come up time and time again in what uh what happens from here on in as I said harmonic oscillators are ubiquitous they are C all over the place anytime you have a system which has an equilibrium state it could be classical or it could be quantum mechanical but uh but classical in particular if it has an equilibrium State and you displace it from equilibrium generally speaking it
+
+00:00:41
+will oscillate it may oscillate with more than one frequency for example a violin string can oscillate in the fundamental uh frequency it can in the first harmonic the second harmonic and if you pluck it in odd ways you can make uh some nasty noises as I'm sure art knows uh done it many times done it many times the nastiness because of U multiple overtones uh clashing with each other well that's that's probably not quite right but uh uh but you know what I mean all right but nevertheless the
+
+00:01:18
+oscillations of a violin string are a collection of oscillators of different frequency um but more important to us are are the oscillators which comprise the oscillations of the electromagnetic field and other fields we're going to come to that and we're going to do a little bit of quantum electrodynamics just a little bit but basically if you have radiation for example in a uh in a cavity or in a wave guide or something like that then the radiation the electric and magnetic fields oscillate with definite
+
+00:01:56
+frequencies again what would be the equal equilibrium configuration of the radiation field I said start with something which has an equilibrium configuration what is the equilibrium configuration of the electromagnetic field the answer is no electromagnetic field the vacuum empty space with no electromagnetic oscillations in it no electromagnetic oscillations in other words just a empty space with no electric magnetic fields is the equilibrium position of the electric and magnetic fields if you like if you give
+
+00:02:37
+the system a knock by for example um uh sending in some microwaves or something the system will start to oscillate and like the like the um violin string it can oscillate in all of its various frequencies and those oscillations um are called photons or that's not quite right the oscillations are described or describe collections of photons and we'll come to that but not tonight okay so harmonic oscillators are terribly important in many ways incidentally sound waves are also oscillations a sound wave moving through
+
+00:03:22
+a crystal is a again a collection of oscillations you can think of it wrongly as each CST cryst oscillating independently of every other OS Crystal sorry each atom oscillating independently of every other atom but that's not really the way it works each atom exerts a force on the other atom and so when you displace one it gives a knock to the next one and waves go through the crystal the waves again are described by harmonic oscillators and the Quant of the oscillations are not called photons
+
+00:03:57
+they're called phonons for example so these are things we're going to study but uh to prepare ourselves for that we studied a bit the harmonic oscillator and I want to expand on it a bit remind you what the rules are we started with the harmonic oscillator with a hamiltonian which I wrote as p^2 over twice the mass and I set the mass equal to one just uh to make my life simple you can go back and do it with a mass not equal to one I believe in our uh in our book art we do it with a general mass or we do it with
+
+00:04:34
+yeah okay so it's done with a general mass and then plus Omega squar that's the spring constant but it also happens that Omega is the frequency of the oscillator x^2 / 2 and we constructed creation and Annihilation operators A+ or minus which happen to have been momentum plus I Omega X now notice not finished yet but notice if I classically if I were to take this is plus or minus if I were to take the two operators a plus and a minus and multiply them together and then divide by two I would construct the hamiltonian
+
+00:05:22
+all right so we'll come back to that a minute but in order to be consistent with uh the notations that are ancient we'll put a square root of two Omega here and those are the a pluses or minus and if you work out classically or Quantum mechanically the hamiltonian in terms of a plus or minus here's what you find oh one more one more quantity one more quantity is called n n is equal to A+ a minus as simple as that and the last time we proved that the spectrum of igen values of n were
+
+00:06:05
+just the integers starting at zero we showed that A+ and minus were create were raising and lowering operators which raised and lowered the igen values of n all right so this is a operator whose igen values are 1 Zer start start with zero no negative 1es 0 1 1 two 3 dot dot dot and finally not finally but moreover the hamiltonian is equal to Omega now um I have left out har bar I'm going to leave it out but then I'm just going to show you where it goes if we leave out H the hamiltonian is just
+
+00:06:58
+Omega time n now where does that come from if you multiply A+ * a minus clearly you get something which looks like this there's a two downstairs that's this two and there's an Omega downstairs that's why I have to compensate it with an Omega here Omega in but Quantum mechanically there's a little correction and the correction comes because the PS because the A+ and a minus don't commute and that gave us an n + 1/2 the 1/2 is called the ground state energy or the VAC well if it was a field
+
+00:07:37
+Theory we would call it the vacuum energy if it is a um simple harmonic oscillator we call it either the Zero Point Energy or the ground state energy and it's really a consequence of the uncertainty principle that you can't have both p and X simultaneously being zero and since the hamiltonian involves p + X2 there's no way they can cancel each other so there's always going to be a residual bit of ground state energy there you don't lose very much if you just cross it out and forget it because
+
+00:08:13
+an additive constant in the energy of a system really doesn't um change its equations of motion so you can ignore it but it is there uh if uh for some purposes all right what I wanted to do was to show you is there anything else yeah there's one other one other important point that equation that went into showing that the A+ and a minuses were raising and lowering operators it was the commutation relations of the A+ and a minus they ax rule when ever you see two things commute them right
+
+00:09:00
+sometimes of course you get garbage but uh the Comm the commutators are a minus with A+ just equal to one had I not put the square roots of two omegas down there the commutator would have been something a little Messier and so really the reason for dividing by square of 2 Omega here was to get rid of anything on the right hand side to divide it away this commutation relation together with the definition of n tells you that n is quantized in integers and the connection with the hamiltonian is such that the hamiltonian
+
+00:09:42
+or the energy levels are these yeah um last time you didn't really explain why it went down to state zero and you said yeah why it stops at zero no y z is included oh y z is included okay we're going to okay what we're going to do is we're going to demonstrate explicitly what the ground state is that there is a ground state and we'll find the ground state by actually solving the Schrodinger equation and we'll see that there definitely is a state with zero so um what is a wave function a wave
+
+00:10:21
+function in this context let's just uh let's just put parallel to this very tricky and clever operator structure here let's write down the wave function description of the same thing State vectors are replaced by wave functions which are functions of position if we're talking about energy igen states we could label the wave functions with a little n down here indicating which integer they correspond to the ground state for example will be i0 well the first excited state would be S
+
+00:11:04
+1 and so forth so State vectors become wave functions operators X the operator X becomes just multiplication by the coordinate X I'm trying I'm trying to remember to use capital letters for operators and lowercase letters for um for just numbers lowercase okay the momentum is replaced by minus i d by just derivative with respect to X again there's an H bar in there if you want to keep track of har bars oh if you do want to keep track of H bars here's where it goes right here and that's the only place that's
+
+00:12:05
+the only place where you have to um modify what I've done here yeah I guess maybe also here we want to put an H bar downstairs here I think but um and you can always figure out where the H bars go by using dimensional analysis using dimensional analysis and remembering the units of har bar will tell you uniquely where to put the h bars okay so there's momentum and uh let's check and see if there is a solution of the equation a minus on S is equal to zero in other words is there a state you know I can answer your
+
+00:12:55
+question faster without let me let me let me answer your question quickly without uh and then come back to calculating um we know that there has to be a state which is the bottom State we can't keep going down and down and down for the simple reason that the hamiltonian is positive it's p^2 + x^2 p^2 plus Omega 2 x^2 an operator like that has no negative igen values just as classically it's either positive or zero Quantum mechanically it also can't be negative and so there's got to be a bottom
+
+00:13:31
+there's got to be a floor to the Tower of uh of energy levels okay how can we have a floor the only way we can have a floor is if the bottom State let's call it o let's call it ground state is annihilated by the annihilated means that you get zero when you hit it with a minus if you didn't get zero whatever you got on the right hand side would be a state of one unit lower energy there is no state with one unit lower energy the only way for that to happen is for this to just give zero now once we
+
+00:14:14
+know that a minus on o gives zero then we can look at n so let's look at n now what does n do when it hits the bottom State well well it is by definition A+ a minus on o but we already know that a minus on o give zero so this is zero it's an igen Vector of n with zero igen value so there must be an IG the bottom state has to have zero value of n okay that's an abstract argument but yeah so if uh Z is an i Vector of n shouldn't there be an i Vector of zero on the far right hand side
+
+00:15:05
+sorry it's o wait wait wait this zero here this state and this are two different things right that's the igen vector that's the igen vector and it's normalized to one and it's not zero in any sense it's just that its name is zero you know if I called if I called my friend art here zero that wouldn't mean art wasn't here or didn't exist it would just mean I'm you know being unpleasant I'm calling him zero you can write the K over there if you want yeah you can
+
+00:15:38
+write you can write zero as a cat but you have to understand it's not this zero no but it's it's zero Z so zero times that answ right question Z zero times anything is zero so you can write fact is that it's a vector on the left hand and right hand side so you can go put the vector in there and it's just the zero Vector thank you yeah yeah but you must not call it this Vector whatever name you give it you got to give it some and the the tradition is just not to write it as a vector but
+
+00:16:09
+just to call it zero yeah uh in the abstract theory of vector spaces you introduce a vector called zero and it's sort of special it's the only one that doesn't have a a catch sign but as you say it is just another Vector a rather special one yeah okay all right so the bottom of the tower the bottom of the um the bottom of the energy Spectrum has to be energy H bar Omega * 12 with n equal to Zer Big N equal to Zer also little n but let's see if we can see how far we can go in calculating all of the wave functions
+
+00:16:50
+can we calculate the wave functions themselves now you might ask I can write a Schrodinger I can write a Schrodinger equation I just use for p in the top equation I use for t d by DX for a Time independent shinger equation the right hand side is just the energy igen value times s question is it really true that you can only solve that equation in fact we could write write down the equation let's write down the equation just time independent here it is time independent roing or equation it's minus d by dx^ 2
+
+00:17:31
+ordinary derivative minus 12 the 1/2 is the half in front of the hamiltonian there uh p^2 is DC by dx^ 2 s of X plus the potential energy plus Omega 2 x^2 * s of X and if this is the time independent shorting your equation then what I want to do is to solve the equation that this is equal to let's call it e for the igen value for energy Time s of X that's the same as writing P ^2+ Omega 2 x^2 on a vector is equal to e times that Vector okay now if you know anything about differential equations
+
+00:18:20
+you'll know this is a uh second order differential equation you can always solve it for any value of the energy here okay but what will happen for most values of the energy is the wave function will not go to zero at infinity even worse it will exponentially explode and get big it won't be normalizable it will not have a finite probability under it there's no way to normalize it if you try to normalize it it'll just be zero because you'll you know the the integral under the square of the wave function
+
+00:18:58
+will be infinite to get rid of that Infinity you'll have to divide the you'll have to divide by it and the wave function will just be zero everywhere so the rule is one more Rule and we've talked about this you know last quarter 3/4 ago or whatever it was is that what you mean by an honest Vector here is one whose square integral whose integ the square of which is square integrable inte integral s star s equal 1 okay there were some exceptions to this for a particle moving on an infinite line sometimes we introduce
+
+00:19:42
+momentum States and position states which are a little weird in this way but uh we would like the total probability to be finite certainly not exponentially exploding so this is one additional restriction and it's when the wave functions are restricted in this manner when they really form an honest and good Vector space then that's when the rest of this applies here it only applies if we're interested in the Square integrable wave functions which we are and so the point is that when we
+
+00:20:24
+write when we write down the um the Schrodinger equation there are certain definite values of energy which will have square integrable wave functions those are the true honest igen functions uh if the wave function blows up and goes to Infinity we just throw them away we say they're not in the space okay let's see if we can find sin not the ground state wave function we could write the original Schrodinger equation for it but we can be smarter than that instead of writing h on S equals e let's write a
+
+00:21:05
+smarter equation a simpler equation let's use the fact that we know that the annihilation operator lowering operator excuse me the lowering operator on the ground state I don't need to call this s not just not gives zero okay what is a minus a minus I just want to get my signs [Applause] right A minus is proportional to pus I Omega X now there's some factors in the denominator there but we don't care about them because we're just going to write that this * s of x = 0 and numerical factors like square
+
+00:21:55
+roots of Omega they don't matter in this equation just multiply through by them and now remember what p is p is minus i d by DX - i d by DX - I Omega x * I of x = 0 now we have a much simpler equation than we had before it doesn't even have any second derivatives in it it only has first derivatives in it so we can try to solve it um the trick for solving an equation of motion like this anybody know what the trick is there there's only a finite number of tricks in solving differential equations
+
+00:22:46
+there's a handful of Tricks SE what's that separation of variables no there's only one variable what are you going to separate that's right okay one very standard trick for linear equations like this is to write the um is to write the wave function as the exponential of something else now this is just a matter of experience I can't tell you how to uh how to guess that yeah you can guess it because when you multiply through by DX you get X DX so the equation comes out as a derivative over a over a you
+
+00:23:26
+know you know right but it's a the form L yeah exactly all right so this happens to be the kind of equation that you solve you can solve it in many ways but the one way of solving it is just to write s of X is equal to e to some f ofx and try to figure out what f ofx is all right so let's try it um first of all of course we can get rid of the eyes here I and I factor out furthermore more we can get rid of the minus sign CU both of them have minus signs and now what's the derivative of s of x to calculate the
+
+00:24:08
+derivative of s of X we simply differentiate and we find that let's call it S Prime which means the derivative is equal to F Prime that's the derivative of f time e to the F ofx to differentiate an exponential you just differentiate the thing that uh in the argument of the exponential here and multiply Again by f ofx e to the f e to the F ofx okay that's S Prime that's this here and then we add to that let's we want to add to that plus Omega x s of X which means we're going to add to
+
+00:25:00
+this plus Omega x e to the F ofx now you see what Michael was saying that the e to the F ofx factors out we can get rid of it and that's where the trick that's why the trick was done in the first place let's get rid of all this here and our equation is just D FDX plus Omega x = z that's it equals zero the FDX came from here plus Omega X they both multiplied s so we got rid of s and that's our equation all right this is really easy to solve a function whose derivative is a linear
+
+00:26:03
+thing what kind of function is that a quadratic thing so the solution is quite clearly going to be proportional to X2 and fact it's going to be f of x is equal to 12 Omega x^2 plus a constant let's let's put the constant in there let's put the constant in there and that's all H minus minus minus thank you- 12 Omega x^2 that tells us that s of X is equal to e to - 12 Omega x^2 what about the constant well we can add it in but that just puts a numerical constant in front of the exponential since I haven't
+
+00:26:57
+bothered worrying too much about normalizing it I'm not going to bother with the constant numerical constant out in front is there uh it's got an omea got a one/ square root of Omega in it but it's uh not terribly interesting for our purposes this is sin not of X and notice that it goes to zero very very fast with x e to the minus x^2 it's a gaussian it's a bell-shaped curve that goes to zero as e to the minus 12 Omega X2 and is very very Square integrable I mean if you if we
+
+00:27:51
+Square it and integrated it it's extremely convergent and so we've succeeded in finding now we could go back and check that the original Schrodinger equation is satisfied in other words we could plug this wave function into the shrodinger hamiltonian up above and calculate what the energy igen value is but we already know what it is it's going to be Omega * 12 we know that from all the algebraic tricks over here so if we stuck this function back into the Schrodinger on into this Schrodinger equation we would
+
+00:28:29
+discover that e is equal to 1/2 just by putting it in plugging it in and doing it so we know the ground state wave function we have one igen vector of the energy we see what its physical properties are it's concentrated near the origin it's very smooth because a gaussian function is very smooth it's concentrated near the origin it does what you might expect a ground state wave function of a harmonic oscillator to do it just sits at the origin sits very close to the origin or at least by close now I mean that it's
+
+00:29:08
+concentrated near the origin and um yeah it's the ground state what about the first excited state I'll do the first excited state for you it's very it's almost trivial and then you can go home and have a lot of fun calculating the next 50 states it's uh sort of mindless um fun but how do you do it it's how you do it that's more interesting than what you get well I know they're both interesting but you do it by saying look I know what the first excited state is abstractly abstractly the first excited
+
+00:29:47
+state is equal to A+ times the ground state I know what the ground state is and I know what A+ is so let's just apply A+ to the ground state here's the ground state A+ is p + I Omega X and that will tell us what the first excited state is all right so in terms of wave functions S1 of X is equal or proportional to p + I Omega X now p is min - i d by DX plus I Omega X on e to the minus 12 Omega x^2 so all we have to do now is to calculate a derivative but you know I already did this I already did this we
+
+00:30:57
+did it with the opposite sign here we did it with a minus to get zero if I do it with the opposite sign and get zero that means if I do it with the sign here I'm just going to get twice the answer that I would get go back I did this operation on here and got zero that's the way I solve the equation right so if this plus this acting on this gives zero then it must mean that this term and this term give the same thing apart from a sign but once I know that then I know that when you change the sign of the
+
+00:31:41
+uh over here instead of having them cancel they'll just double the answer so this is just going to be twice I Omega that's not so interesting it's just a it's just a numerical Factor happens to be imaginary but who cares but it has x * e to - 12 Omega x^ 2 so structurally it's different it's not just the gaussian function it's the gaussian function times x what does that look like that looks like this again it's very small far away the fact that there's an X here doesn't make
+
+00:32:27
+it big far away because it's totally overwhelmed by the E to- x^2 but it has to be minus H it has to be minus when X is negative yeah good it's negative yeah well it's twice an imaginary number times Omega right uh but whatever it does on one side it has the opposite sign on the other side uh it's an odd function odd meaning it changes sign when it goes through the origin right so let's all right so let's uh let's make it negative on this side goes down and then comes up zero and
+
+00:33:06
+then goes to zero again it's odd meaning to say that when you reflect it it changes sign it's it's anti-symmetric you would say it's anti-symmetric the probability which is the square of this is symmetric but notice that the probability goes to zero at the origin if you're in the first excited state of the harmonic oscillator the probability that you find the oscillator at the origin is zero interesting fact uh that's the first excited state it has the ground state had no
+
+00:33:46
+nodes a node means that the wave function is zero somewhere the ground state had no nodes the first excited state has one node each time you act with A+ you can you can just spend a little bit of time with it you'll see how it works each time you act with A+ you make a higher order polom in front of e to minus Omega each time you hit it with another A+ it'll give you X SAR X S Plus another term X cubed after a while each time you'll get a higher and higher order polinomial and each time
+
+00:34:32
+you'll add a node so the next wave function the spin the uh the second excited state um looks has two nodes the third one has three nodes and if you work out the 17th it looks something like this each time you act with A+ you wind up pushing the wave function out more for example zero the ground state was concentrated near the near the center the factor of X here tended to push it out a little bit why does it push it out because X is bigger far away than it is nearby and so it pushes it out after you've done 17
+
+00:35:28
+factors or maybe it's 24 or whatever you'll find that the wave function is pushed out near the wings small near the origin oscillating and then and then plop goes to zero either symmetric or antisymmetric either symmetric or anti-symmetric and as you go up you get more and more Wiggles and the whole thing gets pushed out further and further what do The Wiggles mean what's the implication of The Wiggles Wiggles mean momentum okay what's the implication of it being far away from the
+
+00:36:10
+origin potential energy so as you keep exciting it you create more and more potential energy by pushing the wave function out where x s is large but at the same time you create more and more momentum as that oscillator swings through the origin what's happening is the oscillator is trying to do what classical physics tells you what ought to do that the higher the energy the more likely it is to be found far away but it also may be found close and if it's found close it ought to have a high
+
+00:36:47
+momentum so that's why it tends to oscillate very quickly near the origin and more slowly far away but uh that's the basic physics of it I if I drew it well it should oscillate more rapidly near the center and less rapidly far away just indicating the fact when it swings to the origin of course it has more momentum okay that's uh those are the first two wave functions yes um so it seems like uh as n becomes very large uh the correspondence principle does not hold for the syonic oscillator what
+
+00:37:27
+would you say the correspondence principle is um that when n becomes very large it looks like a classical it do well it and in fact what you have to do to see the classical motion is you have to take wave packets you have to superpose many energy levels for example if you take the ground state start with the ground state that's a nice smooth wave packet Now display it dis place it off to the side here it's no longer the ground state in fact it's not even an energy igen State altogether it does have an
+
+00:38:07
+average energy but now take the time dependent Schrodinger equation the time dependent shinger equation has every energy level oscillate with a different frequency the result is that this wave function is not time independent and what happens it starts to swing back and forth it starts to swing back and forth as it swings near the center it gets lots and lots of Wiggles but it stays of the same general shape Wiggles and then it comes out this side after a while nice and smooth again and then it swings back and forth and
+
+00:38:45
+back and forth and it looks very much like a classical oscillator and in fact the higher the energy the more it looks like a classical oscillator uh just because the higher the energy and the bigger the swing the smaller the ratio of the uncertainty to the size of the Swing when the swing gets very big it sort of dominates the spatial structure of it okay that's that's the basic um physics of the harmonic oscillator you can work out the second level third level uh by the time you get to the
+
+00:39:19
+fourth level you won't want to see it anymore but uh but it's straightforward um good question yeah uh on your drawing of the second level yeah shouldn't shouldn't it go through zero at zero uh it going to be x s is um no I don't think so I don't think so I think uh I think there's a constant term also yeah yeah yeah it's not it's not just x squared times yeah right question hamiltonian you wrote originally the upper left they already implicitly contain the normalizability in it so
+
+00:40:05
+yeah uh I'll tell you where it's assumed you you want to know where it's assumed you want to know where in this over here it was assumed yeah it's assumed in in the fact that A+ and a minus are Herm mission conjugates of each other if you were to take a wider class of wave functions that were not Square integrable then A+ and a minus would not be commission conjugates of each other that's where it's assumed and I did assume that uh and um right so right is there a way in general of
+
+00:40:48
+recognizing when a hamiltonian written yeah if it's a harmonic oscillator um and here and there sort of sporadically and uh this or that uh sometimes you encounter a a solvable example and when they're solvable they can usually be solved by these kind of tricks but um they're very rare in the space of possibilities and um by some fortunate accident the harmonic oscillator is one of them and the hydrogen atom or the idealized hydrogen atom non-relativistic hydrogen atom with a point nucleus
+
+00:41:31
+happens to be one of the solvable examples uh okay now I have in my notes two other subjects for tonight um with the idea of uh discussing atoms a little bit further but more than atoms discussing everything that there is about quantum mechanics and field Theory two things Spin and boson Fon different the difference between or what bosons and ferons are I have uh well I guess I'll go according to my um to my notes here I'll follow my notes I have spin first and then bosons and Fons so let's talk
+
+00:42:21
+about half spin the spin of the electron or the spin of the proton which happens to be half spin which means that the spin or the angular momentum of an electron at rest at rest that has no orbital angular momentum it has no R cross P all it has is spin so spin is a kind of angular momentum that's attached to a particle it's your choice whether you want to think of it as just an abstract concept or whether you want to think of it as a tiny little thing which is literally spinning spinning about an
+
+00:43:01
+axis when I say it has no momentum I mean to say it has no Center Mass momentum uh and it's a matter of choice and taste whether you want to think of it as literally being a little spin or just an abstract property that you U mathematical property that you attach to the electron but whatever it is it is angular momentum it transforms on into rotation when you transform when you rotate coordinates the state transforms now we've already been through this we spent U most of a quarter talking about the half spin
+
+00:43:42
+system so I'm going to go through it quickly you should go back and read the early parts of the um of the uh previous lectures we talked about a spin having two states up or down but then we said wait a minute if it can be up or down it can also be left or right but if it can be left or right it can be in or out and we worked out the states describing those things The Operators which described uh the components of the spin and I didn't tell you but we were talking about the angular momentum of a
+
+00:44:21
+spinning particle or of a half spin particle so let's see how we can understand that now that we've talked about angular momentum the thing that characterizes angular momentum is first of all that there are three components of it but just the fact that the three components of it is not enough it must be that those three components are literally associated with the X Y and Z directions of space you could have them connected with something else some other internal Dimensions or whatever but once
+
+00:45:05
+you have matrices once you discover that your system is being described by matrices three of them which have the commutation relations of angular momentum then they are angular momentum uh actually there's no choice about that as long as the three matrices you're talking about are literally associated with an X and A Y in a z direction of space so let me write down again what the basic commutation relations of angular momentum are l i LJ and let's write just LX let's see um let's take the LZ with the LX LZ
+
+00:45:54
+with LX is just equal to I times ly okay and the other three the other two are just cyclic permutations okay you may have noticed that these commutation relations are closely related to the commutation relations of the poy matrices so let's write the three po matrices and check whether this is true of the three po matrices here they are Sigma Z is equal to 1 - 1 0 0 now we've made a choice we've made an arbitrary Choice we've decided to take Sigma Z to be the diagonal matrix in other words we are working in the
+
+00:46:52
+representation of the Z component of the spin we've chosen to take that to be diagonal and of course the igen values what are the igen values of this Matrix the igen values of this Matrix are plus one and minus one representing up and down okay then there was Sigma X Sigma X was 1 1 0 0 and finally Sigma Y is equal to Min - i i0 0 there are ambiguities in these you can rotate them and change uh change them but uh there's no nothing um important happens there's no minus in Sigma x no no minus in Sigma
+
+00:47:43
+X all three are Herm a real Matrix meaning to say it's if its entries are real numbers if it's Herm Mission it's symmetric as the this and this if a matrix is Herm Mission and imaginary it must be anti-symmetric so that's this okay let's check the commutation relations let's multiply Sigma Z by Sigma X and that's equal to 1 - 1 0 0 0 1 1 1 0 this times this is zero this times this is one up in here zero down here minus one zero that's not quite Sigma y but it's
+
+00:48:46
+almost Sigma y it would be Sigma y I think um is it I * Sigma y or it's I * Sigma y yeah now that's nice but it's not the commutator the commutator is this minus Sigma X Sigma Z that's the commutator and that has 0 1 1 0 1 0 0- one and if you go through it you don't get zero what do you get exactly the same thing you got over here equals I Sigma y so we have not quite what we wanted we have instead commutator of Sigma Z with Sigma X is twice I Sigma y does this mean these are not angular
+
+00:50:01
+momentum or does it mean that we're not talking about rotations no it just means we've normalized the sigma matrices incorrectly let me here's the trick take s and Define it to be Sigma / 2 for each component for each component take s being half the poly Matrix seems a little bit odd but nobody told us uh what the uh what the angular momentum was supposed to be so let's just take it and see what we get then we get let's uh let's put a two in here a two in here and that all together
+
+00:50:42
+divides by four right I put a two here a two here I've divided the whole thing by four two divided by four is one half so yes half the poly matrices satisfy exactly what they're supposed to satisfy SZ with SX is equal to i s y and likewise for the other commutation relations so we see this little system of 2x two matrices acting on two component vectors up or down are actually representing a very primitive and simple angular momentum system uh it's a thing which you can think of as attached to the
+
+00:51:32
+particle attached to the particle is a little Spin and the little spin is simply described by this system here okay but now we can answer the question what are the igen values of let's say the Z component of the angular momentum let's go to the Z component of the angular momentum the Z component of the angular momentum let's put some twos here now that we know what we want 1/2 minus a half 12 half 2 2 notice that the igen values of the Z component of angular momentum are a half and minus a
+
+00:52:11
+half when we were working out angular momentum I told you and I showed you that there were two kinds of multiplets there were the half spin multiplets let's put zero over here sorry there were were the integer spin multipet where the magnetic quantum number M was 0 1 2 3 -1 - 2 -3 and so forth with the central point being at zero here being one of the possibilities now remember the the raising and creation raising and lowering operators Shift You by an integer but that doesn't say you start zero it says you either you start
+
+00:52:58
+with zero or you start at a half a half minus a half and then 3 halves minus three Hales depending on the overall angular momentum if it's been a half then there's only a half and minus a half and that's what we have here we could have guessed all of this by saying look we seem to have the mathematical possibility of having half spin that means there are two states once we know there are two states we can say the angular momentum of this one must be plus a half the angular the Z component must be plus a half that one
+
+00:53:53
+minus a half and we can go and start building uh the structure structure up the way we did uh year and a half ago or year ago whenever it was uh well wasn't that was that long ago I don't remember okay so every particle has a spin the spin may be zero if the spin is zero it's just called a spin zero particle the higs boson is a spin zero particle the dudon is a spin zero particle uh yes nuclei can be particles they are particles they have no angular momentum in their rest frame on the other hand
+
+00:54:41
+some nuclei do have Spin and uh but some atoms have spin but the the important thing is um or we're going to concentrate on is the half spin particles the electrons the muon neutrinos quarks all the ones that really we think of as fundamental or some of the ones we think of fundamental have half spin okay all of this means that there are two kinds of angular momentum orbital angular momentum and this is true in classical physics 2 orbital angular momentum is the angular momentum of the center of mass of a system in the
+
+00:55:25
+center of Mass frame if the system is spinning then it has spin the same is true here and what is the total angular momentum the total angular momentum is the sum of them it's a vector so it's the vector sum of the two kinds of angular momentum and it's true here too so I'll write down the equation but we're not going to do very much with it the total angular momentum is called J again it's a notation I don't know where it comes from it's again a vector and it's equal to the orbital
+
+00:55:57
+angular momentum L which is R cross P plus the spin plus S I just tell you that because you'll see that all over the place when you're doing quantum mechanics particularly in atomic physics you'll see that the total angular momentum is called J and it's l plus s for a particle any questions about spin I don't want to do too much tonight so uh we can stay with spin for a while or um or we can um I'm just wondering how do you uh like if you're given some system with the J
+
+00:56:54
+how would you identify as for usually given usually given something different usually given the knowledge that the spin is a half for example and that the orbital angular momentum could be 1 Z if the orbital angular momentum is zero then the only angular momentum it has is the spin if the orbital angular momentum is one then we need some rules for what we get if we add an or an angular momentum one to an angular momentum of a half question is what do you get yet and um I wasn't going to go into
+
+00:57:30
+that now the problem of the addition of angular momentum it's a straightforward problem but um we won't do it tonight be happy to go through it uh another night but there are rules mathematical rules for adding angular momentum of uh of two systems basically you have two systems you have the spin system system and the orbital system or you could just have two spins or you could have two different orbital angular momentum systems uh the the net system has its own angular momentum and there are rules
+
+00:58:10
+quantum mechanical rules for adding them uh let's not do it now question yeah um you said we can think of this uh uh not the orbital but the uh the the spin as being either actually like this physical thing spinning or we can think of it in a more theoretical way um what what is the background for uh the experimental background or whatever that that made them introduce this notion of spin well the first experimental background came partly from spectroscopy and partly more importantly from uh from the periodic table
+
+00:58:56
+so that's where I want to get I want to get to the periodic table a little bit and show you how spin comes into it uh it was poy who realized that uh that to understand the periodic table the electron had to have an additional property okay that brings us to the issue of fans and bans which is closely connected to the poly Exclusion Principle at least in the case of fans all right let me let me just motivate it in terms of uh chemistry a little bit it was one of the motivations the other came from spectroscopy but
+
+00:59:46
+um uh it's it's not as clear it's not as obvious the if you remember the um the angular momentum squared L squ is equal to l * L + 1 is that what I want um yeah and if we look when we looked at the levels the energy levels of the um of the hydrogen atom Solutions which we didn't do but I just told you a fact I told you a fact that there's some extra degeneracies each one of these has 2 l+1 States but there were additional degeneracies I'll I'll redraw them for you the horizontal axis is L the
+
+01:00:40
+vertical axis is energy these are the energy levels of the hydrogen atom and down at the bottom is the ground state of the hydrogen atom with the lowest energy level of it all and it's an swave meaning to say it has no angular momentum no orbital angular momentum the solutions of the shinger equation the energy is in fact negative you start at some negative value Min -3 point something electron volts but I'm just putting it here arbitrarily at the zero is somewh up here okay so that's the first level
+
+01:01:17
+now at the L equals zero there are states with this is the state with no nodes in the wave function then there's one with one node two nodes three nodes and so forth so there are more States here I'm just drawing them schematically completely schematically okay they're more in fact they they get closer and closer together as they get up here near E equals z but that's not too important for us now we go to L equals 1 and L equal 1 there's the lowest energy state of L equals 1 and each L equal 1 state has three
+
+01:01:58
+components 2 L + 1 has three components and the ground state of L equals 1 has more energy than the ground state of L equals 0 why because it's got angular momentum so of course it has some more energy so it's going to be up a little bit higher in fact this whole collection of levels here is going to be raised up because of the angular momentum and it's raised up in a rather surprising and um I suppose you could say elegant I'm not sure it's elegant it's uh it's it is
+
+01:02:32
+what it is all right so the first the first lals 1 level occurs at the same place as the second L equals 0 level it's degenerate with it so it's three states over here and then the pattern continues the next three states are degenerate with this and so forth degenerate means it has the same energy then you go to L equals 2 I'll use a different color you go to Lal 2 which is over here and what you find when you solve the equations this is supposed to be at the same level here as you find again
+
+01:03:17
+the first L equals 2 state is higher than the first L equals 1 state but it happens to occur exactly where the second L equals two state is is which is exactly where the third L equal 0 state is it's a mouthful but you know what I mean you go up to here and how many states are there five 1 2 3 4 five 1 2 3 4 5 and so forth and that's the pattern all right now you count the number of states now you count the number of states uh one here at this energy level whoops yeah one here four here zero angular momentum plus angular
+
+01:04:01
+momentum one four 9 here 16 here evidently uh L squar levels if you look at the way electrons fill the shells in idealized very idealized chemical description of um of a period IC table where it's up there but um uh you see that first of all there was hydrogen which has one electron and when you look at Helium which has two electrons you find out that uh that uh the it's consistent it's consistent with an energy which would be what you would get if you put both electrons into the ground
+
+01:04:53
+state things are a bit different course instead of having let's go to helium this is hydrogen let's go now to helium helium has a nucleus of charge two qal 2 charge two so it pulls on the electrons tighter the whole structure is rescaled but that's not important the charge is bigger that pulls the electrons in closer but the basic structure is the same and now you look at Helium you find out first of all there's a helium ion I helium ion means one electron instead of two electrons okay and you study the helium
+
+01:05:33
+ion and the helium ion looks exactly the same as the um as the hydrogen with the exception that you have to plug in twice as much charge that uh spreads the energy levels out and rescales them but same structure so the ion looks like exactly like the and the ground state of the helium ground state of the helium ion looks as if it's one electron in the ground state of the helium uh wave function then you put another electron in okay what do you expect well the natural expectation would be if you put
+
+01:06:17
+another electron in the ground state of that will be put that electron also in the lowest energy State why do anything else if you want to keep the energy as low as possible put them all into the ground state so you try that second electron into the ground state uh wave function and it works just fine it gives you the right rough description of the helium it's not quite exactly right because it's ignoring the interaction between the electrons just pretending the electrons are just experiencing the
+
+01:06:50
+nucleus let's take that as a as a working uh approximation ignore the interaction between the electrons put two electrons into the ground state of the helium uh wave function and it works gives you the right energy for the helium well what happens if you were to make a helium ion by putting an extra electron in instead of no instead of uh the uh the ion with only one electron incidentally there's also an ion with no electrons it's just called a deuteron a um helium nucleus okay one electron two electron put three
+
+01:07:28
+electrons in What's the guess right into the ground state why anything else but no that's not what happens what happens is it goes in to the first excited state so you put two electrons in the helium into the ground state and the third one doesn't want to be there it wants to get into the next excited state why it could have saved energy you could have had a lower energy state in the ground state if that electron went into the um went into the ground state okay so Along Comes poy and says I
+
+01:08:04
+have an idea my idea is that no two electrons can ever get into the same state something about electrons is such I won't call it a repulsion it's not right to call it a repulsion it's an exclusion principle when an electron is in a state you can't fit another one in somehow the mathematics won't allow but wait a minute we already said we could put two electrons into the helium ground state so it's talking nonsense the PO Exclusion Principle doesn't work it only works somehow when you put a third one
+
+01:08:42
+in now PO said that's not what's going on he said really you can't put two electrons into the same state but an electron has more properties than just its orbital motion he said I'm going to make up a new property and the new property has to be such that the electron comes with two values of it two values of it in that case you can put the electron one electron into the ground state and let's call it the up electron remember the electron can now have two properties we're going to call them up
+
+01:09:18
+and down we can call them left or right or we could call them anything we want uh but let's give them the new property uh which uh po eventually realized had something to do with angular momentum and said if you can put two electrons in a state not because you're allowed you can't put two electrons in a state but you can put two electrons into the same orbital angular momentum state if you give them opposite spin if one of them is put in in the UP State and the other one is put in in the
+
+01:09:52
+down state then I can save my crazy exclusion princi principle I can save my crazy Exclusion Principle if I assume that the electron has one more property in addition to its motion in addition to its orbital motion that it has a thing which I would call a spin now in fact there was there were previous um reasons to believe in an angular momentum like that but they're not as transparent and I won't try to get into them um that was his basic reasoning electron has another property a two valued
+
+01:10:32
+property once he knew there was a two- valued property he was often going he invented matrices to describe that two- valued property and uh before you know it he had the poy matrices and he understood the whole thing but um let's go to the let's go to the next atom Let's see we go to um lithium lithium has three electrons we would naturally expect for lithium you do the same game now the nucleus has charge three so it's much more attractive charge three you put two electrons into the ground state that
+
+01:11:12
+were for the for the no electron case the one electron case the two electron case lithium lithium ions it works perfectly well to put the electrons into the ground state not if there's no electrons but if there's one or two and indeed you find out that when you put the third electron in into the lithium to make it neutral it goes into the first excited state it goes into the first excited state meaning the state with angular momentum one okay and that works out well it works out the energy levels of the of
+
+01:11:46
+the lithium atom work out reasonably well that way what about the ion of lithium well you've filled up the two lowest energy states you've only put you have three states here you could add oh oh you could add another electron in any one of these states let's go back a step let's go let me go back a step let's forget for a moment the spin and let's talk about the um the atoms if there was no spin but if there was po Exclusion Principle let's try Po's old idea except without the
+
+01:12:31
+spin what would you find indeed you would find two you would find one helium in helium you would find one electron am I saying this right in the ground state but then to keep the energy low you could put the second electron in any one of four states in any one of four states if you didn't want to double you didn't want to violate the Exclusion Principle there would be four distinct helium atoms four distinct helium atoms depending on which state you put the next electron in that was not right the
+
+01:13:17
+helium ground state was unique did not have uh this peculiarity what Po's idea was no you don't go to the second state here and there are not four possibilities there's just a helium atom with one electron and the helium atom with two electrons both in the ground state now you come to lithium now you come to lithium you put the first electron in forgetting spin where can it go first electron here I'm getting tired as usual what I'm trying to do is explain why there are eight different can you see this
+
+01:14:03
+periodic table up there all right the second row for has eight entries I hope has eight entries it has eight entries how do we understand those eight entries two * one exra electron we add an electron yeah yeah we add the first two electrons and put them in the ground state and that uh that's the um and we're finished with the ground state right then how many more states do we have if we only occupy the first excited state in other words how many possibility how many different ways can we make atoms well we can have we can
+
+01:14:46
+put an electron in any one of four states in the first excited state but if we're allowed to play with a spin then there's anyone of eight any one of eight possibilities h 2 six 2 six making mistake P orbitals are six 2 P6 1 there's there's two P orbitals in each of three spatial directions so there's two electrons in in each P there are four states at the first excited level six or p and the other two or S1 yeah okay is the angular momentum zero and the three angular momentum
+
+01:15:36
+one I think that's that's it there's there's angular momentum zero and three angular yeah that's the that's the four but if now you double it by the spin it becomes eight yeah you should have a total of eight not two right that's fine okay that that's how spin was discovered that's how spin was discovered and the fact that it really was angular momentum that was that could be checked by putting the atom in a magnetic field if this if the electron's additional degree of Freedom
+
+01:16:14
+was really angular momentum that would mean that since the electron is charged that the electron would be behaving like a little magnet if it was really Ro spinning and it was charged it would behave like a little uh like a magnet like an electromagnet current going around in a loop if that were the case and you put the electron into a magnetic field preferentially it would either it would lie along the magnetic field or opposite to the magnetic field with two different energy levels okay so if you took the hydrogen
+
+01:16:49
+atom with one electron and now you put it in the magnetic field the two possibilities for the electron spin along the magnetic field and opposite to the magnetic field would now have two different energy levels so the two states of the hydrogen atom which previously had been comp the ground state ground state of the hydrogen atom with an electron in it the electron could have been pointing in one way or the other way they had exactly the same energy in the first approximation and now you put it in a
+
+01:17:24
+magnetic field and you find that the energy levels are split and they split exactly as if the electron were a little magnet uh because of its angular momentum so the fact that it had angular momentum that could be tested by putting it in a magnetic field the fact that it had two levels that was consistent with the uh with the PO Exclusion Principle and the fact that um uh or the assumed fact that you can't put two electrons into the same state now this was all all wild guessing it was wild guessing that you couldn't put
+
+01:18:08
+two electrons in the same state it wasn't quite so wild that it was angular momentum because that could be tested experimentally but um The Next Step which I think was was it was it po it was the one person that it wasn't was the person that that idea was named for Fairy um durak it must have been Dak again it might have been po it was either poy or durak who had the idea that there were two kinds of particles particles which satisfied the POI Exclusion Principle where you couldn't put two in the same state and
+
+01:18:57
+in particles where you could put two in the same state and not only that it was preferential to put more than one in the same state um it was already known that photons photons for our purposes now are just particles it was already known that a classical wave of photons was simply a collection of a large number of photons all in the same state all in the same Quantum state so it was known that there were particles that you could put into the same state Einstein figured him out and again it was named after Boza because Einstein
+
+01:19:32
+figur it out and uh uh wasn't Boza although Boza did some was he in the mix somewhere what's that enrio fer was he in that same group no he came later and his contribution was different um the Discover of this what is called the statistics of particles their their bosen the ban or firon character was Einstein and po I believe or it might have been Einstein der and po I'm not sure uh uh what the actual history was and um uh it uh it was not the the other people although they made major
+
+01:20:21
+contributions question I think it was Einstein who gave gave those are the credit uh for for the discovery yeah um when you talk about photons they're SE they're independent particles but when we talk about electrons we associate them with a hydrogen what happens if you have just a stream of electrons you can't put two of them in the same state that's why you can't make a laser that lasers electrons a laser creates lots of photons all in the same Quantum State uh you would have a pretty wild thing if
+
+01:20:58
+you could get electrons into the same state and do the same kind of things with them but you can't you have a rather remarkable microscope that you could uh you have electron microscopes but this would be a rather Superior electron microscope so the momentum this L it's not related to rotation around the nucleus it is of course it is if there is no nucleus if it's just oh then it's just R cross P you know a particle a particle moving in free space just moving along a line can have an angular
+
+01:21:29
+momentum AR cross P relative to some origin yeah yeah yeah yeah the angular momentum is relative to an origin that's because R is relative to an origin the definition of R is relative to an origin fixing fixing an origin you need to and the whole idea of rotation is about some origin the whole idea of rotation picks I should have emphasized that in the beginning whenever you're talking about angular momentum whenever you're talking about rotation you're picking a special point to study it about now in the case of an
+
+01:22:05
+atom it's natural to pick the nucleus to be the point that you uh the point of symmetry uh for a particle moving in free space every point is a point of symmetry uh rotational symmetry so it's not it becomes a less interesting uh thing but for the um for the atom there's a natural Center to talk about rotations about we should have emphasized that question yeah so why are there two rows of eight elements and then two rows of 18 18 is twice annoying but why are there two I don't know why at some point the whole picture
+
+01:22:47
+breaks down and doesn't make any sense and and pretty quickly in fact um the picture of shells and filling shells is more than a little bit naive it completely overlooks the interactions between the electrons now by the time you have a fairly large atom there's basically as many electrons in the inner core as there are protons at the center so to ignore the interaction of the outer electrons with the inner electrons makes no sense at all so I mean the whole thing breaks down pretty badly and uh and then and then there's a
+
+01:23:31
+zillion rules that I I don't Mis impression that the the the the more electrons you have the bigger and the bigger the atom gets but actually they don't get that much bigger no they get they they don't get bigger practically not at all and the reason is because the more electrons what happens is very simple the more protons you have in the nucleus the larger the charge that tends to pull in the inner core of the electrons the inner shells of the electrons and what's left over if you
+
+01:24:02
+have let's say one veence electron is one veence electron moving in what kind of field the field that it's moving in is n protons and N minus1 electrons right so that one extra veence electron is basically thinks it's a thinks it's hydrogen and it's no bigger than hydrogen really it's essentially almost the same size as hydrogen so what that's I think that's what you were saying right atoms do not get bigger appreciably they get very slowly bigger but they don't get
+
+01:24:39
+appreciably bigger as you add electrons as you add protons and electrons at the same time the other interesting thing that I I ran into is the with hydrogen atoms the reason that they stay as far apart from each other is because of electrical repulsion hydrogen atoms H oh there's also an important component from the PO Exclusion Principle well that's what I was going to say that's the exception the rule is for most atoms it's po repulsion that keeps them apart okay where are we yeah so we want to
+
+01:25:21
+talk about what bans and fans I guess this this might be too much to answer but is the is the Exclusion Principle a separate postulate no that time yes okay now it is not now it's part of basic special relativity together with quantum mechanics quantum mechanics without special relativity uh it's a postulate but the postulate can be phrased in a more elegant mathematical way and that's what we're going to do right we going to phrase the postulate in a more elegant way once you introduce special
+
+01:25:59
+relativity and you combine it with quantum mechanics it's not a new postulate it's um it's a consequence of uh of special relativity uh which was DX Discovery okay instead of talking about one particle let's talk about two particles well let's let's go back to classical statistical Mechanics for a minute In classical statistical mechanics or classical mechanics of um of a system of particles if all the particles are the same kind of particle the question is do you treat them as identical particles in this
+
+01:26:44
+following sense in counting the number of configurations for example uh we put particles into boxes the boxes could be little boxes in Phase space or it could just be boxes four boxes we can put particles into let's say we have two particles and they're both the same kind of particle right so here's here's a configuration we can put two two of them both into the same box that's clearly a unique uh a unique configuration or I can put one particle in one box and the other particle in the
+
+01:27:23
+other box is that one configuration or is it two configurations uh if these particles have names Harry and uh and uh Sally Harry and Sally yeah if they have names then you could put Harry here Sally here or you could put Harry here and Sally here and there seem to be two different configurations uh in counting configurations and calculating enpy and so forth this could be the this sounds like it's a difference now whether it is an important difference or not as a separate issue but do you count these as
+
+01:28:00
+separate uh configurations you could always imagine that these particles which are identical to you have a little tiny little bit of paint on them that paints their name on them but it's such a weak little bit of paint classical paint not quantized paint classical paint it's so so faint so terribly faint that no experiment that you ever could do could uh could detect the name imprinted on the particle but you would have to say they were different particles Harry here and Sally there would be different than
+
+01:28:41
+Sally here and and Harry there um or you can say no I'm going to do statistical mechanics as if these were the same configuration not think of the particles as labeled now in fact you get the same answers doesn't make any difference for the classical statistical mechanics but it's a conceptual difference putting a particle here and a particle here is it or is it not the same as switching them if they're the same kind of particle so that's a classical version of the notion of identical particles and
+
+01:29:19
+In classical statistical mechanics we usually assume that these SE are the same configurations Harry Sally Sally Harry they're the same configurations and that's the way we do our counting how many configurations are there for a large number of particles well typically you get some INF factorial different ways of uh of relabeling the particles and that goes into statistical mechanics if you taken statistical mechanics course you know that in Partition functions there are these one over n
+
+01:29:52
+factorials in them and it's simply keeping track or of the fact that if you interchange two particles it's the same configuration that's an assumption you make in quantum mechanics you don't have the luxury of doing one or the other it is very definitely that particles are identical in the sense that they do not carry labels two electrons one electron here and the other electron here is mathematically identical and you couldn't do it otherwise uh exchanging the electrons same would true with photons
+
+01:30:35
+now having a photon here and an electron here is not the same as having an electron here and a photon here that's clear that's that should be obvious they have very different properties and you can tell those two configurations apart but interchanging and swapping around which electron is which that's a non transformation on the state of a system and it also is true of photons so let's think about that and what it tells us about the quantum state of a pair of identical particles
+
+01:31:06
+let's take a pair of identical particles this could be two electrons and for the moment let's forget uh spin or anything else we just have two electrons in uh in some states let's forget spin how do we describe two particles one particle is described by a wave function s of X where X is the position of the electron what about two electrons and in fact let's let's go back a step what is the S of X what is its meaning it's the overlap or the inner product of an electron at x with
+
+01:31:47
+the state of the system s if s is the state Vector of the electron then it's ection or its inner product onto a state localized at X is called s of X Suppose there were two electrons how do you characterize the states of two electrons well you characterize them by two positions position of one and position of the other let's call them X1 and X2 that does not stand for different directions of space now stands for the two electrons X1 and X2 and the wave function is a function of two coordinates instead of one s of X1 and
+
+01:32:35
+X2 that's the wave function of a two- particle system it's a function of and if you want the probability the probability is a probability to find particle one at position X1 particle 2 at position X2 so we have functions of two variables when we have two particles now let's let's think of the operation of swapping the two particles taking particle one and replacing it by particle two and particle two by particle one well that's a transformation that's a transformation that generally will change S of X1 and
+
+01:33:14
+X2 it'll change it from s of x1x2 to what I of X2 and X1 which is not the same thing in general a function of two variables does not have to be symmetric it does not have to be such that if you interchange the two arguments you get the same uh you get the same function back so in general a transformation it's a transformation which swaps the two particles let's call that transformation let's give it a name it's an operator it operates on a wave function and gives a new wave function so let's let's name
+
+01:34:02
+it let's call it the swap operation let's call it s and here's what s does s acts on a state with particle one at position X1 and particle 2 at position X2 how do I know which which is particle one particle one comes first particle 2 comes second what does the swamp operation do when it acts on a particle at position one and a second particle at position two it just swaps them it gives you particle two sorry particle one at position X2 and particle 2 at position X1 it just swaps them if
+
+01:34:53
+the particle had little names attached to them this would mean something here you would have Harry at position one and Sally at position two here you would have Sally at position two and Harry at I'm not sure I said it right but you know what I mean you change them you just do a little dance and uh and uh switch them so this is a possible operation that you can do on the state of two particles here's an interesting fact take the operation s squared what does s squ do it swaps and then it swaps
+
+01:35:38
+again it swaps and it swaps again what happens if you swap twice you get you get back the same thing obviously you get back the same thing even if the particles have little names attached to them if you in interchange Harry and Sally and then interchange Harry and Sally again you get back to the original uh naming so what do we know about s squar s squ must be one as an operator s squ must be one it's a unitary operator why should it be a unitary operator because all transformations on the space of states
+
+01:36:18
+are unitary so here's what we know about s s is unitary that means it doesn't change probabilities it doesn't change um uh inner products and S2 is equal to 1 what are the igen values of a matrix or an operator whose square is one either one or minus one the only possibility S2 is equal to 1 means that the igen values are + one or minus one okay let's let's make a new principle the new principle is that electrons or that identical particles they could be photons they could be
+
+01:37:22
+electrons whatever that for a specific kind of particle the wave function when you when you interchange two particles always comes back to the same wave function that's if s is equal to 1 or comes back to its negative if s is equal to minus1 see what that means let's take the case + one I think I'm beginning to fade I think it's time to quit I think uh you're probably also beginning to fade we we'll go through firmians and bosons next time but the basic idea is classifying the
+
+01:38:10
+wave functions of particles in terms of what happens when you switch the particles it's a basic quantum mechanical process or qu basic quantum mechanical operation the SW the swapping of particles and the notion of identical particles is basically telling you that something simple happens when you swap two particles either the wave function does this or it does that and we'll go we do it next week for more please visit us at stanford.edu
+

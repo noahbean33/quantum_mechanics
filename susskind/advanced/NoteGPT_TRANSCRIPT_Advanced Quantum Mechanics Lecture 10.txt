@@ -1,0 +1,345 @@
+00:00:01
+[Music] Stanford University we were we were waste deep into dur into the dur land the dur sea well we didn't get to the daxi yet uh but before we continue with the three dimens before I'll do a little review of the dra equation that we studied and then we'll go into the three-dimensional version three space onetime Dimension as a real world dur equation but before we do let's uh go back and review what not review generalize what we said about second quantization the field Theory the fields
+
+00:00:50
+governing multiple multiple particle systems we made them out of creation and Annihilation operators what's the difference between firm Neons and bons in that respect and the difference is simple not so intuitive but uh rather straightforward if you have two bons you can put them into the same state number one and um no no problem putting him into the same state and what's more the creation and Annihilation operators all commute with each other um nothing uh particular odd nothing particularly odd about things
+
+00:01:43
+which commute with each other there is something very odd about things which anti- commute with each other so let's talk about anti-commutation um supposing we have two particles and we want to say that when we interchange them that the wave function or the state Vector should change sign so let's think about what that would mean for these operators that we're constructing um a particle at X and another particle at y particle one at one now stands for Which slot this is slot one this is slot two
+
+00:02:29
+this stands for particle one this stands for particle 2 x stands for the position of particle one y stands for the position of particle 2 neither X nor y refers to the X and Y coordinates X and Y are each if you like three-dimensional positions or one-dimensional positions depending on the context that's a state with two particles one at X and one at y for bans this is exactly the same thing as putting particle one at position Y and particle 2 at position X they're equal to each other okay so in particular that would
+
+00:03:11
+tell you how do you make a particle X and particle y you take P of X time P of y a creation or this should be creation operators a creation operator for a particle at x a particle at Y and you hammer on the vacuum you let them act on the vacuum and that creates particle at X and Y supposing I want to Interchange particle X or the two particles that's just interchanging X and Y that would be side dagger at y side dagger at X also vacuum good now why is this true it's true because the size commute with each other
+
+00:04:10
+you can interchange them this and this are related very simply by interchanging the two operators here and if they commute that just says that side Dagger of X time side Dagger of Y is the same as side dag of y * side of X and so it's guaranteed that with with the objects and the theory that we've been making up till now that they satisfy this kind of Bose statistics this kind of Bon rules now for Fons the rule is exactly the same but with a minus sign remember that the state Vector of a
+
+00:04:49
+system the real physical observable State Vector of a system doesn't care about the sign here but in keeping track of the formulas it's important to know that for Fons if you interchange the two particles you get a minus sign that must mean that for Fons if SI here is representing Fons that this is the top equation here the top form formula is minus the bottom formula and the mathematics goes with this is just a statement that for fermans the fields anti- commute so let's write out what
+
+00:05:33
+that means it means side diag of X time side diag of y equals minus this over here but let's shift it to the left hand side and write that plus side diager of Y side diager of x equals z this object if you take take two operators and you take their product and instead of subtracting in the opposite order you add in the opposite order that's called the anticommutator and it's written instead of a square bracket instead of a square um commutator usually written with a curly bracket P Dagger of X PID Dagger of
+
+00:06:38
+y equals zero okay in general when you go from Fons to bosons you just take every commutation relation and replace it by an anti-commutation relation and that's how you go from Fons to bosons now that has let's see is there anything else yeah first of all it's quite clear that you can't have two particles in the same state for example supposing you wanted to put two particles at the same point you want to put two particles at the same point that corresponds to multiple let's get rid of this over
+
+00:07:16
+here that corresponds to acting with creation operators at the same point but this equation over here or let's say this one over here that tells us that side diag of x side diager of X Time s of x side diag of X plus side diager of x * side diager of X that's the anticommutator of side dagger x with itself I've just replaced y by X and the statement here is that that should be equal to zero well this operator and this operator exact the same this is just twice side diag of x * side diag of x
+
+00:08:04
+equal 0 and if something is equal to if twice something is equal to zero the thing itself is equal to zero so trying to put two particles into the same state always gives you zero anti-commutation which cannot go in the same state there's an interesting peculiarity here for bans for bans there's a clear mathematical distinction between creation operators and Annihilation operators um even if you didn't know what what the devil these things stood for when you write out the commutation let's we don't
+
+00:08:51
+we don't we have no idea what these things stand for we just know that there's this algebraic structure that's some kind of creation or some sort of object let's let's not put daggers on for now it doesn't matter daggers or no daggers some sort of objects commute these things commute no I'm sorry I wanted to take side dagger equals one here we are this way equals one that's a harmonic oscillator or it could just be a creation and Annihilation operator for a bon okay could you mistake which one is the
+
+00:09:41
+ban operator which one is the creation operator and which one is the annihilation operator well if you try to switch them if you try to replace a by a dagger an a dagger by a this is very itely not equal to one in fact what is it equal to minus one right commutator if you switch the two things the commutator changes this is minus one and you could always tell even if I didn't label these as a and a dagger if I just label them as a and b and ask you which one is the creation operator and which one is the
+
+00:10:22
+annihilation operator what you do is you look at the commutators and if the commutator is plus one then the first one here is the creation operator and the second one is the annihilation operator and there's no way to make a mistake um and in fact creation operators and Annihilation operators are fundamentally different here's the stack of all possible States uh Nal 0 Nal 1 Nal 2 creation operators just mathematically creation operators do not annihilate any state they just take you up the ladder
+
+00:11:01
+and since the ladder never ends a creation operator never runs into the problem that an Annihilation operator does if it annihilates too many times Annihilation operators when they get down to the bottom uh they give zero another way to say it is that this spectrum of in going from zero to Infinity is not the same if you turn it upside down uh you can go up to Infinity but you can't go down uh past zero okay what about Fons well now you look at the firon operators they also have creation and
+
+00:11:43
+Annihilation operators the difference though is that you have anti-commutation relations for Fons you also have creation operators you can create a firon plus one anti-cuts are the same if you interchange why because this is a a dagger plus a dagger a it doesn't matter which order they're in so just from the mathematical structure from the um from the algebra there's no difference between creation oper they do different it's true they do different things but just looking at algebra of them you can't
+
+00:12:31
+tell the creation operators from the annihilation operators and another way of seeing that is just to look at the possible possible um occupation numbers of a firon let's say it's a firon with only one state firon is in the the ground state of the hydrogen atom okay what can you have the answer is you either have no particle or you have one particle you can't have any more than one and you can't have any fewer than zero what does the creation operator do it takes you from zero to
+
+00:13:12
+one but what does it do when it hits one nuh no State there annihilates right zero on the other hand the annihilation operator takes you down if there's a particle there sure enough you can take you down found but if there's no particle there in the story you annihilate the state so there's a complete symmetry between being empty and being filled and replace creation operators by Annihilation operators now that doesn't mean they're physically the same it just means the algebra and the mathematics uh the the
+
+00:13:51
+the symbols you can't tell one from the other yes question had a question back when you're saying um if you try to have two Fons in the same place you have side diager side diager x equals zero um why is that a why is that a contradiction or why is that it's not a contradiction it just gives zero it doesn't give a state uh a state a zero state is nothing so but that uh I'm just curious that's that's so that's that operator is squared essentially right side diager is
+
+00:14:21
+squared yeah yeah if side if if you have an operator squared does that mean the operator is zero no it means the operator Square to zero no no here look here's a creation operator the creation operator squared there's nothing up here for it to give so it gives zero if you take the creation for firon for firon if you take the creation operator squared it's zero there's nobody here if you take the annihilation operator squared at zero on the other hand for bans uh there is not this symmetry of uh
+
+00:15:00
+of filled and empty it's filled it's the symmetry of filled and empty two possible States and only two possible States and no um for for for a single state of a firon all right that's going to play a role we'll get back to it what it says is that in some sense just pure mathematical sense you can interchange for uh creation and Annihilation operators now you may not want to do that because they have physical significance but just as a as as as the algebraic structure of them you can
+
+00:15:35
+interchange them okay let's come back now to the dra equation the wonderful dra equation and let's pursue it various things we want to understand we already figured out how to deal with the fact that the simplest D equation that we wrote down doesn't have the possibility of having a mass let's just go back through it the simplest thing was just to write an equation which was D by DT of s let's put an i there i s equals minus i d by DX s this was for the case of one dimension now this s here is some
+
+00:16:29
+is the wave is a um is let's say a wave function for a single particle uh for the moment we're just doing single particles one particle this would be the schinger equation for this would be the hamiltonian over here this would be the hamiltonian acting on S is equal to the momentum acting on S and we will recognize this as just a theory in which the energy of a particle is equal to its momentum okay energy equal momentum is a relativistic massless particle for Mass you want p^2 sorry e e^2 = p^2 + M2 all right so
+
+00:17:14
+this was a failure as a theory of one-dimensional electrons because one-dimensional electrons moving on a wire or something have a mass okay we figured out what to do with that we introduce a second species of electrons which this these were right moving electrons these were waves which moved strictly to the right the time derivative is minus their space derivative that means they move to the right so wave packets just propagate off with constant velocity speed of light okay what you want to do is you
+
+00:17:51
+want to invent another species which propagates to the left so we could call This One S one and and we invent another one H S 2 a completely different particle equals minus P S 2 a particle whose energy is minus the momentum and this just interchanges plus momentum in that direction right with minus momentum in that direction and so this particle clearly propagates to the left then we combined these two equations by taking S1 and I 2 and making a column Vector out of them Quantum mechanically this means the
+
+00:18:38
+particle can either be of one type or the second type so there's a new degree of Freedom we discovered the new or we inventing the new degree of Freedom which is above and beyond the momentum of the particle it's its handedness does it move to the right or does it move to the left incidentally this particle can have negative energy or positive energy because P can be positive or negative but in either case it goes to the right this one can have positive energy or negative energy in either case it
+
+00:19:09
+goes to the left okay then we and then uh we invented a matrix The Matrix was alpha alpha oops that's gamma lie down Alpha get on your side and be Alpha and this says that s 1 is an igen Vector of alpha with igen value + one and S 2 is an igen Vector of alpha with minus one and now we can combine these two equations and just write that h s this is supposed to be a simple s h SI is equal to Alpha * P SI what does this mean this means that if Alpha is + one H is p if Alpha is minus one H is minus P so we have both
+
+00:20:20
+of them in the same structure here at the cost of doubling the number of components of the field okay that didn't get us any that didn't get us a mass but at least got us things going in both directions and we did one more trick we invented a another Matrix that's called beta and that one looks like this one one now the fact that these happen to be poy matrices is somewhat incidental at this point they're just matricies for the moment and instead of writing H is is equal to Alpha p h is equal to
+
+00:21:02
+Alpha P that's that equation down there plus P or minus P depending on the sign of alpha we added another term beta * m okay now here's some things about Alpha and beta Alpha squ and beta Square are 1 and Alpha Beta plus beta Alpha equals zero you can check that just check that if you multiply them in one order you get one thing if you multiply them in the other order you get the other thing and they cancel you might say that Alpha and beta anticommute and it's true but don't confuse that with
+
+00:21:45
+the anti-commutation of the uh of the fields okay so Alpha and beta anti- commute they each Square to one now consider H squared that's the square of the energy that's the operator that governs the square of the energy well that's going to have one term which is Alpha 2 p^ 2 another term which is beta 2 m^2 and then yet another term which is Alpha Beta plus beta Alpha P * m but we were lucky Alpha Beta * beta Alpha is identically equal to zero and so the only terms that are there of
+
+00:22:31
+p^2 plus m^2 which is exactly what we want for a uh relativistic particle with mass okay so we managed by combining a left moving and a right moving and then coupling the left moving and the right moving through this Matrix beta The Matrix beta does couple them together we end up with a particle with a mass it's in this sense that a mass term uh is a a mass term in the hamiltonian is something which sort of switches you from left moving to Right Moving well it doesn't really do that it just gives the
+
+00:23:09
+particle a mass but you can picture it as causing transitions between left and right moving to the left and moving to the right and if you can have transitions between left and right you might start to think well maybe it even makes sense to think of a particle at rest sort of a rest at rest good you can have a massive particle at rest you can't have a massless particle what are you doing I'm filming it oh okay but question um is there more to the physical interpretation of having both types of
+
+00:23:42
+particles it is what it is I uh is there more to it we'll get there yeah there there is more to it but at this point that's what the that's all there is you sometimes things are just abstract uh sometimes that's all there is to it all right so then comes the question how do we do this in three dimensions three dimensions instead of one dimension three dimensions of space okay so let's go back let's start with what will will turn out to be the case which is massless will turn out
+
+00:24:30
+to be a case which can't have a mass here's what we're going to do we have three dimensions of space um it wouldn't make sense to have only one alpha we can have PX we can have py and we can have pz this looks like it wants to be some sort of product of a of a a degree of Freedom with P but p is a vector what do what what do we get to make what do we get to multiply by vectors to make things which are invariant other vectors we take dot products of vectors so here's what D thought to himself he thought this Alpha
+
+00:25:08
+here must be a vector if we're going to multiply it by P and make something which is rotationally invariant that means it must have three components it must have three components so he said let's try the equation H equals alpha. p this means Alpha sub X PX plus Alpha suby py plus Alpha subz pz okay what do we what do what do the alphas have to do to make this sensible for the moment we're not going to try to make a mass we're going to make a massless equation so what is the right
+
+00:25:54
+formula for a massless particle it's energy versus momentum the answer is energy squar equal momentum squar but that means energy s = px2 + P Y2 + pz S that's what we want to get H2 = px2 + p y^2 + pz squared what happens if we Square this thing over here well we'll get terms which are alpha x^2 * px^ 2 that's okay that just means we want alpha x s to equal 1 likewise with alpha y alpha z^2 = 1 but now we want to make sure the cross terms aren't there when we multiply out the cross terms we get PX * py and it
+
+00:26:48
+will multiply alpha x alpha y plus alpha y alpha x that's what will happen so we better have that alpha x alpha y plus alpha y alpha x equal Z and likewise for the other com combinations same with x and z same with Y and Z so the ACT says can I find three matrices which each one squared is one and which mutually anti-c commute and the answer that's easy poly matrices the three matrices do exactly that okay so if we say alpha x is equal to Sigma X the poly Matrix equals 1 1 0 0 alpha y equals Sigma
+
+00:27:47
+y equals what Min -1 sorry minus i i o o and finally the last one is Alpha Z equals Sigma Z and that's the easy one to remember 1 minus one and we got it in other words our hamiltonian H is equal to sigma. P you can think of this as a particle whose well it's a particle that has a spin that's the sigma and a particle that and it has a momentum and the energy is proportional to the dot product or the component of spin along the direction of motion okay good so it's a massless particle but it has the odd behavior
+
+00:28:46
+that its spin is always um well let's go back okay sigma. p its energy is proportional to the component of its spin along the momentum Direction now the component of a spin is always plus or minus one so it sounds like there are two cases here one case where the spin is literally along the momentum pointing along the momentum and the other case in which the spin is opposite to the momentum in one case the energy is positive if Sigma is in the same direction as the momentum sigma. p is positive if they're oppositely aligned
+
+00:29:32
+that's negative so again we have the situation massless particle okay a massless particle with positive and negative energy states and instead of saying that the particle can just move along the x- Axis or along the Y AIS sorry along the x-axis positively along the x-axis positive this one is stuck in a different kind of way it's stuck in that it's momentum or or its um its energy is sigma. p in other words if its energy is positive in particular if it's a positive energy particle then its
+
+00:30:07
+spin is always locked to be in the same direction as the momentum so spin drops out of the equation so to speak it does well that's I that I was say seems to be we're introducing it well it certainly doesn't drop out of the direct equation where does it come from what do you mean where does it come from I mean we just we just uh introdu it because we know the electon has a magne that's not why D introduced it dur introduced it because he wanted to write a hamiltonian equation I think you mis
+
+00:30:43
+reading it falls out it comes in as a result of oh oh falls out means uh that it just plopped into your lap no I mean it the way Mike said which that comes as a result of comes as a result though plops into your lap for free right I thought you meant it falls out that it doesn't appear in the equation yeah ah okay good couple different right um yeah well okay look D's logic which is not necessarily unimpeachable was that he wanted to write an equation where the hamiltonian would be written in terms of
+
+00:31:32
+the momentum without having some insane square root this is the best he could do he said um I and write H equals alpha. P because I want it to be linear in the momentum but then he said what the hell is Alpha it can't just be a bunch of numbers and by requiring that h^2 = p^2 he found the direct matrices or these Alpha M he found this the PO matri es so he said oh oh I think I've discovered why this Spin and in fact he was right in a sense he was not right that every particle on Earth has to have a
+
+00:32:10
+spin but he was right that the particles that are described by the Der equation have a spin and that meant firmians okay so so far we haven't said what this has to do with whether they're fion or bosons uh and we'll come to that okay but still we have H2 = p^2 and we don't have a mass H2 = p^2 is the massless particle what do we have to do so you might think well what we have to do is put another beta M here let's try that what are we going to require when we Square H we're going to
+
+00:32:49
+get the usual Sigma squ p^ s which is just P Squared we're going to get assuming that beta assuming the square of beta is one again let's assume beta squ is one again then we'll get an m s term we'll get h^2 = p^2 + m^2 plus a cross term and the cross term will involve things like let's say PX m i take the X component of this and I multiply it by Sigma X beta plus Beta Sigma X in other words we want this to be of course zero we don't want that there so we want whatever beta is to anti-c
+
+00:33:40
+commute with all the poly matrices that would be great except that there is no Matrix which anti-commutation more so we give up or we say why do we have to do why is it have to be 2 x two matrices maybe what we have to do is introduce another binary degree of Freedom another two value degree of Freedom so if there's this two value degree of freedom and another one we would be talking about 4x4 matrices each particle would have a four component thing associated with it some new degree of Freedom you could look for
+
+00:34:31
+10 x 10 you could look for 100 by 100 turns out you could look for 3x3 there on N no 3x3 matrices which have the anti-commutation relations of the four necessary matrices here the first case where you discover that there are four mutually anti-commuting matricies is the 4x4 case now the four the fact that it's 4x4 has nothing to do with the fact that SpaceTime is four-dimensional it's just a mathematical fact about anti-commuting matrices and I'll show you what they are you can work them out yourself and see
+
+00:35:11
+that they all anti-c commute oh there incidentally there are many many different versions or very very many different representations of the direct matrices I'll write down what that means in a minute um you pick one and you stick with it the all equivalent they're all absolutely equivalent in the physics roughly speaking the relationship between the different representations nobody would uh nobody would mind very much if I called the X Direction the y direction the y direction the Z Direction the Z
+
+00:35:45
+Direction the X Direction so if I called Sigma y you know if I just permuted them in some way they'd be just as good um same is true of the alpha and beta of the the the uh the direct matrices there are many many different representations we just have to pick one and stick with it all right so what are the rules once durak realized I don't know what D realized and what he didn't realize but once uh in my imagination he realized that he had to go by 4x4 matrices he stopped calling these things
+
+00:36:18
+Sigma and called them Alpha same Alpha as up there except they not 2 x two matrices he called them Alpha now the the fact is I think he wrote this down before he even thought about the one-dimensional case and now what we need is we need four mutually anti-commuting matrices Alpha 2 = 1 Alpha X alpha 1 Alpha x^2 = 1 Alpha y^2 = 1 Alpha z^2 = 1 we better also have beta s = 1 but then we also have to have Alpha X alpha y plus alpha y alpha x equal Z that's to make sure that when we Square this there's no term with PX *
+
+00:37:10
+py similar things to this but finally we have to have for all of the alphas all three Alphas we have to have I'll just call it alpha x Time beta plus beta alpha x also equals z same for y and same for Z all right and as I said such matrices exist 4x4 matrices we call you could call uh um you could but it's not really it's uh it's it no they don't form a four Vector uh I'll tell you what forms a four vector I'll tell you in a minute once we get the once we write the direct equation I'll tell
+
+00:38:08
+you okay here are the matrices once you know them you can forget them because really all it counts as these properties here you can work just with the abstract algebra I think you essentially never need the actual form of the matrices but nevertheless you just want to make sure there are such matrices here's a particular representation this is not the one that Dak used this one is called a po representation of the direct matrices it's not the power all right here it is Alpha the three of them alpha x alpha y
+
+00:38:45
+and z z I'll explain this this notation in a minute these are 4x4 matrices but they consist of blocks 2x two blocks in each block there's a 2X two Matrix in here you put Sigma and I'll tell you what that means in a minute here you put minus Sigma and here you put zero and here you put zero so for example if I was interested in alpha x that would be the Matrix Sigma X up here minus Sigma X down here 0 0 and what would look like be again divid it into blocks in this block put Sigma X which is 1 1 0 0 in this
+
+00:39:37
+block down here put 0 -1 - 1 0 all others Z same thing for alpha y and Alpha Z so that gives us the and you can check you can very quickly check that these commute with each other they anti-c commute with each other as a consequence of the fact that the sigmas the POI matrices themselves anti commute with each other and so the second you start writing down the products of them you realize you're just working with the PO matricies in some very simple way they anti-c commute with each other and so this kind of thing is
+
+00:40:19
+satisfied the only thing we have to figure out is what beta is and beta is chosen in the in this representation to just be 0 1 1 0 but each of these are 2x two blocks so what does this mean this means in the upper left hand block here you put Z 0 0 0 0 likewise down here and what does one over here mean it means the unit Matrix 1 1 0 0 1 1 0 0 that's beta I am not going to work out the anti-cut you know there's nothing to it other than just multiplying matrices the anticommutator are zero of
+
+00:41:10
+the Alphas with beta and so we actually have a hamiltonian whose square is p^2 + m^2 the relativistic uh law of connection between energy and momentum it sounds good and it is good yeah for the actually it wasn't in that in the onedimensional case yeah the one right yeah it's not spin you can't have spin in One D in one dimension really it was a spin-like thing but it wasn't really spin spin requires three dimensions to spin the you know genuine spin when you added a m you had to have another degree
+
+00:41:56
+of Freedom how is that physically manifested in some other kind of thing so what is it it is um it's connected with something called helicity when we look at the original equation with Sigma here we found out that if the particle has positive energy that means that Sigma has to be aligned with the momentum here so there was only one kind of particle with its momentum momentum and spin along the same axis what we did in effect here was to put in another species whose uh energy is the spin minus the spin times the momentum
+
+00:42:45
+so we created another species doubled everything up and the other species has what is called the opposite chirality chirality meaning the relationship between Spin and momentum if spin is along the direction of momentum that's called right-handed like your right hand your thumb and your spin opposite is Left-Handed when we only took the 2x two matrices we were stuck with particles with only oneh handedness okay we put the other one in we put the other handedness in that gave us two kinds of particles one which goes
+
+00:43:24
+this way one which goes this way and then we coupled them together by putting this off diagonal thing here which mixes the left mover the the left guys and the right guys the result was a massive particle this is the sense in which mass for a direct particle is a transition or a coupling between the left-handed spinning particles and the right-handed spinning particles so so massless particles don't have this char chirality no they have very good chirality they don't have they don't
+
+00:44:02
+have anything which flips the chirality yeah the M parles of is conern okay did anybody understand what I said for massless particles the chirality is conserved it stays right-handed or it stays left-handed but the mass term causes transitions between them it's a term in hamiltonian which takes one to the other how do I know that because it's off diagonal it takes the upper block to the lower block and mixes them okay are these to these um no no the the alpha matrices are not the sigma matrices are
+
+00:45:00
+querian yeah all right so since you asked me what about querian I'll just spend a moment with him quorans are a way of doing vector algebra um they're connected with the sigma matrices let's go back a step let's take um complex numbers every complex number is a plus I B right A squ and B squ are oh right every um Herm Mission 2x two Matrix every Herm Mission 2x two Matrix Matrix can be written as a ORD as a thing proportional to the unit 2x2 matrix plus I times uh is there an I um no
+
+00:45:56
+I I think I I misspoke I think uh I think I want to put an eye there not her Mission forget her Mission um Sigma dot some other some Vector I don't know q a vector everything can be written as a linear combination of and these things are called uh the the 2x two matrices representing uh things like this are called quarians but um it's not going to play any role in what we're doing is associated with angular momentum yeah and so is there an energy term associated with that no nothing
+
+00:46:43
+other than this now the now the alpha here is not actually spin yet we're going to ask what Alpha means physically what is uh what is alpha alpha each Alpha each component here's here's something true each component of alpha uh the three of them each component um oh it's a matrix it has igen values and the igen values are plus one and minus one but it has two + one igen values and 2 minus one igen values because it's a 4x4 Matrix and the question is what physical quantity is it representing they don't
+
+00:47:23
+commute with each other incidentally so you can't measure the different components of alpha simultaneously they don't commute but you can measure a component what is the physic physical meaning of that component and physical meaning is very bizarre it's the velocity it's the velocity of the particle the alphas are the velocity which means to say that the expectation value of alpha in any state is the average is the velocity of the particle how do you see that okay what you have to remember is you
+
+00:47:59
+have to go back to the formulas for the time derivatives of the expectation values of operators I'll just remind you if I have some operator let's just call it L A Herm Mission operator and I'm interested in its expectation value I won't bother writing in States here I'll just some states there some State the expectation value of L has a value and if the state changes with time time the expectation value of L also changes with time do you remember the formula for this it's related to the
+
+00:48:38
+commutator of the hamiltonian with L now for the life of me I can never remember is it plus I or minus I I don't know and I'm not going to figure it out it's not hard to figure out but I'm not going to bother we're just going to write I we can always write I doesn't matter we can write plus I or minus I but then the question is whether it's commutator of H with l or l with h and I don't remember but we're not going to care because uh not important okay the time derivative and you take
+
+00:49:18
+the expectation value of this the expectation value the time derivative of the expectation value of L you can just think of that as the average time uh time derivative of L is equal to I time the commutator of H with L in fact you can even erase these uh brackets here and just write it formally formal equation that L this okay let's take our direct particle and let's consider x dot X is the x coordinate of the particle and let's consider using this formula let's try to figure out what the
+
+00:50:00
+velocity operator is what's the operator which when you measure it it gives you the velocity okay so this shouldn't be too hard it's I times the commutator of H which is what alpha. P plus beta M that's H commuting with X well m is just a number the alphas and betas they commute with X they're in a different uh they're in a a different space they're not in the X space they're in this 2x2 or 4x4 space so beta and Alpha commute with X what's the only thing in here which
+
+00:50:53
+doesn't commute with x p which component p p sub X so when you work out the commutator this is not here Alpha commutes with X so that means you can take it outside and you just have commutator with p with X which is what um minus I minus i h bar okay so this is equal to Min - I * I is + 1 is equal to alpha alpha subx so Alpha this crazy it's crazy funny Theory the um the velocity of the particle is not proportional to its momentum it's given by Alpha so if you want to know what the velocity of the
+
+00:51:44
+particle is you measure Alpha now it's weird can only be plus or minus one in any direction right on the other hand Alpha itself is not conserved if you oh that's an interesting question Alpha itself is not conserved why not let's see if alpha x is conserved for that we have to take the commutator of alpha x of H with alpha x let's take the commutator of H with alpha x that would be the time derivative of alpha x X and the problem is that H has in it alpha y alpha y doesn't commute with
+
+00:52:37
+alpha x it also has Alpha z in it which doesn't commute with alpha x so the answer is that the commutator of alpha x with the hamiltonian is not zero which means that the particle accelerates it does a crazy wobbly motion which is called zidong Zid means something I don't know it's some German word meaning um drunk drunken uh drunken uh drunken Scandinavian it means whated right but of course of course what is also true is if you look at the uh the time average of the Velocity the thing
+
+00:53:26
+is going this way and this way and this way but the time average is exactly what you expect it to be namely the momentum divided by the mass uh at least if it's moving slowly but um Alpha but main point is Alpha is not the spin it's the velocity it's it's a vector quantity and spin is a axial vector quantity it's a pseudo Vector so I'll tell you what the spin is it's very easy let's see um where is Alpha we erased what Alpha is or did we no here's Alpha notice it has this minus Sigma
+
+00:54:01
+down there the real spin is just this it's a different operator it's a different operator very closely related uh but it's the spin of it's the legitimate genuine spin of the particle so direct discovered a multiplicity of different states of the electron one of them had to do with the chirality which way the spin was or which way the uh the alpha was oriented relative to the momentum the other had to do with the actual spin of the electron right so means a free electron in empty space
+
+00:54:45
+will vibrate back and forth with no external forces doesn't that violate uh something no no what about uh uh law no no no Newton's law says the time derivative of the momentum is zero it doesn't say the time derivative of the Velocity is zero it says time derivative of the momentum is zero in most situations uh ordinarily momentum and velocity are related to each other here the velocity of this particle is not the momentum weird isn't velocity no not for not when there a mass right
+
+00:55:34
+umel no no I in fact I mean it's true that in some technical mathematical sense Alpha is the velocity but it's also true that it itself is not conserved and so it's going around like crazy in some complicated fashion and there is a Time average of the Velocity itself you can uh take the time average of the velocity over a little bit of time and that is the momentum that is p over M for slow electrons for slow electrons you know it's going around like crazy doing crazy things but as it doing crazy things it's
+
+00:56:09
+moving along um with a smooth velocity smooth component of the Velocity which is the momentum and that you can prove we won't do that now but uh could there be a measurement which you measure the instantaneous yeah and you find it one instant going yeah way yeah yeah yes the answer is yes yeah right okay now we come to the last thing for tonight well yeah probably we come to this strange fact that the uh that the direct electron can have both positive energy and negative energy now for this purpose
+
+00:56:55
+we don't even need to think about the full-blown three-dimensional dur equation it's enough just to study the one-dimensional Right Moving electron just take that case we'll come back to the three-dimensional case but all of the interesting uh ideas are already there just for the one-dimensional case and even the one-dimensional case without the alpha matrices just a pure Right Moving massless electron that already has Mass has negative energy if the particle has positive let's go back what was the
+
+00:57:32
+formula for its uh for its energy the formula for its energy was just H equals P that's the right I think that's the right moving electron yeah not even an alpha that was our simplest version of the direct equation if you like it was massless it only went to the right but it has both positive and negative energy iies and the reason it has negative energies is because P can be negative there's no restriction here that P can't be negative okay so we have to figure out what does this mean
+
+00:58:07
+negative energies negative energies are very dangerous um the ground state the vacuum of the world is not necessarily the state with no particles in it it's find to be the state of lowest energy when you take everything out when when you take all the energy when you suck out all the energy from the vacuum or from space what's left is the vacuum and clearly the vacuum had better be the lowest energy otherwise you could lower the energy past the vacuum and that's a little bit crazy and uh even worse you
+
+00:58:43
+could lower the energy indefinitely until you have some sort of monstrous thing with uh with enormously negative energy what does that mean uh the V the vacuum is supposed to be empty space there's not supposed to be anything that you can remove from it anymore no way to lower its energy so what's going on here well D said let's take the definition of the vacuum to be the state of lowest energy what about these negative energy particles you can put negative energy particles in if they have negative
+
+00:59:16
+energy they lower the energy so you can lower the energy past zero just by flooding this thing with many many negative energy particles D very cleverly said wait a minute I know that these particles are Fons what is the lowest energy State going to be the lowest energy state is going to be if I fill it up maximally with every possible negative energy particle every negative energy particle gives you negative energy and if you fill it up with every negative energy particle that's as negative as it can
+
+00:59:53
+get well wait a minute now why can't you put they have two negative energy particles in the same state because they're Fons so once you filled up see if they were bons you'd have trouble no matter how many of them put in you could always put in more so uh if if you had bons which were negative energy there really would be no bottom you could just keep putting them in and putting them in and putting them in and lower the energy of anything but D said wait a minute if these are firion
+
+01:00:28
+truly Fons you can only put one into a state if you fill all the possible negative energy states then your vacuum is stable because you can't put another negative energy particle in no room so to speak so What dra said was the vacuum if it's to be the lowest energy state must be the state in which every negative energy state is occupied and then you can't put any more in this was a this was a intuitive way to describe some mathematics which I'll tell you in in a moment what the mathematics is but it's
+
+01:01:08
+correct modern physicists will tell you they don't like that description because it uh you know it sounds a little uh the vacuum is the vacuum it's not full of stuff but take it let's follow direct reasoning because it was very effective said okay let's uh let's fill up all the negative a energy states and call that the vacuum then what kind of things can this system describe okay well we could come along here we'll draw a picture to describe this thing let's label of course the uh the
+
+01:01:55
+momentum is continuous is a continuous variable but let's just suppose for a moment that we discretized it then here's the energies um here are all the negative energy levels lots of them e and what D said is fill these all up put a particle in every one so it becomes a um you know sort of Monolithic thing which you can't put anymore particles into and that way you stabilize the vacuum against more negative energy particles but what do you have left now so you said okay you can certainly put a
+
+01:02:38
+positive energy particle into this there's your positive energy electron but you can do something else you can remove a negative energy electron from here and put it over here take out a negative energy electron from from what has become called the deri the daxi this incredible collection of electrons which fill the vacuum remove it and you have a hole you have a missing negative energy electron but you have an extra let's let's get rid of this one up here you have an extra positive energy
+
+01:03:22
+electron you've made a hole in a negative energy C and created an extra positive what is this thing over here this thing is something it's a missing uh if electrons have negative charge and you plunk one out of the vacuum you'll be left with a little bit of a hole and the hole will have positive charge what about its energy what will be the energy of this hole here H yeah it will be exactly the same as the electron it won't be negative removing a negative energ puts in a positive
+
+01:03:59
+energy okay removing a negative energy increases the energy so by removing a particle from here you put an extra particle here but you've also created a negative energy hole sorry a positive energy hole in the negative energy C and that's called a positron that's called a positron uh his ically der did not know at first that he was talking about a thing which was a identical to the electron except for the sign of its charge why does it have opposite charge well when you fill because it's a missing negative energy
+
+01:04:42
+electron a missing negative energy is the same as a positive energy so dra said this uh this solves his problem he now has a stable vacuum there are no negative energy particles there are only positive energy electrons and positive energy positrons uh or positive energy holes and this then solves the problem and it does it does solve the problem yeah theic because this picture suggests there always be equal numbers of electr not necessarily you could start with some excess electrons or you could start
+
+01:05:22
+with some holes with no uh with no electrons not necessarily um if you interpret it by saying you started somehow just with a vacuum yeah then it's kind of true but there's no reason to start with only the vacuum you could start with some excess of one kind or the other but um let's think about something else for a moment uh okay so we start with let's start with a vacuum we start with the vacuum which means all the negative energy States filled up and then a photon comes along now
+
+01:06:02
+think about a photon coming and hitting an atom it finds an electron and kicks the electron upstairs right it kicks it up to uh to higher energy same thing will happen here a photon comes along waxs an electron there's no electrons up here but this thing is full of electrons full of negative energy electrons it hits it and takes one of the electrons from here and puts it upstairs increases its energy it can't decrease its energy cuz they're all filled all it can do is put it into the
+
+01:06:38
+upstairs here and leave a hole okay so what's happened what's happened is a photon has come along and turned itself into a negative energy sorry a posit negative charge electron a positron and an electron we as a matter of convention we always draw the electron lines with arrows in them that point up and positrons with arrows that point down that's just a convention uh but it's kind of a nice convention it's a nice convention okay positrons Point down electrons point up and just
+
+01:07:32
+remember that whenever you slice this at a moment of time every particle that you slice with an upgoing arrow is a negative charge because it's an electron and every um particle that you cross that has a down goinging arrow has a uh a positive charge so this is uh the direct theory of electrons let's talk about the field operators describing them the field operators are built exactly the same way as the Bon field operators s it's built as an integral over the momentum DP creation and Annihilation operators
+
+01:08:23
+for particles of given momentum let's take uh the side the um this one here that's uh a minus the annihilation operator for a particle of momentum P time e to the I guess it's minus I PX if I'm not mistaken yeah Annihilation has e to the minus ipx or is it e to the plus ipx doesn't matter okay that's the way we built field operators creation operators and Annihilation operators times um times this sort of thing here but now these are firion creation Annihilation operators they anti-c commute with each
+
+01:09:06
+other okay well what what do we integrate p over we integrate P from minus infinity to plus infinity but that means that there are negative energy particles in here because negative energy corresponds to minus momentum negative momentum right there are negative energy electrons in this formula here but let's divide it up into two pieces an integral from 0 to Infinity DP Annihilation operator for a positive momentum or a positive energy electron e to Theus I PX and another term from minus infinity
+
+01:09:45
+to zero DP creation operator now for a oh did I write I meant Annihilation operator my mistake Annihilation operator here same thing as here Annihilation operator for a negative momentum particle now D said wait a minute actually I'm not sure who said it I said when you're dealing with firmians the mathematics does not distinguish creation operators from Annihilation operators you can in the meth mathematics say that every Annihilation operator is a creation operator that's because they anti- commute mathematics
+
+01:10:32
+just doesn't distinguish them so instead of calling this an Annihilation operator for a negative energy particle let's just relabel it and call it a creation operator for a positron what does it do remember what it did it annihilated a negative energy electron in other words it created a positron so let's just call this Annihilation operator of a negative energy particle let's call it a creation operator for a positron and he labeled them B's B's I don't know why B's but A's and B's
+
+01:11:15
+electrons positrons and I think if you work it out and do the uh a little bit of juggling you'll get from zero to Infinity again but you get e to the I think you get e to the plus I PX yeah you do I think so D said you can think of the field operator as a sum of two terms one with Annihilation operators for electrons and the other with creation operators for positrons um I'll give you one example of the kind of thing this does for you the field operator has two kinds of things so let's let's let's take let's take a
+
+01:12:00
+process where an electron comes along emits another electron and a photon this would be an Annihilation operator an Annihilation operator for an electron that's an A minus and a creation operator for another electron that's a that's an A+ and a photon operator let's call a photon operator a okay you might suspect that where this comes from and you'd be right is a term in the hamiltonian which would be side Dagger of x times s of X time a an Annihilation operator a creation operator and a photon operator
+
+01:12:52
+but now if you put in the fact that the operator here have two pieces one with creation operators of one kind of particle and the other Annihilation and and the annihilation operators the other kind of particle what you find out is that the same operator has contributions in it which is not an electron being an electron and becoming a photon but in fact for example an electron annihilating a positron electron positron Photon if you look around for all the creation ation operators in here you find that that contains combinations
+
+01:13:29
+the same operator the same operator which took an electron to an electron and a photon takes an electron and a positron and makes a photon so one simple complex of field operators describes many many processes there's even another one an electron and a positron can be created and a photon at the same time just by using all the various varieties of creation and Annihilation operators that would happen in here this was the start sort of aan diagrams course it was Fineman who figured out how to evaluate them and
+
+01:14:05
+make real sense out of them but uh durak had quite a bit of the structure uh down and that brings us I think to the end for tonight so yeah can you say um how do modern physicists think about this Asos to to using the direct C oh no oh very easy they just say forget the direct C just replace replace creation operators for negative energy by Annihilation operators for positive energy just do that flip in the uh in the formulas and when you do that then it becomes completely symmetric in the electrons
+
+01:14:48
+and positrons you discover right away that it's a complete symmetry so you could think of the uh of the vacuum as being filled with negative energy positrons and the holes being electrons right okay one last thing is that uh this same pattern turns up in solid state physics if you have a um a crystal or anything else for that matter with uh with lots of electrons in it and you want to know what the lowest energy state is you just put all however many electrons you have you put them into the
+
+01:15:26
+lowest available States right you just uh if the ground state is not occupied you put an electron in there they're of course they're all positive but you keep putting electrons in until you fill it up to some level what level however many electrons you have you fill it up so then you have a ground state and the ground state is full of electrons the net charge of course is zero because there are protons there also canceling the charge so you have a C it's called the firy C what firmy had to do with it
+
+01:15:58
+I'm not sure uh now you can take an electron out of the sea and kick it upstairs to a higher energy state that leaves a hole sure enough it leaves a hole those are called in solid state physics they're called holes but they can also be thought of as posit as positive charged particles so in solid state part of physics you have exactly the same thing you have electrons which have energy up above the fmy level up above this filled sea and you also have positive charges which are really just really this time
+
+01:16:35
+just really the missing electrons in the uh and of course the positrons also or not the positrons the holes also have positive energy because they correspond to a missing energy at a lower energy level it uh well they they do have um positive energy so the same pattern is very well known in solid state physics but D did this first I always thought that draak patterned this on what happens to electrons in a crystal until I realized that he did this long before anybody had thought about electrons and crystals and uh so
+
+01:17:14
+yeah I just wondering if the like the kle Gordon equation for BS does have a problem with cascading to the no no no no um no it doesn't we don't have time to go through it but uh comes from what's that spin for BOS the spin one for BOS where do they come from not from this not from this yeah in the direct equ when they became Fair what was it that told you fair that it had to be firion in order to solve this negative energy problem if without without uh without having firion you could just keep
+
+01:18:07
+filling up more and more and more uh negative energy particles and the vacuum would just be unstable um you take an atom the atom can Decay but let's take the ground state of the atom why can't the ground state of the atom decay by producing a photon well because there's no energy level of the electron below that it's got to produce a positive energy Photon because there are only positive energy photons so that means an electron in the lowest energy it can't Decay any further
+
+01:18:42
+because it's down at the bottom but Suppose there was a whole bunch of negative energy states of the electron then no matter how many of them you filled up you could always add another one to the negative energy states and have the atom Decay by having the electrons sink down even lower what prevents that what prevents that is the electrons are already there but it can only prevent it if they're fion it's not a direct equation it's a Klein Gordon equation which is different different and does not have the form H
+
+01:19:20
+is equal to a linear function of P it's a more complicated uh uh right so you can look up now the Klein Gordon equation for bans we just don't have time for it now but I think you're probably in a good position to to follow it and it's a a very different structure a very different structure doesn't have directa matrices doesn't uhor Elon is to the annihilation aitron but negative energy positron but there a difference and not quite the same there which applies to me degree of freed another
+
+01:20:06
+degree of Freedom which would be charge yeah yeah well it's not really a degree of Freedom every electron has a negative charge every positron has a positive charge um but yeah uh okay one way of thinking about it it's sort of semi correct but one way of thinking about it is these 4x4 matrices there are two binary things going on one binary thing is a spin and the other binary thing is whether it's an electron or a positron now that's not quite right but it's it's a reasonable
+
+01:20:48
+counting of how many different states you have right won't the uh infinite caus an infite cosmological constant there you [Laughter] go yeah right and uh right you can either think of it as the energy in the direct sea but you can also just think of it as the zero point oscillation of the fields photons you don't usually think of is filling up um a dxi but they also contribute vacuum energy a half har bar Omega for every uh for every oscillating mode of the of the electromagnetic field and that's also
+
+01:21:50
+infinite now it is true that for the photons and for bosons in general a curious fact is that um for photons the vacuum energy is positive for fans it's always negative so you could imagine cancelling them and uh but unfortunately the um they don't really cancel because the electron has a mass the photon doesn't have a mass and right you're always left over with some huge amount of vacuum energy right so you're you're right that's that's right but keep in mind the only time that the zero point
+
+01:22:33
+of energy comes into anything is when that energy is gravitating uh for all other purposes the zero point of energy can just be subtracted off and neglected because it doesn't come into any energy differences it's only when you say wait a minute energy gravitates that uh that you have to worry about it okay yeah one more can you say more about how Mass relates to and Right Moving it's just a term in the hamiltonian which switches from one to the other that's all I can say and uh you can like if you like to try to
+
+01:23:15
+picture it you can try to picture it but uh it's always these pictures are always defective so I I won't say anymore I if if I had more to say I would have said it okay for more please visit us at stanford.edu
+

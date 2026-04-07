@@ -1,0 +1,298 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 1}
+\lhead{Quantum Mechanics --- The Theoretical Minimum}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{postulate}{Postulate}
+\newtheorem{definition}{Definition}
+
+\title{\textbf{Lecture 1: Introduction to Quantum Mechanics} \\ \large Systems, States, and the Qubit}
+\author{Based on Leonard Susskind's \textit{The Theoretical Minimum}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Classical Mechanics Recap}
+% ============================================================
+
+Classical mechanics rests on a small number of intuitive concepts that can be drawn from everyday experience:
+
+\begin{itemize}[nosep]
+    \item \textbf{System} --- a closed, isolated entity that does not interact with anything else.  Its evolution and history are what we wish to predict.
+    \item \textbf{State} --- a complete specification of the system at an instant of time.  The collection of all possible states forms the \emph{space of states}.
+    \item \textbf{Equation of motion} --- a deterministic rule that \emph{updates} the state from one instant to the next.  If you know everything that needs to be known at one moment, classical mechanics tells you how to compute the state at every future (and past) moment.
+\end{itemize}
+
+Classical mechanics is predictive, deterministic, and---crucially---\emph{intuitive}.  It builds on concepts from the ordinary world that our brains are hard-wired to handle.  The increasing abstraction introduced by Lagrange, Hamilton, and Poisson (Lagrangians, Hamiltonians, Poisson brackets) turned out to be tremendously important, but the underlying pictures remain visualizable.
+
+\subsection{1.1 Discrete examples}
+The simplest classical system is a \textbf{coin}: the state space $\{H, T\}$ contains exactly two elements, drawn as two dots.  Two possible laws of motion:
+\begin{enumerate}[nosep]
+    \item \emph{Nothing happens}: $H\to H$, $T\to T$.  The system is frozen.
+    \item \emph{Oscillation}: $H\to T\to H\to T\cdots$  The system alternates indefinitely.
+\end{enumerate}
+For a \textbf{die}, the state space has six elements $\{1,2,3,4,5,6\}$.  This is an abstract die---its ``states'' are simply six numbers, not orientations of a physical cube in three-dimensional space.
+
+\subsection{1.2 Continuous example}
+A particle on a line has the state space $\mathbb{R}^2$, the \emph{phase space} with coordinates $(q,p)$---position and momentum.  Every point on this plane represents a possible state of the particle.  The state space is now a continuously infinite set, but it is still a \emph{set}.
+
+\subsection{1.3 Classical logic of propositions}
+Propositions about a system correspond to \emph{subsets} of the state space.  Consider the die with states $\{1,2,3,4,5,6\}$.
+
+\medskip
+\noindent\textbf{Example.}  Let $A=$~``the die is odd'' $=\{1,3,5\}$ and $B=$~``the die is $\leq 3$'' $=\{1,2,3\}$.
+\begin{itemize}[nosep]
+    \item \textbf{AND} (both $A$ and $B$ true) $\longleftrightarrow$ intersection $A\cap B = \{1,3\}$.  The die is both odd \emph{and} $\leq 3$.
+    \item \textbf{OR} (at least one of $A$, $B$ true; inclusive) $\longleftrightarrow$ union $A\cup B = \{1,2,3,5\}$.
+    \item Two propositions are \emph{mutually exclusive} if their intersection is empty.  For instance, ``odd'' $\{1,3,5\}$ and ``even'' $\{2,4,6\}$ have empty intersection.
+\end{itemize}
+This is the logic of \emph{set theory}, and it underlies all of classical reasoning about states.  A central message of this course is that \textbf{the logic of quantum mechanics is different}---it is not based on sets.
+
+% ============================================================
+\section{2. Visualization and Abstraction}
+% ============================================================
+
+Our neural architecture is hard-wired for three spatial dimensions.  We cannot truly visualize even \emph{two}-dimensional space in isolation: close your eyes and try to picture a two-dimensional surface.  You will inevitably see it embedded in three dimensions.  Try a one-dimensional line---you see it drawn on a plane, which you see embedded in three dimensions.  We are prisoners of our own neural architecture.
+
+Once physics moves past the realm of everyday parameters---objects too small to see, velocities too fast to experience---we inevitably encounter things we cannot visualize.  Nobody can visualize the motion of an electron, or four-dimensional spacetime, let alone ten or eleven dimensions.
+
+\medskip
+\noindent\textbf{The remedy is abstract mathematics.}  Good physicists are not better at visualizing extra dimensions; they are better at \emph{manipulating abstract symbols}.  After working with the formalism long enough, one develops a new kind of intuition, but it is not the same as picturing a wave in the ocean.  Quantum mechanics is maximally abstract---do not try to understand it by forcing classical pictures onto it.
+
+% ============================================================
+\section{3. The Qubit --- The Simplest Quantum System}
+% ============================================================
+
+\begin{definition}[Qubit]
+A \textbf{qubit} (quantum bit) is the quantum analog of a classical bit.  It is a quantum system that, whenever measured, yields exactly one of two outcomes.  We assign a degree of freedom $\sigma$ with
+\[
+    \sigma = +1 \quad (\text{``up'' / heads}), \qquad
+    \sigma = -1 \quad (\text{``down'' / tails}).
+\]
+Equivalently, we write $\ket{\uparrow}$ or $\ket{\downarrow}$.
+\end{definition}
+
+\noindent A classical bit (``cbit'') is simply a coin: heads or tails, nothing more.  A qubit is far richer, even though it too has ``only two states'' in some sense.  The difference will become clear as we explore its behavior under measurement.
+
+% ============================================================
+\section{4. The Apparatus and Measurement}
+% ============================================================
+
+An \textbf{apparatus} $\mathcal{A}$ is an idealized measuring device---a ``black box'' with:
+\begin{itemize}[nosep]
+    \item An \emph{orientation} marked ``this side up,'' like a shipping carton.  Internally, the apparatus contains some directional element (an arrow, a magnetic field, etc.).
+    \item A \emph{window} (small screen) that displays a number: $+1$, $-1$, or blank (before any interaction).
+    \item A \emph{sensor} on a wire that interacts with the qubit.
+\end{itemize}
+
+\subsection{4.1 Measurement as preparation}
+The experimental procedure:
+\begin{enumerate}[nosep]
+    \item Start with the apparatus in the \textbf{blank} state (no reading).
+    \item Bring the sensor close to the qubit; the window displays $+1$ or $-1$.
+    \item \textbf{Reset} the apparatus (return to blank) and repeat immediately.
+    \item The \emph{same} result is obtained every time, confirming the first measurement.
+\end{enumerate}
+The ability to confirm is essential: if an experiment could not be confirmed by immediate repetition, there would be no way to verify that the first result was correct.
+
+\medskip
+\noindent Thus a measurement both \emph{determines} and \emph{prepares} the state.  After measurement, the qubit is \emph{known} to be in the detected state.  We can think of the first measurement not just as ``finding out'' the state but as \emph{preparing} the qubit in that state.
+
+% ============================================================
+\section{5. Directionality of the Qubit}
+% ============================================================
+
+\subsection{5.1 Flipping the detector ($180^\circ$)}
+Prepare a qubit and confirm it reads $+1$ with the upright detector.  Now turn the detector \emph{upside down} ($180^\circ$) and measure again:
+\begin{itemize}[nosep]
+    \item The reading is $-1$.
+    \item Flip the detector back upright: the reading returns to $+1$.
+\end{itemize}
+This reveals that the qubit possesses a \textbf{spatial directionality}---it behaves somewhat like a vector.  The detector's internal arrow and the qubit's ``arrow'' interact: reversing one reverses the sign.
+
+\subsection{5.2 Rotating by $\mathbf{90^\circ}$}
+Prepare the qubit in $\ket{\uparrow}$ (verified by repeated measurement with the vertical detector).  Now rotate the detector to the \emph{horizontal} ($90^\circ$) and measure:
+\begin{itemize}[nosep]
+    \item The result is $+1$ or $-1$ (\textbf{never} $0$, despite the classical expectation of zero).
+    \item The result is \emph{random}: there is no way to predict which one you will get.
+    \item Once the sideways measurement yields, say, $+1$, repeating the same sideways measurement confirms $+1$ every time.
+\end{itemize}
+
+\noindent\textbf{Statistical ensemble:}  To see the pattern, prepare many identical qubits (all $\ket{\uparrow}$) and measure each one with the sideways detector.  Record $+1$ or $-1$ for each.  The result: as many $+1$'s as $-1$'s, giving an average
+\[
+    \expval{\sigma_x} = 0.
+\]
+Classically, the horizontal component of a unit vector pointing up \emph{is} zero.  Quantum mechanically, the individual result is always $\pm 1$, but the average reproduces the classical expectation.
+
+\subsection{5.2.1 Re-measurement after rotation}
+Here is the key surprise.  After the sideways detector reads $+1$, \emph{turn the detector back to vertical} and measure again:
+\begin{itemize}[nosep]
+    \item The result is \textbf{random}---$+1$ or $-1$ with equal probability.
+    \item The qubit has ``forgotten'' that it was originally prepared up.  The sideways measurement \emph{changed} the state.
+\end{itemize}
+This is fundamentally different from classical physics, where a measurement can be made arbitrarily gently without disturbing the system.  In quantum mechanics, \textbf{every measurement disturbs the state} (unless the system was already in an eigenstate of that measurement).
+
+More generally, the pattern is:
+\begin{enumerate}[nosep]
+    \item Measure along axis $\hat{n}$ $\Rightarrow$ qubit is now definite along $\hat{n}$.
+    \item Measure along a \emph{different} axis $\hat{m}$ $\Rightarrow$ random outcome; qubit is now definite along $\hat{m}$.
+    \item Go back and measure along $\hat{n}$ $\Rightarrow$ random again.
+\end{enumerate}
+You can never have definite values for two non-parallel components simultaneously.
+
+\subsection{5.3 Arbitrary angle $\theta$}
+Rotate the detector by angle $\theta$ from vertical.  Prepare many identical qubits in $\ket{\uparrow}$ and measure each one:
+\begin{itemize}[nosep]
+    \item Each individual outcome is $+1$ or $-1$---never anything in between.
+    \item When $\theta$ is small (detector nearly upright), \emph{mostly} $+1$'s appear, with an occasional $-1$.
+    \item When $\theta\to 0$, all results are $+1$.
+    \item When $\theta\to 180^\circ$ (nearly upside down), mostly $-1$'s, with occasional $+1$'s.
+    \item When $\theta = 90^\circ$, equal numbers of $+1$ and $-1$.
+\end{itemize}
+The average over many trials:
+\[
+    \boxed{\expval{\sigma_\theta} = \cos\theta.}
+\]
+This is exactly the component of a unit vector along the detector axis---the same answer classical physics would give for a little vector pointing up, projected onto a tilted axis.  But in quantum mechanics, the individual results are always $\pm 1$; only the \emph{statistical average} reproduces the classical projection.
+
+\medskip
+\noindent The same result holds if we rotate the detector in any plane (not just front-to-back but also left-to-right or any other direction).  The qubit has directionality in all three dimensions of space.
+
+% ============================================================
+\section{6. Key Observations}
+% ============================================================
+
+\begin{enumerate}[nosep]
+    \item \textbf{Reproducibility}: Repeating the \emph{same} measurement on the \emph{same} qubit yields the same result.  This is essential---without it, no experiment could ever be confirmed.
+    \item \textbf{Disturbance}: After measuring along one axis, a subsequent measurement along a \emph{different} axis gives a random result.  The act of measuring \emph{prepares} the qubit in a new state aligned with the detector.  In classical mechanics, measurements can be made arbitrarily gently; in quantum mechanics they cannot.
+    \item \textbf{Quantized outcomes}: The result is always $+1$ or $-1$---never a continuous intermediate value like $0.5$.
+    \item \textbf{Statistical behavior}: Averages of many measurements reproduce the classical vector-component rule $\expval{\sigma} = \cos\theta$, but individual outcomes are always $\pm 1$.
+    \item \textbf{Independence of trials}: When many identically prepared qubits are measured, the individual $\pm 1$ outcomes are completely random and uncorrelated from one trial to the next.  There are no hidden patterns or correlations in the sequence.
+\end{enumerate}
+
+% ============================================================
+\section{7. The Space of States is Not a Set}
+% ============================================================
+
+In classical mechanics the space of states is an ordinary \textbf{set} (points in phase space, faces of a die, etc.).  The entire classical logic of propositions (AND, OR, NOT) is the logic of subsets.
+
+In quantum mechanics, the space of states is \textbf{not a set}---it is a \textbf{vector space}.  This single fact is the source of almost everything that is ``strange'' about quantum mechanics.
+
+\begin{postulate}
+The states of a quantum system correspond to vectors in a \emph{complex vector space}.
+\end{postulate}
+
+The classical logic of sets (AND $\leftrightarrow$ intersection, OR $\leftrightarrow$ union) does not apply.  It is replaced by the algebraic structure of a vector space (addition, scalar multiplication, inner products).  Only in certain limiting cases---when systems behave classically---does the quantum description approximately reduce to a classical set.
+
+% ============================================================
+\section{8. Complex Vector Spaces}
+% ============================================================
+
+\subsection{8.1 Pointers vs.\ abstract vectors}
+An ordinary arrow in three-dimensional space is what Susskind calls a \textbf{pointer}---it has a length and a direction in real, physical space.  A \textbf{vector} in the mathematical sense is a more abstract object.  Do not picture quantum-mechanical state vectors as pointers in ordinary space.
+
+\subsection{8.2 Axioms}
+A \textbf{complex vector space} is a collection of objects (vectors) satisfying:
+\begin{enumerate}[nosep]
+    \item \textbf{Addition}: For any two vectors $\ket{A}$, $\ket{B}$, there is a sum $\ket{A}+\ket{B}=\ket{C}$ which is also in the space.
+    \item \textbf{Commutativity}: $\ket{A}+\ket{B}=\ket{B}+\ket{A}$.
+    \item \textbf{Scalar multiplication}: For any complex number $z\in\mathbb{C}$ and any vector $\ket{A}$, the product $z\ket{A}$ is also in the space.
+    \item \textbf{Zero vector}: There exists a unique $\ket{0}$ such that $\ket{A}+\ket{0}=\ket{A}$ for all $\ket{A}$.
+\end{enumerate}
+Any collection of objects satisfying these rules is a vector space.
+
+\subsection{8.3 Dirac notation (bra-ket)}
+We write vectors using Dirac's notation:
+\[
+    \ket{A} \quad\text{(``ket $A$'' --- a vector)}, \qquad
+    \bra{A} \quad\text{(``bra $A$'' --- its dual)}.
+\]
+Together they form a ``bra-ket'' (bracket).
+
+\subsection{8.4 Examples of vector spaces}
+\begin{enumerate}[nosep]
+    \item \textbf{Complex numbers} $\mathbb{C}$: the simplest complex vector space (one-dimensional).  Addition and scalar multiplication are just ordinary complex arithmetic.
+    \item \textbf{Column vectors} $\mathbb{C}^N$: a column of $N$ complex entries.  Addition and scalar multiplication act entry-by-entry.
+    \item \textbf{Complex-valued functions} $f(x)$: you can add two functions, and you can multiply a function by a complex number.  This is an \emph{infinite}-dimensional vector space.
+\end{enumerate}
+
+\subsection{8.5 Concrete representation: columns}
+For a two-dimensional complex vector space:
+\[
+    \ket{A} \longleftrightarrow \begin{pmatrix} \alpha_1 \\ \alpha_2 \end{pmatrix}, \qquad
+    \alpha_1, \alpha_2 \in \mathbb{C}.
+\]
+Addition and scalar multiplication:
+\[
+    \begin{pmatrix}\alpha_1\\\alpha_2\end{pmatrix} + \begin{pmatrix}\beta_1\\\beta_2\end{pmatrix}
+    = \begin{pmatrix}\alpha_1+\beta_1\\\alpha_2+\beta_2\end{pmatrix}, \qquad
+    z\begin{pmatrix}\alpha_1\\\alpha_2\end{pmatrix}
+    = \begin{pmatrix}z\alpha_1\\z\alpha_2\end{pmatrix}.
+\]
+Columns of length 2 and columns of length 3 belong to \emph{different} vector spaces; they cannot be added.
+
+\subsection{8.6 Dual (bra) vectors}
+For every ket $\ket{A}$ there is a corresponding bra $\bra{A}$ in the \emph{dual} vector space.  Concretely, the dual is the \emph{complex-conjugate row vector}:
+\[
+    \bra{A} \longleftrightarrow \begin{pmatrix} \alpha_1^* & \alpha_2^* \end{pmatrix}.
+\]
+The rules linking a vector to its dual:
+\begin{align}
+    \bigl(\ket{A}+\ket{B}\bigr)^\dagger &= \bra{A}+\bra{B}, \\
+    \bigl(z\ket{A}\bigr)^\dagger &= z^*\bra{A}.
+\end{align}
+Note the complex conjugation of $z$ in the second rule---this is crucial.
+
+\subsection{8.7 Inner product}
+The inner product pairs a bra with a ket to produce a complex number:
+\[
+    \braket{B}{A} = \beta_1^*\alpha_1 + \beta_2^*\alpha_2.
+\]
+
+\noindent\textbf{Key properties:}
+\begin{enumerate}[nosep]
+    \item \textbf{Conjugate symmetry}: $\braket{A}{B} = \braket{B}{A}^*$.  Swapping the two vectors conjugates the result.
+    \item \textbf{Squared length}: $\braket{A}{A} = |\alpha_1|^2+|\alpha_2|^2 \geq 0$, always real and non-negative.  It defines the \textbf{length} (norm) of the vector:
+    \[
+        \|\ket{A}\| = \sqrt{\braket{A}{A}}.
+    \]
+    \item \textbf{Positivity}: $\braket{A}{A}=0$ if and only if $\ket{A}=\ket{0}$.
+\end{enumerate}
+
+\subsection{8.8 Orthogonality and dimension}
+Two vectors are \textbf{orthogonal} if $\braket{A}{B}=0$.  Since $\braket{A}{B}=\braket{B}{A}^*$, orthogonality is symmetric: if $\ket{A}\perp\ket{B}$ then $\ket{B}\perp\ket{A}$.
+
+\medskip
+\noindent\textbf{Example:}
+\[
+    \ket{u}=\begin{pmatrix}1\\0\end{pmatrix}, \qquad
+    \ket{d}=\begin{pmatrix}0\\1\end{pmatrix}.
+\]
+Then $\braket{u}{d}=1^*\cdot 0 + 0^*\cdot 1 = 0$, so $\ket{u}$ and $\ket{d}$ are orthogonal.
+
+\medskip
+The \textbf{dimension} of a vector space is the maximum number of mutually orthogonal \emph{nonzero} vectors.  In a two-dimensional space, once you have found two orthogonal vectors, no third nonzero vector can be orthogonal to both.
+
+\medskip
+\noindent\textit{For a single qubit, the state space is a \textbf{two-dimensional} complex vector space.  Next time we will connect this mathematical structure to the physics of the qubit experiments described above.}
+
+\end{document}

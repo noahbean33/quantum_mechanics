@@ -1,0 +1,246 @@
+00:00:00
+alright so in this video we are going to talk about quantum spin for spin 1/2 particles and a few examples of spin 1/2 particles are electrons protons and neutrons there are other examples but those are the most familiar now the reason I'm making this video is that I find that when people talk about quantum spin use many analogies and they say that spin is like the particle is actually spinning but not really or they say that's been is like an angular momentum vector but not really and they
+
+00:00:46
+go on and on about what spin is like but they don't just say what it is I find this pretty frustrating because quantum spin is actually extremely simple it's probably even simpler than angular momentum in classical mechanics they could teach it to you in middle school if they wanted to but for some reason they don't anyway in this video or maybe I should say series of videos I'm going to tell you a quantum spin is and I'm going to tell you how it works I'm not just going to tell you what it's like
+
+00:01:13
+I'm gonna tell you what it is and the only thing I'm gonna ask that you know about ahead of time is complex numbers so just to remind you we denote the real numbers with this special R symbol and examples of real numbers are 0 1 negative 4 point 3 5 16 over 31 4 minus 3 times pi and a common notation that you'll see is that for example 4 minus 3 times pi is an element of the real numbers so here R denotes the set of all real numbers and because 4 minus 3 times pi is a real number it's an element
+
+00:02:14
+of this set okay so by contrast this special c symbol denotes the complex numbers and examples of complex numbers include of course I to minus 3i maybe Oh 17 for example as a complex number or 3 minus 42 I and if a and B are real numbers so a and B are elements of the real numbers then a plus B times I is a complex number right so just to remind you I guess I forgot to say this but I squared is negative 1 so the imaginary unit so yeah every complex number can be written as a plus bi for some real numbers a and B so now let me
+
+00:03:31
+just clear this a bit one other thing I must remind you about the complex numbers is that if you have some complex number Z just a plus bi so Z is a complex number and a and B are real numbers then we define Z bar to be a minus bi this is called the complex the complex conjugate of Z furthermore we define the magnitude of Z squared so we have these two bars around Z and we square it this is defined to be Z bar times Z so if Z bar is a minus bi and Z is a plus bi then we can distribute this term into these two
+
+00:04:44
+terms separately and that's equal to a times a plus bi minus bi times a plus bi and that's equal to a squared plus a times B times I minus B times up well I guess maybe a better way to write that would be B times a times I and then here we have plus let me write minus B times I times B times I so first things first this term cancels with this term and second things second you know because we have I squared equals negative 1 this immediately just becomes a squared plus B squared so because a and B are both
+
+00:05:43
+real numbers a squared plus B squared is also a real number and furthermore a squared plus B squared is always going to be greater than or greater than or equal to 0 it's 0 if a and B are both 0 and it's greater than 0 if either A or B isn't 0 and that's going to be an important fact that we'll come back to later ok that was just a little review of complex numbers hopefully you knew it but it's good to just you know again be on the same footing all right now we're going to talk about
+
+00:06:15
+vectors the way you're used to them so the way you're used to vectors is let's say you have a vector L right and we know it's a vector because I drew an arrow on top of L and L is given by three numbers which we'll call LX ly and LZ and these three numbers are the three components of the vector so LX ly and LZ are all real numbers that means that the vector L is an element of a set which we call r3 now r3 is just the set of three dimensional vectors with real components that's just how we denote it
+
+00:07:44
+now another way that we could write L is we could write it as the vector l equals LX times I hat plus ly times J hat plus LZ times k hat now I hat is just the vector which is 1 0 0 J hat is the vector which is 0 1 0 and k hat is the vector which is 0 0 1 and these three vectors I hat J hat k hat are all basis vectors so that means that any vector in r3 so any vector in r3 can be written as a combination of I hat J hat and K hat oops now let's clear away screen all right so these vectors also have
+
+00:08:59
+something called a dot product so if you have one vector V which has components V X V Y and V Z and you have another vector u which has components u X u Y and uz then V dot u is equal to VX times UX plus V Y times u y plus VZ times uz and notice that V dot u is equal to u dot V so the dot product is what we call symmetric furthermore V dot u is just a single real number so we say V dot u is an element of the real numbers V dot u isn't a vector it's just one number all right now the next thing I want to say
+
+00:10:22
+is that we can find out what the dot products between the basis vectors are so for example I hat dot I hat is one and I hat dot J hat is zero furthermore I hot dot I hat dot k hat is zero J hat dot J hat J hat J hat is 1 J hat dot k hat is 0 and k hat dot k hat is 1 so this is all the dot products between all the different basis vectors so this means that we can use the dot product along with the basis vectors to find the components of all of our vectors so for instance V sub X which is the X component of our vector V is just equal
+
+00:11:22
+to V dot I hat and furthermore V sub y is equal to V dot J hat and V sub Z is equal to V dot k hat so roughly speaking the dot product measures how much two vectors point in the same direction so let me draw two sets of vectors so these two vectors are going to have a bigger dot product than these two vectors because these two vectors basically point in the same direction they're almost parallel whereas these two vectors are pointing in very different directions and they're almost orthogonal to each other
+
+00:12:13
+so one way to say it is that the dot product measures how much two vectors overlap roughly speaking all right so after all of that we're finally going to talk about quantum spin so how quantum spin is different from the regular way of thinking about vectors so there are two huge differences so the first difference is that quantum spin vectors are 2-dimensional not 3-dimensional all right so they only take two numbers to specify not three numbers that's the first difference and the second
+
+00:13:21
+difference is quantum spin vectors have complex components not real so in other words quantum spin vectors are elements of c2 not r3 that's pretty weird so it takes two complex numbers to specify quantum spin vector instead of three real numbers now there are also many notational differences and if you want to understand what everybody else is writing you got to understand the notation so to start off usually we write the basis vectors as I had J hat and K hat but we're talking about spin the basis
+
+00:14:42
+vectors are written as follows that and that now you should read these as spin up and spin down now this thing this this line and then this bracket this thing is called a ket just called that and we put like a little thing inside the ket out here we have an up arrow or a down arrow these are really just labels or maybe you can even think of them as stickers if you like so whereas we would usually write a vector V as V X I hat plus V Y J hat plus VZ k where v is an element of r3 we would now write sigh that's the Greek letter side
+
+00:16:08
+we just physicists just like to use this letter for no particular reason it just looks pretty cool anyway this is a vector right is equal to alpha times the spin up vector plus beta times the spin down vector where sy where the scythe there is an element of C 2 and alpha and beta are each complex numbers the main thing I want you to take away from all this is that even though spin is weird mathematically speaking it's actually pretty easy it's really basically just the same thing as regular vectors except
+
+00:16:58
+for the fact that they're two-dimensional and they have complex components instead of real components the math itself is pretty simple alright so now I'm going to clear this all right so now we're gonna talk about one other tiny little thing column vectors which is just the way grown-ups right vectors so really is actually it's very simple okay so this spin up vector right grown-ups write it with a 1 on top of a 0 and they write the spin down vector with a 0 on top of a 1 this is
+
+00:18:02
+exactly the same thing as writing you know I hat is 1 comma comma 0 J hat a 0 comma 1 comma 0 and K hat as 0 comma 0 comma 1 the only difference is one number is on top of the other number instead of the numbers going from left to right now why do grown-ups write them as these columns these column vectors I don't know I mean I think it looks a little cooler but uh yeah I don't know just the way they do it so you got to know this so right so just to really hammer home instead of writing actually
+
+00:18:52
+maybe they should so if we were to write sy equals alpha up plus beta spin down that would be equal to alpha and then the spin up vector has a 1 on top of a 0 and the beta vector has a 0 on top of a 1 and that's just equal to the vector with an alpha on top of a beta which is in situ whereas you might be used to writing a vector V s VX + V Y J hat plus VZ k hat which is equal to VX comma V Y comma VZ which is an element of r3 alright now take all that in while I erase the screen I know it's just been a
+
+00:19:58
+lot of notation but you got to know the notation so just try your best alright so the next thing we have to talk about is the so called inner product which is basically more or less like the dot product so remember that V dot u equals V x ux + v y uy + VZ u z now let's say you were to have sy 1 which is equal which has components of alpha 1 and beta 1 and which is an element of c2 and you were to have situ which has components alpha 2 and beta 2 and which was also an element of c2 now the way that you write the dot product
+
+00:21:15
+here is not is not like that right like like I'm not even gonna not even gonna keep that on the screen because it's just like so wrong how you write it is as follows it's kind of spiffy notation but you flip one of the brackets and you kind of put them together like this right and this is called the inner product of site 1 in situ and it's equal to the following thing so alpha 2 bar complex conjugation times alpha 1 plus beta 2 bar times beta 1 now just as V dot u was just a single real
+
+00:22:13
+number the inner product of site two and side one is a single complex number now I want to point out one difference with the regular inner product as you remember V dot u is equal to u dot V we said the dot product is symmetric here this inner product isn't exactly symmetric so if I write sy one on the left right so here I have site one to the left you have site 1 on the right the inner product here is actually alpha 1 bar times alpha 2 plus beta 1 bar times beta 2 and that is equal to the complex conjugate of side to side 1 so
+
+00:23:14
+we don't exactly have that the so here ok so the dot product is exactly symmetric but with this inner product we've defined here it's almost symmetric but you have two complex conjugate the whole thing alright so that is a that's the inner product okay so there's one more piece of math I gotta tell you I know it's getting a little bit tiring but it's actually pretty exciting if you were learning this for the first time if you're not I apologize but now once you know this
+
+00:24:04
+you're going to be able to read a lot more things all right so now we're gonna talk about dual vectors and it sounds scary but really it's not so I told you that we write our vectors as column vectors so sigh here has components of Alpha and Beta let me just actually write column vector now dual vectors you might be pleased to note are written the way you would normally expect vectors to be written from left to right so let me just write this here if I just write it it'll seem less scary than if I try to
+
+00:25:07
+explain it so here I have a row vector here I have the numbers written in a row usually you don't write the comma like you would normally write but yeah okay here's the point though you can take a vector and turn it into its dual vector by changing this bracket here and making it this bracket here sort of like mirroring the the brackets and also turning it from a column vector into a row vector and also complex conjugating the components now there's some very silly names for these things so a vector as I said
+
+00:25:55
+earlier is called a cat and alright so let me let me actually just say that these names and basically all this notation was invented by a guy named Iraq you might have heard of it so okay so get ready okay so he caused these vectors cats alright now you're like what I know why is it called the cat doesn't make any sense all right it's about to make sense right now he calls these dual vectors bras yeah cause them bras so why why did he call them bras and ket's right well you might have guessed it but if you put
+
+00:26:37
+a dual vector next to a vector this whole thing is called a bra ket or a bracket because it's an inner product and it's in between these two brackets I know so make of that what you will if you've ever if you if you're familiar at all with matrix multiplication makes you just write all this out oh sorry so if you're familiar at all with matrix multiplication you might recognize this as a I think it's a two by one matrix I'm trying to think of it's one by two or two but I'm pretty sure it's two by
+
+00:27:39
+one so yeah this vector here is a 2 by 1 matrix and this dual vector is a 1 by 2 matrix and if you carry out you don't know matrices are don't worry by the way I'm just saying for those you could you know what matrices are but if you care at the matrix multiplication this whole thing is a 1 by 1 matrix which is just a number so yeah ok there's been a lot of notation but the point is is that you can make a vector into a dual vector by complex conjugating the elements and writing them in a little row and if you
+
+00:28:15
+put a vector next to a dual vector and you just sort of write them out like that that's really just the same thing as the inner product the way I wrote it before now you're saying ok well what was the point of talking about these dual vectors well it kind of helps you you know work out you know steps a little bit easier well we'll make use of these dual vectors throughout the video I just wanted to let you know what they were they're really nothing scary if you don't really get like why did I write
+
+00:28:49
+this row vector next to this column vector like this and then declare that like it's this number it's really just a rule it's really nothing more than that all right so that's enough math now we are finally going to talk about physics so measurements and probability so in physics there are two types of people there are experimenters and there are theorists now when it comes to spin experimenters are only allowed to ask one question so experimenter can ask is an electron let's say our particle is an electron is
+
+00:29:46
+an electron spin up or spin down with respect to a particular axis alright so by axis I mean an axis in space like the x axis the y axis of z axis so this is the only question experimenter can ask there are only two possible answers right can either be spin up or spin down now the theorists at best can only say I can give you the probabilities of the electron being spin-up or spin-down but i can't say for sure which it will be so the theorists can't tell the experimenter whether it's going to be up
+
+00:31:29
+or down 100% certainty all they can say is it's this percent chance that it's going to be spin up or this percent chance that it's going to be spin down so this is the best you can do in quantum mechanics so let me explain the setup so here I am drawing the z-axis here's the z-axis and right here chillin right here we have some electron and the electron has some state I'm going to start calling this thing this vector a state a state vector and it has components alpha and beta and here we
+
+00:32:23
+have the experimenter so they have a clipboard and they have on safety goggles and as per lab rules they have to have their hair back in a ponytail and they also have to have closed toed shoes and the experimenter is asking oh and the experimenter also has some sort of device so I'm not gonna go into details as to what this device is but this device is going to be able to answer the question of is the electron spin up or down right so here's the experimenter and they're asking is the electron spin up or spin
+
+00:33:29
+down with respect to the z-axis so that is what they're asking now you might be asking wait a second how does this device actually work like how do you actually figure out if an electron is tipping up or spin down and to that I say I'm not gonna tell you right now I'm gonna talk more about the measurement process in a later video but for right now I just focus on the math all right so all right so what is the probability that the electron is going to be spin up or spin down well first off if our state sigh is in
+
+00:34:17
+the spin up state which is equal to 1 0 then there's a hundred percent chance that it's going to be measured to be up and a zero percent chance that it's going to be measured to be down if sy is in the spin down state which is equal to zero one then there's a zero percent chance that's going to be measured to be spin up and a 100 percent chance that it's going to be measured to be spin down and in the most general case if sy is equal to alpha times spin up plus beta times spin down meaning its
+
+00:35:06
+components are alpha and beta then the magnitude of alpha squared is going to be the probability that it's measured to be spin up and the magnitude of beta squared is going to be the probability that is going to be measured to be spin down now notice that the probability that the electron has spin up plus the probability that the electron has spin down has to be equal to one that's because there's only two possible outcomes now the condition that the magnitude of alpha squared plus magnitude of beta squared is one can be
+
+00:35:47
+written a little bit differently as follows notice that the inner product of psy with itself which we can write using our row vectors and column vectors as follows equals alpha bar times alpha plus beta tart beta bar times beta just equal to the absolute value of alpha squared plus the absolute value of beta squared that has to also be equal to one so we can see that the condition that the inner product of psy with itself be equal to one is the same thing as the condition that all probabilities sum to
+
+00:36:31
+one now we're gonna clear the screen and we're gonna [Music] right all this another way so notice that the inner product of the spin up vector with psy which we can write as follows is just equal to alpha and the inner product of the spin down vector with psy which we can write like this is equal to beta so the probability that we have spin up along the z axis is just the absolute value of the inner product of the up of the spin up state with psy squared right because that's just equal
+
+00:37:45
+to the absolute value of alpha squared and the probability that we have spin down along the z axis is equal to the absolute value of the inner product of the spin down state with sy squared because that's just equal to beta squared alright so clearing the screen again you might be asking yourself what's so special about the z axis what if I want to measure the spin along the x axis or the y axis so now we're going to talk about other axes so let's talk about the state that's always spin up
+
+00:38:33
+along the x axis I'm going to note that with this up arrow and this X in the subscript so you might wonder what is the state such that when you measure it along the x axis it'll always be spin up and you can't really guess it so I'm just going to tell you what this state is you just have to believe me for a few moments it's the state where the components are one over root two and one over root two me saying well that's pretty weird now what's the state that's always down in
+
+00:39:09
+the x-axis that's the state with components 1 over root 2 and negative 1 over root 2 you say ok that's pretty weird what's the state that's always spin up in the Y axis I'll write it here so spin up on the y axis that's the state with components 1 over root 2 and I over root 2 all right so now we're finally really using the imaginary numbers here and what's the state that's always spin down in the Y direction well that's the state with components 1 over root 2 and negative I over root 2
+
+00:40:04
+finally just for completion as you know the state with that's always spin up in the z axis has components 1 and 0 and a state that's always spin down in the z axis has components 0 and 1 now you might be wondering why are there so many square root of twos everywhere and that just gets back to what we were discussing earlier that the inner product of a state with itself has to be equal to 1 so that all the probabilities sum to 1 so for instance the inner product of the spin up state along the x axis with
+
+00:40:47
+itself is equal to 1 over well it's just equal to this which is equal to this which is equal to 1/2 plus 1/2 which is equal to 1 just as we need clear this away let's also do the example of the spin up state with respect to the y-axis and see what the inner product of that is with itself so remember that when we take the dual vector this thing right here is the dual vector we got a complex conjugate the components so this is equal to the dual vector with components 1 over root 2 and negative I over root 2 right so you see
+
+00:41:58
+that here the second component was I of root 2 we got a we got a complex conjugate it when we take the dual vector so it becomes negative over root 2 so alright that's just equal to that which is equal to that which once again equal to 1/2 plus 1/2 which is equal to 1 all right so clearing this once again I want to ask one more question which is what is the inner product of the spin-up vectors and the spin-down vectors along each axis so what is the inner product of the spin-up vector along the x axis with the
+
+00:43:04
+spin-down vector along the x axis well that's just equal to that which is equal to which is equal to that which is just equal to 0 right because of the minus sign likewise you might be able to you might already know where this is going but let's also take the inner product of the up spin up state with the been down state along the y axis and taking the dual vector of the of the spin up state along the y axis remember we have two complex conjugate so the AI becomes a negative I and now putting in the spin
+
+00:44:11
+down vector here we see that we have another negative AI from that and that's equal to this and negative I times negative I well that's just the same as a I times I which is equal to negative one so here we have 1/2 minus 1/2 which is also equal to 0 and finally as we already know the spin up state long as the axis and the spin down state along z-axis also have an inner product of 0 so in any axis the spin up state has an inner product of 0 with the spin down state alright so having cleared the screen and
+
+00:45:17
+done all that algebra I'm now gonna answer the question what is the probability if you have a state sy that when you measure its spin along the x axis you will measure its spin to be spin up so the probability that you measure spin up along the x axis is just the absolute value of the inner product of the spin up state along the x axis with sy squared likewise the probability that you measure spin down along the x axis is the same thing but you got to use the spin down vector along the x axis instead likewise the probability
+
+00:46:17
+that you measure spin up along the y axis is the same thing but now you gotta use the spin up state along the y axis that is a y and the probability that you measure spin down along the y axis is the same thing but now you got to use the spin down vector along the y-axis and this is exactly as you remember this this fits in with what we saw earlier that the probability of measuring spin up along the z-axis is just this the absolute value of the inner product of the spin up state along is the axis with
+
+00:47:11
+sy squared it's a bit of a mouthful my probability of measuring spin down along the z axis is just this all right so let's clear some of this up and I want to make a very important point whether a particle has a definite spin so my definite spin I mean it's either 100% up or down depends on what axis you're measuring the spin so for example the state that has definite spin up along the x axis has it doesn't have definite spin up along the z axis right because you can just quickly calculate that the
+
+00:48:34
+probability of measuring spin up along the z axis is just going to be [Music] the following number which is just root 1 over root 2 squared which is just 1/2 which is 50 percent right so you know whether or not this state has a definite spin or not depends on what axis you're measuring the spin if you measure the x axis it has definite spin so 100% always spin up but if measured on the z axis then 50% of the time you're gonna find it's spin up and 50% of the time you're gonna find that it's spin down
+
+00:49:23
+this actually I think this is a good time to just give one piece of terminology so the spin up state along the x axis can be written as follows as 1 over root 2 times the spin up state on the z axis plus 1 over 2 times the spin down state along the z axis and this right here when we have a state that's a sum of two other states we call this a superposition which you might have heard before that's just a word we use so we could say that the spin up state along the x axis is in a superposition of a
+
+00:50:17
+spin up state long as the axis and a spin down state along the z axis so that's just I just want to explain what that word meant it's really nothing too complicated all right all right now I want to go through an example so I want to calculate all of the expectation values along all of the axes for the following state which is 3/5 spin-up plus I times 4/5 pinned down so we're going to calculate the expectation values that had spin up along the x axis it's been down along the x axis spin up on the y axis spin
+
+00:51:09
+down along the y axis spin up along the z axis and spin down along the z axis and if you don't want to see this just skip this part first things first I want to check to make sure that this state really does the inter product of the state with itself really is 1 so remember that you got a complex conjugate for the row vector for the dual vector and the idea is for this is that if you want to you can pause the video and work this stuff out for yourself and see if your answers agree with mine just so everybody is on the
+
+00:51:56
+same page 9 9 over 25 plus 16 over 25 and 9 plus 16 is 25 so this is 1 and ok so this is a good state talk about all right so let's start with the probability that it's spin up in the X direction I'm really concentrating here you all right so the probability that it's spin up and the x-axis is 50% now you can already figure out just from the fact that all the probabilities have to add up to 1 that the probability that this is going to be spin down in the x-axis is also also has to be 50% but
+
+00:53:48
+even though you already know we already know what the answer is I just want to work it out just so you really are convinced this was just all right so this is just equal to 50% as you knew it had to be now we're going to calculate the probability that it's going to be spin up in the Y direction and that's going to be given by this negative so I times negative I is just one so all in all this is 7 over 5 root 2 squared which is 49 over 25 times 2 which is 49 over 50 which is equal to 98% so that's
+
+00:56:05
+actually it's actually kind of interesting that it's almost but not quite a hundred percent to be spin up in the Y direction and that's basically because the vector that's spin up in the Y direction is this vector and as you can see this vector is actually very similar to this vector and the inner product between two vectors is basically the overlap between the two vectors or how much are the same and because those two vectors are almost exactly the same we can see that this vector you've
+
+00:56:49
+written down is almost perfectly pointing in the Y Direction upwards so because we know that the probabilities have to sum to 100% we know that the probability that we measure a spin down in the Y Direction that has to be 2% but it's good to check the math anyway makes you feel responsible alright and I squared is equal to negative one so this is equal to the absolute value of negative one over five root 2 squared which is equal to one over 50 which is equal to two percent which is exactly what it had to be but it's good to uh
+
+00:58:13
+it's good to confirm it anyway all right now the z axis is definitely the easiest one so the probability that spin up in the z axis is just equal to 3/5 squared is equal to nine over twenty fifths also playing the numerator and the denominator by 4 we see that this is 36% so now we're going to calculate the probability that spin down in the Z direction and that's just equal to 4/5 squared [Music] which equals 16 over 25 and multiplying the top and the bottom by 4 once again you find that this is equal to 64
+
+00:59:55
+percent it's just what it had to be so that all the probabilities sum to 100% all right so now we're done with that example and now there's one last really important thing I want to talk about and that is collapse so after a measurement is performed something really important happens and that is that your state will collapse onto whatever it was measured to be so let's just say our state started out as alpha times spin-up plus beta times spin-down and we know that there is a magnitude of alpha squared
+
+01:00:39
+percent chance that's going to be measured to be spin up and there is a magnitude of beta squared percent chance it's going to be measured to be spin down and if it's measured to be spin up then after the measurement is performed the state will then be equal to the spin up state and if the state is measured to be spin down then after the measurement is performed the state will be measured to be spin down and what this means is that if you conduct the same measurement a bunch of times over and over you're
+
+01:01:23
+going to always get the same answer so if you were then to measure again is it spin up so okay let's say the first time you measured it you found that it was spin up if you then measured it again there would be a 100% chance that it would be spin up again and then your state would still be the up state likewise if you measure the first time that it was spin down there's a 100% chance that if you conduct the same measurement again that the state will be spin down and then the state will remain spin down
+
+01:02:03
+so I want to say a few things about collapse the first thing is why is it called collapse like what is the word like what image is the word collapse evoke so the picture a lot of people have in their minds is that the sigh vector has a component along the spin-up axis and the spin down axis and the idea is that after the measurement is performed the vector sy will either collapse onto its component along the spin up direction if its measured happy spin up or it will collapse onto the spin down vector and it's maybe you can
+
+01:02:53
+think of it like a piece of furniture or a folding chair or something like collapsing so that's why it's called collapse the second really important thing I want to say is that collapse is what prevents an experimenter from figuring out the quantum state of a system to arbitrary-precision so you might think that well even though I could only calculate the probability that the states sy is measured to be up or down maybe if I measure it a bunch of times and I measure it in many different axes
+
+01:03:37
+I can calculate okay how many times I get spin up and spin down and I can find what those probabilities are and I can then pin down what alpha and beta are by doing a bunch of measurements but quantum collapse prevents you from doing that because if you keep doing the same measurement over and over you're going to keep getting the same answer over and over the thing is that in quantum mechanics you do a measurement your state is altered due to the measurement and this is quite different than what we're used
+
+01:04:15
+to in classical mechanics so I mean even though it's the case that in real life if you try to measure something in some way you're usually going to have to alter the thing you're measuring there's no law of classical physics that measuring something has to somehow alter the object that you're measuring but in quantum mechanics it really is the case that if you measure something you are gonna alter the thing that you're measuring all right now that I've talked about quantum measurement collapse I
+
+01:04:54
+could not tell you about something pretty funny about quantum spin so let's say you start with an electron which is completely in the spin up state in the Z direction and let's say you were to measure the spin of this electron along the x axis now 50% of the time you're going to measure the spin to be up and then the electron will collapse to the spin up state in the X direction and 50% of the time you're going to measure it to be spin down and then your electron State will collapse to the spin down
+
+01:05:44
+direction to the spin down state in the X direction but now let's say after you measure it along the x axis you then measure it along the z axis and remember that originally if you would have just measured this along the z axis a hundred percent of the time you would have found that it was spin up but now because you did a measurement in between because you measured it along the x axis in between you're gonna find that 50% of the time you'll be spin up and 50% of the time it'll be spin down and this will be the
+
+01:06:30
+case no matter what the intermediate measurement said so here we can see a really clear demonstration of how performing a measurement changes the quantum state due to quantum collapse if you didn't do this intermediate x-axis measurement it wouldn't you would have just got spin up a hundred percent of the time and spin down zero percent of the time but because you did this intermediate measurement you will now find that 50% of the time it'll be spin up which are these two possibilities and
+
+01:07:09
+50% of the time it'll be spin down which are these two possibilities now there's one thing that might bother you about this whole collapse situation which is that as I've described it quantum collapse seems instantaneous it seems as though there's one precise point at which the state is measured and it collapses onto one of its basis states and we have this sense that in physics and in life in general nothing is truly instantaneous that measurements take some interval of time and that there
+
+01:07:47
+isn't one exact time at which something is measured so you might be wondering what's going on with that and all I want to say is that that that instinct to say that nothing is instantaneous is actually correct and that measurements do take a bit of time and in a later video I'm going to talk more about measurements in general because it's definitely one of the most intricate parts of quantum mechanics and that these measurements truly aren't instantaneous so that's all I'm gonna
+
+01:08:20
+say about that for right now Wow so we've talked about a lot in this video but I still have a few more things to say that didn't get covered yet so here are my final stray remarks okay say that you have a state sigh with components alpha and beta and say that you have some complex numbers Z such that the absolute value of Z is 1 right now say that you take Z and you multiply side by Z so now the state Z times sy has components Z alpha and Z beta the thing is that the states I and Z times I
+
+01:09:20
+have no observable differences so here's what I mean if you want to measure the spin of sy along the x direction the probability that it has spin up is just that right if you want to measure the probability that z sy has spin up along the x direction then the probability that it's going to have spin up is equal to this and it's a little weird notation but all it means is that z sy is now the state that you're computing the inner product with with the up spin up state in the X direction
+
+01:10:15
+but the thing is that and if you really write it out you'll see this for yourself but you can just pull the Z out of the brackets and this is just equal to Z out front and then the inner product of the spin up state along the X direction with sy and then the absolute value of two complex numbers multiplied with each other is equal to the product of the absolute value of those two complex numbers so this equal to that but because we know that the absolute value of Z is 1 we know that the probability
+
+01:11:06
+of measuring spin up along the X Direction it's just this but this is the same as this so the probability of measuring spin up along the X Direction for this state is the exact same for this state and it doesn't only work for spit up along the X Direction actually works for any measurement along any axis this is a general fact that sy and Z times I have no have no observable differences they are in some sense the exact same state so that's one pretty important thing to mention so I want to
+
+01:11:55
+talk about something else which is that at the beginning of the video I said that we were restricting our attention to spin 1/2 particles so what is this term spin 1/2 really mean and turns out that's actually a pretty complicated question and the answer to this question I would say lies in a branch of mathematics called representation theory which is far beyond the scope of this video this would take many many videos to talk about but the spins that a particle could have our 0 1/2 1 3 halves
+
+01:12:48
+to five-halves and so on and on and the main thing to say about it is that our spin States I wear elements of c2 right but if you have a general spin s right that's not necessarily a half it turns out that instead of being two-dimensional these vectors have dimension to s plus one so if s equals zero then 2's plus 1 equals 1 right and States live in c1 but these are actually extremely boring because because all of our states need to have norm one a one dimensional vector with norm one is
+
+01:13:38
+there's just nothing interesting about that now if you have spin 1/2 which have been talking about this whole video then 2's plus 1 equals 2 and we're talking and then States living see - and that's decently interesting it's taken up this whole video to talk about that if s equals 1 then 2 s plus 1 equals 3 and then states live in C 3 and if s equals 3 halves then 2's plus 1 equals 4 and our states are elements of C 4 and on and on and on now well I'm talking about these other spins there's something I
+
+01:14:23
+think the things actually may be the last thing I'm going to talk about this video which is angular momentum so even though I haven't really talked about angular momentum at all in this video spin and angular momentum are very closely related so in quantum mechanics angular momentum comes quantized in units of h-bar so what do I mean quantized in units of h-bar I mean that you can only measure the angular momentum of an object in integer multiples of H bar so let me explain what this means so for a spin zero
+
+01:15:12
+particle right so spin zero particle the angular momentum along any axis is always going to be zero for that particle but for a spin 1/2 particle the angular momentum could be minus h-bar over 2 if the particle has spin down along that axis or just plus h-bar over 2 if the particle has spin up along that direction first spin one particle the angular momentum could be minus H bar 0 or H bar for a spin three-halves particle the angular momentum could be minus three-halves H bar minus 1/2 H bar one 1/2 oh no 1/2 of H bar or
+
+01:16:13
+three-halves times H bar and the thing is that they always go in steps of H bar right so from minus 1/2 H bar to plus 1/2 H bar is isn't H bar jump right so the same thing H bar H bar H bar you add H bar you add H bar you add H bar so I mean if you've never seen this before you might be thinking well you know why is like this is like you're just telling me this like look why is this really true it's actually a very interesting question about it this isn't really the appropriate place to talk about it
+
+01:16:55
+seeing as we've just gone through this enormous video okay so I hope you learned something about spin it's actually extremely interesting even though it takes a while to explain honestly the math is pretty simple I mean the most complicated thing about it is that you have complex numbers in the next videos I'm going to talk about the poly spin matrices expectation values but you definitely be pretty interesting and then I'm going to talk about how spin changes in the presence of a
+
+01:17:31
+magnetic field so the dynamics of a spinning particle how the spin state changes in time and after that hopefully I'm going to talk about quantum measurement so I hope you stick around for those videos and thank you for watching
+

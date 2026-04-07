@@ -1,0 +1,432 @@
+00:00:01
+[Music] Stanford University let's just review for a moment uh the uh the chemistry that went into the discovery of Spin and um the firic character of electrons basically the fir iic Char character implies two things and they're actually believed to be related to each other but they're different one of them has to do with the spin of the electron spin of the electron is half Spin and uh that means that the spin as far as the spin goes if we forget about the orbital motion of the electron and
+
+00:00:54
+so forth the electron has two spin States corresponding to spin a half plus a half and minus a half uh the other property that qualifies the electron as a fon is that it satisfies the PO Exclusion Principle you can't put more than two of them into the same state in talking about the states spin counts so if for example uh we we ignored the spin and for example we talked about putting two electrons into the ground state wave function of a hydrogen atom yes you can do that you can put two electrons into
+
+00:01:45
+the lowest energy level but only because you have the spin to soak up the uh the poly Exclusion Principle and so you put them in with opposite spin if you try to put a third one in you can't put it into the ground state if you try to put a third one in let's say because we're dealing with lithium of course for helium we can put both electrons into the ground state uh in the approximation that we ignore the interactions between the electrons in other words in the chemist's bad approximation
+
+00:02:19
+incidentally these days chemists are very sophisticated Quantum physicists really good chemists and they're very sophisticated but you know the old uh the old picture of the atom the shell model and all those sorts of things that were simplistic which didn't work very well but you know they work a little bit you can put two electrons into the ground state of the helium atom so the helium atom behaves as if you had two electrons both in the lowest energy State uh and that's okay because they
+
+00:02:54
+have opposite spins if one is up then the other's down if one is down the other is up in fact in fact those two electrons are entangled they're entangled in exactly the way that uh well they're entangled one is up the other's down one is down the other is up and that's a that's an entangled State uh once you go to lithium you can't put another electron into the ground state and I don't mean into the ground state of the hydrog of the helium atom I mean of course into the ground
+
+00:03:24
+state of the electron wave functions in the vicinity of the of the lithium nucleus uh the lithium nucleus also has a collect a charge and it also has a collection of wave functions for electrons you can put the first one into the ground state you can put the second one into ground state but then the third one has to go into another state simply no room for it by room I mean from the point of view of the Exclusion Principle so you start filling another shell and how many how many energy levels are there at the next Shell well
+
+00:04:00
+we can draw our energy level picture that we drew before uh angular momentum zero which is called the swave at least for the simple approximation in which the electrons don't interact there's the ground state and then there are excited states which still have angular momentum zero and so forth and so on and then there's the p waves the p wve waves our angular momentum one or orbital angular momentum one P stands for something I don't know what and the first p-wave has more energy than the
+
+00:04:40
+first s-wave and it has three states the three possible states of orbital angular momentum one and then there are above that and by accident by the accidents or the they're not really accidents of course but by the funny mathematics of the potential the first ex the the well there's degeneracies extra degeneracies that I've indicated here on the diagram and so forth and so on SP PD that spectroscopic notation at the next level the first sorry at the next angular momentum this is L equal 0
+
+00:05:24
+L = 1 L = 2 at the next uh at the D wave level L = 2 the lowest energy state is already up to here 1 2 3 4 5 1 2 3 4 5 and so forth five states for l equals 2 and that's what the pattern of energy levels looks like okay so you go to the um you go to the lithium atom the lithium atom you put in two electrons into the lowest energy state so they're both in the lowest energy s wave state and now you have an extra electron you have to do something with well you could put the extra electron upstairs at some higher
+
+00:06:07
+energy state but it would be unstable because it would Decay by emission of a photon which we haven't gotten to but it would but it would Decay down to something of lower energy what you can do is put the next electron into any one of these four states okay keep going what comes after lithium I can't remember brillium okay then you come to brillium brillium you fill the lowest one and you fill one of the next levels but wait a minute there's four electrons now so you fill two of them okay that's a burum what comes
+
+00:06:54
+after burum Boron Boron okay and the one have the Boron who carbon carbon good right and if there wasn't spin at the next level which at the next atom which is what's the next one H what is they nitrogen at the next nitrogen level you would have to start filling up these up here but that's not the way it works the spectroscopy and everything we know about it is consistent with putting the fifth is it the fifth electron um one two whatever the uh the uh the next one fits in again into one of these levels
+
+00:07:45
+and that works until you've gotten to neon neon neon okay in neon there are eight electrons in this first excited energy level here why are there eight well one for each orbital angular one for each orbital state but up but you also have the spin degree of Freedom so there are eight states that can be occupied here and then beyond neon I I don't remember my chemistry whatever sodium who sodi sodium yeah right sodium is the next um metal and uh right you have to put one of them up here yeah and you know the story I mean you
+
+00:08:33
+know the story as well as I do uh veence electrons and so forth uh sodium looks sort of like hydrogen and so does lithium because it has one extra electron in a outer in the outermost uh electron orbit and so forth I I didn't want to do chemistry tonight I just wanted to remind you that two things seem to go together the Exclusion Principle and the spin a half now could you have here's an interesting question could you have particles which will spin a half but didn't have an exclusion principle you
+
+00:09:17
+could put that spin a half oh before I talk about that let's talk about photons do photons have an exclusion principle photons most certainly do not have an exclusion principle and in in fact classical electromagnetic waves are typically waves uh in which many many many quanta photons are all in the same state that's what makes them classical that they have a very very large amplitude a very very large number of photons all in the same state and so photons most certainly don't have an
+
+00:09:54
+exclusion principle in fact it's almost the opposite there's a tendency for them to want to be in the same state but uh of course photons don't want anything but uh they do tend to congregate into the same state whereas firion the half spin particles can't be in the same state so you might ask could there be a particle of half spin which doesn't satisfy the uh the power Exclusion Principle or could there be a particle of integer spin for photon is an integer spin particle spin one or even spin zero
+
+00:10:35
+could there be one of those which does satisfy the poly Exclusion Principle and the interesting fact is that they go together half integer spin that doesn't necessarily mean spin one/ half it could be spin three halves spin five halves spin seven halves uh those half spin objects always satisfy the EXP Exclusion Principle and and the spin integer particles never satisfy the Exclusion Principle is that a theoretical result that's a theoretical result from something more fundamental uh it can be derived from
+
+00:11:16
+the principles of quantum field Theory we won't get to that but I'll show you a little demonstration uh uh tonight all you need is a belt to understand some aspects of it there's some interesting pop logical aspects of it which we'll try to get to this is yeah it's not a theor and non relativistic Quantum mechanic no it's not and that's correct that's correct that's not a theorem and it's also not true in one or two Dimensions spatial Dimensions right that's
+
+00:11:48
+true banic States is there a maximum number of quanta you can put into a DB state in the bosanic case no no nope and uh there's a strong tendency for them to want to get into the same state okay and we'll try to get to that all right this business is a taale of two minus signs two distinct different minus signs uh one having to do with Spin and one having to do with what I'll call exchange but before I talk well before we talk a little more about the relationship between the half Spin and
+
+00:12:34
+the Exclusion Principle let's talk about the poy Exclusion Principle itself which um has a deeper meaning than just saying you can't put two particles into the same state it's a statement about the nature of wave functions of multiparticle systems if I have a multiparticle system and now when I say wave functions let's for the moment forget the spin and I'll come back to the spin and tell you what to do about it but uh but let's forget about spin for a moment and say that the
+
+00:13:08
+coordinates of the particles uh that we're talking about are called x sub I I does not stand for X Y and Z it stands for particle one particle 2 particle 3 and so forth so X1 represents particle 1 and so forth and um X could be XY or Z we're going to we're going to suppress the uh the three components of position just call them X by I represents the particle and then the um a basis of State vectors is to give the positions of all of the particles let's write X1 X2 X3 just as for one particle we can label
+
+00:14:00
+a complete set of states by just prescribing the position of the particle for a system of particles we can just label all of the positions and those are an orthonormal family of States a complete set of states and just as for one particle we can Define the wave function to be the inner product whatever the state Vector happens to be this is an abstract State it's an abstract state of the system of n particles some number particles and the wave function itself is the inner product of the state
+
+00:14:36
+Vector with the specific State vectors let's call it xn that is called s of X1 through xn what do you do with it you square it well you don't Square it you multiply it by its complex conjugate and when you multiplied it by its complex conjugate the result is a probability it's the probability to find the first particle at X1 the second particle at X2 the third particle at X3 and so forth so this is multi-particle quantum mechanics in a nutshell now let's suppose that what we're talking about is identical
+
+00:15:20
+particles in other words particles of exactly the same species electrons or whatever they happen to be ignoring spin for the moment uh particles which are identical we have to ask the question we talked about it last time uh we have to ask the question of whether a part particle one at position one and particle two at position two is it the same state or is it a different state than particle two at position one and particle one at position two in other words that's the blue electron at part
+
+00:16:09
+at position X1 that's the red electron at position two but electrons don't have colors they're identical indistinguishable and so it's an interesting question to ask is should this state be counted as exactly the same as the state with a red electron at X1 and a blue electron at X2 as far as we know from all experiments as well as from all Theory from Quantum field Theory relativistic quantum mechanics the rule is that these are the same state okay so for example let's just take two
+
+00:16:53
+particles that tells us for example that the state that I would label X1 X2 blue particle at position X1 red particle at position X2 is exactly the same as red particle at position X2 sorry blue which one was number one number one is blue blue particle at X2 red particle at X1 in other words there is no difference between a state with a part two particles are two particles to say it that way on the other hand in quantum mechanics um the physics of a state the physical properties of a state the physical properties of a state
+
+00:17:54
+don't depend on one particular parameter they don't depend on the overall phase in front of the state Vector in terms of wave functions the overall phase in front of the wave function never plays into anything that is physically measurable that's because all probabilities and all expectation values involve s times s star so it's conceivable that really the right relationship is not that X1 X2 is equal to X2 X1 but something a little bit looser than that X1 X2 is a phase e to the I
+
+00:18:34
+fi uh some numerical number which is a pure phase let's write it e to the I of some sort well f is just a fixed number it's possible that when you interchange two particles that the wave function should pick up a phase on the other hand supposing you do it twice supposing you interchange X1 and X2 and you say when I interchange X1 and X2 the wave function should get multiplied by the phy to the II and then you do it again you interchange them again you get back to the same place you get back to the same place you get back
+
+00:19:16
+to the same state that you started with uh in other words when you interchange twice you really do have to come back to the same thing there's no other no other possibility so the General guess would be that e to the I5 here is either plus or minus one it's an operation when you do it twice you get one but there are two possibilities there are two sensible possibilities well you might say only one sensible possibility but then you'd be leaving out half the particles in the world equals plus
+
+00:20:00
+those are called bosons particles which satisfy that property that when you interchange any two of them and in fact it could be a multi-particle state where you just take any two and interchange them if the state is exactly the same then they're called bans so bosons satisfy the property that the wave function or the state Vector when you interchange two of them stays the same faion are the case with a minus sign okay so when you switch to Fons identical firion the state Vector changes sign
+
+00:20:50
+keeping in mind that the change of sign is itself not observable it's not an observable thing because the probability distributions expectation values everything of interest uh involves s Time s star all right so if the state vectors change in this way then the same must be true of the wave functions for example let's take X1 X2 s that's by definition s of X1 and X2 whoops not so good the wave function of particle one and part and particle two the other hand is X2 X1 that's equal the S of X2
+
+00:21:45
+X1 in other words the two wave functions are related to each other but just by switching the arguments but now if the state vectors themselves have this property that they either change sign or don't change sign then the wave functions must have the same property so this becomes a property of wave functions and let's write it down if you have a wave function for Fons for a system of Fons X1 and now let's well let's just do it for two particles and then I'll tell you what to do for many
+
+00:22:23
+particles the rule is for Fons it must be equal to minus what you would get if you interchange the particles if you interchange the particles the wave function changes sign for Fons what about bons for bons no change of sign X1 X2 equals plus okay let's uh let's think about some states and see what what sense we can make out of this supposing I have let's take the case of bans first case of bans is a little simpler no no change of sign let's suppose we have two bons in two different
+
+00:23:31
+states well one state could be let's again fetting spin one state could correspond to some particular wave it doesn't have to be an atom incidentally it could just be any system uh but let's uh let's uh take some of these Atomic States here okay this wave function or the wave function associated with this state here could be called size zero let's call it zero because it has zero angular momentum and because it's the lowest energy State all right so we're going to put particle one into that state so the
+
+00:24:08
+wave function for particle one would be size0 of X1 let's put the next particle in some other state it could be it could have the same angular momentum or a different angular momentum uh but let's make it a different state let's make it a different state well let's first do the case where we put two particles into the same state no let's put two particles into the same state then the state Vector would be size Z of X2 particle one in the state size zero particle two in the state size zero does
+
+00:24:49
+this satisfy the rule for Fons does it satisfy the rule for bons well this structure here is obviously unchanged if if you interchange one and two it doesn't matter which order you multiply wave functions wave functions are just have numerical values they're not operators they commute okay so this wave function here two particles in the same state that's symmetric the word is symmetric symmetric under interchange of the two arguments of the wave function it does not change sign so if such a wave
+
+00:25:29
+function makes any sense it makes sense only for bons for fans this is not possible because this does not satisfy the rule for Fons okay let's try another state okay this and another way of saying it is you can you can only put bons into the same state two bons into the same state okay let's take one particle and put it into size zero and the other particle put it into another state which I'll call S one okay what happens if I interchange one and two uh not zero and 1 one but what happens
+
+00:26:15
+if I interchange X1 and X2 this will become size0 of X2 s 1 of X1 in general if these are two different wave functions the left side and the right side will neither be equal to each other nor equal to their negative just to be just product of two functions s of X1 time hyperbolic moose of uh of X2 okay that has no symmetry whatever it doesn't change sign or it doesn't stay the same so this is not a possible wave function for either fermans or bons does that mean you can't put one particle into one state and
+
+00:27:06
+another particle into another state not quite let me make a let me now take a state which is made by taking both of these combinations here and adding them this is a wave function perfectly good wave function it's a superposition of particle one one being in si zero particle two being in si one and the opposite particle two being in si but both of them have a particle in si zero and a particle in si one they both satisfy the criteria that there's a particle in s one and a particle in S 2 so both states have been
+
+00:27:49
+filled but what about this what happens to this if I interchange one and two nothing nothing it stays the same okay so this is a perfectly good candidate for a boson system two particles in the same no a particle in state one in state zero and a particle in state one and here's how you build it what about Fons can you build can you create a state with a fon in this state and this state yes all you have to do is put a minus sign here okay can you check does that change sign when you went to change X1 and X2 sure
+
+00:28:33
+it does this one goes over to here this one goes over to here and the whole thing just changes sign so yes you can put in both cases you can put a particle into State one and a particle into state zero what you can't do for firmians is put two particles in the same state and two particles or for bosons you can okay if in particular let's take the special case of exactly this where s 1 and S 0 are the same state that's just a special case in which instead of taking two different states I take the same
+
+00:29:13
+state okay so two possibilities s0 of X1 s 1 of X2 plus s0 of X2 s 1 of X1 Bon Peron wave function now let's take the cases I said where both wave functions are the same well this just gives me twice the original wave function all right it may not be normalized correctly we may have to normalize it appropriately but it gives us twice the original wave function and it's not zero nothing wrong with it again it's too oons in the same state perfectly good but the fermionic construction here gives us
+
+00:30:05
+what zero so again we can't make a state in which two Fons are in the same state the same rule continues if you have multi particle States if you have multi particle States any number of particles then the wave function is a function of many variables and it has the property that for bans if you take any two of them and switch them the wave function does not change sign for Fons if you take any two of them and switch them it does change sign again what happens if you switch twice so that you
+
+00:31:00
+come back to the same configuration clearly in both cases nothing happens right so the process of double swap is no is nothing at all is Trivial it doesn't do anything as you would expect as you would expect uh but the odd thing is that the process of single Swap which you might have thought does nothing changes the sign of the wave function for Fons okay so that's that's if you like the basis the mathematical basis the mathematical um set of rules that goes with a PO exclusion principle that you can't put
+
+00:31:47
+two particles into the same state for firion now what about when the spin well when the spin the easiest way to think about it is just to add a another for each particle instead of saying the wave function is only a function of position think of it as a function of position and spin all right so in that way you can think of the wave function as a function of position and let's say whether it's up or down we could choose Sigma Z here Z component of spin this wave function has the following
+
+00:32:33
+meaning it's Square sorry it its magnitude it squared magnitude is the probability to find the particle at position x with spin either up or down depending on whether you put in Sigma zal 1 or Sigma zal minus1 so it's a function of a continuous variable and a discrete variable plus or minus one and it represents the amplitude the probability amplitude for the particle to have a certain location with a spin either up or down once you know that then you say okay the wave function for many
+
+00:33:21
+particles one here stands for the particle not whether it's X Y or Z X2 Sigma 2 and so forth and so on this representing the wave function for a particle to be at position one with spin Sigma 1 position two with spin Sigma 2 and so forth and so on and now the rule is exactly the same that if you take all of the all of the stuff that's associated with particle one that's both X and sigma and you take the things which are associated with particle 2 and switch them bons nothing happens for Fons the
+
+00:34:10
+spin change uh sorry the sign changes all right but what a boils down to is exactly what we said in the first place you simply can't put two particles into the same state including spin including the spin if they're Fons you can if they're bons okay any questions about that so far yeah um you know what this sort of reminds me of a little bit is is that you've got a bunch of things and you kind of interchange them prir man and you get a minus sign so of this makes me think about the the the permut you know the
+
+00:34:47
+the go with permutations this is this these are the representations of the permutation group okay so this so that comes into this yeah okay yeah switching the particles is a permutation and what happens to them under permutation a plus or minus sign defines a representation of the permutation group right this very definitely has to do with permutations so it not only reminds you of it it is it when you wrote down when you had particle one and side Z and particle 2 and side one you wrote that as the
+
+00:35:20
+product why not the sum oh no the sum the sum of two wave functions for is a wave function for one particle it's simply the superposition of um to build a theory of two particles the state vectors are the tensor products are in a tensor product space of the of the wave functions that depend on two variables and uh no you wouldn't want to add them adding them would correspond to putting a single particle into a superposition of states right yeah so right there's two things you can do if you have two wave functions you
+
+00:36:03
+can take a single particle and put it in the sum of the two of them or you can take two particles and put one in one and one in the other and for one in one and one in the other the rule would be the product yeah so um here we have two particles and swapping the particles gives interference effects gives what interference effects well so far we so far I have't it it certainly does give interference effects but uh uh we haven't talked about interference yet I may talk a little bit about interference later and the effects of
+
+00:36:37
+these things well the fact that you you got zero when you calculated that means that the amplitude squared is going to be zero so there's no probability for it to be like that which is destructive in a indeed you that's right you could say the PO exclusion all right fine you could say the PO Exclusion Principle is a manifestation of a funny kind of interference where if you put the two particles in the same state they and switch them they interfere good so yes so it is a kind of interference phenomenal you're right
+
+00:37:13
+yeah is this the same logic how Ed to dve the ex principle yes yeah um of course when poy was doing it he wasn't deriving the principle was an empirical fact and he was if you like interpreting the principle finding a mathematical framework in which the principle uh uh would be correct later on of course once uh there was a relativistic theory of particles and uh this rule here became part of the logic inescapable logic then there was a derivation of the uh of the equ principle ah the Exclusion
+
+00:38:03
+Principle he was trying at first to describe an empirical fact of course once he realized this that there was such a nice mathematics to it undoubtedly he started looking for deeper reasons for the mathematics and eventually he found them he and dur and uh he and d and he dur and Einstein were the uh were the um the people who really built this and Boza but uh and FY I suppose I don't know if you know the life of me I FY was a very very great physicist who did very excuse me Giorgio I don't want to insult the Italians but
+
+00:38:40
+uh there he is but but I really don't understand what he had to do with any of this okay um Giorgio your homework is to find out what very so um for a single particle essentially swapping to IND distinguishable TK it's interference is there some connection between those two things between what and what uh between swapping particles giving interference and swapping paths giving interference well what you doing is you're yeah um you have two paths for two particles this path where one goes this way one
+
+00:39:30
+goes this way and another path where they cross over they sort of wind up the same way and with bons they add with Fons they uh they can cancel so it's it's it's it is connected with interference but I I didn't want to do that now there is an interesting interference experiment that you can do um but let's uh let's come to it later okay that's the tail that's that's one minus sign now uh sign will come back at us many many times but there's another minus sign that has to do not with exchange
+
+00:40:08
+this is the minus sign that has to do with exchange of particles this is the minus sign has to do with spin but it has to do with rotation about an axis by 2 pi Rotation by 2 pi is another process that you might expect does nothing right you might expect Rotation by 2 pi is a mathematical process that you can imagine in your head but if you take a system and imagine mathematically rotating it by 2 pi not not grabbing it and rotating it but mathematically just uh performing a transformation which rotates it by 2 pi
+
+00:40:51
+you've done nothing to it you've done nothing to it because a rotation by 2 pi is just the IDE identity rotation is the same as the identity rotation you think or I thought you may not think I did I did think at one time in my life so you might say okay let's now consider a wave function for a particle one particle now s of X and now let's rotate a frame of reference or better yet rotate the particle I'm all I'm interested I'm only interested in the spin right now but uh
+
+00:41:41
+but all right so there's a wave function of the particle it might depend both on position and Spins yeah so we can we can put some spin in here it depends on whatever it depends on but in particular it depends on the spin and now we rotate by some angle what happens when you rotate a state with a given angular momentum by an angle well you have an idea about any axis whatever an exterior axis right an exterior axis the particle could be located the particle could be located at the origin so this is essentially
+
+00:42:30
+orbital angular momentum no it's whatever angular momentum it has everything everything right uh everything including the spin rotation and so forth do we Orient it with respect to the spin in your rotation we don't know what the spin is the spin no no it could be yes it could be rotation about the z-axis remember the spe doesn't have to be along the z-axis it could be along the x axis could be along the y- axis could be along any axis so the axis of it's angular momentum could be
+
+00:43:09
+rotated yes if it's angular momentum is pointing in some direction and you rotate about some other axis the angular momentum could rotate about that axis but by the time here's the angular momentum here's the axis we're rotating about and we rotate but by the time we come back by 2 pi we come back to the same place so you might expect that if you rotate the wave function remember rotations are unitary Transformations let's just call it r r for rotation we rotate the wave function
+
+00:43:50
+by an angle Theta we rotate the a wave function by an angle of theta we get something new in general but if we rotate by 2 pi then presumably we should get the same thing back the probability should be unchanged the um the probability for spin should be unchanged the probability for anything should be unchanged because all we did was an imaginary process where we in our heads rotated about to Pi uh uh and so we should come back to the same thing but wait the same uh issue occurs as occurred over here for exchanging
+
+00:44:37
+particles if all we require is that probabilities and expectation values don't change then it's possible that when you rotate by 2 pi uh you pick up a phase again could be a plus or minus one um it could be a plus or minus one might even be some weird phase but there's the possibility that a phase could be in here now how does the phase that occurs there depend on the angular momentum of the state the total angular momentum of the state the angular momentum remember what the angular momentum is the angular
+
+00:45:22
+momentum let's write the total angular momentum now that includes the spin and the orbital angular momentum it's usually called J J is the generator of rotations that means when it acts on a state When J acts on a state it sort of differentiates it with respect to an angle in particular let's say J the Z component of J the Z component of the angular momentum that effectively takes the state and just like momentum differentiates a state with respect to position angular momentum differentiates it with respect
+
+00:46:05
+to angle so let's write that out that's in fact correct minus I the derivative of the state with respect to some rotation angle if we imagine rotating the state by a little bit or any amount then acting with J does the same thing as differentiating with respect to Theta that's what a momentum does that's what an angular momentum does with respect to an angle and this angle would now would be about the z-axis we're rotating about the z-axis and that's generated by the generator
+
+00:46:43
+JZ okay um let's suppose that the angular momentum about the z-axis had a definite value the igen value equation then we would write that this is equal to m m would be the igen value of JZ it would just be M * s whoops M * s we can think of this we can think of s as a function or as a vector it doesn't matter what's the solution of this equation the solution is that s of theta in other words the the side that you get when you rotate by angle Theta is what e to the i m Theta s of 0 this is just the equation that says a
+
+00:47:46
+derivative of something is equal to n * the something and that would be the solution of it okay remember what what were the igen values that we Des discovered were possible for the Z component of angular momentum when we analyzed the commutation relations remember we did that we found two kinds of things one had integer spectrum and the other had half integer spectrum that was just a mathematical exercise using the commutation relations just abstract algebra and just fiddling with it following dur following dur as
+
+00:48:23
+follow as D followed his nose uh just uh playing with commutators we found out that M could only be integers or half integers what if m is a half integer and you rotate by 2 pi in other words supposing you rotate all the ways around the axis so that Theta is 2 pi then we get the fact that e to the i 2 pi m time I again e to the 2 pi m is one if m is an integer but it's minus one if m is a half integer so evidently these representations or these multiplets that have half integer spin have the odd
+
+00:49:19
+property that when you rotate around by 2 pi the wave function changes sign those are the only two possibilities the spectrum is either integer spin or half integer spin it's true in two Dimensions it's different but in three dimensions uh the spin is either the integer type or the half integer type which means that when you rotate around a full 2 pi either the wave function changes sign or it doesn't uh whether it changes sign or it doesn't simply depends on what kind of particle
+
+00:50:02
+you're talking about incidentally if you rotate by 4 Pi it comes back to itself 4 Pi is 2 pi^ squar no 4 Pi is 2 pi you know what I mean yeah now there's a demonstration that goes with this which really does reflect some of the mathematics in the mathematics it seems that rotating by 2 pi is not the identity for Fons it's not the identity it doesn't change expectation values it doesn't change uh uh probabilities but it is not the identity operation a little while tonight I'll
+
+00:50:43
+show you how actually the the rotation by 2 pi is an observable effect it is an observable effect and therefore I think we have to say that in quantum mechanics Rotation by 2 pi is not the same as no rotation at all there's something going on in the mathematics of rotations which says you have to rotate by 4 Pi for the mathematical operator to give you just one all right now there's a famous trick I believe it was done D to my friend uh I don't know who first invented it it was D who certainly first
+
+00:51:25
+invented it who who understood it but long after dur a circus performer by the name of herard H who's a uh a Dutch circus performer invented a trick to demonstrate the fact that rotations by two Pi are not the identity and rotations by 4 Pi are the identity I love to do this so much that I'm going to do it and you're supposed to do it with a cup of coffee right so here's here's the trick here's this I'm going to rotate by 2 pi okay now don't worry I'm not going to go
+
+00:52:00
+rotate this way I'm going to rotate this way okay that is not the identity let me tell you I'm quite certain that's not the identity let me rotate another two Pi that's the identity now there is mathematics to that yeah Gerard Gerard I I think he did discover it now what uh what I think D understood was a little bit different was the same thing I think his picture was you take a sphere and you put it in a box and you connect the sphere by ropes you know [Music] um here's your sphere here's your
+
+00:52:45
+box and you have ropes connecting it strings connecting it to the Box in in all possible directions okay first think two-dimensionally what happen s if you rotate the ball by 2 pi you get a tangle right you get a tangle you can't undo that tangle rotate by 4 Pi you still can't undo it in in uh in two dimensions in three dimensions what is true is if you rotate by 2 pi you get a tangle that tangle is basically the tangle of my arm uh after I go to Pi but then if you rotate again 4 Pi you
+
+00:53:29
+can untangle so this is a theorem it's a theorem about of the topology of the rotation group it's a theorem that no matter how complicated the set of connections with the walls of the box if you rotate by pi 2 pi sorry you cannot disengage the strings back to the original configuration if you rotate by 4 Pi you can so it really is a mathematical fact about rotations that rotations do not bring you back to the same configuration after you rotate by 2 pi unless you specifically say I'm only going to study
+
+00:54:11
+the kind of wave functions which do come back then you're dealing with bons and the other possibility is the kind of wave functions that change sign but if you with the with the sphere and the connected strings rotating twice twice around the same axis yeah you can untangle yeah I just showed you wa but it looked like you a little different like you were working in the fourth dimension or something no no Third Dimension it look like you're working in an extra Dimension yeah but well you're also
+
+00:54:47
+working in an extra Dimension here it's time you're you know you're rotating it with time but uh but that that's not the point yeah you are in a sense working in a you're following a path in the in the space of rotations and a path in the space of rotations can be Unwound for 4 Pi it can't be Unwound for 2 pi so it's a and um you know any topologist will recognize this as a feature of uh of um uh okay so that is the difference between the half spin rep rot uh representations and the integer spin of
+
+00:55:26
+their representations they Behavior under 2 pi rotations fans get a minus sign bons don't get a minus sign so we have an interesting situation as I said A Tail of Two minus signs Fons the wave function for two Fons now this is for two Fons changes sign when you swap them the wave function for a single firon changes sign when you rotate it by 2 pi wouldn't it be interesting if there was some mathematical connection between Rotation by 2 pi and exchange and there is such a connection this even
+
+00:56:08
+theoretical physicists tend not to know this for some reason I don't know why mathematicians were stunned by it when I showed them they didn't know it most theoretical physicists don't know it it was a discovery of a friend of mine by the name of David finklestein who was one of the sung Heroes of physics uh he's a he whether he's a famous physicist or not depends on who uh on what uh what crowd of people you're asking if you're asking an older generation of very very
+
+00:56:42
+famous physicists like Roger Penrose and people like that they certainly know who David finlin was is if you ask the man in the street they never heard of David finlin they say my butcher was named David finlin my butcher in the Bronx but David finlin was one of the great unsung heroes of theoretical physics he figured this out and I'm going to show you what he figured out it's really fascinating uh here's my belt now I'm going to do something with the belt and then we're going to talk
+
+00:57:17
+about what it is I did I hope I can do it I think I can do it all right we're gonna we're going to do a double twist of my belt okay a this is done easily with a rubber band but if I did it with a rubber band you couldn't see it from here right notice if I hold it this way you see an exchange you see the two bottoms of the belt here having been exchanged on the other hand if I turn it around you see there's a rotation by 2 pi the belt has been Twisted by 2 pi okay a rotation by 2 pi
+
+00:57:57
+together with an exchange gives you nothing at all gives you an untwisted belt so somehow in the mathematics of I'll draw the picture I I think I can draw what the the picture it's just in case you couldn't see it on my belt I'm just drawing what was going on in my belt let's see it looks something like this [Music] will I ever get to this if I uh if I twist my belt I don't think so okay what do I have to do to uh to make it a legal Twist of my belt what I have to do it's twisted by two P then it's a
+
+00:59:21
+legal Twist of the belt that's what I showed you by twisting it and uh that's a legal Twist of the belt meaning to say you can twist the belt that way and if you do and you pull it apart you just get the trivial the topologically trivial belt like that so this is equivalent to this and what it's telling us is a deep topological connection between the process of exchanging if I have this could be thought of in the following way but if I I have two particles and I do two processes on them
+
+01:00:01
+the first process is I take one of them and rotate it by 2 pi and the other proc and the other process is I switch two of them they cancel each other out so that means quite apart from whether they fion or bosons I I I appreciate this is not an obvious uh connection I'm telling you this because a lot of people think this really is at the root of the spin statistics theorem I do um that the Deep topological connection between rotation and exchange may very well be what's going on uh and what it
+
+01:00:51
+says is that whatever you doing nothing is like doing a rotation by 2 pi and an exchange both together okay that uh that uh is uh this is not the way poy proved the spin spin statistics theorem question yeah um so this really doesn't have anything to do with the topology of the belt but has to do with the how the belt sits in space and it's interactional space yeah but particles sit in space too you know right and time this can be thought of as a history with time going up this can be thought of as a history
+
+01:01:33
+if you want to think of a history you imagine that a pair of particles was created over here you had no particles and you created a pair same thing over here you had no particles and you created a pair so by the time you've gotten to this level over here you have four particles one two 3 four right there are four particles each being thought of as um as a cross-section through the belt okay now what you're doing is you're taking one of the particles and rotating it by 2 pi and at the same time you're taking
+
+01:02:18
+the other two particles and switching them and what it's saying is the switching of these two particles whatever sign you may or may not get must cancel the sign that you get for rotating one of them okay this is uh this is something deep that's never been completely explored uh yeah is there con between this and the idea of a um buus strip where you switch to two sides yeah it's connected with that let connected to that um right but a path a process a process yeah well okay so let's see what the
+
+01:03:16
+process is the process is you start with nothing you see this kind of logic only makes sense in a theory where particles be created it would not make sense in a theory where particles were Eternal yes sir uh I've seen another funny argument um about exchanging going by 2 pi by by having two particles um basically taking a symmetric role in The Exchange and I didn't really like this argument but I wonder what you think of it okay so when we exchange them one goes one pie the other goes the other
+
+01:04:05
+pod but we actually caused them to spin okay by pi so we need to rotate them by pi in order to get the identity back you rotate each one by pi yeah so we get 2 pi because there's this one and then there's this one so that's 2 pi and then you rotate it may be the same mathematical fact 180° here 180° there and now they're both point the same direction the same OPP well it's a little bit different because what we want to study is a rotation by 2 pi not two rotations by pi but uh that sounds like they might be
+
+01:04:53
+connected um okay what's the process that's reflected here you start with nothing now in a theory where particles can be created out of nothing Quantum field theory is a theory where particles can be created but there are other kinds of theories where particles can also be created just uh creating certain kinds of excitations in condensed metaphysics cre can create particles but in a theory where particles can be created you start with no particles so your starting point is no particles
+
+01:05:27
+the blank Blackboard and then over here and over here basically you're you're creating a particle and an antiparticle over here and over here you're creating a particle and an antiparticle if these particles were charged and you create them out of nothing obviously they must have opposite charge but that's not the important thing here you do whatever it takes in in your theory to create a pair of particles out of nothing you have to put in energy for sure but you do it and now you're left
+
+01:06:05
+with four particles 1 2 3 4 let's see um particle antiparticle particle antiparticle and then with time as time goes on at the same time that you rotate one of these by 2 pi at the same time you interchange these two so I suppose if this is a plus charge and this is a minus charge this better be a minus charge and this better be a plus charge because you're going to Interchange the two minus charges you get some phase from rotating this particle and you get some phase from interchanging these two but as you
+
+01:07:01
+can see topologically this is completely equivalent to just creating a single pair of particles and annihilating them and for that there is no phase so whatever phase you got from exchanging must cancel against the phase that you got from rotation I like this argument a lot I think this can be turned into a real argument uh but I I've never actually seen it done so uh it's amaz it's what's very surprising is how few physicists actually know this argument um anyway it does show it does show that
+
+01:07:43
+there is a connection between rotations and uh and exchanges and a a relation of the right kind okay so that was the tale this is a suggestive argument that I have never seen turned into a rigorous um argument uh it's the closest I can do to a proof of the spin statistics theorem without going through the complexities of you see what what some of us noticed long time ago in the 60s and so forth and that's when David uh did this rather famous paper but um not famous enough what people noticed is that the
+
+01:08:35
+spin statistics was more General than just relativistic laenen variant Quantum field Theory which is what poy proved it for you could prove it for all kinds of particles that you could make things called solons or things called um solitary waves a solitary wave is just a lump a lump uh a lump of field a lump of field that doesn't have to be in a relativistic field Theory any kind of theory where you can manipulate the fields and create lumps this would apply to the lumps I was kind of noticed by a few people
+
+01:09:20
+particularly finklestein and Rubenstein and uh a few others and was finlin who said look that's the criteria that you can create particles if you can create and annihilate particles then they must satisfy this rule whether or not it's relativistic Quantum field Theory so that's why it's even true for uh lumps of stuff in condensed metaphysics certain kinds of particles which are just excitations lump it's true for magnetic monopoles it's true for all kinds of things where Po's
+
+01:09:58
+argument really doesn't apply directly so presumably this is what what is at the root what's that so solons can be created in yeah yeah um yeah yeah uh if you have a field Theory let's say some sort of Scala field it doesn't matter what it is and any kind of any kind of set of fields and um let's suppose okay so here's here's what you can do let's take some lump like field configuration the field is zero everywhere except in some little lump region over here and in this lump region
+
+01:10:52
+and when I say a field it could be a set of fields it doesn't have to be single field but in the region over here the field has some nonzero value uh and also it has a shape and a structure so let's uh let's put some lumps blue lumps over here and let's put some black lumps on the other side now take another configuration of exactly the same kind realation oh absolutely there's all kinds of physical realizations of lumps yeah nuclei or lumps yeah and in some theories nuclei uh are lumps of this
+
+01:11:45
+type yeah there's what are called skiron theories of the nucleus and yeah there there's there's lots and lots and my magnetic monopoles are like this uh and in modern Quantum field theories almost all particles can be expressed this way so yeah this is common okay here's another similar particle it's got a lump similar lump over here and over here and a couple of black lumps over here and over here now I've chosen to draw two lump configurations which happen to be mirror
+
+01:12:30
+images of each other I can do that I can make two mirror images call this one a particle call this one an anti-particle if you like now start bringing them together notice that when you bring them together the fields will exactly match why because the field over here is the same as the field over here the field in a little bit over here is the same so now imagine bringing them together together and what happens as you bring them together as you bring them together you can get to a situation where's my red pin you can get to a
+
+01:13:06
+situation for example you will get to a situation halfway through where the black lumps have annihilated each other and the blue lumps are still there enjoy them very well and you keep squeezing it and squeezing it and because the fields always match on the uh on the uh on the mirror you can just bring these field uh Fields together and undo them again you can see an example of this with a belt uh somebody come up and hold the other end of the belt for me okay all right grab it grab it over here
+
+01:14:00
+a little closer to me other hand no grab the N to be the mirror image of me okay now no rotate rotate right okay there's a lump over here and there's a lump at Arts end now let's push the lumps together I don't know if we're going to be able to do this because well you can see what happens they're going to undo each other because they match in the middle all right so grab it over here okay by the time we brought the lumps almost no no hold it hold it hold it hold it but I'll do all the twisting there's a lump
+
+01:14:41
+over here and there's a lump over here but if I keep pushing them together we can just unwind it that's what's going on here this is a three-dimensional or two-dimensional version of the same thing so given a theory with lumps the lump and its Mirror Image can always annihilate each other okay so if you start with nothing oh and of course you can go in the other direction you can take your empty space and C lump create a pair of lumps right so you can create this pair of lumps you can
+
+01:15:20
+create another pair of lumps over here and you can rotate one of them by 2 pi interchange the others and uh be certain from the topological theorem that uh that it's the same as doing nothing all right so the spin statistics theorem says that lumps come in two types those which when you rotate them the wave function changes sign and those the wave function doesn't change sign those are Fons and bosons half spin together always goes together with the properties or the integer versus half integer spin always goes
+
+01:16:04
+together with the properties under interchange of um of the particles that's the theory of bons and Fons the other way I heard it described was that for spin a half if you rotated by 180° the internal intrinsic spin only goes 90° so if you go 2 pi it goes to minus one no if you go 2 pi goes to minus one right yeah and so if you go four Pi you get yeah yeah yeah no that's exactly this that's exactly this over here if you rotate by a little bit you pick up an e to the I Theta e m Theta if m is an
+
+01:16:52
+integer is a half basically gives you half the phase of effect yeah exactly that's right that's correct and that's what half inis spin means that uh that it rotates with half the phase so that a full rotation doesn't bring you back to the same thing okay question an interesting question is whether the fact that when electrons are rotated by 2 pi that the phase changes is that observable is there a way to observe OB ve that and you might think well no that's completely observable
+
+01:17:30
+unobservable because rotating rotating by 2 pi if it only changes the sign the sign of a wave function doesn't matter but not quite I'm going to show you how um and this is been carried out experimentally I'm going to give you a sort of purist version of an experiment which in a not quite pure way actually was carried out successfully all right let's start with an experiment where you wouldn't see anything you would um you would not see an effect you take an electron here's the electron it has a
+
+01:18:24
+spin we're not going to worry well oh yeah we're going to worry yeah we are going to worry about the uh yeah right here here's the electron it's going to go through some slits do some interesting interference experiment of some kind just going to go through some slits and before it goes into the slits from this side over here we're going to put it in the cavity the cavity is going to have a magnetic field okay the magnetic field what does a magnetic field do it latches onto the uh to the
+
+01:19:00
+spin the same way a magnetic field latches onto uh onto a compass needle all right latches onto it hold it still and then we're going to take that box and slowly rotate it by 2 pi and then we're going to let the electron out of the box and create an interference pattern over here we're going to compare that with the same same experiment in which instead of slowly rotating the electron we're not going to slowly rotate it that's all we're going to do exactly the same experiment in one
+
+01:19:35
+case a very slow we're going to take our time this is going to take a long time take a thousand years to do this experiment or maybe a million years uh in the first uh um 10 to the 15 seconds or whatever it is we'll spend setting it up by either rotating this electron or not rotating this electron and then we'll look at the interference pattern over here why is it so important to do it so slowly is it you want to you want to if you drag it fast it won't hold on to it that's all
+
+01:20:14
+yeah okay so that's the uh that's the experiment and the result will be that the interference pattern in no way remembers the uh whether it was rotated by 2 pi but now we'll do a different experiment we'll take the electron and electrons are like photons you can you can have beam Splitters beam Splitters will take an electron and split the wave function of it's one electron not two electrons one electron and the beam splitter splits its wave function so that the part of the wave
+
+01:20:53
+function goes One Way part of the wave function goes the other way again this is not two electrons it's just two parts of the probability so the first thing we do is we send the electron through a beam splitter and two wave packets come out I will say over and over again these are not two electrons this is a superposition of states in which the electron went this way and the electron went this way okay now we're going to go slow motion for a while both wave packets are fed into a box into the same
+
+01:21:35
+into two different boxes and in the Box again there's a magnet and a magnetic field okay so what do we have we have a superposition of states in which an electron is here an electron is here and in this one the electron spin is kept parallel to a magnetic field and in this one it's kept parallel to a magnetic field but now I rotate one of them and not the other slowly okay slowly until I'm finished rotating it one of them is rotated the other has not rotated if rotation did nothing and
+
+01:22:22
+rotation by 2 pi that is if it did nothing you say well nothing I mean you know we may have done this thing but nothing uh there's no effect of it there's Rotation by 2 pi brings it back to the same configuration but no Rotation by 2 pi we have a wave function we have a wave function which is s one of X Plus S 2 of x s one of X is the wave function in this box S 2 of x is the wave function in this box but after rotating we get S one of x minus S 2 ofx if this is the wave function that comes out of here with a minus sign and
+
+01:23:09
+it passes through these two slits the wave the uh the uh interference pattern will be quite different than if you had plus you can see why what will come out of here will be a certain wave function what comes out of here will be a certain wave function and if you add them or subtract them you get quite different either destructive interference or constructive interference so this experiment shows that under certain conditions you really can detect the rotation by 2 pi by an interference experiment yeah I'm not sure what's
+
+01:23:48
+being rotated there you said one electron and two wave functions one electron which is in a superposition of States it's either in one box or in the other box you don't know which and don't look because if you look you ruin the experiment um well what what is this electron I I I'm think of the electron is moving is it moving no no you you've captured it and uh you've captured it for a while you it went into a box cavity ELR yeah the cavity electrons in a box but there's only one there's only one
+
+01:24:25
+it's it's it's well is it in both boxes or is it in one box or the other it's in a wave function which is a superposition of the two if you open the boxes and look you will find only one electron okay you'll either find the electron in one box or the other box if you don't and of course if you open the box and look you uh you affect the experiment in a way which destroys any interference pattern the point is if you repeat this experiment many times you will build up a pattern of constructive
+
+01:25:00
+interference or of destructive interference yeah but um you really you can really do just one experiment with the minus sign here you might get a node in the wave function a node means a zero let's say right at the Symmetry point over here can't find without events never OCC let me finish okay if the wave function comes out minus then for sure you will not detect an electron over here so if you do detect an electron over here it means that there must have been a plus sign so it's it's it's it's quite observable
+
+01:25:43
+this is not exactly the way the experiment was done I'll tell you how the experiment was done the experiment was done a little bit differently the Electron Beam was split again and it was sent through some cylinders with magnetic field in them along here now it was arranged so that after the beam splitting the electrons were polarized in a direction perpendicular to the magnetic field you remember what happens if an El if a if a spin is in a magnetic field and the spin is perpendicular to the magnetic
+
+01:26:22
+field it processes so if you make the cavity just exactly long enough and the magnetic field just right and the velocity of the electron correct you can arrange so that the electron executes one to Pi rotation uh oh I guess in one of them one of them you don't put the magnetic field I guess one of them you don't put the magnetic field the other one you do put the magnetic field so one branch of the wave function executes a two Pi rotation the other branch of the wave function does not execute a two Pi
+
+01:27:01
+rotation depending on whether you turn on or not the magnetic fields you don't that's always the point of quantum mechanics anything that you do to determine the path ruins the experiment H what you do is you go over here and you look at the interference pattern that happens what your SCE of it a hot wire just hot wi electrons go everywhere yeah yeah yeah yeah but you can you know with appropriate electric and magnetic ELR only one is going to go through what's that and you have so few
+
+01:27:44
+electr only one go through yeah one one at a time one at a time absolutely yeah so part my ignorance here what is it what do you mean by a branch of a wave function s 1 plus S 2 or has a the branch of the wave function just means the wave packet that goes one way or the other way so but there it's got the same the same um wave function just no one of them is non zero here and zero here the other one is non zero here and zero here before it uh in the other case over there you're just you're just
+
+01:28:25
+sending electrons in and one of them is doing something to the wave function the other one isn't yeah but you're you're arranging a wave function initially the wave function is set up by the beam splitter so that it is let's call it s one ofx plus S 2 of X and S 1 of X is non zero in the vicinity of this cavity and S 2 of X is non zero in the vicinity of this cavity guess I'm wondering how you get S one and side two in other words I think if you got the electron you got side yeah
+
+01:29:02
+so is s 1 equal to S 2 is s 1 is s 1 equal to 1 12 s or no no s 1 for example is some function which looks like that S 2 is some function which looks like that they're in different places think property of the spitter property of what of the splitter yeah so you have okay so you have over here you have electron coming in and it hits something it hits something let's say some Target over here the target is a particular kind of Target which splits the beam into two packets it splits the beam into two pget
+
+01:29:54
+packets so wave coming in just splits into two pieces they're they're charged particles so we can manipulate them with electric and magnetic fields and we take this piece of the wave function and send it through here this piece of the wave function and send it through here uh if it wasn't for these magnets this would just be the two slit experiment this would essentially be the two slit experiment it's just we have some fancy splits fancy um slits the the fancy slits are equipped with
+
+01:30:28
+some magnetic fields which may or may not be turned on if the if the if the magnetic field is turned on here even though what it does is takes the the state and just rotates it by 2 pi it takes you from constructive to destructive interference over here I mean couldn't you tell which slit it came through by seeing which Tube It came it came out of if if you look you destroy the interference if you look you destroy the interference anything after it hits here no it just makes it it just makes a DOT there
+
+01:31:07
+that's all doesn't tell you which uh you could tell if you took the center point which which one of the which one of the two slits no you can't no it Sprints out are the tubes after the slits or before the slits you better go back to the two slit experiment go back to the TW slid experiment because this is exactly the same as the two slit experiment if you like you can think of the two slit experiment you can do it for electrons and for photons wave function comes it either goes through this hole
+
+01:31:48
+or this hole but you don't look at this hole you equip with a little uh cylinder here in this hole you equip a little cylinder and in one of them you do or you don't put a magnetic field through it so if you're like a coherent beam of electrons comes coherent beam of wav likee electrons comes it's just a wave comes in some part of the wave goes through here some part of the wave goes through here and the wave reassembles itself or it uh it's uh we Det prot an electron over here if there's no magnetic field in
+
+01:32:29
+here and here then the wave function is symmetric up and down and we expect that the that the uh that the amplitude at the center here is going to be the sum of the two of them it's going to be particularly large May helpful the circles on the left hand side if you draw the circles on the right hand side you get defraction so you get circles around each of the slits and and then they interfere yeah yeah this is right this is and if they interfere constructively then you get this reinforcement at the
+
+01:33:07
+M waves go through the slates and they spread out so you don't know which when you get a DOT on the screen you don't know which way went no you don't know which way it went but if you do know which way it went you destroy the interference and that relies on the the diameter of the tubes being on the order of the wavelength of the elect the diameter of the tube has to be on the order of the wavelength the electron it has to be very the diameter of this yeah has to be very small in order to get the defraction right yeah
+
+01:33:39
+yeah this is not really the way you would do it but if you wanted to do it by a conventional two slit yes you'd have to make it small so if you did this experiment with photons and had a way to rotate down two the two pattern would be the same that's right that's right if you did the same thing if you had a way to rotate the polarization of the photon there's ways to do it or would come out here would not be sensitive to whether to whether you're rotated by 2 pi or not it's easier to do with photons than with
+
+01:34:09
+electrons probably I never thought about it but uh What uh you said there was a slight cheat in this somewhere right didn't you didn't you say that they sort of cheated or something well um the purest version of it is you want to take that electron and very very slowly rotate it so that you know that nothing else is going on here uh it's not slow the electron goes through quickly and uh but still it's the same phenomenon it's the same phenomenon no it's the the the slowness
+
+01:34:49
+just makes sure that there aren't other things going on jiggling and the if it's a really long pipe even though the electron moving fast it's a really long pipe in a weak magnetic field the rotation would be very slow okay it's it's IL legitimate it's measuring the same effect it's measuring the same effect it's measuring the effect of uh Rotation by 2 pi on a firmon right uh yeah this is all a special case of a phenomenon called a berry phase but uh a berry phase like a strawberry phase or
+
+01:35:28
+a raspberry phase or or Michael Berry phase actually the experiment was first proposed by aronov and myself a long time ago but yeah so when the experiment was done was it considered a big deal or was it like yep that's what we thought when the theory was proposed it was considered a big deal everybody by that point enough of these kind of things have been done everybody knew it would have to work work but uh you know right it was yeah it was considered uh something surprising that uh people had
+
+01:36:03
+thought that under no circumstances was there any um empirical signature of a rotation by 2 pi so it was interesting yeah in the experiment where you have the being splitter don't you have to recombine after yes of course yeah yeah well the wave function the wave function not sure what recombines me the wave function goes through and comes out and spreads out here and this one spreads out from here and it creates an interference pattern by the classical interference phenomenon the split what's
+
+01:36:48
+thatl yeah it is it it really is just a two slit experiment except with it with something inserted in near one of the slits to do something to the electron and as I said these things are always destroyed if there's any um you know little Maxwell demon watching what's going on that records what goes on you happen to remember if uh you and AR thought of this idea before or after the so-called bone oh it was after oh yeah it was definitely yeah 1967 I forget the aaro bom effect was late 50s I can't remember yeah yeah
+
+01:37:33
+yeah right bom effect it's another funny interference experiment is it is it the bomb bomb tester thing you have you ever heard of that this oh yeah the um the V in uh oh yeah yeah yeah yeah yeah that's a very beautiful idea yeah right doesn't really have to do with bombs yeah right that gets your attention though yeah it gets your attention right okay that's yeah is it in some sense is this expected because it isn't just that the probability of not being able to combine Fons is zero
+
+01:38:22
+they actually cannot be combined into one state it's only one firon you're not combining two firion no I mean more generally you talk about putting two electrons into the same state which can't be done yeah but this doesn't have anything to do with that because there's only one electron right no now question is could you do the same thing exchanging electrons yeah you could do the same thing exchanging electrons it's it's more complicated harder to visualize you have you start with a pair
+
+01:38:48
+of electrons now now you literally start with a pair of electrons and what you do is you okay let's here here's some possibilities you take these things are wonderful they can be anything you want them to be have two electrons okay now what you're going to do is you're going to split the beam of two electrons that means you're going to create a state which is a superposition of two electrons over here and two electrons over here it's only two electrons no no four electrons it's not
+
+01:39:23
+one it's not four electrons it's two electrons but either the two electrons are here or the two electrons are here and now if the two electrons are here there's an apparatus which exchanges them somebody you know a field grabs onto them and exchanges them if they're down here no such thing happens or perhaps we forget to switch on the thing which which exchanges them so the other possibility is no exchange on either Branch so we split the beam of two electrons so that we have either two
+
+01:40:03
+electrons here or two electrons here if they're here we exchange them if they're here we don't exchange them and then we bring them back together again and interfere them and see what comes out of this thing afterwards question is do you get the same thing or something different if you decide to ex exchange these two guys here or if you don't does the exchange which after all does nothing to them right I mean if the state doesn't care about which electron is which and of course the answer is
+
+01:40:37
+that the experiment for firion will detect the fact that you exchange the two particles the experiment for bosons will not now what would happen all right here's another experiment we split the pair pair here or a pair here if the pair is here we interchange them if the pair is down here we rotate by 2 pi so you think they can right they will yeah they will they will cancel the two effects will cancel right that uh that's the uh nobody's to my knowledge nobody would has ever done that experiment I have a
+
+01:41:27
+feeling that one is know at the moment probably beyond the uh beond the so does that in any way challenge the idea that the two electrons are indistinguishable what no no well it is what it is indistinguishable means that if you interchange them it changes sign that's what it means um it means the Quantum notion of of um indistinguishable is more subtle than the classical uh as usual that's the sort of thing it means right now of course what's what's going on here in in both of these cases in the
+
+01:42:13
+case of the single electron where you rotate one part of the world and you don't rotate the other part of course that is not truly a rotation by 2 pi a true Rotation by 2 pi is the whole world has to rotate if the whole world rotates then you don't see anything okay but all experiments that you ever do uh compartmentalized into uh you know so it's univers is a no no it it's it still will not be uh visible yeah so the reason this is detectable is because you've rotated one part of the
+
+01:42:58
+universe relative to another right but still you do detect the fact that rotations by 2 pi cause a change in sign so and that was surprising at the time okay H yeah it's it's surprising today right okay we're uh we're done for tonight for more please visit us at stanford.edu
+

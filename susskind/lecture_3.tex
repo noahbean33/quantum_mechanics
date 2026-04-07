@@ -2,7 +2,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm}
-\usepackage{physics}
 \usepackage{geometry}
 \usepackage{enumitem}
 \usepackage{hyperref}
@@ -13,7 +12,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{Lecture 3}
-\lhead{Quantum Mechanics --- The Theoretical Minimum}
+\lhead{Quantum Systems via Linear Algebra}
 \cfoot{\thepage}
 
 \titleformat{\section}{\large\bfseries}{}{0em}{}
@@ -22,8 +21,8 @@
 \newtheorem{theorem}{Theorem}
 \newtheorem{definition}{Definition}
 
-\title{\textbf{Lecture 3: Linear Operators and Observables} \\ \large Matrices, Hermitian Conjugation, Eigenvalues, and the Pauli Matrices}
-\author{Based on Leonard Susskind's \textit{The Theoretical Minimum}}
+\title{\textbf{Lecture 3: Linear Operators and Self-Adjoint Matrices} \\ \large Matrix Elements, Eigendecomposition, and the $X$, $Y$, $Z$ Matrices}
+\author{Quantum Systems via Linear Algebra, Differential Equations, and Probability}
 \date{}
 
 \begin{document}
@@ -34,91 +33,73 @@
 \section{1. Expanding Vectors in a Basis}
 % ============================================================
 
-Good notation is worth an enormous amount---Dirac's notation allows us to manipulate abstract quantities efficiently and correctly.
-
-Let $\{\ket{i}\}$ be an \textbf{orthonormal basis} ($\braket{j}{i}=\delta_{ji}$) of dimension $N$.  Any vector can be expanded as
+Let $\{\mathbf{e}_i\}$ be an \textbf{orthonormal basis} ($\mathbf{e}_j^\dagger\mathbf{e}_i=\delta_{ji}$) of dimension $N$.  Any vector can be expanded as
 \[
-    \ket{A} = \sum_{i=1}^{N} \alpha_i \ket{i}, \qquad \alpha_i = \braket{i}{A}.
+    \mathbf{v} = \sum_{i=1}^{N} \alpha_i \,\mathbf{e}_i, \qquad \alpha_i = \mathbf{e}_i^\dagger\mathbf{v}.
 \]
-The second equation follows by taking the inner product of both sides with $\bra{j}$: the orthonormality condition $\braket{j}{i}=\delta_{ji}$ collapses the sum to a single term $\alpha_j = \braket{j}{A}$.  Substituting back:
+The second equation follows by left-multiplying by $\mathbf{e}_j^\dagger$: orthonormality collapses the sum to a single term $\alpha_j = \mathbf{e}_j^\dagger\mathbf{v}$.  Substituting back:
 \[
-    \boxed{\ket{A} = \sum_i \ket{i}\braket{i}{A}.}
+    \boxed{\mathbf{v} = \sum_i \mathbf{e}_i\,(\mathbf{e}_i^\dagger\mathbf{v}).}
 \]
-The formal identity $\sum_i \ket{i}\bra{i} = \mathbf{1}$ is called the \textbf{resolution of the identity} (or \emph{insertion of a complete set of states}).  This is an enormously useful trick: whenever you see a vector $\ket{A}$, you can ``insert a complete set'' by replacing it with the right-hand side.  The same holds for bra vectors:
-\[
-    \bra{A} = \sum_i \braket{A}{i}\bra{i}.
-\]
+The identity $\sum_i \mathbf{e}_i\mathbf{e}_i^\dagger = I$ is the \textbf{resolution of identity}---each term $\mathbf{e}_i\mathbf{e}_i^\dagger$ is a rank-1 projector onto the $i$-th basis direction.
 
 % ============================================================
 \section{2. Linear Operators}
 % ============================================================
 
-John Wheeler liked to describe a linear operator as a \textbf{machine}: you put a vector into one port, turn the crank, and a (generally different) vector comes out the other port.  Given any input $\ket{A}$, the machine produces a unique output $\ket{B}=M\ket{A}$.  (The converse need not hold: different inputs may produce the same output.)
+A linear operator maps column vectors to column vectors.  Given any input $\mathbf{v}$, it produces a unique output $\mathbf{w}=M\mathbf{v}$.
 
 \begin{definition}[Linear operator]
-A \textbf{linear operator} $M$ is a map from ket vectors to ket vectors satisfying two linearity rules:
+A \textbf{linear operator} $M$ is a map from vectors to vectors satisfying two linearity rules:
 \begin{align}
-    M\bigl(z\ket{A}\bigr) &= z\,M\ket{A}, \quad \forall\, z\in\mathbb{C}, \\
-    M\bigl(\ket{A}+\ket{B}\bigr) &= M\ket{A} + M\ket{B}.
+    M(z\mathbf{v}) &= z\,M\mathbf{v}, \quad \forall\, z\in\mathbb{C}, \\
+    M(\mathbf{u}+\mathbf{v}) &= M\mathbf{u} + M\mathbf{v}.
 \end{align}
 In words: complex constants can be pulled through the operator, and the operator distributes over sums.
 \end{definition}
 
-\noindent\textbf{Examples.}
-\begin{itemize}[nosep]
-    \item Multiplication by a complex number $z$ is a (trivial) linear operator.
-    \item Complex conjugation is \textbf{not} a linear operator---it maps kets to bras and violates the first rule ($z^*$ appears instead of $z$).  It is called an \emph{anti-linear} operator.
-\end{itemize}
-
 \subsection{2.1 Matrix elements}
-Given a basis $\{\ket{i}\}$, the operator $M$ is fully characterized by its \textbf{matrix elements}:
+Given a basis $\{\mathbf{e}_i\}$, the operator $M$ is fully characterized by its \textbf{matrix elements}:
 \[
-    M_{ij} \equiv \bra{i}M\ket{j}.
+    M_{ij} \equiv \mathbf{e}_i^\dagger\,M\,\mathbf{e}_j.
 \]
-This is a concrete complex number obtained by: (1) applying $M$ to basis vector $\ket{j}$ to get a new ket, then (2) taking its inner product with $\bra{i}$.
+This is a concrete complex number obtained by: (1) applying $M$ to basis vector $\mathbf{e}_j$ to get a new vector, then (2) taking the inner product with $\mathbf{e}_i^\dagger$.
 
-If $M\ket{A}=\ket{B}$, insert a complete set of states on $\ket{A}$:
+If $M\mathbf{v}=\mathbf{w}$, insert the resolution of identity:
 \[
-    \beta_i = \bra{i}\ket{B} = \bra{i}M\ket{A} = \sum_j \bra{i}M\ket{j}\braket{j}{A} = \sum_j M_{ij}\,\alpha_j,
+    w_i = \mathbf{e}_i^\dagger\mathbf{w} = \mathbf{e}_i^\dagger M\mathbf{v} = \sum_j (\mathbf{e}_i^\dagger M\mathbf{e}_j)(\mathbf{e}_j^\dagger\mathbf{v}) = \sum_j M_{ij}\,v_j,
 \]
 which is simply matrix--column-vector multiplication:
 \[
-    \begin{pmatrix}\beta_1\\\beta_2\\\vdots\end{pmatrix}
+    \begin{pmatrix}w_1\\w_2\\\vdots\end{pmatrix}
     = \begin{pmatrix}M_{11}&M_{12}&\cdots\\M_{21}&M_{22}&\cdots\\\vdots&\vdots&\ddots\end{pmatrix}
-    \begin{pmatrix}\alpha_1\\\alpha_2\\\vdots\end{pmatrix}.
+    \begin{pmatrix}v_1\\v_2\\\vdots\end{pmatrix}.
 \]
-The rule for the $i$-th output component: take the $i$-th row, multiply element-by-element with the column, and sum.
 
 \medskip
 \noindent\textbf{Basis dependence:} The specific numbers $M_{ij}$ depend on the choice of basis.  A different basis gives different matrix elements for the same abstract operator.  This is analogous to how the components of a vector change when you rotate your coordinate axes.
 
-\subsection{2.2 Bracket removal rule}
-An important consequence of the definitions: for any vectors $\ket{A}$, $\ket{B}$ and operator $M$,
-\[
-    \bra{A}M\ket{B}
-\]
-is unambiguous---one may first apply $M$ to $\ket{B}$ (acting right) or first apply $M^\dagger$ to $\bra{A}$ (acting left); both give the same complex number.  This can be proven by inserting complete sets of states and reducing everything to sums over matrix elements.  It is one of the great conveniences of Dirac notation.
+\subsection{2.2 Quadratic form}
+For any vectors $\mathbf{u}$, $\mathbf{v}$ and operator $M$, the scalar $\mathbf{u}^\dagger M\mathbf{v}$ is unambiguous---it reduces to a sum over matrix elements.  The special case $\mathbf{v}^\dagger M\mathbf{v}$ is the \textbf{Rayleigh quotient}, already familiar from linear algebra.
 
 % ============================================================
-\section{3. Hermitian Conjugate (Dagger)}
+\section{3. Hermitian Conjugate (Adjoint)}
 % ============================================================
 
 \begin{definition}[Hermitian conjugate]
-For every operator $M$ acting on kets, there is a unique operator $M^\dagger$ (the \textbf{Hermitian conjugate}, or \textbf{adjoint}) defined by: if $M\ket{A}=\ket{B}$, then $\bra{A}M^\dagger = \bra{B}$.
+For every matrix $M$, there is a unique matrix $M^\dagger$ (the \textbf{Hermitian conjugate}, or \textbf{adjoint}) satisfying: for all $\mathbf{u},\mathbf{v}$,
+\[
+    (\mathbf{u}^\dagger M^\dagger)\mathbf{v} = (M\mathbf{u})^\dagger\mathbf{v}.
+\]
 \end{definition}
 
-\noindent In other words, $M^\dagger$ ``flips the equation from kets to bras.''  The dagger operation is the operator analog of complex conjugation for numbers: just as every complex number $z$ has a conjugate $z^*$, every operator $M$ has an adjoint $M^\dagger$.
+\noindent The dagger operation is the matrix analog of complex conjugation for numbers: just as every complex number $z$ has a conjugate $z^*$, every matrix $M$ has an adjoint $M^\dagger$.
 
-\subsection{3.1 Derivation of matrix elements}
-If $M\ket{i}=\ket{i'}$, then $M^\dagger$ satisfies $\bra{i}M^\dagger=\bra{i'}$.  Therefore:
-\[
-    (M^\dagger)_{ij} = \bra{i}M^\dagger\ket{j} = \braket{i'}{j} = \braket{j}{i'}^* = \bigl(\bra{j}M\ket{i}\bigr)^* = M_{ji}^*.
-\]
-So:
+\subsection{3.1 Matrix elements of the adjoint}
 \[
     \boxed{(M^\dagger)_{ij} = M_{ji}^*.}
 \]
-Recipe: \textbf{transpose} (swap $i\leftrightarrow j$) and \textbf{complex conjugate}.  The transpose interchanges rows and columns (reflection about the diagonal); then you conjugate every entry.
+Recipe: \textbf{transpose} (swap $i\leftrightarrow j$) and \textbf{complex conjugate}.  The transpose interchanges rows and columns; then you conjugate every entry.
 
 \subsection{3.2 Example}
 \[
@@ -130,55 +111,49 @@ Recipe: \textbf{transpose} (swap $i\leftrightarrow j$) and \textbf{complex conju
 \]
 
 % ============================================================
-\section{4. Hermitian Operators}
+\section{4. Self-Adjoint Matrices}
 % ============================================================
 
-\begin{definition}[Hermitian operator]
-An operator $M$ is \textbf{Hermitian} (self-adjoint) if
+\begin{definition}[Self-adjoint matrix]
+A matrix $M$ is \textbf{self-adjoint} (Hermitian) if
 \[
     M = M^\dagger \quad\Longleftrightarrow\quad M_{ij} = M_{ji}^*.
 \]
 \end{definition}
 
-Hermitian is the operator analogue of ``real'' for numbers ($z=z^*$).  Properties of a Hermitian matrix:
+Self-adjoint is the matrix analogue of ``real'' for numbers ($z=z^*$).  Properties:
 \begin{itemize}[nosep]
     \item \textbf{Diagonal elements are real}: $M_{ii} = M_{ii}^*$, so $M_{ii}\in\mathbb{R}$.
-    \item \textbf{Off-diagonal elements} come in conjugate pairs: $M_{ij} = M_{ji}^*$.  Reflecting about the diagonal and conjugating returns the same matrix.
+    \item \textbf{Off-diagonal elements} come in conjugate pairs: $M_{ij} = M_{ji}^*$.
 \end{itemize}
 
 \noindent\textbf{Example:}
 \[
     \begin{pmatrix}1 & i & 4-i\\ -i & 7 & 5\\ 4+i & 5 & -2.6\end{pmatrix}
 \]
-is Hermitian: diagonal entries ($1,7,-2.6$) are real; $(1,2)$-entry $i$ and $(2,1)$-entry $-i$ are conjugates; etc.
+is self-adjoint: diagonal entries ($1,7,-2.6$) are real; $(1,2)$-entry $i$ and $(2,1)$-entry $-i$ are conjugates; etc.
 
 \medskip
-\noindent\textbf{Central role in physics:} Hermitian operators represent \emph{observable} quantities---the things you can measure.  The result of any measurement is a real number, and Hermitian operators guarantee real eigenvalues.
+\noindent\textbf{Central role (Axiom~2):} Self-adjoint matrices represent observables.  The result of any measurement is a real number, and self-adjoint matrices guarantee real eigenvalues.
 
 % ============================================================
 \section{5. Eigenvalues and Eigenvectors}
 % ============================================================
 
 \begin{definition}[Eigenvector, eigenvalue]
-A nonzero vector $\ket{\lambda}$ is an \textbf{eigenvector} of $M$ with \textbf{eigenvalue} $\lambda$ if
+A nonzero vector $\mathbf{e}_\lambda$ is an \textbf{eigenvector} of $M$ with \textbf{eigenvalue} $\lambda$ if
 \[
-    M\ket{\lambda} = \lambda\ket{\lambda}.
+    M\mathbf{e}_\lambda = \lambda\,\mathbf{e}_\lambda.
 \]
-The operator merely \emph{rescales} the vector without changing its direction.  The eigenvectors are the special directions that the machine $M$ does not ``twist''---they come out parallel to how they went in.
+The matrix merely \emph{rescales} the vector without changing its direction.
 \end{definition}
 
-\noindent\textbf{Examples.}
-\begin{itemize}[nosep]
-    \item A rotation about an axis in 3D: the only eigenvector direction is the axis of rotation (eigenvalue $+1$).  All other vectors get rotated to different directions.
-    \item In 2D, a rotation has \emph{no} real eigenvectors (no direction is preserved).
-\end{itemize}
+\noindent\textbf{Note:} Eigenvectors are defined only up to a multiplicative constant.  If $\mathbf{e}_\lambda$ is an eigenvector, so is $z\mathbf{e}_\lambda$ for any $z\neq 0$, with the same eigenvalue.
 
-\noindent\textbf{Note:} Eigenvectors are defined only up to a multiplicative constant.  If $\ket{\lambda}$ is an eigenvector, so is $z\ket{\lambda}$ for any $z\neq 0$, with the same eigenvalue.  Strictly speaking, one should think of ``eigendirections.''
-
-\subsection{5.1 Spectral theorem for Hermitian operators}
+\subsection{5.1 Spectral theorem for self-adjoint matrices}
 
 \begin{theorem}
-If $M$ is Hermitian on an $N$-dimensional space, then:
+If $M = M^\dagger$ on an $N$-dimensional space, then:
 \begin{enumerate}[nosep]
     \item All eigenvalues $\lambda_i$ are \textbf{real}.
     \item Eigenvectors with \textbf{distinct} eigenvalues are \textbf{orthogonal}.
@@ -186,131 +161,126 @@ If $M$ is Hermitian on an $N$-dimensional space, then:
 \end{enumerate}
 \end{theorem}
 
-\noindent This is perhaps the most important theorem in quantum mechanics.  It guarantees that the eigenvectors of any observable form a basis in which you can expand any state, and that measurement outcomes (eigenvalues) are always real numbers.
+\noindent This is the most important theorem for our purposes.  It guarantees that the eigenvectors of any observable form a basis, and that measurement outcomes (eigenvalues) are always real.
 
 \subsection{5.2 Proof: eigenvalues are real}
-Start from $M\ket{i}=\lambda_i\ket{i}$.  Flip to bra equation (Hermitian conjugate):
+Start from $M\mathbf{e}_i=\lambda_i\mathbf{e}_i$.  Take the conjugate transpose:
 \[
-    \bra{i}M^\dagger = \lambda_i^*\bra{i}.
+    \mathbf{e}_i^\dagger M^\dagger = \lambda_i^*\mathbf{e}_i^\dagger.
 \]
-Since $M=M^\dagger$, both the ket and bra equations involve the same operator $M$.  Sandwich with $\bra{i}$ on the left and $\ket{i}$ on the right:
+Since $M=M^\dagger$, both equations involve the same matrix $M$.  Left-multiply the first by $\mathbf{e}_i^\dagger$ and right-multiply the second by $\mathbf{e}_i$:
 \[
-    \bra{i}M\ket{i} = \lambda_i\braket{i}{i} \quad\text{(from the ket equation)},
+    \mathbf{e}_i^\dagger M\mathbf{e}_i = \lambda_i\,\mathbf{e}_i^\dagger\mathbf{e}_i, \qquad
+    \mathbf{e}_i^\dagger M\mathbf{e}_i = \lambda_i^*\,\mathbf{e}_i^\dagger\mathbf{e}_i.
 \]
-\[
-    \bra{i}M\ket{i} = \lambda_i^*\braket{i}{i} \quad\text{(from the bra equation)}.
-\]
-The left sides are identical.  Cancelling $\braket{i}{i}\neq 0$ gives $\lambda_i = \lambda_i^*$, so $\lambda_i\in\mathbb{R}$.\;$\square$
+Cancelling $\mathbf{e}_i^\dagger\mathbf{e}_i\neq 0$ gives $\lambda_i = \lambda_i^*$, so $\lambda_i\in\mathbb{R}$.\;$\square$
 
 \subsection{5.3 Proof: eigenvectors with distinct eigenvalues are orthogonal}
-Let $M\ket{i}=\lambda_i\ket{i}$ and $M\ket{j}=\lambda_j\ket{j}$ with $\lambda_i\neq\lambda_j$.  Flip the second equation to a bra equation:
+Let $M\mathbf{e}_i=\lambda_i\mathbf{e}_i$ and $M\mathbf{e}_j=\lambda_j\mathbf{e}_j$ with $\lambda_i\neq\lambda_j$.  The conjugate transpose of the second:
 \[
-    \bra{j}M = \lambda_j\bra{j} \quad\text{(using $\lambda_j^*=\lambda_j$ since eigenvalues are real)}.
+    \mathbf{e}_j^\dagger M = \lambda_j\,\mathbf{e}_j^\dagger \quad\text{(using $\lambda_j^*=\lambda_j$)}.
 \]
-Now compute $\bra{j}M\ket{i}$ two ways:
+Compute $\mathbf{e}_j^\dagger M\mathbf{e}_i$ two ways:
 \[
-    \bra{j}M\ket{i} = \lambda_i\braket{j}{i} \quad\text{(act $M$ right)}, \qquad
-    \bra{j}M\ket{i} = \lambda_j\braket{j}{i} \quad\text{(act $M$ left)}.
+    \mathbf{e}_j^\dagger M\mathbf{e}_i = \lambda_i\,\mathbf{e}_j^\dagger\mathbf{e}_i, \qquad
+    \mathbf{e}_j^\dagger M\mathbf{e}_i = \lambda_j\,\mathbf{e}_j^\dagger\mathbf{e}_i.
 \]
-Subtracting: $(\lambda_i - \lambda_j)\braket{j}{i}=0$.  Since $\lambda_i\neq\lambda_j$, we conclude $\braket{j}{i}=0$.\;$\square$
+Subtracting: $(\lambda_i - \lambda_j)\,\mathbf{e}_j^\dagger\mathbf{e}_i=0$.  Since $\lambda_i\neq\lambda_j$, we conclude $\mathbf{e}_j^\dagger\mathbf{e}_i=0$.\;$\square$
 
 \medskip
-\noindent\textbf{Physical meaning:} Orthogonal eigenvectors correspond to \textbf{physically distinguishable} states---states that can be told apart with certainty by a single measurement of the observable $M$.
+\noindent\textbf{Physical meaning:} Orthogonal eigenvectors correspond to distinguishable states---states that can be told apart with certainty by a single measurement.
 
 % ============================================================
-\section{6. The Postulates of Quantum Mechanics}
+\section{6. Connection to the Axioms}
 % ============================================================
 
-With the mathematical machinery in hand, we can now state the core postulates:
+With the spectral theorem in hand, the axioms from Lecture~1 become concrete:
 
 \begin{enumerate}[nosep]
-    \item \textbf{Observables are Hermitian operators.}  Every measurable quantity (observable) is represented by a Hermitian operator on the state space.
-    \item \textbf{Eigenvalues are the possible measurement outcomes.}  The only values that can result from measuring an observable $M$ are its eigenvalues $\lambda_i$.  Since $M$ is Hermitian, these are real.
-    \item \textbf{Eigenvectors are states of definite value.}  The eigenvector $\ket{i}$ corresponding to eigenvalue $\lambda_i$ is the state in which the observable $M$ has the unambiguous, definite value $\lambda_i$.
-    \item \textbf{Probability rule.}  If the system is in state $\ket{A}$ and we measure $M$, the probability of obtaining eigenvalue $\lambda_i$ is
+    \item \textbf{Axiom~2 (Observable):} Every measurable quantity is a self-adjoint matrix $M = M^\dagger$.  Its eigenvalues $\lambda_i \in \mathbb{R}$ are the only possible outcomes.
+    \item \textbf{Eigenvectors are states of definite value.}  The eigenvector $\mathbf{e}_i$ corresponding to $\lambda_i$ is the state in which $M$ has the unambiguous value $\lambda_i$.
+    \item \textbf{Axiom~3 (Born rule):} If the system is in state $\mathbf{v}$ and we measure $M$, the probability of obtaining $\lambda_i$ is
     \[
-        P(\lambda_i) = |\braket{i}{A}|^2 = \braket{A}{i}\braket{i}{A}.
+        P(\lambda_i) = |\mathbf{e}_i^\dagger\mathbf{v}|^2.
     \]
-    The complex number $\braket{i}{A}$ is called the \textbf{probability amplitude}; you square its magnitude to get the probability.
+    The complex number $\mathbf{e}_i^\dagger\mathbf{v}$ is the \textbf{probability amplitude}; squaring its magnitude gives the probability.
 \end{enumerate}
 
 \noindent\textbf{Normalization.}  Since probabilities must sum to 1:
 \[
-    \sum_i P(\lambda_i) = \sum_i |\braket{i}{A}|^2 = \braket{A}{A} = 1.
+    \sum_i P(\lambda_i) = \sum_i |\mathbf{e}_i^\dagger\mathbf{v}|^2 = \mathbf{v}^\dagger\mathbf{v} = 1.
 \]
-Physical states are unit vectors.  The overall phase $e^{i\theta}\ket{A}$ is physically equivalent to $\ket{A}$ (all probabilities are unchanged).
-
-\noindent\textbf{Measurement as preparation.}  When you measure $M$ and obtain $\lambda_i$, the system is left in the eigenstate $\ket{i}$.  The measurement has \emph{prepared} the system in that state.
+Physical states are unit vectors.  The overall phase $e^{i\theta}\mathbf{v}$ is physically equivalent to $\mathbf{v}$ (all probabilities are unchanged).
 
 % ============================================================
-\section{7. Application: The Pauli Matrices}
+\section{7. The $X$, $Y$, $Z$ Matrices}
 % ============================================================
 
-The three spin components $\sigma_x,\sigma_y,\sigma_z$ are Hermitian operators on $\mathbb{C}^2$.  We work in the $\{\ket{\uparrow},\ket{\downarrow}\}$ basis and compute each matrix from its known eigenvectors and eigenvalues.
+The three standard observables for a two-level system are self-adjoint matrices on $\mathbb{C}^2$.  We work in the $\{\mathbf{e}_0,\mathbf{e}_1\}$ basis and compute each matrix from its known eigenvectors and eigenvalues (derived in Lecture~2).
 
-\subsection{7.1 Computing $\sigma_z$}
-We know: $\sigma_z\ket{\uparrow}=+1\cdot\ket{\uparrow}$ and $\sigma_z\ket{\downarrow}=-1\cdot\ket{\downarrow}$.  The matrix elements:
+\subsection{7.1 Computing $Z$}
+We know: $Z\mathbf{e}_0=+1\cdot\mathbf{e}_0$ and $Z\mathbf{e}_1=-1\cdot\mathbf{e}_1$.  The matrix elements:
 \begin{align}
-    (\sigma_z)_{\uparrow\uparrow} &= \bra{\uparrow}\sigma_z\ket{\uparrow} = +1\cdot\braket{\uparrow}{\uparrow} = +1, \\
-    (\sigma_z)_{\uparrow\downarrow} &= \bra{\uparrow}\sigma_z\ket{\downarrow} = -1\cdot\braket{\uparrow}{\downarrow} = 0, \\
-    (\sigma_z)_{\downarrow\uparrow} &= \bra{\downarrow}\sigma_z\ket{\uparrow} = +1\cdot\braket{\downarrow}{\uparrow} = 0, \\
-    (\sigma_z)_{\downarrow\downarrow} &= \bra{\downarrow}\sigma_z\ket{\downarrow} = -1\cdot\braket{\downarrow}{\downarrow} = -1.
+    Z_{00} &= \mathbf{e}_0^\dagger Z\mathbf{e}_0 = +1\cdot\mathbf{e}_0^\dagger\mathbf{e}_0 = +1, \\
+    Z_{01} &= \mathbf{e}_0^\dagger Z\mathbf{e}_1 = -1\cdot\mathbf{e}_0^\dagger\mathbf{e}_1 = 0, \\
+    Z_{10} &= \mathbf{e}_1^\dagger Z\mathbf{e}_0 = +1\cdot\mathbf{e}_1^\dagger\mathbf{e}_0 = 0, \\
+    Z_{11} &= \mathbf{e}_1^\dagger Z\mathbf{e}_1 = -1\cdot\mathbf{e}_1^\dagger\mathbf{e}_1 = -1.
 \end{align}
 Therefore:
 \[
-    \sigma_z = \begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+    Z = \begin{pmatrix}1&0\\0&-1\end{pmatrix}.
 \]
 
-\subsection{7.2 Computing $\sigma_x$}
-The eigenvectors of $\sigma_x$ are $\ket{\rightarrow}=\frac{1}{\sqrt{2}}(\ket{\uparrow}+\ket{\downarrow})$ with eigenvalue $+1$ and $\ket{\leftarrow}=\frac{1}{\sqrt{2}}(\ket{\uparrow}-\ket{\downarrow})$ with eigenvalue $-1$.  To find the matrix elements in the $\{\ket{\uparrow},\ket{\downarrow}\}$ basis, we express $\ket{\uparrow}$ and $\ket{\downarrow}$ in terms of $\ket{\rightarrow}$ and $\ket{\leftarrow}$:
+\subsection{7.2 Computing $X$}
+The eigenvectors of $X$ are $\mathbf{x}_+=\frac{1}{\sqrt{2}}(\mathbf{e}_0+\mathbf{e}_1)$ with eigenvalue $+1$ and $\mathbf{x}_-=\frac{1}{\sqrt{2}}(\mathbf{e}_0-\mathbf{e}_1)$ with eigenvalue $-1$.  Express $\mathbf{e}_0$ and $\mathbf{e}_1$ in terms of $\mathbf{x}_\pm$:
 \[
-    \ket{\uparrow} = \frac{1}{\sqrt{2}}(\ket{\rightarrow}+\ket{\leftarrow}), \qquad
-    \ket{\downarrow} = \frac{1}{\sqrt{2}}(\ket{\rightarrow}-\ket{\leftarrow}).
+    \mathbf{e}_0 = \frac{1}{\sqrt{2}}(\mathbf{x}_++\mathbf{x}_-), \qquad
+    \mathbf{e}_1 = \frac{1}{\sqrt{2}}(\mathbf{x}_+-\mathbf{x}_-).
 \]
-Compute $(\sigma_x)_{\uparrow\uparrow}$:
+Compute $X_{00}$:
 \begin{align}
-    \bra{\uparrow}\sigma_x\ket{\uparrow}
-    &= \tfrac{1}{2}(\bra{\rightarrow}+\bra{\leftarrow})\,\sigma_x\,(\ket{\rightarrow}+\ket{\leftarrow}) \\
-    &= \tfrac{1}{2}(\bra{\rightarrow}+\bra{\leftarrow})(\ket{\rightarrow}-\ket{\leftarrow})
-      \qquad\text{[since $\sigma_x\ket{\rightarrow}=\ket{\rightarrow}$, $\sigma_x\ket{\leftarrow}=-\ket{\leftarrow}$]} \\
+    \mathbf{e}_0^\dagger X\mathbf{e}_0
+    &= \tfrac{1}{2}(\mathbf{x}_+^\dagger+\mathbf{x}_-^\dagger)\,X\,(\mathbf{x}_++\mathbf{x}_-) \\
+    &= \tfrac{1}{2}(\mathbf{x}_+^\dagger+\mathbf{x}_-^\dagger)(\mathbf{x}_+-\mathbf{x}_-)
+      \quad\text{[since $X\mathbf{x}_+=\mathbf{x}_+$, $X\mathbf{x}_-=-\mathbf{x}_-$]} \\
     &= \tfrac{1}{2}(1-1) = 0.
 \end{align}
-Similarly $(\sigma_x)_{\downarrow\downarrow}=0$.  For the off-diagonal:
+Similarly $X_{11}=0$.  For the off-diagonal:
 \begin{align}
-    \bra{\uparrow}\sigma_x\ket{\downarrow}
-    &= \tfrac{1}{2}(\bra{\rightarrow}+\bra{\leftarrow})(\ket{\rightarrow}+\ket{\leftarrow}) = \tfrac{1}{2}(1+1)=1.
+    \mathbf{e}_0^\dagger X\mathbf{e}_1
+    &= \tfrac{1}{2}(\mathbf{x}_+^\dagger+\mathbf{x}_-^\dagger)(\mathbf{x}_+-\mathbf{x}_-+\mathbf{x}_--\mathbf{x}_+)... 
 \end{align}
-By similar calculation $(\sigma_x)_{\downarrow\uparrow}=1$.  Therefore:
+Direct computation gives $X_{01}=X_{10}=1$.  Therefore:
 \[
-    \sigma_x = \begin{pmatrix}0&1\\1&0\end{pmatrix}.
+    X = \begin{pmatrix}0&1\\1&0\end{pmatrix}.
 \]
 
-\subsection{7.3 Computing $\sigma_y$}
-The eigenvectors are $\ket{\text{in}}=\frac{1}{\sqrt{2}}(\ket{\uparrow}+i\ket{\downarrow})$ with eigenvalue $+1$ and $\ket{\text{out}}=\frac{1}{\sqrt{2}}(\ket{\uparrow}-i\ket{\downarrow})$ with eigenvalue $-1$.  Solving for up and down in terms of in and out and proceeding as above (left as an exercise), the unique result is:
+\subsection{7.3 Computing $Y$}
+The eigenvectors are $\mathbf{y}_+=\frac{1}{\sqrt{2}}(\mathbf{e}_0+i\mathbf{e}_1)$ with eigenvalue $+1$ and $\mathbf{y}_-=\frac{1}{\sqrt{2}}(\mathbf{e}_0-i\mathbf{e}_1)$ with eigenvalue $-1$.  Proceeding as above, the unique result is:
 \[
-    \sigma_y = \begin{pmatrix}0&-i\\i&0\end{pmatrix}.
+    Y = \begin{pmatrix}0&-i\\i&0\end{pmatrix}.
 \]
 
-\subsection{7.4 Summary of the Pauli matrices}
+\subsection{7.4 Summary of the $X$, $Y$, $Z$ matrices}
 \[
-    \boxed{\sigma_z = \begin{pmatrix}1&0\\0&-1\end{pmatrix}, \qquad
-    \sigma_x = \begin{pmatrix}0&1\\1&0\end{pmatrix}, \qquad
-    \sigma_y = \begin{pmatrix}0&-i\\i&0\end{pmatrix}.}
+    \boxed{Z = \begin{pmatrix}1&0\\0&-1\end{pmatrix}, \qquad
+    X = \begin{pmatrix}0&1\\1&0\end{pmatrix}, \qquad
+    Y = \begin{pmatrix}0&-i\\i&0\end{pmatrix}.}
 \]
-Each is Hermitian ($\sigma_i = \sigma_i^\dagger$), each has eigenvalues $+1$ and $-1$, and each has orthogonal eigenvectors forming a complete basis.
+Each is self-adjoint ($M = M^\dagger$), each has eigenvalues $+1$ and $-1$, and each has orthogonal eigenvectors forming a complete basis.  (In physics these are called the Pauli matrices and denoted $\sigma_z, \sigma_x, \sigma_y$.)
 
 \subsection{7.5 Eigenvalues and eigenvectors summary}
 \begin{align}
-    \sigma_z: &\quad \ket{\uparrow}\;(\lambda=+1),\quad \ket{\downarrow}\;(\lambda=-1). \\
-    \sigma_x: &\quad \ket{\rightarrow}=\tfrac{1}{\sqrt{2}}(\ket{\uparrow}+\ket{\downarrow})\;(\lambda=+1),\quad \ket{\leftarrow}=\tfrac{1}{\sqrt{2}}(\ket{\uparrow}-\ket{\downarrow})\;(\lambda=-1). \\
-    \sigma_y: &\quad \ket{\text{in}}=\tfrac{1}{\sqrt{2}}(\ket{\uparrow}+i\ket{\downarrow})\;(\lambda=+1),\quad \ket{\text{out}}=\tfrac{1}{\sqrt{2}}(\ket{\uparrow}-i\ket{\downarrow})\;(\lambda=-1).
+    Z: &\quad \mathbf{e}_0\;(\lambda=+1),\quad \mathbf{e}_1\;(\lambda=-1). \\
+    X: &\quad \mathbf{x}_+=\tfrac{1}{\sqrt{2}}(\mathbf{e}_0+\mathbf{e}_1)\;(\lambda=+1),\quad \mathbf{x}_-=\tfrac{1}{\sqrt{2}}(\mathbf{e}_0-\mathbf{e}_1)\;(\lambda=-1). \\
+    Y: &\quad \mathbf{y}_+=\tfrac{1}{\sqrt{2}}(\mathbf{e}_0+i\mathbf{e}_1)\;(\lambda=+1),\quad \mathbf{y}_-=\tfrac{1}{\sqrt{2}}(\mathbf{e}_0-i\mathbf{e}_1)\;(\lambda=-1).
 \end{align}
 
 \subsection{7.6 Key algebraic properties}
 \begin{itemize}[nosep]
-    \item $\sigma_x^2 = \sigma_y^2 = \sigma_z^2 = \mathbf{1}$ (squaring any Pauli matrix gives the identity).
-    \item $\sigma_x\sigma_y = i\sigma_z$ (and cyclic permutations: $\sigma_y\sigma_z=i\sigma_x$, $\sigma_z\sigma_x=i\sigma_y$).
-    \item No two Pauli matrices commute: $[\sigma_i,\sigma_j]\neq 0$ for $i\neq j$.  This non-commutativity is the mathematical expression of the fact that you cannot simultaneously know two different components of spin.
+    \item $X^2 = Y^2 = Z^2 = I$ (squaring any of the three matrices gives the identity).
+    \item $XY = iZ$ (and cyclic permutations: $YZ=iX$, $ZX=iY$).
+    \item No two of $X$, $Y$, $Z$ commute: $[X,Y]\neq 0$, $[Y,Z]\neq 0$, $[Z,X]\neq 0$.  This non-commutativity is the mathematical expression of the fact that you cannot simultaneously know the values of two different observables.
 \end{itemize}
 
 % ============================================================
@@ -318,12 +288,12 @@ Each is Hermitian ($\sigma_i = \sigma_i^\dagger$), each has eigenvalues $+1$ and
 % ============================================================
 
 \begin{enumerate}[nosep]
-    \item Any vector can be expanded in an orthonormal basis: $\ket{A}=\sum_i\ket{i}\braket{i}{A}$.  The resolution of identity $\sum_i\ket{i}\bra{i}=\mathbf{1}$ is an indispensable computational tool.
-    \item \textbf{Linear operators} map kets to kets; they are represented by matrices with elements $M_{ij}=\bra{i}M\ket{j}$.
-    \item The \textbf{Hermitian conjugate} $M^\dagger$ is obtained by transposing and complex conjugating the matrix.  It ``flips'' ket equations to bra equations.
-    \item \textbf{Hermitian} operators ($M=M^\dagger$) have real eigenvalues and orthogonal eigenvectors---they represent observables.
-    \item The \textbf{postulates of QM}: observables $\leftrightarrow$ Hermitian operators; measurement outcomes $\leftrightarrow$ eigenvalues; probability of outcome $\lambda_i$ is $|\braket{i}{A}|^2$.
-    \item The \textbf{Pauli matrices} $\sigma_x,\sigma_y,\sigma_z$ are the Hermitian operators for spin components, each with eigenvalues $\pm 1$, derived from the known eigenvectors.
+    \item Any vector can be expanded in an orthonormal basis: $\mathbf{v}=\sum_i\mathbf{e}_i\,(\mathbf{e}_i^\dagger\mathbf{v})$.  The resolution of identity $\sum_i\mathbf{e}_i\mathbf{e}_i^\dagger=I$ is an indispensable computational tool.
+    \item \textbf{Linear operators} map vectors to vectors; they are represented by matrices with elements $M_{ij}=\mathbf{e}_i^\dagger M\mathbf{e}_j$.
+    \item The \textbf{adjoint} $M^\dagger$ is obtained by transposing and complex conjugating the matrix.
+    \item \textbf{Self-adjoint} matrices ($M=M^\dagger$) have real eigenvalues and orthogonal eigenvectors---they represent observables (Axiom~2).
+    \item The \textbf{axioms} in action: observables $\leftrightarrow$ self-adjoint matrices; outcomes $\leftrightarrow$ eigenvalues; probability of outcome $\lambda_i$ is $|\mathbf{e}_i^\dagger\mathbf{v}|^2$ (Axiom~3).
+    \item The $X$, $Y$, $Z$ matrices are the self-adjoint matrices for the three standard observables of a two-level system, each with eigenvalues $\pm 1$, derived from the known eigenvectors.
 \end{enumerate}
 
 \end{document}

@@ -1,0 +1,162 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 8}
+\lhead{Quantum Mechanics --- The Theoretical Minimum}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\title{\textbf{Lecture 8: Locality, Entanglement, and Quantum Simulation} \\ \large The No-Signaling Theorem, EPR, and Classical vs.\ Quantum Correlations}
+\author{Based on Leonard Susskind's \textit{The Theoretical Minimum}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Is Entanglement Reversible?}
+% ============================================================
+
+\begin{itemize}[nosep]
+    \item Anything that can happen, the opposite can happen: two spins that come together, interact, and become entangled \emph{can} be disentangled by reflecting them, bringing them back together, and running the interaction in reverse.  In principle, entanglement is \textbf{reversible}.
+    \item However, if one of the entangled particles is thrown away (sent to infinity, lost to the environment), the remaining particle is stuck in a mixed state described by its density matrix.  From its perspective, the entanglement is effectively \textbf{irreversible}.
+    \item Measurement is a special case: the apparatus (with enormously many degrees of freedom) entangles with the system.  There is no practical way to reverse this entanglement---``unscrambling the egg''---which is why measurements appear irreversible even though the underlying evolution is unitary.
+\end{itemize}
+
+% ============================================================
+\section{2. Locality and the No-Signaling Theorem}
+% ============================================================
+
+\subsection{2.1 Statement}
+No matter what Bob does to his subsystem---no matter what unitary operation he applies---Alice's density matrix is \textbf{unchanged}.
+
+\begin{theorem}[No-signaling]
+Let $\psi(a,b)$ be the wave function of the composite system.  If Bob applies a unitary operator $U$ on his subsystem, the new wave function is
+\[
+    \psi'(a,b) = \sum_{b'} U_{bb'}\,\psi(a,b').
+\]
+Then Alice's density matrix satisfies
+\[
+    \rho'^{(A)}_{a,a'} = \rho^{(A)}_{a,a'}.
+\]
+\end{theorem}
+
+\subsection{2.2 Proof}
+Bob applies unitary $U$ to his subsystem.  The composite wave function becomes:
+\[
+    \psi'(a,b) = \sum_{b'} U_{bb'}\,\psi(a,b').
+\]
+Its complex conjugate (with index $a'$):
+\[
+    \psi'^*(a',b) = \sum_{\tilde{b}} U^*_{b\tilde{b}}\,\psi^*(a',\tilde{b}) = \sum_{\tilde{b}} U^\dagger_{\tilde{b}b}\,\psi^*(a',\tilde{b}).
+\]
+Now compute Alice's new density matrix:
+\[
+    \rho'^{(A)}_{a,a'} = \sum_b \psi'^*(a',b)\,\psi'(a,b)
+    = \sum_b \sum_{\tilde{b}} \sum_{b'} U^\dagger_{\tilde{b}b}\,U_{bb'}\,\psi^*(a',\tilde{b})\,\psi(a,b').
+\]
+Perform the sum over $b$ first:
+\[
+    \sum_b U^\dagger_{\tilde{b}b}\,U_{bb'} = (U^\dagger U)_{\tilde{b}b'} = \delta_{\tilde{b}b'} \qquad (\text{unitarity!})
+\]
+This collapses the double sum, giving:
+\[
+    \rho'^{(A)}_{a,a'} = \sum_{b'} \psi^*(a',b')\,\psi(a,b') = \rho^{(A)}_{a,a'}.\;\qedsymbol
+\]
+
+\subsection{2.3 Physical interpretation}
+\begin{itemize}[nosep]
+    \item \textbf{Locality}: Bob cannot send any signal to Alice by manipulating his own degrees of freedom, regardless of entanglement.
+    \item All of Alice's statistical predictions---expectation values, probability distributions---are completely unaffected by Bob's actions.
+    \item This holds even for maximally entangled states.
+    \item The proof \emph{critically depends on unitarity}.  If Bob's evolution were non-unitary, $U^\dagger U \neq \mathbf{1}$, and faster-than-light signaling would become possible---one deep reason why quantum mechanics resists modification.
+\end{itemize}
+
+% ============================================================
+\section{3. The EPR Puzzle}
+% ============================================================
+
+Einstein, Podolsky, and Rosen (1935) highlighted the following paradox:
+
+\begin{quote}
+A composite system can be in a state of complete knowledge (a pure state $\ket{\Psi}$), while \emph{each} subsystem is in a state of complete ignorance (maximally mixed density matrix).  We know everything about the whole and nothing about the parts.
+\end{quote}
+
+Einstein called entanglement ``spooky action at a distance'' (\textit{spukhafte Fernwirkung}).  But ``action at a distance'' in physics means the ability to \emph{affect} a distant system---e.g., Newton's gravity, where shoving the Sun would instantly change Earth's orbit.  Entanglement does \emph{not} allow this: the no-signaling theorem proves that Bob's manipulations leave Alice's density matrix unchanged.  The ``spookiness'' is that the correlations are stronger than any classical model can produce (Bell's theorem), not that signals travel faster than light.
+
+% ============================================================
+\section{4. Simulating a Single Spin Classically}
+% ============================================================
+
+A classical computer can perfectly simulate the quantum mechanics of a single spin:
+
+\begin{enumerate}[nosep]
+    \item \textbf{Memory}: Store two complex numbers $(\alpha_\uparrow, \alpha_\downarrow)$ with $|\alpha_\uparrow|^2+|\alpha_\downarrow|^2=1$.
+    \item \textbf{Apparatus display}: A screen showing $+1$, $-1$, or blank.
+    \item \textbf{Random number generator}: A classical pseudo-random source.
+    \item \textbf{Update rules}:
+    \begin{itemize}[nosep]
+        \item Between measurements: solve the Schr\"{o}dinger equation to update $(\alpha_\uparrow,\alpha_\downarrow)$.
+        \item At measurement (button press): use the random generator to output $+1$ with probability $|\alpha_\uparrow|^2$ or $-1$ with probability $|\alpha_\downarrow|^2$, given the detector orientation.
+        \item After measurement: collapse---reset $(\alpha_\uparrow,\alpha_\downarrow)$ to $(1,0)$ or $(0,1)$ according to the outcome.
+    \end{itemize}
+    \item \textbf{Detector rotation}: The computer recalculates probabilities for the new orientation using the standard basis-change formulas.
+\end{enumerate}
+
+The output is statistically indistinguishable from a real quantum spin experiment.  A single qubit can be simulated classically.
+
+% ============================================================
+\section{5. Simulating Two Entangled Spins}
+% ============================================================
+
+\subsection{5.1 The challenge}
+Now Alice and Bob each have a spin, and the spins may be entangled.  The classical simulator must reproduce all quantum correlations, including the violation of Bell inequalities.
+
+\subsection{5.2 Setup}
+\begin{itemize}[nosep]
+    \item A central computer stores the full composite state: four complex amplitudes $\alpha_{\uparrow\uparrow}, \alpha_{\uparrow\downarrow}, \alpha_{\downarrow\uparrow}, \alpha_{\downarrow\downarrow}$.
+    \item Alice and Bob each have a local screen and a detector that can be oriented independently.
+    \item When either presses ``measure,'' the computer uses the state and the detector orientation to compute probabilities and generate a random outcome.
+    \item After Alice's measurement, the state is updated (collapsed) appropriately, and Bob's subsequent measurement uses the updated state---and vice versa.
+\end{itemize}
+
+\subsection{5.3 The locality constraint}
+The simulator works because the central computer has a \emph{single} random number generator connected by wires to both screens.  What if we try to separate the computers?  Copy the four $\alpha$'s into both machines, cut the wires, and give each machine its own independent random number generator.
+
+The problem: for a singlet state, if Alice measures $\sigma_z=+1$, Bob must get $\tau_z=-1$.  But with independent random number generators that don't communicate, there is \emph{no way} to enforce this correlation.  Each machine will produce random results with no correlation to the other.
+
+You might try to pre-program correlated outcomes, but \textbf{Bell's theorem} shows that no such pre-programming (``local hidden variables'') can reproduce all quantum correlations simultaneously for all measurement orientations.
+
+This is the deep content of Bell's theorem: \textbf{no local hidden-variable theory can reproduce all predictions of quantum mechanics for entangled systems}.  The message is not that the world has hidden wires, but that \emph{quantum logic is fundamentally different from classical logic}.
+
+% ============================================================
+\section{6. Summary}
+% ============================================================
+
+\begin{enumerate}[nosep]
+    \item Entanglement is in principle \textbf{reversible}, but practically irreversible when one subsystem is lost or has many degrees of freedom.
+    \item The \textbf{no-signaling theorem}: Bob's unitary operations cannot change Alice's density matrix.  Locality is preserved.
+    \item The proof depends on \textbf{unitarity}---modifying unitarity would allow faster-than-light signaling.
+    \item A single qubit can be \textbf{classically simulated} with a random number generator and stored amplitudes.
+    \item Two entangled qubits can be simulated by a central computer, but \emph{not} by two separated classical computers with only shared randomness---this is the content of \textbf{Bell's theorem}.
+    \item The EPR paradox reveals that quantum ``knowledge of the whole'' does not imply ``knowledge of the parts,'' yet no signal can exploit this.
+\end{enumerate}
+
+\end{document}

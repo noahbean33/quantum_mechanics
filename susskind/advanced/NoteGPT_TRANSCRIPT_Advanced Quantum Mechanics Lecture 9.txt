@@ -1,0 +1,429 @@
+00:00:01
+[Music] Stanford University all right so we spoke a little bit about Quantum Fields uh the Quant of the fields creation operators Annihilation operators we even went so far as to talk about the hamiltonian operator for a very simple Quantum field uh satisfying particles satisfying the Schrodinger equation write it down this is what it looked like integral over position now when I write DX you don't need to imagine that it's onedimensional you can imagine that it's multi-dimensional and X stands for a
+
+00:00:58
+collection of coordinates x y and z but I'll write it as if it were onedimensional and then there's the quantum field SI dagger that's the creation operator it creates a particle at position X and then there's a minus sign let's put the minus sign explicitly over here D Squared the second derivative operator and if we put the mass in the mass goes downstairs here that's p^2 over 2 m that's the standard kinetic energy of a particle and then s if the particle also happens to be in
+
+00:01:39
+a potential if there's a potential energy then you would add in here and this of course is also of X and then there's a v of X the potential times s Dagger of x s of X and the way you would understand say this term is just every particle if it's at position X has a potential energy V of x s dager of x * s of X what is that that's the density of particles at point x so this is just counting the number of particles at point x and giving each one an energy a potential energy V ofx you would write that down
+
+00:02:28
+classically too you would write down that if you had a gas of particles and they were moving in some potential you would write that the potential energy is the integral of all space the density of particles at point x times the potential at that point x okay so that's the hamiltonian of a of a system of particles not interacting with each other they may be interacting with some potential okay I'm going to leave out the oh tell you what um yeah let's forget this term for a moment no I'll tell you what I'm going
+
+00:03:19
+to put it back but I'm going to put it back V ofx and I'm going to take V of x to be a constant now we all know that a constant uh term potential energy doesn't exert any forces so it really doesn't do anything but let's put it anyway a constant that doesn't matter what we call it times s Dagger of x s of X what kind of term in the energy would this correspond to well it's a term which when you integrated over X it just counts the total number of particles so if it counts the number of
+
+00:04:01
+particles it's just an energy proportional to the number of particles it's giving each particle an energy how much energy does a particle have I'm not talking about its kinetic energy we've already got its kinetic energy but just a particle standing still does a particle standing still have any energy yeah has MC squ so if we wanted to put that in if we wanted to keep track of the fact that every particle has an energy MC squ we would put it over here but whatever it is it's a number
+
+00:04:30
+uh the reason I want to include this here is for a very simple reason I want to spend a minute or two talking about energy cons uh not energy conservation momentum conservation how do we see from this uh from this expression that momentum is conserved okay how do we what does it mean for momentum to be conserved well what does the hamiltonian do what's the role of the hamiltonian the role of the hamiltonian is to update the state of the system if the state of the system at time T is s of T now I'm using S to indicate
+
+00:05:22
+a state I better not do that I've already used Sai for several different things one of them is for the field operator one of them is for the single particle wave functions I better not use it again so let's use a different terminology for the state Vector of a system let's not call it s the vector itself let's call it fi right if if the state of the system at one instant of time let's say at time T is the vector s five excuse me five of T then what is it at the next instant to of time
+
+00:06:01
+displaced by time Epsilon well the answer is that's what the hamiltonian does gives you one minus minus I Epsilon that's the little time interval little separation of time the hamiltonian times F itself sorry this is 5 of t plus Epsilon the field or the sorry the state at a slightly displaced time and so what H does is it just updates things you can write this as just 5 of T that's the same state back again nothing has happened plus a little correction After Time Epsilon which is minus I Epsilon
+
+00:07:01
+times the hamiltonian acting on fi that's what the hamiltonian does and you can think of it as being iterated you can do it over and over and over again at each step that of course is another way of talking about the Schrodinger equation the shrodinger equation says the time derivative of f is equal to H * F uh so that's what the hamiltonian does it changes the state from one instant to another what would it mean to say that momentum is conserved what it means is that the hamiltonian when it acts on a state of
+
+00:07:38
+definite momentum does not change the momentum whatever the hamiltonian does if it acts on a state of a given momentum it must give back a state of the same momentum if momentum is conserved I'm not saying it is conserved I'm saying that's what it would mean if the momentum is conserved it means that when the hamiltonian acts it doesn't change the momentum of the system may change other things but it doesn't change the momentum okay we can check that this is an interesting thing to check for this
+
+00:08:14
+hamiltonian does it change the momentum of the system okay let's let's begin by looking at this term here let's forget the other term and see what it does when it on a state with a total with a given total momentum okay so what do we want to do we want to rewrite this in the momentum basis let me remind you how that worked that was just a good old Foria transform okay so the way that works is you say the creation operator for oh this happens to be the annihilation operator but but the
+
+00:08:59
+annihilation operator for a particle at point x is an integral over all of the momentum the square root of 2 pi if you want to keep track of it in fact there's a square root of 2 pi for each direction of space so if this were three-dimensional there would be 2 pi cubed but uh again this is incidental and not important and then what we called P twiddle I believe of P this is the annihilation operator for a particle of momentum P this annihilates a particle of momentum X this annihilates a particle
+
+00:09:39
+of momentum P but then we have to multiply this by e to the I PX and integrate over P that's the creation operator X in terms of the creation operator for a particle of momentum P now I'm interested in what this operator does when it acts on a state but I'm interested in what it does to the momentum so the natural thing to do is to rewrite this in terms of the momentum variables so let's do that let's go down here mc^ s that's that's just a number and now we have integral
+
+00:10:22
+DX now each one of these can be Rewritten that way all right so there's an integral Let's uh let's write let's write a second equation here s Dagger of X is a similar integral I'm not going to write it as an integral of P because I've already used p p is an integration variable I don't want to reuse it I don't want to recycle it I want to use another variable let's call it Q DQ over 2 pi side dagger twiddle of Q and now there's an e to the minus iqx why is it e to the minus
+
+00:11:08
+iqx because we're supposed to put the complex conjugate wave functions here comple everything gets complex conjugated okay let's take let's take P of X time P dager of X exactly the thing which appears here and then let's integrate it over X and see what we get just for fun this is uh sort of fun like going to the dentist right yeah okay so we multiply the two of these together and we get a double integral what's that is that yeah okay okay so we get to the dentist and the dentist first of all says one over 2
+
+00:11:51
+pi one over 2 pi for each Direction and then there is try twiddle of P times s dagger I suppose we should put them in the opposite orders since over here the daggers stand to the left so let's stand the daggers to the left so I twiddle Dagger of Q that's this one and then s twiddle of P we're going to integrate over p and Q in a moment but let's first put e to the i p minus Q X that's this Factor e to the i p minus Q question no okay and then we integrate overx this instruction here is to
+
+00:12:46
+integrate over X okay does anybody remember what you get when you integrate e to the I something * x/x a Delta function now the way if if you forget that the way to think about it is the following supping P minus Q is not zero then this is an oscillating thing if P minus Q is not zero then it oscillates with X what happens if you integrate something which oscillates as much positive as negative do you DP DQ yeah sorry DP DQ okay yeah it just depends on the nature of the oscillation but if it's all symmetric
+
+00:13:38
+then it's that's right cancels out um this is a pneumonic this is not a uh this is not a uh a rigorous argument but if p is not equal to Q it oscillates it has a sign in it a cosine in it the signs and cosiness are as positive as they are negative and that must integrate to zero on the other hand if p is equal to Q then this is just one and the integral of one over all space is infinite so this is a function of P minus Q which is 0 if P minus Q is not zero in other words if p is not equal to
+
+00:14:12
+q and it's infinite if P equals Q obviously this is proportional to the direct Delta function and with the 2 pi there it is the direct Delta function so this all becomes we can erase we can erase the e to the I P minus Q erase the integral DX and just write that this is Delta of P minus q and we also get rid of the one over 2 pi okay what happens if we integrate side dagar of Q * s of P with a function which is zero unless p is equal to Q well that's just the instruction do the integral but set P equal to Q if you set
+
+00:14:56
+P equal to Q there's only one integration and this is just equal to S dagger twiddle of Q let's write it as P instruction here is set Q equal to P so this is p s of P okay now what do we have here we have an operator which contains a destruction operator or an Annihilation operator times a creation operator it's an annihilation operator for a particle of momentum P so if it finds a particle of momentum P it pulls it out and kills it you know it annihilates it but then it puts back a particle of the same
+
+00:15:41
+momentum notice here was the important thing that by the time you finished P had to equal q p had to equal Q tells you that if you remove a particle you put back a particle of the same same momentum and and the momentum doesn't change when this operator operates on a state it does not change the momentum whatever it takes out it puts back okay what was the working ingredient here it was the integral over X which turned this into a Delta function okay the integral over X turned it into a Delta function and the Delta
+
+00:16:25
+function you can say was the Delta function of momentum con obervation momentum that when the hamiltonian acts when it updates the state a little bit we somehow no longer have the little the updating of the state but when it updates the state a little bit it doesn't change the momentum okay now we can go uh we could do the same thing with this term here let's do it let's let's go through it just just just so that you see how the Machinery Works quick question please what happened to that being
+
+00:17:05
+infinite when p is equal to Q somehow we don't talk about it no no that's okay whenever you integrate a direct Delta function with another function you just get that function at Point Z that's the definition of the direct Delta function the fact that it's it's infinite but of zero width see it's a thing which is infinitely high but infinitely narrow the area under it is one unit okay so it doesn't give anything infinite it just gives back and in this case it just tells you set P minus Q
+
+00:17:49
+equal to zero which is the same thing as setting P equal to Q okay before I look at this term here let me just point out uh that this could be more General let's suppose we had a term in the hamiltonian which had for whatever reason for reasons that we'll talk about later we had a whole bunch of fields they could even be fields for different kinds of particles creation operator and Annihilation operator for different kinds of particles and instead of having just two of them we could imagine in the
+
+00:18:27
+hamiltonian and we discuss what this means that we could have any number of side daggers for particle of type a particle of type B any number of size particle of type c particle of type D they could all be the same or not the same uh any number of side daggers and any number of size suppose in some insane world we put this thing into the hamiltonian what would happen well instead of getting what we have up up here the simple expression what we would have is a whole bunch of integrals a p integration for each field
+
+00:19:17
+that appears here let's um yeah whole bunches of P's the P's could stand for the half of the particles that are being created for example dp1 dp2 dp3 and so forth however many particles or however many fields there are with dagger and then oh no those are Q's sorry Q's go with the daggers P's go with the size all right so we have some Q's also the q1 however many of those there are and then we have a bunch of creation and Annihilation operators of exactly the the same kind except many of them
+
+00:20:02
+now side Dagger of P1 or side twiddle of P1 dot dot dot SI daggers size of Q's q1 dot dot dot but then the all important exponentials the all important exponentials and they read for each s let's see for each H I think I did it wrong again QP if I wanted to follow the same notation up there p uh then I would have an e to the I and then for each P P1 + P2 plus P3 all time x each one would come in with its own e to the IX and youd add them all up in the X exponent but then you'd also have
+
+00:21:01
+minus I q1 + Q2 dot dot dot X in other words instead of just having a single p and a single Q you would have a bunch of P's for all the creation operators is it which ones get the P's get the Anni P's go with the annihilation operators and q's go with the creation operators okay and you have to integrate it over X you have to integrate it over x what does the integration over X give you again it gives you a Delta function and it's a Delta function of the sum of all the PS minus the sum of all the
+
+00:21:44
+q's in other words it's a rule that the sum of the PS has to be equal to the sum of the q's the sum of the P's is all the particles that you take out the things with the Annihilation operators the sum of the PS is all of the momentum of the particles that you put in so it's just a rule it says the rule just says the total momentum of the particles that you take out must equal the total momentum of the particles that you put back it's a rule that follows from this kind of
+
+00:22:22
+hamiltonian here now what's really going on is the fact that this hamiltonian this translation invariant but I wanted to show you how the Machinery works and so whenever you see a hamiltonian of this form that it has a whole bunch of size and side daggers but you integrate it over space it's the integral over space which gives you the Delta function it's the integral over space which says momentum conservation momentum conservation momentum conservation it doesn't say that each that P1 should be
+
+00:22:56
+equal to q1 and P2 should equal Q2 it says the sum of all the incoming momentum should be the same as the sum of all the outgoing momentum okay so that's momentum conservation in the hamiltonian that's the product of all those field operator yeah product of all these field operators why would you do that we'll come to why you might do that not why you might why this is the one of the central um points of quantum field Theory but before we do it let's take this term in the hamiltonian over here
+
+00:23:28
+this has the additional derivatives let's go back and ask what would happen to this calculation the first the original one here if we changed it by differentiating with minus D SAR the side dagger before we multiply it with s what does minus d^ s this is just a second derivative what does it do when it hits here well to know we just go over to this side let's differentiate this side twice with X what depends on X well DQ doesn't depend on x 2 pi doesn't depend on X in fact side dagger doesn't
+
+00:24:17
+depend on X the only thing that depends on X are these oscillating wave functions here so what happens if you differentiate twice the oscillation here Q ^2 plus Q ^2 - i q * - IQ so this would give us q^2 in other words the square of the momentum of the particle that you're creating here isn't it minus no what Aus i s look at the far left side of the equation there's a minus sign there's a minus here and then a minus I didn't see that no right thank you there's a minus here
+
+00:25:04
+that's why this well this minus is here because that's what goes in the hamiltonian but um yeah okay so what so what's the upshot the upshot is the same kind of expression that we had before again you get to integrate e to the i p minus QX it's going again going to give you um a momentum conservation but instead of just having integral side Dagger of side dagger twiddle of P Time s twidle of P that just counted the total number of particles of each momentum and added them up there's another factor of p^
+
+00:25:47
+squ it's this thing here which when you use the Delta function just gives you p^2 what is this thing giving you first of all it conserves momentum the momentum in and the momentum out have to be the same for exactly the same reason but it's just weighing each particle with its M with the square of its momentum in other words it's counting the kinetic energy of each particle it's just adding up all the particles adding up the number operator for each momentum and multiplying it by p^ squ I suppose
+
+00:26:18
+where's the 2m we left out the 2m p^ s over to M so it's doing exactly what it's supposed to do it's counting up the kinetic energy of the particles and momentum is conserved because of the uh Delta function okay let me show you an example of an interesting term that you could put into the hamiltonian let's suppose you had two species of particles let's call one an electron and the other a proton the species now I'm cheating because if I really wanted to do electrons and protons I wouldn't be
+
+00:27:01
+doing boson operators okay so these are fake electrons and protons which happen to be bosons let's forget the MC squar term uh no well we're not going to worry about the MC squ term what's that um in the conservation of energy there kinetic energy that's only in the case when there kinetic energy or we want momentum or energy kinetic energy kinetic energy yes that's only true in the case where the potential energy is Con we haven't put any yeah exactly yes so that is so that
+
+00:27:40
+is a true statement um what what is the interpretation of the side dagger in the hamiltonian it counts s time side dagger is a counting operator in this case it's counting the number of particles with each momentum and multiplying by p^ S no no he he just he didn't see the multiplication there oh okay good yeah you know there's another trick you can do this thing looks negative doesn't it but of course everybody knows the kinetic energy of a particle is positive so what's going on
+
+00:28:23
+well everybody know how to integrate by Parts if you have s Dagger of X and you have two derivatives with a minus sign d by DX * d by DX * s I'm not going to work this out in detail I'm going to tell you the result the D by DX's both act to the right they act on S integration by parts allows you to take one of these derivative Ives and shift it to the other side in fact integration by parts would allow you to take both of them and shift them to the other side but I don't want to shift both of them I just want
+
+00:29:07
+to shift one of them but what do you have to do when you integrate by Parts in addition to taking the derivative and shifting it to the other Factor change sign change of sign you also have to worry about Edge effects but uh but uh you know we won't worry about that now so you can rewrite this as d by DX of s dagger times d by DX of s and now this is just a square of something and it's positive integrated DX that's kind of interesting to see in the hamiltonian the square of the derivative of s it's very much like any
+
+00:29:58
+other field Theory uh where what you see in the hamiltonian is squares of derivatives of the fields in this case squares the space derivatives of the fields and it's positive it's positive because s derivative of s dagger times derivative of s is positive okay let's uh let's take another example of a possible thing in the hamiltonian and discuss what it means now again without mathematical proofs because uh would just belabor points that we've essentially already made but uh let's add in
+
+00:30:41
+here let's assume there are two kinds of particles first I'm not going to give them names I'm going to call them A and B you can call them proton and electron if you like then first of all there's the energy of the electrons so this is the field operator for electrons it creates and annihilates electrons it does nothing to protons this is the kinetic energy of all the electrons we have to add to that the kinetic energy of all the protons this is twice M electron this is twice M proton and then SII
+
+00:31:28
+proton of X okay so far all I have is the um is the kinetic energies now I'm going to add something it's not the realistic real interaction between electrons and protons this is just a model interaction and what I'm going to add is plus the integral over space integral DX times uh the creation operator of an electron at point x times the creation operator of a proton at point x times the annihilation operator of an electron a point x times the annihilation of a proton at the same point
+
+00:32:23
+x uh and uh yes okay this comes along and it annihilates a proton and an electron if it finds them where does it annihilate them it annihilates them at position X so if there happens to be an electron and a proton and let's draw this a following way this is A Spacetime diagram here's A Spacetime diagram here here's time this is just a way to visualize this is not uh not to be taken too seriously at the moment but an electron and a proton are moving around here they are this is time this is
+
+00:33:03
+space these are the world lines of the electrons and the proton the electron and the proton if they're not at the same place then you can't then this is not going to give anything if it acts on the state this will act on a state it will only act if it finds both a proton and an electron at the same place it doesn't matter what place because you're integrating over X you'll get some kind of thing no matter where X is if there are two particles at the same place but if there are not two
+
+00:33:33
+particles in the same place it just gives zero okay so first of all it looks for particles at the same place if it finds particles at the same place it annihilates the proton it annihilates the electron but then it creates a proton and it creates an electron at the same point it scatters the electron and the proton is what it does electron and proton come in and if when they're at the same point and then they go out and it scatters them is the momentum conserved yes the momentum is conserved for exactly the
+
+00:34:13
+reason we wrote up there but are the individual momentums conserved no the individual momentums are not conserved I should have gone through that here the individual momentums are not conserved the only conservation of momentum is the over all conservation so when an operator like this comes along and hits the state of a electron proton system it scatters the electron proton system so it's a scattering operator it's equivalent to a potential energy between the electron and proton when they're at the same
+
+00:34:48
+spot of course real electrons and protons interact even if they're not at the same spot to the Kone potential but we're just taking little steps uh one at a time okay so um if through experiment you discovered that there was an interaction where electrons and protons by a short range potential short range meaning it only acts when they're at the same point scatter each other this is what you would put into the hamiltonian so it's a kind of experimental uh you know a bit of experimental physics to tell you what
+
+00:35:24
+kind of uh things the particles can do and once you know what they can do you mock It Up by expressions like this let's do some more let's uh let's see what else we could imagine having another thing we could imagine having question what why is that part of the handon does the energy doesn't change right that's equivalent to a potential energy in the hamiltonian between the electron and the proton oh yeah question but you know the qu um what hamiltonians do is change States from one instant to
+
+00:36:02
+the next if you discovered experimentally that an electron and a proton over a short period of time will scatter each other if they're at the same place you've got to say there must be something in the hamiltonian the thing which updates the state which corresponds to that scattering and that's the kind of thing you would write down okay so when you see in Quantum field Theory expressions like this interactions involving products of fields maybe products for different fields different kinds of particles
+
+00:36:35
+they're representing these basic simple interactions where particles if they're at the same point can interact with each other another example supposing experimentally you discovered that particle of type A could Decay and form particle of type B and particle of type c again this is time read it from bottom to top particle a comes along and you discover that there's a process where particle a disappears at a point and particle B and C appear at the same point okay you discover in your bubble
+
+00:37:20
+chamber uh you discover tracks which lead you to conclude that a came came in B and C went out and um and they came out from the same place that a came in what would you write down well okay so you need something to remove the a what happens over a short period of time as an a disappears that's an Annihilation operator and a b and a c are created so let's try that what kind of thing might we write down we might write down the annihilation operator for a for field a at position X that's the annihilation operator and
+
+00:38:04
+then two creation operators one for B and one for C and you would say look I've discovered experimentally that the state of the system changes so in such a way that an a disappears that's this and a b and a c are produced furthermore because every point of space is like every other point of space you'll begin to suspect this could happen not only at point x but it could happen anywhere so you integrate it over X weigh all points of space equally once you do this you can read off from what we talked about over here
+
+00:38:55
+that the momentum is conserved the momentum of a becomes the momentum of B and C now energy conservation is a little more complicated but um energy is always conserved let's put it that way okay so um o over the long run anyway okay so this is uh the what else would you put into this hamiltonian or this term in the hamiltonian besides these products of fields how about a number for example in both cases incidentally I should have said that also in this case over here there a possible number plus
+
+00:39:44
+G the coupling constant the coupling constant is a number which can be anything uh and it can uh be extremely small if the particles are very weakly interacting that would mean that even if the particles arrive at the same point the probability that they scatter is small and you would experimentally verify this you would uh scatter two particles and you would discover most of the time they don't interact in that case G is a small number if the particles have a large interaction uh probability then G is a
+
+00:40:24
+large number and G is called the coupling constant okay we're on our way to building Quantum field theories let me say one more thing about this term here what goes in the hamiltonian must be her Mission that's a rule hamiltonians are her Mission and that's equal or equivalent to the statement that the time evolution is unitary time evolution is unitary because it's got to conserve probabilities okay so is this her Mission well it's not her Mission or it's not her Mission
+
+00:41:04
+and the reason it's not hermiss is because the hermiss conjugates of aide dagger are aai and the hermiss conjugates of aai or a side dagger to make it Herm Mission you must add its Herm Mission conjugate its Herm Mission conjugate is the same operator except with everything replaced by its conjugate and you also have to remember when you hermiss conjugate things you've got to change the order but in this case it wouldn't matter but uh let's do it anyway it doesn't matter in this case
+
+00:41:39
+because if they're different fields they commute with each other so let's um but we can do it we can do it uh PID dagger a of x times p b of X time p c of x X now how is this different than this the answer is every creation operator has been replaced by an Annihilation operator every Annihilation operator has been replaced by a creation operator and the process described by the second half here let's look what it says it annihilates a c and it annihilates a b and creates an A so it's
+
+00:42:21
+just the whole thing turned over B and C come in and a go out so once you discover that there's a process where a goes to B and C you can immediately conclude that it must also be the case that if you have a b and a c they can turn into an A okay exception to this what's that is any kind of exception to this is there any exception to this no if there is uh we don't know about it okay so now we have the basic rules basic rules of a simple version of quantum field Theory you have creation
+
+00:43:12
+and Annihilation operators you have Fields made out of them the fields are functions of position and they can be thought of as creation Annihilation operators for particles at definite positions each type of particle has its own field and you write down hamiltonians the hamiltonians always contain or typically contain typically contain the kinetic energies of the particles that's the top thing there and then in addition various other concoctions which um let's put it this way in the uh in
+
+00:43:49
+the first round of particle physics those concoctions largely came from experiment well electrod dynamics of course came from a little more than just experiment but a classic example is the theory of beta Decay the theory of beta Decay is a neutron decaying into a proton an electron and a neutrino okay proton goes to electron and so forth right so what would you write there then you would have four operators this would be annihilated a neutron create a proton create an electron and create a neutrino let's go one step
+
+00:44:55
+further when I wrote that um s of well State Vector fi of t + Epsilon is equal the F of T minus iar minus I Epsilon h Time 5 of T this of course was an approximation it was an approximation to Leading first order in small quantities namely Epsilon what would happen if I made Epsilon a little bit bigger well there would be a next term which would be order Epsilon squared you know what it would be it would be minus Epsilon squar over 2 Time h^ 2ar 5 this is just another way of saying that if well it's a Schrodinger
+
+00:46:15
+equation the Schrodinger equation gives you the derivative of s proportional to H * s but it can also give you the second derivative of s and that's proportional to h s s Time s so this is what you would learn if you went to the next order in small quantities that in the next order in small quantities there's a change in the state from one instant to another which is proportional to h 2 * I that's very interesting because for example one of the things it would say we could draw we can draw some diagrams
+
+00:46:51
+now what does h s do well we could take h s and multiply it all out okay and we could try to see what it does but that's dumb the in easy way to do it is just to use the the pictures we take the pictures let's erase this and the picture say that in lowest order a thing which can happen is B and C can come together and make a that's just the hamiltonian itself or this term in the hamiltonian but supposing the hamiltonian acted again on this well here's another term in the hamiltonian the same term can act twice
+
+00:47:44
+whoops this is wrong B and C but this term can't really act twice because for it to act twice it has to find the second time it has to find a b and a c again well well in the first round here the B and the C were eaten no b no B and C so this term can't act successively twice but what can happen is when you square the hamiltonian you can get this term times this term in other words let's write it out it's it's got uh it's got s b s c times s dagger a and then side a then s
+
+00:48:29
+a s b SI c a big mess that's the square of a term or a piece of the square of the term of the hamiltonian but it's very easy to see what it says it says it takes a b and a c and it makes an A and uh yeah takes a b and a c and turns it into an A and then it takes the a annihilates the a and puts back a b b and a c the effect of this is to contribute or to create a scattering between B and C the a that's just temporary the B and the C came in they annihilated the form a and a then converted back to B and C using the
+
+00:49:14
+same hamiltonian so it's not just that the hamiltonian updates the state all the powers of the hamiltonian give you a vast variety of different processes that can happen that contribute to the amplitude for scattering this is the amplitude for scattering B goes to see and the Only Rule at least the Only Rule we've set up till now is that momentum is conserved total momentum the momentum of C can change the momentum of B can change but going from beginning to end the total momentum should be the
+
+00:49:51
+same okay should that S Sub on left should that have a dag uh possibly yes right mhm right so you see once you learn this little piece of information oh my goodness all sorts of other things can happen well we now know uh what did I just do I erased A and B goes to C [Music] um good here's something else that can happen a can come in create B and C but now if there happened to have been another B around let's Suppose there was another B around to begin with yeah this says that if B finds a c to
+
+00:50:55
+Anni at with then it can make an A so again in the second order of the hamiltonian where you iterate the hamiltonian twice you not only get processes in which a goes to B and C and B and C go to a or the B and C go back to B and C but now you have a scattering amplitude where A and B scatter with each other with the exchange of a c this is called an exchange diagram it looks as though you're drawing a picture where a sea jumps over from here to here all it is is a contribution to the scattering
+
+00:51:33
+coming from the hamiltonian twice acting twice so in following the evolution of the system when the hamiltonian acts twice the first time it can take an A and A B to C leaving this B over here alone this is a different B leaving it alone not doing anything and then the second power of the hamiltonian can take c and b and convert it back to a so you see once you have these simple terms in the hamiltonian you have a vast Forest of many many different kinds of interactions that are mediated by the same uh by the same
+
+00:52:09
+simple term in the hamiltonian that's why Quantum field theory is powerful a small number of terms in the hamiltonian can lead to a huge number of different uh reactions all related by having the same form in the hamiltonian the same coupling constant for example the coupling constant y if there's a coupling constant governing a term in the hamiltonian here then when you square the hamiltonian you might get the coupling constant squared in fact you would here each one of these vertices these are called
+
+00:52:45
+vertices they carry a coupling constant in the hamiltonian so this process would have a coupling constant squared in front of it so this would correlate an enormous amount of data about all of the possible interactions of A's B's and C's there are many of course this is a the most common thing in the world in particle physics is to be uh studying those correlations yeah so if if you so I assume you can have a uh this uh decaying into B and C and then B and C coming back together form
+
+00:53:23
+an A but what is that sorry uh say it again now oh a going to B and C and then B and C coming back together that's a self energy diagram for an a uh it changes the structure of a what it tells you is that a real a particle that you might measure in the laboratory spins has a probability to be not just an A but to be a b and c close to each other so what it means is that if you found an A in your laboratory and you scattered something off it with some probability you would find that that a behaved as if it were a
+
+00:54:00
+b and a c together close together so for example [Music] um an electron one uh one such process one example of this would be an electron emitting a photon electron comes in electron goes out emits a photon okay so the operator for that would be S dagger electron sorry s electron that annihilates an electron so I dagger create an electron and then a photon creation operator photons the photon field is called a all of the the same point so it absorbs an electron creates an electron and emits a photon
+
+00:55:01
+okay so one of the things that can happen is uh Kevin points out is you can have the electron moving along becoming an electron emitting a photon and then the photon coming back and becoming an electron now don't take too literally the statement this happens and then that happens and then that happens this is really just standing for a term second order in the hamiltonian iterating the hamiltonian twice but it's clearly uh very tempting to to um to try to describe this by saying a sequence of
+
+00:55:36
+things happen now of course if you go into the system and look and see whether that something happened you screw up the whole thing as usual in quantum mechanics so um but what this does this what this does tell you is that if you scatter another electron off the first electron you will find some of the time that this electron contains a photon that what you thought was a single electron really looks like a composite of an electron with a uh with a photon the probability to find the photon there is small it's about 1% but
+
+00:56:17
+uh but that's what it says so it really should be thought of as a correction to the structure of the electron rather than a uh than a new process it's a it only becomes a new process when you interfere with it and you look and see what's inside and some of the times you will find that what's inside contains a photon of course what'll happen if you look for the photon you'll discover the photon some of the times you'll scatter the photon out and you'll completely screw up the
+
+00:56:48
+the electron you'll excite the electron and the things will happen at that first vertex are both in and momentum concern no only momentum only momentum right and as I said these things are not literally happening they're short hands for the mathematics in this case of just squaring the hamiltonian so what actually happens is a superposition of all possible things yeah and so that's why the energy of any individual one do not be conserved yeah yeah and kind of don't forget there's
+
+00:57:26
+all sorts of terms in the energy and counting up all the energy don't forget to count up these interaction terms so the energy isn't just the sum of the energy the particles but that sort of gets hidden in this in these pictures it uh that missing energy that's in the interactions you might say allows the uh the pictures to violate energy conservation at each vertex but you know if you get confused you just go back to where it came from it came from the shring equation going for second order in small
+
+00:58:01
+quantities and that's what it means now we're not going to do findan diagrams in the full-blown Glory but uh this is where they come from and uh this is where the um the rest is just uh technology and uh tricks to calculate thing things with but this is the basic physics of it yeah um I I was just thinking about the the the electric field of the electron there MH um well this you good this is the electric field of the electron well that's what I was going to ask about um because it seems to me that at
+
+00:58:43
+least in a literal sense I mean it seems Seems like the field the presence of field at some distance um isn't literally created by radiation again it's not you could say that the propagation of the the field ahead of the electron um obeys the same weave equation of radiation but it's not literally the radiation no it's not literally the radiation although if you take a very high energy electron 1% of the time it behaves is as if it were a real electron and a real Photon that's because photons move at
+
+00:59:31
+the speed of light these photons are clearly not going to move with a speed of light it's got to go from here to here and the electron is not moving with a speed of light so literally thinking of these as photons moving around is not going to work but if the electron itself is moving with the speed of light or close to it very close to it then it really does behave as though it were a um superposition position of an electron and then an electron with a real photon with a genuine Photon I'm actually
+
+01:00:00
+thinking of things where the the electrons are moving rather slowly yeah and the field is moving very quickly as a wave ahead of it and then now then you're going to get yourself completely confused trying to form a model for what's going on well I'm just saying it's not literally creating real photons is not to fill the field right okay right and don't don't try to create a mechanical model of what's going on it won't work uh no no but there's effects like self interference in the two slid
+
+01:00:35
+experiment self- interference of a single single Photon okay you have to have sort of the the wave of the wave version of the photon or I mean you know the the meets up with a its own field right coming through has nothing to do with this though well it's it was related to my question and you have the harof bone experiment so that you know the field is present where you know it's not really radiation yeah no this is not the radiation field this is the induction field right but as I tell you when they
+
+01:01:25
+is fast it can be thought of as a radiation field can you finish your thought you were starting to say about um lost it it's gone it's finished you're starting to say that if you try to create a model of this it will fail well you you try to create the you know your brain is always trying to create classical models classical pictures for things uh you can get some experience doing some calculations and after a while you know how to deal with these diagrams and you start to give some literalness to the diagrams which
+
+01:02:00
+really is not really right it's just a mathematical trick to calculate H2 H Cub basically we're calculating e to the I HT by expanding it out in powers of H right e to the iht is the time development and that's what we're expanding out here 1us I Epsilon h - EP Epsilon s over 2 this is this two is the two of um of the exponential expansion what's the next term I guess it's plus I Epsilon cubed H cubed over 3 factorial right now how do you actually calculate the the probability of a given
+
+01:02:52
+scattering that of course requires some uh some some technology which we haven't done but uh okay so so somehow and I I imagine we're not going to be seeing it tonight or next week this mechanism uh if you if you do the right mathematics with this mechanism and you have an electron here an electron here you can somehow show the kolom attraction as a classical limit no of this process yes but the way you would do it the simplest way to do it well yes the answer is yes um but it's not literally that a photon
+
+01:03:38
+jumps from one place to another that's a little bit too simplistic yeah no sometimes sometimes relationships between coupling constants can be calculated from symmetry principles but um generally the coupling constants are basically experimental input disappointing isn't it yeah on the other hand think about what happens when there is a relation between coupling constants that dictated by the mathematics some symmetry principle then it relates two otherwise independent and different reactions when that happens and you go
+
+01:04:34
+in the laboratory and you discover that the reactions behave according to the way the coupling constants which have been determined from first principles tell you they're supposed to behave that's exhilarating doesn't happen very often but happens does happen differ between accidental symmetry yeah accidental symmetries are accidents and they usually don't tell you very much gauge symmetries are the symmetries which tell you something okay well I I take back what I said accidental symmetries also tell you
+
+01:05:10
+things important things we're going to I had promised to start firion today and I'm going to but instead of um talking about firon fields which we come through next time let's talk about the dur equation let's start the dur equation today from one point of view the dra equation first of all that means we're entering into relativity Theory we're using relativity Theory thus far what we did was to study non-relativistic second quantization now we want to um move on a little bit and study the
+
+01:06:00
+relativistic electron we're going to study we're going to begin with a one-dimensional electron an electron only moving in One Direction Dimension the simplest possible theory of a electron it's not a realistic Theory electrons move in three dimensions but it's the easiest place to get started without having to throw a bunch of formulas and a buch of symbols we can study the one-dimensional electron and learn quite a lot with without uh getting spirous complexity because of the three-dimensionality of space then we
+
+01:06:39
+come back to three dimensions 3+ one three dimensions right okay so the electron ought to have a shinger equation particles should have Shing equations on the other hand it shouldn't be if we're if we're dealing with relativity incidentally the reason why uh we deal with relativity when we deal with electrons is because electrons are pretty light they move around in they move around of course in an accelerator we can get them up to essentially the speed of light but I'm thinking now back
+
+01:07:11
+to the age of dur why would dur have bothered using a relativistic theory other than curiosity perhaps about how relativistic electrons work and the answer is that in atom in particular particularly in a hydrogen atom the electron moves with with an appreciable fraction of the speed of light about 1% of the speed of light so relativity is an important correction to the motion of electron if you take heavy atoms where the inner electrons are closer to the nucleus they are really moving and they can be pretty close to
+
+01:07:46
+they're not moving with the speed of light but they can be moving with even more appreciable um velocities so if you want to get Adam's right not just uh you know to zero th you want to get the corrections to Adam's right the important Corrections are relativistic so now whether dirak was uh was motivated by that fact or he was just motivated by um curiosity about how to make relativistic Schrodinger equations I don't know okay um the Rel we begin in in formulating the idea of a schinger
+
+01:08:26
+equation for a particle We Begin pretty much with a classical relationship between energy and momentum we start with energy as a function of momentum now really of course we should go from quantum mechanics to classical mechanics because that's the logic but what we tend to know about is classical physics and so we usually go in the other direction and for ordinary non-relativistic particle the energy which I'll call a hamiltonian or let's call it e let's call it e but remember it is the
+
+01:09:01
+hamiltonian it's e = p ^2 over 2 m let the energy is a function of momentum and then to go to Quantum Mechanics we replace energy by hamiltonian which we then replace by i d by DT in other words the hamiltonian is a thing which gives you the time derivative of the wave function that's on the left side and on the right side we replace P by minus i d by DX and that gives us the schinger equation DCI by DT or I DC by DT is minus d^2 over 2m second derivative you know the story shinger equation okay so
+
+01:09:55
+dra said why don't I do the same thing what's the energy as a function of momentum o it's ugly square root of P ^2 + m^2 let's write down because we'll need it later the relation between energy and momentum e^2 equals P S Plus m^2 now I've set the speed of light equal to one and I will do so continuously throughout speed of light is equal to 1 e^2 is equal to p^2 + m^2 from this you can write down immediately an equation if you take e to be i d by DT then what is e^ s it's the second derivative with
+
+01:10:44
+respect to T minus the second derivative with respect to T so you would write down minus 2 derivative with respect to T squar that's e on some f of x so s of X some wave function equals p^2 that's minus d by dx^ 2 S Plus m^2 s or fi whatever f s I don't know doesn't matter whatever we call it the wave function of the electron or the wave function of something anybody know what the name of this equation is I seem to have a yeah that's that's right that's yeah that's right that's
+
+01:11:37
+the Klein Gordon equation and you might say that der why didn't he do this I don't know why he didn't do this he had an argument his argument was look we're supposed to write according to according to my principles of quantum mechanics which are in my textbook we're supposed to write i d by DT is equal to H * I we're not supposed to have to square the second derivative I don't want to know what the E Square what H squar is I want to know what H is that's what I wrote in my book and I'm
+
+01:12:12
+going to stick by it okay so he wants an equation that reads I D let's call it s now it's not field operator it's just a wave function for an electron by DT is equal to some H some operator on S what kind of an operator well it's got to have the momentum it's got to have the mass he could just put here the square root of p^2 + m^2 and then write okay then he could he could write the following strange equation is equal to square root of p^ 2 which is minus d by dx^ 2+ m^2 s What on earth does that
+
+01:13:05
+mean what what does the square root of d by dx2 + m^2 mean it doesn't mean very much well it it you can you can give it some technical meaning but it's pretty horrible it's not a nice the square root of a differential operator like this it's not a nice thing so I think that D just backed away from it and said I don't like that I don't like that I don't have a I don't have a convincing case against it but um but I'm going to start over again I'm going to start from the beginning and
+
+01:13:40
+here's what he said we'll do it we'll do it in the onedimensional case and then we'll come back to uh let's start onedimensional case with a um um with a massless particle a particle with no Mass an electron that doesn't have a mass and we'll put the mass back in we'll see how that works so here's what you know about a particle moving along the x axis with a speed of light it's massless so it moves with a speed of light its momentum is equal to its energy strictly speaking if I put the
+
+01:14:24
+speed of light back it would go over here energy is equal to C * the momentum this is true for a photon it's true for any massless particle okay this is a massless particle moving to the right what about a massless particle moving to the left incidentally yeah P would be negative in that case P would be positive if the particle moves to the right if the particle moves to the left then p is negative but clearly the the energy should still be positive so we would have to write P equal minus E well we
+
+01:14:58
+only get to write one thing we don't get to write we don't get to write both so let's start with P equals e and content ourselves with studying a particle moving to the right okay so we know what this says we've actually studied this equation this equation if we now say that e is equal to the hamiltonian and hamiltonian is i d by DT it says I DC by DT that's H SI is equal to P * s and that's minus I DCI by DX that's a pretty simple equation d s what does it say it says DC by
+
+01:15:48
+DT plus DCI by DX = 0 what kind of what are the solutions of such an equation no they're functions of x minus t any function of x minus t will satisfy this equation a function of xus T is a wave which is moving along the axis to the right with the speed of light speed of light now being chosen to be equal to one any function of xus t s s is a function of x minus t that means it describes a wave moving to the right of rigid profile profile doesn't change but the location of the center of the wave
+
+01:16:49
+changes and it moves with a speed of light okay this is a fine equation very nice um two things wrong with it two things and they're unrelated things they're unrelated they're not the same thing the first thing that's wrong with it is it's got negative energy what if the momentum is negative we are allowed to have negative momentum momentum is a is a observable which can be positive or negative it's negative if uh if it's pointing along the minus xaxis it's positive if it's
+
+01:17:25
+along the plus xaxis it's got particles of negative energy with negative momentum this sounds very dangerous it sounds like we can take those we can just keep filling up the world with more and more negative energy particles lowering the energy lowering it lowering it without bound From Below that's a pretty dangerous uh situation we don't want that so first problem with this is it contains particles of negative energy we got to fix that the second problem with it is it only has particles which move to the
+
+01:18:09
+right okay well we could imagine a theory of particles that only move to the right but it wouldn't look like it certainly wouldn't look like a garden variety electrons we don't know any particles that only Move Along One Direction uh if it can move to if it can move to the right it can also move to the left uh so that's another thing we can try to fix okay so here's what D said he said in in effect in effect it's not exactly what he said but in effect he said let's take two
+
+01:18:47
+species this was to get rid of the Left Right story not the energy story to get rid of the Left Right story he said let's take two species let's call it s 1 and S 2 two species of electrons one of which we'll think of as the species of electrons which move to the right and the other we'll think of as the species of electrons which go to the left and let's just write down two separate equations let's call them and think of two separate kinds of particles or we can say a particle can
+
+01:19:24
+be one kind or the other if we have only one particle it could be the right kind or the left kind and so let's put um a s one here this is the equation for particles which move to the right and what about the equation for particles to move to the left which we'll call S 2 that's the equation S 2 by DT minus d 2 by DX is equal to zero now in quantum mechanics of course if you can have a particle of type one and a particle of type two you can have a linear superposition of them so you
+
+01:20:09
+can have particles which have a probability a half for example of moving to the left and a half moving to the right but this is these are the um these are the wave functions of the two kinds of particles so dra Nick said look it looks to me like what we're talking about is a particle with a degree of Freedom an extra degree of Freedom not just X not just a coordinate position or equivalently the momentum you can trade one for the other but it looks like it has a discret thing a plus Oneness or a
+
+01:20:47
+minus oness sort of like a spin it's not a spin but sort of like a spin it can either be up or it can be down up in this case means traveling to the right down means traveling to the left so he understood a little bit about matrices and so forth and he said look let's write this in Matrix form let's introduce observables which tell you whether you're one or two and that means that what we want to do is take our size and think of them as a column vector s 1 and S 2 put them together like so this is the amplitude
+
+01:21:29
+that the particle is Right Moving this is the amplitude that the particle is left moving and let's introduce matrices in particular let's introduce a matrix whose igen vectors are one or two in other words one or two here's a matrix which the igen vectors are one with igen value one and minus one with igen value two so here is an observable which distinguishes the two kinds of particles it's either up well it's not up or down but it's moving to the right or it's moving to the left and we'll just give
+
+01:22:21
+this Matrix a name now if it was Spin and it's the observable it is the observable The Matrix observable or the or the operator the linear operator which distinguishes between the two kinds of particles okay it's very much like a spin being up or a spin being down except that it's not spin okay this Matrix has a name anybody know what its name is I forget no I don't it's it is Sigma 3 it's a PO Matrix but it's a poly Matrix in the context where we're thinking about spin
+
+01:22:58
+and spin has to do with angular momentum it's just not that here right it's just a different thing uh durak called it Alpha he called it Alpha so let's call it Alpha and it's exactly that Matrix and then he wrote what I'm saying he did this he actually didn't do this he plunged right in and did it in three dimensions but uh I don't know may for all I know maybe he did do this but uh it might make a certain a different kind of sense in three dimensions mean you have the direction a
+
+01:23:41
+vector type Direction yeah right it does it does but if you were doing it in one dimension which is the easy baby way to get started and it's not so baby it's it's it's it's correct uh you would write that H instead of the hamiltonian instead of e is the hamiltonian but now but now we're thinking of it as a hamiltonian not just a number the hamiltonian is p if the particle is moving to the right and minus P if the particle the two kinds of particles when move to the right the go so it's p if
+
+01:24:17
+it's a right mover and minus P if it's a left mover but the right movers and the left mover are distinguished by Alpha so we can summarize it by just writing H equals Alpha P if Alpha is+ One it's a right mover if Alpha is minus one it's a left mover so it puts together into a single structure a particle with a degree of Freedom which is its position and another degree of Freedom with with it which is its Alpha puts it together and says H is equal to Alpha p this now becomes a equation you can
+
+01:24:56
+write it in a number of ways here is one way of writing it but we can also write it as i d by DT of s 1 S 2 a two component column Vector is equal to Alpha which is the Matrix 1 -1 time minus I DCI by DX let's put the minus I over here or H yeah I'm sorry d by DX good d by DX of s 1 S 2 or we can just condense it we don't need all of this stuff we can just write I DC by DT is equal to minus I Alpha DC by DX but remember that s is this two component column Vector they all have the same
+
+01:26:12
+thing keep in mind that uh and since Alpha has both positive and negative igen value this describes both Right Moving and left moving way waves okay so by the trick of introducing uh the dir Matrix Alpha and a two component structure for the uh for the wave function we now have cured the problem of the oneway uh the oneway street it's now a two-way street and electrons an electron can go either to the left or the right I said there were two things wrong uh the first I said was the negative energy we still have that the
+
+01:26:53
+second was the one-wayness I forgot a third one so far the electron has no Mass this is something moving with the speed of light okay this is not what we want we want an electron which moves with less than the speed of light in other words we want an electron with a mass okay I think I could have done this it took the genius of direct to make the next step he said here's what he said well he said let's just add a term to the hamiltonian and see if we can get it to come out to be a mass I'm going to add something
+
+01:27:37
+here that order to be proportional to the mass m of course means mc^ squ strictly it's the energy of a particle at rest when it has no momentum so we want something to account for the energy of a particle when it has no momentum but since all of these equations now are acting on uh these two component columns in general this thing has to be a matrix it's got to be something which can act it could be the unit Matrix for all I know but let's not Prejudice it let's add something here proportional to
+
+01:28:10
+the mass and let's introduce another Matrix and let's call it beta okay now here I have a feeling I probably would not have caught this D did and uh and moreover caught it in three dimensions which is a little bit harder but not much okay so this is some operator it's a genuine operator p is the momentum operator Alpha is the alpha operator beta is some operator which has only to do with the um with the two component this doesn't have to do with X it doesn't have to do with P it just acts
+
+01:28:53
+on the two component uh Spinners we'll call them spinners for what they are and here's what he said he said look here's what I know I know that in a relativistic theory the energy squared which is the hamiltonian squared should equal p ^2 + m^2 let's insist on this let's insist on this let's insist that when I Square this when I Square H that I get P2 + m^2 so let's what that says all right so that says H2 which is e^2 should equal Alpha p + beta M times Alpha P plus beta
+
+01:29:40
+M okay first of all I'm going to get a p squ term it's going to be alpha squar or incidentally Alpha commutes with P it acts in a different tensor product space we you don't have to worry about commutation between alphas and P's okay the first term is alpha s p^2 that looks good we want to get p^ squ we got alpha squ p^ s it's easy to deal with let's just make let's just insist that Alpha squ be one but wait a minute we already know what Alpha is Alpha is this Matrix over
+
+01:30:16
+here its square is one so we're in good shape with a p squ term that's good if we use the fact that we know what Alpha is then this is just p^2 how about the M2 term there's another term which is beta 2 m^2 well I don't know what beta is yet I haven't decided what beta is yet but what do I know I know that beta squared should be one so let's uh write down what we know Alpha squ = 1 that's good we have that already beta squ equal 1 there's lots of matrices around whose
+
+01:30:59
+square is equal to one so not to worry any one of the PO matrices at square is equal to one one means identity matri one means identity Matrix yes any of the poly matrices it's square is equal to one the identity Matrix itself is square is equal to one Okay so we've taken care of that but now this is p^2 + m^2 but then we have an extra term and the extra term is Alpha Beta it's a product of p with M and it's got one term which has Alpha Beta and another term which has beta Alpha so it has Alpha Beta plus beta
+
+01:31:43
+Alpha times PM we don't want that term that term is something we don't want H so they should anticommute so we want that Alpha Beta plus beta Alpha is equal to zero and once we do that then we have our cake and eat it we first of all have an equation of this very simple kind that that D liked so much namely where is it h on S equals d i DC DT for one thing and we also have that e^2 = p^2 + m word all we have to do is find a matrix which anti-c commutes that means when you change the order the sign
+
+01:32:29
+changes which anticommutator and durak had he done things this way would have instantly recognized that this happens to be one of the PO matricies and he also would have known that any pair of the POI matrices anti-c commute so he could simply take for beta any other of the POI matrices in practice he took those equations that you wrote down and just said well that he already knows the P matri he do that yeah yeah yeah he did have poy to back him up on this I mean poy had already uh done a lots of work with these he just used
+
+01:33:18
+unnown he just used unnown he did yeah he did but then he said let's find some matrices which do this all right so in this case in this case um we can we have a choice about beta but let's uh let's resolve that ambiguity it's not a real genuine ambiguity it it's it's a convention but here's in the second Matrix beta this is Alpha and this is beta namely 0 one 1 0 you can go home and check that Alpha Time beta is minus beta time Alpha I'm not going to do it on the Blackboard
+
+01:34:00
+it's a straightforward thing they do anti-c commute and so dur now had his his um equation and let's see what it says let's see what kind of equation he had this is not Einstein's beta right what's that this is not Einstein's beta right it's not what the relistic no no it's a matrix it's a it's poly Matrix no no it's not definitely not bad we just don't have enough letters yeah I'm following Direct's notation Alpha and beta are called direct matrices in this case they're 2
+
+01:34:45
+by two matrices uh we'll find out probably next week that you can't do it with 2x two matrices in three dimensions but uh but we'll do something else okay so let's see what this says this says where was our equation it says i d s DT where s is a two component spinner is equal to Alpha P * S Plus beta M * s where m is the mass okay let's write it out as a two component equation this is I and in the first slot here we would write thei by DT so well let's let's let's write
+
+01:35:33
+it i d by DT s 1 S 2 and this stands for a column made out of I D1 DT and I dc2 DT then we have Alpha and Alpha is 1 - 1 0 0 time P but p is min - i d by DX so we have a minus i = - i d by DX of s 1 S 2 now so far we're just rewriting the two equations here we're just rewriting these two equations separate equations for S 1 and S 2 and the reason they're separate is because this Matrix is diagonal it does not mix s 1 with S 2 but then we have Beta And so let's add plus beta and beta
+
+01:36:38
+is 1 1 0 0 we have to multiply it by m so let's put the M right in here M right in here s 1 S 2 if we write out this term we'll find that the upper because the S1 is off diagonal sorry because this because the beta is off diagonal uh what does this do it switches s 1 and S 2 so this term this term here just becomes m s 2 s 1 so let's come back to this equation over here what it does I'll never get the I in the right place so yeah let's put the I in the right place I I I minus I equals and now it looks
+
+01:37:37
+like this one is M SI 2 and the other one is M SI 1 so you see once you introduce the mass term the two components are not independent anymore they interact act with each other the equation couples one to the other and what do what does that coupling do it gives the particle a mass and if you work out how it moves it moves slower than the speed of light it moves as if for a particle with e^2 = p^2 + m^2 in other words a relativistic particle of finite Mass this is what the did to get rid of the left
+
+01:38:20
+right nonsense and at the same time to get a mass now I suspect he knew something else that that um that the mass was connected with the left rightness if you have a a particle which is massless it's consistent to just think that it can only go along the right along in in one dimension that it only goes in One Direction and the reason is because any Lorent transformation of a particle moving to the right is still a particle moving to the right if it's moving with a speed of light a loren transformation
+
+01:38:56
+will not take a particle moving to the right with a speed of light and convert it to a particle moving to the left with a speed of light okay so particles which move with a speed of light the left ones and the right ones don't talk to each other uh through Lorent Transformations if a particle has a mass you can bring it to rest or you can uh yeah you can you can maybe not bring it to rest but you can bring it to some finite momentum along the X finite velocity along the x-axis so it's moving with half the
+
+01:39:28
+speed of light this way and then you get on your horse and run with 3/4 of the speed of light it is now moving in the opposite direction so it's just not possible to have a massive particle which only moves to the right so dur knew again I I imagine he knew that the left rightness was coupled together with with the mass issue and that by fixing the Left Right issue he could potentially create a Mass for the electron yeah is this in some sense a chyro oscillation what's that is this in some sense related to chyro
+
+01:40:08
+illation um the left rightness is called the chirality in this case it means handedness uh in this case in this case two swapping of two and one is what I'm thinking yeah um no in this case no in this case the handedness is just the alpha Matrix over here it's not a swap but uh it's the mass term which is the swap yeah I was just talking about the whole the full equation is there is there chyal oscillation built into that yeah the mass term is the chyal oscillation yeah yeah oh absolutely yeah
+
+01:40:47
+mhm why should a firon equation come from the square root of a Bose equation no no no no this is nothing to do firion or bons e^2 = p^2 + m^2 for any part for any relativistic system yeah as long as it's not masses e^2 is equal to P2 + m^2 that has nothing particular to do with whether it's a um every particle satisfies that right so it's true you can sort of think of the dur equation as a kind of square root of the Klein Gordon equation but I don't think that's particularly
+
+01:41:30
+helpful all right so the last thing we have to do is get straight D minus M D+ M factorization which is sort of left movers right movers MH all right so we have two things to do with the da equation one is to understand how to get rid of the negative energies this has not gotten rid of of the negative energies now we have negative energy right movers and negative energy left movers we made it worse and the other is to get the three-dimensional space but that's easy just you just pointed back and you said the direct
+
+01:42:06
+equation just this pair of equations constitute the direct for the onedimensional case yeah yeah this is a really long version of the D equation usual equation the direct equation would be written this way I DCI by DT is equal to minus well sorry is equal to yeah minus I Alpha d s by DX plus beta m s that would be the direct equation written in uh one form you can also write it another way which is also these days more familiar you multiply both sides of the equation by Beta and you're right
+
+01:43:13
+I ah let's come to it next time it's enough for tonight it's enough for tonight there's a more symmetric way to write it which is pretty and the standard way to write it but it doesn't add anything at this point good okay we finished for more please visit us at stanford.edu
+

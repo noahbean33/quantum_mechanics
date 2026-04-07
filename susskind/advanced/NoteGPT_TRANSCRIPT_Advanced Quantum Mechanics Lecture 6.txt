@@ -1,0 +1,429 @@
+00:00:01
+[Music] Stanford University okay let's uh we're going we're entering today into the world of quantum field Theory Quantum field theory is of course the description of nature as we know it with the exception of gravity and so practically everything that we know with the exception of gravity imp principle we think is explainable if only we had the computational power to be able to solve Quantum field theories with uh the accuracy that would be uh appropriate now the problem is of course
+
+00:00:45
+that um problems tend to be much too complicated to solve except for some very special problems you can understand the hydrogen atom but by the time you get to the to the Boron atom they're too complicated and so forth and certainly studying human beings as well beyond the capacity of any Quantum field theorist that I know [Music] um and uh but nevertheless apart from Gravity Quantum field Theory seems to be all there is and we're going to enter into the study of it today in a very very very Elementary
+
+00:01:26
+way we're going to study today the idea of what is called second quantization but before we do and second quantization is about Quantum Fields but we'll come to it I want to review something first and um maybe generalize that something a little bit the thing that I want to study or to remind you of or go through with you is again the harmonic oscillator but a new aspect of the harmonic oscillator a couple of new aspects of the harmonic oscillator just so that we have it in front of us because the
+
+00:02:03
+harmonic oscillator is the central ingredient the central mathematical structure that goes into Quantum field Theory so we need to understand it make sure we understand it well but we're not going to worry about Springs and uh and you know systems oscillating when I speak about the harmonic oscill oscillator I'm really speaking about the algebra of those little operators A+ and a minus and the product of A+ * a minus which is what do you remember what is iter it's the number operator it's the
+
+00:02:47
+number of the excitation so I'll remind you now we'll go through a little bit and I'll tell you one or two facts that I may not have told you about what I'm particularly allart right so let's let's just write write down the rules for a single harmonic for an harmonic oscillator a pluses they act on states to elevate them up to the next level there are a minuses which take you down at the bottom level the ground state a minus gives you nothing it just annihilates the state all right so a
+
+00:03:25
+minus is the lowering operator and um A+ is the a raising operator we're going to learn to call them creation operators and Annihilation operators what is it that they create and annihilate as we'll see particles uh but let's just uh use the same not the same conventions that we've used up till now and there is also A+ times a minus that was the thing if you remember that went into the hamiltonian if if you remember the hamiltonian was just basically A+ a minus what was it A+ is x + I Omega P ided by some square
+
+00:04:14
+root of 2 Omega a minus is the same sort of thing with a minus sign in there and if you multiply them together you get things with x² uh X2 plus do I have that right P plus no no I have it wrong it's p plus Omega X and if you multiply the two of them together you get p^2 + Omega 2 x^2 plus this extra little term that was the ground state energy uh and so that was that that went into the hamiltonian A+ * a minus and we called it the number operator it was the thing whose igen values whose observable
+
+00:05:01
+values were the integer level spacing or the integer levels of the harmonic oscillator so I believe we called this capital N if I remember and it's igen values we called little n the observable values of it one more thing the commutation relations of A+ and a minus that's what made oh A+ and a minus are Herm mission conjugates of each other that's an important mathematical fact but the other mathematical fact is that the commutator of a minus with A+ is equal to one that's what made
+
+00:05:45
+everything work that's what we used to find the properties of what happens when we act with A+ and a minus we used those commutation relations that was basically it that's all that went into the harmonic OS osor now I'm going to suppose I have many harmonic oscillators you could just think of them as a collection of Springs collection of Springs or you could think of them as the various oscillations of a violin string or whatever for whatever reason there happen to be many independent systems
+
+00:06:24
+that are undergoing oscillation or that can undergo oscillations possibly with different frequency possibly with different frequencies where does the frequency come into all of this the frequency well first of all it comes in here but by the time we get to that point over there the place where the um the frequency came in was just the fact that the energy is equal H time the frequency times this in here there also plus a half or I'm going to leave out the half the ground state it's not important for us all right so
+
+00:07:04
+that's where the frequency came in it came in just as telling us what the energy for each increase of the number operator was the frequency together with har determine each time we go up a level how much energy it cost to jump the oscillator up one level or how much energy we might get back in some other form form if the oscillator jumps down if it jumps up for some reason that's how much energy we have to pay H bar Omega if it jumps down that's how much energy we get and um as I said that's the single harmonic
+
+00:07:48
+oscillator but now if we have many harmonic oscillators we can label them we could label them with an index and I'll use the index I but I does not stand for the square root of minus one it's just a label which goes over all the possible oscillators that I'm interested in they may be a finite number there may be an infinite number in the examples that we'll be interested in there are an infinite number all right so now we get to label the oscillators just by putting in well okay we have to be a little
+
+00:08:29
+careful over here each oscillator think of it as an independent system as a system which is just an independent uh degree of freedom and when you have independent degrees of freedom The Operators for one subsystem commute with the operators for the other sub for any other subsystem that's a rule we went through it uh two years ago or a year ago whenever it was The Operators describing system a and the operators for describing system B if a and b are truly independent systems they commute with each other why because
+
+00:09:18
+to not commute would tell you that you cannot measure them independently if you can't measure them independently they're not independent systems so presumably if you had two Springs you could take one off with over there and the other one way off over there and there's no reason why they should influence each other their operators everything about them commutes and so we can write the following that let's write out all the commutation relations because they're important let's forget this for the
+
+00:09:51
+moment let's first take the commutation relations of the lowering operators I with J the first oscillator with the 14th oscillator okay let's well first of all if I is not equal to J they're talking about different oscillators if we're talking about different oscillators they must commute but if we're talking about the same oscillator then the commutator should be exactly the same as it was for the single oscillator case namely one so how do we write that we write write that by putting the chronica Delta
+
+00:10:33
+over here all that means oh so now zero sorry zero Annihilation operators all commute with each other uh even for a single oscillator the annihilation operator commutes with itself because everything commutes with itself same thing for the creation operators or the raising operator ators but now here is what I wanted to say a moment ago if I take the annihilation operator and take its commutator with a creation operator then if I is not J we're talking about two different oscillators they don't know about each other they
+
+00:11:19
+don't talk to each other uh or at least they they may talk to each other but they uh are independent of each other and the commutator must be zero on the other hand if it's the same oscillator that we're talking about then the commutator must be one so this is equal to Delta i j this is the algebra of The Operators of many harmonic oscillators you need to know that and one more thing What's the total energy the total energy is just the sum of the energy of all the oscillators so let's write
+
+00:11:56
+that the total energy which we can take to be the hamiltonian is the sum over all I all the oscillators the first oscillator the second oscillator of Omega I'll include the H bar for the moment I'll probably forget about it before the night is over Omega but which Omega each oscillator may have a different frequency so each oscillator the contribution of the I oscillator is proportional to the frequency of the I oscill dat times n subai we're going to give a name to insabi now we're going to call
+
+00:12:42
+in or insabi but in we're going to call them occupation numbers uh not occupation like what's your occupation but occupation in the sense of you are sitting there occupying some space okay all right these are the occupation numbers it's just a name for the moment what is it that's doing the occupying well we'll find out but this says that each oscillator has an energy proportional to its occupation number times Omega times its frequency with the H bar being there there is the extra
+
+00:13:21
+half of ground state energy I want to ignore it it's it's of no interest plays no role it's just an additive constant additive constants in energy are don't make any difference okay that's the whole theory if you like well not quite not quite now how do we label States if we have many oscillators if we have one if we have one oscillator we can label a complete basis of States just by the level or the occupation number of the oscillator remember we have all these states n equals z which is the ground
+
+00:14:07
+state which we sometimes just call O Nal 1 which we call 1 Nal 2 and so forth and so on we label the states by the occupation number that's a state what if we have many oscillators and I now imagine that I lay them out there are many oscillator here's the first one over here second one over here third one over here fourth one over here I = 1 I = 2 and so forth then in order to specify a state I have to specify the occupation number or one way of specifying a complete basis of States one way of specifying a basis of
+
+00:14:52
+states is to label was to write down the occupation number of each oscillator how many quanta or how many units of energy are there so to speak in the first oscillator I'm going to call the first oscillator n no N1 N1 N2 and three if there's a finite number of oscillators it terminates if there's an infinite number it doesn't do you know any situations where uh at least mathematically there's an infinite number of oscillators what's that the Contin well if you yeah um an example
+
+00:15:41
+would be an a Very idealized mathematical violin string a violin string has any number of harmonics everyone can oscillate with a different frequency that's a mathematically idealized uh of course the real violin string is made of atoms and there aren't really that many possibilities but violin string would be a mathematically ideal idealized violin string would have an infinite number of oscillators but of course the very very high in very high I would correspond to extremely rapid uh frequencies and
+
+00:16:25
+really because of the atomic structure of the uh violin string it really doesn't have that many oscillators um but that's an example mathematically of infinitely many and we're going to be interested in that case okay let's talk about ah let's come over to another Blackboard over here we're going to little more a little more oscillation a little more oscillator mathema I I told you in the originally that if you act with the creation operator or the I'm going to call it I'll slip into
+
+00:17:14
+calling it The Creation operator with a creation operator you increase n by one unit well that's not quite right not if we normalize the states in the usual way the usual way to normalize a family of States they're orthogonal to each other for different in why are they orthogonal to each other because they have a different observably different number of in so states with different values of an igen value or orthogonal so the usual normalization would be that the inner product of n with m is Delta n m or not
+
+00:17:59
+in other words each state NN is equal to 1 n m is equal to zero for n not equal to M they're orthogonal for n equal to n we normally would take them to be normalized States that's standard quantum mechanical uh notation procedure with that notation in other words each one of these states is of unit length each one of these states is of unit length but with that notation A Plus on N does not give n+ one it gives a numerical coefficient in front and numerical coefficient is the square root of n+
+
+00:18:47
+one let me prove that for you let's see if we can prove it ah we can do it over here okay let's not put the answer in let's just call this some numerical coefficient and we don't know what it is yet we don't know what it is yet it's some CN and we're going to try to figure out what it is what's our tool our tool is the commutation relations for the oscill there a single oscillator now not multiple oscillators okay let's write this is a this is a k vector equation let's write the
+
+00:19:40
+corresponding bra vector equation when you write when you go from a k vector equation to a bra vector equation what do you do with the operators the ks go to braas what about the operators Herm Mission conjugate Herm Mission conjugate Herm Mission conjugate all right the her Mission conjugate of A+ is a minus so another way to write the same fact is the Herm Mission conjugate on the bra Vector n is equal to CN I'm assuming that CN is real we can do the complex case it doesn't matter uh we can it's it's okay
+
+00:20:29
+to think of CN as real I don't uh it doesn't it doesn't matter but let's let it be real if it wasn't real then we would want the complex conjugate but we can choose it to be real and then n + one that's the exact same equation except bras kets go to bras operators go to their her Mission conjugate and numbers go to their complex conjugate but I'm taking C to be equal to a real number okay now here's what we're going to do we're going to put this equation next
+
+00:21:04
+to we're going to take the inner product of this equation with this equation with the bottom one with the top one let's write it out N A minus A+ n that's what happens if you take the inner product of the left side here with the right side here and that's going to equal CN sared times the inner product of this Vector with this Vector but what's the inner product of this with this one one every one of these vectors is normalized to one so it's just one so now we have a tool to figure out
+
+00:21:44
+what CN is all right all we have to do is juggle the a pluses and a minuses in a clever way how do we want to what do we want to do I think I erased an equation over here I should have written yeah let's let's write down the guiding equation over here or over here n on the nth state is equal to little n on the nth State why is that true come on definition of being an igen Vector little n is the igen vector of big n big n n acts on the igen state with igen value n to give little n that's the
+
+00:22:34
+definition of an igen Vector question yes um I don't see why the in product of n plus1 n plus1 is one because I've used the rule but we hav normalized yet no no no no now I've assumed they normalized I'm assuming now that the N vectors are normalized and having okay goad no no I've I have put the ambiguity into the C's right I may assume that they're normalized and then seek to got it right yeah okay good all right so B is nothing but a plus a minus so let's put that
+
+00:23:21
+here A+ A minus that's almost what I have here A plus I don't have A+ a minus I have a minus A+ but what I know is what a plus a minus does what can I do what's that operation commute commute and here is our commutator the commutator is one so what that says is that this same thing is equal to n a + a minus + one that's the commutated term n okay now I'm in good shape because I know what a plus a minus does when it acts on N it just multiplies by little n so all of this just gives
+
+00:24:27
+me n + 1 times the inner product of n with itself which is what 1 so there we have it cn2 is equal to n + 1 and therefore CN is the square root of n + 1 we now know what the creation operator does in all of its Glory it increases the occupation number by one and it multiplies by the number Square Ro TK of n + 1 we can get rid of the rest of this we don't need it anymore next what about a minus on N well you go through essentially the same little game you can do it yourself it doesn't take uh it's not very hard
+
+00:25:43
+this time you don't even have to do any commutator they'll wind up in the right order and what you'll find out is that this is equal to the square root of n * nus1 in other words it takes you down a level but multiplies by the square root of n notice that this one yeah okay that's that's that's what you find once you know this formula here you don't have to worry about the fact of what happens when a minus hits the bottom level when a minus hits the bottom level the bottom level is n equals z you get
+
+00:26:23
+zero so this equation as it stands now encodes the fact that the lowering operator annihilates or kills or gives zero when it acts on the ground state that's just the square square root of n here so this is more oscillator stuff that I assume that durra was uh was responsible for now we know I think everything we need to know about how monic oscillators at least for the moment and that was just a mathematical interlude if you like uh to uh so that we'd have it in front of us when we need
+
+00:27:12
+it let's put it up on top any questions about harmonic oscillators or multiple harmonic oscillators oh oh one thing what happens here's a particular vector or a particular state which has a certain set of occupation numbers let's hit it with a creation operator for the I oscillator we're going to the I oscillator and we're applying one unit of creation to it or one unit of elevation what does it do well it goes over to the I slot If This Were Three if I was three it would go over to this
+
+00:28:00
+slot and it increases the occupation number by one unit but only for the particular I that we wrote down here so if we go to the seventh oscillator and we apply the creation operator it increases the seventh oscillator level it does not increase the sixth one it doesn't increase the fifth one you know there's an oscillator over there it's over there and uh it's not to be confused with anybody else and so what this does is it leaves all the other ones alone let's say I is out here
+
+00:28:35
+somewhere n one n two dot dot dot until we get up to the I place and then it gives us ni I + one and then beyond that nothing but that's this is not quite right this is not quite right because it fails to take into account the square root of n + 1 so what we have actually have to write what am I writing I'm I'm writing nonsense n i equals N1 dot dot dot ni + 1 dot dot dot but we have to put in a square root of Ni I + 1 so in other words it works exactly the same as a single oscillator
+
+00:29:25
+with all the other ones just being bystanders which Play No role when you hit it with the I oscillator if you hit it with the J oscillator another some other occupation number would get increased likewise for the lowering operators or the annihilation operators same kind of uh understanding so as I said that uh that's what we need to know about oscillators now we're going to come to Quantum Fields Real genuine Quantum Fields but but in a very simple context non-relativistic quantum mechanics
+
+00:30:02
+ordinary quantum mechanics not relativity yet we're not doing special relativity just ordinary quantum mechanics in ordinary quantum mechanics there's some kind of funny connection between particles and Fields particles are described by wave functions wave functions are functions of position they sort of look like Fields what are Fields field Feld are things uh degrees of freedom which depend on position and on time in particular but let's just say position for the moment let's freeze time fields
+
+00:30:39
+are functions of position the wave function of a particle is a function of position and so you might think that's all there is to it that's the connection between particles and Fields but it's not it's not let me or at least it's only a very tiny part of it and in fact not the real idea right up here so I of X so I of X is the wave function of one particle where X is the position of that particle X could stand for X Y and Z of course it doesn't necessarily stand for just X but s is a
+
+00:31:20
+function of X but what is it it's not an observable quantity it's the state Vector it's the state Vector in the position representation it's not unobservable you don't do experiments to measure the wave function of a particle you do experiments to measure the position of a particle or the momentum of a particle or the angular momentum of a particle but not the state of a particle you don't measure that's not a measurable thing it's a thing which tells you a great deal about the probabilities of
+
+00:31:53
+various measurements but it itself is not unobservable so that's the first thing not an observable next fact if we have several particles then s is not a function of one position it's a function of all the positions I'm going to I'm going to I want to um EXA aate a not notation a little bit I want to make this a small sigh a lowercase sigh and it's a wave function if I have two particles let's call them X and Y again not the x coordinate and the y-coordinate of space but just the coordinates of two
+
+00:32:52
+particles then um the wave function is a function of two positions all right function of several positions in fact it's a function of the of the position of all particles third fact what was the third fact ah the third fact is given a wave function which may depend on X1 through some number whatever X15 15 particles it's the description of a fixed number of particles we describe 15 particles with a 15 particle wave function fixed number of particles that is not the idea of a Quantum field by contrast Now I'll Tell
+
+00:33:51
+You by contrast what a Quantum field is and in many respects it's everything that this is not although we tend to use the same notation for it and it's closely related okay first of all a Quantum field this is a w these are wave functions and they represent State vectors capital P is different number one it's an observable it's a thing you can measure let's just think for a moment what is a Quantum field really going to be in when we get to the real thing real qu you know more complicated uh serious
+
+00:34:36
+Quantum field Theory it's going to be things like the electromagnetic field it's going to be the quantum mechanical electromagnetic field the electromagnetic field is most certainly an observable we observe it and uh so first of all whatever sigh is it is an observ able number two s is a function of only one coordinate oh incidentally the fact that it's an observable means that it's an operator it means that it's an operator in the space of States it's not itself a state it is a operator that must be if
+
+00:35:26
+it's going to be an observable number two it's a function of only one coordinate of one position function of one three Vector so to speak and finally it describes systems of any number of particles any number of particles in other words it's capable of describing systems where particle numbers can change even where particle numbers can change how can particle numbers change well if we were thinking about the electromagnetic field and we remember that electromagnetic field is photons every time electromagnetic field
+
+00:36:21
+is radiated it changes the number of photons so whatever s is it's a description it's an observable it's an operator it's a function of one position and it represents the quantum mechanics of any number of particles not a fixed number of particles that's number one I want I don't want to go too fast because this is um tricky stuff yeah so when you say function of one position you mean the position X where X can vary X can vary yes X can vary but it's a function of Only One X oh
+
+00:37:09
+boy it's a function of Only One X but that doesn't mean it's a function of X when X is five it means it's a function of x x can be anything but it's not a function of X1 X2 and X3 I keep telling you why you mean why why not y it's just a function of one coordinate one coordinate in real world means three coordinates means X Y and Z but that's not what that Y is that's no no that's not what that Y is that why two particles one is named X the other is named y why cuz who's on first that's why so
+
+00:37:55
+that's really just a special special case of y you got two parles in sxy you got 15 particles in s that's right okay right Y is just X2 X is X1 right and one and two label two different particles right how do these uh transform to each other how do you explain one in terms of the other we're going do that that's the whole that's the whole point all I laid out for you the big contrast and now we want to know what's the connection between them it's going to take a little while but it's
+
+00:38:38
+not different kind of particles no same kind of particles same kind of particles and in particular bons will come to firion later we'll come to firion later yes this is the theory of bons every everything we're doing tonight will be bans excuse me had a question back on the left board about the what's that the what a question on the left hand board about the harmonic oscillators is the uh assumption about the independence of the different operators exact or approximately correct exact okay so for
+
+00:39:19
+example I would not be used to index the electrons in an atom say it again I would not be using yeah the subscript that wouldn't be used to index I could be labeling the states of an electron in an atom now you got to be careful um if the electrons are interacting then it's more complicated but if you just had non-interacting electrons in an atom I would be labeling the states of the atom okay but we're going to come to that yeah let's come through it right now let's go back the Single part
+
+00:39:57
+particle quantum mechanics this is the theory of many particles well it could be the theory of no particles it could be the theory of one particle it could be the theory of two particles variable number of particles let's go back to the theory of just one particle okay and for Simplicity I'm going to take a particular example a particle in a box the potential energy is such that the particle can't get out out of the box Just One Direction of space uh although nothing I'm saying is going to
+
+00:40:34
+depend on that this is a Bo On In A Box a Bo on in a moment for the moment it doesn't matter if there's only one of them it doesn't matter if there's one of them there's no question of whether um there's an exclusion principle or not right so one of them doesn't matter let's think about the energy igen states of a particle in a box they're wave functions for example the lowest energy wave function will be the smoothest wave function that satisfies the Schrodinger
+
+00:41:13
+equation and it'll typically look something like that it'll be a sign function that just barely fits in the box that fits in the box from one end to the other and that's a wave function it's a wave function in the sense of this one over here let's give it a name let's call it s one of X this should be little s just make sure it's little s it's just the wave function of a one particle system in a box S one of X what does the one represent just that it's the first energy level the lowest energy
+
+00:41:57
+level what about the next energy level the next energy level is some other wave function and as you go up in energy the wave functions tend to tend to be more variable the next one would have a node like that we can call that side 2 of X I'm using a funny notation uh the index here is not the the number of nodes it's one more than the number of nodes number of nodes in the box so the next one would be SI 2 of X would have a higher energy and so forth and so on now these the ones and the twos here do not
+
+00:42:44
+represent go down the line s i of X now this I is will be the same as this I eventually but at the moment they're two different things in this case it's labeling oscillators in this case it's labeling State vectors of one particle in a box just one particle each one has an energy uh I won't write down what the energy is other than to remind you that each each of these wave functions does have an energy okay everybody all right with that one particle wave functions now let's imagine now that we have many
+
+00:43:43
+particles we have many particles of an undetermined number but some number of them with in state one some number of particles in the Box occupying State one some number of particles occupying state two some number of particles occupying state three and so forth that is a pretty good description of a wide class or a basis of states in fact if I know uh that is a basis of States saying how many particles occupy each energy level okay so let's write that down now here's a family of states number of
+
+00:44:35
+particles in state one number of particles in state two number of particles in state three oh boy Deja Vu where is uh ah here it is over here absolutely identical to the way I labeled the states of Harmon of a multiple harmonic oscillator system now of course the um there are infinitely many possible States in here of arbitrary uh wavelength arbitrarily small wavelength and that's the reason why we need to study any number of oscillators up to Infinity okay so here is a parallel between you wouldn't want to do
+
+00:45:22
+this for you couldn't do this for Fons for Fons you can either have no particle in a with a particular state or one particle never two okay can't put two so in writing down the idea that you can have any number of particles in the first state any number in the second state any number in the third state we're assuming for the begin with that we're talking about bons okay but notice there's complete parallel here because there's a complete parallel it means we can invent this is
+
+00:45:50
+an invention out of the head operators which do exactly the same thing as the creation and Annihilation operators do now they literally create particles for example a +1 on N1 dot dot dot gives me Square < TK of n + 1 N1 + 1 * N1 + one and two and three and so forth it increases the number of particles in the first state whatever it was it adds one and multiplies by the standard square root why does it multiplied by the standard square root that's a definition but it's a definition which is very
+
+00:46:42
+cleverly chosen among other things so that we can use all the apparatus that we have about oscillators which is very helpful as we'll see likewise with the annihilation operator now I'll call him creation and Annihilation operators they create and annihilate or remove particles from the system okay that's the basic idea of creation and Annihilation operators question yeah on your your Top Line there N1 N2 N3 I thought N1 and N2 were the quantum States one two and three are the quantum
+
+00:47:23
+States N1 N2 and N3 are the number of part particles in that state 1 2 and three are 1 2 and three up to I or man past okay so this is tricky there's a lot of notation but the notation is it's not hard it's just a bit to remember uh so I'm going slow for that reason and repeating myself question please what what's the physical meaning in this environment of of that square root A+ a minus on N is equal to n * in right well A+ is awful a lot like a minus so it better be that A+ and a
+
+00:48:34
+minus are somehow square roots of n but we can do better than that let's see how can we do better than that uh let's use the commutation relations no okay let's suppose we didn't know this let's suppose we didn't know this but we did know about the square roots of n okay let's suppose we didn't know we knew about the square roots of n okay let's use our commutation relations to write this as a minus A+ Plus on N minus one I think yes a minus A+ is equal to A+ a
+
+00:49:51
+minus plus one plus one right h oneus oneus well let's see A+ a minus A+ - A plus a minus is equal to 1 so + one no you right I was right right I had it right if it doesn't work out we'll change it okay now what does a Plus on N do according to assumption it gives you square < TK of n + 1 * n + 1 okay that's this that's over here but we still have to multiply by a minus and then we have another minus n that's what we have here right okay this is just a number square root of n plus1 let's put it over here
+
+00:51:14
+square of n + 1 what does a minus do when it acts on squ < T of n+ one oh sorry on n+ one no I think yeah it gives us in but what's the numerical number squ root of n+ 1 right so we get two square roots of n + 1 which gives what n + 1 time n -1 * n which is just good old [Music] n time n in other words those square roots of n are there to ensure that this Vector is really an Vector of A+ a minus and roughly speaking very roughly A+ and a minus are of the same order of magnitude one is uh P plus iix the other
+
+00:52:10
+is p minus IX same order of magnitude and since Al together they add up or they multiply together to give you n each one is roughly the square root of n question yeah so um okay sort of to find A+ and a minus you have no way to find them but you can find sort of various properties that they have like commutation property yeah so but we don't have a definition out of it other than kind of Its Behavior we're making it up okay we're def we're Define we're not making up randomly but we're
+
+00:52:46
+defining things and then we're going to see how they work forgive me I my question was I understand when you apply A+ you create a particle mhm that a very tangible thing I didn't understand what does it square root do in a tangible sense that's my question well but maybe nothing sometimes mathematics is just mathematics I mean sometimes uh it's like you for ordinary quad mechanics you have to normalize the wave function you only have one particle it's the same thing here okay right why does the particle
+
+00:53:25
+disappear why doesn't it become different state what when you do Aus why does it disappear why do why doesn't it become a different that's the definition of a minus you can't ask why about a definition I Define a minus so that it decreases the number of particles okay definition mathematics we make definitions and then we find the consequences of them so the question is why is it a useful definition well it's a useful definition because we want to explore systems of various numbers of particles in fact we want to
+
+00:54:04
+explore systems where the number of particles can change for example we might radiate a photon how would we go about mathematically indicating that we created a photon we take the state and we hit it with a cre Photon creation operator or a photon might be absorbed a atom might absorb a photon how do we write the fact or how do we express the fact that a photon has the photon has disappeared we express it by saying an Annihilation operator has acted so the purpose of all of this is not only to be
+
+00:54:46
+able to study systems of arbitrary number of particles but even to be able to study systems of variable number of particles okay question mhm so here's what I think you're doing what you're doing is you're defining these operators how they act on I vectors yeah and since item vectors form a basis yeah that tells us how they act on all vectors okay I got that part right on okay now we've got this definition of a plus and a minus we haven't shown but one assumes that one can show that you have a commutation uh
+
+00:55:22
+relationships that you've got up there yeah with these definitions it will will follow that these operators have the same commutation there right in other words the system of a variable number of particles here can be represented just as a system of harmonic oscillators and an oscillator for each state for each single particle state for each single particle wave function an oscillator and the occupation number of that oscillator is the number of particles that are occupying ing that particular state so the terminology is
+
+00:55:59
+well chosen occupation now we know what it means it's not you occupying your seat it's a particle occupying a state and a bon in particular these are creation and Annihilation operators for particles how would you label what's the vacuum in this language the vacuum well first of all it's the state which is annihilated by all of the annihilation operators it's the state which when you try to lower any occupation number there's nothing there nothing to lower so the state becomes zero but the vacuum is
+
+00:56:52
+simply the state with zero occupation ation number in every state it has the property that all the occupation numbers are zero and it has the property that any one of the a minuses gives zero when it acts so so the ground state is unoccupied as well ground state is unoccupied right but it was occupied you still couldn't lower it if we're occupied you can lower it the ground state no the ground state is not occupied you can't occupy that didn't make sense the ground state in the vacuum are
+
+00:57:35
+the same thing sorry right let's while we're at it let's write an expression which we can now do for the energy of the system we in order to write an expression for the energy of the system we need to know the energy of each one of these wave functions each wave function has associated with it an energy igen value what should we call them the energies we could call them e couldn't we I'm going to call them Omega or actually har bar Omega but let's just call the energy level of the I let's
+
+00:58:24
+kill har bar forget har bar because I've already forgotten it and just say the energy of a particle in the first state would be Omega 1 the energy of a particle in the second state would be Omega 2 and so forth the energy of a particle in the I state would be Omega I let's write an expression in terms of creation and annihilation operators for the energy of the whole system this is easy the energy of the whole system is first of all the energy of all of the particles in the first state so that's the number
+
+00:59:29
+of particles in the first state n one times the energy that's associated with particle in the first state Omega 1 plus the number of particles in the second state times Omega 2 plus and so forth and so on so it's the sum of N subi Omega subi now that's a true statement but I want to write it as an operator statement these ns are igen values but they're igen values of the number operator so we can really write this in operator form by saying it's the sum of all the states single particle states of
+
+01:00:15
+Omega I times the occupation number of the I State and what is the occupation number of the I State a dagger i a a I notice that each one of these is just basically the oscillator formula this is just the oscillator formula there would be an har bar in here put an H bar if you like uh this is just the oscillator formula but now it's summed over all the possible uh States here and you can think of it two ways you can think of it somehow the system of particles is equivalent to oscillation and those are just the oscillator
+
+01:00:58
+energies or you can say it's just the sum of the energy of all the particles the number of particles in the first mode first state times the energy of the first state plus the second state times the energy of the second state and so forth and it comes out to the same thing yeah question what is ai ai a minus I sorry okay good so so a what is a here creation oh sorry yeah okay good in many contexts I'm sorry in many contexts once you go to Quantum field Theory which is what we're doing now A+
+
+01:01:38
+just becomes a dagger and a minus just becomes a well I I'll try to stick with the same notation I don't want to change notations now okay so let's let just uh think for a minute what are we doing we're inventing some kind of object which is a which is a bunch of oscillators on the other hand the violin string is a bunch of oscillators the violin string is a field if you look at radiation in a cavity radiation bouncing between mirrors it's a bunch of oscillators people speak I mean this
+
+01:02:20
+goes back from long before quantum mechanics speak about radiation as a collection of oscillators radiation oscillators long before quantum mechanics and so we're beginning to build up from thinking about ordinary particles we're beginning to build up an idea of collections of particles as harmonic oscillators and soon enough we're going to see the connection with Fields okay uh if there are no more questions uh maybe we'll take a five minute break because uh I need to stop for a few
+
+01:03:02
+minutes and uh organize your thoughts and we'll field a few questions before we go on is what honi hamiltonian that is the hamiltonian that is the hamiltonian we're going to find other very elegant ways to write it but that is the hamiltoni right guess I'll be collecting okay yeah um okay I don't want to I want to be able to remember where I left off okay good what do you do with them you put them on the I know yeah I assume he puts them up I don't know don't know put I thought that was the idea but I don't
+
+01:05:00
+remember yeah okay do those normalization factors apply to the harmonic what's that those normalization factors n n one yeah they app seems like exactly the same yeah what's that no that has nothing to do with it no the energy levels no it's not the energy levels of the single particles in the boxes which are which are evenly spaced it's the energy levels of no particle one particle two particle three particles which are evenly spaced for each oscillator right single parle yes yeah
+
+01:06:46
+no no we're not talking about particles which are moving in a potential which is an oscillator you could you could think of a lot of particles in a potential of an ill Ator then you would have two kinds of oscillators the particles would be oscillators and the creation and Annihilation operators would be oscillators but now we're just talking about um any collection of single particle States single particle States is just what you would have thought about were you're just thinking about one particle quantum
+
+01:07:17
+mechanics but now since we can talk about any number of particles we can um we can generalize in this way okay okay let's uh let's get back are there some questions because uh I don't want to go too fast I know that there's a lot of little indices and little pieces and nuts and bolts here which if we go fast they'll slip out of your head and uh they slip out of my head from time to time and uh yes decomposition M for sure for a decomposition you're going to have arbitrary amplitudes to De the
+
+01:08:51
+A's the A's are the complex amplitudes of Foria coefficients right we'll come to that yes it's deeply related with Foria with Foria analysis absolutely are we assuming that all the partic have the same same energy same energy no no no no no no no in the if they're in the first state they have energy one right all the particles which are in the first state have the same energy yeah all the particles in the second state have the same energy as each other but not as the ones in the
+
+01:09:28
+first state so you know I'm but they interact with each other well okay for the moment we're talking about particles that don't interact for the moment we're talking about particles which simply don't interact with each other that's the starting point uh later we have to ask what kind of things uh do we have to do to get the particles to interact what Georgia was saying is that if particles really interacted with each other the energies wouldn't really be additive there
+
+01:09:58
+wouldn't just be the energy of particle 1 plus the energy of particle 2 there would be the energy of particle 1 plus the energy of particle two plus any kind of potential energy between them for example so it right so that's that's correct for the moment we're talking about free particles free particles means particles which don't interact with each other uh okay now we come no qu no other question question yes so in non ristic Quantum field Theory there's still a half B on in the ground state yes but it
+
+01:10:32
+doesn't play it doesn't do anything it's just Zero Point Energy and um why doesn't Zero Point Energy why is it irrelevant for everything well if you think what does energy is hamiltonian what happens if you add a constant a number to a hamiltonian well a number commutes with everything and if you remember what the hamiltonian does for you is it provides a method of getting equations of motion the time dependence of something is related to the commutator of that thing with a hamiltonian constants do nothing they
+
+01:11:10
+commute with everything another way of saying it is in keeping track of energies the only thing that really counts is energy differences not the so you can throw away that ground state energy uh except for certain very special purposes that uh that are not going to concern us right now okay Quantum Fields a field is a function of space it's not a function of two points of space or three points of space so it's not like the wave function of a many particle system it's a thing which only
+
+01:11:48
+depends on one coordinate it's also an operator why because it's an observable You observe Fields you measure them what was the third point about uh well I don't remember but um any yeah and somehow somehow has to do with your ability to change the number of particles okay so I'm what we're going to do is I'm going to give you the rule for the quantum field of this system of particles and then we're going to explore how it works if you ask ask me prematurely why that's the definition
+
+01:12:29
+well it won't work it won't work the best thing to do sometimes it's just best to follow the definition and I won't I promise you we won't go too far before you start to see why it works and why it's interesting and why why that's the definition but it's better not to try to um to Intuit it out from the beginning why this is the particular definition rather get used to it and familiar with it then in a short amount of time you'll understand why that's the thing to
+
+01:13:03
+do the definitions the value of the definitions depends on their utility all right on what you can do with them and I I might say this to begin with Quantum field Theory at least in the way we're thinking about it here among other things is a bookkeeping device it's a bookkeeping device for keeping track of many particles for keeping track of the quantum mechanics of particles which come and go change their state even disappear and reappear whatever it's a kind of bookkeeping device whenever you
+
+01:13:38
+have operators like this you're doing bookkeeping it's a little more than that because you can actually measure these fields the things when they go by you you feel them they have an effect on you but for the moment we can just think of it as bookkeeping and whether a definition is a useful definition or not depends on what you try to do with it I can tell you with Quantum Fields you can do a lot yeah could you take a minute or two to say just a little bit about the history of quantum field Theory when it
+
+01:14:09
+was developed to developed it um well we go way way back we can start with the question of who invented field Theory right who invented field Theory anybody know who invented field Theory I suppose it was Faraday with the electric and magnetic field so I think probably the idea can best be uh the the original history started with I think with Faraday Maxwell invented field equations Faraday didn't have field equations he just had a feeli for the fields field for the fields and was able to visualize them
+
+01:14:56
+Maxwell wrote down as far as I know well it's probably not true that he was the first one to write down a wave equation wave equations waves of water waves of other things but I think it can fairly be said that Maxwell wrote down the first modern version of field Theory but it was classical field Theory um the need to quantize fields or the need to do something involving harar goes back to plunk plunk well it goes back before plunk uh we have not talked we will eventually talk about what is called the
+
+01:15:36
+ultraviolet catastrophe won't talk about it now but uh plunk realized that uh that classical field Theory would not be adequate for studying thermodynamics of radiation introduced Plank's constant and in the process uh basically said some things about harmonic oscillators which were more or less correct he didn't realize that the radiation field itself was made out of oscillators or photons as we Quant of the field he was thinking about the oscillators in the walls of a cavity namely the atoms which he thought of
+
+01:16:21
+envisioned as literally oscillators little oscillating charges and um his application of Plank's constant and this he didn't have this mathematics but the idea that the energy levels were integer spaced he wrongly thought that that had to do with the um with the oscillators in the walls of the of the cavity it was Einstein who first um understood that the that the quantization of oscillations had to do with the electr magnetic field with Maxwell's electromagnetic field so as with almost
+
+01:16:59
+everything else it was Einstein who uh had the first inklings of this but then later it was Heisenberg poy der was the Der was the person who really put it together in the form we're talking about uh and that was basically around 1929 around 1929 a lot of these ideas uh first really surfaced but um you know as usual Einstein uh had really did have all the ideas and uh um although he hadn't articulated them in in exactly the modern form after that the whole history but uh not for tonight not for tonight um this notion
+
+01:18:00
+of particles or variable number of particles as harmonic oscillators that's a good question who was the first one I'm guessing der again but I'm not sure that he was the first one to identify particle creation and Annihilation as a form of um harmonic oscillated mathematics I would guess it was dur around 1930 what was the first major problem that they could solve that hadn't been solved before the first major problem was the problem of the ultraviolet catastrophe of uh of um or basically why radiation was
+
+01:18:45
+quantized Einstein knew radiation was quantized okay he knew that radiation came in photons but he didn't have a mathematical way to think about it uh the first major problem that was solved was a formal mathematical quantum mechanics that was consistent with the rest of quantum mechanics that included the idea that radiation came in photons that radiation came so far we have never even talked about what a photon is we're getting close we're getting close a photon has something to do with the electromagnetic
+
+01:19:20
+field and it's a unit of energy it's like these occupation numbers okay the things which occupy the occupation numbers are Quant if the particles we're talking about are the Quant of the electromagnetic field they're called photons so that's where we're going we're really getting close to talking about what a photon is or what a Quantum of a field is in fact right now we're going to in ruce the notion of a Quantum field the simplest version of it I'm going to give it to you as a
+
+01:20:04
+definition and we're going to see what it does and how it works okay so s is a Quantum field and I'm going again because it's a Quantum field it's an operator it's something you can measure I'm going to call it capital P it's an operator but it's an operator which depends on position so it's not a single operator it's an operator for each position for each position a separate operator it acts on a space of states the space of States what is the space of states the space of
+
+01:20:49
+states where is it we erased it well the space of states and one and two incidentally this is called Fox space f f was a Russian physicist I don't I doubt very much that he was the first one to use this but um he wasn't but it got named after him for the usual reasons that PE get things get named after people namely no reason um okay the quantum field s of X this just a very short definition it's equal to the sum over all of the single particle wave functions sum over I a contribution for each one
+
+01:21:49
+of these states so it's a sum of I it contains s i of X the single particle wave function these are things like SS and cosiness SS and cosiness of different uh of different wave number of different uh wavelength that's what goes there and what multiplies it the coefficients the coefficients are the creation and Annihilation operators in this case the annihilation operators I now somebody asked me if any of of this has to do with Foria analysis if the size are moment what what the if the size were momentum Ian
+
+01:22:32
+states that means they're SS and cosiness then these operators a minus would look would resemble very closely the coefficients that occur in Foria analysis that is they are the quantum version of the Foria coefficients when you expand the thing in SS and cosiness now it might not be signs and cosiness it's whatever the uh the orthonormal family of states of single particle States is that's it that's the definition of a Quantum field the simplest the simplest example what's that Does it include the side there
+
+01:23:22
+these size are just numbers now in fact there's a separate number for each position s of X are just classical just functions so if I want to know what the quantum field is at xals 0 I plug in xals 0 here if I want to know what it is at xal the square root of Pi I put in the square root of Pi here so it's a it's a whole set of function sorry it's a whole set of operators one for each position in space that's a lot of operators one for each position in space why so rich why are there so many operators the
+
+01:24:01
+reason is because we're trying to to study a system where there can be any number of particles that's a lot of States a lot of States a lot of operators just because the number of particles is totally unbounded in this uh idea okay so there's an operator at each position this X and this x are the same the size are different this is an oper Ator this is just a a function a function of position the operator is in here that's where the operator is okay there is the complex conjugate or the Herm
+
+01:24:40
+Mission conjugate this an operator it's not a um uh a number but it has a Herm Mission conjugate it's exactly the same thing except that we put creation operators there and Si star here these Quantum fields are not her Mission and not her Mission because the creation and Annihilation operators are not her Mission and so they're not really observables but if you add Sai and S star a s dagger or you subtract them you can make Herm Mission combination out of them and those really are things that
+
+01:25:27
+you could observe in the laboratory uh just because they're Herm Mission operators now we're going to explore these we're going to explore these objects we're going to go slow but the first thing I want to show you is what the action of s is s of x capital S of X when it hits the vacuum what does it do when you apply it to the vacuum uh let's take side dagger we'll take side dagger incidentally what does side do when it hits the vacuum it kills it it annihilates it why because it's only got Annihilation
+
+01:26:10
+operators in it side dagger however has creation operators it creates a particle each term in here creates a particle it doesn't create a lot of particles it creates a superposition of particles but one particle in a superposition of States so let's see if we can figure out what it does when it hits the vacuum okay so here's what we're going to do let's take single particle quantum mechanics one particle quantum mechanics to begin with in other words forget all this fancy stuff with oscillators just
+
+01:26:57
+good old quantum mechanics of a single particle there's a complete set of states the complete set of states are the position states let's see how do I want to write this okay states which are located where the particle is located at position X they're a complete set of states that means they're a complete basis of states and that means that you can if you sum over all positions or integrate over all positions I'll use a I I'll keep it simple I'll imagine summing over
+
+01:27:36
+positions but we may have to do an integral if we sum over all positions what do we get on the right hand side one one the unit operator that's a general rule for any basis of States okay now let's see I just trying to remember which way I did this that's a true statement but was what I actually wanted was a different statement it is a true statement but what I actually wanted was this statement some of i as usual about this time at night I start making uh mistakes and I was just about to make a mistake but I caught
+
+01:28:48
+myself what are these eyes do you remember they're the one particle state the ones which look like this s 1 S 2 S three S four and s five and so forth they are a complete the energy igen states they are a complete set of States if I take all the signs that can fit into here for example s of x s of 2x s of 3x s of 4X that's a complete set of States each one of these eyes here is a state whose wave function is SII but the sis are a complete set of states and so it follows that this expression here is just the unit
+
+01:29:36
+operator this is true for any complete basis of states and go back to your quantum mechanics and you'll remember what this means now that means there's a little bit of trickery but there's nothing deep going on here the sum of I of I I that's an operator that's a unit operator it's trivial it's a unit operator and what happens if I apply it to a state in which the particle is known to be at x what do I get I get a particle at X I've done nothing I've just Rewritten the particle at position
+
+01:30:22
+X on the other hand what is this object over here coefficient well it's a coefficient all right but it's also a wave function do I have it yes it's a wave function it's the wave function of the state I the inner product of a particle at x with the state Vector I is just is it s or is it s star anybody know I know happens to be S star happens to be SAR so this can also be written as the sum of I SAR of I of x times the state I that's a particle located at point x now let me slow down here
+
+01:31:22
+and get any question about about this because I'm sure this must be a little bit confusing this is the unit operator we apply it on a State located at X and it gives us a State located at X on the other hand this inner product of a particle at x with the wave function s or the state Vector s is just SAR of I it's just a wave function okay but what about this what about the state here that state is a one particle is one particle with wave function SII I can write it another way I can write it
+
+01:32:08
+another way I can write it as follows I is equal to a + r y on the vacuum the vacuum has no particles in it if I create a particle in the state I then indeed I have a particle at I I have a particle in the state I so I can substitute for this I can substitute A+ I on the vacuum power no one particle one particle this is one particle in the state I that's all just one particle okay and it gives me a particle at position X but wait a second the thing that I wrote down here is exactly the quantum field side
+
+01:33:26
+dagger so we can now write this in another form we can write a particle at position X is s dagger at position X on the vacuum so now we know what side dagger is it's an operator which creates a particle at position X if we have no particles and we want to create a particle we want to change the number of particles by adding one at position X then the way to do it is to apply side dagger to the vacuum creates a particle at position x what if we wanted to create another particle at position y well it's not too
+
+01:34:15
+hard to work out but what do you expect you expect just hit it with the field operator we call this the field operator now or the creation the the the field operator um we just hit it with another side dagger but at position y so whatever the state is if you want to add a particle at a particular location that's the job of the quantum field it's a function of X Y no not why who it's a function of X because it has to know where to put the particle uh it's an operator that puts a particle at X it's not the particle the
+
+01:35:01
+operator that puts the particle at y so it must be itself a function of X that's what in a simple situation in the simple situation that we're working on now that's the meaning of the quantum field it creates a particle at position X the creation and Annihilation operators create particles in the energy IG States you apply a dagger to the vacuum and you get a particle not at position I that doesn't mean anything but in the wave function i s signs and cosiness and so forth that's the meaning of A+ on the
+
+01:35:47
+other hand when you combine them together into the quantum field the quantum field creates a particle at position X what do you yeah what do you think the annihilation op what do you think the other piece does that removes a particle at X if there's one there what if there's none there then it annihilates the state so side dagger creates a particle at position X whether or not there's one there SII annihilates a particle at X or gives zero if there's no particle there question please where is the information what
+
+01:36:29
+kind of particle could be created barried in it should be in the little A+ but first of all yeah first of all we're talking about bosons if you get firion you don't do them this way which both right there's a separate Quantum field for each species of Bon so what kind of boson are there in the world there's photons there's gravitons there are higs bosons there are gluons for each species of boson there is a separate Quantum field that creates that kind of particle in this manner
+
+01:37:09
+right so the the particle is being created with a Delta function probability distribution by S of X that's right right that's exactly right so right excuse me so if there's nothing if there's no particle at a position X then s of X does nothing no it it gives zero what what do give zero mean the same thing that when when an Annihilation operator hits a state with no particle in it or when the annihilation operator hits the the ground state gives zero it's doing nothing no it's giving zero zero
+
+01:37:49
+thinking of it in terms of particles and positions if there's nothing at that position to give zero to a to a position I guess you started with a vacuum the vacuum is not zero the vacuum is a state it's a normalized state whose length is one it's a good State it's there's nothing wrong with it it's there it's a but it it has properties the properties are those of empty space when an Annihilation operator hits it it literally gives zero the zero Vector the vector of zero
+
+01:38:21
+length no I don't understand what that is how can you have a zero zero is the unique and only Vector that if you add it to any other Vector you get the same one back it's a vector in a vector space go back to Vector spaces Vector spaces have in them zero vectors zero vectors are vectors of zero length um it's not interesting it doesn't have any properties it's just a it doesn't describe doesn't describe anything doesn't describe physically the thing doesn't describe physically
+
+01:38:56
+anything it's just you add vacuum you get something else H said if you add the zero uh state to the vacuum get the same thing what if you add the vacuum oh don't you certainly don't get the if you add the vacuum let's say to a one particle State then you get a state which has let's say you add it with equal coefficients just to be simple then you get a state that has a prob probility of a half of having a particle and a probability of half not having a particle you see the um if you add the
+
+01:39:31
+zero State not the vacuum to a one particle State you just get the one particle state if you add the vacuum to the one particle State you get something that has a statistical probability of let's say a half to have a particle and a statistical probability to not have a particle zero zero cannot be normalized it is definitely not normalized it's a zero length the one thing that you can't normalize is a vector of zero length right the vacuum is not a vector of zero length it uh for a little bit of time
+
+01:40:10
+people generally get confused by the notation this looks like it's zero but it's not zero it's just a name the zero here does not mean that it's a vector of of zero length it does not mean that if you add it to another Vector you get back the same Vector it's just the name of the vector and it represents a perfectly good physical state it happens to be a state with no particles in it but it's a state it's empty space but it's a state so we could have put a half in there you could you could have called
+
+01:40:43
+it um right you know could have called it George Bush or whatever you want to call it it doesn't matter [Music] we won't talk about annihilation of George Bush in the yeah once that's right once you've annihilated it you can't put anything back right it's just it's just zero it's literally zero right right any operator that acts on the Zero Vector just gives back the zero Vector doesn't give anything interesting right you know it's like 1 minus one is zero
+
+01:41:24
+take any vector and subtract it from the same vector and you get zero uh if you add zero to any number you get the same number add the vector zero to here here's the zero Vector right there has no length the vacuum on the other hand has a length of one as a vector in the vector space normalized not easy not easy not easy but you get used to it um on the left board the lower sum yeah uh does the order of those operators no no no this only this is an operator at each point x this is just an ordinary number doesn't matter which
+
+01:42:10
+order you put it in numbers times operators or operators times numbers right so just think of s of X as a collection of numbers one for each X all right comp H complex numers in general complex numbers yeah yeah there will in general be complex numbers uh that of course depends on the solutions to the Schrodinger equation whether it's real or complex but that's right yeah I take this to me that the the quantum field description of a particle is you basically do a creation operator on the
+
+01:42:48
+vacuum space how would you define a second particle by applying again another you want to put a particle in position y on top of this yeah yeah if you wanted to put another particle at position y okay let's make a two- particle State good let's make a two- particle State and make and one more observation about it here's a two particle state this is a particle at X and a particle at y now X and Y could be the same point or they could be different points right let me point one thing out one interesting
+
+01:43:46
+fact um the size are made out of annihilation operation there are no creation operators in here at all every Annihilation operator commutes with every other Annihilation operator wait the side dagger a creation no I'm sorry did I make a mistake yeah yeah yeah yeah yeah right sagger is a creation operator of course um but still it's true that every creation but this is the important thing it wasn't whether it was creation or Annihilation each one commutes with every other one okay every create every operator in
+
+01:44:33
+here creates every operator in here commutes with every operator in here that means side Dagger of Y and side Dagger of X commute let's call this the state with a particle at Y and X well this is also equal to side Dagger of X Time s of Y on o dagger thank you I'm losing it and that's equal to the state with a particle at X and a particle at y notice they're equal to each other they equal as a consequence of the fact that these commute all right the fact that these commute because they're built out of
+
+01:45:32
+oscillators in a certain way tells us that it doesn't matter which order we put the part which order we write the particles in here in other words particle 1 at y particle 2 at X is the same as particle one at X particle 2 at y That's the defining property of Bans that it doesn't matter which order you express them a particle particle Harry over here and Jeffrey over here is the same as Jeffrey over here and uh Harry over there so that's fully equivalent to symmetrization that's fully equivalent
+
+01:46:09
+to symmetrization and it tells you that the particles are most definitely bosons so I didn't have I didn't really have to say from the beginning well we're going to study bosons I could have started with this construction and we would have derived that the particles studied this way are bosons so the interesting question is well how the hell then do you make firion yeah that's more abstract so so does this imply that X and Y are the same kind of Bon X and Y X and Y are positions yeah yeah yeah they're the
+
+01:46:42
+same kind of bosons that's right they're the same kind of bons right so a given Quantum field describes one type of particle there's a quantum field for photons well actually there are two Quantum fields for photons because of the two polarizations there's a Quantum field let's say a photons along some axis there's a Quantum field for the photons uh polarized one way another quantum field for the photons polarize the other way there's a Quantum field for um for each different type of
+
+01:47:17
+particle there's a separate Quantum field and if you want to make that kind of particle you apply that Quantum field so that's what a Quantum field is or at least in its simplest Incarnation and I assure you this is the simplest but um the basic concept or the connection you see what we're doing is we're talking about the connection between particles and Fields here is the connection between particles and Fields this is a field when you apply it to the vacuum you create a particle you define the field to be this
+
+01:48:03
+you define yes that's right we defined it but once we've defined it it's an operator if we add it to its complex conjugate it's a hermiss operator Herm Mission operators are observables all of a sudden it takes on a life as something that we can measure uh and uh do all the things with observables that we do so do all the properties of fields come out of these creation and Annihilation operators like yes yes none of this would be interesting if we were talking about a situation where you could not create and
+
+01:48:38
+annihilate particles the whole point of this well I I take I take let me say a little less uh strongly none of this would be interesting if we were only working in a context where there were 37 particles never 36 never 45 but 37 particles end of story we wouldn't do this uh if we're interested in studying the whole set of possibilities of any number of particles then this is a good tool but even better when we're studying the possibility of the number of particles itself being ambiguous meaning to say a statistical
+
+01:49:20
+variable a quantum mechanical variable we can study States in which there's a superposition of different numbers of particles no particle one particle two particles and these have real meaning an electromagnetic wave a laser wave is like that a laser wave uh is not a definite number of particles it's a superp position 1 2 3 0 1 2 3 and uh good okay now we're finished for tonight for more please visit us at stanford.edu
+

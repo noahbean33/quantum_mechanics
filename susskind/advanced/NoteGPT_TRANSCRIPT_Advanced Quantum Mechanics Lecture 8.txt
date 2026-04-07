@@ -1,0 +1,429 @@
+00:00:01
+[Music] Stanford University um this goes back to particle physics it's a bit off the subject to class but there's evidence that the neutrinos have math and they mix MH in a particle physics class we didn't address mixing and I but I wanted to ask if the neutrinos if they have a mass must they have the same mass no they don't have all the same mass so then the question be how on Earth next and conserve energy well okay um what it really means is that the mass is energy right okay the igen states of
+
+00:00:54
+energy are linear superpositions of the igen states of something else that something else is called uh the type of nutrino so the igen states of energy don't mix the igen states of energy do not mix with each other uh and um it's just that the igen states themselves are mixtures of different uh different states there are many many examples like this in quantum mechanics um a simple example is if you have a potential which looks like this this is the phenomenon of mixing in a particular context um supposing you have a particle
+
+00:01:48
+that uh moves in a potential that looks like this all right so the particle can be on this side and let's suppose for the sake of argument that the barrier in between the two um Minima is pretty large large enough that uh that to a good approximation we might want to say that the particle is either trapped on this side or trapped on this side okay and can't get through now of course Quantum mechanically there's a little bit of possibility of leaking through the barrier it's called
+
+00:02:26
+tunneling uh but supposing we ignore that to begin with then we could just take the leftand side here treat it as though the right hand side didn't exist as though there was an infinite barrier preventing the particle from going through you could think of this as a brick wall this is a brick wall and uh ordinary particles don't go through brick walls very easily so it's a good approximation just to Pretend This is infinitely high and in that case you would ask what is the ground state what
+
+00:03:00
+is the ground state wave function and ground state energy of the system and you might say well okay let's just forget the fact that that this part is over here the ground state looks like that it's some wave function it has no nodes no zeros as smooth as possible and it has some energy e but wait a minute if this potential is exactly symmetric then there must be another ground state on this side another ground state on that side which has exactly the same energy same energy same profile except it's on the
+
+00:03:41
+other side of the barrier and in every way is identical these are two distinct states which apparently have exactly the same energy but they don't they don't and the reason is that these wave functions are not exactly igen states of the energy now here's what we know we know that for a potential like this the igen states of energy are either symmetric or anti-symmetric functions this is a theorem about quantum mechanics it's a theorem about differential equations if the potential is symmetric
+
+00:04:19
+then the wave functions which are the energy igen states are either symmetric or anti-symmetric what does anti-symmetric mean it means that uh that when you cross over the dividing barrier between here it goes from positive to negative okay so let's see if we can understand better what's really going on um each one of these wave functions to begin with is neither symmetric nor anti-symmetric there's one over here and there's another one over here and it's neither symmetric this doesn't look very
+
+00:04:52
+symmetric symmetric means that uh it is invariant with respect to reflection about the the uh the origin here symmetric would mean that if you reflect it it stays the same well this is certainly not symmetric if you reflect it you get a wave function over here so this is neither symmetric nor anti- symmetric neither is the other one okay but you can make symmetric and anti-symmetric combinations for example if I take a wave function which looks very much almost exactly like that gets very small in between where the
+
+00:05:32
+potential energy is very large can't get into there or it can but only a tiny little bit and then continue it symmetrically on the other side that doesn't look very symmetric I apologize but uh it's supposed to be symmetric then this wave function would have a slightly lower energy than either a wave function restricted to this side or to this side you can lower the energy now how much would lower the energy a tiny tiny amount an exponentially small amount but the energy of the symmetric wave
+
+00:06:10
+function would be slightly less than the energy of either one of these okay that's the first state the ground state the true ground state the true energy igen state is this combination here the next excited state looks like this it looks almost exactly the same oh incidentally remember that the sign of the wave function is immaterial to anything if you have a wave function and it's an igen state of some operator if you change the sign of the wave function it's still uh an igen Vector of the same
+
+00:06:52
+quantity the sign of the wave function doesn't contain any real information okay okay so what is the first excited state the theorem is that the first excited state always has one node given the symmetry of the problem and so forth the only node everybody know what a node is means a place where the wave function is zero okay if it's anti-symmetric it surely has a node it can't be anti-symmetric and not have a node and if what does a wave function look like it looks like almost exactly the same
+
+00:07:31
+thing on this side likewise on this side except that it's negative like that so over the region where the wave function is appreciable it looks exactly the same on this side and on the right hand side it looks exactly the same except that it uh that it's negative this energy is ever so slightly larger than the energy of just one of these waves if it were constrained to live on one side so what happens is originally before we took into account the the fact that the barrier is not infinitely
+
+00:08:18
+high before we took that into account we basically had two energy levels let's draw energy energy here two energy levels the one on the left and the one on the right and they were at exactly the same energy but not quite of course now we took into account the fact that the wave functions can leak through the barrier a little bit that's just the fact that it doesn't quite go to zero here it's almost zero very close to zero but not quite the effect of that is to split these two energies a little
+
+00:08:56
+bit it splits the two energies but gives you wave functions which are not like the original one-sided wave functions the one-sided wave functions which would have been what you would have if you really had an infinite barrier in between get mixed they get mixed from left-sided and right sided to left-sided plus right sided and left-sided minus right sided basically that's what's going on you have two states the left side and the right side neither one is exactly an energy igen State and the real energy igen
+
+00:09:37
+states are mixtures of the two of them um the mixtures of the two of them with slightly different energy what's the consequence of the fact that there that the wave functions are these MI mixtures it's neither left nor right but 1 / < TK of two left plus 1un of two right and 1 overun of two left minus 1/ < TK of two right those are the two um igen states of the energy okay so now let's try to find out what would happen if we started if we put an electron an electron a particle if we put an
+
+00:10:30
+electron on the right hand on the left hand side we start with an electron on the left hand side what happens how does it evolve so we can work this out let's say we have two wave functions one of them is s left plus cite and this is an igen state of energy with slightly less energy let's say the energy of this is E1 E1 is every so slightly less than the energy if you couldn't get through the barrier and then you have that's the that's that's the uh let's call it E1 minus
+
+00:11:20
+Epsilon in other words when the two wave functions mix the energy is lowered for the symmetric State and for the anti-symmetric State there should be a square root of two here and then we have S left minus s right over Square < TK of two and that has an energy E1 plus Epsilon it just shifted up a little bit okay now each one of these is an igen state of the energy that means that if you were to follow its time dependence it would if you were to follow its time dependence if you were to solve the
+
+00:12:06
+Schrodinger there time dependence rotinger equation what would be the time dependence of this one e to the I E1 minus Epsilon T right okay now what about this one this one has e to the I E1 plus Epsilon T okay now let's start with s left let's call this let's give this a name let's call this S Plus and let's call this s minus S Plus and S minus but now I'm interested not in s plus plus plus I minus I know exactly what happens to either of those but I'm interested in what happens if I start
+
+00:13:05
+with pure s left somebody just plopped a uh a particle into the left hand well here how does it evolve so that means that at time T equals 0 we start with just s left at T equals 0 we start with just s left but s left is equal this is at time t equal 0 so we can set that t is equal to Z that's equal to S plus plus I minus over Square < TK of two we get that just by adding these two the S wres cancel and if we're careful about it we'll find there's a 1/ < TK of two there so that's the initial State sorry
+
+00:13:58
+so I s minus s+ plus s minus over < TK 2 is s left so this is the initial state but how does it evolve what happens to it with time with time each one of these picks up its own phase so after a Time T the wave function is no longer just s left let's write it down what it is it's S Plus times e to the I E1 minus Epsilon T that's what happens to S 1 or S Plus excuse me that's what happens to S Plus and what happens to S minus that's plus s minus E to the minus I E1 I guess it's plus oh no e to the plus
+
+00:14:55
+I E1 plus Epsilon T did I get the sign of the exponent right I did not it's should be minus it doesn't matter doesn't make any difference just leave it doesn't make any difference okay so first of all we can factor out an overall Factor e to the I E1 T that factors out from both of them and then we get s+ e e to the minus I Epsilon t plus s minus E to the + I Epsilon T over Square < TK of two okay what happens to this with time with time these phases are different notice that one of them goes
+
+00:16:01
+as e to the minus I Epsilon T the other goes as e to the plus I Epsilon T what's going to happen we started out only with s left we wrote it in terms of S Plus and S minus and now we let it evolve with time after an appropriate amount of time the sign of these two will be opposite to each other how long does that take how long does it take these are two different complex numbers how long and think about it this way there points on the complex plane on the unit circle one of them is slowly drifting
+
+00:16:45
+up on the unit circle e to plus I Epsilon T the other one is drifting down it takes a certain amount of time before the first one is up on the top and the second one is down on the bottom should we figure out how long that takes let's figure out how long that takes all right where we want to know how long does it take for this to become equal to minus that so let's just write it down e to the minus I Epsilon t equal minus e to+ i Epsilon [Music] T Let's uh just multiply by uh what does
+
+00:17:27
+it say this says that e to the 2 I Epsilon t = minus1 i just multiply both sides by e to the E to plus I Epsilon T I get e to 2 I Epsilon T here and on the left side I get one but there's a minus sign okay how long does it take before this thing is equal to minus1 well minus1 is e to the e to the I PI right e to the I Pi so the time must be twice Epsilon T = Pi a twice Epsilon T equals Pi then we're in this situation where the two phases here have opposite sign by the time that happens this wave function has become
+
+00:18:21
+proportional to the wave function with a minus sign here all right there is an e to 2 I EP on T on the outside but that's not interesting what was originally a plus sign evolves into a minus sign because the two phases are not the because the energies are slightly different the two phases are getting out of phase and after a while they become opposite well when S Plus when it becomes s plus minus s minus we go back to here s+ minus s minus is s right just look at it take the difference s plus minus s right s minus s minus the S
+
+00:19:07
+lefts cancel and we get just the S right term so that means after this amount of time which if Epsilon is small can be a very long time if Epsilon is small then this time is very small but after that amount of time if you were to look the particle would be on the other side it would have materialized on the other side gone through the barrier and materialized on the other side that's what this says Okay so the phenomenon of mixing goes together with the phenomenon of oscillations this will go on and on and
+
+00:19:53
+on after when um okay so tce in in another corresponding interval it'll swing back swing back and forth and back and forth and oscillate so it looks like you're getting oscillations between one wave function in the other that's correct you are well between the two sides it's not violating energy the energy igen states are doing what they're supposed to do each one evolves separately but if you start with a thing which is not an energy igen state it will also do what non-energy igen states are supposed
+
+00:20:37
+to do it will evolve and it will evolve back and forth from one to the other neutrinos behave like that uh the analog of the left wave function is the neutrino which is made it's not it's not made on the left it's made by the decay of of Decay uh involving an electron decay of of a particle that involves an electron and it's called the electron neutrino uh the same precise kind of Decay if it decayed into instead of an electron a me particle it would make a uh a mu neutrino the real igen state of the
+
+00:21:24
+energy of the mass is kind of a linear is a linear combination of the electron and the muon neutrino which is entirely analogous uh to the two states S Plus and S minus but when an electron when a nutrino is made it's made either in a Decay involving an electron or in a Decay involving a muon if it's made in a Decay involving an electron it's like plunking the particle into the left well here if if it's made in a Decay that involves the muon it's like plunking the state into the right well but if you
+
+00:22:06
+wait a while it'll just go back and forth between them now that's interesting because an electron which is created sorry a nutrino which is of the electron type can undergo processes other kinds of process processes not just these decays scattering processes in which it produces an electron will not produce a muon an electron nutrino will not produce a muon and a muon nutrino will not produce an electron so here's the experiment you start with an electron nutrino you wait a while half a period
+
+00:22:50
+like this again and it becomes a muon nutrino and once it's become a muon nutrino you let it interact with something and see if it produces is an electron or a muon okay so if you create this electron sorry this muon this neutrino as an electron neutrino and then you just let it go a little bit you know you don't let it go very far very long well if it was produced here it sort of stays here so after a little bit you do your experiment and you discover the electron neutrino only makes electrons
+
+00:23:29
+only interacts in such a way as to make electrons the muon nutrino only interacts in ways such as to make a muon but if you have a long Baseline so that the nutrino can go a long ways long enough that it under goes one of these oscillations an electron nutrino made somewhere if you go down line far enough you'll you'll Discover it can make muons likewise the muon matrino and in an oscillating way if you have a very long Baseline you would discover that there are oscillations um uh of the neutrino from one type to
+
+00:24:05
+the other question what determines the size of Epsilon oh well all sorts of details such as the mass of the particle the height of the potential the width of the barrier it's extremely sensitive exponentially sensitive to um to the parameters of the barrier has this been observed absolutely both in neutrinos and in um tunneling things like this is that connected at all to nutrino Mass the nutrino masses are the energy levels now they they start out with very very small energies to begin with but
+
+00:24:50
+then the mixing between them splits the energies a little bit so they start out with small Energies but then even on top of that there's a little bit of splitting and uh so the prevailing wisdom is that the tree know that matter oh absolutely not wisdom it's an experimental fact yeah if this were saying ammonia molecule that barrier would be represent it's switching through the plane but what does that barrier represent when you have well okay the um I carry what's the ammonia is that a tetrahedron what's
+
+00:25:28
+it's tetrahedron yeah okay let find uh well the only reason I say tetrahedron is because a tetrahedron is an obvious one to have a tunneling process tetrahedron has um four atoms one two three what is ammonia what is it NH h44 you're telling me it has five atoms NH H3 so it has three three h atoms I assume that's what an H3 means I'm not a very good chemist and then it has a nooi or whatever it's called Uh so there's a triangle and then up above the triangle is the tetrahedral nitrogen nitrogen must be
+
+00:26:21
+nitrogen yeah right okay now the the uh the the the the molecular bonds are such that This n That this I'm going to call it a neutrino please help me it's not a nutrino it's nitrogen this nitrogen likes to sit a certain height above the base of the triangle there meaning to say its energy is lowest when it's up here but of course there's another state which is symmetric where the um nitrogen is down below here and the point is you can tunnel from one to the other in exactly the same way so tunneling from one to
+
+00:27:03
+the other is basically the nitrogen tunneling through the through the plane of the hydrogen or something like that um question was you can see phally the barri is in Amon what barri between el oh oh oh oh oh no no that's uh there's no barrier there's just a no no no it's more than an analogy um the uh [Music] um there's coupling in the hamiltonian which for whatever reason nobody knows why but there's coupling in the hamiltonian which takes an electron nutrino to a muon nutrino and vice
+
+00:27:56
+versa uh in this case the there's no cup there's a there's a coupling and the coupling is due to the tunneling process this is basically the same mathematics but um I'll tell you where else you've seen this well you've seen the same thing and it's also a good example same the mathematics is the same um if you take a yeah take a spin just a spin we've done spins uh little you know magnetic spin electron without any magnetic field the two states let's call them up and down
+
+00:28:36
+have the same energy up and down have the the same energy has energy e and down has energy e the energy would be just MC squ for the electron let's say all right now you put a little magnetic field on let's say the magnetic field is pointing upward a weak magnetic field what happens to the energy of these two these are little magnets if you like the little magnets magnet is either up or down and depending on the direction of the magnetic field the up magnet will have a slightly different energy than the down
+
+00:29:25
+magnet takes some work to to turn the the thing over so the up electron and the down electron will have slightly different energy okay um the up electron and the down elect oh no no no no let's do something else yeah let's put let's a little different let's actually make the um the magnetic field along the x axis let's put them the magnetic field along the x-axis then what are the igen states of energy for the system are they up and down they're what we called left and right remember when we studied spins
+
+00:30:18
+they're what we called the electron pointing along the x-axis or the anti- xaxis but the electron pointing along the x-axis is just a linear combination of the electron being up or down same exact kind of combination let's call it left I love this I like the red is this is this visible yeah okay left is equal to 1 / < TK 2 up plus down likewise right is of the same sort of thing the other equation there now when I put put a little bit of magnetic field on the result is energy IG states which are
+
+00:31:05
+left and right but with slightly different energy why is the energy slightly different well because depending on which way the electron is oriented it's either oriented along the magnetic field or opposite to the magnetic field so we have the same situation where um there's a slight splitting of the energy level what's the result if we were to start the electron up let's suppose we start the electron up somebody gave us an up electron and said here do with it what you want but it's in this very weak magnetic
+
+00:31:43
+field what happens to it you remember it processes it processes so after a certain half period it becomes a down after another half period it becomes an up same same exact phenomena the energy igen states are mixtures of up and down and because of that there are up down oscillations if there was some reason why an electron liked to be made in a certain experiment pointing along the up Direction then if you waited a little while it would be along the down Direction so it's the same phenomena but
+
+00:32:19
+it doesn't require any tunneling it's just the term and the hamiltonian which mixes the up and down in this case the magnetic field What happened to the oh it also gets mixed in there it also gets mixed in yeah so it's the analog of having three states which all get mixed with each other a little more complicated because spin comes into it but this is the basic phenomenon yeah and uh you know if you um you you're probably quite capable of understanding it now it uh you you know enough to to read a paper or two from on
+
+00:32:56
+it I have a good question so in this case when you mentioned that it it processes if we look at it a tiny time after we put the magnetic field we still find it in the opposition or with a tiny probability to being in the down will it ever be towards us uh yeah it will yeah yeah it will it'll process around here so going from up to down so it will not have just up or down it could be in and out and it can be in and out it will never if you start it up it will not get along the x-axis it will
+
+00:33:33
+stay perpendicular to the x-axis so it's a continuous on this Thea quite continuous these phases just evolve continuously but of course if you look at it depending on what you're measuring let's say you're measuring up or down you'll either find up or down you won't find anything in between but the interesting thing is if you make the electron in an upway and you waight exactly a half in Period like this you'll find it definitely down so if there's something that a down
+
+00:34:05
+electron can do that an up electron can't do and let's say something that an up electron can do and a down electron can't do you can do an experiment uh which you create the up electron by doing one kind of interaction and then at a later time ask whether it's behaving like the down electron the and of course this is easy easy to do much harder to do for neutrinos said it well is that why you specified a weak weak field no no no it's got nothing to do with the weakness of the field the
+
+00:34:41
+only reason I say a weak field is because I don't want it to process very rapidly if I want it to be anything like the nutrino situation where the oscillations are very slow I will want to make a weak field the uh the magnitude of the field only only determines the period of the oscillation and the analog of the field itself is the strength of the mixing between the different kinds of neutrinos and that's that's simply and as far as we know now it's just a parameter it's a parameter in our Theory
+
+00:35:17
+and we don't know with any confidence where it came from it's a very small parameter uh the electron masses are tiny to begin with and the splittings between them are obviously no bigger than the than the masses of the bigger the ma the mass of the nutrino itself and so they're tiny numbers and what their origin is is uncertain what is true is that in the standard model of elementary particle physics there is no room for that parameter that parameter is mathematically um forbidden in the absolutely standard
+
+00:36:03
+theory of particle physics meaning the the standard model so where it comes from is some violation of the standard model but it's very small so it could be a very remote phenomena remote in energy remote in distance scales and so forth it probably is okay um quick question yeah is the only reason that people think the has mass because it just it does change the oscillation the oscillation is that the only reason MH other than theoretical uh you right because of the relativity couldn't change if it was
+
+00:36:51
+that's right that's right that's right if it was truly massless it couldn't change time dilation is right you you could do experiments where you detect whether it's in or out as well as up or down you can do any experiment you want but um the if yeah you right the polarization of the electron in other words the direction of the spin doesn't tell you what value you would measure except that if it's known to be up and you measure upness or down this you get up and does not tell you if
+
+00:37:28
+you measure the X component whether you'll get plus or minus and it doesn't tell you whether if you multiply measure the Y component so the idea is to put it in a known configuration where if you measured the upness down this you would get up and then wait a half period until it's pointing down and then measure it again and you will definitely get down that's the experiment after a quarter period you'll definitely get towards you yeah yeah if you waited a half period to do the experiment with a
+
+00:38:00
+nutrino you would get 50% probability of it acting like a me neutrino 50% like an electr correct that would be a quarter period quarter period yeah um it's I don't the answer is no but for reasons that are somewhat incidental it is a little more complicated the complications of spin get into it and the oscillations are not exactly symmetrical about the two but that's a that's a refinement the basic physics is this so um yeah since the neutrino mass is very and say you were looking at a
+
+00:38:41
+neutrino coming from the Sun to us to preserve or conserve the momentum is the velocity changing as it oscillates yeah the velocity um yeah let's see the velocity must change yeah yeah you know the momentum stays the same right and if the mass is undergoing oscillations uh right incidentally this is believed to be the reason why there was a deficit of solar neutrinos for many years there was a deficit of solar neutrinos where not enough solar neutrinos were seen on Earth to account for the um for the expected number of uh
+
+00:39:27
+nutrino interactions taking place in the Sun and of course the reason was that by the time the neutrinos get here half of them are unavailable to interact with electrons or half of them or something they're they've become muons or whatever muon neutros or some other species all right well since we're talking about um these kinds of things uh I did read in the article that somebody sent uh through the email that the electron is a sphere and I was a little bit surprised to read that I didn't I didn't think the
+
+00:40:12
+electron is a sphere and I still don't think the electron is a sphere even after reading the venerable um Scientific American so I thought I might uh since has have people read that article oh only one person read it oh yeah it came in my mail I assumed it came through the uh did did somebody send it maybe maybe it didn't come from any of you maybe it came from uh no it didn't come from Scientific American question Chang character okay so there's an article in the Scientific American just for fun
+
+00:41:00
+just for fun let's uh let's uh I don't I thought we' take a little bit of a break at least for part of the hour tonight and talk about um real physical phenomena not that the quantum field theory is not a real physical phenomenon but you know we've been concentrating on the formal mathematics of it is the electron a sphere what would it mean for the electron to be a sphere what does it mean for anything to be a sphere a particle or an atom or whatever else uh and what is it that was or
+
+00:41:37
+wasn't measured that according to the author of the Scientific American little blurb there indicates that the electron is a sphere and what does that say about uh physics well first of all what was measured is the electric dipole moment of the electron okay now we'll come to what that means in a moment but I think you all know what an electric dipole moment is right if you have a little bit of plus charge and a little bit of minus charge and they're separated by distance D then the dipole moment is just the
+
+00:42:13
+charge times the distance between them and it represents a sort of off centered charge distribution the center of the dumbbell let's think of it as a dumbbell the center of the dumbbell is at the center of the dumbbell and an electric dipole would indicate that there was an imbalance on the two ends of the dipole of the electric charge distribution that's what an electric dipole means for a thing not to have an electric dipole does not first of all does not say it's a sphere um a charge distribution can have
+
+00:42:52
+many many different multipole moments many many different shape parameters okay what kind of shape corresponds to having a dipole a situation exactly what I said where there's an imbalance of charge on one side relative to the other side relative to some to some Center what other the kinds of charge distributions are they well you could have a charge distribution shaped like an oblate spheroid or a or any kind of any kind of ellipsoid symmetric ellipsoid non-symmetric ellipsoid any kind of ellipsoid of that type would not
+
+00:43:30
+have a dipole moment that why not because the ellipsoid is symmetric about every axis passing about every plane through passing through the center if the charge was uniformly distributed on the ellipsoid there would be as much on the top as on the bottom there would be as much on the left as on the right and there would be no dipole moment what would you say about it would you say it was a sphere no you would say it has a quadriple moment a quadripole moment is the shape of a squashed sphere ellipsoid it could also not even have a
+
+00:44:12
+quadripolar moment it could have an octopolar moment that's a little bit different kind of thing uh an octopolar moment would be free of dipole moment it would be free of quadripole moment but it's not a sphere so in measuring the fact that an object doesn't have an electric dipole moment is not the evidence of any kind that it's a sphere it's just an evidence that it doesn't have an electric dipole moment nothing more than that but when you start to think about it in quantum
+
+00:44:42
+mechanics there's something funny about the notion of spherical Symmetry and things like that let's suppose we had this dumbbell but it's a quantum mechanical dumbbell there are quantum mechanical dumbbells some of my uh some of my um colleagues or I I didn't see um here's a quantum mechanical dumbbell that's a molecule of some kind a molecule with a bond that's more or less fixed with two atoms okay two ATS on either side um let's take the ground St now that doesn't look like a sphere it doesn't
+
+00:45:35
+look anything like a sphere right in fact uh let's not worry about where its charge is for a moment um yeah we could put some charge let's put some charge over here plus and charge over here minus okay now let's take the ground state of that molecule there're two particles orbiting each other how do you describe a state of the molecule you describe the state of the molecule by its angular momentum angular momentum about the center all of the states of this molecule well of course there are also
+
+00:46:16
+vibrations but let's ignore the vi you know radial vibrations but let's only talk about the rotational States the rotational states are characterized by angular momentum in general if the molecule is a boson that means it has an even number of Fons in it if it's a bon if the molecule has integer spin then the ground state will have what spin what angular momentum zero sure the lowest energy will be when the angular momentum is zero but in quantum mechanics angular momentum is the generator of rotations
+
+00:46:54
+what it says for a system to have angular momentum zero is that its wave function is completely symmetric with respect to all rotations angular momentum zero states are all rotationally symmetric so quite independently of what the charge distribution might look like the quantum mechanical state is rotationally symmetric now you could say well that just means it's a dumbbell all right but it's just a dumbbell in a superposition of states which is um symmetrized so that the probability distribution for the electric charge is
+
+00:47:42
+completely rotationally symmetric does that have a dipole moment or doesn't it you call that having a dipole moment or or doesn't it have a dipole moment well you say okay let's take a snapshot of it let's not uh worry about Quantum superpositions and all that sort of stuff let's take just take a quick snapshot of it the look even what I'm saying here would even be true for the kind of dumbbell that you would get in a gym if you really got it down to the absolute ground state which you can never do of
+
+00:48:16
+course the energy levels are so closely spaced but if you got it down to the absolute ground state state in infinitely empty St space that the wave function of that dumbbell would be completely rotationally symmetric so now comes a question do you are you willing to call that a sphere a spherical charge distribution or is it just a lopsided charge distribution with a probability distribution or a wave function uh which is symmetrized it okay the answer is ambiguous the answer is ambiguous depending on the
+
+00:48:49
+kind of experiment that you do if you took a sudden quick snapshot of it you would discover that it has a lopsided charge distribution right but you could ask how fast does the camera have to be in order to detect that it wasn't smeared over the sphere how fast what is the time resolution that's necessary and the answer is it's not too hard to figure out let's suppose you took a quick snapshot of this is a measurement a snapshot means a measurement and basically the snapshot is measuring the
+
+00:49:23
+angle of the um of the molecule or the the dumbbell you take a quick snapshot and you measure the angle well if you measure the angle a measurement of something leaves the system in an igen state of that something when you measure something you kick it into an IG state of the thing you measured so it may have started in an IG state of angular momentum you measure it and all of a sudden it's in a state of definite orientation is a state of definite orientation does it have a definite angular
+
+00:50:03
+momentum the anal analogous question would be for a particle which has a definite position does it have a definite momentum the answer is of course no that's the uncertainty principle and the same is true with angular momentum and angle if you measure the thing and you kick it into a state of a definite orientation you must have um given a kick to its angular momentum same kind of Heisenberg story if you measure the position you give it a knock and you influence its momentum if you measure the orientation of the molecule
+
+00:50:43
+you affect its angular momentum but what if the what if the spectrum of energy levels is such that the first angular momentum excitation is just more energy than you have available in your in your photons that are doing the measuring what if the energy to the first excited rotational state is gigantic for some reason then your apparatus simply canot resolve the orientation so it becomes a question given your apparatus what is the exit how much energy does it take to excite the first angular momentum State now for
+
+00:51:29
+a basketball or a dumbbell a real dumbbell the energy separation between the first state and the second state is incredibly small you can figure it out yourself there's moment of inertia there's quantization of angular momentum you can figure it out but the energy level is theend the separation of energy levels is incredibly small so it's not surprising that with an with an ordinary light you can measure the orientation of the dumbbell it doesn't take very much energy to kick the dumbbell into a state
+
+00:52:02
+of Def of um of definite orientation but for molecule the energy levels are somewhat spread uh the smaller the molecule if we go from molecules for example to mesons mesons are also dumbbells they've got two quarks they're also dumbbells the energy that it would take to kick a Meson into uh into its first excited rotational state is hundreds of millions of yeah yeah hundreds of millions of um electron volts maybe a billion electron volts that's huge by comparison with any Optical Photon that you would try to do
+
+00:52:46
+an experiment with so if this were a Meson you simply could not with ordinary experiments resolve the fact that it's lopsided or that it's not a sphere all you would do is measure over and over again the fact that on the average it's spherical that on the average the ground state wave function is spherical and you keep measuring it measuring it measuring it and you're not going to find out it's not a sphere until you probe it with things which have enough energy to be able to kick it into um into a state
+
+00:53:23
+like this so the question of whether a thing is a sphere or not is a little bit confusing this the molecule is composed of two things with a bridge between them like this doesn't look like a sphere but on the other hand the quantum mechanical wave function spherical IES it okay ordinary particles if they have if they are bons in their ground States typically have zero angular momentum look as spherical as it's possible to be if they are bons but if they're firion then they have half spin they can't have angular
+
+00:54:07
+momentum zero if they don't have angular momentum zero it means they're not rotationally symmetric this has nothing to do with how the charge is distributed it's just a fact that half spin particles have an axis they have a spin axis you can measure their spin along an axis they're definitely not spherical they definitely have a spin axis so quite independently of any measurement that's done about electric dipole moments the electron is not a sphere the electron has or is not
+
+00:54:43
+spherically symmetric it has an axis the axis is the spin axis you have the spin axis and about that spin axis you can imagine a little current there's a little electric current that goes around the spin axis this is a little model for the Magnetic Moment of the electron you can think of it as having a spin axis carrying charge around forming a current and that current makes it a little electromagnet okay so it has a Magnetic Moment definitely not spherical uh and that should be the end of the story about whether an electron
+
+00:55:28
+is a sphere or not but what did they measure okay so once you know that the electron has an orientation like that and the orientation can be defined by the direction of its Magnetic Moment then you can ask relative to that direction relative to that direction is there a charge imbalance is there more charge on the let's call this the North and let's call this the South it's a little magnet it's also got electric charge you can ask what the electric charge distribution is if the electron is put
+
+00:56:13
+into a definite spin state for example up well I didn't draw up I did some other one here so we could ask is there a little bit of excess positive charge at the North Pole and negative charge at the South Pole of course the overall electron is not neutral it's uh negatively charged but on top of that is there a displacement of the center of charge relative to the axis along the axis of the north south uh um orientation of the magnet so what we're talking about is a correlation a correlation between the electric charge
+
+00:56:56
+displacement and the Magnetic Direction that's the thing that would be called the electric dipole moment of the electron if you Orient the magnetic properties of the electron the electric the magnetic dipole or just to spin along some axis then is there an electric dipole moment along that axis and that's a good question that means something that's measurable okay any questions about that are you interested I mean I'll go on a little more about what the experiment uh yeah so wouldn't that violate uh charge
+
+00:57:33
+quantization no why charge quantization I guess I think of it in terms of you either have a fixed charge or you don't there's no uh freedom to spread the charge about if the charge were just a little bit displaced toward the North Pole it would have a dipole moment that's all it would take just displace it a little little bit uh whether you smear it or not all it would take is a little displacement uh and so aren't electric dipole moments uh forbidden by uh Quantum field Theory no no if they were nobody would be
+
+00:58:09
+looking for them they are forbidden by certain symmetries okay so let's talk about the symmetries which forbid which would forbid electric dipole moment okay the first symmetry that would forbid electric Di pole moment is reflection symmetry reflection in a plane now let us suppose for a moment that the world and the laws of physics were really reflection invariant in other words every M mirror image is a possible solution of the equations of a system and let's suppose there's only one
+
+00:58:50
+electron well if the mirror image of an electron has to be another possible solution of the theory okay and if there's only one electron meaning to say one species of electron then the mirror image must be exactly the same as the original electron itself there's only one electron and it must be its own Mirror Image okay so now let's talk about this thing here uh let's think about it let's put a mirror over here can you see where the mirror is okay we could also we could also
+
+00:59:31
+think about yeah let's think about the uh the Blackboard is the mirror and let's look into the Blackboard uh the traditional way of drawing a magnetic field into the Blackboard is to put some tail feathers sticking out so that's the tail end of the uh and that means that means that the current is going around this way and we're asking is there an inout um uh imbalance of charge I guess this is this is better this is better okay what's the mirror image of this configuration here the mirror image of
+
+01:00:07
+this configuration is another electron which is also a pointer of some type now the first question is where is its Magnetic North Pole the mirror image we have the mirror image of a magnet where is in the mirror image here where's the North Pole you think it's here don't you the mirror image is here again okay why is that it's because the real thing that's going on that gives the North Pole this is an electromagnet the real physical phenomena that's going on is not oriented along here it's the
+
+01:00:55
+current going around in the loop the current going around in the loop here is the real thing which is creating the magnetic field the real phenomenon of magnetism is associated with loop-like currents now let's suppose we have a looplike positive current going around this way what's the mirror image of it it's a looplike current going around in exactly the same way so the mirror image up here as a loop going around the same way this does and therefore the mirror image of a magnet is a magnet
+
+01:01:33
+pointing in the same direction okay now let's also suppose that there was some charge imbalance and let's suppose that the charge IM balance of this electron over here was displaced up toward the head of the arrow where would the charge displacement of this one be now just think mirror image don't think about North South think mirror image I have a thing with a charge displaced toward the mirror what's the mirror image going to be mirr toward the mirror so the charge displacement is going to be down here
+
+01:02:20
+but now we have a electron which is different than this one its north south is correlated in a different way with its electric dipole moment this one had an electric dipole moment that's along that's that's matched in the same direction as the Magnetic Moment this one has an electric dipole moment in the opposite direction if all electrons are the same in other words if there's only one kind of electron and if mirror symmetry is a good symmetry if the world is really symmetric in other
+
+01:02:57
+words if everything which exists it's Mirror Image can also exist but there's only one electron and there's only one conclusion this charge cannot be displaced from the center it must be at the center so that the mirror images have the same property okay that's the only way that uh that the electron charge can be distributed if you have Mirror Image symmetry parody symmetry it's called reflection symmetry all the same thing in other words if the world is such that the laws of physics
+
+01:03:36
+don't distinguish between left hand and right hand okay now the laws of physics do distinguish between left hand and right hand we know for example there are left no there are left-hand neutrinos there are only right-handed anti neutrinos left and right are not the same they're correlated with uh and reflection symmetry is not a good symmetry of physics so that sounds like it opens up the possibility of an electron dipole moment that sounds like once you admit that the world is not symmetric with respect to
+
+01:04:11
+reflection symmetry then there's no reason why the electron may not have a dipole moment however there's another symmetry which works in a very similar way which is a much more accurate symmetry reflection symmetry in particle physics is bad it's not even approximately right in the weak interactions it's broken as bad as it could be there's another Symmetry and it's time reversal it's simply the same the statement that if you take a movie of a uh thing and you run it backward that
+
+01:04:49
+that's another solution of the theory now that may or may not be a symmetry it may or may not be but but let's suppose that it is let's suppose that reversing the film is a symmetry first question is what happens to the um now we're not reflecting in a mirror we're just reflecting in time so let's put another electron over here what happens on the time reversal to the north south magnetic momentt switches why because if a positive current is going around this way and you run the film backward the
+
+01:05:35
+positive current is going the other way what happens to the position of the electric charge along here if you run it backward nothing running it backward doesn't move the electric charge so when you time reverse it the nor North Pole gets down here the South Pole gets up here but the electric charge if it were displaced would be displaced toward the South Pole here and toward the North Pole here and so again you would find out that if if time symmetry time reversal symmetry were a good symmetry
+
+01:06:15
+you could not have the electron having a dipole moment if there was only one electron and it looks exactly the same as its time reversal then the charge has to be right at the center because the time reversal interchanges North and South in other words it just turns this thing over but um but it doesn't move the charge yeah uh currents and charges have to be uh reversed have to be what are are reversed by time reversal no currents are not charges charges are reversed by C doesn't uh non-relativistic quantum
+
+01:07:03
+mechanics uh already not time reversible because the the operator is anti-unitary yes but it's time reversible because it's anti-unitary um It's Time reversible would couldn't all of this whole discussion be based upon the fact that electrons are have a volume it's not a point particle no no we're just asking whether okay you don't have to if if you want to know whether it has an electric dipole moment What's the experiment you do we now have okay we put the electron into a
+
+01:07:42
+magnetic field and um no we don't put the electron in the magnetic field we want to know whether the the electron has a electric dipole moment how do we find out if it has a magnetic dipole moment you put it in a magnetic field and you see whether the two orientations of the electron have different uh different um energy you do the same thing with a electric field you put the electron in an electric field and you see if the two orientations of the spin of the electron have different energy because of the
+
+01:08:22
+electric field I mean that's that's a that's a very easy way to do it except that that's much too hard uh experimentally it's trickier than that but that's the basic experiment okay so time reversal would be enough to tell you that the uh that the electron can't have a dipole moment but is time reversal a real symmetry of nature the answer is no again in particle physics we know that time Universal is not a good symmetry there are processes in even in in the standard model
+
+01:08:55
+model which violate time reversal symmetry but there but the the magnitude of the effects are very very very tiny the magnitudes of the effect we understand where time reversal asymmetry comes from in the standard model you can then do a calculation in the standard model of the allowable value of the electron dipole moment and it's far to too small to be experimentally detected so it's never been never been experimentally detected and if the standard model is right uh I don't know if it'll ever be
+
+01:09:36
+detected but it' be very hard to detect they didn't detect it they detected no dipole moment that's good for the standard model the only thing is that most people don't believe in the standard model they think that the standard model has to be corrected by additional particles by super Symmetry by new interactions by new corrupting influences which potentially could break the prim reversal symmetry much worse so the fact that the electron is discovered the not has an electric dipole moment fact that the electron
+
+01:10:13
+does not have a dipole moment is not an indication that it's a sphere it's an indication it doesn't have an electric dipole moment and it makes it that much harder to um to introduce things that that change the standard model the standard model at the moment describes everything we know this was an experiment to try to detect an effect that the standard model would not have could not have basically is unallowed it's allowed but it's at such a level and it's at a computable level
+
+01:10:50
+which is much too small so the result is uh that this experiment um makes it even harder to believe in this or that um modification of the standard model was what was the context of the experiment was it a a material body or a high energy physics experiment no no no it's a tabletop experiment involving electrons and magnetic fields and uh with solid objects yeah electrons and magnetic fields I I don't know exactly what the experiment is I mean ordinarily you take an electron and you put it in a field
+
+01:11:28
+and you let it process around the field but um uh for many many uh processions no but it had enough sensitivity to to compare with the modifications of the standard model that people would like to see right so uh it's kind of interesting I I always love reading uh the uh the commentary that people write in and how confused they can be about what uh um yeah somebody wrote in saying well this really proves that the standard model is garbage and we should give it up well exactly the opposite it's uh
+
+01:12:14
+it's um anyway how did I I don't know how I got on that so do that result hm does that result um constrain in an interesting way which modifications are potentially viable I don't know I I I don't know you know I haven't followed that kind of thing in great detail somebody like sa theopolis could probably tell you well that the that cuts the parameter space down by 72.1% and and uh um but you know any experiment which uh insists on giving results which are consistent with a standard model to
+
+01:13:00
+high Precision make it that much harder to modify it so uh all right let a quick question is is time reversal Symmetry and uh conservation of information somewhat related or no time reversal symmetry you always have in physics a symmetry called CPT that's the that's the combination of time reversal change the charges change the sign of the charge and reflect in a mirror all three of those simultaneously uh is a symmetry always has to be and that's enough to ensure that um that in fact you don't even need
+
+01:13:47
+that to ensure that information is conserved no you can there are systems very familiar systems which not time rival invariant just an electron in a magnetic field an electron in a magnetic field goes in circular orbits and those circular orbits go one way or the other depending on the sign of the magnetic field so if you stick in a definite magnetic field the mathematical structure of the theory is not time reversal and variant but this it's a perfectly good quantum mechanical system so just a particle in a magnetic
+
+01:14:22
+field uh the math mathematical structure of the Stringer equation is not time reversal and variant if you knew what the magnetic field was and somebody showed you a um a movie of the electron moving you could tell instantly whether it was a movie or an anti-m movie meaning to say that it was going backward uh rather than forward but of course that's only because you didn't time with reverse everything what did that exper the experiment I just described electron in a magnetic field and it goes in One
+
+01:15:02
+Direction what did I fail to not the time reverse the magnetic field yeah if I was really doing the fullblown um time reversal symmetry I would also have to change the sign of the magnetic field yeah Okay I uh I'm sorry I don't know how I got on all of that was not my intention to uh just rambling it's called old age let's stop for a few minutes and then we'll get back to Second quantization and all that stuff mostly I wanted to rest from doing mathematics on the Blackboard okay we
+
+01:15:48
+were we were doing second quantization and um I thought I would tell you a few things about it that uh that I haven't mentioned so far in no particular order but uh some of the physical consequences of it the first first thing is somebody asked me whether the field operators and so forth how they're connected with Foria transforms so I thought I would tell you to begin with exactly what the connection with foror transforms is um it's very simple if you remember in ordinary quantum mechanics you have wave
+
+01:16:38
+functions and the squares of the wave functions are um probabilities to find particles at different places you can Foria transform the wave function and the Foria transform is the wave function in the momentum basis so while s of X this is not the field operator this is little s little s is the wave function for a single particle s of X is the wave function and S star s Y is the probability probability of what probability to find the particle at position x p of X probability of X now supposing I want to work in the momentum
+
+01:17:36
+basis the momentum basis tells me what the amplitude for the momentum to have a certain value and if I Square it it gives me the probability to have a certain momentum so that's a thing that's called I think we probably called it side um did we call it side twiddle we did side twiddle of P the twiddle is just to make another symbol side twidle of P where p is the momentum that's a thing which when you square it is the probability but not the probability for the particle to have a c position but the probability to have
+
+01:18:26
+momentum P this p and this P are different one is probability one is momentum okay what's the connection between s of X and S twiddle of P they're Foria conjugates of each other or Foria transforms of each other so let's write that down let's uh come over here s twiddle of p s twiddle of p is equal to the integral over X e to Theus I PX that's the Foria transform it's a function of P not X because X has been integrated over and The Marvelous thing is that you can go back and forth if you know what s p is
+
+01:19:37
+then you can reconstruct what s of X is and so s of X is equal to the integral DP over sare < TK of 2 pi s twidle of P only difference e to the plus I PX and that's forious theorem that's forious theorem relating uh functions and their fora transforms now it has a physical significance and the physical significance is uh in terms of probabilities or wave functions for momentum and position okay now let's go now to the second quantization theory where we have not a wave function for a particle but a field operator
+
+01:20:31
+creation and Annihilation operators I'm not going to prove a lot of stuff tonight I'm going to tell you facts but they're facts which are pretty darn reasonable and you can reconstruct them from what we said Okay so let's uh let's go back to the definition of the field field operator now it's a field operator capital S of X and it was originally a sum over all the energy igen vectors of a system of creation operators this one would be uh let's see this is the annihilation
+
+01:21:13
+operator let's call S minus a minus of I times s of X where this I I of X over here is just the ordinary wave function of a particle with State I okay we work we we went through that a couple of times now what if we were dealing with the case of a free particle on an infinite Axis or infinite whatever the dimensionality of space is a free particle whose energy igen states are what just a particle moving in empty space What are the energy igen states of a free particle well you can begin by asking
+
+01:21:56
+what's the hamiltonian and the hamiltonian is p^2 over 2m so the igen states of energy are likely to be igen states of momentum if you know the momentum then you know the energy what are the igen states or what are the wave functions of the igen states of momentum they're e to the IX okay so if we were to go to the case of a free particle the s i of X would be e to the I PX what this oh this I is different than this I this I is the square root of minus one over here this I is an integer
+
+01:22:40
+what happened to the integer here where's the integer labeling the momentum I states there is no integer all there is is the momentum the momentum states are labeled by momentum momentum is not an integer it's a continuous variable it goes from minus infinity to plus infinity but it replaces the index telling you which igen Vector of energy you were talking about here the igen vectors are e to the I PX and instead of having a sum over I you have an integral over p and you have an nihilation
+
+01:23:25
+operator for a particle of momentum P this object here removes a particle of momentum p in the same way that a minus removes a particle in the state I so if you have a state with lots of particles in it and there are among other things particles of momentum P if you act with a minus it removes one particle of momentum momentum P what if there is no particle of momentum P there what does it do it just annihilates the state in the same way that uh that Annihilation operators uh or or lowering operators annihilate states with nothing
+
+01:24:08
+in them right so that's s of X the field operator and for good measure as a matter of definition we put a square root of 2 pi there just to make it look like um like this equation here so it looks awfully much like a minus of p in the mathematical connection here is playing the same role as s twiddle of P here okay all we've done is replace Place sums by integrals I by the momentum of the particle and we now have the notion of a um of an Annihilation operator for a particle of momentum P now do you remember what s of X did
+
+01:25:07
+itself not what's not what these creation operators here did but what did s of X do when it acts on a uh when it acts on a um on the vacuum for example sorry oh I want the creation piece so plus same thing except A+ here with e to the minus I PX my knee is going okay so what does what does um S Plus do it creates a particle it's got a bunch of creation operations in it and what kind of particle does it create a particle at position x a particle at position X that's what S Plus of of X
+
+01:26:08
+is what do you think that a minus of P A Plus of P does it creates a particle with momentum P okay so it's clear that S Plus and S minus oh incidentally you can um invert this equation you can for example write that a minus of p is equal to integral DX field operator s of X time e to the minus I PX again over < TK of Pi to Pi in other words you can do do the same manipulation as you do with forus theorem you can prove it you can prove one thing follows from the other and what it says is that there's a
+
+01:27:03
+mathematical correspondence or similarity between wave functions in position and momentum space and creation and Annihilation operators for particles at positions or particles with given momentum the a minus of p is essentially the Foria is anal us I could have called this here AF ofp I could have called this AF ofp just redefine instead of s twiddle and then these formulas would look very similar they would look identical but all this is saying is that the relationship between creation and Annihilation operators for positions and
+
+01:27:43
+momentums creating a particle at a given position that's done with s of X creating a particle uh is it this right yeah let's do the creation part part plus I think it's this way um the creation operators for particles of given position and given momentum are for your conjugates of each other so that's one fact about second quantization and keep in mind these are not wave functions now these are operators that operate to create and remove particles so I is the field operator for a particular kind of particle if there
+
+01:28:25
+are several different kinds of particles in the system then you have to have several different kinds of field operators there's a field operator for each kind of particle okay so that's one fact that's one fact second fact and I'm going to quote some facts now without proof but they're all things that you can prove from the definitions and they're they're straightforward okay let's come back to the let's use the the A+ I's instead of momentum States um here's something that we wrote
+
+01:29:10
+down for creation and Annihilation operators uh I do you remember what the commutator of A+ with a minus is Del Delta i j what about a minus with a minus for any I and J zero what about A+ with A+ zero these are the only commutators which are um nonzero okay well I could ask a different question I could ask instead what are the commutators of size of X at different positions instead of asking what are the commutation relations between the creation operators and Annihilation operators in the basis
+
+01:30:06
+I and J I could ask what is the commutator of the creation operator for a particle at point x with the annihilation operator at point Y we you that's right okay but how would you how would you prove it you would prove it by simply sticking in the definition of the size in terms of the creation and Annihilation operators and then using the commutation relations of the creation and Annihilation operators and what you would find is exactly what was just said it's just Delta of xus Y in other words they
+
+01:30:51
+commute when the points are not the same and they don't commute and they with a very big noncommut remember a Delta function has the property that it's infinite at the uh when X is equal to Y so the commutators of s s plus and S minus have this Delta function in them what about S Plus with s+ that's just made out of creation operators and all creation operators commute likewise for S minus so the only things which don't commute are S Plus with s minus now we could a we could we've
+
+01:31:35
+mentioned several times I think that the size because they're complex because they're not Herm Mission are not observables this is true but it's not a very interesting point because the sum of S Plus with s minus is an observable and the differences time I are observables so let's this is not a particularly interesting fact uh question yeah I'm just curious um what does that mean when xal y it means that it's very large everywhere no yeah and for any X whenever X is equal
+
+01:32:15
+to Y it's large no no suppose you put in oh okay I yeah yeah okay now let's let's ignore the fact for the moment that uh that these are not observables the real and imaginary parts are observables and what's true is the commutator of the real part with the imaginary part is also a Delta function like this point is a Delta function and uh it's it's not so interesting that these things are not Herm Mission you can always make them her Mission by adding uh real and imaginary Parts okay so what does it say
+
+01:32:52
+what what is the consequence of two things not commuting you know any examples of two of operators which don't commute X and P right X and P are the standard examples of operators that don't commute X and P the commutator is IH bar how about um Sigma you know the X component of a spin and the Y component of a spin they don't commute either the commutator is the Z component of spin what's the physical significance of not commuting as far as doing measurements is concerned you can't do simultaneous
+
+01:33:38
+measurements of the same thing or another way of saying it is the measurement of one of them gives a kick to the other one trying to measure the Precision trying to measure with Precision the position of a particle necessarily gives it a hard kick and destroys the measurement of the momentum or makes the measurement of the momentum very uncertain measuring a momentum very precisely spreads the position all over the place but let's just say that it introduces Mutual uncertainty Mutual uncertainty of the
+
+01:34:13
+kind the Heisenberg kind where when measuring one thing interferes with a measurement of another thing all right now this is a very interesting fact here let's forget for the fact let's forget for the moment the Delta function when X is equal to Y let's talk about when X does not equal y when X does not equal y it says that these things commute okay this is very very plausible it says that the measurement of a field over here does not interfere with the measurement of a field over here if I measure the
+
+01:34:46
+electric field this this could be the electric electromagnetic field it's a little bit different and we're we're going to come through it but if we get time but it's a field it's a field what this says is measuring the field at one place does not interfere with measuring the field at another place you can measure a field over here and here simultaneously and there's no Mutual uncertainty in them okay even infinitely close no when you get right on top of each other then measuring the real and imaginary
+
+01:35:20
+Parts at the you can replace this here commutator by the real part and the imaginary part do not commute measuring the real part and the imaginary part these two observables you cannot measure them simultaneously at the same point okay and they interfere with each other trying to measure one gives an enormous wallup to the other one and but and that's of course interesting it's telling of something important but the more important thing right now is that you don't have any interference in measurements if they're
+
+01:36:00
+at different places and of course that's very very logical I mean that makes sense particularly we're not doing relativity Theory now we're not doing relativity Theory but imagine that we were the same basic principle is true in relativity Theory supposing it were true that making a measurement over here interfered with and did something over here at the same instant of time to the possibility of making a measurement at a at a distant point supposing this commutator were not zero in fact let's
+
+01:36:33
+suppose the commutator were big for some reason that uh that the commutator of a field over here and here were big what that would say is trying to measure the field over here gives the field a kick over here makes it impossible to measure it because it gives it a kick over here well I think that would violate your sense of uh of causality or your sense of locality that Einstein tells us that signals should not propagate faster than the speed of light somebody over here trying to measure the field and get and
+
+01:37:05
+finding that he can't do it because it's not commuting with something over here uh violates some notion of independence of measurements at different places in particular if we take two places in times which are such that light could not go from one to the other the space like separated from each other then we would be in a very confusing situation where measuring a thing over here and a thing over here wouldn't commute would interfere with each other and that seems to violate the spirit of
+
+01:37:38
+uh of information or perturbations or signals or um uh effects do not propagate faster than the speed of light and that's true okay isn't that what epr experiments already show the what um that the effect of a measurement over here has has a uh consequence for a measurement over there oh boy no what no entangle the the the most fundamental thing about entanglement is it does not tell you that making a measurement over here has an influence over here well I didn't say influence I said cor I meant correlation yeah I know
+
+01:38:25
+but we're talking about influence we're talking about making a measurement over here giving a sudden kick to something over here that's exactly what doesn't happen where because of entanglement measuring something over here does not give a thing a kick over here because of entanglement it can only give a kick over here and the reason why is because things at one place commute with things at another place that's exactly the reason why entanglement doesn't uh send influences faster than the speed of
+
+01:38:58
+light because all the degrees of freedom at one point commute with the degrees of freedom of someplace else and that means they behave independently correlation is different than influence um so what this says this is good this says that there's no violation of your naive ideas or maybe they're not so naive but your straightforward ideas about the independence of measurements at different points of space now of course um uh we're not doing relativity but nevertheless it's still a true thing
+
+01:39:41
+here we're going to come next time to firion fion are fields or fion are particles which do not satisfy any of this in fact they satisfy a different algebra with anti-commutation tell you that things are independent and measurements are independent fermans the fields anti-c commute at different points they don't commute if they don't commute that means you can't measure them simultaneously at two different points no matter how far away a measurement of a of a firion field at one place gives a sudden kick to its
+
+01:40:34
+complex conjugate arbitrarily far away that sounds crazy uh or firon fields are not observables there's no way that you can construct what it's telling you really it there's no way that you can construct a device to measure a firon field why because that device would have to be spread all over space and be extremely non-local that's what we're going to take up next time firon operators firon operators are the operators which create and annihilate electrons boson operators are the
+
+01:41:14
+operators which create and annihilate photons so we'll come next time to the firon version of second quantization okay and uh do that okay good I'm I'm thankful that nobody uh forced me into doing any mathematics tonight well we did a little bit for more please visit us at stanford.edu
+

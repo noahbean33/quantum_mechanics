@@ -1,0 +1,162 @@
+00:00:00
+welcome back in this video I am going to be talking about the Bloch sphere in my previous videos I've discussed how to measure quantum spin along the XY and z directions but I haven't talked about how to measure it along any arbitrary direction in space now that's going to change this video so basically what we're going to discuss is a correspondence between quantum states which are vectors in situ and unit vectors just in regular space so n hat which is a vector in r3 basically what
+
+00:00:47
+we're going to see is that a quantum spin state which you might have trouble picturing can in some ways just be thought of as a regular vector pointing somewhere in three-dimensional space and the idea is that if you were to measure this quantum state along the axis spanned by an hat this quantum spin state would always be spin up in that axis so 100% of the time you measure in this axis it's going to be spin up that's what this correspondence is going to give it's going to give to us so
+
+00:01:29
+before I get to that I just want to spell out some common notation Q might have seen before so here I have the XY and z axes and I'm going to draw an hat which is a unit vector so it has length 1 and let's say that the angle between n hat and the z axis is Theta furthermore if you project down and hat onto the XY plane project it down to the sort of shadow right here the angle between this shadow of an hat and the x-axis is an angle which I will call fee so now I want to write n sub X and sub y and n sub Z in
+
+00:02:31
+terms of theta and fee so let's do that first things first if you kind of draw this actually I can do a little better than that if you draw this yeah if you draw this right triangle here you can see that this length right here is just cosine of theta so n sub Z is just cosine of theta that's the easiest one next the length of this shadow right here of the this the vector of this shadow is sine theta right that's the length of this vector so if you draw this right triangle you can see that
+
+00:03:23
+this length right here is just sine theta times cosine of fie so n sub X is sine theta times cosine of fie finally this right triangle here lets us see that this length right here is just sine theta times sine of fie so sine theta times sine of fie so these three equations are very important they allow us to write and hat in terms of two angles theta and feet and we're gonna be using this extensively throughout the video so I just thought I would say that first alright now let me clear the screen a little all right now I'm going
+
+00:04:22
+to spell out what the correspondence is right up front so if you have a vector n hat you can get the quantum state which is always pointing in the N hat direction as follows so I'm going to label this the spin up in the end direction right I was just my name for the state and that is going to be the state with components cosine of theta over 2 in the top an e to the I fee times sine of theta over 2 in the bottom yeah I got that right ok now if you have some quantum states I you can get n hat as follows actually ok
+
+00:05:25
+yeah all righty here so n hat equals in the first component we have the expectation value of sy and slopes and Sigma sub X which is the poly major the first poly matrix then we have in a Y for the Y component the expectation value of sy and Sigma sub y and for the Z component we have the expectation value of y sorry of sy and Sigma sub Z now something interesting to note here obviously sy and e to the I alpha times i where alpha is just any real number these two states have no observable differences as I discussed briefly in my
+
+00:06:19
+first video so you can sort of see that if so I might as well just say that this thing out front here is what you might call a phase and it is unobservable these two states there's no measurement that you could perform that could distinguish between these two states and thankfully sy and e to the I alpha times I have the same exact n hat now you might be saying well how do I know which state really is pointing up in the end direction right like couldn't I just multiply this by e to the I alpha right
+
+00:07:01
+couldn't I just say that state is also you know pointing up at the end and the question is yeah actually there is just sort of a convention that has to be fixed and the convention which we have chosen here is just the one where the first component is real so as you can see the first component has no imaginary part while the second component will in general have an imaginary part so that's just worth mentioning now it's worth mentioning two pieces of terminology quickly and hat here is what you would
+
+00:07:38
+call the Bloch vector block by the way is just named after some guy named Felix Bloch so yeah so an hat is the Bloch vector and what's the Bloch sphere well it's not really anything too crazy it's just that because n hat has norm one all of the Bloch vectors live on the Bloch sphere which is just a sphere you know the sphere defined by an x squared plus 9y squared plus and Z squared equals one so this is the Bloch sphere all right so now that I have introduced this correspondence it's time
+
+00:08:32
+to take a more principled approach so I can really convince you that this correspondence is legit so now I'm going to talk about performing measurements along any axis so I'll just start off by reminding you what although Polly these are so Sigma sub X is 0 1 1 0 Sigma sub y is 0 negative I I 0 and Sigma sub Z is 1 0 0 negative 1 now in a piece of funny notation which we'll find helpful throughout the video this Sigma with a neck with a vector arrow on top should be thought of as a vector of
+
+00:09:21
+matrices and you might be thinking like though it doesn't make any sense and it's not you shouldn't really take it too seriously it just sort of makes for some clean notation you shouldn't let it bother you like what a vector of matrices really means so for instance here's an example of some useful notation ok n hat dot the Sigma vector now what does this mean well it's just the dot product in the way you learned it so it's just n sub X times Sigma sub X plus n sub y times Sigma sub y plus n
+
+00:10:04
+sub Z times Sigma sub Z and this is just the 2 by 2 matrix with components and sub Z and sub X minus I times n sub y and sub X plus I times n sub y and negative n sub Z so n hat dot the Sigma vector really is just the 2 by 2 matrix and it's really just clever notation don't worry about it all right now let me clear the screen a bit okay very good all right now let me ask you the main question so question what is the state that will always be measured to be spin up in in the N hat direction now let's
+
+00:11:27
+think about how we can adjust this question so if you think about last video we learned that for instance the state the Upstate in the X Direction is an eigenvector of Sigma sub X with an eigen value of +1 all right so here we have the eigen value of +1 and likewise the spin down state in the X Direction is an eigen vector of Sigma sub X with an eigen value of -1 right oh and maybe I should just write what these are just in case you forgot okay so we also saw this to be the case in the y-direction the Z direction that the
+
+00:12:36
+spin up state always is an eigenvector with eigenvalue of +1 and the spin down state is always an eigenvector with eigenvalue of -1 so it would be reasonable to conclude and in fact it's correct because I'm telling this to you that the matrix n hat dot the Sigma vector right this is a 2 by 2 matrix the eigen vector of this matrix with eigenvalue 1 is the spin up state in the n hat direction so actually let me write that here so answer the state which is an eigen vector of n hat dot the sigma
+
+00:13:39
+vector with eigenvalue plus 1 all right now we're gonna find what that eigenvector is and hint hint it's going to be the vector I wrote earlier so as I wrote before and hat times the Sigma vector has entries and sub Z and sub X minus I times M sub y and sub X plus I times n sub y and minus n sub Z where and sub x equals sine of theta times cosine of Phi n sub y equals sine of theta times sine of E and n sub Z equals cosine of theta so just as a warm-up note that n sub X plus I times n sub y is equal to the sine of
+
+00:14:52
+theta times in parentheses cosine of e plus I times sine of E which is just equal to sine of theta whoops which is just equal to e to the I fee times sine of theta so this means that n hat dogs with the Sigma vector just has entries cosine of theta e to the negative I fee sine of theta e to the I fee times sine of theta and negative cosine of theta all right let me now erase all of my scratch work all right let me bring this up here and then kind of keeping this to the side of it action okay great so let's now check to see if
+
+00:16:23
+what I call the spin up State in the end direction which was the vector with components of cosine of theta over to you the icy times sine of theta over two right this was what I had called the spin up state mean direction but now we're gonna check to make sure that this was really a fair thing for me to call it so now we're gonna multiply this matrix by this vector and do it in your head with me while I write it out I started off to be silent so I get it right but you should do it in your head
+
+00:17:03
+it's really not so hard it's good practice you're new to this all right so this simplifies a bit of course this and this cancel out and this and this can be brought out front so here we have cosine of theta cosine of theta over two plus sine of theta sine of theta over two and here we have e to the I fee here we have parenthesis sine of theta cosine of theta over two minus cosine of theta times sine of theta over two all right now once again it was sort of gonna kind of delete the scratch work
+
+00:18:40
+as I go along all right just bring that up there okay now something kind of nice happens you may recall that cosine of alpha minus beta is equal to cosine of alpha times cosine of beta plus sine of alpha times sine of beta right so that means that this top component is just cosine of theta minus theta over two and likewise sine of alpha minus beta is just equal to sine of alpha times cosine of beta minus sine of beta times cosine of alpha so this bottom component is sine of theta minus theta over two so
+
+00:19:50
+kind of get rid of that there and then write this is equal to cosine of theta over two and then either I fee times sine of theta over two but oh wait that's just equal to the spin up state in the end direction right well our hypothesized spin up state in the in direction but more importantly it's equal to plus one times the spin up state in the end direction so yay we have just showed that yes this real this state really is the eigenvector of n hat dot sigma vector with an eigenvalue of
+
+00:20:41
+one which is what we've been wanting to show for a while now so you might wonder something else which is what is the spin down state with respect to the N hat direction so I'll just tell you what that is let's delete this okay so I'll just write again the spin up state has components of cosine of theta over 2 and e to the I fee times sine of theta over 2 and the spin down state in the end Direction has components of sine of theta over 2 and negative e to the I fee cosine of theta over 2 now these two
+
+00:21:44
+states satisfy thankfully all the relations you would think they should so for instance the inner product of the spin up state with itself is 1 the inner product of the spin down state with itself is also 1 and importantly the inner product of the spin up state with the spin down state is 0 and I guess I should just write out that n hat dot the Sigma vector when acting on the spin up state is plus 1 times the spin up state and n hat dot the Sigma vector acting on the spin down state is negative 1 times
+
+00:22:38
+the spin down state so all of these together for instance implies that n hat dot the Sigma vector equals the ket of the spin up state with the outer product of the bra with the spin up state minus the ket of the spin down state times the bra of the spin down state and you could actually check this equation for yourself by doing out the matrix multiplication you'll find that it is indeed satisfied just as you would hope it would be now the next thing I want to do is I want to conduct a few sanity checks just so we can see that
+
+00:23:32
+you know everything is really working as it should be working so just keep these two states up on the screen so sanity checks so I'm also going to very quickly just redraw my coordinate system again so here you have the XY and z axes here I have the N hat vector this angle is Theta this angle is Phi we have n sub x equals sine of theta times cosine of Phi n sub y equals sine of theta times sine of Phi and n sub Z equals cosine of theta so the first sanity check I want to conduct is just to see that when n hat points along the
+
+00:24:35
+x axis y axis or z axis these two states are just the same old spin up and down states we've already encountered before so if n hat points along the x axis then we have theta equals PI over 2 and Phi equals 0 and then the spin up state has components of cosine of PI over 4 and e to the I times 0 times sine of PI over 4 and this is just equal to 1 over root 2 and 1 over root 2 which is the spin up state in the X direction that we've already seen before so that works now I'm going to check the spin down state
+
+00:25:30
+this has components of sine of PI over 4 and negative e to the I times 0 times cosine of PI over 4 which is just 1 over root 2 and negative 1 over root 2 which is just the spin down state in the x-direction which is also what we've seen before okay good now we're going to do in the y-direction so n is components 0 1 and 0 theta is once again PI over 2 but now Phi is PI over 2 instead of 0 and the spin up state has components of cosine of PI over 4 and e to the I PI over 2 times sine of PI over 4 which is just
+
+00:26:39
+equal to 1 over root 2 and I over root 2 which is the spin up state in the Y direction that we've seen before ok good hmm now this spin down state has components of sine of PI over 4 and negative e to the I PI over 2 times cosine of PI over 4 which is 1 over root 2 and negative I over root 2 which is the spin down state in the Y direction as we've seen before ok good so so far whoops so far all of our sanity checks going great all right finally what happens if n is in the Z direction something kind of
+
+00:27:36
+funny happens here but um so here theta is zero but notice that when n hat points along the z axis Phi can be anything so we don't have to say what Phi is this is a quirk of this particular coordinate system so I mean it's just sort of what happens with spherical coordinates in general okay the up state has components of cosine of 0 and e to the I Phi times sine of 0 which is just 1 and 0 which is the Upstate no Z direction which is great but to the spin down state has components sine of 0 and negative e to
+
+00:28:35
+the I Phi times cosine of 0 which is just 0 and negative e to the I Phi which is equal to negative e to the I Phi times the spin down state in the Z component now this looks a bit funny but without a doubt this factor out front is just an overall phase so this state right here is observably the same as the spin down state in the z direction so even in this case yes it works ok so that was the first sandy check I wanted to do now I want to do another one should hopefully be a bit more interesting so the thing I'm going to
+
+00:29:23
+check now is that the spin up state in the negative n direction is equal to the spin down state in the end direction that's what I'm gonna now show so first things first how do our angles Phi and theta have to change in order to negate n hat so maybe you can see it by looking at that picture over there but if we send Phi to Phi plus pi and theta two pi minus theta then cosine of Phi will change to cosine of Phi plus pi and then using the cosine addition formula you can see that this is negative cosine
+
+00:30:10
+of Phi sine of Phi will change to sine of Phi plus pi which you can use the sine addition formula or maybe a clever diagram showed that's negative sine of Phi cosine of theta changes to cosine of pi minus theta which is equal to negative cosine of theta and whoops and sine of theta changes to sine of PI minus theta which is actually not negated unlike the other three and it's just sine of theta so okay under this change right here we can see that sine of theta doesn't change right cosine of
+
+00:31:05
+theta picks up a minus sign so n sub X is sent to negative n sub X then sine of theta it doesn't change and sine of Phi picks up a negative sign so n sub y is negated and then n sub Z well because cosine of theta picks up a minus sign is sent to negative n sub Z so we can see that yeah as promised this sends n hat to negative n hat so now clearing our scratch work a bit we can now write that the spin up state in the negative end Direction has components of cosine of PI over 2 minus theta over 2 and e to the I Phi plus pi
+
+00:32:08
+times sine of PI over 2 minus theta over 2 so well the first thing to notice is that this is just e to the I Phi times e to the I pi which is just equal to negative e to the I Phi the second thing to notice is that I guess I'll write it here cosine of PI over 2 minus theta over 2 is just equal to sine of whoops sine of theta over 2 and likewise sine of PI over 2 minus theta over 2 is just equal to cosine of theta over 2 and actually a pretty easy way to see that is just to sort of draw this right
+
+00:33:11
+triangle with an angle of theta over 2 and PI minus whoops oh yeah no way I had it right and PI over 2 minus theta over 2 so here we can see that for instance cosine of theta over 2 equals sine of PI over 2 minus theta over 2 know something to keep in mind I guess anyway whoops I'm rushing a bit anyway this means that this whole thing is just equal to sine of theta over 2 in the top and negative e to the I Phi times cosine of theta over 2 the bottom but oh wait that is just the spin down State in the end direction
+
+00:34:14
+which is exactly what I wanted to show and you know hopefully this equation you know makes a lot of sense to you if it's pointing up in the end direction it should be pointing down in the negative end direction okay so now we are done with all of the sanity checks the next thing I want to do is make a small point which is that all states side are equal to the spin up State in the end direction for some direction and hat so any state has two components alpha and beta where alpha beta are complex numbers and we can
+
+00:35:04
+always choose a a real number gamma right such that e to the I gamma times alpha + e to the I gamma times beta satisfies that the imaginary part of e to the I gamma times alpha is 0 right so here it is multiplying our state by an overall phase e to the I gamma such that the imaginary part of the top component is 0 then we can say that this is equal to OS a alpha prime and e to the I Phi times beta prime where alpha prime and beta prime are purely real right so here all we did is well this is a real number
+
+00:36:07
+because we just made it a real number and here we chose a Phi exactly so that what was previously e to the I gamma times beta is now e to the I Phi times beta prime or beta prime is real so because the inner product of Phi with itself is one this implies that alpha prime squared plus beta prime squared is equal to one and all such alpha Prime's and beta Prime's live on the unit circle and can be parameterised by an angle and here we should call the angle you know theta over two and you know have alpha prime
+
+00:37:03
+equal to cosine of theta over two and have beta prime equal to sine of theta over two so yeah so my only point is that every state is the spin up state in some direction no matter what and that is just because as we have just shown you can write any states I as an overall phase e to the negative I gamma times cosine of theta over 2 and e to the I Phi times sine of theta over 2 which is just our expression for the spin up state in the end direction all right that was the small point I wanted to make now I want to move on to something
+
+00:37:45
+else which is the expression for the Bloch vector and hat so as I mentioned the beginning of the video there's this expression for the components of n hat which is as the expectation value of your state with Sigma sub X Sigma sub y and sigma sub Z there's a really cute way to write this which I like a lot which is like this I think that's a nice little expression and I think this equation here this one it's a good one to keep in your head I think more people should know about this
+
+00:38:43
+equation there been some times when it's been useful to like think in terms of this equation I don't know I think it's good I'm just gonna write one more time what my state is but my in terms of a theta and Phi just gonna put it in the corner there and in this part of the video I'm just gonna prove this equation alright pretty simple goal now let's start with the X component so I'm going to write the dual vector here and to do that I got a complex conjugate the components right so I got a complex
+
+00:39:28
+conjugate that and Sigma sub X and okay there's my state now first thing I'm going to do is multiply this vector by this matrix and that simply has the effect of switching the components then I am going to multiply the dual vector by the vector all right and then just tidy this up a bit okay so you may or may not know that this right here can be written as two times cosine of Phi so here we have two times cosine of Phi times cosine of theta over two times sine of theta over two now this right here is one half of
+
+00:41:07
+sine of theta just from the sine addition formula so this whole thing is just cosine of Phi times sine of theta which is just exactly our expression for n sub X excellent all right I'm pretty well all right now I'm just gonna kind of leave this intact and do the same thing oh sorry I should make that a why right so once again I'm going to start by multiplying the matrix by the vector on the right so that is just let's see negative I times e to the I Phi times sine of theta over 2 and I
+
+00:42:09
+times cosine of theta over 2 and then multiplying the dual vector by the vector you get cosine of theta over 2 times negative I times e to the I Phi times sine of theta over 2 plus e to the negative I Phi times sine of theta over 2 times I times cosine of theta over 2 equals I times e to the negative or I guess I mean mmm negative e to the I Phi plus e to the negative I Phi times sine of theta over 2 times cosine of theta over 2 and now sometimes when you're confronted by stuff like this you just really gotta
+
+00:43:02
+figure it out from scratch so here we have cosine of Phi minus I times sine of Phi that's just that term right there plus cosine of Phi minus I times sine of Phi right that's just you know because sine of negative Phi equals negative sine of Phi anyway so okay yeah so the two cosines oops so the two cosines cancel out and this is equal to I times negative 2 I times sine of Phi which is just equal to two x sine ax Phi okay very exciting so alright so that sorry so this is equal to two times sine of Phi and then we
+
+00:44:17
+know that this is just 1/2 times sine of theta so this whole thing is sine of Phi times sine of theta and up that's just n sub y so all right good good good got it to work mm-hmm so now we just got to do and sub Z which is always the easiest one all right so Sigma sub Z and then we have 1 0 0 negative 1 all right all right so this matrix it's very easy to multiply we just multiply 1 times the top component and Bop minus 1 times the bottom component and then here we just have cosine squared of theta over 2
+
+00:45:23
+minus sine squared of theta over 2 then using the cosine addition formula this right here is just cosine theta oh that was pretty easy just n sub Z all right so we've now proven that nice little expression for the Bloch vector one of the fun things about the expression we just showed just say well we're talking about it is that there are some fun manipulations you can do with it so so when we have that n hat is the expectation value of psy with the Sigma vector then you can see for example that
+
+00:46:07
+n hat dot and hat is n hat dot and when we use expression right here and then sort of bringing in the and headed into the expectation value right we already know that this right here is just sigh because size and eigenvector with eigenvalue 1 so oh look that's just equal to one so n must be a unit vectors you're already knew I don't know I just think manipulations like this are kind of fun so I just thought I would show that to you there was other stuff like that to I think all right there's one less thing I
+
+00:46:50
+want to talk about which is just I think sort of a a good expression to keep in your head this is just an expression for probabilities something kind of useful in terms of how you think about stuff okay so let's just start off by computing the inner product of the spin up state in the Z direction and the end direction so here just have the dual vector of the spin up state nosie direction and the spin up state in the end direction and this is just equal to cosine of theta over two that means that
+
+00:47:33
+the probability of measuring spin up in the z axis if your state is the spin up state in the end direction is the absolute value squared of the inner product of the spin up state in Z direction the end direction which is just cosine of theta over two squared right which can also be rewritten as one-half of one plus cosine of theta so what this looks like is if here we have theta here we have zero pi over 2 and pi this starts at 1 and it goes down to 0 and is 1/2 when theta equals PI over 2 ok so the unit vector
+
+00:48:49
+pointing along the z axis is usually called K hat and if we draw it n hat here the angle between K hat and n hat is Theta and furthermore the dot product of sorry the dot product of K hat and n hat is cosine of theta so we can sort of see immediately how to generalize this formula and it is that the inner product let's say the spin up state in the M direction at just some other unit vector and the N direction that's just going to be 1/2 times 1 plus and hat dot M hat right here see I just replaced cosine of theta with
+
+00:49:45
+n hat dot M hat because I know that in the case week we compute a previously cosine of theta was just the dot product of those two unit vectors so this equation right here is think a useful one to keep in your head notice that it's equal to 1 if n hat dot M hat is equal to 1 it's 1/2 if n hat dot M hat is equal to 0 and it's 0 if and hat dot M hat is equal to minus 1 so this formula right here I think it's good to keep in mind because it's kind of easy to remember how the measurements work
+
+00:50:36
+and stuff like that so now that the video is mostly oh I actually have a confession to make this video is actually only partially about the Bloch sphere what I also wanted to convey is how when you're given a correspondence you should check for yourself whether everything you've been told makes sense and this involves doing some simple sanity checks and becoming comfortable with all the different formulas you've been given and just in general having a gung-ho mentality about checking simple things
+
+00:51:07
+so I hope that in this video and the way I posed questions and then tried to find the answers you learned something about how to approach equations and gain an intuition for them and never forget that physics rewards hard workers and if you keep that in mind you'll never fail alright that concludes my video on the blocks here thank you for watching in my next video I am going to discuss how quantum spin states evolve in time in the presence of a magnetic field
+

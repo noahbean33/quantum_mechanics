@@ -1,0 +1,402 @@
+00:00:01
+[Music] Stanford University going Way Beyond the material of the course but let's just talk about it for a minute the model we talked about had a hamiltonian or an energy which is just C * p p can be positive or negative the wave functions for a given P are just e to the IX and there's nothing better about e to the Plus ipx or P being positive or negative they're both uh perfectly acceptable plain waves but one of them has positive energy and one of them has negative energy just reading off here now
+
+00:00:59
+negative energy is not such a good thing in um in the real world negative energy is not such a good thing in the real world because if there were particles of negative energy the world would be unstable the vacuum would not be an empty space would not be the state of lowest energy you could take empty space which we can say has zero energy and then just start putting in particles of negative energy particles of negative energy will lower the energy and anything that lowers the energy tends to be um favored you can make lots and lots
+
+00:01:43
+more and more particles of more and more negative energy uh you have to get some positive energy from someplace you have to get some positive energy from someplace but you could for example radiate photons and at the same time produce more and more of these negative energy particles if there were particles of negative energy the empty space would just be unstable unstable with respect to creating more and more positive and negative energy particles you can't you have to conserve energy so you'd have to do both but that
+
+00:02:18
+would happen if there's only positive energy particles by contrast there's no way that energy conservation will allow you to make them if there are only positive energy particles and the vacuum has zero energy it's the lowest energy State and nothing can happen to it to create particles so a good stable World requires all particles to have positive energy relative to the vacuum this is not a good stable World okay so what do you do about it well it was dra who understood what to do about it but only
+
+00:02:57
+in the case of Fons now what are Fons Fons are simply particles that cannot be in the same state two of them cannot be in the same state that's a rule where that rule came from it comes from relativistic Quantum field Theory but it's the same as the PO Exclusion Principle if you know a little bit of chemistry you know that two electrons in an atom can't be in the same state and you have to fill the atom with particles of different energies different uh different states and the same is generally true particles that
+
+00:03:37
+are not that that uh that participate in a PO Exclusion Principle are called fans why they're called fans I don't know I mean they should be called pons it's obvious they should be called pons and particles which don't participate in a Exclusion Principle are called bons but of course properly they should be called Einstein on but uh it was Einstein who first studied them uh never mind fans and bosons fion can't be put in the same state bosons can't so what the said was look I have a
+
+00:04:12
+very simple solution to all of this just imagine that the vacuum empty space is really a state in which all the particles of negative energy are present simultaneously filling up the vacuum you simply can't put any more in because you're not allowed to put particles into the same state but everything else is empty in fact if you were to say think about it for a moment let's assume that the real vacuum is the state of absolute lowest energy absolute lowest energy now take absolute empty space what you think of
+
+00:04:51
+as ordinarily empty space is that the state of lowest energy no I can put one particle of negative energy in lower the energy so there's a state of lower energy whatever state you say I will find another negative energy particle to put into it and lower its energy the only way to have the state of absolute lowest energy is to Simply fill it full full of all the particles which have negative energy in other words all the particles with negative momentum sounds crazy but it turned out to be right but you can only do that
+
+00:05:30
+with particles which have the property that you can't put more than one of them into the same state if you could put more than one of them into the same state there would be no end to your ability to keep dumping negative energy particles into the vacuum all right so this is a reasonable Theory it's it's a direct Theory it's a very simple basic baby version of the direct equation is what it is and uh it's an okay theory for neutrinos or for onedimensional neutrinos it is not a good theory for
+
+00:06:07
+photons photons uh are bons and you simply can't play the same game if there were negative energy bons you could simply dump them into the same state more and more and more of them and simply destabilize the world so no this is not a good theory of bosons it's a good theory of fans um but that's taking us way Beyond uh this course this quarters material we've covered in a sense a lot about the foundations of quantum mechanics and very simple quantum mechanical systems we've covered
+
+00:06:45
+almost nothing about what uh we could call the applications of quantum mechanics so not even the applications of quantum mechanics but studying quantum mechanical systems we didn't even get to the harmonic oscillator that's a disgrace but uh we're not finished with quantum mechanics next quarter we're going to do relativity and field Theory but then we're going to have to come back to quantum mechanics in order to study more about the basic uh um structures that appear in quantum
+
+00:07:19
+mechanics so it's sort of embarrassing to teach a whole course in quantum mechanics and never get to the harmonic oscillator but uh that's where we are so uh you can ask for your money back I don't know on the other hand it does seem people got a had a lot of fun with the ideas of entanglement they didn't expect uh such a uh um a response particularly this and some of it was extremely interesting and well done some of the uh chatter back and forth on the internet I actually did did follow it and sometimes it was uh it
+
+00:08:03
+was generally good and sometimes uh excellent so I uh I got some sense of satisfaction out of teaching that um we're going to go on a little bit today about the Schrodinger equation not the general Schrodinger equation but the special Schrodinger equation that Schrodinger actually wrote down the connection with the things we've learned up till now is through the wave function and the wave function is simply the amplitude that a particle is located at a particular position in other words
+
+00:08:42
+it's the inner product of whatever the state Vector happens to be with a state of definite position and we can also write a momentum space wave function the momentum space wave function is just the projection of the same state whatever it happens to be onto a momentum IG State IG Vector the momentum IG vectors and the uh and the position I vectors or the rather the um momentum wave function and the position wave function are related and they're related by Foria transform that's the basic structure of
+
+00:09:31
+position and momentum if a particle has more than one direction to move in for example let's suppose it can move in the XY plane then you characterize the position of a particle by two coordinates the two coordinates commute you can measure both the X and Y position of a particle simultaneously now is that something that follows automatically from what we've said up till now no not at all it's really an imperical fact it's an empirical fact that the structure of the quantum mechanics of
+
+00:10:13
+particles only conforms to uh to experiment if we assume that the different coordinates the different um directions that a particle can move and commute and that means that the wave function is really a function not of a single variable but a function of a collection of variables the collection of variables being um the position the various coordinates of the particle if we have several particles then the wave function becomes a function of the coordinates of all the particles we're not going to go into
+
+00:10:52
+that today it's uh but uh I just tell you that the wave function thought of the wave function of a collection of particles is not a function of three-dimensional space it's a function of all of the coordinates of all of the particles in the same way that phase space the phase bace of a particle is described by a collection of a large number of coordinates and momenta in the case of classical physics the wave function of a particle is a collection of the of a system is a collection of is a um a function of the collection
+
+00:11:32
+of all of the coordinates so for example if you have 10 the 23rd particles s would be a function of 10^ the 23rd coordinates okay so that's uh that's the basic structure and you can go to momentum Space by fora transform and write the wave function instead as a wave function of all of the momenta of all the particles you can even have mixed situations mixed representations where you may describe a wave function in terms of the coordinates of some of the particles and momenta of the other particles this is
+
+00:12:11
+also allowed but uh we're going to focus on the case of onedimensional motion again we're going to come back to that and just discuss the behavior of the wave function its properties just a little bit mainly properties of the shingal equation first the uncertainty principle okay where does the uncertainty principle come from it comes from the fact that X the coordinate and P don't commute Whenever two coordinates or two observables don't commute it becomes impossible to measure both of them
+
+00:12:51
+simultaneously because there aren't igen vectors which are igen vectors of both observables in particular the igen vectors of X are extremely different every igen Vector of X is extremely different from every igen Vector of P the igen vectors of X are sharp narrow highly localized functions in space and the igen vectors of momentum are first of all complex e to the I PX but they're real and imaginary parts are oscillations over all of space and so there sort of space filling uh they're not space filling
+
+00:13:35
+it's not that the particle fills space it's just that the particle is everywhere equally likely to be everywhere when its momentum is known so that's the most primitive observation about the uncertainty principle if you know the position of a particle you certainly don't know its momentum or if a particle is in a position igen State it's very far from a momentum IG state if it's a momentum I can State it's very far from a position I can State uh that's the most primitive
+
+00:14:04
+version of it we could say more qualitatively we can say more qualitatively and then we'll come to quantitative we come to quantitative precise theorem in a moment but if we look at the wave function as a function of X and its relationship by Foria transform d p over the sare < TK of 2 pi s twiddle of p e to the I PX and I won't bother writing the other relationship the other relationship is the one that writes s of p in terms of s of x uh and just start fooling around trying to construct side of P or
+
+00:14:59
+S of x one from the other by Foria transform you very quickly discover that the narrower the distribution in X the broader the distribution in P will be that's a property just of the Foria analysis that the narrower s of X is the broader s of p is and vice versa if s of p is very narrow it means that it's just it's basically a single plane wave then it's very Broad in X and so that's a pattern a Foria transform the narrower a function is the broader its Foria transform is that's the
+
+00:15:48
+qualitative understanding of the uncertainty principle but let's try to do a little bit better let's try to um see if we can the find the notion of uncertainty and then see if we can prove a theorem okay I'm going to prove a slightly simplified version of the theorem mostly because there's just too much on the Blackboard if I prove the full General theorem I'll prove a simplified version of it but the simplified version of it contains the basic ingredients all right first of all
+
+00:16:24
+what is meant by the uncertainty in a variable you have some distribution for that variable and the first thing to do before discussing the uncertainty in it is shift the axes so that the average of X let's say this is let's say this is X so that the average of X is zero you can always do that whoops if the average of X is not zero let's suppose you have some wave function like that xal 0 is over here if you put your center of coordinates over here obviously the average of X the expectation value of x
+
+00:17:10
+will be negative if you put your coordinates over here the uh the average of X will clearly be positive and as you move the origin you'll eventually find the position where the average of X is exactly equal to zero so let's uh simplify our story by shifting coordinat this is just a shift of coordinates just shifting our coordinates until the average value of x is equal to zero okay so average of X is equal to zero first then what now we've we've done it with average of X is equal to
+
+00:17:51
+zero what is the uncertainty the uncertainty by definition is the average of x² squared okay and looking at the average of X it's zero because anything on this side is balanced by something on this side x is positive over here x is negative over here so looking at the average of it the average uh will cancel if you choose your axes in the right place but the average of x squared x squ measured relative to this located axis here will not be zero X2 is not zero here X2 is not zero here in fact X squ the only place where X squ
+
+00:18:35
+is zero is right at the origin and so there's no way that the average of x s can be um can be zero in fact the broader the wave function the larger the expectation value of x squ will be right that's clear um so a good measure a good measure of the width of the distribution you can call it the uncertainty in X and it is the definition really of the uncertainty in X is the average of x squared the average value of x^2 with a given probability distribution given that the average of X itself is equal to zero that is the
+
+00:19:25
+uncertainty in X and it's just called Delta x squared just call it's positive number Delta x squared and the broader the distribution the larger it will be all right how do you calculate it if you know the wave function very simply you take the integral of SAR s of X that's the probability to find the particle at x times X2 that's the expectation value of x squ okay that's the average of x^2 probability to find the particle at position x * x^2 that's the definition of the square of the uncertainty that's
+
+00:20:24
+the square of the uncertainty of X and as I say it's defin but it's a good definition let me rewrite it up here Delta X and I'll square it is equal to the integral of SAR s * x^2 DX all right now what about the uncertainty and momentum the uncertainty and momentum is defined in a very very similar way uh oh one other point one other point this is equal to S x² s it's the expectation value in the state s of X2 thought of as a quantum mechanical this is a quantum mechanical formula the
+
+00:21:26
+expectation value of x² squ that's the uncertainty what about the uncertainty in momentum in fact for that matter what about the uncertainty in anything the uncertainty in anything assuming its average is equal to zero is just the average of the square of that quantity that's a general definition incidentally if you uh if you don't want to shift the coordinates so that the average is equal to zero you can use another definition and the the other definition is that it's the expectation
+
+00:22:04
+value of x² minus the expectation value of x squared these are two different things the expectation value of the square of something is not the square of the expectation value in particular if the expectation value of x is equal to zero it does not follow that the expectation value of x squ is equal to zero this is a more general definition of the square of the uncertainty in X but as I said you can always shift your axes around so that this is equal to zero and just choose this one here okay what about the expectation
+
+00:22:50
+what about the uncertainty of momentum the uncertainty of momentum is defined in essentially the same way you can Define it if you like using the Foria transformed wave function and then it would just be I'm not going to use this definition but let's just do it Delta p^2 would be the integral s twiddle of p s of p time p^ 2 DP this would be the probability that the particle has momentum P * p 2 integrated over P but I'm not going to do it this way what I'm going to do is just observe
+
+00:23:36
+that this quantity over here is nothing but s p^ s s and now I'm going to work in the position representation we can do that because we know what the operator p is when it acts on a wave function s of X what does p do what does the operator P do when it acts on a wave function in the in the X basis what it does well first of all whenever you take expectation values or in a products you have an integral DX to do all right from the bra Vector here you have SAR of X the k side of this is p ^ 2 * s and
+
+00:24:32
+what is p ^ 2 p is - i d by DX I'm using now that the momentum operator p is minus i d by DX and p^ 2 is just minus D2 by dx^ 2 second derivative that's what p^ squ is you act twice with P once and then twice so uh this is equal to the integral DX s star of X DC s by DX squared with a minus sign the minus sign coming from minus I * minus I okay now you look at this and you worry a little bit um there's a minus sign here how can the how can the uncertainty in P be negative what does it mean to have a negative
+
+00:25:37
+uncertainty uncertainty in p as a minus sign here what's going on what's going on is that the integral in here is negative that's all that's going on the integral is and how do you see that the integral is negative you integrate by parts so I'll just remind you the rle rule for integrating by Parts is if you have we're going to use this over and over if we have two functions f and g then the integral f d g by DX DX is equal to minus the integral DF by DX time G DX this is true as long as f and g go to
+
+00:26:23
+zero appropriately at Infinity so that the boundary terms don't contribute in the integration by parts all right but look at it just look at the structure of it because we'll use it over and over you can switch the derivative from one factor to the other Factor at the cost of a minus sign right that's the that's the basic rule okay so let's this is a second derivative the second derivative is also of course a first derivative namely it's the first derivative of the first
+
+00:26:57
+derivative DCI by DX Let's uh do an integration by parts all we have to do is switch the D by DX to S star and change the minus sign okay so this becomes DX let's put the DX over here the D by DX can switch to the S star at the cost of a change in sign so this Bec comes plus and this becomes dcar by DX now look what we have here we have d by DX and we have D Star by DX this factor is the complex conjugate of this Factor they're just complex conjugates of each other and what happens if you multiply a complex
+
+00:27:50
+conjugate a function by its complex conjugate first of all it's real and second of all it's positive so the in Grand in here is positive the sign got changed to plus and this is most definitely a positive integral here so p^2 this is the expectation value of p^ s okay we know the average of p is zero ah we can always shift p until it is zero now the real question is can you have both the average of X and the average of P equal to zero that's not so obvious the answer is yes uh you can
+
+00:28:33
+always you can always shift first you shift to x equals 0 and then you can shift to P equals z uh there's a trick you know I think I'll come let's come back to it ask me again I don't want to get off the track the answer is yes you can take a wave function and shift it both in X and in P until both of them have average equal to zero we'll come back to it I'll explain to you why in a little while but let's suppose we've done that okay and let's see if we can find
+
+00:29:10
+a relationship between the uncertainty and x and the uncertainty and P not not not a relationship well I suppose it's called a relationship in mathematics but a inequality is what I want an inequality the inequality should be such that when Delta X small Delta p is Big when Delta p is small Delta X is big or better yet that the product of Delta x * Delta P cannot be smaller than what than har bar now I've lost har bar in here I've lost har bar because I've set it equal to one we'll put it back
+
+00:29:46
+later but if you want to put it in here now we should probably put it in here as a one over har squared here an harar squared here and an H bar squared here but let's not do I have it in the right place yes I do but let's work with h bar equal one and later on when we're finished I'll put back the uh the dimensional quantities okay so here we are what tools do we have to construct inequalities there's basically one there's a zillion inequalities in mathematics but uh probably the most
+
+00:30:24
+famous the most useful and the only one that I know that's uh particularly useful is the triangle inequality uh everybody know the triangle inequality some people do some people don't so I will tell it to you and uh we it comes in two forms it's a statement about triangles of all things what it says is if you have a triangle that the sum of any two sides is bigger than the third side obviously true right the sum of this side and this side why is that because the shortest distance between any two points is a
+
+00:31:01
+straight line so the shortest distance between these two points is this one and the other two sides the sum of the other two sides is certainly bigger so if we have uh three sides that's a statement there's also another version of it I'll tell you what I think I'll prove it uh I'll prove the other version but you know the other version very well also let's call this one a let's call this one b and let's call this one C okay so um a + b is bigger than C or a + b is bigger than uh bigger than C bigger
+
+00:31:49
+than the size of C okay A plus b is also by the same argument I mean it is the same thing is bigger than a plus b if these are vectors think of these as vectors here's a vector a here's a vector uh here well let's put it this way um C is not a plus b is it it's a minus B in this case right um I think I want to think of it this way a b c okay it's still a triangle a plus b is bigger than C which is the same as saying it's bigger than a plus b um let's Square it let's Square it
+
+00:32:40
+then this becomes a squ square of the side of a plus b^ 2 plus t a b is bigger than this guy over over here but what's the square of a + b it is a 2 plus b^ 2 plus twice the dotproduct of a where did I get that from I wrote that A + B squ is just a + b Dot A + B that's the square of the length of a vector and that's a 2 plus b^ 2 plus twice the dotproduct of A and B and so we have now an inequality from which we can erase A squ and B B squ from both sides here's another form of the
+
+00:33:56
+triangle inequality let's erase the twos and what it says is if you have any two vectors given any two vectors here's one vector here's another one a b that the product of the the length of one of them times the length of the other is always bigger there I think there's two disappear is bigger than the dot product there's another way to think about that what is the dot product in terms of the length of a and the length of B and something else what else do you need to know to calculate the dot product cosine
+
+00:34:46
+of the angle so a dob is of course nothing but a b cosine of the angle and cosine of an angle is always less than one so the triangle inequality is pretty trivial it simply says that the magnitude the product of the magnitude of two vectors is always bigger than the dot product between them because the dot product always has a cosine in there now this is true for vectors in two dimensions three dimensions 100 zillion Dimensions it's even true for vectors in complex Vector spaces it's just generally true for
+
+00:35:29
+vectors in any kind of vector space that the magnitude defined as the square root of the inner product of the vector with itself that this inequality is true in fact uh uh let's let's just write it as A.B and let's Square it because we're going to use it in the squared form a 2 b^2 is greater than a b s i just squared uh I I haven't uh done anything very significant and that's that's the inequality that we're going to use this should be greater than or equal to yes it should be greater than or
+
+00:36:15
+equal to the only time it's equal is When A and B are in the same direction right that's right greater than or equal to when cosine Theta is equal to is equal to one all right that's our that's going to be our our trick so I don't think I need this anymore we'll come back to it um yeah well we will kind of looks uh promising we have a Delta x^ squar here sort of like a s we have a Delta p^ squ here sort of like b^ s and we want to show that it's bigger than something all right so the trick is
+
+00:37:24
+to define the right A's and B's in terms of size and x's and so forth and then just use the theorem but I'm going to make one simplifying assumption I've already made two simplifying assumptions that the expectation value of x and P are zero that I will show you how to arrange and that's there's no uh there's no trick there the simplifying assumption I'm going to make only because I don't want to fill up the Blackboard with more algebra than I need than than necessary this is something
+
+00:37:55
+you can sit down with at home home and go through it for the more General case I'm going to assume that the wave function s of X is real if I didn't we'd be chasing around size and size stars and I would eventually Tire you out and you would probably lose the threat of the argument so I'm going to assume that Sai is real it'll save us some algebra it's not General but it's very easy to fill in the steps for complex I easy but it takes a few more lines and I just I just after sitting down and doing
+
+00:38:34
+it on a piece of paper I just decided it was too much for a Blackboard presentation to do better to do it for the simple case so s is real okay so here we are we we can get rid of the size stars then and um I think I lost an equation here using the fact that p is minus i d by DX we proved that this is equal to integral the S Star by DX D Side by DX just remind you just quickly to remind you how we did it p^2 was a second derivative well minus the second derivative and then we did an integration by parts to take one of the
+
+00:39:20
+deriva and put it over here okay so that's Delta p^2 and what we're going to try to prove is that the product of this times this is bigger than something product of this times this is bigger than something okay and to do so it's just a it's just a trick now think of a and b as vectors in fact you can think of a and b as either bra vectors or k vectors since s is real it doesn't matter whether they're bra vectors or C vectors but here's what it's going to be the one
+
+00:39:50
+vector a I'm writing them now in Vector in bra C notation the triangle inequality is perfectly true for bras and KS as well as for ordinary vectors all right so the vector a is going to be described as going to be the vector whose wave function is not s of X but x s of x a is the vector whose wave function is x s of X in other words it's X operating on S and B is is going to be the vector P Time s or basically minus i d s by DX when I write equals here I mean to say that a is the vector whose wave
+
+00:40:48
+function is s of x b is the vector whose wave function is DCI by DX and we're going to apply the triangle inequality to that okay um notice that with this definition here Delta X2 is a s look at it the inner product of a with itself a s is just the integral of s star s * X2 so this is here a squar with this notation what about this one this one here is essentially b^ s it's the inner product of B with itself how come I don't have a uh I have a minus I d by DX here if I put minus i d by DX over here I would have Min - I *
+
+00:42:03
+- I which isus one how come I don't get a how come I have a plus one instead of a minus one complex conjugation yeah so this is b^2 that's a 2 and a 2 * b^2 is this right it is also Delta x^2 * Delta p^ 2 so Delta x^2 Delta p^ 2 a 2 p^ 2 the triangle inequality is literally talking about Delta x^2 Delta p^ 2 so now let's look at the other side of the inequality here the other side of the inequality is a. b^2 so let's compute A.B it's the inner product of these two vectors and then we Square it then we
+
+00:42:49
+take its absolute value and square it because we take its absolute value I don't have to keep track of I's minus signs and the end they'll all go away because I take the absolute value and so the inner product of a. B is going to be equal it's going to have an integral oh one uh one thing I did say that I'm going to choose side to be real so all of these s Stars don't matter they're just s every place you see s star you can think of s okay so let's take a. b^2 that's going
+
+00:43:24
+to be a which is sign y of x x I've just written this in the opposite order and then times B which is going to be D by DX as I said I'm not worried about signs or eyes for the simple reason that in the end I'm going to take the absolute value of this so that doesn't play any uh that will play no role uh and let's look at this quantity now we have a. b^ 2 so I can multiply this by itself if I wanted to multiply Itself by itself I could multiply it by another integral of the same
+
+00:44:07
+type y DCI by Dy this is DX this is dy but all I'm doing is writing the same thing twice so if I can evaluate this I'm also evaluating this okay so here's the trick the trick is to say the S by the x * s does that does that ring a bell to you the S by DX Time s no almost no no no not the derivative of log would be the derivative of log if it was in the denominator you're you're on the right track though it's the derivative of the square of s it's 1 12 the derivative of the
+
+00:44:54
+square of s the derivative of the square of s is equal to twice s d s by thex so apart from a factor of two what we have here is x times the derivative of s^ squared with respect to X everybody see that yell out if you don't okay so I can remove this s here and replace this by S [Music] squared and at the same time put a factor of two 1/2 somewh I do the same thing with the other Factor same thing here uh s squared Why another factor of two which makes this all together a factor of a quarter and as I said this is this is
+
+00:45:56
+just a I don't even know why I'm doing it I should just write square but it I just wrote the square by writing the same thing down again okay next integration by parts you have a derivative here it's a derivative of s squ but it's still just a derivative and when you have a function times a derivative to be integrated you can switch the derivative to the other function at the cost of a sign but really there's no cost in sign because there's another sign from this one over
+
+00:46:35
+here all right so there's no real cost and sign uh and besides we're taking the the uh the um uh the absolute value so this is equal to integral of s^ squar times DX by DX and likewise over here integral SI squared Dy by Dy DX by DX that's familiar that's just one and this is just squaring the same thing again we are finished we're finished because what is this integral of one quarter well forget the quarter what's the integral of s squ s squ is s star s if s is real s star s is the same as s
+
+00:47:32
+squ what's the integral of s squared one one it's the integral of the probability over all space so each of these integrals is one if the wave function is normalized we assume that the wave function is normalized if we assume that the state Vector was normalized this whole thing is just one quarter and we have proved now the uncertainty principle from the triangle inequality that Delta x squared * Delta p squar is bigger than one quarter the one quarter if I remind you came from two factors like this or if we
+
+00:48:22
+wish to just um we can just write this as Del we can take the square root of both sides Delta X Delta p is bigger than 12 now what about the units X and P are not inverse to each other so the product of an X and A P can't be a pure number what is inverse to an X is a p over har so really this is Delta p over har if I put back the units or basically Delta X Delta p is bigger than a half H bar right that's this is the theorem that asserts the uncertainty principle that the uncertainty in position times the uncertainty in
+
+00:49:24
+momentum is bigger than har now this would be true for any direction of space pick any direction of space take or any particle any coordinate any generalized coordinate in mechanics its uncertainty times the uncertainty in the corresponding conjugate momentum is bigger than har bar so that's a bigger than H bar over2 as a matter of fact uh any questions about the UNC about this particular version of the uncertainty principle yeah integration by parts has another term that I guess integrates to zero
+
+00:50:02
+right it's which term well f f the G is the integral of f * Gus the opp let's call it f Prime G Plus G Prime X right now if you integrate this equation right this if you integrate this equation it says the integral of frime G plus the integral of G Prime X is equal to the integral of d by DX of FG but the integral of a derivative is just the difference between the Grand at the two end points of integration so this is FG between the two end points infinity and minus infinity the symbol stands for
+
+00:51:09
+FG evaluated in Infinity minus FG evaluated at the other end of integration and what I'm assuming is that uh that s goes to zero at Infinity which it would have to do if it's normalized if it's integral is finite if the probability distribution is normalized it means that the wave function has to go to zero so this is zero and this is just a rule that you can interchange where you put the derivative at the cost of a sign right yeah okay any other question about the uncertainty principle yeah um you keep
+
+00:51:54
+saying greater than but we s than equal to is it is it a small point or no um no it's not a small point when you prove that something is bigger than something else you can then ask the question can it ever be equal to that something else the and the answer may I mean I you know we may have proved an inequality which was not the tightest inequality we could have proved could have been that somebody could come along smarter and um proved a tighter inequality that it's got to be bigger than something else
+
+00:52:33
+stronger inequality in this case it's not true you can find wave functions for which Delta X Delta p is equal to H over two so they're called minimal uncertainty wave packets so it's it's it's not a trivial point this doesn't apply to time and energy well yeah it does but the circumstances under which you use it are less clear and I don't really have time to explain now we make at some point in these course we will probably want to think about it but do remember that the time dependence of a
+
+00:53:13
+wave function the time dependence of a wave function s of t as a function of time is a sum over the igen vectors of the energy let's call it uh sum over all the energy igen vectors of e to the minus i e t that's time times the energy IG Vector times a uh times a um a function let's call it let's call it f of e so the relationship between the wave function as a function of time and the wave function as a function of energy is once again you sum up things an energy with phases like this to get
+
+00:54:01
+things as a function of time that's the for a transform relationship so it's um but exactly how you use it is I'll give you an example of how you use it if you had some wave function moving past you it's moving past you and you ask how long does it take for the wave function to actually pass you and this could be Light Beam incidentally but uh how long does it take for the wave function to move past you in other words what's the uncertainty in the time at which the wave function might have maxed been
+
+00:54:40
+maximum how long does it take the maximum to get past you that you can call Delta T uncertainty in time that the wave function arrived right at your nose uh it's related to the uncertainty and the energy of the wave function the bigger the uncertainty in the energy well let's say it the other way the smaller the uncertainty in the energy the bigger the uncertainty in when that wave packet will pass you for example that's an example of the energy time uncertainty relation uh so any pair of things which are related
+
+00:55:17
+by Foria expansion and this is a for expansion it's writing s of t as a sum or an integral over oscillation any two things which are related in that fashion will have a uncertainty principle there are lots of other conjugate pairs like this the angle of supposing you have a uh a rigid body rotating about a point with an angle Theta characterizing its position then the angle Theta and the angular momentum have exactly the same kind of relation relationship uncertainty and angle time uncertainty in angular momentum is also
+
+00:56:01
+H I think it's h over two also so very similar kinds of uh things okay any other questions okay let's turn to the Schrodinger equation the Shing equation is the wave is the equation for the way a wave function changes with time it also governs the way expectation values if you know how the wave function changes with time then you can try to deduce how expectation values of observables change with time one of the things we would like to do is to see the relationship between the motion of wave packets
+
+00:57:08
+governed by the schinger equation and their classical counterparts namely the motion of systems systems in this case being a particle we would like to see that as long as the wave packet is narrow and not too crazy easily spread out and not you know if it's a nice bell-shaped curve that and stays a bell-shaped curve for for some length of time that um that the wave function or the center of the wave function moves in a way which is familiar from classical mechanics we need to be able to do that
+
+00:57:46
+to make any relationship between the classical and the quantum mechanical things that we've been talking about okay now we talked about this I'm going to let's um let's first write down the general Schrodinger equation I'm going to take you back a couple of lectures now take you back a couple of lectures and um and go through the derivation of how a wave packet moves the answer is the wave packet moves so that its Center satisfies the classical equations of motion uh I'm not going to do that in a
+
+00:58:27
+new way I'm going to go right back to the old way that we've already talked about and to do that we first of all in order to know how the wave function changes we need to know the hamiltonian and let's uh just remind ourselves how it works the wave the the way State vectors change with time I the side DT is governed by the hamiltonian acting on S if we were to take for our hamiltonian p^2 over 2 m that's the hamiltonian for a classical particle why we should take it for a quantum mechanical particle is not OB
+
+00:59:18
+not obvious and what what might we add to that to put some uh to put the particle in a force field we might add a potential energy function potential energy function might be plus v of X okay so that would be the classical hamiltonian for a particle moving in a potential energy function V ofx and we can take that we can lift that right from classical mechanics and think of it as a quantum mechanical hamiltonian and then check afterwards is the wave packet really moving the way classical mechanics would say say that
+
+00:59:55
+the uh that the classical particle moves okay all right so let's try that we we let's we will just work in a little while we'll just work with this abstract equation here but let's just uh see what it says h on s h on S instead of working with abstract K vectors we can work with wave functions and what this equation would say would be I the S of x by DT is equal now p^2 what is p p is minus i d by DX p^ 2 is minus d by dx^ 2 or DC by dx^ 2 there's a 1 over 2 m - 1 / 2 m Time
+
+01:00:52
+s but what is V of X is V ofx X an operator yes V of X is an operator by definition this is a definition now I told you what the operator X does the operator X when it multiplies a wave function just multiplies it by X the corresponding thing for a general V ofx is the meaning of the operator V ofx is that it multiplies the wave function by V ofx we didn't talk about that much we didn't talk about functions of X but functions of X are just defined in the obvious way as thought of as operators they operate
+
+01:01:40
+on Wave functions just to multiply by V ofx is that because V of X is a function position yeah yeah functions of operators yes V of X is a function of position X multiplies s of x v of X also multiplies and you can take this as definition they um when you make a definition of course you're later going to want to prove that it was a useful definition you not just make definitions you make definitions and then show that they uh that they uh either are valuable because they're easy to work with or
+
+01:02:17
+they're valuable because they relate things to previous things you already knew what we're going to want to show is that with this definition of how V ofx acts that the schinger equation will in fact make particles move according to classical uh orbits or at least make wave packets in so far as they don't spread too much move according to uh the uh the classical equations of motion all right so that's one term DC 1 over 2 m second derivative of s and the other term is just plus v of x *
+
+01:03:00
+s of X when V of X acts on S of X it just multiplies it and this becomes the shringer equation this is the Schrodinger equation for how the wave function changes with time it's also Depending on time let's at the same time write you know what I want to do with this I'm going to be interested in DCI by DT so I think I'll multiply away this I what do we do we multiply if we want to get rid of an i we multiply it by a minus I right minus I * I is is one so we multiply by minus I that'll get rid
+
+01:03:47
+of this minus sign and put an i here and put a minus I here that's side dot if you like the left hand side is side dot let's also write down the S star of x and t with respect to T it's not a new equation it's just a complex conjugate of this one and that one will be minus I over 2m DC s Star by dx^ S plus I V of x s of X H I think I got it right did I make a mistake everybody's talking at once and I can oh yeah good side star good right those are the shinger equations they're equivalent to each
+
+01:04:57
+other I just wrote them both cuz I'm going to need them both okay now what do we want to do we want to see how various expectation values change with time if we identify the expectation value with more or less the center of the wave packet if the wave packet looks like this the center of the wave packet will be close to the expectation value and so let's identify uh the center of the wave packet with the expectation value and ask how expectation values change with time let's see if we can work it
+
+01:05:46
+out all right so let's start with X let's see if we can calculate d by DT of the expect expectation value of x and that of course is d by DT of the integral SAR of X X2 no just x s of X when you wrote down the D over DX at the start you said DT DT T by DT another the velocity of the center of the wave packet that's all this is It's the velocity of the center of the wave packet why does it change it changes because side changes how do we know how side changes we know how side changes because we know
+
+01:06:42
+the Schrodinger equation so this is going to be a little exercise a little a little bit too tedious for my taste uh to do on the Blackboard it's not it's not very tedious but still I'll I may uh I may cut little pieces um take some shortcuts but uh I I'll tell you when I do okay so this is what we want to calculate and this of course X is just X it's not dependent on time but SAR and S are dependent on time so when I differentiate I could get a term from each one of these and this will give me
+
+01:07:18
+integral the S star of well let's just write the by DT SAR X S Plus integral s star x s dot right one term coming from differentiating with respect to Time s star another one from differentiating s each one has X in there and now of course this is just siar Dot all right first thing is we don't really have to calculate both of these These are complex conjugates of each other we have SAR dot here we have s dot here we have S here SAR here and X is real so in fact all we have to do is calculate one
+
+01:08:15
+of them and add its complex conjugate that's all we have to do or equivalently just take twice the real part adding something to its complex conjugate the imaginary Parts cancel and it's just twice the real part all right so we we can use that I'm not sure we'll need it but let's uh let's um let's say it's twice the real part of this twice this and keep in mind that we throw away anything that's imaginary we throw away anything that's imaginary because we add the complex
+
+01:08:53
+conjugate it and that will throw it away okay so now let's plug in uh DC Star by DT over here and that gives us Min - I over 2 m DC s well let's see what are we doing it's plus I'm sorry it's plus I it's the upper equation there D second s by dx^ 2 I think it's minus i v ofx s okay now the first thing we can see immediately is that the term with v of X is pure imaginary the SAR there's X the s s star I is certainly real X is real V of X the potential energy is real and
+
+01:10:01
+there's an i there so the first thing to conclude is that the V of X doesn't contribute at all it doesn't contribute at all because when you multip when you add the complex conjugate it will cancel so in this F in this equation we can throw this away over here SAR x v of x s that's real with the imaginary part uh cancels so we can throw this away okay next what's the next step integrate by parts that's always the next step it's always the next step is integrate by parts we have here
+
+01:10:55
+a derivative it's a second derivative but a second derivative is also a first derivative let's write it that way it's D by DX of DCI by DX incidentally partial derivatives have no well yeah they do mean something they mean derivatives with respect to x uh without changing time yeah okay all right so that's our equation and now I want to integrate by Parts which means I want this D by DX over here to shift to the other factor I want to shift it to the other factor and I'm going to get two
+
+01:11:37
+terms let's look at what the two terms are the first term the D by DX will just hit x what does that give what is d by DX of x one so that will give me twice integral s star the X will disappear when d by DX hits it and there is DCI by DX right DCI by DX this derivative got shifted to here there's an I I think over 2 m right there's an I that I left out over 2 m oh what else did I leave out integration by parts minus that's one term now again you might think this is dangerous I here we should throw it away
+
+01:12:47
+because it's imaginary but it's not imaginary it's real uh we'll uh we'll see that in a moment okay in fact we'll see exactly what it is in a moment but let's do the other term the other term has an i over to m i over to M uh there'll be an X the X does not get differentiated now X and then there is the S star of X now the derivative hits the S star and we get derivative of s star times derivative of s okay this derivative now hits the SI star there's an I here an explicit I and
+
+01:13:39
+this is to be integrated over X it's still underneath the integration here how about this what's the reality property of this is this real or imaginary uh it's probably a minus yeah there is a minus okay but it's imaginary this is the complex conjugate of this and X is real so this integral here the integral here is perfectly real it gets multiplied by minus I and it the whole thing is imaginary it will get eaten when you add the complex conjugate so the only thing that's left is
+
+01:14:33
+this I over 2 m with a minus sign Time s star DCI by DX now I'm going to tell you exactly what this is what is minus i d by DX it's p right it's p - i d by DX is p so what this is is it's the expectation value of P divided by m p over M just look at it d by d i minus i d by DX on S that's the same as p on S multipli by SAR that's the bra Vector integrated over X that's just taking the inner product right in fact it's real in fact it is really real it looks imaginary because of this but if you go
+
+01:15:42
+and study it carefully you find that it's real and what it is is the expectation value of the momentum divided by m so now we've proved an interesting theorem we've proved that DX by DT is equal to p/ M we've seen this before this is the classical relation between velocity and momentum mass time velocity is momentum now what we found is that this is going to be a feature of the motion of a wave packet if we have a wave packet that moves in a nice way so that it holds itself together which it may or may not do but
+
+01:16:27
+if it does if we're in a regime of parameters where the wave packet moves uh uh like a nice uh nice wave packet then we will find that the expectation value of its momentum defined in this way will be related to the expectation value of the velocity of the wave packet through the standard classical mechanical equation okay that's half of mechanics what's the other half of mechanics we found that dpd we found oops I just gave it away DX by DT is p over M what's the other half DP by DT that's Newton's law time
+
+01:17:14
+derivative of momentum is called Force so let's see if we can do the same thing with momentum question yeah um in your summary when you know when you said that if if everything is kind of grouped nicely it behave that way we didn't take we didn't have a nicely grouped assumption in our derivation we or is it just that that's going to it's going to look classical if it's nicely grouped right yeah there was no there was no assumption here there will be as we'll see a certain assumption in the other
+
+01:17:52
+equation no no assumption here of that type okay um if the wave packet is really crazy it might not mean anything very sensible but uh but still that uh that was a uh nothing I did up till now depended on any approximate notion of how the wave packet moves okay we got this let's see if we can get the other half now I don't guarantee to be able to get through it without um without all sorts of Errors of eyes and minuses but let's try this one all right P the average of p is gotten by
+
+01:18:47
+acting with p on S and that's minus I it'll give us a minus I which I'll put over here but then d by DX DCI by DX we could put the DCI by we could put the derivative over here by an integration by parts and a sign change but we'll leave it over here D DX H are we looking for DDX on the very left hand side should that be X on the bottom where D DX no no no no we want the time derivative of the momentum what do we want to see we want to see that the time deriva of the momentum uh is
+
+01:19:39
+governed let's write Newton's equation P dot is equal to force that's it what is force in terms of the things I've written on the Blackboard minus DV by DX so this is what we're going to want to show minus DV by DX but we'll show it in the form that d by DT of the expectation value of the momentum is minus the expectation value of DV by DX DV by DX is also a function of x if V is a function of X DV by by DX as a function of X it's called the force what this says is the average rate
+
+01:20:34
+of change of momentum is the average of the force where the force [Music] um the DV by DX is minus F okay so that's what we want to show we want to show that d p by DT is DV DX that's our goal okay and how we going to show it once again we're going to show it by using the Schrodinger equation to tell us how uh how things change with time okay so let's see now [Music] um this may get a little bit unpleasant let's I'm not sure right uh what I'm debating all right let's let's start
+
+01:21:34
+working it out and at some point I may say well I know this goes away and this doesn't go away but we we'll we'll see how it goes okay so first of all this gives us integral siar dot time DC by DX minus I and then there's another term where did that come from that came from differentiating s star with respect to time then there going to be another term where D by DT will hit s okay so what will that be that will be again minus I integral s star now the order of differentiation doesn't matter so this can be written
+
+01:22:21
+as uh d by DX of s dot I'm just wondering at one point I'm going to regret not having done an integration by parts but it won't matter because if I do the integration by parts I will reg I will regret it so I might as well just go ahead uh is there an extra I [Music] um no I don't think so so I I don't think so no I think it's right okay uh oh you know what I think it will be convenient to integrate this one by Parts if I integrate this one by Parts I will get a plus I here and a d Star by
+
+01:23:19
+DX here now the reason it's convenient is because the thing in here is the complex conjugate of the thing here okay s do star well that's the complex conjugate of s dot d s by DX that's the complex conjugate of s star but notice it's I times the difference what do I get when I take I times the difference of two complex conjugates real you get a real thing again all right so um I think it's just the real part of this well let's just keep going my eyes I I'm let's let's just keep going we can
+
+01:24:13
+erase this and remember in the end that the answer has to be twice the real part of this this twice the real part of this and we don't have to keep track of both of them okay now what do we do we plug in the Schrodinger equation and pray like mad that it all goes well okay so side dot is equal to I over 2 m DC s by dx^ 2 Min - i v of x s this I canels this I and gives a minus sign so this I well there's an I here this will make minus and the I over here times the I over here I think will make
+
+01:25:21
+plus plus okay we have a somewhat unpleasant uh thing here how unpleasant is it let's see um not too bad uh this piece I believe is pure imaginary it is it is it is this is pure imaginary over here the way you see it the way you see it is again integrate by Parts just this piece here if I integrate this piece by Parts we'll get a derivative we'll get a term with a single derivative of s and a second derivative of s star okay what will the discover is basically the difference between a thing and its
+
+01:26:26
+complex conjugate it' be a minus sign okay let's let's let's just see it um yeah let's just do it if I differentiate or sorry integrate by Parts that'll bring uh the derivative over to here it's pure imagin AR I know that it is whenever you have a quantity complex conjugated times a derivative of the unconjugated thing and you integrate it it's always pure imaginary we've used that trick before I'll just tell you right now this piece is pure imaginary it's not going to be
+
+01:27:12
+of any significance the significant piece is integral d s Star by DX v ofx s that's all that's left after we take into account uh the um the little intricate details of complex conjugation V of X we d h uh I can't remember whether we doubled it or not yet um I think we double it I think we double yeah yeah yeah we double it we have to double this yes we have to double it or add it to its complex conjugate I would say right we have to add it to its complex conjugate I think in fact let's do that right now
+
+01:28:17
+let's add it to its complex conjugate plus the integral of s star v ofx d s of d s by DX all right I've taken this and complex conjugated it I've taken this and complex conjugated it and V is real okay now we're almost there we have the SAR of X DX Time s let's pull out the V ofx let's pull it way out out here V of x v of x [Music] times this now what is the side what is this thing here s * dcar of X Plus SAR * d by DX it's the derivative of s star s with respect to X this is derivative of SAR * S Plus SAR
+
+01:29:25
+* the derivative of s that is nothing but the derivative with respect to X of s star s so let's put that in and the next step integrate by Parts all right integrate by Parts that'll take the d derivative over to here and it will give me minus the integral of s star s times DV ofx or if I put the S over here on the right and what is this thing the integral of SAR s * dvdx that's the expectation value of dvdx this whole thing is the x minus the expectation value of dvdx in other words it's exactly
+
+01:30:39
+this so what we found after a slight bit of painful uh integration by parts and a little bit of algebra and throwing away some things which I told you were pure imaginary which they were we find that DP by DT is exactly equal to minus DV by DX but in the sense of expectation values in the sense of the expectation value now why do I say know um this this also is exact I didn't do anything illegal here I didn't do any approximation I'll tell you where the use or where it's where it may be
+
+01:31:28
+important that the wave packet have a nice shape the expectation value of DV by DX is not the same as V or D let's just take V Let's just just take V the expectation value of of v ofx no let's call it f ofx Force the expectation value of f ofx it's really annoying which is after all minus DV by DX the expectation value of a function of X is not the same thing as the function of the expectation value of x this represents the expectation value of x the center of the wave packet and this is a function of the
+
+01:32:27
+center of the wave packet it is not the same thing as the thing we calculated in general this is the expectation value of f ofx let me give you an example where they're very very different where they they could be extremely different suppose for example that F were equal to X x^ squ supping the force happened to be x s and supping the wave packet consisted of a pair of bumps let's see is that what I want I think that's what I want yes that is exactly what I want what centered about zero what is the expectation value of
+
+01:33:18
+x what's the what's F of the expectation value of x X zero right on the other hand what is the expectation value of x squ certainly not zero this one has an X squ that's equal to the x square of this right it's certainly not zero so when wave packets are nice not nice single bumps which are mainly characterized by the centers like this then in general you could not write that the time rate of change of the momentum is equal to the force evaluated at the expectation value of x it's only if the wave functions are
+
+01:34:06
+nice and uh so that concentrated over a fairly narrow range if they're concentrate over a reasonably narrow range then the expectation value of f ofx is the same as the ex as F of the expectation value of x this is where we have uh cheated a little bit in saying this looks like the classical equation of motion that depends on the wave packet being nice and coherent and well localized what are the circumstances under which a wave function will remain nicely localized well I'll tell you what
+
+01:34:46
+the circumstances are the circumstances are that the particle is heavy if the particle is heavy and takes two things the particle being fairly heavy and the potential energy not having too many spikes not having spikes in it or something like that spikes when the wave function hits spikes it tends to break up for example if you have some sort of wave function coming in a nice wave wave packet coming in moving to the right and it hits a Point structure here what will it do it will spread out all over the place like
+
+01:35:30
+that the wave function will disintegrate all over the place if on the other hand it hits a very smooth potential of some sort then it will go through the smooth potential moving more or less according to the classical equations of motion so you know we we don't expect quantum mechanics to reproduce classical mechanics in every possible circumstance we expect it to reproduce quantum mechanics in circumstances where it should where particles are heavy and where potentials are nice and smooth and
+
+01:36:10
+don't cause the wave function to break up into little pieces or disintegrate or scatter all over the place okay um let's see if there are any other odds and ends that I wanted to No not tonight that's uh we're we don't have time for it um about describing what sort of physical situations would correspond to quote bad potentials that break up the way fun well okay the situation which is bad tends to be when um when Delta when the potential has structures and features in it which let's say have some size
+
+01:37:08
+associated with them some structure which we can call Delta X some size associated with the structure here and where Delta X is significantly smaller than the uncertainty in position of the particle if the structures if the um what do we want to call them features sharp features of the wave function take place on a scale which is much smaller than the um then the size of the incoming wave packet then it will break up the uh the wave function to a lot of little pieces each one will scatter they'll scatter
+
+01:37:50
+off in different dimension they different different directions uh did I write this right yeah when done that's right the sit okay let's uh let's isn't isn't the case then it's in those cases where in some sense classical mechanics itself is breaking down is that right where yes in other words you shouldn't expect it to rep no no no no you shouldn't expect it because of course of course right when there yeah when there are basically when the fature in the potential are shorter wave are shorter
+
+01:38:24
+than the wavelength of the uh of the particle it'll break it up into a right um now if you were to take a uh bowling ball and you were to ask what is Delta X well let's see typically it's true that typically uh Delta P * Delta X the rule is that it's bigger than har but in many reasonable cases it's of order har now P that's about as concentrated as you can get it but for an ordinary macroscopic object the uncertainty principle is pretty well saturated Delta P * Delta X is more or less about equal
+
+01:39:21
+to H bar why that's so is a very complicated question but uh very complicated now what is Delta P Delta p is the mass times the Delta velocity okay so the uncertainty in velocity times the uncertainty in position is H bar over M now if I put a bowling ball down on the ground you know very well that the uncertainty and its velocity is not very big the uncertainty and itsel velocity is in particular as it gets heavier and heavier you might expect the uncertainty and the velocity get smaller and
+
+01:39:57
+smaller and in any case there's an M down here uh and so whatever Delta V is as M gets small as M gets smaller and smaller Delta X will get bigger and bigger right Delta X will get bigger and bigger right and in particular it will tend to get bigger than the features in the uh in the potential so in a highly quantum mechanical limit where mass is very small and Delta X tends to be big the wave function will move under the influence of a ragged potential which uh which it sees as being being much sharper and much more
+
+01:40:53
+featured than the wave function itself that's when it breaks up on the other hand as M gets very large Delta X gets small Delta X will tend to get small as uh as M gets very large and so for a large bowling ball the wave packet might be very very concentrated and when it moves through here it moves through like a tiny wave function and the tiny wave function thinks that these features are very very broke broad moving through broad smooth features doesn't disrupt the wave function and break it up into
+
+01:41:29
+pieces so large mass and smooth potentials is the limit of classical physics light mass and abrupt potentials is more quantum mechanical yeah just to get a feel for what you mean by large and small um if you is Elon large enough to behave classically it's an interplay between the shape of the potential and the mass if you take a very very smooth potential of the kind that you might make let's say with a couple of capacitor plates capacitor plates separated by a meter well we don't have to take a meter
+
+01:42:18
+a centimeter with a smooth electric field between them then the electron will move through it uh as as a nice coherent almost classical particle on the other hand if you take the potential associated with the uh with the core of the of the atom the nucleus that has a sharp feature in it and uh that sharp feature will if an electron wave comes and hits it will scatter it all over the place so it's an interplay between the mass and the sharpness of the uh of the potential so can you do that experiment with a
+
+01:43:01
+nucleus an electron and show that it actually does be absolutely yep and is that what Le let not let's uh of course you can do it with electron no problem with electron very easy the classic experiment was done in 1911 it wasn't done with electrons it was done with alpha particles alpha particles come in and hit a gold nucleus gold nucleus is a small thing and the result was that the gold nucleus when the alpha particle comes in the wave quantum mechanical wave of alpha particles comes in hits
+
+01:43:47
+that tiny gold nucleus and it gets scattered in all directions that's why Rutherford was a bit surprised to see um to see his alpha particles get scattered right back at him and what did it tell him it told him that the nucleus was very small right I didn't right he just thought he had a beam of alpha particles some of which hit the center some of which went through here right but in fact what he really had was a wave and the wave came in hit the uh hit the tiny uh gold nucleus and got scattered all over the
+
+01:44:42
+place and with electrons yeah sure it's very easy that's what happens in accelerators when electrons hit small targets they just SC oh photons do also photons do also electromagnetic waves if they hit you know structured objects with a structure smaller size smaller than the wavelength they get scattered all over the place if they hit very smooth things they tend to propagate according to the geometric optics for example if you have a um a piece of material with a position varying uh index of refraction if that index of
+
+01:45:37
+refraction is varying very smoothly and very slowly over the wavelength of the photon then geometric optics is a good approximation if on the other hand you have a defraction grading of of um distance comparable or smaller to the wavelength of the radiation the the fraction grading will spread it out all over the place so it's it's not just electrons electrons photons uh anything okay uh if there are no other questions I'm going to go home and find out if my son had his baby yet okay
+
+01:46:27
+for more please visit us at stanford.edu
+

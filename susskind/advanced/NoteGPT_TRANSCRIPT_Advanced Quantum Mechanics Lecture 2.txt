@@ -1,0 +1,414 @@
+00:00:01
+[Music] Stanford University all right so we were in the midst of talking about symmetry symmetries are operations that you can do on a system which don't change the description which don't change the phenomena which don't change the energy levels which don't change the values of the energies of systems that that's not ours I don't think in particular they don't change the values of the energies of a system examples that we talked about were translation if you take an atom with a
+
+00:00:52
+given energy and you move it from one place to another the energy doesn't change doesn't matter which atomic State you study it's not just true for the ground state it's true true for every Atomic State and so the hamiltonian doesn't change when you move things that's a symmetry the schinger equation doesn't change same schinger equation same thing is true for rotating a system we're going to talk a lot tonight about rotating systems uh another example is just interchanging
+
+00:01:38
+two particles two identical particles you might call one electron electron one the other electron electron two you might call them Harry and Fred uh changing the names of the electrons interchanging electron one with electron two doesn't change the uh properties of an atom so that's also a symmetry we tend not to think of it as a symmetry just because we're so used to it identical particles are identical so it doesn't matter what you name them but it is a symmetry and there are other
+
+00:02:13
+symmetries of physics uh for example if you have a crystal lattice a crystal lattice has a kind of translation symmetry um it's not translation symmetry in space it is translation symmetry inace space but a different kind of translation and symmetry of space it's just translating everything by one lattice unit if we had a very very long almost infinite um uh Crystal then it's almost a perfect symmetry to translate from one atom to the you know from uh to translate the whole system by one lce spacing of
+
+00:02:57
+course there it's not exactly a symmetry if the system is not infinite if the system is not infinite and there are boundaries to the crystal well then you can't really translate it but if the crystal went on and on and on forever then you could do two things you could imagine taking the Crystal and moving the entire Crystal a little bit this one goes to here this one goes to here this one goes to here this one goes to here that is a symmetry of a crystal that's true it's a symmetry of anything
+
+00:03:38
+the ability to move it from one place to another but the crystal has a different symmetry which is just just translating from let's call this 1 2 3 four and let's suppose it goes on and on and on forever and ever just relabeling the crystal so that this one is now called minus one this one is called no no not one minus one 0 1 2 three Imagining the crystal goes on and on that's also a symmetry translation of crystals by the crystal uh by the crystal lattice spacing what else what are the what are
+
+00:04:20
+the symmetries are there there are lots there are lots but um some of them were more abstract than others the physically intuitive ones tend to have to do with properties of space the homogeneity of space the fact that every point is like every other point is translation symmetry the isotropy of space the fact that every direction is like every other direction is rotational symmetry now another concept that is we'll see is related to symmetry not the same thing is called degeneracy degeneracy and then
+
+00:05:10
+specifically degeneracy of energy levels degeneracy of energy levels is simply the statement an energy level is of a system is said to be degenerate if there's more than one state with the same energy level then that energy level is called degenerate when does it happen I mean for a random system with a generic hamiltonian assuming that the spectrum of it is discrete Spectrum some sort of discrete Spectrum um of energy levels it would be an accident or would be a rather odd accident that two levels
+
+00:05:52
+would have exactly the same energy and when I say exactly I mean exactly the same energy they may have the same energy to one part in 10 to the 15th but to say they have exactly the same energy what kind of coincidence would that take well as we'll see it doesn't necessarily take a coincidence it takes a symmetry in fact those are the only cases where we really believe that there are true de degeneracies exactly generaci of nature when there are symmetries degeneracies sometimes no sometimes not degeneracy sometimes
+
+00:06:40
+mean symmetry the other way symmetries sometimes imply degeneracy but not always and I'm going to show you now I'm going to begin with an example in which um you can see sort of intuitively how symmetries and when symmetries imply degeneracy that incidentally is one of the main uses of symmetry to analyze the energy spectrums of systems and see that they have levels that uh that exactly match that can be very important in atoms it's extremely important um let's start with rotation
+
+00:07:26
+symmetry let's start with rotation Symmetry and I want want to think about a very simple system namely a particle moving on a circle it could be a particle moving on a circular wire I don't want it to get off the circle so it's a little particle which is kind of a bead moving on the circle and what is the Symmetry the Symmetry is rotational invariance how do we describe the location of the particle well if we embed it in two-dimensional space then we could describe it by an X and a y
+
+00:08:05
+coordinate but as long as a particle can't get off the circle if it's only moving in the angular space then it's a little bit excessive to think about an X and A y-coordinate we can just think of a Theta coordinate or an angle that particle has a wave function here's the particle of here it has a wave function the wave function could be thought of as a function of X and Y but as I said that's excessive too much uh too many variables we can just think of it as s of theta the wave
+
+00:08:47
+function it's square or it times its absolute excuse me it times its complex conjugate Dei defines the probability to find particle on the circle what does the operation of rotation do let's say rotation uh counterclockwise rotation counterclockwise takes s to S of theta minus Epsilon where Epsilon is a small angle of rotation I constantly get confused about whether it's plus Epsilon or minus Epsilon I hope I have it right but if not don't worry about it it just means all of my signs will be
+
+00:09:34
+wrong okay so s goes to S of theta minus Epsilon or another way to say the same thing is that the change in s Epsilon of course is our um small number which is so small that its square is zero it's an infinite decimal number the change in s is equal to the derivative of s with respect to Theta time Epsilon I can rewrite that as- I Epsilon Time - I Epsilon minus I derivative of with respect to Theta now I've put those eyes in there because I want you to remember well let's think about ordinary momentum
+
+00:10:41
+ordinary momentum is um described by an operator which is minus i d by DX angular momentum is simply basically the same as momentum except the coordinate is angle instead of being linear position the operator minus i d by D Theta that's an operator it's a linear operator it's a Herm Mission operator the I is there to make it her Mission without the eye it would not be her mission one of those eyes be positive is one of the eyes what do I have a I think the minus I to minus I yeah I think it may be plus
+
+00:11:32
+let's see did I get it wrong no I I I actually had it right uh minus I had it right I had this this side was wrong yeah okay uh it's it's correct now okay but minus i d by D Theta is a Herm Mission operator you may want you may be surprised that there has to have a i in front of it for it to be her mission after all her mission is the analog among operators of as being real but I guarantee you that I has to be there go back in your notes to the study of momentum and you'll find out why that
+
+00:12:23
+eye has to be there and that's called the angular momentum that's usually denoted l y l don't know y l y p for momentum don't know why P for momentum but L is the angular momentum and so we can write that the change in s under the operation of infinite tmal rotation is governed by minus I times the action of the angular momentum operator on S that identifies according to the definitions of last week that identifies L as the generator of rotations if you can't remember the precise definition let's just say that
+
+00:13:24
+this is the definition of the generator of a symmetry object operation if the Symmetry operation is such that it has a version of it for arbitrarily small parameter in this case angle then the definition of the generator is just in terms of the small change in the wave function when you shift by an infinite decimal amount and that will just give you the generator don't I did lose an Epsilon right I did lose an Epsilon and this defines L and L is minus i d by D Theta okay and L is known as the angular
+
+00:14:14
+momentum now before I go on I want to put in some H bars uh I'll I'll surely drop them again but just to remind you where they go the precise definition including HS when we don't set H bar to one contains an har bar over here that's the same har bar that occurs in the momentum P = Min - I HR d by DX same HR and um it's a little bit arbitrary where we put it but putting it over here I guess we would say that the change in SI I Epsilon over H bar * l i probably here and there just to remind you and to
+
+00:15:09
+keep your uh to keep you awake I will put in h bars now and then every so often randomly okay what are the igen vectors of the angular momentum the igen vectors of the Ang and the igen values the igen values are the values are the possible outcomes of experiments and the igen vectors are the states of the system which for which those outcomes are certain all right to answer that we write the equation L on S that's the action of the angular momentum is equal to an igen value I'm going to call that
+
+00:16:02
+igen value M it's standard M * s now if I were doing it I would have put little L here but somebody did this long in the past M happens to stand for magnetic quantum number but uh that's a historical anachronism nevertheless the igen value of and let's let's add a little more to this picture let's put a z-axis in the z-axis comes out of the Blackboard so we're talking about rotations about the z-axis we could call this the Z component of the of the angular momentum it is the Z component of the angular
+
+00:16:47
+momentum for the moment I'm going to suppress that all right and M is the igen value of that angular momentum so strictly speaking it's the igen value of the Z component of angular momentum does it matter which axis is z and which axis is X or you rotate the home no it doesn't matter but it's convention okay how do we find the igen vectors in other words how do we find the wave functions that correspond to igen vectors and for that we just do the obvious thing we put in minus I HR d by
+
+00:17:24
+D Theta that's L acting on S of theta is equal to m s of theta that's a standard type of equation the derivative of something is proportional to that something else we could bring the IH bar over to the right hand side and that tells us that the igen vector with igen value m is equal to e to the i m Theta very similar to the case of ordinary momentum oops what do I have missing here I'm missing the har bar the har bar would go downstairs here because if you divide by H bar you see the thing that comes in is M over
+
+00:18:19
+har bar now unlike the case of ordinary linear momentum there's another constraint you know the other constraint I'm sure that most of you know it but let's spell it out anyway the other constraint is that when Theta is equal to 2i the wave function should be exactly what it was when Theta was equal to zero why because going around by 2 pi brings you back to the same point and so if there's a sensible wave function that sensible wave function should be unchanged if you go around the circle by
+
+00:19:01
+2 pi so that says that e to the i m over H bar * 2 pi well let's see first of all the wave function for Theta equal Z is just one if I set Theta equal to Zer this is just one if I go around by 2 pi the answer will be e to the i 2 pi m/ HR and that also has to be equal to one what's the constraint the constraint is that M over H bar has to be an integer in order to make sure that the wave function comes back to itself that it's single valued that it has a definite value at each point it's
+
+00:19:53
+necessary that the igen values M be integer multiples of plunk constant so let's write that out m is equal to an integer no yeah m is an integer time H bar but the usual notation usual definition is to set m equal to the integer just call M the integer and then the angular momentum the igen value of the angular momentum is an integer time H bar okay that's the quantization of angular momentum in units of har bar Hereafter for at least for a time being I will drop H and we'll just say that the angular
+
+00:20:52
+momentum must be equal to an integer angular momentum must be equal to an integer and that's a fundamental fact of quantum mechanics that uh we've known since the time of um of Neil's bore okay now I have H the following question for you must it be the case let's suppose there's some energy and let's suppose the energy depends on the angular momentum of course it does the energy the bigger the angular momentum the bigger the energy particles whipping around with a large angular momentum it has more energy than
+
+00:21:40
+if a small angular momentum so we expect that the angular momentum that the energy will depend on the angular momentum but must it be must it be that the angular moment that the energy of a state with angular momentum M that's the igen value must it be the same as the energy of a state with angular momentum minus M what's the difference between M and minus M well the only difference is that Ang positive angular momentum means the particle is going around the circle counterclockwise and negative angular
+
+00:22:30
+momentum means it's going around clockwise I'll take a vote how many people think that the energy must be the same for M and minus M of course I'll raise my hand too how many think it does not have to be the same I will also raise my hand question yeah um just when you start out side goes to side thus should I think that then that implies we're we're looking at it it's going in a clockwise Direction not telling you anything about the direction of motion of the particle it's only telling you
+
+00:23:09
+which way you counted the feder as positive it's just tell it's like telling you I've decided that the positive x-axis points that way that tells me nothing about whether I'm walking that way or I'm walking this way right it does it does set the definition of what you mean by positive and negative angular momentum but it does not tell you whether the system has positive or negative angular momentum okay art you raised your hand the second time you know an example where uh I was just thinking that you
+
+00:23:47
+know you could have a SYM an asymmetrical field somewhere okay right anybody know an example of a Sim of a field which would um lead to an asymmetry between positive and negative angular momentum or angular velocity magnetic field for electron yeah a magnetic field if there were a magnetic field that's exactly what magnetic fields do magnetic field for example magnetic field into the Blackboard will raise the energy a little bit maybe I I may have backward raise the energy a little bit of positive angular momentum and lower the
+
+00:24:33
+energy a little bit of negative angular momentum and it will break the degeneracy it'll break the degeneracy between M and minus M that's the language if you didn't have the magnetic field the energy levels would be degenerate in pairs angular momentum zero Ang would oh angular momentum zero would not be degenerate there's only one of them but angular momentum plus one and minus one would be degenerate angular momentum 2 and minus two would be degenerate in the presence of the magnetic field that
+
+00:25:09
+degeneracy is broken but that magnetic field does not violate in any way rotational invariance the magnetic field is pointing into the Blackboard it doesn't in any way violate the invariance with respect to rotation and so we see that um symmetry is itself not enough not this symmetry rotation Symmetry by itself is not enough to tell you that the energy levels are degenerate why am I even talking about it well you need to add if you add one more symmetry one more symmetry is enough to tell you that the energy levels have to
+
+00:25:55
+be degenerate the Symmetry is very simple it's not a continuous symmetry it's a discrete symmetry it's simply the discrete symmetry of reflection about one of the axes reflection about an axis is basically mirror reflection imagine you had a horizontal mirror here and any system Above The Mirror Has a mirror image below the mirror and if there's mirror symmetry it's not called mirror symmetry it's called reflection symmetry I'm going to call it mirror symmetry and use the notation M to
+
+00:26:38
+describe that symmetry the reason is I don't want to use R for reflection because I don't want you to confuse it with rotation so M Big M big m stands for reflection about a mirror and in particular we could imagine the mirror is oriented along the the x axis of course the mirror is two-dimensional but in in uh in this situation along the XZ plane but we don't have to think about Z we just have a mirror and the mirror image of I don't know if I can draw the mirror image of that I don't think I
+
+00:27:27
+can did I get that right maybe not I don't know the the mirror image of this is this okay all right if there is not mirror symmetry in a problem then a configuration like this whatever it happens to be I don't know what it is it's a couple of building blocks or something uh the energy of this does not have to be the same as the energy of that if there is if the Symmetry if there is no mirror symmetry in the system but if there is mirror symmetry it means that the description of this
+
+00:28:17
+and the description of this are indistinguishable and that they must have the same energy so let's add mirror symmetry to rotation Symmetry and see what we buy from it well we will certainly find that the energy levels of the energy levels e of M must be the same as e of minus M why is that let's think about in the upper half plane here let's think of a circular motion moving counterclockwise what's the mirror image of that that's a circular motion moving clockwise so the mirror image of
+
+00:29:05
+a particle moving with positive angular momentum is a particle moving with negative angular momentum and if the world or our system has such a mirror symmetry such a reflection symmetry then it means that the energies of the same of the two states must be exactly the same there we have an example where rotation symmetry which tells you that the energy levels depend on the energy in a well that that they depend on the angular momentum and that the angular momentum is conserved the added ingredient is the
+
+00:29:41
+mirror symmetry which tells you that the energy levels have to be degenerate so that's a case in which two symmetries combined tells you that there have to be degenerate energy levels question yes if we if the position of the particle is determined by the probability IE by the square of the S we look at s uh which and think of the more expression with the cosine and we change M to minus M uh and you do the algebra at least it seems that I in my head but it seems like the sign goes away and you're left with the same number so in a
+
+00:30:24
+way replacing M with minus M algebraically will show that it is a same same probability meaning it's uh they're equal the energies are equal is that not a good way to look at it it's just wrong um a function of theta is not the same as a function of minus Theta for example here's a function of theta the probability is concentrated over here here's a corresponding function of minus Theta the it's over here they're not the same thing also e to the I Theta is or e to the i m Theta is not the same is e to
+
+00:31:14
+the minus I in Theta but the square yes yes yes but we don't but that's right but the square this is the equation for the igen vectors of Sai or the igen vectors of angular momentum it involves s it doesn't involve SAR s yeah that's the whole point of quantum mechanics we have to work with wave functions not probabilities so is it the case that um miror symmetry guaranteed degeneracy in any situation no no no it doesn't it doesn't in itself it what's necessary is to have two
+
+00:32:09
+symmetries and one more condition that the two symmetries don't commute with each other that the Symmetry operations for the two symmetries don't commute with each other I'm going to let you prove that that if symmetries don't commute with each other that it implies degeneracy it's not hard to prove but I'm going to show you how it works in a couple of examples that's any two symmetry any two symmetries if they don't Comm commute with each other so let's ask whether rotation
+
+00:32:42
+Symmetry and reflection symmetry incidentally um the term mirror symmetry happens to have another meaning in physics it's a very fancy uh term very mathematical term that applies to certain manifolds and string theory don't get confused by it it's a completely different concept I just use mirror to represent the reflection in space yeah the miror Symmetry the magne yes very interesting good good point yeah the mirror symmetry of a magnetic field the mirror inversion of a magnetic field is a magnetic field pointing in
+
+00:33:21
+the other direction if you take a a um magnetic field pointing into into the Blackboard and you reflect the configuration about a uh plane like this what you get is a configuration with the magnetic field coming out of the Blackboard this is because magnetic field is an axial Vector okay you can see it another way magnetic fields are made by currents current let's let's not imagine that the magnetic field is there let's instead imagine that the magnetic field is being made by a current going this
+
+00:34:07
+way a current going around in a loop like this it could be going around a solenoid we could be talking about a solenoid into the Blackboard with the current going clockwise that creates a magnetic field going into the Blackboard on the lower half plane the mirror image of that is a solenoid in which the current is going in the opposite direction and because the current is going in the opposite direction it makes a magnetic field pointing out of the Blackboard so yes the um the mirror inversion of a magnetic
+
+00:34:44
+field is not the same magnetic field so I think you foresaw that that had to be the case if uh if um yeah okay all right let's ask let's ask the mathematical let's go through the mathematics now of showing that reflection mirror reflection does not commute with rotation and we'll do that by showing that the generator of rotation doesn't commute with the action of the reflection operator we need to figure out what the reflection operator does okay the reflection operator will
+
+00:35:27
+call M for Mirror it takes any wave function and replaces it I shouldn't write Arrow I should write equals and replaces it by wave function of minus Theta reflection about the horizontal axis just takes Theta to minus Theta so any wave function when you reflect it goes the S of minus Theta okay and in particular if you apply it to e well all right we'll do it in a minute now let's consider the commutator of the mirror symmetry transformation with the angular momentum the angular momentum is just a version
+
+00:36:16
+of a rotation operator for very small rotation let's consider the commutator okay what the commutator is telling us about is what happens if we do the two operations in opposite order a rotation about an axis and a reflection versus a reflection and a rotation about the same axis are they the same operations rotating about an axis and then reflecting is that the same as reflecting and then rotating okay the answer is obviously no well if it's not obvious to you think about it but we'll
+
+00:36:52
+work it out by doing the mathematical commutator and seeing what we get let's look at the commutator of M with L we know what L does here it is it differentiates with respect to Theta what does m do it reflects Theta so we can figure out what the commutator does we can figure out what it does when it acts on a wave function I'm going to act on a particular wave function I'm going to act on the wave function e to the i m Theta a igen vector of the angular momentum I'm leaving H bar out of it we don't
+
+00:37:34
+need it and don't confuse Big M with little M Little M and Big M have nothing to do with each other this stands for Mirror this stands for magnetic quantum number okay let's see if we can work it out let's first do ml * e to the I IM Theta what does l do when it hits e to the I IM Theta brings an M down it brings an M down right it just brings an M down so this gives us M * little m e to the I Theta and what does capital M do when it hits e to the I IM Theta it just changes the sign of
+
+00:38:25
+theta incidentally once this is just a number it doesn't matter which order Big M and Little M appear and so this is just equal to Little M time eus I M Theta the Big M just reflected Theta okay let's do it in the opposite order l m e to the I Theta now in the opposite order first M acts and that gives us L when M acts it changes the S of theta and gives us e to Theus I IM Theta but what happens when L hits e to the minus I Theta anybody got a good idea it brings down a minus M by reflecting we've changed the sign
+
+00:39:29
+of the angular momentum so the angular momentum operator gives us the minus of what it gave before it gives us minus m eus i IM Theta so the answer is that M and L angular momentum and the reflection operator don't commute with each other that's the key to whether or not symmetries um whether or not symmetries create degeneracies of energy levels we've seen in this case that two symmetries rotational symmetry together with reflection symmetry tell us that there are degeneracies of the energy levels
+
+00:40:17
+that M and minus M have to have the same energy that's a pattern it's also a theorem but um we'll I don't think we'll do the theorem right now so does does this mean that any Heisenberg pair generates DeGeneres um a Heisenberg pair like X and P well the problem is that X andp are not conserved right and they're not symmetries in themselves in this in the case of um in the case of a particle not having a magnetic field then angular momentum rotation and reflection are both symmetries they both
+
+00:41:02
+commute with a hamiltonian they both um they both are conserved X and P are typically and generally not uh not conserved if they were then the answer would be yes then the answer would be yes yeah okay we're going to study an example in in some detail tonight I think we'll get through it oh let's well let's let's just uh write down just some formal observations of what I mean supposing you have two symmetries now what does it mean to have a symmetry let's call the two symmetries
+
+00:41:43
+A and B the A and B stand for operators operators that act on the state vectors they could stand for infinitesimal generators or they could stand for the full um operation of the symmetry A and B let's say they refer to the generators let's take the case of where there are small versions of the uh of the Transformations then to say the symmetries means that both of them commute with a hamiltonian it does not in itself say that a commutes with b and in general here's an example where they
+
+00:42:35
+didn't commutator of a with B may be nonzero and there are two possibilities both possibilities will lead to degeneracies but let's think of two possibilities in one possibility the commutator of A and B may be a itself it may be B itself or it may maybe some linear combination of A and B that does not lead to a new symmetry it just it doesn't lead to a new operator it just leads to a linear combination of the old ones but let's suppose that it leads to a genuinely new operator that cannot be
+
+00:43:15
+written as a linear combination of A and B let's call it C okay first theorem theorem it's not hard it's not a theorem it's hardly a theorem C also commutes with h how do I know um let's put an i in here why am I putting an i in there the commutator of two Herm Mission operators is not Herm Mission it's anti-mission it's like the commutator of X and P is I if you want the hermiss operator you have to put an i here so let's suppose that c is the commutator of A and B except with an extra r
+
+00:43:58
+then C is a Herm Mission operator and let me show you why it's conserved it's conserved for a trivial reason let's think about the commutator of C with h that's AB H minus H AB right AB is equal to C apart from a factor of I so the commutator of C with a H is proportional to abh minus H but now all we have to do is say look we know that b commutes with h that's an assumption that means that we can move B to the other side once we've moved B to the other side we know that a commutes
+
+00:44:44
+with h that's also an assumption so we can move a to the other side and that of course is equal to zero so if a and b both commute to the hamiltonian then the commutator of uh of A and B also commute with a hamiltonian in fact the product A and B commute with a hamiltonian but the reason we don't consider the commutator is because the sorry the product of A and B commute with a hamiltonian certainly the commutator does okay uh I'm not so interested in the product because it's not generally
+
+00:45:27
+her Miss it's the commutator which is her Mission so there's an example where given two symmetries if they don't commute you generate a third Symmetry and it might be an independent one might be a new thing all right once you have a and b and c you can play the game again commute C with A and B see what you get you may get something that just reproduced es or that's just a linear combination of the three that you started with or you may get something new you may get D you keep doing this and doing this and
+
+00:46:07
+doing this until you don't get something new you might never end you might get an infinite number of different symmetries that's rare and that's unusual and it's bizarre or it will close eventually and you'll have some finite number of symmetry R trees which are all independent of each other and which form a kind of closed system when you commute them when you commute the generators question yeah I just to make sure I understand your argument what you showed was that uh if you have a and b
+
+00:46:47
+that commute with h then the product a commutes with it does and and then since the commutator of a is just a minus ba that you'll get the commentation yeah right So eventually if you have a few symmetries you can start commuting them and commuting them among themselves being guaranteed that what you get is another symmetry which may be just a trivial superposition of the of the original ones or it may be something new if it's something new good put it into your uh list and commute it some more
+
+00:47:28
+eventually you'll either run out of them or you won't but I'm particularly interested in the situations where you run out and then you have what is called a commutator algebra the commutator algebra includes the commutators of all the symmetries and it includes the commutation relations with the hamiltonian which just say zero when you're in that situation whenever that happens you have a great deal of power over the system to be able to say a lot about the nature of the energy levels and degeneracies among
+
+00:48:04
+[Music] them okay so that's that's the general oh what is what is such a structure called the the collection of symmetry operations a group this is a symmetry group this is a symmetry group why why do we care that uh these two things are degenerate what why do we care that it's degenerate or not it would certainly be important if for example we wanted to know if from one state you could emit a photon and go down to the other state can't do it if the energies are the same we want to classify the energy
+
+00:48:46
+levels of systems why because we're spectroscopists and we want to study the spectroscopy of uh of atoms oh a spectroscopist and we want to study the way um hadrons excited states of hadrons emit pons or whatever same rules so the commut the elements of so each of these commutators would be an element of this symmetry well the these things themselves these these I imagined were generators the generators form an algebra a commutator algebra Lee algebra the Gen the the symmetries themselves which are built up from the generators
+
+00:49:34
+by applying small Transformations repeatedly those are the group elements but we're going to mainly work with the uh with the generators the generators have a lot of power the algebra of them aat comination yeah they're all they're all yep right they're all now you can have a situation where you may have many symmetries but they commute with each other that can happen uh then you don't get then you don't get anything terribly interesting you just have separate symmetries that
+
+00:50:10
+commute with each other symmetries of that kind are called ailion a bilion means everything commutes with everything else when there are nonzero commutators between symmetry generators it's called nonilon is there any fun the definition of a generator again a generator of a symmetry is if you take the Symmetry operations and you unitary symmetry operations and you consider the case of a symmetry operation very close to the identity in the case of rotations it means a rotation by a very small angle and you
+
+00:50:50
+write it in the form one I can never remember I think it's minus i g * eps on then G is called the generator okay you can build up if you know the generator that allows you to make a small rotation if you keep doing small rotations repeatedly about a given axis you'll eventually build up a whole rotation I mean a finite rotation so the generators contain basically all the interesting information about the group well almost is there any fundamental difference between a b and then C or D no so we could have started with b and c
+
+00:51:34
+and then a yeah well maybe yes maybe no you might take B and C and you might not get a you might get D you might or you might get a plus b if you got a plus b then it wouldn't be anything new you might get a plus b plus C back again it still wouldn't be anything new but if you got something new D which was not among your previous list then you have a genuinely new symmetry question yeah um could you please repeat what you said about what's an algebra that's not a question that's a direct
+
+00:52:21
+story what what did you ask me no what did you tell me what do you what did you request me you said something was an algebra and I want first of all I want to know what it is the algebra and what is what is the the algebra is the collection of generators you can add them they are still generators you can subtract them you can even multiply them by ordinary numbers and you can commute them so Comm commuting is is product in that algebra that's correct okay commuting is a product in that algebra and albra is a
+
+00:52:57
+thing is a collection of elements that you can add you can multiply by numbers and you can multiply sorry and you can multiply by each other in this algebra multiplication is commutation that's correct that's correct okay so we'd like an example not only we like an example we would like the preeminent most important example and that is angular momentum and rotation about different axes as an example of what I'm talking about here we can consider rotation about the x-axis which way is the x-axis
+
+00:53:37
+that way I guess rotation about the x-axis rotation about the y axis and if you think about it then you probably know this I can never do this I'm not going to try it but you know if you do rotate about the x-axis then rotate about the y axis by the right amount what you get is a rotation about the z-axis what's more if you rotate a little bit about the x- axis and then a little bit about the Y AIS no a little bit about the x-axis and then a little bit about the y- axis it's not the same as rotating a
+
+00:54:10
+little bit about the y- axis first and then about the x-axis they don't commute with each other we're going to show that we're going to show that by studying the commutation relations of the angular momentum you look puzzled I'm puzzled because I know that that's true for finite rotations but I thought somehow that infinitesimal rotations infinite okay they don't commute the second order in the small numbers yeah uh that's enough that's enough but the group but the remember these
+
+00:54:46
+generators have the small numbers factored out of them and they don't commute they really don't commute okay we're going to we're going to work out an example in detail we we do it right now the example is the three components of angular momentum the three components of angular momentum form a the three comp rotations about any axis form a group but for our purposes now we've not concentrating on groups the angular momentum generators form a Lee algebra a commutator algebra that simply means
+
+00:55:21
+that the commutators of components of the angular momenta give you other components of the angular moment momentum and we'll work that out but first let's uh talk a little bit about classical angular momentum for a minute just to to understand the corresponding classical concept uh okay we can do this okay let's imagine a planetary orbit for my purpose now it can be a circular orbit it's orbiting about an axis and it has an angular momentum which is perpendicular to the orbit I could be
+
+00:56:07
+LZ it has a certain energy e question at a classical level is that energy level degenerate the meaning of that is is there another orbit with exactly the same energy of course there's a many other orbits with exactly the same energy but in particular there's some that you can easily prove have the same energy because of rotational invariance all you have to do is rotate this about an axis let's rotate it about the Y AIS take this configuration rotate it about the y axis it's a new
+
+00:56:55
+configuration and the angular momentum has changed oops Yeah I guess that's okay I guess what did I do I don't like my picture my picture this is in the wrong place it should be coming from here there's LZ and now there's a change in L it's picked up an X component yes in fact it's picked up an X component and so because of rotation about the Y AIS rotation about the y axis has not only given us another configuration with the same energy but it's going given us a configuration with
+
+00:57:42
+a shift of the angular momentum and in particular a shift of the X component of the angular momentum classically that's an indication that Quantum mechanically the components of angular momentum don't commute and a rotation by one a rotation of a component of an angular momentum about a different axis changes the angular momentum about the third axis that uh has a great deal to do with the commutation relations of rotations but we'll work it out in detail so here's an example classical
+
+00:58:18
+physics just at the classical level the combination of rotation and variance rotation and variance the combination of the different rotation and variances about different axes tells us unequivocally that there must be degeneracy of the orbits that there must be orbits with the same energy uh with rotated angular momentum that's that's the basic idea classically so let's go through it quantum mechanically the first thing we have to do is understand the angular momentum generators better so let's come back to the angular
+
+00:58:55
+momentum generators they form previously I just said minus i d by D Theta but let's let's work them out not assuming that a particle is moving on a circle but that a particle could be moving in three dimensions in fact it doesn't even really have to be a particle but let it be a particle a particle moving in three dimensions first before we do three dimensions let's do two dimensions particle moving in the XY plane not restricted to a circle and let's ask what's the generator of rotation now it's not ID
+
+00:59:36
+well may be ID by D Theta but we can represent it in terms of the XY coordinates all right so here's the position of the particle let's say let's suppose we rotate the the configuration rotating the configuration whatever it happens to be means whatever the particle is or whatever the wave function of it is shift it so if the particle was at Point XY it moves to a new to a new Point what's the new point the new point is given if the old point was given by XY then the new point is shifted by an
+
+01:00:15
+amount Delta X and Delta y I'm assuming that the angle is small and let's call the angle Epsilon let's call the angle Epsilon then what is Delta X and Delta y I'll leave it to you to prove this is this is a very simple exercise it's just simple geometry for a small Epsilon can anybody tell me what Delta X is it's of course proportional to Epsilon minus y if Y is positive and you wrot rotate the change in X is negative so it's got to be minus and it's proportional to
+
+01:01:04
+y what about my Delta y That's Epsilon * X okay now let's consider a wave function s of X and Y what is the change in the wave function if you reconfigure the the system by rotation it's equal to the derivative of s with respect to x times the change in X plus the derivative of s with respect to Y times the change in y if I shift the wave function but Delta X is minus Epsilon * y minus Epsilon * Y and this is plus Epsilon * X that's the change in the wave function and of course this must
+
+01:02:19
+be by definition I guess it's l subz time s so oh EP I Epsilon I Epsilon time LZ now it's much too late in the evening for me to follow the signs so I won't I'll leave the signs for you to uh to figure out yourself but uh it has this form but what is the side by DX in quantum mechanics I * PX so this is another factor of I and this is y * PX did it matter which order I put down Y and PX here do they commute yeah y commutes with PX X doesn't commute with PX y doesn't commute with py but x commutes with
+
+01:03:28
+py what about this one this one is plus I times x py all times all right apart from a sign which I said I wouldn't try to track in any detail it's quite clear what the correspondence between the Z component of the angular momentum the generator of rotations and the coordinates and momenta of the particle R LZ is to be identified with X pyus Y PX and now I do have this is the right sign I lost track of the sign but this is the correct sign have you seen that before that's the component of R cross P
+
+01:04:43
+the standard three-dimensional angular momentum R cross P so now we see a new interpretation of R cross P not just um the mechanical angular momentum from classical physics but it now has the role of the thing which generates small rotations by acting on the wave function okay what about the other components of angular momentum you can read them off just by cycling by cycling through the XY z x goes to y y goes to z z goes to X all right so going through it Z goes to x x goes to y y goes to Z minus Z
+
+01:05:35
+py and LX XYZ py pz PX minus xpy these of course you could confirm by doing by imagining rotations about the other axes but just just by you know just by the um parallel reasoning this is what you would get questions pz oh you're right pz I have two different notations for Z don't I yeah wait a minute which one which one l y good thank you l y good good good good good okay these are the these are are they symmetries well they're symmetries if the system is rotationally invariant why well because rotating a system
+
+01:06:46
+shouldn't change the hamiltonian so we expect we fully expect that if we have a system with rotational invariance then these should commute with a hamiltonian and typically they do they do in fact they always do if the system has invariance um what kind of systems have rotational invariance well the a very particular system is a particle moving in a central force field a particle moving in a central force field will have rotational invariance and therefore for that kind of system the commutator of L x with h
+
+01:07:27
+equals z and in fact all three of them elab one 12 and 3 or X Y and Z they all commute with the hamiltonian and they're all conserved and this is just good old angular momentum conservation except in a Quantum uh guys next question do they commute with each other suppose all we had was LX and ly that's all we knew about it LX and l y why we only knew about LX and l y I don't know our mothers only told us about X and Y uh would we discover LZ that LZ is another symmetry well our mothers only told us
+
+01:08:14
+about X and Y but they also told us about commuting the generators of Le groups so mom tells us look commute LX and ly and see what you get let's commute LX and ly and see what we get okay I what do we need to do we need to know the commutation relations between X Y and Z on the one hand and PX py and pz on the other hand the rule I'll write it over here uh any x with Y or Z or anything like that is always equal to zero x with itself is equal to zero x with Y X with Z is equal to zero they commute P's commute with each other
+
+01:09:04
+PX py and pz all commute with each other which things don't commute the things that don't commute are X with PX and that's equal to I strictly I * H bar same with y y with py is I and Z with pz is I I won't write it down how about x with py that commutes multiplication by X and d and differentiation with respect to Y commute with each other and you can check that okay so let's calculate the commutator of LX with l y That's the commutator of ypz minus zpy comma comma for commutator
+
+01:10:06
+zpx minus xpz now I'm not going to go through the rules for commutators if you remember them you don't but I'll just but it's it's it's by inspection you can more oress see what to do who in this side doesn't commute with who on this this side it's a commutator of this thing with this thing what on this side doesn't commute with something on this side well y commutes with z y commutes with PX and so forth but pz does not commute with Z so there's two things which don't
+
+01:10:44
+commute and let's see over here Z doesn't commute with pz with pz those are the only common combinations if we were to expand this out the only combinations which don't commute are pz did I get it with z and Z did I get that right zpx - x no no what have I written here what am I doing I'm commuting LX that looks right ypz minus zpy with ly which is zpx minus xpz yeah that's right yeah okay okay all right from this term over here you get a commutator of pz with Z what's the commutator of pz with
+
+01:11:54
+z I minus I minus I so there's a minus I and that gets rid of pz and z and you left over with Y times no y sorry left over that gets rid of Z with pz and that leaves over Y and PX from this with this you get y * PX does it matter which order you write down Y and PX no okay so there's minus i y * PX and then there's the other one which is commutator of Z with pz is again I and now we get plus I xpy I believe yeah x * py where is it i' ah x * py from here which is our friend I time l
+
+01:13:10
+z so this is an example of commuting generators and discovering new generators not a big surprise but nevertheless we see it before our eyes and so now we can write write down the general list of commutation relations notice that by commuting two angular momentum we got a third one there's only three there's no way we're going to get more than three generators out of this sequence of commutations and so the Lee algebra is just going to be the Lee algebra of the three components of the angular momentum
+
+01:13:47
+Let's uh let's write it down this one says that l l x with l y equals I LZ and then the trick is always the same just cycle L L equal I L L L = I L brackets brackets comma x y z y y z x z x y those are our basic commutation relations of angular momentum if you continue commuting you won't get anything new so we've discovered a genuine Le algebra yeah generated LC don't you have to prove that it's not your combination of LX and L well you oh you want to you you want to prove that LZ is not a linear com
+
+01:15:05
+yeah I suppose we do um but yeah I think we can prove that let's see what can we do um let me not answer that right now it gets me off track they should be Let's uh let's come back to it I it should be very easy I don't want to get I don't want to get my head uh confused of course the Z component of the angular momentum is not likely to be a linear combination of X and Y components but yes you're right you're right we do have the obligation of showing that LZ um is not you know what I think we
+
+01:15:56
+can probably show that LZ from these commutation relations I believe we could show that LZ does not commute with any linear combination of LX and ly if uh if LZ was a linear combination of LX and l y it would commute with that linear combination I think we can prove ital what does that mean LC isal what does that mean lar combination what does it mean that the Alex is yes they are components they are perpendicular components of some three-dimensional Vector R cross P but I don't want to use that I think the right
+
+01:16:41
+thing to do is exactly as this uh gentleman said is to directly prove algebraically that LZ is not a linear combination of of the others and I think I think we can prove that but yeah algebra what's that what do you mean by a algebra another algebra a Lee algebra is an algebra where the rule for multiplication is commutation okay that's what it means that's that's but don't worry about the name the name is just it just it's it's a collection of objects whose commutation relations close a collection
+
+01:17:22
+of objects when you keep commuting them you don't get new ones that's called the Le algebra and um it's just a name Lee of course was a mathematician and I don't know was algebra a mathematician it might have been I don't know alab yeah I think he was alra what's that Arabic word isn't it what's that algebra is an Arabic word I think it's an Arabic word yeah I think it was I think I have a feeling his name was just Al jaabir but I'm not sure I I I remember
+
+01:18:11
+reading that but maybe I don't remember reading it okay so where are we we have this nice collection of algebraic relations including three more but I'll just write them as one more the commutator of any component of L with the hamiltonian is equal to zero which means that the three components of angular momentum are conserved okay what can we do with that well a lot this is a good time to remember what we learned about the harmonic oscillator by having a similar kind of algebraic structure the similar kind of algebraic
+
+01:19:10
+structure that we had were the commutation relations of creation operators Annihilation operators and the number operator we had closed commutation relations of a very similar kind not exactly the same kind but closed commutation relations and they were quite powerful we deduced the entire spectrum of the harmonic oscillator we did it from constructing creation and Annihilation operators it was much easier than solving any schinger equation we're going to do the same thing here we're going to construct
+
+01:19:50
+creation and Annihilation operators but the creation and Annihilation operators are not going to change the energy what they're going to change is the Z component of angular momentum now why do I pick the Z component of angular momentum that's arbitrary remember in quantum mechanics if you want to actually work with things you usually have to pick a basis you usually have to pick a a uh a preferred set of operators which uh you regard as um as defining a basis often it doesn't matter there the
+
+01:20:30
+X basis or the X representation not a basis a representation in quantum mechanics of a particle is the position representation there's the momentum representation in studying spins we had the sigma Z representation and the sigma X representation and so forth it really doesn't matter for the purposes of the invariant physics which basis you use use but it's common to pick one and work with it and keep with it we're going to do the same thing here we're going to pick out the Z component
+
+01:21:03
+of angular momentum uh to focus on there's there's nothing special about it we could have picked the X and we could have picked the Y but it's useful to pick the Z component no more useful than X and Y but let's do it okay so we're going to work with the Z component of angular momentum as and its igen vectors we're going to work with Z component of the angular momentum and its igen vectors and see what we can find out about the entire um Spectrum okay LZ has igen vectors it's a Herm
+
+01:21:51
+Mission operator how many it has I don't know we'll find out as we go along and let's call the igen value of LZ Little M it's the same igen value of the same notation that I used in two dimensions in two Dimensions where there was only the Z component of angular momentum I call the igen values M and I'll continue to do that again it's a historical notation it had to do with putting atoms in magnetic field you put an atom in a magnetic field and you study its spectroscopy and arbitrarily the Z
+
+01:22:34
+Direction was chosen for the direction of the magnetic field and the angular momentum about the z-axis was called the magnetic quantum number but uh for our purposes now m is just an igen value of L subz this is the equation that says that the igen vector m is an igen Vector of L subz with igen value Little M sort of redundant notation I've used the same notation for the igen vector and the igen value and here's where mathematicians go crazy because they don't like you to use the same notation
+
+01:23:08
+for two things um but we'll do it anyway okay so that's the that's and what we want to find out is what are the possible values of n M the possible values of M will be exactly the same as the possible Von values of L subx and L suby because there's nothing special about L subz but nevertheless let's see what we can find out now in the case of the harmonic oscillator we figured stuff out by inventing creation and Annihilation operators or operators which raised and lowered the energy we're now going to
+
+01:23:50
+invent operators which raise and lower m they raise and lower the magnetic quantum number and how do you do it you do it in a way very similar to the harmonic oscillator question yeah when you refer to we did the harmonic oscillator you talked about theal harmonic ill we did or the or the uh the quantum harmonic oscillator okay we never did that we didn't we didn't do that not in the class not not in the last class but it's in the book and there is and there is a video that covers it o somewhere
+
+01:24:25
+back in history oh we didn't we never did the harmonic oscillator okay in that case we'll come back to the harmonic oscillator and instead of telling you how much this is like the harmonic oscillator I will tell you how much the harmonic oscillator is like angular momentum good we this is self-contained it doesn't require us to no I thought that was one of your main motivations for this for the second course because you said Gee we didn't get to cover the harmonic isolator I forgotten well it's in our book but
+
+01:25:03
+uh is I'll set the link out the video the book onemail okay do not worry about the harmonic oscillator now it's much more complicated than this so we've picked out LZ as a little bit special not physically but mathematically for our purposes and let's invent operators LX Plus i l y and also LX minus i l y and call them l+ and L minus and what I want to figure out is the commutation relations of l+ and L minus with LZ for the moment I don't really care too much about the commutator of l+ with
+
+01:26:04
+L minus I'll tell you now it's LZ but um that's not so important what I want is the commutation relations of l+ with L minus so how do we get them well um we're going to get them from the last two of these equations let's rewrite them let's see how do I write them LX with LZ that's this one over here I've changed the order of x and z so that's minus i l y do I have that right yeah that's this one over here and since I changed the order of x and z that changes the sign then there's
+
+01:27:05
+the other one commutator of l y with LZ and that is or I ly with LZ we have to do a little bit of work here's l y with LZ multiply it by I and we get at minus LX and now we're just going to add and subtract these two equations adding and subtracting them will give us the commutation relations between l+ and L minus on the one hand and LZ minus LX yeah okay we add them and subtract them if we add them we get l+ commuted with LZ and if we subtract them we get L minus we do the summation on this side
+
+01:28:01
+also and here's what we get I'll just write it out we don't need to belabor it the commutator of l+ with LZ is - l+ and the commutator of L minus with LZ is L minus not minus L minus but plus L minus L minus those are the two basic commutation relations that follow from these now I understand this is very abstract how did anybody know to do this well um I'm not even sure who did it it's probably Direct D had a weird mind and uh he uh and he liked to commute he didn't live in the Bay
+
+01:29:12
+Area I can't tell you exactly why he did this but uh but you know once you do it you say wow okay that's that's very clever so this is just another way of writing Le algebra it's probably true that commutator of l+ with L minus is LZ uh you can or maybe twice LZ you can work that out but we won't use it okay now what I'm going to prove is the following very interesting little theorem supposing we have an igen Vector of M of LZ supposing we have one we found one somehow now I'm going to show you how to
+
+01:29:53
+find another one with a different igen value okay we're going to do it by applying one of these equations which one are we going to do l+ let's do l+ we're going to take this equation for l+ and multiply it by the igen vector M by this little igen Vector M so let's work work work it out l+ L minus sorry l+ LZ minus LZ l+ that's the commutator acting on the vector m is equal to minus l+ acting on the vector M okay so what do we know let's take this first term well okay let's take this
+
+01:30:58
+first term here on the left what does LZ do when it hits M multiplies by m that's because m is an igen Vector of LZ so the first term becomes M time L + m I'm going to take l+ and M and I'm going to put them in a red circle because I want you to think of it as a unit now let's add this over to the left side here we're going to take this term and move it to the right and we're going to take this one and move it to the left so let's take this one and move it over to the left that will give us
+
+01:31:51
+plus l+ m that's also exactly the same thing that appears in the red circle so what do we get we get m + 1 times the object in the red circle let's just draw a red circle there that's the left hand side with this term transposed to the left now let's transpose the other term to the right that's equal to LZ time l+ M but l+ m is again exactly the thing in the red circle thing in the red circle is a certain K Vector so what does it say this says that there's another igen Vector of
+
+01:32:53
+LZ this equation is an igen vector equation for LZ LZ acting on the red igen Vector gives us m+ one times the red igen Vector what does this mean it means we've discovered another igen Vector of LZ with igen value m + one we can call the thing in the Red Bracket here we can just call it the igen vector M +1 we found a trick for taking any en Vector of LZ and promoting it lifting it up one unit and increasing the igen value by one unit what about if we did the same thing with L minus if we did the same thing with L
+
+01:33:45
+minus we would again discover another igen Vector with one lower unit so we've used the simple algebra of commutators to generate a spectrum a spectrum of values of LZ and much more they're separated by an integer they're separated by integers so we've discovered the following fact that if we plot on the vertical axis here the possible values the values of M or LZ LZ the possible values of LZ if we find one at some value of M oh let's let's first of all let's um let's put some let's lay some
+
+01:34:36
+integers down 0 1 2 3 0 -1 - 2 - 3 Let's suppose we found an igen Vector an igen value of M nothing has told us it must be an integer so it could be anywhere it could be over here it could be at 3/4 or it could be at 78 or it could be Pi quarters or it could be a half it could be anywhere not over here let's put it over here then just one question I thought the M was the way it was defined it had to be an integer going all the way back in fact we're going to find it has to be yeah you're right you're right except
+
+01:35:27
+not quite oh what I mean is I thought you already said that yeah we could go back to what I said earlier and use that I don't want to I don't want to because I want to show you another argument for it now the other argument will not prove it's an integer it'll prove something a little bit looser and the looser fact is in fact the correct fact but we'll see all right so the first thing is we know that there's got to be another one above it one unit above it and another one one
+
+01:36:01
+unit below it now there's one exception to this statement that when we apply l+ we will necessarily get a new igen Vector with one unit up what's the other alternative possibility Z that you get zero that you get just plain zero no Vector at all so this could terminate conceivably it could terminate I wish I had a green pen I don't it could terminate somewhere let's say it terminates here and by the same logic it could terminate from below if L minus killed the vector so we will generate a
+
+01:36:49
+family which may or may not also terminate somewhere now the first thing which is true is there a Rel if it terminates if it terminates then there's a relationship about where it terminates from above and below and the reason is very simple m is the igen value of LZ remember we have rotation invariance supposing I Ed my rotation invariance to completely rotate by 18 80° if I rotate by 180° then LZ becomes minus LZ if there's really rotational symmetry then it must mean the Spectrum the possible igen values of LZ must be the
+
+01:37:41
+same as the igen values of minus LZ it's just looking at the same system except standing on your head and if there's rotation and variance you should get exactly the same Spectrum so so from that you can conclude that this Red Dot and this red dot have to be symmetrically placed there's only two possibilities if the red dots are symmetrically placed and these are and these are separated by integers then there's only two possibilities the first possibility is that the Red Dot is at an
+
+01:38:21
+integer let's call this this is the integer M and zero 1 2 3 1 2 3 down here symmetrically replac symmetrically placed about the origin and separated by integers that would be one one possible Spectrum 1 2 3 0 1 2 3 if it terminates there's another possibility and the other possibility that still is consistent with a symmetric spectrum and Separation by integers and that's the half integer option is zero again one two whatever whatever start here shift by an integer Shi shift by an integer shift by an
+
+01:39:26
+integer let's see here's zero 1 2 3 1 2 3 and it's also symmetrically placed about the origin in this spectrum over here if it's physically reasonable the values of the angular momentum the Z component of the angular momentum are half integers half integer three Hales 5 Hales minus a half - 3- five halves ending somewhere or the other possibility is integer Spectrum now you mentioned before that uh that I'd already sort of proved that uh that the spectrum is integer and I did somebody mentioned you okay and
+
+01:40:12
+that's correct that is correct for orbital angular momentum orbital angular momentum means R cross P it means wave functions of particles that depend on position and how do we prove that you remember how we proved it oh we proved it by saying the wave function has to be single valued when you go around when you go all the ways around okay so on the face of it it would seem that this is the only physical possibility in fact this possibility here is also real and it corresponds to spin angular momentum but for the time
+
+01:40:50
+being let's just get rid of it we'll come back to it all right there's a Max given a state like this we can generate a few more it may or may not terminate but let's assume it terminates we found a multiplet of States a multiplet of states which are in some way related to each other and which have to have the same energy why do they have to have the same energy let's prove they have the same energy and then we'll quit that'll be enough for tonight let's prove one more
+
+01:41:38
+thing they have to have the same energy let's suppose that we found the state M and it has an energy equal to e * m it's an igen Vector of the energy it has L subz equal to M and it has energy e now let's go to m + 1 m + 1 is l+ * m that's M +1 and let's ask what its energy is so what do we do we apply the hamiltonian to it and see what we get okay but the hamiltonian commutes it's assumed that the hamiltonian commutes with all the components of the angular momentum so that means we can write that
+
+01:42:44
+this is the same as l+ H * m but H * m m is just e * m what does this equation say it says h on M +1 that's l+ on M is equal to e * n + 1 we can do the same thing with n minus one that tells us that if we find an igen Vector of the angle of the Z component of angle momentum which happens also to be an igen Vector of energy then by raising and lowering until we run out of possibilities until we run out of until we hit the end points we create states of exactly the same energy this is the idea of degeneracy
+
+01:43:44
+following from symmetry when symmetries don't commute with each other this is what we talked about in the beginning when symmetries don't commute with each each other the L's in this case it tells us that there are degeneracies and the degeneracies are states of equal energy and in this case the states of equal energy are just found by going up and down this ladder in this way these just States go to the different axis like the Z axis is equivalent to the Y AIS yeah yeah they're they're very closely related to
+
+01:44:24
+the idea of taking a state and rotating it yes that uh for example you could ask the question what are the igen vectors of el subex the igen vectors of el subex are not individual ones of these but linear combinations of them right linear combinations of these are igon vectors of LX and L Y and so in that sense what we're finding here is is um essentially the igen vectors rotated the rotated versions of the yeah and that's that's kind of obvious because when you apply an L you're generating a
+
+01:45:06
+rotation yeah so this is the Quantum analog of saying that if you take an orbit and rotate it about an axis you'll find a new orbit with a different angular momentum but with the same energy different Ang different um Z component of the angular momentum it's exactly what's going on here rotating the configuration is creating states of different Z compon or different Z component of the angular momentum but with exactly the same energy that's what's happening Yeah by applying the other
+
+01:45:47
+rotation operators now it's convenient to use these particular combinations l+ and L minus uh just because dra figured out how to do it this way this is the um the trick of using raising and lowering operators and this occurs all the time in quantum mechanics whenever you find an algebra like this which closes on the commutation that's a signal that uh that you should be looking for uh creation or raising and lowering operators and using the algebra to sort out the spectrum of the system the spectrum of igen
+
+01:46:38
+values that that'll give Zero by definition that's the definition of the top level there may not be a top you may just go up and up and up and up and up up what's the definition please add that question how do you define you reach the top what happens that you know you reach plus gives zero andus Z at theot right right now this can all be made concrete by specific wave functions uh that show that this happens I didn't want to write down complicated angular wave functions one possibility is you never
+
+01:47:13
+run out of anything that would correspond to basically infinite angular momentum States states of infinite angular infinite capacity for but typically real angular momentum states of atoms and so forth in somewhere um we'll work out more about angular momentum a little more and then we'll apply it to atoms and understand a little bit about Atomic uh Spectra a little bit about the spectrum of the hydrogen atom uh but this is where the degeneracies or some of the degeneracies well it's where all of the exact degener
+
+01:47:53
+IES of the hydrogen atom come from all of the equality of uh and these states are the orbital are the various orbital quantum numbers of um of uh of the hydrogen atom there's more there's more but uh okay for more please visit us at stanford.edu
+

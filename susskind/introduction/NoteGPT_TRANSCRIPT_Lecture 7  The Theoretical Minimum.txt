@@ -1,0 +1,567 @@
+00:00:01
+[Music] Stanford University all right we started to explore entanglement I had actually started to think about doing Bells theorems uh tonight but um I decided not to do it yet it's a complicated story Bell's theorem and it's very lovely but more important than the theorem itself is what it says and so I want it uh I want to get as much as possible tonight to what it says and what entanglement um has to tell us about the nature of systems sometimes people say the nature of reality I don't like the word reality
+
+00:00:55
+I think it uh it's misleading okay um in looking on the internet at the the messages you guys send back and forth they're very interesting and and many of them have some very interesting points in them there's a terminology which I would discourage at least un unless you know what it means uh with greater precision and I've seen this all over the place people say entanglement is share when two Quantum systems share the same share a state I've never understood what that means to share a
+
+00:01:37
+state um Quantum systems have States if they're composite Quantum systems they have States uh you can say that a Quantum system a pair of quantum systems when they make a given Quantum system share a state if you like but it just means the state of the composite system um the important idea about entanglement is not so much that systems share a state that they always do it's the important thing is that they are not described by a product State a product State being a state in which the wave
+
+00:02:17
+function of the system and we'll talk about wave have we talked about wave functions very much I don't think we have let's begin by talking about wave functions and then I want to move on to the concept of a density Matrix this will make it much easier for us to think about entanglement first of all the notion of a wave function a wave function may or may not have anything to do with waves the concept grew historically out of the quantum mechanics of particles and the relation and the probability description
+
+00:02:56
+of them in terms of waves but the uh the logical concept of a wave function is one that you can apply to any Quantum system and in general it doesn't have to do with wave motion of any particular kind the basic idea of a wave function is the following you have a Quantum State let's call the quantum State ah capital P I'll use the letter capital P to denote a a generic Quantum state of a system I think previously I've been using A's and B's but I'm going to start using
+
+00:03:43
+SII uh as a generic Quantum state for pretty much any system and also I have a basis system the basis system is typically labeled by a collection of igen values of something uh it might be labeled by one or more variables if there are several commuting operators in a system you can specify simultaneously the igen values of more than one thing and in many cases you want to do that and the basis vectors in those cases are labeled by a collection of observables or a collection of igen values of perhaps several quantities
+
+00:04:29
+I'll give you an example um if you're talking about the motion of a particle then the X and Y and Z coordinates of the particle are commuting variables the things that don't commute are the components of momentum with the components of position I know we haven't done this yet but uh the other hand the three components of position all commute with each other that means they can be specified simult mously a useful basis for studying the quantum mechanics of a particle is a basis which is labeled by the three
+
+00:05:10
+coordinates of the particle I'll wait for uh yeah I'll give her a hand all right so we have a basis and the basis is labeled by a collection of I values let's label them let's don't have a decent pen all right A B C however many uh commuting variables there are that need to be specified in order to specify a system and the inner product of the basis Vector with the state of the system itself is called the wave function and in fact we can write that s since these objects here form a
+
+00:06:04
+basis we can say that this is a sum I still don't have a decent pin ah a little bit better a sum over the basis vectors which means a sum over this collection of igen values a dot dot dot of the inner product of the basis vectors with the state Vector times the basis vectors we've written this equation this kind of equation down before what it says is that the expansion coefficients that you use to expand the vector in basis vectors are just the inner products of the vector with the basis
+
+00:06:53
+vectors this object is called the wave function right here and it's a function of the A's B's and C's so let's give it a name let's call it little s of a b c and so forth It's called the wave function and it's defined in such a way that the state Vector s is equal to the sum over a over all the indices which it takes to specify the basis times s of a b and c and so forth s of a b and c of the coordinates of the um not the coordinates the an example if we're just talking
+
+00:07:57
+about a single spin then a complete set of commuting variables necessary to specify uh a vector is for example just Sigma Z the Z component of Spin and then s would just be the probability amplitudes for the spin to be up or the spin to be down be a function of one variable that variable would take on the values up and down if we had two spins then we would label a basis of vectors with ups for once ups and downs for one spin ups and downs for the other Spin and it would take two labels to label a state Vector not just one the
+
+00:08:36
+two labels would be the labels of the two spins and that's all that that's all we're talking about here might take multiple labels to label a spin to label basis vector and if so just display them here and then by definition as pure definition the wave function of the system you can think of it two ways you can think of it as the set of um coefficients the set of coefficients that you use to expand an arbitrary Vector in terms of the basis vectors or you can think of them as the inner
+
+00:09:09
+products the inner products of the state Vector with the basis vectors themselves that is called the wave function and shring is wave function is a special case of it which we will not get to at the moment but it is a special case of it question okay so if you know the wave function of a system you know it State vector and you can compute all sorts of things you can compute um uh expectation values and all sorts of things yeah this looks a little like a for transform in some basis is a for transform
+
+00:09:59
+y it is a for transform uh for the case of position and momentum if yes yeah uh so in that case you go back and forth well no the fora transform is going back and forth between different basis sets okay here I've chosen a particular basis set supposing I wanted to use a different basis instead of Sigma Z Sigma X then I would have to transform these wave functions function somehow they look different in the X basis and that that's the analog oforia transform okay now I want to introduce a concept
+
+00:10:42
+called the density Matrix if we have just a single system this is the way we think about the state of the system oh let's talk about expectation values let's talk about expectation values supposing we have some observable let's call it l ah ah let's call it l it's some observable and it has Matrix elements what do I Matrix elements mean they mean if this is a basis Vector I won't bother writing out multiple labels let's just put one label there to summarize all the labels and another label over
+
+00:11:19
+here a prime these are called The Matrix elements of the observable okay The Matrix elements of the observable the observable acts on a basis vector and then you project it onto another basis vector and that's called L I suppose uh a prime a just notation okay now supposing I want to calculate the expectation value of L in a state whose wave function is s let's see how we do that we take SII I'm going to as I said I'm just going to restrict myself to a single uh a single a here but the same thing would hold if there
+
+00:12:04
+were multiple A's all right so what do we do we take the state Vector on the left the uh the K Vector the K Vector maybe we should write out the K Vector here sorry the bra Vector the bra VOR this is the C Vector the bra Vector is the sum over A and B but you know I want to use different indices here I want to call them a prime and B Prime they're being summed over so it doesn't matter what I call them I just don't want to confuse them with these and then we're going to have uh bra vectors ABC
+
+00:12:42
+or times now do I put s here s star so exactly the same kind of expression for the bra Vector except complex conjugated coefficients good now let's calculate s l s that's the expectation value or the average value of L in the quantum State s and we do it just by plugging in the left the left bra Vector here is the sum I'm just a single index a prime a prime s of a prime that constructs the bra Vector the head Vector I will have to write another sum a sum of a a of s of a time a summing on a turns this into the C
+
+00:13:44
+Vector S capital S summing over a prime turns this into the bra Vector the corresponding bra vector and in between we sandwich L right now thiso somebody please correct me what did I write wrongar siar all right we take the size and the side stars out of the expression they're just numbers and so the whole thing is a sum of a prime and a sar of a prime s of a times the inner product or the sandwich a prime L A that's exactly The Matrix element of L between a and a prime so that's L which one is it a prime a I
+
+00:14:41
+think and this reduces every um expectation value to a calculation in terms of wave functions a s always a s and always a s star times a matrix element of the observable that we're interested in all right so this is a basic formula for the expectation value of anything that we might be interested in okay basically all of quantum mechanics is contained in there the expectation value of everything in the world that's uh that's just about everything we ever may want to be interested in and so let's put this equation over
+
+00:15:23
+here and keep it over here now supposing we have a composite system composed of two subsystems let's call them alyses and Bob's subsystems all right Alice has uh control of one of them Bob has control of the other uh and maybe even there are times when uh when uh they don't have control of them but uh we just call them two subsystems alyses and bobs then and in fact let's use a now to represent a complete set of observables for Alice's subsystem everything that Alice needs to
+
+00:16:16
+know in order to specify a basis for her subsystem and B are the set of variables for Bob subsystem when we talked about spin I think we called Alice's variable too and Bob's variable Sigma if I remember correctly but uh we just these are a complete set of things complete set of variables for Alice and this is a complete set of variables for Bob Alice's States for her subsystem would look like this Bobs would look like that maybe we want to use a different notation so we don't uh wind up
+
+00:16:53
+confusing the two Vector spaces but then there's the composite Vector space the composite Vector space is the vector space describing the composite system and that has a basis which consists of an A and the B when a runs over all its values and B runs over all its values we have a complete basis of the combined system okay so now let's talk about wave functions of the composite system again we have a state Vector the State Vector s is a state Vector in the composite in the tensor product space the space made by
+
+00:17:38
+tensoring producting A's and B's together it has as its basis vectors A basis Vector from a and a basis Vector from B and now I want to Define in the same way the not the the notion of a composite wave function so what is it it's just the in product of s with the basis vectors and what is it a function of it's now a function of two sets of variables or two variables s of A and B different B here this yeah okay here it is it's a function of the variables of the two subsystems it depends on two of
+
+00:18:23
+them okay so that's the wave function now we have notion of a wave function of a composite system and let's talk about uh observables of a composite system the observables of a composite system first of all among those variables are the ones which would describe the separate subsystems by themselves so let's suppose that l and m are two observables one of them having to do with alysis subsystem Alice and the other one having to do with Bob subsystem I could call them Els sub a and Els subb but I won't I'll call them
+
+00:19:09
+L&M uh how do we represent observables acting on the composite space of states the answer is simple The Operators associated with Alice's subsystem act on Alice's piece of the state vector vector and leave Bob's piece of the state Vector unchanged that's what we did when we did spins we said Bob's Sigma matrices acted on his half of the wave function or his half of the basis vectors and were completely passive or Alice's piece of the state Vector was completely passive
+
+00:19:51
+just was bypassed by by these operators so what that says what that says is that Alice's observables are matrices they're matrices that can be written as L of a prime B Prime just like L here has a primed variable and an unprimed variable but now the single index is replaced by two indices and a and b what does this correspond to this corresponds to the sandwich a prime B Prime l a whatever a whatever this stands for but L only belongs to Alice's space of states only belongs to Alice's system so the question is what
+
+00:20:48
+then do we say about this Matrix here to say to indicate that it has no effect on Bob's variables answer is simple we make it proportional to the identity Matrix in Bob's variables the identity operator the identity operator in a uh in a space is the operator whose Matrix elements are The Chronic Delta symbol that's the identity operator and the identity operator on a subsystem does nothing to that subsystem the identity operator simply gives the same Vector back in other words if you apply the identity
+
+00:21:36
+operator it does nothing but now what we're doing is applying the identity operator on Bob's half of the system but the observable that's supposed to be associated with Alice's half of the subsystem is represented by the same Matrix that she would have used had she not even known about Bob had she not even known about Bob she would have used the Matrix a l a prime and a to describe her observable how does she describe it in the bigger Hilbert space she says it does nothing to Bob's variables and so
+
+00:22:13
+it's just the identity Matrix in Bob's uh half of the space that's Alice's variables we could say the same thing about Bobs M of a prime and B Prime and A and B just equal to the chronica Delta of Alice's variables times The Matrix that Bob would have used to describe the subsystem had he not known anything about Alice okay let's prove some things about uh about the setup here first of all let's calculate expectation value of Alice's variables in a product State a product state is one in which the two
+
+00:23:06
+systems are not entangled with each other and let's see what we get what would you expect to get if you had an unentangled State describing Alice's and Bob subsystems and you consider the expectation value of Alice's uh variable you get exactly what you would have gotten had Bob not been there altogether so let's check that out what do I mean first of all by a product uh State I explained what a product state was but now let me explain what a product state is in the language of wave functions
+
+00:23:48
+it's very simple it means that the wave function is a product of two wave functions one for Alice and one for Bob that's all it means a product a product state is one whose wave function s of A and B Alice's and Bob's variables is just a product so let's see how shall we denote that let's call it um well let's just call it s Alis of a and fi Bob of B it factorizes it's a f a product of two functions it's a function of two variables but it's a product of two
+
+00:24:31
+functions each of one variable it's pretty clear that if it factorizes like this then Alice can think of this as the wave function for her subsystem and Bob thinks of this as the wave function for his subsystem okay let's calculate now Alice's expectation value of L if this happens to be the wave function so what do we do we first take side we're going to make a sandwich we going to make a sandwich with a s star on one side a s on the other side and L in between all right so siar that's siar of Alice of
+
+00:25:09
+a a prime uh F star Bob of B Prime this is where do we write it there uh that's the complex conjugate of the wave function as a a function of a prime and B Prime what next next we put in to the sandwich L of a prime B Prime A and B it's a matrix two one entry here one entry here but it's simple it's just L of a prime and a Time Delta BB Prime and then we close it up with the other half of the sandwich which is this up here S A of a f b of B and we sum as always we sum over everything in sight a prime a b
+
+00:26:11
+Prime B that's the rule for calculating an expectation value so what do we get first of all the Delta BB Prime that tells us to set B Prime equal to B so let's do that first off let's do that I'll just erase so B Prime equal to B all right I'm let you write down your notes if you want so B Prime equal to B and remove the chronica Delta now B is equal to B Prime now notice the only thing that depends on B is f star B and 5 b what the sum over B Prime was done when I set b equal to B Prime and now
+
+00:26:55
+there's a sum over B of f star five what does that give one under the assumption of course that Bob's wave function is normalized under the assumption that Bob's half of the wave function is normalized so that his total probability for his all his measurements he could do is one then sum over B of f star of B * 5 of B is just one and what do the whole thing reduced to the whole thing reduces to exactly what's up there we can remove the F take them out put them down here that sum is just
+
+00:27:40
+one and the rest of it is just exactly what's up on the top of the Blackboard there in other words in a product State the expectation value of any of Alice's operators are exactly the same as if Bob wasn't there and it doesn't doesn't matter what Bob's wave function is as long as it's a product what about uh one of Bob's uh expectation values what would happen if we stuck stuck a bob operator in there well then instead of The Chronic a Delta of B's let's go back we have B and B
+
+00:28:20
+Prime B and B Prime uh yeah B and B Prime B Prime over here and instead of l a L we would have M of B and B Prime Delta a a prime and now we would set a prime equal to a sum that would again give us one and we would get the same we get basically the same thing that I wrote up here Bob except it would be Bob's wave function f star Bob of B Prime M of B Prime B times F Bob of B which is exactly what Bob would have done had he not known about Alice so product states are really just that there's States in which um one party
+
+00:29:26
+just doesn't know about the other there's no correlation there's no no um information in one of them about the other okay we can say a little bit more about correlation let's suppose now that we were interested in the product of an ALICE variable and a bob variable we're interested in the expectation value of L * m let's see what we get expectation in in the product State strictly product States for the moment we go back up to here and now instead of writing MB is this BB Prime this should
+
+00:30:12
+be b b Prime instead of Delta of a and a prime if we're taking the product of l and m then what do I put here l if I'm interested in the operator which represents the product of two variables one for Alice and one for Bob instead of putting the unit operator over here for for Alice I will simply put in Alice's operator not M Alice L now this just factorizes let's look at all the a depend depence here's a dependence here's a dependence here's a dependence that factorizes that's
+
+00:31:05
+completely separate from the B dependence I could take everything with a B dependence and put it on one side everything with an a dependence and put it on the other side and do the A and B summations independently can you see that that uh all right let's let's write it out it's sum of a a prime a b Prime B of s Alis star of a prime l a a prime s Alis of a all times five Bob star of B Prime M of BB Prime and F of B the sums can be done quite independently we can put this sum over here same thing
+
+00:32:07
+I haven't changed it we're summing over everything B's and A's and we see that what we get is just the product we get the product of the expectation value of L times the expectation value of m not surprising if we have a product State and Alice does her measurement and Bob does his measurement and we then come together and compare the measurements and ask what was the product of the measurements the expectation value will just be the product the expectation value of the product operator will be
+
+00:32:41
+the product of expectation values and we can write this this way let's uh let's write it in a form it says for for product States for product what's called Product States the expectation value of L and times M now remember L belongs to Alice M belongs to Bob and uh they operate in different halves of the system the expectation value of L * m is just the expectation value of L times the expectation value of M now is this something that we expect to always be true for every state that the expectation value in fact
+
+00:33:37
+even in classical probability theory if we have a probability distribution for two variables in general is it true that the average of the product is the product of the average only if variables are independent which means what in terms of the probability distribution exactly what you written there it means that it factorizes it means that the probability distribution is a product of two probability distributions right well what if what if it's not true what if the probability distribution does not
+
+00:34:09
+factorize then this quantity here the difference between the average of L * m and the product of averages of l and m is called the correlation between l and m it's called a correlation and it is a measure of how much these variables are correlated we'll do we'll we'll see some examples this is called a correlation and whenever the correlation Whenever there is anything in the system an ALICE variable and a bob variable whose correlation is not zero that's an indication of entanglement if you can find any pair of
+
+00:34:55
+variables one of Alice's and one of Bob's such that the average of the product is not the product of the averages then you're experiencing entanglement um I think we did an example last time we took what I called the singlet state which was up down down minus down up over theare < TK of two this is p and this is not a product State and in this state we took the expectation value of Bob's variable Sigma [Music] Z we took the expectation value of Alice's variable which I think was t z
+
+00:35:56
+do you remember what these were what's what's the average value of uh Bob's variable let's say the first entrance here the first entry stands for Bob here's Bob Bob here's Alice what would you guess in this state the average of Sigma Z is not the state but the combined State no zero why is it zero because it has as much probability of being up as being down has probability one has probability 1/2 to be up and one half to be down so the average of Bob's variable is zero I
+
+00:36:41
+think we worked that out last time what about Alice's variable it's also up as much as it's down okay it's also expectation value zero what about all right so first step both of these are zero in this case what about the product what about the product of Sigma Z and t z what's its average value well we worked it out last time we got an answer anybody remember the answer minus one minus one but you can just look at this thing and you can say in both vectors here the spins are
+
+00:37:24
+opposite so in either case here the product of the spins is minus one it's pretty clear that this whole thing is an igen Vector of the product because on either Vector here the product is minus one act with Sigma Z act with Sigma Z you'll get you know what will happen so it'll just change sign so yes this has the product of the sigma Z is equal to one minus one excuse me so they're entangled in fact in this case they're what I'll call maximally entangled they're very
+
+00:38:05
+entangled uh if you can find any pair of variables which are correlated in this form the quantum state is entangled do you remember now here it's completely obvious that the average of Sigma Z is zero for just the reasons that I said uh Sigma Z and to Z up appears as much as down for Bob and down appears as much as up for Alice and so it's clear the average is zero what about the average of Sigma X do you remember it's zero but that's not obvious is it that's not obvious but we did it last time go back
+
+00:38:51
+to your notes and you'll discover that not only is the expectation value of Sigma z0 but Sigma X is also equal to zero the average on the other hand you'll also find that the product of Bob Sigma X and Alice's to X is again equal to minus1 so the sigma Z's and the to z's are correlated the sigma x's and the to X's are correlated and what about y same thing same exact thing you can work that out we know what these operators do you can apply them to the states and calculate what their expectation value
+
+00:39:31
+is so this state is a highly highly entangled or a highly correlated State being correlated and being entangled of basically the same idea question yeah uh in the general case if you flip the L and the M's around to each other is you know flip the L's and the M's lmus bracket L equals m lus is that I'm saying no they just flip the L's in the N oh yeah that's equal right all right there's a point there which I may not have mentioned all operators associated with one system commute with
+
+00:40:19
+all operators associated with the other system so it doesn't matter in which order you write them that's independent of whether the system is entangled doesn't matter which order you are you're right then excuse me yeah um I guess I'm missing something um when you wrote that down you showed us that you have a product state of where L is a state in Alice's and yeah then this is equal to zero that's equal to zero mhm yeah what does lm mean that it's I mean You' got it written up there isn't that
+
+00:40:48
+doesn't that a product State this no what in the state is these are the states these are the observables right right doesn't that l m mean a product State l no L's and M's are not States yeah there are size in here this is a statement about the uh the state vectors right okay one other point is worth just noticing when I say things are correlated that the spins are correlated I mean it what I mean is that you can learn something about one variable by looking at the other if you know that
+
+00:41:38
+this is the state if you happen to know that this is the state then if you know Bob's if you measure Bob's variable and you find out that it's up then in that component of the state which is the only one that's left after you measure Bob Alice is down in a product product State you learn nothing about one system by measuring anything about the other in a highly entangled State you learn a great deal about one system by measuring the other one okay that's what entanglement means
+
+00:42:12
+on the other hand it may also follow and it may also be true that in a highly entangled State beforehand if you happen to know the state you may know very little about each individual piece for example in the singlet State here there is what is the what is the probability that Bob's variable is up 1/2 what is the probability that Bob's variable is down 1/2 so in this state knowing knowing everything about this state you still know nothing about whether Bob measures up or down if he does a
+
+00:42:54
+measurement curious you know nothing at all about whether Bob measures up or down you know nothing at all about whether Alice measures up or down but you know everything about the product of them that if Bob does his measurement Alice does her measurement and you compare them afterwards every single time if this is the state that you put the system into the product will be minus so this is an example of this odd thing in quantum mechanics that you can know everything about a composite system and know nothing about the
+
+00:43:31
+pieces that's what this is telling you you know everything or when I say you know everything I mean you know as much as quantum mechanics allows you to know this is the state of the system you're not going to do any better than that that's all there is to know about it what you know about it is that Sigma time tow whether it be Sigma X or to X how this is true for the X Y or Z component separ L that the product of Alice's variable and Bob's variable is minus one that's a lot to know but it's
+
+00:44:04
+not as much as you would know classically classically if you knew everything about a system you would know everything about the constituents as well as things that you could measure about them that you could combine together in quantum mechanics you can't know you either you can say you can't know everything or to the extent that everything is everything you can know in this case you you know everything about the combined system and you know nothing about its constituents that's the really odd thing
+
+00:44:34
+about entanglement that's the extremely odd property of in of quantum mechanics that allows uh such nonsense wouldn't that just mean you can't separate decompose the system without destroying information yeah yeah yeah it it it does mean that when you write LM uh I'm a little confused is that uh measure M and then measure l no no no it's the product of L and all right let's let's be very clear be very clear the operation the operation mathematical operation of multiplying a state vector
+
+00:45:35
+by an operator is not got anything to do with the actual physical act of measuring it I know but the syntax looks the same the the I'm not sure the syntax is not the same the syn I'm not sure what syntax means I assume it means the words it just means how do I interpret l m on the board that's all the product of The Operators yes yes it means you act first with them and then L okay yeah yeah it but it doesn't mean that you've measured them it means this is just a mathematical thing
+
+00:46:17
+right it's the same is true in the classical mechanics I can multiply the momentum of something by the position of something else that doesn't mean I measure measured them just because I multiplied the the the two things together physical active measurement uh it's not the operators which act on on the states it's the detectors or apparatuses which act on the system so in words when you do a measurement a detector or an apparatus acts on the system and gives a result the in the space of states
+
+00:46:58
+a operator acts on a vector not a detector acting on a system quite different concepts yeah before we make a measurement on on an electron um unless we already know how it's been prepared which is a special case where in that case we can describe the state as linear combination BAS but before we uh make a measurement we might know nothing about it we might know a little bit about it but no matter how much we know will have to be expressed in terms of probabilities not in terms of the vectors yes um so in the case where
+
+00:47:43
+there's a correlation uh between two electrons and let's say it's not a pure correlation it's it's a a part it's not a product it's not a product and it's not a purely inted State it's somewhere between it's not a what a a sign state for example it's a somewhat inang State exactly so if then after we made the sigma measurement and we we want to describe the tow electron we would still have to describe to in terms of probabilities we wouldn't be able to
+
+00:48:19
+specify in terms of of uh a combination okay I'm not exactly sure what you're getting at but maybe this will help um if we have the quantum state of a single spin let's suppose somebody told us what the St the quantum state of a spin was all right then for any Quantum State there is always an observable in particular some component of Sigma which is definite which is predictable every P that's obvious for the states um up and down it's obvious for the States left and right for the
+
+00:48:59
+state up if you measure Sigma Z it's definite if you measure if you know that the state is right and you measure Sigma X it's definite this is more General given any Quantum State whatever of a spin there exists a direction this you can prove that exists a direction for which the spin is definite okay curiously when you combine the system together into an entangled State like this there is no direction in which the spin is definite in fact there is no Direction Sigma X Sig for one of the spins each one of the
+
+00:49:39
+spins either alyses or Bob's has average value zero in every direction no matter what direction you pick x y z or anything in between the average of the spin of Bob spin in this state is zero so and here's a Quantum state in which Bob can say nothing what he can know the quantum State fully and as I said has equal probability for up and down in every direction um I'm not sure if that's what you are addressing or not my question in a nutshell is if if we have a partial correlation oh partial
+
+00:50:17
+okay correlation is somewhere between zero and and one all right so we put we put a big number here and a small number here yeah so we we've measured one and and then the other could be expressed as various probabilities of Sigma X and sigma y yes yes yes yes we can calculate all the probabilities just calculate them yeah um okay could you remind us the physical for single state say it again what is what would be an example of a physical experiment corresponding to a single state good good good that's that's an important
+
+00:50:54
+obviously an important question uh another way to ask you is how would you prepare a state a system in the singlet State all right um all right I'll tell you something about the singlet State the singlet state has the property that it's an igen Vector of a certain operator it's IG Vector of many operators but in particular it's an igen Vector of Sigma X tox you can prove it it's it's actually an igen Vector of Sigma X tox it's an igen Vector of Sigma y toy and it's an igen vector of Sigma Z
+
+00:51:27
+to Z what's the igen value for each one of these minus one and the igen value is the same for all of them that means that it's an igen Vector of any linear any combination of these with igen value minus one any one of them acts on the singlet State gives back minus the singlet State any combination of them will give back minus the singlet state so in particular if I take this object here the singlet state is also an igen Vector of this now this is a funny thing Alice and Bob can't easily measure
+
+00:52:05
+this whole quantity here why because Alice can't measure tox and to Y simultaneously by separate measurements this would be hard to measure can't be measured by separate measurements uh why because no separate no separate measurement can measure to X and to Y at the same time or to Z at the same time but this object is a perfectly good Herm Mission operator and there must exist a way of measuring it but more to the point right now there's a way of preparing a state which is an igen Vector of this now what state the
+
+00:52:44
+singlet State the singlet state is an igen Vector of this object with IG value minus three it's an igen value of this one with minus one this one with minus one and this one with minus one the whole thing has igen value minus three it's a but point is the igen vectors of this product or the sum of products here include the uh the singlet State there's a particular one you can also write this as just sigma. to Sigma X tox Sigma y toy Sigma Z to Z that if these were ordinary classical
+
+00:53:21
+vectors you would write it as sigma. to now if you take two electrons each one has its spin and they're very very far apart they don't interact with each other there's no energy associated with the interaction between them but as you bring them together there are all sorts of energies one energy for example is just a Kum energy between them product of the charges there is also an energy associated with the spins and one of the terms in the energy associated with the spin is just the dotproduct of the spins
+
+00:53:53
+if the spins are aligned you get if if this is aligned you get one value if they're anti-aligned you get the other value and so sigma. to is a piece of the hamiltonian of uh of the two spin system in the singlet State it's minimum there's three other states called the triplet state in which it's maximum so the energy is lowest in the singlet State this this spins are trying to get anti anti-aligned with each other but in every direction not just the Z Direction in every direction and they
+
+00:54:35
+eventually compromise on the singlet state so you have two energy levels associated with the spin of an electron these two energy uh in hydrogen or in patronum even better in positronium you have the aligned and anti-align Spins and they have different energy levels singlet triplet if you bring two electrons together then any state can be written in terms of the singlet and triplet States even the product State can be represented as a sum of singlet and triplet States what happens when you bring the electrons
+
+00:55:15
+together after a period if they're in the triplet state with a higher energy what happens to higher energy states after a while they emit a Photon and go to the lower energy state so if you take two spins which may be in a product State and you bring them together and wait a long time a photon may or may not be emitted if the system is in the singlet State no emission if it's in the triplet state it emits gives off a photon and winds up in the singlet state so this would be a way of preparing the system
+
+00:55:53
+in a singlet State you just take the two electrons and wait until until they radiate a photon wait long enough they either do or don't radiate the photon but if you wait long enough you'll know that it's in the singlet State all right so that's uh that's a experiment that's an experiment to another way another way now this one's uh this one is um very very far-fetched extremely far-fetched the energy in the singlet state is less than the energy in the other three states there are four uh four Poss
+
+00:56:26
+possible States altogether four possible basis States singlet and three triplet the energy of the singlet is lowest so you just take your composite system and you put it on a scale and you measure its mass mass is energy when you've measured its mass you've measured whether its energy is the energy of the singlet State or the triplet State and that constitutes a measurement or constitutes a preparation device or a measurement of basically this variable but if you like the difference between singlet and
+
+00:57:04
+triplet so yeah there are ways of preparing systems in a singlet or triplet in the singlet state or ways of uh in fact if you bring the systems together and you wait a while it's very difficult to have anything but the singlet State then once you've made that singlet state if you grab the electrons without turning the spins if you grab them some in a way that doesn't put any torque on their spins and pull them apart you now have two separated electrons for example in the singlet state so it's it's not a terribly hard
+
+00:57:39
+thing to do this me that you can actually assign energy to the entanglement yes in this case yes in this in this case yes but the but that's well what you can say is the lower energy is certainly entangled the lowest energy State the one that it seeks when it uh to get to by and it doesn't have to be radiating a photon any mechanism by which the system can lower its energy um em emitting a phonon or doing interacting with a crystal lattice or anything to lower its energy will leave it in the singlet state
+
+00:58:22
+so and I think the right thing just to say is that the uh that the lower energy state is entangled that's almost always the case uh that um that the states of lowest energy are highly entangled between systems okay so we next question is there a measure is there a quantitative measure of the degree of entanglement is there a way of taking a state and determining whether it's entangled and to measure how much it's entangled okay that brings us to a concept called the density Matrix which
+
+00:59:06
+I'm probably going to it's getting later than I thought so I want to um I want to go over this a little quickly but I think we can uh we can do it let's define an object called Alice's density Matrix Alice's density Matrix is a quantity which even in an entangled state is as complete a description of Alice's system for the purposes of Alice's measurements as Alice can ever get it's not a wave function if it was unentangled the wave function would be the best description
+
+00:59:50
+she could have but for an entangled system you cannot extract out a wave function for either piece of the entangled system the best you can do is something called the uh the density Matrix we actually had it up here let me go back to it let's talk about all of Alice's experiments that she can do without measuring anything about Bob's electron or Bob's system let's imagine that they've separated their systems Bob has his Alice has her and Alice can do all the experiments she likes and measure
+
+01:00:25
+any one of these l observables L stands L standing for Alice okay uh how does she describe all the possible expectation values of everything that she can ever measure so we had a formula up before and I'm going to rewrite it expectation value of L is SAR of alpha let's see what was it Alpha Prime beta prime or a a prime B Prime this is the combined system we're going back to the combined system now um l a prime a s a b but we set uh we set b equal to B prime or if we like we can leave the B
+
+01:01:19
+Prime here and put a chronica Delta of B and B Prime this is one of Alice's variables and so as far as Bob goes it's just the unit operator does nothing to Bob's piece of the wave function and that just says stick b equal to B Prime okay look at this quantity right over here let's take L on the outside let's take L of a prime and a out there isolate it off we have to sum this over B we sum over everything we sum this over B and here's a quantity right here that depends on a prime a and
+
+01:02:03
+it multiplies something else that depends on a and a prime but it doesn't depend on B we've summed over B once you've summed over B it doesn't depend on B anymore so this object over here is a function only of Alice's coordinates a and a prime it of course to calculate it you may have to know more the wave function but once you've calculated it that's all that Alice ever needs to know to calculate anything about her half of the system so let's give it a name it's the
+
+01:02:37
+sum over B siar of A Prime b s of a b it doesn't depend on the B degrees of freedom at all anymore Bob's degrees of freedom it's called the density Matrix and it's a function it's a thing which depends on a prime and a it's a matrix it's a matrix it has two entries any Matrix can be thought of as a function of a row and a column this is a density Matrix and if we know the density Matrix doesn't matter where it came from doesn't matter what Bob state was if we know row row
+
+01:03:23
+then we know that the expectational let write the formula the expectation value of L is equal to the sum of row of a prime and a l of a and a prime I think I have one of them backwards it doesn't matter so Alice if she knew this density Matrix could forget about Bob completely and say I know everything that there is to know about my subsystem and here it is okay what is row of a and a prime if we start with a pure State supposing we started with a pure state are you getting exhausted well this is quantum mechanics
+
+01:04:18
+for you sorry buddies but this is it I can't I can't make it any easier this is as easy as I can make it all right you got to sit down with it and you got to go through it and uh and penetrate it but uh I'll do my best okay this is the notion of a density Matrix what if s is a pure State what can we say about this density Matrix so let's go back and see exactly what it says if sign is sorry what if SII is a product state if s is a product state it means the wave function factorizes so let's go back
+
+01:05:04
+here we are here's the density Matrix the wave function factorizes into a this is B Prime yeah that's right that's that's correct density Matrix your Su is over a and a a not in the not in the density Matrix in this one yes it's a double sum it's a double sum but it only involves rows so let's erase this for a moment and see what we learn about this creature called the density Matrix if s is a product Vector it must have a a special form somehow so let's say that s
+
+01:05:40
+is a product of Alice's wave function times Bob's wave function I forget which one is which now wasai Alice or wasai Bob s was Bob s is Alice okay it doesn't matter we change them now so the the uh the complex conjugate here is Alice's wave function times this is not the wave function of Alice this is the wave function of Alice's spin incidentally but I'll call it Alice's wave function Alice's wave function times Bob's wave function the complex conjugate and then we multiply that
+
+01:06:22
+by the non-c complex conjugated thing let me put them in the opposite order F of B notice we've identified B with B here it's not B and B Prime and this is prime S A each one of these factorizes this factorizes into a function of a prime and B and this one into a function of b and a and now we sum over a b what is the sum of B of five star five one right okay so now we can take this out and throw it out and here's what we find we find that for a product state only for product state that row is simply made up out of
+
+01:07:12
+Alice's half of the wave function without any regard to Bob she doesn't need to know anything about Bob this is not too surprising that she didn't need to know anything about Bob after all it is a product wave function and the density Matrix is just a um a product of the complex conjugate of the wave function with the wave function itself two different A's though an A and an a prime now what can we say about a matrix like this let's call this Matrix let's call it I think it's
+
+01:07:51
+actually row of let's call it row of a and a prime just call it row of a I I've switched the order but that's just a definition let's take this row it's a matrix and act with it on a column Vector how do you act if you know the components of a matrix how do you act on a column Vector so let's suppose this is a matrix here excuse me yeah Row one one just a second row one two so forth Row 2 one we make a matrix out of it yeah do you want to erase that sign there on the far yeah I
+
+01:08:30
+do good point excellent all right so we have row it's made up out of Alice's wave function and I maintain that this density Matrix thought of as a matrix has an igen Vector I maintain moreover that it has one and only one igen vector with nonzero igen value and that that igen value is + one somebody say right good okay let's prove it I'll tell you exactly what that I Vector is it's sa a it's Sai itself it's s itself so let's check that out let's multiply this by S
+
+01:09:22
+of a prime in fact and sum it over a prime this is Matrix this is the process of multiplying a column vector by a matrix that's the way you do it you write down the Matrix you write down the column vector and you sum over the uh the element uh between them okay let's see if we can see what we get oh this is the action of row on S okay so let's do it row is row now let's multiply it by S of a prime and now let's sum over a prime what do we get S star of a prime * s of a prime Su
+
+01:10:17
+a prime is one right so it all comes out to just be S so this is s what does that tell you about igen vectors and igen values of the density Matrix it tells you that the original wave function is an igen Vector of the density Matrix with igen value + one let me prove now that all vectors perpendicular there are n minus one if the dimensionality of the space is n then this is one igen vector out of n which has igen value one let's take any Vector now which is perpendicular which is orthogonal to S to S A to Alice's wave
+
+01:11:05
+function let's call it sa a tilder tilder now means it's orthogonal to the original Alice's Vector now what is this inner product zero right so we find out that row on side twiddle is zero that means that any Vector perpendicular to Alice's Vector is an igen Vector with igen value zero the original state of alysis spin is an igen Vector with plus one conclusion the density Matrix for a pure state has one and only one nonzero igen value and it's equal to one what if it's not a product
+
+01:12:04
+state if it's not a product State then you find a a collection of igen values in fact in general there will be all of the igen values in general will be nonone zero of the density Matrix you can try this out for the um uh for the two spin system work out the density Matrix of Alice's spin the density Matrix for Bob's Spin and you will find out that they're quite different they don't have a single igen Vector which is nonzero they have a pair of igen vectors which are nonzero so what we what we learn is that
+
+01:12:45
+there's information in the density Matrix and in particular in the igen values of the density Matrix which tell you whether there's a great deal of entanglement or not the more igen vectors which are nonzero the more entangled it is if there's only one igen vector which is nonzero it's not entangled at all and Alice's half of the wave function is just that igen Vector if they're entangled then one finds and and the more they're entangled the more igen values you will
+
+01:13:21
+find and the maximum entanglement is when all the vectors are equal when all the igen vectors are equal all igen values when all the igen values are equal that's maximal entanglement take the singlet State work out the density Matrix of Alice's Spin and what you'll find is that it has two igen values each of which is a half equal and equal to a half so that's a test that's the way to test whether a system does or doesn't have entanglement calculate its density Matrix and study its igen values the
+
+01:14:05
+maximal entanglement is when they're all equal when they're equal they're equal to 1 / n you can prove that where n is the dimensionality of the space one / n okay that's uh that's entanglement Quantified can even be a little more quantitative even be a little more quantitative no let's not do that now I I'll I'll write the more quantitative condition in notes and uh I think we've done enough uh enough um calculation for the moment let's very quickly go through the
+
+01:14:59
+connection between measurement and entanglement there's a deep connection between measurement and entanglement basically measurement is the process of entangling of starting with a product State a product state of what and what a product state of a system and the apparatus the apparatus is in a definite state to begin with and the system is in a definite State what state is the apparatus in well well the apparatus might be something which detects something or other and if it's not detecting you might put it in some
+
+01:15:31
+neutral State some neutral state which is the starting State the undetected uh State neutral state of the apparatus and now you bring the system that you're interested in right up to the apparatus it does something to the apparatus something happens to the system itself and what's left over is an entangled State between the two of them so I'll give you an example I'm going to think of the apparatus is a very simple system with only two states Let's uh let me find my notes Here
+
+01:16:12
+Yeah Yeah my system is a spin and my apparatus also happens to have only two states you can think of it as another spin if you like in fact it could be Alice's and Bob's but you can also think of it as a more complex system but for Simplicity it only has two states here's the apparatus and has only two states plus uh let's say zero and one now zero is the state before the apparatus is switched on well when it's switched on when it's switched on and it's not detected anything it always starts out
+
+01:16:51
+in the state zero if it's not in the state zero give it a sharp and make it uh put it into the state zero otherwise it's not uh otherwise uh you know you have to start your apparatus in some known State otherwise you're not going to be able to do a measurement so it has Zer or one but it starts out zero and we have our spin here's a spin and we're going to do a measurement on it supposing the spin is in the upstate and the apparatus of course begins in the zero state so we'll
+
+01:17:26
+represent that by a combined K Vector a combined K Vector is in the tensor product of the spin Hilbert space and the detector Hilbert space up and zero if the spin comes in to begin with down then you start out in the space in the state down zero why because you start out with a detector in the neutral State now I'm not going to tell you in detail what the interaction is between the detector in the uh in the spin that could involve magnetic fields and other kinds of things uh causing an influence
+
+01:18:11
+between the detector but I am going to tell you that if you bring the spin into the detector and then take the spin out of the detector I will tell you what state is left over so in particular and I'm making this up of course I'm making up a rule which would be a good detector which would be a good detector namely if the spin if the system starts if the combined system starts in the state u0 then the detector feels a spin and it jumps to State one it goes to State U1 nothing happens to the
+
+01:18:58
+spin it just activates the detector on the other hand if the spin is down it doesn't activate the detector that's my rule so this goes to down one no down zero down zero and that's a very good detector of upness and down but now let's start with a superposition of up and down let's take Alpha up time up plus Alpha down times down somebody now brought us a spin in a superposition of stat in a general Quantum state but of course the detector starts out zero so that's the starting
+
+01:19:50
+State what happens after the detector Acts well if the state is Al is u0 it goes to U1 so that means it goes to Alpha sub U time U1 plus Alpha subd down zero this all of a sudden has become an entangled State it's an entangled state if it's up if the spin is up the detector is up the detector is one if the spin is down the detector is zero that is an entangled State why is it an entangled State it's an entangled State because by looking at the detector you can tell what the spin is doing in fact
+
+01:20:45
+that's what a measurement is a measurement is an interaction between a system and an apparatus that leaves the apparatus in a state that that depends on the whatever it is that it's measuring about the system so from one point of view you can just say well look this is exactly what I knew a measurement always was it just is a Le it's just a process that leaves a record on the apparatus of what the initial state was of the of the spin but from another point of view it's the physics of a combined system the
+
+01:21:23
+combined system being the Spin and the apparatus which leaves them in a highly entangled state so entangled that by looking at the detector you can tell what the spin is so entanglement and measurement are really the same thing and in fact to measure a spin you really only need another spin uh this uh the detector here could just be a spin and one and zero could be up and down so if we had this kind of concoction here where exactly this happened it would take only one spin to be a detector or an apparatus which
+
+01:22:04
+could measure another spin but in general um this is the nature of measurement that it entangles systems together it entangles in particular apparatus with system um is that clear should be very clear and that's all that's that's one way of thinking about measurement in this language in which you think of the system and the apparatus together you never speak about collapse of the wave function you speak about the development of entanglement if you don't want to include the apparatus
+
+01:22:50
+into your system then the only thing to say is that after the experiment is done the system is either up or down and you get and uh which one do you pick you pick the one that you record but the one that you record is the one recorded by the apparatus so thinking about just the system by itself you have to have this rule that the wave function collapses thinking about the system plus apparatus the same physics is described by the development of entanglement between the system and apparatus in that case for the for
+
+01:23:28
+the Bott what do you see on the meter of your apparatus one zero okay the app now you are another detector right this is the hierarchy of detection or the hierarchy of measurement here's the spin here's the apparatus but we're not finished we still have to look at the uh at the apparatus we haveen gotten anywhere until we look at the apparatus right all right well what's going to happen again we're going to have to say when we look at the apparatus we wind up collapsing the wave function to one of
+
+01:24:08
+these two pieces of the entangled state or we can say include the eyeball into the system in that case we should have included another system here the eyeball and the eyeball I don't know how did it start it started uh um uh it also has two states the two states correspond to the two possible answers that the that the brain up there there's also a brain up here two states of the brain one state of the brain says I saw the apparatus with a zero the other state of the brain says I saw the
+
+01:24:56
+apparatus with a one if we want to include the Observer as well as the apparatus we have to include another Factor here and that factor has to depend on the state of the brain let's call it B let's call it BAU it starts BAU which is the Brain before it has looked at anything and then it goes to B1 over here or B not over here it's now now become a system which is entangled with the with the eye and brain you can say wait a minute now we now have this entangled State we've described it all by the quantum
+
+01:25:36
+mechanics of the entanglement between Spin and apparatus and then later on between apparatus Spin and Eyeball it's all been described by quantum mechanics but you may not be satisfied you may worry about the other fellow who comes in in the room takes a look or asks you what did you see so somebody else comes in and ask you okay Charlie what did you measure and in the process collapses the wave function of the um spin apparatus what's his name give him a name no no no Charlie this is Charlie he
+
+01:26:23
+he comes in afterwards wigner Winer wigner Wiggy yeah this is wigner this is Schrodinger right that's Wing So Schrodinger and uh I don't know which one of these has ears this is the atom this is the atom the cat he doesn't look at the atom but he gets hit but something happen something happens to him when the atom so he's the detector the cat is the detector right here's schinger who looks into the box and here's wigner who looks at Schrodinger and there's a hierarchy
+
+01:27:05
+here the hierarchy where you decide to break the hierarchy where you decide to break the hierarchy determines at what stage you will say the wave function collapsed if you like um I suppose at some stage you have to say the wave function collapsed uh when the last person looked at it but you could always include that last person into the system and then no collapse happens but then in order to make sense out of the whole thing again you have to imagine some other person so you always have to imagine a hierarchy
+
+01:27:46
+of observation uh and there is such a hierarchy of observation the world is built uh like a uh like an onion uh things inside next thing out next thing out next thing out and each thing gets to observe what's uh in the inside of it question what is the process whereby we move into the classical world and one of those people actually see the definite value well I don't know um I don't think there is any sharp line I I don't think there is any sharp line we tend to describe big systems
+
+01:28:35
+uh as having little uncertainty but um I'm not sure that anything really different happens when uh when a electron looks at another electron or when a cat looks at an electron I think the physics or the mathematical description I think is the same description or at least uh if we want to say something special happened when the cat looked that's not well described by quantum mechanics we have to introduce something about cats uh that uh isn't contained within quantum mechanics and personally I don't believe there is
+
+01:29:17
+anything about cats which is not contained within quantum mechanics so I'm happy with this description I'm happy with this description what makes me happy is that it doesn't matter where you draw the line you can draw the line in one place or the next place or the next place and the results will be consistent if the can't s the spin up Schrodinger will see the cat having seen the spin up and wigo will have seen Schrodinger having seen the cat having seen the spin up that's what the nature
+
+01:29:50
+of the state is so that that I find satisfying that you don't ever have to say where you draw the line and until you draw the line you can put the line as far out as you like until you draw the line everything is described by the rules of uh conventional quantum mechanics um so like you're the cat you definitely drawn the line well okay yeah I mean yeah um look I think at some stage you have to decide for yourself how you think about this I'm not going to try to push my interpretation of quantum mechanics on
+
+01:30:27
+you um particularly since uh I don't know what to say about it except this uh this seems to disturb a lot of people this whole business of systems which for which you can know as much as can be known and know nothing about the parts of the system it seems to disturb people uh is it disturbing I'm you know when Fineman was asked whether he thought there was a problem about quantum mechanics his answer was the problem is so big that he couldn't tell if there was a problem he knew how to use it he knew how to
+
+01:31:07
+predict with it he could predict anything that he wanted to predict uh that had a that had an answer and uh he did not expect I'm qu I'm actually speaking about myself now but uh he and for him he did not expect that quantum mechanics would ever go wrong that the rules would always be satisfied but is there a problem because of this sense of unreality about where actual objective where objectively does something happen does the objective death of the cat happen when the cat looks at the atom or is it when
+
+01:31:43
+Schrodinger looks at the cat or was it is it when wigner looks at schinger where does the objective phenomenon happen and maybe we're just um playing with words there maybe we're playing with words trying to use words in a context where they don't apply but you have to decide that yourself my goal is to give you the tools to be able to ask the question and uh I doubt seriously that you're going to answer the question even for yourself you'll probably come away feeling as uncomfortable uh about
+
+01:32:16
+it but you'll know why you're uncomfortable you'll know what it is with some Precision that's making you uncomfortable about it at least I hope at least that's uh my goal all right um in the equation you put up there with the the ey forget about just the ey the equation you wrote that implies there's a correlation of one between the state of the system the apparatus the composite State and the state of the eye the eye yeah so would it in other words the eye has become entangled with the rest of the system
+
+01:32:54
+now suppose your vision wasn't so good that is what you call a weak measurement yeah look no no that can happen there can be partial there can be partial entanglement for sure I've given you a kind of idealized situation right no no right question no it's a serious question people uh people talk so good you're not quite sure what the apparatus is say well your I no no okay there could be several reasons why your eye was no good first of all it could be that the interaction with the apparatus
+
+01:33:28
+was simply too weak that there wasn't enough oomph in the interaction it wasn't that your eye was bad it just wasn't enough coupling between the two systems and then you only get partial information or it could be that your eye is bad because you have cataracts let's say all right in that case the eye did a measurement it became entangled with the uh with the system completely it's just the connection between the uh the stuff in your eye and your brain wasn't uh good enough to send the
+
+01:34:06
+signal back to your brain so so the correlation happened uh but uh it was a bit it was a bit messy is that a detector efficiency problem that uh sometimes it's a detector efficiency problem and sometimes it's a problem well detector efficiency could have to do with the strength of interaction with a system or it could just be that it's too hard to get the signal out so I'm not sure what detector efficiency really means but I could think of several things one is the signal is there it imprinted itself on
+
+01:34:38
+the system and you personally have a hard time getting it out the other is that the interaction was not strong enough to really establish a full entanglement between these systems both can happen how about a lip reader watching a dub movie right so would it affect L detector you can think of all sorts of variance on this would you would it affect a l detector sir let's say there was a bad detector in between that got entangled and then I had a perfectly good detector later on would it affect the measurement
+
+01:35:11
+of that well I think this probably I guess the weakest link is where you uh yeah all right let's talk about locality let's talk about let's talk about locality and entanglement which is really where people get hung up I mean and the villain the arch villain here who really Tangled things badly was Einstein Einstein and not that he asked a question of course he asked a wonderful question about entangled systems really our understanding of entanglement and much of what we think about it and our curiosity about it goes
+
+01:35:56
+back to Einstein's question in 1933 uh who was very much puzzled by this idea that you could have a system about which you knew everything and yet you knew nothing about the components of it and uh he wrote a paper simply complaining about it I don't know if he was the first one to notice the phenomenon of entanglement I have a feeling not he was the first one to get really exercised by it and say something is very peculiar here that that I find uh quite okay he then used the term uh what what was the term again
+
+01:36:37
+um spooky action at a distance and that got everybody confused afterwards because Einstein knew exactly what action at a distance meant and it didn't mean what he meant when he was using it in this context action at a distance literally means forces between systems at a distance the ability to affect the outcome of an experiment at one place by doing something at another place action at a distance um the Kum force between electrons now of course in in the real world it's not action at a distance but
+
+01:37:22
+in Newton's World well Newton didn't know about electrons Newton knew about the gravity in Newton's world the gravitational interaction was action at a distance and the meaning of that from our point of view is that if something came along and gave the the uh the Sun a sudden shove we would know it instantly for the simple reason that uh that the orbit of the of the Earth would instantly react to the change in position of the sun the force on the Earth would inst stly react and so every
+
+01:37:57
+measurement of everything that you might want to measure would be to some extent or another Modified by the sudden uh the sudden change in the orbit of the sun that's what action at a distance meant the ability if you like to send a signal by shoving the sun you're sending a signal to Earth and you're sending it instantaneously if there's action at a distance Einstein must have known I am certain that he knew that entanglement did not entail action at a distance in that sense um what one can do what one can work
+
+01:38:38
+out is supposing you start I'll give you something you can try to play with and see if you can work it out supposing you start with a system which is a two-part system it has a wave function s of A and B and from that system you can construct a density mat here Alice and Bob you can construct a density Matrix Row for Alice that density Matrix contains every possible or um statistical prediction that Alice can ever make for her subsystem a now let's imagine that Alice and Bob took their subsystems Alice went uh to a distant
+
+01:39:25
+planet Bob stayed in paloalto and they're very far from one another so far that it would take light four years to get from one place to another Bob does an experiment that means now this is this is an entang this could be an entangled State this is not a non-entangled state Bob does an experiment and that has an effect on his half of the system here but it has no effect whatever on Alice's density Matrix perhaps I can prove that I'm not going to prove that tonight it uh it's not too hard to prove that
+
+01:40:06
+any physically allowable change in this wave function which only involves Bob half of it the process of interacting with some other system or whatever it is Bob gives his electron a knock whatever he does to it he will not have any effect on Alice's density Matrix that's the way quantum mechanics is really put together and the implication is that anything that Bob does Suddenly at a fixed instant of time will not have any effect on any prediction or any or the success of any prediction it will have no effect on the
+
+01:40:46
+statistical probabilities of Alice measuring anything about a it just will not uh um so in that sense it was impossible for Bob to send a message to Alice suddenly now of course he can do an experiment on his subsystem and after he's done the experiment he can then send a telegram to Alice far away in the standard way that you send messages and tell her what there is so again uh this is an entangled state it could be up down minine is down up when Al when Bob does a measurement on his spin it has no effect on Alice's
+
+01:41:34
+density Matrix he can then send Alice a message and say look I saw down and Alice will say ah yeah that's because I saw up they were correlated I thought they were correlated and you just confirmed that I measured up few few months ago and in fact I'm now getting you Telegram and it tells me that you got down and uh that's consistent everything is fine nobody sent any message faster than the speed of light the mere fact that when uh Bob measures his variable he instantly knows something about Alice's
+
+01:42:13
+is no no source of anxiety for uh for locality this would happen for for nickels and dimes if for perfectly classical systems the peculiarity is different than that the peculiarity has to do with this idea that you can know everything about a system and yet know nothing about its parts um what what is it then if this locality the standard physicist definition of locality is not at risk and uh you can't send signals faster what is it that Einstein meant and what did Bell mean and what did all
+
+01:42:52
+the other people who talk about these things mean when they said entanglement entails a degree of nonlocality so I'll try to explain to you by imagining a game yeah if Bob made a measurement and Alice did not and Bob sent Alice a message after his measurement would that information alone be enough to change Alice's density IND be enough to what to change Alice's density Matrix oh yeah if Alice sends a real if Bob sends a real message and Alice hasn't looked yet okay so let's
+
+01:43:33
+say Bob Alice has not looked she doesn't know anything yet and as far as she's concerned the density Matrix is consistent with that and basically tells her nothing that's a density Matrix which hasn't got very much information in it about her Spin and then she gets a telegram from Bob saying my spin was up as far as Alice is concerned that collapses her density Matrix and tells her her spin is down so if thereafter she will use a density Matrix which says that her spin is down so yes once a
+
+01:44:07
+message has had time to go between them yes then she will uh she will know something that she didn't know before and she will therefore update her density Matrix but that will only take place after uh after there's been sufficient time to uh for the signal to propagate yeah um if I understand correctly the statements that we're making here are about expected values of of of these experments right yes but when you realize it once you're actually not going to get the expected value
+
+01:44:43
+you're going to get but this also holds for every value not just expected values right uh no expected or expectation Valu or whatever you want to call them average values if you know the average values of all variables you don't need to know let's okay supposing we have one variable that we're interested in let's call it l again if we know the average value of L the average value of L squared the average value of L cubed dot dot dot we know the whole probability distribution
+
+01:45:19
+of L this is called knowing the moments all of the moments of a probability distribution if we know all the expectation values of l l s l cubed actually for a single spin you only need the spin and the spin squared uh then you know the full probability distribution once you know the full probability distribution that's all you can know so um so knowing all knowing a full set of expectation values like this is knowing everything that Alice can know about the system realiz expent oh that that's right yes
+
+01:46:01
+yeah yeah yeah yeah yeah that's that's right they are they guaranteed to be opposite yes I guess but Alice cannot find Alice doesn't update her information about it until she gets before Alice gets the information as far as she knows it's half a half but let's let's try to do a little better Al Alice and Bob are now going to each have Min spins right so Charlie is going to give each of them many entangled pairs so Alice has spin number one and Bob has his spin number one and they are
+
+01:46:43
+in the uh relationship of being entangled also Alice has spin number two which is not entangled with spin number one but happens to be entangled with Bob's spin number two Charlie gave him a whole series of these so that they can do statistical experiments and collect statistics um when they've collected statistics they will discover that every time uh Bob is up Alice is down every time Bob is down Alice is up but now they can do a lot more than that they can um let's see what's a what's a good example for
+
+01:47:31
+what uh can be done um yeah right good Bob does all of his experiments here at some instant of time and finds out every one of these finds out exactly what every one of them is doing does that convey any information at all to Alice about which which she knows that just about half of them are up and half of them are down Bob goes and makes his measurement he does his measurement on every single one of them does Alice know anything afterward that she didn't know before no does anything surprising happen when she
+
+01:48:13
+measures these things does the statistics of these things over here in any way change because Bob measured these things no there will be no statistical difference Bob can do his measurement throw his measurement in the waste paper basket but he's measured every single one of these it has no influence at all on what Alice measures but if Bob sends a message to Alice before she does her measurement and says spin one came out plus spin two came out minus blah blah blah then instantly Alice knows everything about
+
+01:48:49
+these in fact he could say Sigma Z equals + one but he decided over here not to measure Sigma Z he said I'm going to measure Sigma X over here minus one and over here he measures Sigma y = +1 having made these measurements without informing Alice in any way does nothing whatever to the statistics of her measurements but if he now sends them she can now decide she can decide to measure anything she wants but but if she decides to measure Sigma Z because she knew that Bob got plus one here and
+
+01:49:29
+sigma X for this one and sigma y for this one we'll find that in every case that they're opposite you keep saying um Bob sends the message I just want to make sure I understand yeah that's telegram it's not him sending it it's her receiving it that matters well of course yes right no the important point is that it takes time to send a message yeah h what I missed okay well yes that is a problem I don't know if the caption it seems like this feeling about spooky action at a distance comes not from
+
+01:50:08
+thinking externally about Bob and Alice doing measurements but almost thinking about inside the system like there are these two separate entities well I will try to give you a precise definition all right now I there is a theorem lurking here I don't know that the theorem has ever been discussed in the computer science Community it's a it's a kind of computer science theorem um whether anybody has actually discussed it in the language I'm going to tell you now I don't know and I don't
+
+01:50:42
+really quite know how to formulate it as a as a theorem I've never tried um but I think I can capture the essence of what the of what this theorem would say if only the theorem could be made precise all we have 10 minutes to try to do this if we go over a little bit uh we'll have to we'll do that here's the game I want to play I want I'm going to write a computer program my computer my computer has a screen okay it has a screen and all the usual things that computers have over here on the screen is a little
+
+01:51:20
+black box and that little black box is called spin you can't see inside it but there's something in it and in here is apparatus a and apparatus a you can see you can see what what it's doing and so forth right it's got a zero it can measure zero or one now here's the game um the memory stores two things the memory stores information about the spin this is a completely classical computer the game going to play is I'm going to fool you into thinking there's really a quantum mechanical system in here how
+
+01:51:59
+are we going to do that we're going to do it by I'm going to write a computer program which completely simulates the classical computer program that completely simulates what happens when an apparatus looks at a at a spin okay so here's the way it's going to go um we're going to start just uh just for convenience we'll start with a spin in a known state right so the apparatus or or the computer program it's not important but the computer program let's say it starts out
+
+01:52:33
+with the spin up or whatever it's doing the apparatus can either read zero or one there's a button over here in this there's a button there's a button over here that you touch and that button is m means you measure means measurement so when you touch that button over here the apparatus measures the spin the computer records two things it records the state Vector of the spin how does it do that by providing two complex numbers stored in the computer are two complex numbers Alpha up and Alpha down
+
+01:53:15
+subject to the constraint that Alpha star Alpha plus Alpha star Alpha is equal to 1 so it stores a information which is equivalent to the state Vector of the spin and the other thing it stores is the direction that you point the apparatus you can move the apparatus around by playing with a computer not move it around but you can reorient it in any direction that you like you start with a spin up now this spin might be interacting with a magnetic field or whatever's happening to it the computer solves the
+
+01:53:50
+Schrodinger equation and solving the rotinger equation for the spin that means it updates the state of the spin you start with a particular State doesn't matter what it is and after a Time T it updates the spin the it updates the state so the computer now knows what Alpha is after a certain time has elapsed then you punch the measure button and the computer takes the state turns it into a pair of probabilities Alpha star Al Al up Alpha star Alpha down the computer now knows the probability for up and
+
+01:54:28
+down and it also has a random number generator random number generators are a dime a dozen and they work very well with a random number generator it then takes the probabilities Alpha up and Alpha down and spits out a number plus or minus one with probability Alpha star Alpha and Alpha star Alpha so it just simulates the quantum mechanics by having a random number generator that either spits out plus one or minus one but with a probability that's given by Alpha star Alpha all right but then the computer
+
+01:55:07
+then whatever the answer is whatever the answer that the apparatus spit out the computer then updates once again the state of the spin and says it is in the state that the apparatus measured so if the apparatus spits out plus one along some axis the you you get to turn the apparatus but uh because when you get to turn the apparatus you have to do a slightly complicated calculation to find out what the what the statistics are but once you've done it whatever the answer is the computer goes back and updates the
+
+01:55:48
+state of the spin to make it consistent with what the apparatus measured you can do this you can try to write a program this a program that uh that could be written it's probably not even terribly complicated and if you were only got to look at the measuring button decide to measure and look at the outcome you would get everything exactly equivalent to the extent that a random number generator can be a good faithful random number generator you would completely simulate the quantum mechanics of the
+
+01:56:19
+system the lesson is that quantum mechanics can be a special case of classical physics so what's going on what the if quantum mechanics can be a special case of classical mechanics what's all this um uh confusion about quantum mechanics being logically different all right now we want to play the same game with a pair of spins question you said that qu you're trying to say quantum mechanics is a um a special case of classical but I thought in classical everything was deterministic but introducing the
+
+01:56:53
+probability okay but it's on yeah yeah yeah but it's own this is a classical computer and it's using a classical number generator a classical random number generator right so you do have to add in a but the difference between quantum mechanics and classical mechanics isn't Randomness you can generate all sorts of random number generators that would easily fool you into thinking they were really random course any real random number generator the numbers come from somewhere so they're not strictly random but uh you
+
+01:57:25
+can sure make a random number generator that would fool anybody so yeah you can you can build you can build a computer program to simulate the quantum mechanics basically of any system that you like by the Same by the same method okay but now supposing you wanted to simulate a system consisting of two electrons there's two electrons two boxes here and you wanted to do it with two two computers and in the process of taking the electrons apart from each other so as to ask this question about the you
+
+01:58:01
+want to take the computers you want to encode the information about Alice's spin in one computer and Bob's spin in the other computer physically separate them and ask can these computers simulate quantum mechanics so I'll tell you what the answer is as long as as the um spins are in a product State as long as they start in a product State and they don't interact with each other and therefore stay in a product State then you can do it you can put all of the information about Bob's spinning here
+
+01:58:40
+all the information about Alice's spinning here likewise you can have Bob's apparatus over here you can have Alice's apparatus over here little black boxes and it's just basic Bally two identical uh versions of what I said before you can take the computers physically separate them do experiments on each one and they will completely agree with the results of quantum mechanics because if they're in a product State one doesn't care about the other but then you say what if I wanted
+
+01:59:13
+to put these two spins in an entangled State well first of all to put them in an entangled State you cannot do it without bringing the computerss together bringing the computers together so that they talk to each other you can you can record in the combined computer system now they they're brought together how many uh how many uh numbers does it take to to specify the state of a uh two spin system six so you record six numbers in the computer here six numbers are recorded in the computer and some numbers to reflect uh the
+
+01:59:59
+orientations of various uh of various apparatuses that you might conceive of and then you try to split the computer into two keeping Alice's information in here and Bob's information in here separate them and try to simulate the quantum mechanics of the uh of the entire angled system Bell's theorem is what tells you that you cannot do this unless there instantaneous action at a distance phenomena taking place between the a wires between the computer so to speak hidden wires that have to be part
+
+02:00:41
+of the system connecting the computers together you canot simulate the uh the quantum mechanics with a classical computer system you can't simulate the quantum mechanics of an entangled system unless it's really just one computer really when one computer means that signals can be transmitted back and forth basically instantly that's what Bells theorem really says now is this is this a form of non-locality well you might think that if to if if you really have to have these wires there to
+
+02:01:20
+simulate quantum mechanics then why can't you send an instantaneous message through these wires of course you can but not if you only allow yourself to do the things which quantum mechanics permits for example there are things that quantum mechanics doesn't permit it doesn't allow you to measure the X and Y component of a spin simultaneously all kinds of things that it does not permit you to do because they correspond to non-commuting operators if you restrict yourself to the measurements which quantum mechanics
+
+02:01:52
+allow allows you to do on either one of these or any combination of them then it's a very magical and special fact that you cannot send information faster than the speed of light you cannot send information instantaneously by this computer setup what if you assign not probabilities but conditional probabilities doesn't matter doesn't matter if you want to simulate a Quantum system with a classical system of computers and you want to study entangled systems the computers have to be able to communicate with each other
+
+02:02:26
+instantaneously that's that's the content of Bell's theorem now does that mean that there's any action spooky action at a distance or does it just mean that you've gotten yourself into trouble by trying to simulate quantum mechanics with classical mechanics my view is that you've gotten yourself into trouble by trying to simulate something which just doesn't want to be described by a classical computer system and it's a deep and interesting fact about quantum mechanics Einstein's
+
+02:02:58
+view was that this is basically evidence that uh that the description is incomplete and that there are other variables of the system and Bell's conclusion was those other variables have to be uh hidden wires that connect distant places so you can take it for however you see it yourself yes so if you had a quantum computer there and let's say when you had the state you had a quantum computer you could do it and you separated it right now when you observe Bob's computer now you know something about Alice is right
+
+02:03:40
+but you can't really still send no it's the same problem right but look all a quantum computer is is an electron in this computer and an electron that's all it is it's just a Quantum system right it's just a true Quantum system a Quantum system in each one of these which has been entangled that's all a quantum computer is it's a quantum mechanical system which can reflect the uh The Logical structures of quantum mechanics and the way you make it is by actually making a pair of entangled
+
+02:04:11
+electrons in there something real has been entangled between them and it can't be simulated by a fake computer program unless the computer uh has this property of uh but you still have the problem of transmitting that information somehow oh no you have sure sure right um You you could sort of hack this problem away if you using your analogy we said that their pseudo random generators were synchronized so there are actually you know notand um Pro that you can do yeah yeah no but what you can't do what you can't do is
+
+02:04:53
+synchronize them in advance and then not let them interact with each other that won't do it the random numbers have to be random number generators have to be such that what this one measures responds to what that one measured like like for example what what I meant to say expl very well is that the random number of generators are are synchronized at the beginning and whenever you measure they because they're synchronized they will always generate up and down reversed no they lose the memory lose the memory ofly
+
+02:05:30
+State no it's simply it's simply not enough this is what the theorem says it is not enough to synchronize them in advance and then take them apart they've got to continue to interact with each other that's what that's what it says that they must continue to interact with each other and feed information back and forth somebody the problem with the delayed choice is if you put a filter in Bob's instrument then instantaneously Alice's correlation was affected even if she is
+
+02:06:10
+years I told you everything I know about it and what I know about it is that there's nothing Bob can do which can influence the statistics of Alice's measurements without sending her a a measure have to depend instantaneously on the set of the dist instrument okay yeah um one more minute one two more questions forget action at a distance of two separate computers I just find it interesting that if you have a single computer are you saying you can actually classically simulate uh quantum mechanics yes you
+
+02:06:50
+can classically simulate quantum mechanics but you basically have to do it within a single computer where all parts of it speak to every other part you cannot physically take them apart the way you would want to take the quantum systems apart confused on being able to measure the system of the versus the parts it seems like you're measuring the parts of the system Bob's making a measure of the part Al is Mak a meas part I think one of the statements you made was that you the entire no no an entangled system Bob can do his
+
+02:07:27
+measurements Alice can do her measurements but there are other things that can be measured besides just the things that Alice would measure on her system or the things that Bob would measure for example neither Bob nor Alice by themselves can measure Sigma x * tox it takes both of them to do it it takes both detectors it takes both apparatuses to make a measurement of Sigma x * tox this is something that you cannot measure now you can measure it with two apparatuses the question is are there anything
+
+02:08:01
+things that you could measure that you couldn't measure even with those two apparatuses and yes there are Sigma X tox plus Sigma y toy plus Sigma Z to Z is something that cannot even be measured by using both apparatuses it takes a new kind of apparatus which is not a combin of Alice's and Bob's original apparatuses which each measure a bob thing and an ALICE thing Bob cannot measure the entanglement nobody can measure entanglement you have to talk to there's an entanglement uh now Bob can discover
+
+02:08:43
+that he's got the if he has nobody can do anything with one event but if we have a whole replication like I described over where where did I describe it where we have many replicas of the same thing many replicas of the same thing then Bob can discover the fact that his state is entangled with something and the way he does it is he says let me search around for a direction in space for which the spins are definitely aligned in there some direction here's what he knows he knows that all the
+
+02:09:18
+systems were prepared in the same way they're all identical each pair is identical to each other pair is identical to each other pair and he's wondering could each one of these be in a product State same product state for this one same product state for that one same product state for that one if they're in a product State then Bob can search around he's got enough versions of it enough uh trials that he can go on and on with experiments forever and he can search around for a Direction Where when he measures the
+
+02:09:51
+spin his spin he always discovers that it's up now the first time he he may be in the wrong direction and he'll find down next time he may find up he'll try it again it'll be down wrong direction and he keeps searching around if it's a product State he will eventually find the direction where the spin will continue to be up up up up after he's found it if it's an entangled State no matter what direction he measures he will will always find this uh the spins are random okay that's that's the character
+
+02:10:28
+of it and that's on separate measurements right on separate discrete measurements not the measurement of the same thing no you you've got to have an ensemble of identical systems to do to do anything like this you just prepare each one the same way you do an experiment and he doesn't care about Alice he's just going to measure his spin along some axis another axxis another axis until he finds one where he keeps repetitively getting the same answer and then he says that's the direction that that spin is
+
+02:11:01
+polarized and then he keeps doing it and finds consistency he'll never find that unless it's a uh product state so it's pretty pretty interesting stuff hard stuff for more please visit us at stanford.edu
+

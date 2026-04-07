@@ -1,0 +1,495 @@
+00:00:01
+[Music] Stanford University so let's begin I'm going to review very quickly I hope quickly we described a simple system consisting of one cubit I'm going to change my terminology a little bit I'm going to start calling that Cubit a spin don't worry about what it has to do with spinning at the moment of course more important is that it's a little point now I use the term pointer I began to use the word pointer to refer to vectors in three-dimensional space while I was writing I realized
+
+00:00:41
+that that's awfully awkward and um unfamiliar terminology and I decided to replace it with another term the the standard term three vectors vectors in three-dimensional space I may sometimes use the term pointer but I think I'm more likely to speak of three vectors and a three Vector means a vector in real space the more General concept when I when I simply say Vector more likely I'm speaking about the abstract notion of a vector space and the elements of a vector space just uh to warn you and keep the
+
+00:01:19
+language uh clear now we talked about this Cubit which is now become a spin it has some of the character of being a little three Vector in space there is some sense or other in which it points in a direction and that we can confirm by an experiment uh as was said before once we start thinking about quantum mechanics we really do have to think about systems and their connection with apparat apparati is that a word apparati I'm not sure apparatuses apparatuses I'm not sure what the plural apparat anybody know the
+
+00:02:02
+app the plural of apparatus apparatus oh just apparatus okay just apparatus um we do have to think about the connection with their apparatuses that measure them and we don't get away with just ignoring it what what's the difference first of all I'll tell you what the basic differences in classical physics and Quantum quantum physics in classical physics measurements can be arbitrarily gentle arbitrarily gentle means that you can find out anything that you want about a system in principle by
+
+00:02:40
+interacting with it with something that changes anything about it by an arbitrarily small amount for example you want to locate the location of a particle in classical physics how do you do it you shine some light on it you shine some light on it and you make an image of course you have to use light which is small enough wavelength that it can resolve the the object this is true but there's no limit to how weak a light signal can be at a given wavelength you can make the light signal as weak as you like so that it
+
+00:03:23
+carries as little energy as you like as little momentum as you like let it interact with the thing you're interested in form an image and then after that image has been formed it can be magnified not magnified in the sense of making it bigger but what's the right word for uh Amplified it can be Amplified and so the experiment itself can be arbitrarily gentle and still find out anything you might want to know about the system the result of that is an experiment can always be done which has no effect whatever
+
+00:04:00
+on future experiments on subsequent experiments done for example right afterwards that's classical physics quantum physics is not like that quantum physics is such that experiments inevitably change systems any experiment to measure something will change something else it's almost as though the experiment to measure coins was such that every time I looked looked at the coin the coin jumped up in the air and uh and uh randomly flipped itself we know that doesn't happen and we can measure the
+
+00:04:38
+state of the coin gently without changing it quantum mechanics not so clear not well it is clear it's clear that that cannot be done okay but let's uh we're going to talk a little bit before we move on to more about Vector spaces and operators and the mathematics of uh quantum theory I want to talk a little more about the logic of it and in what way logic in quantum mechanics is different than logic In classical physics uh let's go back to our Spin and our apparatus the spin is a I'll draw it as a little arrow whether
+
+00:05:18
+it truly corresponds to anything that looks like a classical Arrow or not is irrelevant we have to draw it on the Blackboard and anything I draw on the Blackboard will be classical uh just because ink and pens are classical or approximately classical and an apparatus the apparatus is a window that uh that has a number that comes out of it number appears in the window tells you the result of the experiment and it also happens to have a direction in it which tells you which side which side is up how to orient it
+
+00:05:50
+uh in fact it might have a whole set of three axes that tell you how to orient it but that's not important just the up Axis is what's important and when the apparatus is pointing up the only in fact no matter what direction the apparatus is pointing in when it interacts with the spin it produces a number in the window and that number in the window is either + one or minus one no matter what direction the apparatus is pointing in and no matter what has happened to the spin beforehand when the apparatus is
+
+00:06:24
+pointing up we will say that what it has measured is the Z component of spin let's put some axes in here Z up x to the right and Y out of the Blackboard and when the apparatus is pointing up we'll say that it produces an experimental experimental number which measures the Z component of the spin now is that particularly interesting to think of it as having a directionality when we say it's a z component of the spin we're imagining that this object here has a sense of direction ality to it how can we test if
+
+00:07:02
+it has a direction a sense of directionality to it well we can prepare the spin in a state of what we think is pointing up by simply letting it interact with the apparatus and when the apparatus appears with a plus one sign in it we'll say ahuh the spin is up if we do it again with the same apparatus pointing in the same direction with the same spin we'll get up up again and up again and up again in that sense quantum mechanics allows for reproducible experiments if you measure the same
+
+00:07:41
+thing several times in a row with the same apparatus you will get the same answer over and over so things are not that weird and that's awfully important because we have to have some concept of reproducibility of experimental results in order to make any sense out of things so this is a good thing when you measure something and you measure it again and again and again you get the same answer yeah so how does that fit in with what you just said that we're going to come to it we're going to come to it we're
+
+00:08:09
+going to come to it well I didn't say that experiments are necessarily so ungentle that when you measure anything you affect everything the answer is you affect some things in this case when you measure something you don't affect that same thing if you measure it again the same thing again you'll get the same answer okay now you could then say all now that I have detected that the spin is up let me turn the the uh the apparatus completely over and point down If This Were a thermometer measuring the temperature I
+
+00:08:45
+don't think we would expect it to measure minus the temperature if we turned it over right no not not not if it was any kind of decent thermometer so we would therefore to say that the the temperature does not have a sense of orientation certainly not in this Sense on the other hand if this is a true Spin and we turn the apparatus over if initially the apparatus told us that the spin was plus one after we've turned it over and do the experiment again it will register minus one so it seems to indicate that there is a sense
+
+00:09:21
+of directionality and of course uh yeah the same thing is true no matter what direction we hold the apparatus in if we hold the apparatus in the horizontal Direction and come along and detect a spin that we know nothing about we have not yet made a measurement on it maybe somebody else has made a measurement on it maybe some agent unavailable to us who uh some secret uh uh secret person has done something to that spin but we don't care we don't know about it we come in with our detector and we make a
+
+00:10:05
+measurement what will we measure again we will measure plus one or minus one and if we're beginning to think of this thing as having a sense of direction to it we might say that what we're measuring now is this x component of the spin whereas previously we were measuring the Z component of the spin let's give them names this Sigma Z which is the component of the spin along the vertical axis at the moment yet I'm not asking you to think that these notion of component is the same as the notion of
+
+00:10:41
+component in classical physics it's just a name for the moment and sigma Z whenever it's measured is plus or minus one the same thing happens when we turn the apparatus on its side and we measure the same same procedure we measure something that we can now call Sigma X and sigma X is always plus or minus one and the same thing if we turn the apparatus around so that it's facing frontward in fact no matter what direction we Orient the apparatus it always gives us plus or minus one this would be a little bit strange
+
+00:11:16
+more than a little bit strange if this object really were a classical Vector a little Vector perhaps a vector of unit length if it were a vector of unit length and this detector were really measuring the component of spin along its own axis there is no way that it would just give plus or minus one right components of vectors even if the vector is required to have exactly unit length here's a vector with exactly unit length a uh a pointer a three Vector of exactly unit length if we turn it and do other things with it the X
+
+00:11:51
+component or the Z component can be any number between minus1 and one so this is a funny Vector if it's a vector ctor at all but still it does seem to have a sense of orientation the results of experiments do seem to change when you rotate detectors in particular If You Begin by orienting the Spin along the z-axis in the up Direction let's call this up that means Sigma Z is equal to+ one and then rotate the apparatus detect it again you won't necess necessarily get + one in fact you
+
+00:12:32
+may get plus one or you may get minus one with equal probability you could do the experiment over and over and over again half the times you would get Sigma x = +1 half the times you would get Sigma xal minus1 even though you knew Sigma Z was exactly + one in each case so um something's funny but what is true is that the average value of Sigma X will be one sorry will be zero if the initial starting point was a spin that was up along the z-axis same for the y axis if the initial value of the spin was prepared
+
+00:13:17
+to be up along the z-axis and you rotate the apparatus into the Y orientation again you'll have equal probability and so the average value of Sigma y y will be zero you can even go beyond that you can say let's start with the apparatus not vertical but let's start with the appar the apparatus along the X Direction use it to prepare the spin so that it's known to be pointing horizontal along the X Direction in other words Sigma X is equal to + one and then do a y or Z experiment always we will get random but
+
+00:13:57
+equal probabilities for up and down or or plus or minus one you go a little bit further now of course I am quoting what would be the results of experiments on spins I've never done such an experiment I don't think I could uh but I have no doubt that if I had the skill to do it this is what would happen What suppose we start out and we have not prepared spit it all doesn't matter okay go ahead so it could be up or down or X or z y we don't know we don't know what it's we don't know what it is and we set it up
+
+00:14:42
+so that the uh apparatus is on inside all the x- axis okay um and we do lots of measurements we going to what's what's well we first do one measurement before we do anything El yeah let me come back for a second let me let me come back a second you're right we want to do a lot of experiments and a lot of measurements in quantum mechanics there are two distinct ways we could do lots of experiments it really doesn't matter which which we do we could imagine having a large number of identical spins prepared the
+
+00:15:13
+beginning however they were prepared and we can do experiments on a large number of them or we can do repeated experiments on the same spin to a large extent it doesn't matter which we're talking about and I'll tell you when it matters but at the moment all we're talking about is one spin you said start the apparatus horizontal stick the spin into it and detect what you get what you get will either be plus one or minus one okay you could then take the spin out of there give it to your friend who uh does
+
+00:15:52
+some magic with spins you don't know what it is you you don't know what the hell he does with it he flips it around juggles it puts it in his pocket takes it out and gives it back to you and tells you to do it again again you'll get plus one or minus one it may be that he did nothing in which case the second time you'll get the same answer you got the first time or it may have been that he turned it over in which case you'll get the opposite answer but whatever you get it will be plus one or minus
+
+00:16:20
+one okay then if you do a repeated experiment knowing that nothing else was done to the spin in between you'll get the same answer if you do the same experiment okay that's uh good okay so let's be a little more General let's suppose that we Orient the axis of the detector in any direction so let's make a notation for a direction a unit 3 Vector a unit 3 Vector unit vectors in three-dimensional space are always indicated by putting a little hat on top of the symbol so this is a unit Vector along a
+
+00:17:04
+particular axis we start with our detector along the axis m not horizontal not vertical not in or out but just a caddy cornered in some some complicated way there m there's M and uh we start with the spin let's start with with a spin previously having been oriented or prepared along a different axis the N axis how do we do that well I should have gone I should have gone a little slower we start with the detector along the N axis do an experiment and discover that along the N axis the spin comes up+
+
+00:18:04
+one then we rotate the apparatus into the M Direction and we do another experiment on the same spin it will either come up plus one or minus one along the ma AIS never in between but the average value of the spin along the ma axis here will not be one one it will not be minus one what will it be it will be the cosine of the angle between M and N other words the component of M along n how do we write that let's write that let's write a formula for that the symbol for averages in quantum mechanics are a pair of angular brackets
+
+00:18:53
+like this this one is called a bra this one is called a cat and the whole thing makes a bra k which is British for bracket okay the average value of Sigma M knowing that it was originally oriented along the N Direction and measured along the M direction is the cosine of the angle between n and M which can also be written as n.m the ordinary dotproduct of the vectors or just the component of n along M the spin was oriented in the N Direction You measured it along the M Direction and the answer is plus or
+
+00:19:47
+minus one but on the average it's what a classical physicist might have expected if he measured the component of a spin which is oriented in One Direction along some other direction this is exactly the component of M along n all right so uh if you do the experiment many many times and collect averages it seems in fact that the average quantities do behave like vectors or like three vectors but the individual experiments are very resistant to giving any answer other than plus or minus one okay so this
+
+00:20:27
+now doesn't know how the apparatus doesn't know how to give any answer other than plus or minus one doesn't know how to well doesn't know how to give any uh you might try to build another apparatus that does better but it won't do better make sure I understand the setup here you the setup is that you prepare the um the spin along the N axis and then you measure it along the ma axis right and you get a random answer but random bias biased in such a way that uh that the average is n.m that for example would
+
+00:21:05
+mean that if n and M were the same direction that you didn't rotate it at all what is n.m in that case one right and that would just be an indication that you got the same answer if n was up and you did the experiment You' get it up and up and up over and over and over again okay um wouldn't it be I want to be very rigorous here wouldn't it be more accurate to say the expected value would be n times n rather the average no no my friend Murray Gilman loves to say the expected value it is
+
+00:21:44
+not the expected value if I gave you a probability distribution which look like this what would be the expected value that you would have the expect the least expected value would be the one right in the middle but the average value would be the one right in the middle okay expected Val expected values and average values are very different in general and this is the average value the average if you average the quantity that you get in the standard sense of averaging standard average it's also called the expectation value
+
+00:22:33
+but again that's a misnomer it's not the it's not the value that you expect necessarily just want to make sure thing about this right the spin the only thing we know about the spin is that when we measure we get plus one or minus one that's all really that's all that's well that's all we know until we start doing a lot of exper about the Z component of this and that that all has to do with results from the apparatus that's right has nothing to do with the thing I mean
+
+00:22:59
+well at least opor well there are different experiments that you can do on the spin the results of those experiments can be used or the particular experiment you you you do can be used to label what it is that you measured I guess what I guess the point I'm trying to make is at one point you were drawing a spin as having an arrow either up or down and that seem to me of prejudice it's it's either plus one or minus one whatever that means we don't know there's no geometric meaning to it
+
+00:23:35
+yeah that's right there's no geometric meaning to it obviously to begin with but we did discover that by turning the this thing over we always get the opposite sign well that's starting to tell us there's some difference between the apparatus up and the apparatus down it's not not like a thermometer measuring temperature some notion there that it's different to uh to be up and down and then if we turn it on a side we find out that in some sense it really does behave on the average like a
+
+00:24:05
+vector on the average okay but it is what it is but but that Vector changes depend on how it's been prepared in other words when you prepare it you may have an something with an X component if you've got the apparat one way but if you have if you prepare it with the apparat another way it may have a z component is that correct yeah okay yeah but it is what it is and I've told you the facts the facts are if you first prepare by putting your apparatus along One Direction and then measure
+
+00:24:45
+with your apparatus along the other direction the average value of the result will be n.m but every single event will be a plus one or a minus one Nothing Left to Say say It Anyway slightly different is that if it's if n and M are along the same direction or opposite direction then it isn't just an average it repeats itself yeah whereas if it's any of the others it's an average yeah right it's still an average right but if a number or a result can only be plus or minus one and the
+
+00:25:21
+average is plus one it means every event was plus one right okay let's talk about logic a little bit our problem with quantum mechanics is that logic the logic of the of quantum systems is different than the logic of classical systems but our brains are classical systems and incapable of thinking in Quantum logic nevertheless we can get a glimmering of what quantum logic is like by thinking about these experiments um we could either talk about the calculus of propositions or the nature of the states
+
+00:26:15
+of a system the space of states of a system let's start with the space of states of a system the space of states of a system and think classically for a moment they're a set and they're a set of possible States here they are heads Tails 6 5 4 3 2 1 for the D particle on a line would have an infinite number of possible States but the states form a set of some type a proposition about the states of the system is basically a subset it's the subset of states for which the proposition is true okay so uh for the
+
+00:26:57
+D my proposition is the die shows an even face that's a proposition and it's true for half the states of the die and so it corresponds to a subset 2 four and six right there's the contradictory statement the not statement not the die shows an even face which obviously equivalent to the statement the D shows an odd face and so In classical Logic the not of a statement the not means the contradiction of the statement if this is the statement meaning to say it's true for all the subset of states
+
+00:27:42
+in here the not statement is the statement uh is the complement or the collection of things which are not in there okay let's uh let's go to our spin proposition the spin is up along the z-axis what's the knot of that the knot of that is if we measure the spin along the z-axis we get something else other than one the only other possibility is minus one so spin equal minus one along the z-axis is the not statement of the spin is up along the z-axis so logic uh logic makes some sense but we begin to find very peculiar
+
+00:28:29
+differences when we start talking about the operations of combining propositions through the use of and and or and and or are different in quantum mechanics than they are in classical mechanics I want to I want to lay that out it's so interesting and so rarely explained that uh that I I sort of like to uh to explain it yeah not there and if I this correctly in the classical example like the d The Universal set is finite in terms of the number of elements in it number of states in it and the then you jump to
+
+00:29:15
+the cons example and it seems like that would be infinite because all the possible times does that make a difference all the possible what all the possible experiments that you could do is not limited yeah okay you're getting at something important which we're going to get to um it's clear that in some sense the number of states of this spin is finite it's just up or down if we measure it along the z-axis on the other hand it also looks like we can tilt our apparatus in any direction and prepare the state in any
+
+00:29:49
+oriented along any direction so it looks like there's an infinite ambiguity in the state of a system this is what this is the whole point of of trying to understand the states of systems to understand the connection between the continuously different direction that the electron could point in and the fact that anytime we measure it along a given axis it's only up or down but we'll come to it it's a good question but we'll come to it okay let's uh let's talk about the prop calculus of
+
+00:30:20
+propositions if I give you two propositions A and B I can form two combinations of them a or B and A and B let's just see see what that means in terms of uh sets if we have two propositions this one is a this one is B then a and b means the set of states which belong both to a and to B right so it's the intersection of the set a and the set B called logically the intersection or set theoretically the intersection is basically the end operation this point is in a and it's in B okay that's
+
+00:31:08
+straightforward the and any given any two propositions you can always form the uh oh and or another way to say it the right way to say it is this is the set of points in here for which the proposition A and B is true true A and B is true in here and it is true nowhere else okay what about what about these two subsets A and B A and B is still a proposition but it's always false there is no uh there is no state for which A and B is true all right so there are A's and B's that you can put together I mean um my friend
+
+00:32:04
+Sanjay over here is uh uh weighs 600 lb and uh my friend uh that's not a good one there are combinations for which A and B is always false obviously right in particular if you take a and not a it's always false all right but still the definition of A and B is the intersection and it's true for all the states in the intersection or is a little more complicated or at least there are two versions of or there is the exclusive or and the inclusive or in the English language we usually when we use the word
+
+00:32:46
+or we usually mean the exclusive or when we say that uh um I am Jewish and I am Catholic or I'm Catholic I ordinarily mean that I can't be both right that I can't be both and so the usual or is the exclusive or the one you normally think about but in Logic the term or is the inclusive or it means a it's true if a is true it's true if B is true and it's true if both of them are true it's the inclusive or uh so I can correctly say um I am a physicist and I am a father that's true but I can also say I
+
+00:33:37
+am a physicist or I am a father and it is also true why because both of them are true so that's the inclusive or inclusive or corresponds to the union of two sets if I have a and I have B then the inclusive or is everything in both sets or either set okay anything not in both sets anything in either set or in both sets the exclusive or would correspond to things in one set but not the other set the exclusive of or includes uh we will always when whenever I speak of the of or I always mean the
+
+00:34:22
+inclusive or okay so that's and an or what else can you say about them not very much yeah we're going to we're going to now use that concept to try to formulate a set of and and or statements about the spin and then ask how would you verify them how would you verify them how would you verify them and does it mean anything to verify them okay so let's take the two propositions A and B to be Sigma Z is equal to + one + one and sigma X this is a and this is B Sigma X is equal to + one they're both
+
+00:35:23
+propositions we would know how to check either one of them if we wanted to check Sigma a we so the first a we would turn our apparatus vertically upward and measure the spin and we would check it and see true or false if we wanted to find out if B was true or false we would turn the apparatus on its side right in classical logic if there are two propositions you can form the combination A or B let's start with A or B so we'll take a or b and let's think about checking its truth value is it true or is it not all
+
+00:36:03
+right so I we'll we'll design an experiment to try to oh oh and let's uh go back a step let's imagine the hidden ghost in the works has uh previously unknown to us unknown to us has originally oriented the spin upward along the z-axis it's he knows we don't as far as we know we know nothing but uh the ghost in the works has oriented the spin vertically upward just and it doesn't this doesn't matter but we could start that way so the spin is upward and let's check whether a or b is true how
+
+00:36:37
+do we begin let's begin by measuring the spin along the z-axis we put our detector or our apparatus in the vertical Direction and we measure what do we get we get plus one we get plus one because the ghost in the works has uh has made it up one to begin with we don't have to go any further A or B is true A or B includes the possibility that both A and B are true but all it requires to be true is that one of them is true and we've just discover that a is true so A or B is definitely true but now let's do the experiment in
+
+00:37:18
+another way in in a in in an order which would not matter if we were doing classical physics and the reason it doesn't matter when we do classical physics is when we do an experiment it has no necessary effect on the outcome of a later experiment if the experiment is gentle enough so let's do the experiment in the opposite order instead of first finding out whether a is true let's first ask if B is true and then we'll come back and ask if a is true all right secretly the spin is pointing up in the Z Direction so the
+
+00:37:55
+ghost knows that but we don't and so we come along knowing nothing about the spin and say why should I measure why should I measure a first let's first measure B let's first measure the X component of the spin and what do we get we get either plus one or minus one we get plus one or minus one with a 50% probability so there's a 50% probability that b is + one but if B is not Plus + one it doesn't mean that a plus b a A or B is wrong we still have the chance that when we measure a it'll be+
+
+00:38:36
+one okay but the problem is that in measuring B the first time around we Orient we prepare b along the x-axis whatever we get whether it's this way or this way we have prepared that spin along the x-axis what will the next experiment give when we measure it along the z-axis 50% probability of being up and 50% probability of down that means we have a 25% probability of finding both that Sigma X was equal to minus1 and sigma Z is equal to minus1 we have a 50% probability in the first experiment that Sigma X was not equal to
+
+00:39:32
+1 and then in the next experiment we have another 50% probability on top of that that Sigma Z was not equal to one so we have a net probability of one quarter that both A and B were false when we did the experiment in one order when we do the experiment in the other order it is certain that A or B is right why because a is right so what is true in classical physics that the idea of a or b is symmetrical between A and B the idea of the or statement A or B if a or b is true then b or a is true and we find that in
+
+00:40:21
+quantum mechanics the concept of A or B at best can only be defined in a way that depends on the order in which you determine A or B Ian I say that the two propositions are incompletely specified in the quantum mechanical case because you have to give the order right a it isn't like the particle has a certain xpin independent of how you handle it right would you say that's right yeah I would but um I would also say that any attempt to think of a logic of experiments will be different than um quantum mechanics
+
+00:41:05
+thearchy between A and B why the what hierarchy what hierarchy in other words A and B if you measure a then you certain of B if you measure B then you aren't certain of a but you're certain no no no no no let's go back I said the ghost in the Woodwork has made the spin to be pointing up along the z-axis that's a we don't know that but it's true Okay then if we measure Sigma Z first under those circumstances we will surely find that A or B is true but if we measure under under the
+
+00:41:41
+same circumstances the same degree of lack or or presence of knowledge we measure B first we find out that there's a 25% chance that A or B this this composite statement here is false so a question the the operation A or B the result is now going to be a probability it's going to be 25 instead of Z or well not only that but you have to specify which order you determine A and B right so that's in itself an element of something new that the or statement does not unify two statements into a symmetrical uh in a
+
+00:42:21
+symmetrical way question um I'm confused when we uh the the thing has been prepared so that it's up we don't know it's been prepared y we then you know that doesn't that didn't matter just to simplify the story I said that it wouldn't have mattered but we we then do the experiment we do B test by turning machine the apparatus on its side and I thought what you had said is if we now do this multiple times we'll get an average yeah but we're not doing it we're trying to find out but but
+
+00:42:56
+you're saying we're going to prepare you what you're saying is when we do that first measurement on its side we're preparing the the spin again and that would say then then from then on we should always get plus one if if we compare plus one for Sigma X but then if we do Sigma Z we'll get a random answer measuring oneand we're going to get we're going to get a we're going to get a random answer for the first measurement of Sig X about I can't I can't stop the class to uh
+
+00:43:32
+okay question if we have a measurement device to measure two different uh particles and uh why have you gotten why have you jumped the two particles okay uh I was just wondering the act of measurement does it in inductively spread backwards what okay that was all review all right the next thing which I was going to review but I'm not going to because it took too long there Vector spaces I'll just remind you real quickly Vector spaces are sets of elements you can add elements this is not something
+
+00:44:18
+you would do with sets you can add two sets of course to make a bigger set but uh there's no natural single element which is the sum of two elements uh so the elements of set theory namely the basic individual objects are not things that you can add and make new elements um the space of states of a Quantum system is a linear Vector space and that means given any two states you can add them in some sense and make make another state and that's what we're going to explore uh this logic this peculiar
+
+00:45:04
+logic and this peculiar Distortion of logic turns out to be the logic of vector spaces it's a logic which is embedded in the structure of vector spaces in a very neat and uh tidy way and that's why ultimately why Vector spaces are important okay so let's just remember vectors are things that you can add if there are two vectors A and B you can add them you can multiply them by complex numbers every Vector has a dual Vector which is kind of its complex conjugate if we call these objects K
+
+00:45:46
+vectors because they are the second half of a braet then the K the bra vectors which are in onetoone correspondence which are uh for every K Vector there is a bra Vector but it's uh its status is that of a complex conjugate so there's two dual Vector spaces and you can take inner products of vectors a bra Vector with a K Vector okay so the bra vector and the K Vector can be combined together it gives a complex number the inner product is a complex number and it's satisfies that it is
+
+00:46:29
+equal to the complex conjugate complex conjugate of the opposite order so when you take a complex Vector in a complex Vector space and you take the inner product if you interchange the two vectors then that's equivalent to complex conjugation that's pretty much what you need to know that allows you to Define how giving given the idea of a in a product that allows you to define the notion of the length of a vector we usually don't think about the length of the vector we usually think
+
+00:47:05
+about the square of the length of the vector and the square of the length of a vector let's say the vector is a is the inner product with its own conjugate or with its own duel usually we say it's the inner product with itself but that's a sort of slight abusive terminology and this is always real the reason it's always real is because if we interchange a and a we just get back to the same thing but this tells us that the inner product of a Anda is its own complex conjugate being
+
+00:47:39
+its own complex conjugate it's real it's also positive that's easy to prove and it can be thought of as the square of the length of a vector it's analogous to closely analogous to the dotproduct of a three Vector with itself if a and b were three vectors then we wouldn't distinguish the bra and the and the K but we would write that a do B is the dot product between two vectors analogous to this and we would also write that a. a was the square of the length of a okay so the inner product of a vector
+
+00:48:22
+with itself can be thought of as a square of the length of the vector and finally there is the notion of orthogonality two vectors are orthogonal when their inner product is zero orthogonal same definition as for DOT product when the dot product between two vectors is zero those vectors are orthogonal those are the definitions that we need for a vector space the other definition is the definition of the dimensionality of the vector space how many dimensions does a vector space have and the way to decide
+
+00:49:13
+that is by asking what's the maximum number of orthogonal vectors that you can find in the vector space for ordinary vectors let's say in two three four dimensions this is obvious in two Dimensions I can pick a vector just pick any Vector make it a unit Vector just by shrinking its length until it's of unit length and then I look around and I see if I can find another orthogonal Vector to it yeah in fact I can find two one point's this way and one point's that way but that's not that's not an
+
+00:49:47
+important distinction we find one other direction or one other Vector apart from uh apart from a numerical multiple apart from a numerical multiple there is one other Vector which is orthogonal to it and so there are two mutually the maximum number of mutually orthogonal vectors that you can find is two if you go to three directions you can find a third one but no more try to find a fourth one and you run out of directions so three-dimensional space has three mutually orthogonal vectors four-dimensional space has four and so
+
+00:50:21
+forth and the same thing is true of complex Vector spaces we Des described a version of complex Vector spaces which were just column vectors alpha 1 Alpha 2 Alpha 3 dot dot dot and their du which were row vectors which were made up out of the complex conjugate variables and so once we have a vector we can start looking for orthogonal vectors to it vectors which are perpendicular in this sense find another one then look for a third one look for a fourth one however many you find you'll eventually run out of directions that's
+
+00:51:08
+the dimensionality of the space for the special case in which there are only two entries here it's a two-dimensional Vector space you can only find two mutually orthogonal vectors you can find many pairs of mutually orthogonal vectors and just in a real space there's these there's these there's these Point them in any direction but once you find two of them there won't be another one okay so we have the idea of mutually orthogonal vectors and now we have to State what is the connection between a vector space
+
+00:51:43
+and the space of possible states of a Quantum system the quantum system that we're going to deal with is still this very primitive and simple single spin until we get the handle on that we won't want to move to more complicated things is there any restriction that the orthogonal vectors have to be perpendicular to each other that's what orthogonal means well suppose you have a a cube and then you sort of tilt it like a parallelogram it's still three-dimensional but the coordinate
+
+00:52:19
+systems are not perpendicular one of them is not perpendicular and orthogonal are synonymous terms perpendicular and orthogonal both mean right angle you're confused by something and I don't know what it is H yeah yeah I know you are but perpendicular orthogonal right angles they mean all the same things I think you think of linearly independ being but if you have a set of larpent vectors you can extract anal out of them this is true he's not he's not confused this is right linearly independent is different
+
+00:53:11
+than orthogonal orthogonal is linearly independent but linearly independent is less strong than orthogonal these two vectors like that they're linearly independent but they're not orthogonal those are orthogonal okay okay let's we'll come back all right the states of a Quantum system this is a postulate form a vector space form a complex Vector space in fact the space of the simple system we've been discussing form a two-dimensional Vector space let's write down some vectors we
+
+00:53:50
+know some states we know for example that there is a state that can be prepared in which the spin is pointing upward along the z-axis we characterize the state by the experiment that we did to get it in that state that experiment had the apparatus vertically upward and it created a state of the system which either could have been down or up but let's say it's up we can label that state in a number of ways we can call it up we can call it down we can call it plus we can call it well up and down are the same as plus
+
+00:54:32
+and minus we could draw them with little arrows up and down what other ways could we ah we could write it as Sigma Z = + one and sigma zal minus1 they all mean the same thing up down plus minus Sigma Z + one Sigma Z Min - one all the same thing all right so there are two states that we know about that we can access by putting the uh or we can prepare by turning our apparatus upward along the z-axis let's give them names these states are vectors in a vector space according to hypothesis and they can be called let's
+
+00:55:14
+say up and down if it is true that the vector space is as simple as just a the two-dimensional Vector space then that means that any Vector in that space can be written as some linear combination of up and down in other words every Vector in a two-dimensional space can be written in terms of two basis vectors up and down so that's enough to write any state whatever up down all right what about though the state which is made by tilting our apparatus along the x-axis we get something different it's
+
+00:56:05
+not the same thing it's not up because up means up along the z-axis it's not down because down means down along the z- axis and we know they're different because we know the results of experiments on these two different kinds of states will in general be different so we can call those States I tend to call them left and right there's up and down there's right and left those are two other states we could draw them this way if we liked they also correspond to Sigma x = 1 and sigma X =
+
+00:56:45
+minus1 and we could label them if we liked let's label them right and left finally we know that if if we were to turn our apparatus so that the uh the apparatus was pointing along the Y AIS we could access two more we could access two more States I think we call those in and out into the Blackboard and out of the Blackboard and so there's in and out into the Blackboard now of the Blackboard and they correspond to Sigma yal plus or minus one we could label them in and out all of the logic that I've described
+
+00:57:36
+to you in all of the experimental results as we will see we will not see it immediately it took some time to understand all of this it is all summarized by a few statements but the first of which is that the space of all states of that simple system is two-dimensional has only two independent states which means that these other things can be written in terms of up and down Okay so let's uh let's go to General linear combinations of up and down and ask what they mean let's take a vector I guess we can call it a a which
+
+00:58:22
+is of the form a coefficient a complex coefficient alha Al 1 time up plus another complex con another I suppose we should call this Alpha up Alpha up Alpha down times down the alphas are complex numbers in complex Vector spaces you multiply they could be real numbers but in general they will be complex numbers let us suppose we knew what that meant what kind of state was where it came from it's some new Beast it's not up it's not down some was in [Music] between next postulate the next
+
+00:59:07
+postulate is that if we were to measure up and down if we if somebody prepared us an electron or a spin in this state and we measured up and down we would find probabilities for up and down and those probabilities would be probability for up is the square of the magnitude of this coefficient and probability for down is equal to Alpha star down Alpha down in other words it's basically the square of the coefficient or the square of the component of a in the directions up and down these Alphas they're essentially
+
+00:59:56
+the components of a general Vector along the two axes up and down there's something that I failed to tell you it's also a postulate there are many many postulates but you'll see they fit together in a neat package there are probably fewer par postulates than I'm uh than I'm saying uh I'll bet we could reduce it down to four postulates four axioms but uh rather than trying to aati it we'll just uh uh uh do it a little more informally what's the relation between up and
+
+01:00:40
+down are they the negative of each other no they're orthogonal now that's postulate the basic postulate is when things are measurably different when two states are such that you can cleanly tell the difference between them by an experiment they are orthogonal orthogonality literally means they are sufficiently different that you can with a single experiment tell the or maybe a few experiments tell the difference between them uniquely I'll tell you what it corresponds to in terms of sets you might say that two sets are
+
+01:01:24
+orthogonal if they don't share any element elements this is not a standard terminology but you might say it anyway they're orthogonals that don't share any elements that means that distinctly different there's no chance that an experiment will confuse the two of them experiment will a nice experiment to distinguish them will not lead to any ambiguity the same is true of up and down up is distinctly different than down if you measure up you'll measure up again and again and again and the
+
+01:01:53
+version of that in quantum mechanics uh or the implication of that in Quantum Mechanics for the vectors is that things that correspond to physically unambiguous different situations are orthogonal to each other so up and down are orthogonal to each other what if we have a combination of up and down with some coefficients then there's a probability to be up and a probability to be down and the probabilities are given by Alpha star Alpha up and Alpha star Alpha down again that's a postulate but we'll
+
+01:02:35
+see in a moment what that corresponds to well what's the relation between the probability for up and the probability for down the answer is that if we add them we get one and therefore Alpha star Alpha plus beta star beta is equal to 1 any reasonable able state of the system which has total probability one for all the different things that can happen should satisfy that the sum of the probabilities of the distinct probabilities should add up to one and so that says that Alpha star Alpha plus beta not beta Alpha up up
+
+01:03:18
+plus Alpha Down star Alpha down did I use beta before no okay should equal one but that's equivalent to the statement that the inner product of a with itself is equal to one when we think about prove this prove that Alpha star Alpha summed over up and down down is equal to the inner product of a with itself it does follow from the postulates it does follow from the postulates and the assumption that U and D are perpendicular unit vectors U and D are perpendicular unit vectors make that assumption they're
+
+01:04:14
+orthogonal to each other they're unit vectors if they're not unit vectors you can change them until they are unit vectors and then you can prove that the inner product of a vector with itself self is just the sums of the squares or the conjugates times itself okay so that's that's a little thing to prove but what does that say that says that a physical state corresponds to a vector in the vector space of unit length a unit Vector the unit standing for the fact that the total probability is one all
+
+01:04:51
+right so States not only equal vectors in a vector space but they unit vectors the other term for unit vectors is normalized vectors normalized vectors normalized is another word for unit so all physical States all states of what you can do to that electron spin or to anything else correspond to unit vectors and given any such unit Vector the probabilities associated with it are alpha star Alpha up and Alpha star Alpha down right so that uh that is a bit of information but wait a minute what happened to these other vectors right
+
+01:05:58
+and left what happened to right and left right and left seem like different states but according to the postulate right and left must be linear combinations of up and down that's not too surprising because if you prepare right or left and then measure up or down you get plus one or minus one that's all there is plus one or minus one so it's not too surprising that whatever right or left is it's somehow a combination of up and down and that statement is buried in the properties of
+
+01:06:43
+vectors so let's look at the state left no let's look at the state right what do we know about it well we know that it must be a combination Alpha up up up plus Alpha down down we can also write that in the form of a column Vector Alpha up and Alpha down number one number two supposing an electron is created pointing along the right direction the x- axis what are the probabilities for it to be up and down remember half half that means that Alpha up star Alpha up must equal a half and Alpha star down Alpha
+
+01:07:34
+down must equal a half okay let's make a guess let's make a guess the simplest guess would be to put 1/ < TK of two and 1 over square of two here Alpha up is 1/ > two if Alpha is 1un of two what's Alpha star Alpha 12 okay this one's also 1/2 now we could put other we could put some we could put some other things what ambiguity is there we could put a minus sign here or we could put a complex coefficient in front of here without changing the magnitude of it we'll come back to that we'll come back to what
+
+01:08:20
+that means we'll come back to what that ambiguity means but let's take this as a working hypothesis for what the state right is that leaves us with the state left what do we know about left well right and left are physically distinguishable by a single experiment you can Orient your apparatus along the X Direction measure Sigma X and determine unambiguously whether it corresponds to right or left what does that mean about the vectors right and left it means they're orthogonal orthogonal and physically
+
+01:09:07
+measurably distinct are the same things so that tells us that left right should be equal to zero incidentally we have assumed that up down is equal to zero up down or Al by symmetry basically there's nothing different about the x-axis than the z-axis so if the two vectors up and down are orthogonal it stands the reason that the two vectors left and right must be orthogonal here's right is there a vector that's orthogonal to it yeah there there is a vector which is orthogonal to it what is
+
+01:09:49
+it 1/ > two up minus 1 /k of two down down now it's ambiguous whether you put the minus sign here or here either way will work and we'll find out that there's no physical difference between those two possibilities we'll find out later that there's no physics in the overall sign of uh of a vector so here's one which is orthogonal how do we check that this is orthogonal to that well let's let's write the the row let's write the here's the column Vector describing
+
+01:10:30
+right let's write down the row Vector no that's not the column Vector here's the column Vector the column Vector describing right is 1 overun of two 1 over < TK of two that's these two what is the row Vector describing left if we want to take the inner product we want to combine the row Vector with the column Vector so the row Vector describing this guy over here is 1/ < TK two minus 1 over < TK two and to take the inner product between them you take the product of the first coefficient times the first
+
+01:11:10
+coefficient plus the product of the second one times the second one standard rule for taking the inner product between a column vector and a row Vector you match the first component with the first component multiply them second component with the second component multiply them and go right down through the uh through all the components and add them up okay so what's the answer2 sorry 1 of2 * 1 > two that's a half minus 1 of2 * 1 of2 this inner product is zero so we found a second Vector which corresponds to right and
+
+01:11:48
+left a candidate if you like for right and left and what's more you'll notice that this Vector also has the property that there's that the probability for it to be up and down is equal to a half for each one why because the square of this is 1/2 and the square of the magnitude of this one is 1/2 so we have a nice symmetrical relationship between left right and up and down incidentally it's kind of interesting supposing um where's my Eraser your yeah it's kind of interesting I've
+
+01:12:32
+written right and left in terms of up and down I could of course write up and down in terms of right and left let's see what we get if we add these two equations the Downs will cancel and we'll just get up we'll get two over we'll get square of 2 that's 2 over the < TK of 2 * up equals right plus left and then divide by < TK of two and we'll find that down is equal to right minus left over < TK of two so you see there's a complete reciprocal relationship between them um
+
+01:13:14
+if we began our experiments with our apparatus along the X direction we might have started we might have started with left and right and come to the conclusion that up and down are combinations of left and right okay that leaves in and out what about in and- out is there a third pair of vectors in and out which stand in the same relationship to right and left and to left to right and left and to up and down as they stand to each other is there a third combination which has uh which is symmetrically defined all right let's
+
+01:13:59
+let's put it up here we have up and down and they're orthogonal to each other we have right and left right which is equal to 1/ < TK two we can write it as up plus down and left same thing 1/ > two time up minus down we also have right left equal to zero moreover we have something that I'm not going to write but I'll say it anyway if you start and right and you say what's the probability for up and down it's 1/2 if you start with left then ask what's the probability for up
+
+01:14:51
+and down it's 1/2 what happens if you start with up and down what's the probability for right and left well it's also one half we know that's one half from the physics of the situation but it's also true that when I rewrite up and down in terms of right and left the coefficients are also 1/ < TK of two so they're nice and symmetrically related to each other all right so that leaves us with the last possibility or the last perpendicular Direction in out okay so let's try to guess it's
+
+01:15:35
+going to have an up and it's going to have plus a down but there's going to be some coefficients here we don't know what those coefficients are yet what do we know about the coefficients they're complex in general in general they're complex mod squ has to be one the square has to the the magnitude of this square has to be 1/2 we also know that the coefficients here have to be such that in and out are perpendicular to each other and we also should find that if we rewrite in and
+
+01:16:23
+out in terms of left and right he the coefficients should also have modulus 1 12 just by symmetry turns out that's enough to determine them completely I'm not going to prove it that's a homework assignment it's a nice homework assignment let's see what the requirements are the requirements are that in out equals zero that both in or out when written in terms of up or down should have coefficients whose magnitude is a half squared magnitude is a half and also when written in terms of left and
+
+01:17:11
+right the same corresponding coefficients here should have magnitude plus or minus a half that is enough to determine the coefficients in terms in terms of up and down with a small ambiguity which is not interesting I'll tell you later what that ambiguity is has no physics in it first of all is the overall sign of the vectors that has no physics in it as we'll see we'll find out all right what is the solution the solution is one here and I here with a square root of two we have to put a one over Square < TK of Two and
+
+01:17:49
+a one over squ Ro of two and out is the same thing minus I over < tk2 down let's write it in terms of column and row vectors should that be an i over two on the on the end Vector let one well have I I there is that what you're asking I actually had it right it was 1 time I good all right we can write these in terms of column vectors let's write the various column vectors up what would you write for up well we could write one zero up is just up with no with no down component down is just 01
+
+01:18:56
+a one in the down place and a zero in the up place what about right that's equal to 1 / < TK 2 1/ < TK 2 left that's equal [Music] to 1 /un 2 - 1/ < tk2 and now let's put in N is 1 over < TK two I over < TK 2 and WR uh sorry out is equal to I uh 1 over < TK of two minus I over < tk2 first question is this orthogonal to this how do we check we take this times the complex conjugate of this plus this times the complex conjugate of this that's the rule for calculating inner products we
+
+01:20:06
+could construct the row vectors we don't need to oh let's let's let's let's no we don't need to remember that the row vectors have complex conjugate entries all right but it's easy enough to do just the inner product the inner product is the sum of the products of the entries times that complex conjugate all right so one of these has to be complex conjugated what's the product of this with its complex conjugate one2 time one it's just 1/2 so this one times this one gives you
+
+01:20:46
+a 1/2 and how about this times the complex conjugate of this minus 12us 12- I over 2 what's the complex conjugate of I2 minus I two so we have to multiply minus I overk of2 * another minus I overun two which gives us minus a half I * I is minus one so that gives us minus a half and if we add them up we get zero so yes these two are orthogonal to each other the magnitude of the coefficients here the square of the magnitude of the coefficients are each equal to a half which proves that if you're in the
+
+01:21:34
+instate or the outstate the probability of being up or down is2 how about the probability of being left or right how might you figure that out say it again I I defin definition of I is that it's the square root of minus one so I * I is always minus one I is not oh sorry this uh this I is not in no this okay I and out right and left up can stay the way it is and down and now go back through that all of the pages and change it not important actually we could have changed it more easily just change this I to
+
+01:22:40
+Capital I but uh that would be a bad that would be bad form bad form okay is there anything about this coordinate system that that could imply a left or right-handed coordinate system like like a cross yal Z very very good question the answer is yes but we'll come to it yes that's a very very good question um what is it that's in here that is telling us that it's a right-handed coordinate system rather than a left-handed coordinate system and I didn't want to go there yet we'll come
+
+01:23:14
+to it we'll come to it when we explore the POI matrices but uh for the moment we're just uh we're doing we're sort of guessing away bumbling through trying to find vectors which describe uh the various states of the system okay this is my proposal if you like my best guess at the moment for what the states up down those those are Bas that's you start with those in terms of those what right and left are and what in and out are now what you could do we saw that you could rewrite up and
+
+01:23:56
+down in terms of left and right I showed you how to do that and that means you could write I and O in terms of left and right you could check what the coefficients are I hesitate to do it because I'm sure I'll Bumble it on the other hand I'm tempted to do it because I'm sure I'll get it right I'll take one shot at it shot if it doesn't work out okay up is left plus right down is left minus right with a square root of two so let's see if we can figure out what in is first let's just do
+
+01:24:42
+in in is 1 over the < TK of two times up what did I say up was up I said was left Plus is left plus right left plus right but with a one over square with another one overun of two so that gives me a 1 12 that's left over two plus right over two that's scary and then plus I over < TK of two times down anybody remember what down was left minus right over the square so that gives me another that would give me left right over another < TK of two minus left over another < TK of two all right so the whole thing looks
+
+01:26:06
+like second term has two only one the second term no go back that one right there you got half and then got yeah and this can just be 12 theun of Two and a sare and that's gone away right do I have it right good okay so what do we get we get a coefficient times left all right so here we are I is equal to 12 minus I 1 - I over 2 is that right 1 - I over 2 * left plus I think it's 1 + I / 2 * right you mean WR o instead of I there here are we doing I or o I think doing but I'm not sure doesn't
+
+01:27:32
+matter uh I think we were doing this one up is left plus right and down is left minus right with the same ey so I think uh I think that's right okay now What's the magnitude of the two coefficients here then times their complex conjugates let's check that I don't see any square roots of two in this thing do you see any square roots of two in here you might have expected some square roots of two huh nevertheless I maintain that if you take this times its complex conjugate I hope to God it's
+
+01:28:10
+true I maintain that if you take this times its complex conjugate you will get 1/2 let's check it it's 1 - I * 1 + I over 2 * 2 is 4 1 - I * 1 + I oh praise the Lord is two is 2 over 4 which is equal to 12 in other words this coefficient here although it doesn't contain any explicit square root of two it times its complex conjugate is equal to 1/ two so the magnitude of this complex number here is 1 over theun of two it's written in a form that you don't see any explicit one/ roots of two but the magnitude of
+
+01:29:02
+this is 1 over < TK of two and so is the magnitude of this the implication is that if you started in the state I into the Blackboard and instead of measuring up or down you measured left or right the probability would be a half all right so we found three mutually relate they're not orthogonal to each other up and down and not orthogonal to left and right and they're they're orthogonal to each other but they're not orthogonal in the vertical Direction but each one if expanded in any of the others
+
+01:29:48
+would have coefficients whose magnitude was 1 over theare < TK of two so they're symmetrically related in that sense and what this means in effect is that if you start with any one of them and measure the other component if you start with up or down and measure Sigma X or Sigma y you'll get probability a half no matter what you start with any one of these three combination any one of these six combinations and measure a perpendicular combination you'll always get probability plus or
+
+01:30:31
+minus a half now I've put in here some some uh some postulate about what probabilities are without telling you but uh but I think we're coming along pretty well we have some mathematics here which is telling us that this that these um three collections of pairs of vectors are nicely symmetrically related to each other uh and that well that's the most important fact yes we have yeah yes Kevin no no we don't have to this is orthogonal to this oh oh I'm sorry three bases diens that's three bases at angles
+
+01:31:36
+with respect to each other that's a good question the question is could we find oh excellent question could we find another double let's call it um big and little no we already used little L uh fat and skinny yeah fat and skinny can we find another pair such that fat is orthogonal to skinny and the inner product that's what it come that's what it actually came down to or that the expansion coefficients of each one in terms of the other kind of basis are always equal to 1/ < TK of two or always2 in magnitude
+
+01:32:29
+the answer is no there is no third or no fourth combination that's in the same relationship now that's that's not obvious that's not obvious that's not it is the fact that we live in a three-dimensional world it's exactly the fact that we live in a three-dimensional world right it's exactly the fact it's the statement that the three dimensions of space can be represented in two dimensional uh in two dimensional Vector space terms all right let me tell you something else which is
+
+01:33:07
+true if I give you a column Vector let's say a column Vector alpha 1 Alpha 2 or just the coefficients of expansion Alpha up and Alpha down if you like the question is how much freedom is there in the alphas such that it doesn't change the physical nature of the state how much Freedom does every combination of alpha up and Alpha down correspond to a different state the answer is no first of all the total probability has to add up to one so that's one constraint right there that Alpha up star Alpha up plus Alpha
+
+01:33:54
+Down star Alpha down is equal to one there's another fact that we have not got to yet but we will find that every physically observable quantity always associated with a state always involves an alpha times a complex conjugate Alpha we will find that we'll find it it's we won't put it in it will emerge as one of the consequences of the postulates but what it says is that if you multiply both of the alphas here by the same phase Factor does everybody know what a phase factor is a phase factor is a complex number of
+
+01:34:42
+the form e to the I Theta of unit length doesn't change the magnitude of either coefficient here that if we multiply every entry by the same phase Factor it doesn't affect anything that means that if I were to just give you two complex numbers here there are two redundant pieces of information that really don't have anything to do with the physical character of the state the first is the overall magnitude because the overall magnitude should always be such that the sums of the squares of these add up to one so
+
+01:35:23
+that means it's one call it a constraint if you like and a redundancy the redundancy is that if you multiply both entries by the same phase Factor here it also doesn't change the state so then you could ask how many independent variables are there which characterize the state of the system of this system how many of them are there well let's count there are two independent variables if we don't worry about either of these constraints here how many things does it take to characterize two
+
+01:36:02
+complex numbers four four real numbers right but now one of them doesn't count because we have to satisfy the constraint that the total length of this is equal to one one of them doesn't count but also another one doesn't count because the overall phase if we were to multi mply everything by the same phase Factor here it also doesn't count doesn't change the nature of the state so two of those four parameters uh are irrelevant to the physical character of the state how many is that leave over two two real
+
+01:36:44
+numbers how many numbers does it take to characterize the direction of a unit Vector two what are they called longitude and latitude or something like that just the direction of a vector can be characterized by two angles these two pairs of numbers are the same the fact that uh that it takes two real parameters to describe a two component Vector like this is closely related to the fact that it takes two real angles to describe the direction of a three Vector in ordinary threedimensional space if we would have added or more
+
+01:37:33
+components here it would have been more complicated so yes there was a deep connection between the fact very deep connection between the fact that we only find three independent uh combinations like this where are they three independent combinations and that fat and skinny never uh uh we can't find fat and skinny basically they won't be there not without increasing the dimensionality of the vector space that is in fact very deeply connected to three dimensions of space yeah uh if space was nine-dimensional or
+
+01:38:09
+something like that we would not be able to represent the directions of a uh little arrow in it quantum mechanically by two components vectors we would need more components yeah it seems like it seems like just physically you would take three because two to specify the direction and then you got to say whether it's plus one or minus one right oh no no no the plus one no no the plus one and minus one are uh inherit in the the basis right yeah yeah so so how does this scale up if you had like three
+
+01:38:46
+complex numbers in your vector space I mean if you wanted to study some higher dimensional space Oh God we have to figure it out I don't know how many question is how many directions how many parameters are there to um you know it's more complicated I that one I'm not going to try now right I did I gotta I gotta tell you I got really scared when I realized that we weren't going to get any square roots of two by doing this the experiments you described agree with this math and this math is B on or
+
+01:39:25
+correlates with there being three space it is yes all of what you say is true if you said there's nine Dimensions would this this experiment still agree with there would be a version of it there would be a version of it it would be more complicated and you couldn't describe the spin of a particle by just a thing with two components like this it would take more components what kind of apparatus would you spinner Theory similar things similar things don't try to look this is enough for now understanding this um if we went
+
+01:40:10
+to four-dimensional space we would need four component objects but uh that uh but it grows in yeah three to four would be yeah you said the states U sort of correspond to insector what about the other what about nonunit vectors they have any interest here at all uh well of course if you add two unit vectors you can get a non-unit vector you can but then the rule for the states of a system are divided through divided through by an overall Factor until it's normalized they they have the same significance as probability
+
+01:40:52
+distributions which don't sum up to one you can always go back and say if somehow somewhere is along the line I got some answers for probabilities that added up to something greater than one well I would just divide through by the total probability to uh to Define normalized probability distributions so um in intermediate steps of calculations there might well be the presence of vectors which are not normalized but at the end of the day the states of the system are normalized vectors normalized vectors and with no memory of
+
+01:41:29
+what their overall phase is is mathematical term for that but uh but uh we don't need it questions all right we've gone through a lot of stuff um we will make it more precise the next time when we discuss observables in particular when we discuss what the mathematical nature of these Sigma X's Sigma y's and sigma z's are for the moment we just specified them sort of by experiment you hold your apparatus this way and you measure something called Sigma X you hold it that way you measure
+
+01:42:07
+something called Sigma Y and we use some symmetries namely the equivalents of different directions of space uh to guide us into finding um expressions for the various physical vectors describing different orientations of the spin but we haven't been very rigorous about it and there's been no I have made no pretense of really a mathematical clear derivation of these things sort of seat of the pants guessing to a large extent the next time we will make some rigorous uh postulates about what these things really
+
+01:42:56
+mean and their relationship these things and these things and what the relationship between them is the vectors and the things that you measure these are the states but these are the things you measure about them and the question is what's the connection between them okay any more questions about this the are these lectures tracking the content in the sequence of those in the web I imagine they are but I don't remember but there's only one way that I know how to think about quantum mechanics so I bet they
+
+01:43:34
+are and you know if you're sitting through this for the third time that's your problem believe me I'm sting through it through the uh yeah that pH factor that we can ignore yes the answer is yes I think is that phase Factor are we going to be doing anything with that going be looking at that at all well mostly we'll be saying look it it doesn't matter all right it doesn't matter um the okay so let's let's talk about the mathematics of ignoring something yeah that's
+
+01:44:21
+right yeah yeah that's no that that's true but uh let's just talk about the mathematics of ignoring things for a minute all right a point is Zero Dimensional right a circle is onedimensional has one parameter an angle on it but supposing I tell you that there's no significance to where you are on that Circle there's no significance whatever all points on that Circle are equivalent to every other point then you might say well for all interesting questions the circle is just a point if you can ignore where you are
+
+01:45:08
+on the circle then uh there's only one point on the circle you're either on the circle well if you're on the circle you're on the circle there's one point you can uh say the same thing about let's see another example what's another example um well let's take this example if you have a well what is a complex number a complex number is a point on the plane but if for some reason the angle of where you are on the plane doesn't matter then the only thing that's
+
+01:45:48
+interesting is the distance but now supposing you have two complex numbers and all I tell you is that when you have two complex numbers the thing which doesn't matter is the sum of their phases the sum of their phases the sum of their angles then there is still one angle left over which may be important the difference of the angles so if I have two complex numbers and I tell you for reasons that I haven't specified yet that the overall phase which can just be thought of as the SU sum of the phase angles if the
+
+01:46:25
+sum of the phase angles for whatever reason plays no role in the physics of the situation there is still the difference of angles there that's exactly what the case is the sum of the angles F the you know of the complex numbers that go into these entries here is of no physical significance we counted up four real parameters for two complex numbers the overall magnitude of it doesn't count because we divide that out that removes one of them and then the sum of the angles doesn't count for whatever reason
+
+01:47:01
+that removes another one that leaves you with two uh with two real numbers and that's in correspondence with the two real numbers that it takes to pick a direction in space so there's a lot of subtlety but nothing very difficult the mathematics is really easy the mathematics of quantum mechanics is easy easier than the mathematics of classical physics uh 2 by two matrices uh is very simple mathematics is easier it's unfamiliar yeah there's something that's always been vely unsettling which I
+
+01:47:45
+think get at the heart of all this of the the idea that the up and down are along a single axis one pointing this way and one pointing that way but they're or somehow too orthogonal doesn't mean perpendicular in threedimensional space it means physically distinguishable it means unambiguously distinguishable left and right are not physically distinguishable uniquely from up and down why because if you have a thing oriented along left and you measure up or down you might get up so you we think of I have think of
+
+01:48:24
+two orthogonal axises being two independent variables that you could vary independently yes that's right so here you can vary independently the probability for up and down of course they have to add up to one right they have to add up to one but ignoring the question of whether they add up to one you have the freedom to independently vary the coefficient in terms of you and the coefficient in terms of D now the fact that they have to add up to one is is another fact yeah don't confuse orthogonality in
+
+01:49:05
+the space of states with orthogonality in uh in um in three-dimensional space the analog idea in Phase space um or in the configuration space of a classical system orthogonality of two probability distributions let's think of let's suppose you have phase space or the configuration space of some classical system here's a phase Space X and P and I give you a probability distribution a simple probability distribution might be zero everywhere except in some patch where the probability is
+
+01:49:51
+uniform okay the analog of orthogonality between of two distinct probability distributions is that they don't overlap that they're not overlapping uh that there's no ambiguity and that's the analog of orthogonality up and down don't overlap if you're up you're not down and if you're down you're not up right now if you think about there is a situation in which orthogonality is the same in space and in the space of States it's the polarization of photons the polarization of photons is a
+
+01:50:42
+little bit different and uh I didn't want to get into it because it's more complicated um but uh right it would have been better if there was a different word for perpendicularity in space and orthogonality in space of States different concept I mean it's very much what's going on here that being oriented along right um yeah can I do an experiment which can distinguish between a spin pointing up and a spin pointing down yes you can bring your apparatus over to it detect it and if it's up
+
+01:51:38
+It'll point one if it's down It'll point minus one or it'll give a minus one can you use that apparatus to tell you uniquely the difference between a spin pointing along the xaxis and a spin pointing along the z a AIS what would you do to tell the difference what would you measure no matter what you measure it's not going to uniquely tell you the difference if you measure Sigma Z and you get + one that doesn't tell you anything about Sigma X it doesn't you could have gotten Sigma zal
+
+01:52:14
++ one because it was pointing along the z-axis and you got it with certainty one or it was pointing along the x-axis and with probability a half you got it pointing up there's no way to tell there's no way to tell by a single well- defined experiment whether the spin was pointing let's say up or R what if you measure if a photon comes off or not uh with one experiment either a photon will or won't come off and um and from that you cannot tell you teely whether it was uh no you can't tell from that it's
+
+01:53:00
+exactly the same as measuring the spin if you get up in your measurement it does not tell you whether it was initially up or it was initially sideways and with probability a half you got up okay so there's no unique single experiment you can do to distinguish this from this there is an experiment that you can do to distinguish this from this that's what makes up and down orthogonal but down and left not orthogonal they overlap they overlap and in fact the probability that if you are in left that
+
+01:53:38
+you measure down when you measure Sigma Z that's a measure of the overlap between them right the overlap which means in technical language it's an orthogonal so backtrack to the hierarchy thing originally you said we didn't know it was programmed up Z but if we measured up Z and got up we didn't have to measure anything else say if the qu we're trying to do is confirm the proposition the spin is up or the spin or the X comp the Z component of spin is up or the X component of spin is
+
+01:54:19
+up we want to confirm that that's a single proposition it's not two propositions it's a single the spin is up or the spin is uh the spin is up along Z or it's up along X that's a single proposition if the first detection measures the spin up along the z-axis were finished right and and and then since the setup was set up beforehand we know that in that case we would get the right answer okay okay I think would it be fair to yeah would it be fair to summarize that point as saying that propositions are
+
+01:55:02
+not commutative uh yeah yeah propos yeah I mean actually propositions technically correspond to uh projection operators and projection operators are not commutative that it would be proper to some sum I don't know if that summarizes everything about it but that certainly summarizes part of that point you know depends on which order you uh yeah so you've cautioned us about trying to visualize okay but so it is the sigma along the z-axis or along the x- axis isn't isn't that a visualization that it
+
+01:55:44
+is it is it is it is it is it is it is it is explain why doesn't sense well yeah yeah yeah no it is it is a visualization um do keep in mind though this interesting fact that on the average the spins if you measure many of them many many many of them the average values do behave like uh like components of a little Vector in particular if you take a large number of these spins and you make sure that they're all pointing upward and then you measure some oblique component of them with your apparatus being
+
+01:56:39
+tilted then the average that you'll get for the oblique component will just be the projection of the upright Vector onto the oblique Direction exactly as if you were measuring the component of a vector so the um the upshot is if you have a large number of them in many cases you can visualize with classical physics after all that's what classical physics is classical physics is to a large extent the approximation of systems which consist of many many parts uh which all behave uh simultaneously the same way
+
+01:57:24
+so I'll try one more question uh is there any looking at the properties of the model you described is there any relation between that and the notion of gauging variance I suppose I suppose there is you'd have to be more specific than that uh gaug inv variance does have to do with these phase factors here yeah it does have to do with them but um it does have to do with them but I we can't get into that right now I say one thing that that I find myself getting confused about but I think I see it now is that we're calling
+
+01:58:13
+a measurement and the tendency is to think of a measurement in the classical sense like here comes a say a particle or we're going to measure some property but it's not like that because we can't really say what the value was before we did the measurement we can only say what it is after we do the meas but then once we measure it we can measure it again and the same thing again and there will be consistency I mean we we put it in a certain State and we know what that state is and if if we do the same exact
+
+01:58:43
+preparation over and over and over again we get this distribution that's right you can't uh you can't always think that a system has a property and it's just your job to find out what it is yeah for more please visit us at stanford.edu
+

@@ -1,0 +1,327 @@
+00:00:00
+welcome back this video is going to be all about Schrodinger's equation in the last video I talked about the classical physics of a spinning electron which is placed in an external magnetic field based on the classical physics of the spinning electron in the external magnetic field I then gave a bit of motivation for what Schrodinger's equation would be where Schrodinger's equation governs the time evolution of the quantum electron which is placed in an external magnetic field and in this
+
+00:00:37
+video I am now going to take Schrodinger's equation as a starting point and see what all of its implications are so let's just remember what the situation that we're describing is so Here I am drawing a magnetic field which I will called B and placed in this magnetic field is a point like electron so point like electron and I'm not going to deal with the motion of this electron I'm only going to talk about its spin state so the electron has a spin state sy which depends on time so here are
+
+00:01:32
+writes I of T in other words what the spin state of the electron is at the time T C that's sy of T right here and sy of T is just a vector with two complex components which I'll call C 1 of T and C 2 of T so these are just two complex numbers that depend on time and to reiterate just imagine that this point like electron is planted at this point in space and isn't moving around because there's no external electric field the electron will not experience any force and it will should so stay
+
+00:02:13
+stationary okay so now let's look at Schrodinger's equation let's just review it quickly so it is I where I is just the imaginary number you know I times I equals negative 1 times H bar where H bar is Planck's reduced constant which has the units of energy times time then we have DDT of sigh of T this is just the time derivative of sigh of T in other words you just differentiate both c1 of T and C 2 of T with respect to time separately nothing fancy and then we have equals H times I of T now H which I have written
+
+00:02:56
+here is a 2 by 2 matrix which is called the Hamiltonian that's just its name now let's look at each of the terms in this equation here so G is something called the G factor which is a dimensionless number which is approximately equal to 2 in the last video I discussed that this factor 2 basically comes from special relativity and the corrections to the G factor which make it a little bit bigger than to come from Corrections due to quantum field theory I talked about that a lot in the last video and I don't want
+
+00:03:42
+to talk about it anymore so the next thing we got is e so just to remember that the charge of the electron is negative e so that's the same a here and here then we got over to M where m is just the mass of the electron and then we have h-bar over to where h-bar is just once again Planck's reduced constant and then here we have BX times Sigma X plus B Y times Sigma y plus B Z times Sigma Z where B X py and PZ are the three components of the external magnetic field vector B and then Sigma sub X Sigma sub y and
+
+00:04:30
+sigma sub Z are the three poly matrices which to remind you are equal to 0 1 1 0 0 negative I I 0 and 0 sorry 1 0 0 negative 1 these are the three poly matrices so as you can see over all H is equal to a 2 by 2 matrix just like I claimed in the beginning all right now let's clear all this stuff up whoops okay do it like this so the next thing I want to do is rewrite H a little bit differently so I'm going to rewrite H as all of these numbers in the front times the vector B dotted with this so-called
+
+00:05:38
+sigma vector right here so this might be dot Sigma this is just notation which means exactly this but the reason I'm writing it this way is I kind of want to separate out all the numbers out front and just kind of lump them together so to that end I'm going to rewrite the vector B a little bit differently so I'm going to write that B the vector equals B the number times a unit vector which I'll call n hat so n hat is just a vector of length 1 and this number B is just the length of the vector B so I can
+
+00:06:26
+now write this thing right here as the number B and then times n hat dot Sigma the Sigma vector so this is a two by two matrix and this is all just a scaler and in fact this scaler here is a number with units of energy so I will call this E and by calling it a instead of this whole complicated thing I'm just going to save time throughout the video so H is equal to e times n hat dot this Sigma vector very good now Schrodinger's equation is a differential equation and what do we do with differential equations we solve
+
+00:07:18
+them so now I'm going to tell you how to solve the Schrodinger equation and I'm going to give you a few different methods so here is method one just solve it that's the method so whoops so let's do an example say that the magnetic field is pointed in the Y direction so n hat is equal to the vector with components 0 1 and 0 that means that H which is equal to e times n hat dot the Sigma vector is just equal to e times Sigma sub y which is just equal to the matrix with entries 0 negative I times e
+
+00:08:24
+I times E and 0 now let's say what the initial conditions of our spin state are so let's say that our spin state at the time T equals 0 has the components 1 and 0 this means that the spin state is pointed along the z direction so another way to write the is to say well if sigh of tea has components of C 1 of T and C 2 of T then C 1 of 0 is equal to 1 and C 2 of 0 is equal to 0 now Schrodinger's equation is then just that DDT of sigh of T is equal to negative I over H bar times H times
+
+00:09:34
+sy of T and this is equal to well what's negative I over H bar times H that's just the matrix with the entries 0 negative e over H bar e over H bar and 0 and then here sine of T is just the vector with components C 1 of T and C 2 of T now multiplying this matrix by this vector we get that this is just equal to negative e over H bar times C 2 of T and e over H bar times C 1 of T that's this vector so overall we can just see that Schrodinger's equation becomes the two equations C 1 dot of T is equal to
+
+00:10:39
+negative e over H bar times C 2 of T and C 2 dot of T is equal to e over H bar times C 1 of T in this case this is just what Schrodinger's equation becomes so now that we have written Schrodinger's equation in this more explicit form we are now ready to just solve it so in this box I am going to show you how to just solve it so just solve it so here's what we do if you've never seen an equation like this before I'm gonna tell you what to do so you take these two equations and you differentiate them
+
+00:11:28
+with respect to time again so first let's start with this first equation let's differentiate it with respect to time again we then get c1 double dot of T is equal to negative e over H bar times c2 dot of T but we actually know what c2 dot of T is right we have c2 dot of T right here so we then plug in this equation into c2 dot of T here and what do we get we get well we have e over H bar times c1 of T so this whole thing becomes e squared over H bar squared times c1 of T and then we get the same
+
+00:12:13
+thing when we differentiate this equation with respect to time so we get C 2 double dot of T is equal to negative a squared over H bar squared times C 2 of T now now that we've gotten these two equations we can see that this first equation only has c1 in it and this bottom equation only has c2 in it so we can now write out a general form of c1 and c2 separately now if you've never seen an equation like this before this next part you'll have to take my word on it although it is true and it's
+
+00:12:56
+not actually too hard to show but C 1 of T can be written in general as a where a is just some unknown number at this point times cosine of e over H bar times T plus B where B is some other unknown number unrelated to the magnetic field times sine of e over H bar times t and c2 is exactly the same so it's equal to some unknown number C times cosine of e over H bar times t plus d times sine of e over H bar times T so these are the completely general expressions for the solutions to these two differential
+
+00:13:53
+equations now note that we have reduced the problem of solving for these equations to just solving for for unknown numbers a b c and d once we solve for these four numbers a b c and d will have finished solving Schrodinger's equation now to solve for four unknown numbers you need four equations so what are our four equations well our four equations are these two equations right here this is two equations and these two equations right here right so our initial conditions right these are initial conditions
+
+00:14:37
+combined with Schrodinger's equation gives us four equations and if we were to then plug in this form of C 1 and C 2 and we were to plug these into these four equations we would then be able to figure out what ABC and D are now that's how you solve for ABC and D but I'm not actually going to do that I'm actually gonna do something different because you know I'm an experienced guy I've been around the block a few times and I don't have to go through all that what I'm
+
+00:15:13
+going to do is something much more sophisticated I'm going to do something called guessing and checking so here's what I'm going to do I'm going to take my initial conditions here I'm just gonna try to guess what ABC and D are based on these initial conditions and then check if I was right so okay let's see if you plug in T equals zero right into this first equation I need this whole thing to be equal to one now cosine of 0 is 1 and sine of 0 is 0 so we can see that we need a equals 1 but we don't actually
+
+00:15:54
+know what B is equal to right because whatever B is doesn't affect the initial condition however because I sort of you know know how these things work I'm gonna make a guess I'm gonna guess that B is equal to 0 we're gonna see if I'm right later when we check so okay that was that was the first one let's look at the second one so c2 of 0 is equal to 0 well cosine of 0 is equal to 1 and sine of 0 is equal to 0 so we know that we need C to be equal to 0 but we don't know what D is
+
+00:16:31
+equal to however you know I'm gonna make a guess I'm just gonna guess that D is equal to 1 because that seems pretty reasonable to me all right so that's the guessing now we're gonna do the checking so if we write out my full guess I have that c1 of T equals cosine of e over H bar times T and C 2 of T equals sine of e over H bar times T all right so that's my guess and now we're going to check so ok let's plug in our c1 of T into this top equation right let's differentiate
+
+00:17:14
+it with respect to time so if we differentiate it with respect to time this cosine becomes negative sine and we got to pull out this e over H bar so the whole thing becomes negative e over H bar times sine of then you know yi over H bar times T and then if we look we see that sine of Y over H bar of T is just C 2 so up it looks though see one dot does equal negative a over h-bar times c2 of T so our first equation does work so that's good so now let's check the second equation right so what's c2 dot well the sign of e over
+
+00:18:11
+H bar times T just becomes yi over h-bar times cosine of e over H bar T and then if we look up that's actually just equal to e over H bar times c1 of T so yay indeed from guessing and checking we have just ascertained that this is indeed the solution to Schrodinger's equation given this initial condition so before moving on I just want to say one thing when I said that method one was just solve it a lot of you might have said boy you know that doesn't sound very helpful if I knew how to just do it
+
+00:18:57
+I wouldn't have to be watching this video but the reason I put this method first is because it's actually in many ways the best best method so the thing about differential equations is there's no general way to solve them usually you just have to try stuff out and see how it works and then once you know how to do it for the first time you then see similar equations over and over again you say oh okay I've already seen this equation before you know I remember how to solve it and you'll have to start
+
+00:19:28
+from scratch so by just me showing you how to you know do this equation and showing you guessing and checking and all that you now know the secret you can do it for yourself and you know in many ways that's the best way to do it okay so now I just want to clear some of this stuff up whoops and I want to bring our solution up here okay so now that we have our solution that we worked really hard to get I just want to point out a few things about it so the first is that the absolute value of C 1 of t squared plus
+
+00:20:26
+the absolute value of C 2 of t squared is equal to 1 so that means that the inner product of sigh of T with itself is equal to 1 for any T right and this is really important because this condition means that all of the probabilities of getting any result for any measurement add up to 1 so because this stays 1 for all T that means that probabilities will remain adding to 1 for all times that's very important to have now the next thing I want to do is make a table of what this state is at different times so here I'm gonna have a
+
+00:21:16
+column for time T and here I'm gonna have a column for our spin state sigh of T and let's look at what the spin state is for the times T equals 0 T equals H bar over e times pi over 4 H bar over e times 2 PI over 4 H bar over e times 3 PI over 4 and H bar over e times 4 PI over 4 and I chose these numbers because they'll get us eat simple results so when T equals 0 sy of T has the components 1 and 0 and this is just the upstate in the z-direction when T is equal to H bar over e times pi over 4
+
+00:22:19
+then our state has the components 1 over root 2 and 1 over root 2 right see I'm just plugging I'm just plugging this number in to T here right that's that's all I'm doing and this is the spin up state in the X direction now when T is equal to H bar over a times 2 PI over 4 it's equal to 0 and 1 and this is equal to the down state in the Z direction when it's you know H bar V times 3 PI over 4 then we get negative 1 over root 2 times and 1 over root 2 and this is just equal to negative times the state
+
+00:23:06
+in the spin down state in the X direction now this negative 1 out front is just an unobservable phase so it wouldn't affect our measurement and finally when we have H bar for e times 4 PI over 4 we get negative 1 and 0 and this gives us negative times the spin up state in the Z direction so we get right back where we started although we have an extra negative sign which is unobservable so let's actually just quickly draw what happens to the spin state over time so here I have the x y and z axes and here
+
+00:23:52
+let's just say I have our electron in the middle and then we have the magnetic field vector B pointed along the y axis and ok so at t equals 0 we have that it's pointed up along the z direction right so here's kind of where if you want to somehow if you want to think about the spin is pointing us in some direction in space you know for example I think about the Bloch sphere you could say that this in was pointing in this direction not totally rigorous to say that but let's just go with that for now it's okay so
+
+00:24:32
+we start off pointing up in the Z direction then it points up along the X direction and that is here so it moves from here to here then the next blow let me actually extend the z axis down this way and this x-axis out this way right so the next place it goes is pointing down in the Z direction and that's here pointing down in the Z direction then it's pointing down along the X direction and that's over here so then it goes like this and then finally it goes back to pointing up in the Z direction
+
+00:25:18
+so as you can see the direction of spin is processing in a circle along the around the direction of the magnetic field B now this is called larmor precession and in the last video where I talked about the classical spinning electron in an external magnetic field we saw that the same exact thing happened that the angular momentum vector just processed in a circle around the B field and in fact as I said in the last video it was actually a little bit more complicated because there would be a little bit of wobbling due to the fact
+
+00:26:10
+that the angular momentum vector would be a sum of both the spin angular momentum and the angular momentum due to precession but in this case it's even simpler it just travels in a circle there's no wobbling and we can see that the dynamics of a quantum spinning particle are actually simpler than a classical spinning particle one last interesting thing to mention before moving on is that the fact that the electron spin state will negate under a 360 degree rotation is actually related to a very
+
+00:26:50
+interesting topological fact and it's related to the Dirac bell trick and a lot of other really cool things I'm not going to talk about in this video but I just want to point out how interesting it is that the electron spin state negates under a 360 degree rotation instead of returning to the original state alright so now I want to clear up a lot of this stuff although I want to keep the original example so I want to keep that the B field is pointed in the Y direction I want to keep the initial
+
+00:27:26
+condition but I now want to move on to discussing the second method for solving Schrodinger's equation so method - okay here's method to find the eigenvectors of H now in this example we have that H is equal to e times Sigma sub y now recall that the two eigen vectors of Sigma sub y are the spin up state in the Y direction which has the components of 1 over root 2 and I over root 2 and the spin down state in the Y direction which has the components of 1 over root 2 and negative I of a root to these satisfy
+
+00:28:29
+the equations that Sigma sub y acting on the spin up state in the Y Direction is just equal to the spin up state in the Y direction and likewise we have that the Sigma sub y acting on the spin down state in the Y Direction is equal to negative the spin down state in the Y direction so these two equations allow us to immediately right down to solutions to the Schroedinger equation and I'm just going to start by writing them down and then we'll take a closer look at them so the first solution which I'm going to
+
+00:29:04
+call sigh one of t is equal to e to the negative I times E over h-bar times T times the spin up state in the Y direction right that's what I'm saying the first solution to the Schrodinger equation is and the second solution is sy to of T which is equal to e to the I times E over h-bar times T times the spin down state in the Y direction right so I'm claiming that both of these are solutions to the Schrodinger's equation now let me actually prove to you that that is true so clear this up and bring
+
+00:29:59
+this up here okay now let's check that this first state here really does solve Schrodinger's equation so remember that Schrodinger's equation is just that DDT of sy of T is equal to negative PI over H bar times H times Phi of T so now let's try to plug in sy 1 of T specifically and see if this equation holds so let's first start with the left-hand side of the equation let's differentiate sy 1 of T it see what we get well we get that DDT if sy one of T is negative I times the energy e over H
+
+00:30:54
+bar times e to the negative I the energy e over H bar times T times the spin up state in the Y direction ok now let's look at the right-hand side of the equation so we got negative I over H bar and then we have H acting on us I wanna T right but remember that H is equal to e times Sigma sub y and sigma sub y acting on the spin up state in the y direction is just the spin up state in the Y direction so this whole thing just simplifies to e to the negative I times e over H bar T and then times the energy
+
+00:31:46
+e and then times the spin up state in the Y direction see I got that just from applying the Hamiltonian H to this state here right this this prefactor just comes out front nothing happens the whole thing just gets multiplied by e okay and then we can see oh wait the left hand side does equal the right hand side so this equation is true and here sy wanna T is in fact a solution to Schrodinger's equation now you can see that the same exact thing would work for sy to of T the only difference is H
+
+00:32:30
+acting on this state would be you know negative II instead of e but you know it's not really a too big a difference so okay both of these states do in fact solve Schrodinger's equation alright so now that I have shown you that both sigh one of t inside two of t solve shorteners equation now I'm going to show you how you can use that to solve shorteners equation for any initial conditions such as the initial condition I have right here so the important thing that's going to make this method work is the fact
+
+00:33:10
+that Schrodinger's equation is linear right and what do I mean by linear I just mean that [Music] if psy one of T and psy 2 of t solve Schrodinger's equation then alpha times psy 1 of t plus beta times sy 2 of t for any complex numbers alpha and beta will also solve Schrodinger's equation right so that's what I mean when I say that Schrodinger's equation is linear I mean that any linear combination of solutions to Schrodinger's equation will also be a solution itself so with that in mind
+
+00:34:30
+let's write our initial condition which is just the vector with components 1 and 0 as a linear combination of sy 1 of 0 and side 2 of 0 and now plugging in T equals 0 to Phi 1 of T and site 2 of T we get that this is just equal to alpha times the spin up state in the Y Direction plus beta times the spin down state in the Y direction and that's just equal to alpha times the state with components 1 over root 2 and I over root 2 plus beta times the state with components 1 over root 2 and negative I
+
+00:35:31
+over root 2 now if this sum of vectors equals the vector with components 1 and 0 then we can see that this just means that alpha equals 1 over root 2 and beta equals 1 over root 2 right that's the solution to these two equations right here and so we can go back and plug in what we got for alpha and beta into the original equation so here I'm just writing 1 over root 2 where alpha and beta previously were now here comes the key step because we know that Schrodinger's equation is linear and we
+
+00:36:21
+know that sy one of t and side two of T both solve Schrodinger's equation we can make a state called sy of T which is equal to 1 over root 2 times Phi 1 of t plus 1 over root 2 times Sai 2 of T and because Schrodinger's equation is linear we know that this states I of T will solve Schrodinger's equation furthermore if we plug in T equals zero we just get our previous equation and we get that it has the right initial condition that we were looking for a name that sigh of 0 is a vector with
+
+00:37:07
+components of 1 and 0 so that means that we can immediately write down what sy of T is for all times it's just a linear combination of LS u so 1 over root 2 times e to the negative I times the energy e over H bar T times the spin up state in the Y direction which is the vector with components 1 over root 2 and I over root 2 plus 1 over root 2 times e to the I times e over H bar T and then the spin down state in the Y direction which is a vector with components of 1 over root 2 and negative I over root 2
+
+00:37:59
+all right now let's clear this a bit so we can make a bit of space alright so now let's bring this up here and simplify this further ok so this simplifies to 1/2 times the vector with components e to the negative I times E over H bar T plus e to the I times e over H bar T on the top and then I times e to the negative e over H bar T minus I times e to the I times e over H bar T and using Euler's formula this can all be simplified to the vector with components of cosine of e over H bar
+
+00:39:10
+times T and sine of e over H bar times T and this is the answer and it's actually the same exact answer that we got with method one now before moving on let's just quickly recap how method two worked so what do we do well we started with the Hamiltonian H and we found two states which were eigenvectors of H now because they were I give H this allowed us to immediately write down two solutions to Schrodinger's equation starting from these eigenvectors right now these two solutions to Schrodinger's
+
+00:40:02
+equation comprised a basis of solutions and namely if we plugged in T equals 0 to these two solutions we are able to express our initial condition as a linear combination of these two solutions when T was equal to zero now once we did that we could just lift the requirement that T was equal to zero and write it as a solution of Schrodinger's equation for any time and simplifying that expression a bit we ended up with the same exact answer that we got from method 1 so that's method 2 for you it's
+
+00:40:49
+pretty cool maybe in many ways it's better than method 1 because it uses very deep facts about Schrodinger's equation namely that Schrodinger's equation is linear and that you can find eigenvectors of H and all that so it's pretty cool although it's also kind of so it's hard to get you know too excited about it alright so now we are going to talk about method three for solving Schrodinger's equation and this method is by far the coolest method for solving Schrodinger's equation and if you're the
+
+00:41:34
+sort of person who watches these videos I think you're gonna like it a lot I'm not just saying that by the way when I first saw this I thought this was the most awesome thing ever so okay method 3 matrix exponentiation so let's start this off with a pretty awesome observation so say you want to find what's I of T plus delta-t is where the idea is that delta T is very small so we can tailor expand this to the first order and T and get that this is equal to sigh of T plus delta T times D
+
+00:42:31
+DT of sigh of T right this is just the first order Taylor expansion actually maybe I should write this squiggly equals instead okay because it's only true up to the first order and delta T all right so now look at this thing right here D DT of sigh of T what is that well just by Schrodinger's equation this is equal to Phi of T plus rather I should say minus I over H bar times delta T times H the Hamiltonian times Phi of T here I just plugged in Schrodinger's equation to a DDT of sy of
+
+00:43:23
+T now this can be re-written as I which is the identity matrix minus I which is the imaginary unit times delta T times H all times the states I of T so okay this capital I is just the matrix with entries 1 0 0 and 1 and it's called the identity matrix because if you multiply it by a state's I which you could say as the components of C 1 and C 2 if you do at this matrix multiplication this just gives you C 1 and C 2 which is equal to sy so in other words multiplying this identity matrix on any vector just gives
+
+00:44:20
+you the same vector back so it's sort of like multiplying by 1 ok so right so here I have rewritten this line in terms of you know the identity matrix minus I over H bar delta T times H now what we're really interested in is what's I of T is given that we know with the initial condition sy of 0 is right so let's see if we can use this to figure out what's I of T is well as a first approximation we can say that sy of T is equal to the identity matrix I minus I over H bar times T times the Hamiltonian
+
+00:45:14
+H all times sy of 0 now obviously this will only be a good approximation for small times T actually let me just clear this stuff up and bring this all up here so ok this was sort of our first stab at trying to find what sy of T was now this equation will be more and more accurate the smaller Tia's so here is the really cool insight so note that T is equal to T over 2 plus T over 2 and T over 2 is actually smaller than T so what we can do to get a better approximation of sy of T is to break it up into two steps we
+
+00:46:23
+can say that okay first let's evolve the state by sometime T over two and then evolve it by T over two again whoops right so what do we do here this thing in parentheses right here is a matrix which you can think of as evolving our state forward in time by some time T now because this matrix is more and more accurate the smaller tias we can get a better approximation by first evolving in a time by T over two and then doing the same thing again and this will be more accurate than just multiplying by one
+
+00:47:21
+matrix of time T right instead we're multiplying by two matrices with the times T over two so this is a more accurate approximation than our first try but why stop there right why not instead of just breaking T up into two steps we break it up into n steps so here I'm going to write I minus I over H bar times T over N where n is some integer times the hamiltonian h raised to the power of n right so if I raise to the power of n I just mean that you multiply this thing by itself n times and then act this all on sy of 0 right
+
+00:48:15
+so as n as our integer n gets bigger and bigger this will be a better and better approximation of sy of T and in fact if we take the limit of this expression as n goes to infinity we can drop the squiggly equal sign and just replace it with an exact equal sign now if you were paying attention in calculus class this expression right here might really remind you of something else now what it might remind you of is the equation that e to the R equals the limit as n goes to infinity of 1 plus R over N raised to the nth
+
+00:49:14
+power right this is y over R so that little observation compels us it compels us to write that sy of T equals e to the negative I over h-bar times T times the Hamiltonian H acting on the state sy of 0 right this is what we are compelled to write however you certainly have noticed that negative I over h-bar times T times the Hamiltonian H this is not a number this is a two by two matrix so what we really mean when we write e to some two-by-two matrix right if you think about exponentiation as repeated
+
+00:50:07
+multiplication then how can you multiply e by itself a 2 by 2 matrix number of times right it doesn't make any sense like somehow we have to rigorously define what we mean by this right we want to write it we're compelled to write it but we have to make it a little bit more rigorous right so now I'm going to say how we do that but before I do that let me actually just clear some of this stuff off okay and let me that this up here okay so now I want to give some rigorous meaning to what it means to exponentiate
+
+00:50:56
+a matrix okay so if you have a square matrix a then the rigorous definition of e raised to the a is the sum from N equals 0 to infinity of a to the N over N factorial where a to the N is just a multiplied by itself and times and a to the 0 is just the identity matrix so you can see that here we just borrowed the Taylor series expansion of the exponential function and just plugged in a where we'd normally have a number right so that is what I am saying the rigorous definition of the matrix exponential is but I have to show then
+
+00:52:05
+that this here really is a solution of Schrodinger's equation so to do that I have to show something else first so here I'm going to show what the key property of the matrix exponential is this this is what really makes it special the key property is that DDT of e to the T times a where T is just some number multiplying the matrix a this is equal to a times e to the t a now this is what I'm saying is the key property of the matrix exponential so let me now prove that this is true okay
+
+00:53:06
+here's the proof so first we're going to write what eetu the TA is given our definition so e to the t a is the sum from N equals 0 to infinity of T to the N times a to the n all over N factorial right here I just plugged in ta into the the definition here so that means that D over DT of e to the T a is just equal to the sum from N equals 1 1 and I'll say why I wrote 1 they're not zero they're in a second but okay so here we're just differentiating each of these things individually with respect to T right
+
+00:54:01
+because we just have some of these things and you can differentiate each thing in a sum individually so here we have n times T to the N minus 1 times a to the n all over N factorial right so you can see that the reason I wrote N equals 1 in the bottom here and not N equals 0 is because for the T to the 0 case that's a constant and differentiating a constant is 0 but here if you plug in N equals 0 then we got to the negative 1 and that's not a constant so just to make it whole thing work we
+
+00:54:40
+have to start from N equals 1 okay but note that n over N factorial can be written as whoops I didn't mean to do all that but it's okay that can be written as n minus 1 factorial right here I just rewrote and over n factorial as a 1 over n minus 1 factorial and next note that we can rewrite this whole thing as the matrix a all times the sum of N equals 1 to infinity of T to the N minus 1 times a to the n minus 1 all over N minus 1 factorial right so here I just use the fact that a to the N equals a times a to
+
+00:55:47
+n minus 1 and I pulled out the a all the way out front but then finally note that this whole thing we can just replace n minus 1 with n right because it's a dummy index and if we just put n where all the n minus ones are this whole thing is just equal to a times e to the t a right and that is the proof of the key property of the matrix exponential so now let me clear the screen all right and let me take this key property and put it out here so now let's show that this expression remote force I of T does solve the
+
+00:56:52
+Schrodinger equation so the Schrodinger equation as you remember is DDT of sigh of t equals negative I over H bar times H times sy of T so let's plug sy of T into both sides of this equation and see if it holds so if we look at the left hand side of the equation right we can use the key property of the matrix exponential to write this as negative I over H bar times H times e to the negative I over H bar times T times H times sigh of zero right that's just the key property of the matrix I Spanish we
+
+00:57:47
+just proved now on the right hand side we have that it's just equal to negative I over H bar times H and then times sy of T and then plugging in sy of T we just get that that's e to the negative I over H bar times T times H times sy 0 and then oh wow look the left hand side equals the right hand side so yes this does indeed solve Schrodinger's equation and it follows straight from our definition of the matrix exponential all right so that's all pretty cool but there might be something bothering you
+
+00:58:36
+and what might be bothering you is you might be asking okay how do you actually compute e to the a right so we have this nice formal expression but you might be saying wait a second I don't know how to make this infinite sum of a - higher and higher powers over in fact - like how do I actually compute e to the a so I'm gonna give you two ways to compute these things so the first thing is to say okay well I don't know how to compute this in general but what if we had a diagonal matrix D which only had nonzero
+
+00:59:27
+components on the main diagonal right so let's say D was an M by M matrix and here we had you know only nonzero entries on this main diagonal and everything else was zero right we could then pretty easily exponentiate D right because D to the N would just be equal to well everything in the diagonal raised to the nth power right and then we could see that e to the D would just be e raised to all the entries on the main diagonal right so either lambda 1 e 2 lambda 2 all the way to either the lambda m and everything
+
+01:00:31
+else would be 0 so that means that if you could write a as some matrix M times a diagonal matrix D times the inverse of M where by this I mean that M inverse times M is equal to the identity matrix right note that whoops yeah note that a to the N which is equal to M times D times and inverse times n this is just equal to M times D to the N times n inverse and you can see that this is true because if you multiply this by itself n times you'll get a bunch of stuff that's like M inverse M multiplied by itself and you
+
+01:01:33
+know these will cancel out give you I and alright get the general idea I'm just kind of trying to go through this quick right so because a to the N equals M times D to the N times M inverse we would then have that e to the a would just be equal to e to the M times D times M inverse which we could then write as M times e to the D times M inverse and then because e to the D would be pretty simple to calculate right I mean it's just this right here we could then have finished writing what e to the a is right so in other words if
+
+01:02:17
+you can diagonalize a and by the way not every matrix can be diagonalized fun fact but if you can diagonalize a then it's pretty easy to figure out what e to the a is so that's the first way you can diagnose that's the first way you can exponentiate a matrix by diagonalizing it but that's not actually what i want to dwell on for too long that's kind of why I rushed through it I want to talk about a separate method for computing matrix Exponential's so let's take an example let's say that a was
+
+01:02:56
+equal to the matrix with entries 0 negative 1 1 and 0 okay so this is the matrix I want to think about and I want to compute e to the theta times a where theta is just a number so I want to compute e to the theta times a and this is equal to the sum from N equals 0 to infinity of theta to the N times a to the n all over N factorial now there's something we can do here and it won't be clear at all why we're doing this but you'll see it's it's actually very clever so let's break this up into
+
+01:03:50
+a sum of all the even ends and a sum of all the odd ends so in order to make so we'll start with the even ends so here we have theta to the 2n times a to the 2n all over 2n factorial so this is all of the even ends and then we add the sum of all of the odd ends so here we have theta to the 2n plus 1 a to the 2n plus 1 all over 2n plus 1 factorial okay so here we have broken up e to the theta times a into two infinite sums one of all the even terms and one of all the odd terms so okay why do we
+
+01:04:46
+do this well note that a squared which is equal to well it's actually just compute a squared it's the matrix 0 negative 1 1 0 times 0 negative 1 1 0 and what is this well when you have to multiply 2 by 2 matrices you can you know start by looking at this column in this column sorry this row and this column and you can see all right well that's gonna be negative 1 and then you can look at this row in this column and you can say okay that's gonna be 0 and then you can look at this row in this
+
+01:05:37
+column and you can say yeah that's also going to be 0 and then you can look at this row in this column and that's equal to negative 1 guess I kind of rushed through that but whatever that's what a squared is actually let me just get rid of that and bring this all over here okay so this matrix a squared is equal to negative the identity matrix right that's sort of the important point and because a squared equals negative the identity matrix we can replace a to the 2n with negative the identity matrix to the N
+
+01:06:44
+and this can be replaced with negative 1 to the N times the identity matrix right so let's just do that so here we have the sum from N equals 0 to infinity of theta to the 2n times negative 1 to the N all over 2n factorial times the identity matrix right here I just replaced a to the 2n with negative 1 to the n times the identity matrix I okay so that's the first term and if you never seen this before this is just like magic but you'll see you'll see what's gonna happen you might you might already be
+
+01:07:37
+starting to see but but okay so the next thing we have is a to the 2n plus 1 now a to the 2n plus 1 is equal to a to the 2n times a which is just equal to negative 1 to the n times a right so we can write the second sum as the sum from N equals 0 to infinity of theta to the 2n plus 1 times negative 1 to the N all over 2n plus 1 factorial and then times a all right so now note that both of these sums are now just numbers which are being multiplied by the matrices you'll hear you have the identity matrix
+
+01:08:53
+I and here we have the matrix a right but these sums are just numbers and in fact you know what these sums these sums are just cosine of theta and sine of theta right just cosine of theta and sine of theta so that means that this whole thing is just equal to cosine of theta times I plus sine of theta times a so that's e to the theta times a now note that this only worked this only worked it's alright that this is true if a squared equals negative the identity matrix right if a squared wasn't equal
+
+01:10:01
+to negative the identity matrix then this wouldn't have worked at all but the thing is that you'll you know just you know the more and more stuff you see like this the more and more times you'll see cases where a squared is negative the identity matrix so this happens so often that this is actually very useful to keep in mind right so you can actually kind of think of this as a sort of matrix version of Euler's formula right you the I theta equals cosine of theta plus I times sine of theta this is
+
+01:10:38
+basically these are basically the same thing if you think about it but okay so here we have this really nice expression for e to the theta times a whenever we have that a squared is negative the identity matrix okay so I was pretty awesome and I want to clear all this work up but but now let's go back to Schrodinger's equation now that we have found a really cool way to compute e to the theta times a in a special case which as we will see applies to our case so what we want to compute is the matrix
+
+01:11:29
+e to the negative I over H bar times T times H where H is equal to the energy e [Music] times the vector and hat dot the Sigma vector okay so here note that negative I over H bar times T times H is negative I over H bar times T times e times n hat dot the Sigma vector now the thing we want to then find is we'd like to find a matrix a hidden in here where a squared is equal to negative the identity matrix and it turns out that what we want to do is we want to take a equal to negative I times n hat dot the Sigma vector right
+
+01:12:42
+so you can see that if we use this expression for a then this whole thing is equal to T times e over H bar times a right so let's just check to make sure that a squared is equal to negative the identity just as we would like to have so first let's just write out a a bit more explicitly so it's equal to negative I times and sub X Sigma sub X plus n sub y Sigma sub y plus n sub Z Sigma sub Z and then this can be rewritten as negative I times n sub X times 0 1 1 0 + n sub y times 0 negative I I 0 + n sub Z times 1
+
+01:13:45
+0 0 negative 1 alright and then if we sum these all together we get negative I times the matrix with the entries let's see n sub Z and then n sub X minus I times n sub y and then n sub X plus I times n sub y and negative n sub Z all right so that's what a is equal to alright so now let's just check what a squared is so a squared is equal to negative I squared and then times this matrix squared so I'm just going to write it out like this and all right so what is this equal to well first off negative I squared is
+
+01:14:54
+just equal to negative 1 so I'm gonna write a negative out front and then here I'm going to multiply these two matrices together so ok let's first start with the top left entry so to do that we have to look at this row in this column and then if we multiply n sub Z times n sub Z and then additive and sub X minus I times n sub y - n sub X plus I times n sub y the whole thing just becomes n sub X squared plus n sub y squared plus n sub Z squared that's the that's the top left entry
+
+01:15:44
+next let's look at the the top right entry so okay here we got to use this row in this column and alright so if you actually if you look at it you'll see that this is all just going to be 0 and likewise for this entry over here too that's also going to be 0 and then finally for the bottom right entry if we look at this and this we're gonna get overall once again n sub x squared plus n sub y squared plus n sub Z squared so remember that and hat is a unit vector so it's length is equal to 1 so that
+
+01:16:39
+means that n sub X square is M sub y squared something's good Z squared this is all just equal to 1 so that means that this is just equal to negative times the identity matrix 0 sorry 1 0 0 1 go to negative the identity matrix and up it looks as though we do actually have that a squared equals negative the identity matrix in this case which is just what we wanted so after all of that work we are finally prepared to write that e to the negative I over H bar times T times H is equal to cosine of e
+
+01:17:32
+over H bar T times the identity matrix I plus sine of e over H bar T times the matrix negative I times n hat dot the Sigma vector so here I just use this equation here where I said that T times e over H bar was equal to theta so okay actually let me box this we have finally found an expression for the matrix exponential which we can use to solve the Schrodinger equation this is the result I've been trying to build up for for all of this time so just as one final check let's see that this result
+
+01:18:36
+that we got from matrix exponentiation matches the answer we got for methods one and two so there we had that n hat was pointed in the Y direction so it had components 0 1 and 0 and we had that the initial spin state had components of 1 and 0 so let's see here ok well if we have this for n hat then we have that e to the negative I over H bar times T times H is equal to cosine of e over H bar times T times a2 in the matrix I plus sine of e over H bar times T times negative I times Sigma sub y right
+
+01:19:35
+because here we just had that n sub y it was 1 and n sub X n sub 0 0 and ok so negative I times Sigma sub y is just negative I times 0 negative I 0 and that is equal to 0 negative 1 1 0 and [Music] plugging that in so we have 0 negative 1 1 0 and actually uh let me actually replace Y with 1 0 0 1 so we can then see that this whole matrix is just cosine of e over H bar T and then negative sine of e over H bar times T and then sine of e over H bar times T and then cosine of e over H bar times T now if we act with this matrix right on
+
+01:20:59
+the initial condition Y of 0 right which is just 1 and 0 if we do out this matrix multiplication we will get that it's just equal to the vector with components cosine of e over H bar T and sine of U over H bar T which was the exact answer that we got for methods 1 & 2 so amazingly all of this complicated stuff we've all done is consistent I mean it's got a V consistent but that's just a check it's all consistent so I've been working pretty tough you know we've been
+
+01:21:46
+manipulating a lot of complicated expressions but I mean I think it's all just like really cool right all this matrix exponentiation stuff I can't really help myself so what does it kind of all mean so all right so here's how you should think about matrix exponentiation you should think about e I don't like that red ok you should think about e to the negative I over H bar times h right this is an operation and the operation is just time evolution by sometime t another word you can another
+
+01:22:41
+word you can use is a process so at the beginning of the video I said that Schrodinger's equation is a differential equation right and that gives you sort of a local way to think about how your quantum spin state changes in time but there's another way to think about how your quantum spin state changed in time and it's not via differential equation it's vah it's via applying this process to a spin state right so if you take this matrix and you apply it to your initial condition the result is going to
+
+01:23:29
+be your new spin state at some later time but the thing is that the really cool thing about this I should say is once you compute what this matrix is you can then just plug in any initial condition to figure out what what the final spin state's gonna be right in other words once you've figured out what this matrix is and we can see here that we've figured out down here once we figured this out we no longer have to do any complicated work all we have to do is just multiply our final matrix by the
+
+01:24:10
+initial condition so we can think about this whole matrix as a matrix which sort of represents the entire process of time evolution or the entire operation of time evolution we can think about time evolution as some sort of operation which we can apply to States and that's what's cool about matrix as opposed to all the other ways of a solving Schrodinger's equation now I should add that in the context of quantum computation this matrix here would be called a quantum gate so if you've ever heard about quantum
+
+01:24:58
+computers and you've ever seen these weird matrices being applied to these vectors that's all this is these time evolution operators are exactly what people mean when they say a quantum gate they just mean well in this case that you apply a certain magnetic field to your electron for a certain length of time and the some result of that is applying this quantum gate to your quantum spin state which I guess actually you would call a qubit in the context of quantum computation so any sort of a computational process you
+
+01:25:43
+could do in a quantum computer can just be summed up with by a time evolution operator where you have to you know choose a specific Hamiltonian a certain length of time but that's all it really amounts to now the last thing I want to talk about in this video is the evolution of the Bloch vector and rotations now before I get to anything let me just set up my coordinate system so here I have my XY and z axes and let's say we have a unit vector pointing somewhere in three-dimensional space we'll label the
+
+01:26:41
+angle between this vector and the z axis as theta and if we drop the shadow of this vector on to the XY plane well say that the angle between this shadow vector and the x axis is an angle called fee so this vector is located at the point sine of theta cosine of fee sine of theta sign a fee and cosine of theta those are the coordinates of this point right here now in that video on the Bloch sphere I showed that we can always write a state which when measured along this axis will always be found to be
+
+01:27:30
+spin up and that state which I'll call sy has the components of cosine of theta over 2 and e to the I V times sine of theta over 2 now of course if we multiply this whole thing by you know some sort of phase it will still be pointed along that direction so there's this phase ambiguity but we'll just write this one for now now what I want to do is imagine that we have a magnetic field which is pointed straight up along the z direction so that would mean that our Hamiltonian H would be equal to e
+
+01:28:20
+times Sigma sub Z now the question I want to ask is how will our spin state evolve in time given that we have a magnetic field pointed straight along the z direction now in order to figure this out all we have to do is exponentiate the matrix negative I over H bar T H which is just equal to e to the negative I over H bar T times e times the matrix with entries 1 0 0 and negative 1 now this matrix is very simple to exponentiate because it's diagonal so all we have to do is exponentiate the diagonal components and
+
+01:29:08
+this is equal to the matrix with entries e to the negative I over H bar T times e 0 0 and e to the I over H bar T times e actually let me just just shift this around over here now if we then act this time evolution operator on our spin States I we can see that it will just be equal to the vector with the entries of e to the negative I over H bar te times cosine of theta over 2 and then e to the I over H bar te and then e to the I fee times sine of theta over 2 now if we then take this vector and we multiply it
+
+01:30:34
+by an overall phase we can then get that this vector has the components of cosine of theta over 2 and e to the I and then in parentheses fee plus 2t e over H bar and parentheses sine of theta over two so here I just multiplied to this whole vector here by the overall phase e to the I te / H bar and then this cancelled out here and it made a two appear here and then I brought that these two Exponential's together and yeah that's all I did so just by looking at this vector here we can see that all that's going to
+
+01:31:38
+happen is fee is going to increase as time goes on right and theta is going to stay exactly the same so on this diagram that means that this vector is going to rotate in a circle around the z axis so that means that we can see that the overall effect of the matrix e to the negative I over H bar T times e times Sigma sub Z all right this matrix has the overall effect of a rotation around the z axis by an angle of - t e over H bar now there's nothing special about the z-axis right I mean we pointed our magnetic field along the z
+
+01:33:05
+axis just because the math was easiest to work out that way but we can generalize to see that the matrix e to the negative I over 2 times script fee this is a fee but written in script times a unit vector n hat dot the Sigma vector has the overall effect of modest rate is a rotation around n hat by an angle of script fee now this is a very important result so I'm just going to put it in this box here so okay what did we do with just brief recap we looked at the case where the magnetic field was pointed along the z direction
+
+01:34:16
+and we looked at how this vector would change in time now we saw that what happened was this vector would be rotated around the z-axis right by some angle and by looking at this angle and looking at the form of this matrix here we were able to create a new matrix which could implement a rotation around any axis right and hat and for any angle which is the script fee now there are really two important lessons I want you to take away from this whole thing the first is that we found an explicit way
+
+01:34:59
+to write down a rotation on a quant spin stay right this is an explicit formula for a rotation that's the first takeaway the second takeaway is that time evolution in a magnetic field is a rotation all right so the reason I am emphasizing this is that a lot of times people talk abstractly about what it means to rotate the quantum spin state of an electron right but you might be wondering how do you actually you know rotate an electron it doesn't make any sense well you can do that by just placing
+
+01:35:51
+your electron in an external magnetic field and by leaving it there for some time the electrons spin state will rotate around the axis of the magnetic field by an angle that depends on the strength of the magnetic field and how long you leave it there so that is an explicit way that an experimentalist you know working in a lab could actually rotate the quantum spin state of an electron alright that concludes the video thanks for watching I hope you learned a lot about Schrodinger's equation and what happens to electrons
+
+01:36:29
+when they're placed in external magnetic fields and I also hope you can agree with me that matrix exponentiation is a very cool thing because that is apparently the main point I have been trying to drive home in this video
+

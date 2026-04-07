@@ -1,0 +1,216 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 10}
+\lhead{Quantum Mechanics --- The Theoretical Minimum}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\title{\textbf{Lecture 10: The Schr\"{o}dinger Equation for Particles} \\ \large Uncertainty Principle, Free Particles, and Negative Energy}
+\author{Based on Leonard Susskind's \textit{The Theoretical Minimum}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Negative Energy and the Dirac Sea}
+% ============================================================
+
+A relativistic one-dimensional particle with Hamiltonian $H = cp$ (with $c$ a constant) admits both positive- and negative-energy plane-wave solutions:
+\begin{itemize}[nosep]
+    \item $p>0$: positive energy $E=cp>0$.
+    \item $p<0$: negative energy $E=cp<0$.
+\end{itemize}
+
+\subsection{1.1 Instability from negative energy}
+If negative-energy particles exist, the vacuum (zero energy) is \textbf{unstable}: you can take empty space and start putting in particles of negative energy, lowering the total energy without bound.  Energy conservation requires creating positive-energy particles too (e.g.\ photons), but the net effect is unlimited pair creation---the vacuum ``boils.''
+
+\subsection{1.2 Dirac's solution (for fermions)}
+\textbf{Fermions} obey the Pauli exclusion principle: no two particles can occupy the same state.  Dirac proposed that the true vacuum is the state of \emph{absolute lowest energy}, in which \emph{all} negative-energy levels are already occupied (the ``Dirac sea'').
+\begin{itemize}[nosep]
+    \item You cannot add any more negative-energy particles---every state is taken.
+    \item A ``hole'' in the filled sea behaves as a positive-energy \textbf{antiparticle} (e.g.\ the positron).
+    \item This picture applies to fermions (electrons, neutrinos) but \textbf{not} to bosons (photons), since bosons have no exclusion principle---you could dump unlimited bosons into the same negative-energy state.
+\end{itemize}
+
+% ============================================================
+\section{2. Wave Functions for a Particle on a Line}
+% ============================================================
+
+\subsection{2.1 Position-space wave function}
+The state of a particle is described by $\psi(x)=\braket{x}{\Psi}$.  The probability of finding the particle between $x$ and $x+dx$ is $|\psi(x)|^2\,dx$.
+
+\subsection{2.2 Momentum-space wave function}
+Related by Fourier transform:
+\[
+    \psi(x) = \frac{1}{\sqrt{2\pi}}\int \tilde{\psi}(p)\,e^{ipx}\,dp, \qquad
+    \tilde{\psi}(p) = \frac{1}{\sqrt{2\pi}}\int \psi(x)\,e^{-ipx}\,dx.
+\]
+
+\subsection{2.3 Multiple particles and dimensions}
+For a particle in $d$ spatial dimensions, $\psi$ depends on $d$ coordinates.  For $N$ particles, $\psi$ depends on all $dN$ coordinates simultaneously:
+\[
+    \psi = \psi(x_1, y_1, z_1, \; x_2, y_2, z_2, \;\dots,\; x_N, y_N, z_N).
+\]
+The wave function lives in \emph{configuration space}, not ordinary three-dimensional space.
+
+% ============================================================
+\section{3. The Heisenberg Uncertainty Principle}
+% ============================================================
+
+\subsection{3.1 Origin}
+Position $\hat{x}$ and momentum $\hat{p}$ do not commute:
+\[
+    [\hat{x},\hat{p}] = i \qquad (\hbar = 1).
+\]
+Therefore no state can be a simultaneous eigenstate of both.
+
+\subsection{3.2 Qualitative argument (Fourier duality)}
+\begin{itemize}[nosep]
+    \item A position eigenstate $\delta(x-x_0)$ is perfectly localized in $x$ but has equal amplitude for \emph{all} momenta---completely delocalized in $p$.
+    \item A momentum eigenstate $e^{ipx}$ is a plane wave spread over all space---completely delocalized in $x$.
+    \item In general: the \textbf{narrower} $\psi(x)$ is in position, the \textbf{broader} $\tilde{\psi}(p)$ is in momentum, and vice versa.  This is a fundamental property of Fourier transforms.
+\end{itemize}
+
+\subsection{3.3 Defining uncertainty}
+Shift coordinates so that $\expval{\hat{x}}=0$.  The \textbf{uncertainty} (variance) in position is
+\[
+    (\Delta x)^2 \equiv \expval{\hat{x}^2} = \int |\psi(x)|^2\,x^2\,dx.
+\]
+Similarly for momentum (with $\expval{\hat{p}}=0$):
+\[
+    (\Delta p)^2 \equiv \expval{\hat{p}^2} = \int |\tilde{\psi}(p)|^2\,p^2\,dp.
+\]
+More generally (without shifting):
+\[
+    (\Delta x)^2 = \expval{\hat{x}^2} - \expval{\hat{x}}^2, \qquad
+    (\Delta p)^2 = \expval{\hat{p}^2} - \expval{\hat{p}}^2.
+\]
+
+\subsection{3.4 The inequality}
+
+\begin{theorem}[Heisenberg uncertainty principle]
+For any quantum state,
+\[
+    \boxed{\Delta x\;\Delta p \;\geq\; \frac{1}{2}} \qquad (\hbar = 1).
+\]
+Restoring $\hbar$: $\Delta x\,\Delta p \geq \frac{\hbar}{2}$.
+\end{theorem}
+
+\subsection{3.5 Proof sketch (simplified)}
+Assume $\expval{\hat{x}}=\expval{\hat{p}}=0$ for simplicity.  Define the one-parameter family of states
+\[
+    \ket{\phi(\alpha)} = \bigl(\hat{x} + i\alpha\,\hat{p}\bigr)\ket{\Psi}, \qquad \alpha\in\mathbb{R}.
+\]
+The norm-squared is non-negative:
+\[
+    \braket{\phi(\alpha)}{\phi(\alpha)} = \expval{\hat{x}^2} + \alpha\,\expval{i[\hat{x},\hat{p}]} + \alpha^2\expval{\hat{p}^2} \geq 0.
+\]
+Substituting $[\hat{x},\hat{p}]=i$:
+\[
+    (\Delta x)^2 - \alpha + \alpha^2(\Delta p)^2 \geq 0 \qquad \forall\;\alpha.
+\]
+This is a quadratic in $\alpha$ that is always non-negative, so its discriminant must be non-positive:
+\[
+    1 - 4(\Delta x)^2(\Delta p)^2 \leq 0 \quad\Longrightarrow\quad
+    \Delta x\;\Delta p \geq \frac{1}{2}.\qquad\qed
+\]
+
+% ============================================================
+\section{4. The Schr\"{o}dinger Equation for a Particle}
+% ============================================================
+
+\subsection{4.1 Free particle}
+With Hamiltonian $H = \frac{\hat{p}^2}{2m}$ and $\hat{p}=-i\frac{d}{dx}$ in position space, the time-dependent Schr\"{o}dinger equation becomes
+\[
+    \boxed{i\frac{\partial\psi}{\partial t} = -\frac{1}{2m}\frac{\partial^2\psi}{\partial x^2}.}
+\]
+
+\subsection{4.2 Particle in a potential}
+Adding a potential $V(x)$:
+\[
+    H = \frac{\hat{p}^2}{2m} + V(\hat{x}),
+\]
+the Schr\"{o}dinger equation is
+\[
+    \boxed{i\frac{\partial\psi}{\partial t} = -\frac{1}{2m}\frac{\partial^2\psi}{\partial x^2} + V(x)\,\psi(x,t).}
+\]
+This is the equation Schr\"{o}dinger originally wrote down (with $\hbar$ restored).
+
+\subsection{4.3 Energy eigenstates}
+Separation of variables $\psi(x,t)=\phi(x)\,e^{-iEt}$ yields the time-independent equation:
+\[
+    -\frac{1}{2m}\frac{d^2\phi}{dx^2} + V(x)\,\phi(x) = E\,\phi(x).
+\]
+The allowed energies $E$ and corresponding eigenfunctions $\phi(x)$ depend on the specific potential $V(x)$.
+
+% ============================================================
+\section{5. Ehrenfest's Theorem: The Classical Limit}
+% ============================================================
+
+Using the Schr\"odinger equation, one can derive how expectation values evolve:
+
+\subsection{5.1 Velocity equation}
+Differentiate $\expval{\hat{x}}$ with respect to time.  After substituting the Schr\"odinger equation and integrating by parts, the potential energy term drops out (it is pure imaginary), leaving:
+\[
+    \boxed{\frac{d}{dt}\expval{\hat{x}} = \frac{\expval{\hat{p}}}{m}.}
+\]
+This is exact---no approximation was made.  It says the velocity of the center of the wave packet equals the average momentum divided by mass.
+
+\subsection{5.2 Force equation}
+Similarly, differentiating $\expval{\hat{p}}$:
+\[
+    \boxed{\frac{d}{dt}\expval{\hat{p}} = -\expval{\frac{dV}{dx}}.}
+\]
+This is Newton's second law in expectation-value form: the rate of change of average momentum equals the average force.
+
+\subsection{5.3 When does classical mechanics emerge?}
+The expectation value of a function $\expval{f(\hat{x})}$ is \emph{not} the same as the function of the expectation value $f(\expval{\hat{x}})$.  They agree when the wave packet is well-localized compared to the scale on which $V(x)$ varies.  This requires:
+\begin{itemize}[nosep]
+    \item \textbf{Heavy particles}: large $m$ implies small $\Delta x$ (from $\Delta x\,\Delta p\sim\hbar$ and $\Delta p = m\,\Delta v$).
+    \item \textbf{Smooth potentials}: features in $V(x)$ much broader than $\Delta x$.
+\end{itemize}
+When $\Delta x$ is much larger than the features of the potential (light particles, sharp potentials), the wave packet breaks apart---this is the quantum regime.  Example: Rutherford scattering---alpha particles hitting a tiny gold nucleus scatter in all directions because the nuclear potential is sharp compared to the wave packet.
+
+% ============================================================
+\section{6. Course Summary and Outlook}
+% ============================================================
+
+Over ten lectures, the foundations of quantum mechanics have been laid out:
+
+\begin{enumerate}[nosep]
+    \item \textbf{States} are vectors in a complex Hilbert space.
+    \item \textbf{Observables} are Hermitian operators; their eigenvalues are the possible measurement outcomes.
+    \item \textbf{Born's rule} gives probabilities as $|\braket{\lambda}{\psi}|^2$.
+    \item \textbf{Time evolution} is unitary, governed by the Schr\"{o}dinger equation $i\partial_t\ket{\psi}=H\ket{\psi}$.
+    \item \textbf{Composite systems} are described by tensor products; entanglement is the failure of the state to factorize.
+    \item \textbf{The density matrix} describes subsystems; locality (no-signaling) is guaranteed by unitarity.
+    \item \textbf{Continuous systems} (particles) use infinite-dimensional Hilbert spaces; Fourier analysis connects position and momentum representations.
+    \item The \textbf{uncertainty principle} $\Delta x\,\Delta p\geq\frac{1}{2}$ follows from $[\hat{x},\hat{p}]=i$.
+\end{enumerate}
+
+\medskip
+\noindent\textbf{Other conjugate pairs} satisfying uncertainty relations: angle--angular momentum ($\Delta\theta\,\Delta L\geq\hbar/2$), energy--time ($\Delta E\,\Delta t\geq\hbar/2$, where $\Delta t$ is the time for the wave packet to pass a point), and field--field derivative in quantum field theory.
+
+\medskip
+\noindent Topics \emph{not} covered but essential for further study: the harmonic oscillator, angular momentum, hydrogen atom, identical particles, and quantum field theory.
+
+\end{document}

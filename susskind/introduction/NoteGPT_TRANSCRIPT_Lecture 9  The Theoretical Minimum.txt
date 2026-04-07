@@ -1,0 +1,375 @@
+00:00:01
+[Music] Stanford University I gather you people had a lot of fun with entanglement it's a good subject I mean it's really is absolutely the heart of quantum mechanics but of course yeah I mean I would say up till now we have really studied the foundations of quantum mechanics in very very simple systems and the foundations have been laid out they've been exposed you know what they are and really the only thing left to do now is to study some examples question yeah so In classical mechanics we started with a very small
+
+00:00:51
+number of empirical observations by Newton and sort of everything else was obtained by mathematics sort of more or less more or less so what's the equivalent in the case of quantum mechanics what are the sort of basic Atomic empirical observations you mean historically well the minimal set that you need well I would say the minimum set is what we described when we talked about an apparatus which you could rotate a spin and um a window in the apparatus that was zero and one that's logically
+
+00:01:28
+the simplest thing you can do it's of course not the way quantum mechanics was discovered um but just as analyzing the experimental data that you would get by taking an electron or spin orienting your uh your detector pressing the M button the measure button and getting a uh one or minus one on the screen doing this over and over and over again accumulating statistics uh is the um is the simplest thing you can do and you have to do that for each physical property like momentum like Spin and so on
+
+00:02:13
+yes right m a quick question on the on the system you described with the singlet and the triplet and the photon going off you said if you capture the photon quickly and reflect it back is that simply because you only have a system with just a singlet and the triplet or can any other Photon also cause dising entanglement no that's a good question well um you don't have a photon out there you have a photon or you don't have a photon the radiation field itself is not in a state of positive uh you know whether
+
+00:02:56
+whether or not you have a photon out there could also be thought of as a zero or one the radiation State itself the radiation system itself could be modeled by having another degree of freedom and the other degree of Freedom could also have a Zer or one Z would mean no Photon present one would mean a photon present okay so what happens let's suppose we start with a singlet and the triplet superposed in this way with no photons all right so to express the fact that there are no photons we have to put
+
+00:03:38
+another degree of freedom in here and we have to say this is a tensor product with a state of the radiation field which has no photons that's the way and keep in mind this here represents the two electrons either in the singlet State or the triplet State and this represents the state of the um of the radiation field now if you wait for a little while and while the electrons are entangled here they are not entangled with the radiation field this is a simple product of a vacuum of photons no photons and a particular state of the
+
+00:04:25
+uh of the electron pair in fact I said this was entangled this is not entang Tangled this combination was just up down all right now you let it evolve for a while what happens is the singlet stays the singlet and it does not AIT a photon but the triplet what happens to it it becomes the singlet and emits a photon so what happens to the state it is evolves into the linear combination of singlet times no Photon and one Photon in other words it's a singlet electron it's a singlet state of the electron
+
+00:05:19
+pair but a linear superposition Quantum linear superposition of no Photon and one Photon that seems a little bit strange but it's an important idea that you can not only superpose states of a particle you can superpose the number of particles no particle and one particle can be Quantum any two states can be superposed so the state of a system of the vacuum empty space that's a state with no photons a state with one photon is a state with one Photon and you can add them that's what's Happening Here you
+
+00:06:00
+would eventually come to the state which is singlet times no Photon plus one Photon this state now is it entangled between the are the electrons entangled with the radiation field no because it's pure product but are the electrons entangled with each other yeah because it's singlet state only the singlet State appears here and the singlet state is an entangled state so the electrons are entangled with each other but they're not entangled with the radiation field on the other hand the
+
+00:06:44
+radiation field is left in a superposition of states of having a photon and not having a photon uh so what do we start with we started with a unentangled state of the electrons totally unentangled with the radiation field I say this is unentangled with the electrons because that's what we started with UD UD and no Photon so we started with unentangled completely everything unentangled waited for a photon to be emitted when the photon was emitted the sing the triplet state became the singlet state but it emitted a photon
+
+00:07:25
+and the result was an entangled state of the electrons but unentangled with the with the radiation field okay it's pretty tricky set of ideas you haven't brought anything externally at like a magnetic field so that what's causing uh no no no no no no in order to um no there's no nothing external here so what causes the the triplet to emit the photon is interaction with the other electron which is why they right right the interaction between the two electrons roughly speaking each electron
+
+00:08:06
+is in the magnetic field of another electron but what they want to do is maximum anti-align or better yet they want to minimize or make maximally negative the value of sigma. to that's the so they emit a photon to do that all right the last time we started to move on to the problem of particle motion for get particle spin of course real particles may have both position and spin but let's concentrate for today on um questions relating to the position of particles the simplest example we can
+
+00:09:09
+think of is a particle moving on a one-dimensional axis X there it is um before we study that I wanted to do a little mathematical interlude it'll take uh at most 10 minutes maybe less having to do with Foria analysis Foria transform and its relationship to uh to the direct Delta function so let's take a Blackboard and do some mathematics on it okay the function e to the IX let's take P to be a number P is a number now it's not a variable e to the IX that's a combination of s and cosine
+
+00:09:56
+functions and therefore it has a WAV like character and we call it a plain wave we call it a plain wave uh just the simple waves cosiness and signs combination of cosine p.x and sin I sin p.x and you can think of it as a wave of course it's not move just writing e to the ipx doesn't give it any time dependent so it doesn't move but it's wav like okay um a very wide class of functions and certainly all the functions we will be interested in can be written as sums of plain waves or
+
+00:10:36
+integrals better yet integrals of plain waves and decomposing a function in this case a function of X let's call it s of X decomposing it into plain waves is called Foria analysis now most of you know that in fact most of you or some of you in any case know about Foria analysis but we're going to spell it out now every function that we will be interested in in fact it's probably true that that excludes almost all functions but we also exclude almost all functions when we say that they're
+
+00:11:13
+continuous when we say that they're differentiable when we say uh uh that we can express them in any meaningful sensible form we exclude almost all functions but if we take our functions to be reasonable continuous Reon and I won't try to be very very precise uh continuous and um not to blow up at Infinity in other words to uh to fall to zero at minus infinity at plus infinity almost all functions or all functions we will be interested in uh can be expanded in waves in this way now expanded means they can be written as
+
+00:12:01
+integrals over P what is p p tells you how fast the wave oscillates this is some moderate value of P if I increase P I create a wave with a very short wavelength decrease P I'm talking about a wave with a very long wavelength so this is just saying we can decompose function into waves of different wavelengths each wavelength has an amplitude an amount of that wave that's in there and we'll call that s twidle of p time e to the I PX s twiddle of p is just the amplitude that uh the wave
+
+00:13:00
+of type P has strength s of p in the function s of X okay 4a's theorem is a theorem which tells you how to reconstruct side TT of P I'm going to just for definition this is purely for definition I'm going to put a one over sare root of 2 pi here that's that's a convention we could have absorbed it into s twiddle of p s TD is complex s twiddle typically is complex and so will s of X be complex that's a good question both of them I intend for the moment to be complex now it may happen that one of
+
+00:13:42
+these is real and the other one is complex that can happen but at the moment we're just interested in arbitrary complex functions that's right all right the question is how do you reconstruct s tdle of P from s of X and I'm going to leave it as something you can look up if you don't know it it's the basic theorem of Foria analysis that s tdle of p and notice that s of X is an integral over p s twidle of p is going to be an integral over X DX over < TK 2 pi times s of x and the natural thing would be to write
+
+00:14:32
+here e to the IX but it's not it's e to the minus IX uh 2 pi thank you that's the basic theorem of Foria analysis that if s of X is the Foria transform of s twidle of P defined in this way then s twidle of P is a forer transform of s of X very much the same pattern except that you put an e to the minus I PX there we will need that theorem so if you don't know that theorem it's a very important uh theorem in quantum mechanics and it expresses a kind of reciprocal relationship between X and
+
+00:15:22
+P which of course ultimately are going to be position and momentum okay that's that's one little mathematical uh interlude that uh that we will need the other has to do with the Delta function and then we're going to combine them together for a mathematician the definition we have a we have a a intuitive definition of a Delta function it's a high narrow function that's so narrow that its width is essentially zero and so high that the area under it is one okay we can call that a
+
+00:16:01
+representation of the Delta function um a definition of the Delta function of course the Delta function is not a real function it's infinite somewhere but uh you know that that's uh that's an anal attitude about the Delta function it took years from physicists incidentally to convince mathematicians that Delta functions were okay mathematicians didn't like them for a very good reason their functions they can't you can't Square them though they're just there if you square them
+
+00:16:39
+they're still zero everywhere except at the same point but instead of having a height uh big enough to make the area one they have a height which is the square of that and so they themselves are not the are worse objects but they got over it I mean they got over it and uh and I'm told Now by some of my mathematician friends that it's okay to write a Delta function okay properties of the Delta function the first thing in the way a mathematician would think about it is it's an operation that you can do on a
+
+00:17:16
+function in particular you can integrate any function of X any reasonable function of X with the Delta function Delta of x - x Prime oh no let's go a step no no no let's uh let's even go uh let's not even do that yet let's take Delta of x - x Prime * F ofx first property of the Delta function is that this is equal to f of x Prime Time Delta of x - x Prime why would that be true that's certainly wouldn't be true for a general function uh Delta the reason it's true
+
+00:18:03
+is because Delta is only nonzero when X is equal to X Prime so it's no big deal Delta of x - x Prime is only non zero when xal X Prime and therefore it doesn't matter whether you put X or X Prime when multiplying it by a function so that that's property number one now property number two that pretty much follows from that no not yet property one next property two integral of Delta of x - x Prime is always equal to 1 that's just the statement that the area under this bump is equal to one and it doesn't
+
+00:18:51
+matter where you put it you put it over here or you put it over here or you put it over here the area is always equal to one and so the integral of Delta of x - x Prime let's say from minus infinity to Infinity is always equal to 1 and the last property which follows from these two is that the integral the integral of Delta of x - x Prime f ofx is equal to F ofx Prime now you see it in two ways one is that you can say look the Delta function is only non zero when X is equal to X Prime and so it picks out the value X
+
+00:19:44
+Prime in F ofx or you can just say use property where is it property number one to rewrite this in the form f of x Prime integral Delta of x x - x Prime DX why am I allowed to bring the F ofx Prime on the outside because it doesn't depend on X it's just X Prime itself is a constant h x Prime itself is a constant is a fixed value from the point of view of uh yeah that's right so I that's right so I just bring it on the outside and then I say the integral under the Delta function is
+
+00:20:24
+one and so I just get F ofx Prime all right so those are the obvious properties of the Delta function which you might use to atiz what a Delta function is okay now I'm going to prove a theorem which is provides a representation of the Delta function an important representation of the Delta function uh let's uh I think we can erase this for the moment then I want to eras that I probably didn't integral f of x Delta of x - x Prime is equal to f of x Prime now this actually is a sufficient definition of the Delta
+
+00:21:16
+function this is the way the mathematicians Define it as an operation that you do on a function it gives the value of the function at some point and this is enough to Define um uh uh the Delta function if it's not enough to define the Delta function if there's only one function f if this is true for every function f there's only one function only one Delta here that will fill that uh property okay so this can be taken as the defining function if for all F this is true then this is the Delta
+
+00:21:55
+function what's that yeah DX DX good DX okay now what I want to do is I want to take the two top equations and put them together here's what I'm going to do I'm going to write that s of X is equal to this thing but then I'm going to plug in for this thing the second equation and reexpress S of X Back In terms of the function s of X itself and let's see what we get either we'll get something completely trivially stupid or we will learn something and the fact is we will
+
+00:22:40
+learn something so let's take s of X and write it s of X is equal I'm just going to write now integral DP over sare < TK of 2 pi e to the IX and now I'm going to shove in the second equation for S twiddle of p and that is let's put a bracket around it DX integral let's let's um yeah hold on a second um let's call a s of X Prime and to make a s of X Prime all we have to do is put a prime here uh I've just changed the name of the variable on the left side and to do
+
+00:23:32
+so of course I have to change the name of the variable on the right hand side all right I don't want to confuse x and x Prime all right now the second equation for S twiddle of P that I can leave as it is and just write that it's integral DX over < TK 2 pi s of x e to the minus I PX so I've just plugged in side twiddle of P now integrals are generally insensitive to which order you do the integrals is particularly if they're Integrations from minus infinity to Infinity as they
+
+00:24:16
+are here both of them if they're well defined and they converge in everything then it doesn't matter which order you do the Integrations so let's start let's isolate some things let's put here integral DP over 2 pi oh over 2 pi we now have a single factor of 2 pi one coming from here one coming from here let's isolate e to the i p x Prime minus X from here we have e to the I PX Prime e to Theus I PX that's e to the i p x - x Prime uh and then we still haven't written down s of
+
+00:25:11
+X so let's write down s of X and now interchange the order of integration of X and P and write this as integral DX integral DX that's equal to S of X Prime so look what we have we have a relationship between s of X and S of X Prime we have a way of writing s of X Prime in terms of s of X but what is it but look what stands here take this whole thing here this is an integral over P it's true but all it is is some function of X Prime minus X right let's give it a name let's call it the capital Delta function
+
+00:26:02
+let's call this the capital Delta function and write this DX Capital Delta of X Prime - x this whole mess here including the 2 pi and everything else after integration over P Time s of x equals s of X Prime what does it tell you about this Capital Delta function it's just a good old Delta function it's just a good old direct Delta function so we've proved an interesting relationship and one that is at the heart of many many things in quantum [Music] mechanics here it is the integral
+
+00:26:57
+DP over 2 pi e to the i p of x - x Prime is equal to Delta of x - x Prime in other words a kind of screwball way of writing the Delta function by itself expressing it as a Foria transform or a sum of plain waves we can also write this in we can write we're not writing the same thing I'm writing a different thing but just by interchanging X and P by interchanging X and P I can write another equation DX over 2 pi e to the i x of P minus P Prime equals Delta of P minus P Prime this is these two are
+
+00:28:00
+identical these two are identical I've just changed the name of x to p and p to X right if this equation is true this equation is true because they're exactly the same equation except that I've interchanged the name x with p and p with X all right so this is a uh this is an important as I said um fact about Delta functions these are the basic mathematical facts that we need this here is not important we've got the we've got it on the Blackboard over there oh if you don't like the way I got
+
+00:28:41
+the second one from the first one by just interchanging p and X you can go back to these equations and instead of eliminating s twiddle of P eliminate s of X by substituting in s of x from here and and you'll get uh you know you'll just you just interchange p and X good all right so now we have what we need yeah on on the left hand side underneath the board that you just brought down yeah you you wrote x primeus x but then on the right you X does that imply a actually it doesn't matter it's a good question it doesn't
+
+00:29:23
+matter and the reason is Delta of x - x Prime is unchanged if you interchange X x and x Prime it's a symmetric function of its argument if you interchange Delta of x - x Prime is the same as Delta of X Prime minus X so uh you can check that so the answer is it doesn't matter um whether but you're probably right probably if I did the derivation um systematically I might have gotten X Prime minus X here but then the end it doesn't matter okay so let's uh let's add this equation over
+
+00:30:01
+here integral DP over 2 pi e to the i p either x - x prime or X Prime - x doesn't matter is equal to Delta of x - x Prime and integral DX over 2 pi e to the i p minus P Prime * x * X is equal to Delta of P minus P Prime all right now let's come back to the world of physics the world of quantum mechanics a particle on a line if we were doing classical physics we would describe the particle on the line the state of a particle on the line by a point in Phase space and phas Bas consists of a value
+
+00:31:09
+of x and a value of P one of each for a one-dimensional particle just one uh 1 x and 1 P what about quantum mechanics how do we describe the state of a quantum mechanical particle well you can try to make some guesses um what not how do you describe the state but what can how do we describe an orthonormal basis of states that always is the question give me when you start a new system you ask what defines the space of states and one way of defining the space of states is to provide an orthogonal normalized
+
+00:31:50
+basis of states and all states then are linear superpositions of that basis all right there are various possibilities you might you might wonder maybe uh the States can be represented by the position of a particle X you might think maybe that can be represented by the momentum of a particle or you might wonder might the states be represented as a pair an X and the P this is large After All In classical physics it takes an X and A P to describe the position of the the um the state of a particle what is it in
+
+00:32:34
+quantum mechanics in the answer is in quantum mechanics that X and P are too much information in the same way that uh for the spin knowing Sigma X and sigma y or Sigma Z and sigma y or whatever is too much information you can't know both of them simultaneously the same of course is true in quantum mechanics it's actually more familiar it's called of course the Heisenberg uncertainty principle but you can't know both so it's one or the other classical physics a particle has an X
+
+00:33:09
+and A P in some sense in quantum mechanics a particle has an X or a meaning to say you don't try to describe it by both you describe it by one or the other and we'll we'll see what the relationship is in a moment so we suppose that there is an igen Vector of an observable position for every value of the observable position this Vector represents um a state in which the position of the particle is definite and at position X so it's an igen Vector of something which we'll think of as an observable X
+
+00:34:00
+we'll we'll understand a little more mathematically in a moment and like any good basis the point of a basis is to write any wave function s or any state Vector as a superposition a sum of the basis vectors since the basis vectors form a continuous range of possibility we write it as an integral DX replacing the sum and then I Vector x times something which depends on X this is completely analogous to what we've done in the past where we've taken a arbitrary vector and expanded it in
+
+00:34:50
+terms of igen vectors of something and these are the coefficients here and we call these things the wave function we call these things the wave function uh and in fact they are given by the inner product of the igen vector s igen Vector x with the state s that is s of X this is fully analogous to what we studied in simpler systems wave function is the projection of the state onto a state of definite X that's s of x X and secondly s star of x * s of X is the probability that the particle be found
+
+00:35:42
+at position X now strictly speaking we talked about it last time strictly speaking you have to think of it as a particle as a probability density uh a probability per unit X or probability per unit interval in x but you know you know how to take that into account all right so that's uh this is the basic framework of quantum mechanics just being repeated except for a continuous variable the inner product between two vectors x and x Prime is zero unless xal X Prime and if these were Contin if these
+
+00:36:25
+were standard discrete variables we would say zero unless xal X Prime are one if x equals x Prime we would write chronica Delta x x Prime but uh X that's not helpful for continuous variables for continuous variables we write the Delta function the Delta function the direct Delta function it's the Continuum analog of the chronica delta we have bra vectors and K vectors if a k Vector is described by a s of x a bra Vector of course would be described in a similar way in terms of s star of X so
+
+00:37:18
+K's s of X wave functions bras SAR of X usual thing nothing new here finally the inner product not finally but the inner product not between x and x Prime but between two arbitrary States let's call them s and fi each one of which can be expanded by use of a wave function f is described by a wave function f ofx the bra vectori can you tell the difference between my size and my f when I say it yeah okay this is Greek fi this is Greek Pai but I can't I never say Pai I say Sai I think the Greeks do also anybody
+
+00:38:24
+know so is this really just a bunch of sci-fi so must thought of that write that down keep that good okay and this one is described by S star of X and if you expand them both appropriately in igen vectors of X bra vectors and K vectors and then use the inner product rule here for the igen vectors of X you will get of course that the inner product is the integral DX it follows by simply expanding SI expanding F and uh using this inner product here but it's also hardly surprising it's the
+
+00:39:23
+same kind of formula that we would have uh previously for this stre systems and last but uh question uh so position and momentum is too much information so we're asserting really that it's just the position that gives us a complete basis and pretty much anything else is going to be too much information not just don't redundant yeah pretty much anything else now now the only reason I'm hesitating is because we could imagine a particle moving in two Dimensions right in that case it's not
+
+00:40:06
+clear yet whether we can know the x coordinate of the position and the y coordinate of momentum for example the answer is you can so um but if our system was just a particle in one dimension that's it X um right so that's a good point so does that mean that momentum then can essentially be expanded can be treated as a as a side say it again so that essentally that means that momentum can be treated as a side and hence expand be expanded by an integral involving X that right yes four your transforms are four right
+
+00:41:00
+okay let's um oh one last thing the probability density is SAR s not SAR F SAR s and if I integrate SAR s with respect to X that would be the inner product of s with itself and that should be equal to one on the basis that the uh total probability should be one in other words nothing new again uh physical States should be normalized normalized so that integral SI stari is equal to one okay now next last time we talked about some observables the position and the momentum so let's uh review a little bit
+
+00:41:52
+about that let's invent an operator now capital X here maybe I should uh how can I indicate that it's a capital x um let's put an extra line in that makes it a capital x and therefore an operator as opposed to just a number an igen value this is the operator or the observable which whose igen values are the positions of the particles the observables okay the observable values um let's talk about the action of s of X when it hits a vector that's what operators do they hit vectors and they
+
+00:42:40
+make new vectors all right I'm going to tell you what the action is by telling you how it behaves in terms of wave functions instead of telling you how s acts on an abstract Vector I'm going to tell you what happens when the operator X hits a wave function wave functions and state vectors can be thought of as uh one being a representation of the other when X hits s of X what it does is just multiply s of X by X in other words it gives you another function that's the nature of operators
+
+00:43:26
+they act on function functions to give other functions they act on vectors to give other vectors if uh if functions are representations or uh constructions which represent those vectors then uh whatever linear operators are they should be such that they do something to the wave function and this is what x does to the wave function it simply multiplies it by X it gives you a new function which uh it's not the same function it's a different function but uh that's that's the nature
+
+00:44:01
+of it now let's prove something let's prove that the igen vectors and the igen values of this operator are what we expect them to be you of course do expect them to be something you may not realize at this moment that you expect them to be something but as soon as I show you what they are you will say oh yes we expected that okay so what is likely to be the igen vector of capital x well it should be a state it should be a state where the particle is localized at position X right in particular let's uh let's
+
+00:44:42
+talk about the particle being localized at point x knot what would we expect the igen vector to be it should be a function which is zero everywhere except at X notot right that's uh that's what we would expect it should be concentrated at X knot and so let's try the function Delta of x - x x is just a parameter here now it's a function of X but it's the function of X which represents the particle at position X notot and let's ask the question when you operate with the operator X on this
+
+00:45:22
+wave function what do you get well the answer is you just multiply it by Little X but now we go back to one of the properties of the Delta function namely that when you multiply it by any function of X you can replace it by a function of X Prime so or in this case X not this is also equal to x * Delta of x - x but what is this equation this is exactly the equation for an igen Vector of the and igen value of the operator X the operator X hits the wave function and gives a number times the same wave
+
+00:46:06
+function okay operator HS wave function gives number times wave function it's clear that this is an igen Vector of the operator with igen value xot all right so now we can make a list of igen vectors of various uh various observables we're starting off list igen values and igen vectors the igen vector associated with a particle localized at point xnot that is equal to the Delta function of x - x exactly as you expected right good okay I'm sure you did and that finishes up x what about P what about momentum
+
+00:46:58
+again momentum being an observable you can observe it if it hits you in the side of the head you feel it you recoil that is what momentum is it's uh momentum means the same thing in quantum mechanics as it does in classical mechanics it's conserved and so if you absorb something with some momentum you uh you recoil all right what is the momentum operator the momentum operator and we will the justification for this will come a little later uh we did talk about it but I want to go back over it momentum is called
+
+00:47:45
+P the operator momentum the operator momentum is equal to there's no point beating around the bush let's say what it's equal to it is equal to minus I and I'm going to put in some units here later on we will set H bar equal to one it's just a choice of units but for the moment let's keep har bar there times the derivative operator D the thing I called D last time or the operator D last time we studied whether capital D was Herm Mission or not and we found that it was not but if we multiplied it by I either
+
+00:48:34
+with a plus or minus sign it doesn't matter uh if we uh multiply it by an I then it becomes Herm Mission so we we we worked that out last time if you remember that little trick with the integration by parts uh we found that D was not her Mission but uh I * D is all right so this is the definition of the momentum operator or it's a it's a bunch of symbols so far but what is p do when it acts on a wave function it just gives minus I time DCI by DX so it is also an operator it's also
+
+00:49:19
+an operation it's an operator it's a linear operator and it is a Herm Mission linear operator p so that's what it takes to qualify as an observable in quantum mechanics um at this point since s is only a function of one variable it doesn't matter whether I use partial derivatives or just ordinary derivatives D let's call them ordinary derivatives d by DX next question what is the igen vectors of the momentum the igen vectors of the momentum satisfy p on S or minus I HR d s by
+
+00:50:04
+DX equal some igen value some observable value or some possible outcome of an experiment let's call it P Time s this of course p is a number it's the igen value uh we can let's let's just um if we get rid of the minus I here it becomes a plus I on this side and we can divide by H bar all right so this is just the equation for an exponential derivative being proportional to the same function uh and the solution for S it's Unique apart from a multiplicative constant s this is the igen
+
+00:51:03
+vector uh as a function of X and let's label it by P not all right just to label the fact that it's the igen vector for momentum P not it's a function of X and what is it it's e to the i p x question oh thank you over har bar all right I'm just going to keep the H bar around for about 10 more seconds I just want to point out that this is a WAV like thing this is a wavelike thing it has signs and cosiness and it has a wavelength the wavelength is the distance that you have to move so that
+
+00:51:57
+the thing in the exponent changes by 2 pi in other words if we call the wavelength Lambda p over HR time Lambda equals 2 pi that's the definition of the wavelength how far do you have to move so that the SS and cosines return to themselves or that the wavelength is 2 pi HR divided by P P being the momentum of the particle so here we see the first example of the relationship between momentum and wavelength larger the momentum the smaller the wavelength of course we have not yet Justified the choice of the terminology
+
+00:52:42
+momentum for this thing but uh we can keep in mind that later on we're going to want to come back and see that this P really does behave like momentum uh but so far it's just an abstract observ able we don't know what it means yet okay so here we are Lambda is equal to this and now that I have demonstrated that let's get rid of har bar because I will forget about it anyway let's get rid of har bar get rid of this formula here and say this is the uh now it's not clear yet that I've
+
+00:53:18
+normalized this correctly it's not clear yet that this is normalized to one uh let's take the inner product between two momentum States all right this is this here is a representation of the momentum State P not or let's just call it P let's just call it P get rid of the notot not serving any real purpose here P but think of p uh just P let's take the inner product of two momentum States P Prime and P where's our formula for inner products here it is right over here uh no here it is over
+
+00:54:08
+here one SAR and one fi so that means the inner product is the integral of e to the minus i p Prime X that's the wave function of P prime or the a complex conjugate of it and then the wave function for uh e to the I PX DX or equivalently integral e to the i p minus P Prime X DX now if we've done things right since p is supposed to be a observable a Herm Mission operator and and the igen vectors of Herm Mission operators should be orthogonal then this should be zero if p is not equal to P
+
+00:55:06
+Prime it's pretty clear that it is zero if z p is not equal to P Prime and for the following reason um the real and imaginary parts of e to the i p minus P Prime X are cosiness and signs if p is not equal to P Prime these are Co cosin and SS of P minus P Prime X cosiness and signs are as positive as they are negative if you integrate them over a large interval you'll get zero as long as you pick up an integer number of wavelengths and that's uh that's important here so as long as p is not
+
+00:55:47
+equal to P Prime this integral just oscillates itself to zero okay uh equally positive and equally negative for both real and imaginary parts so it is true P Prime is not equal to sorry P the inner product is equal to zero if p is not equal to P Prime what about if p is equal to P Prime this is integral from minus infinity to Infinity without looking at the other Blackboard uh what what can we say about this for p not for p equal to P Prime it's going to be infinite right the integral of one integrated over all
+
+00:56:30
+space is infinite so in fact it's sort of looking it's smelling like it is the Delta function it's smelling like it is the Delta function infinite when p is equal to P Prime and zero otherwise it's a good thing but we don't know what the actual numerical coefficient is but yes we do up here we have uh integral where was uh that's this one over here integral DX over 2 pi is Delta of P minus P Prime the upshot of this is just that in order for this to be normalized so it's inner product is a
+
+00:57:15
+real Delta function you have to dis divide by the square root of two yeah square root of 2 pi big deal square root of 2 pi this this is the wave function for a particle of momentum uh here a particle of momentum P we now know what the wave functions of particles of momentum P are question yeah um when you were talking about uh two different p and p Prime you talked about taking the integral from minus infinity to Infinity of some oscillating function and and you said this is zero and I'm just trying to
+
+00:58:00
+think in my head normally when you do an integral you how do you justify that zero yeah I can see it's sort of average zero but I'm not really sure how to justify it yeah I knew somebody was going to ask yeah the answer is that you really justify it by starting with a theory on a finite interval you're asking I think questions about convergence of the integral integral doesn't really converge so you really have to go back to some earlier starting point which had I start if I were teaching quantum
+
+00:58:40
+mechanics in a graduate class or something I would have started by thinking of a theory on a finite interval or even better on a finite periodic interval worked it out and then taken carefully the limit as you let things get the go to infinity and then everything could be justified with rigor we don't have the time and so I um I don't do that but of course about the transform itself right yeah it's not really fun to mechanics because I was just thinking about the it's a fact about the forer
+
+00:59:18
+transform but I did cheat I did cheat at some point I interchanged an X integration with a p integration and one of those Integrations didn't converge I did basically the same cheat that I did here um but but you know I I wouldn't cheat you if I didn't know that the steps can be filled in and if I didn't know that if you go and find yourself a book on for year transforms you won't be able to fill the steps in yourself so uh I haven't really cheated what I've done was just a little bit of a short uh
+
+01:00:03
+shortcut all right now we've talked about the wave functions of particles with momentum P but now I want to talk about a different concept the wave function in the momentum basis so far all of these wave functions have been thought of as functions of x p here is just a parameter it's uh the momentum of the particle but the wave function is a function of X oh incidentally notice something important notice something important the wave functions of particles with definite momentum oscillate endlessly
+
+01:00:39
+forever and ever and they're absolutely unlocalized they're as delocalized as they can be in particular SAR s of X is uniformly spread out over the entire real axis in most sense is the position well defined it's as uncertain as it could be on the other hand the momentum is very precise this is an igen Vector of the momentum operator If This Were the wave function of a particle and you measured its momentum it would be P if you measured its position it would be random all over the axis okay very much
+
+01:01:22
+well much worse then but very much like the sigma X and the sigma Z representations uh where one may be definite and at the cost of the other one being as indefinite as possible in that case it's just one and minus one here it's much worse so when a particle is uh localized in momentum it's completely delocalized in position we want to be able to say we want to I would like to do the reciprocal thing also I'd like to go in the other direction for that what we want to do is construct a notion called
+
+01:02:04
+the momentum space wave function the momentum space wave function is related to the probability amplitude for finding different momenta so let's see if we can construct that for that uh I think we're finished over here all right we defined in general we Define a wave function by taking the state vector and projecting it onto igen vectors of various observables and that gives us the wave function in the basis associated with that with that observable uh if I project it onto an igen state of X that gives me
+
+01:02:55
+the wave function side of x if instead I project it onto a state of definite momentum that gives me something that I can call the wave function in the momentum basis okay it's not a function of X so it doesn't look like a wave in space doesn't look like a wave in space but it's called The Wave fun and it's a function of momentum what is it let's give it a name let's call it s twiddle of P just to I I use the twiddle notation just to to um remind you that it's a different thing a different different
+
+01:03:36
+animal from the uh from the xwave function how do we calculate this let's suppose we know the X representation of the of the state Vector s of X how do we calculate this well we take the inner product of the state Vector s with the vector P but we know what that is that's the integral DX I think I've lost it no I I don't mean yeah only the only the equ only the equation what was it sci-fi equals integral uh SAR of x Pi ofx DX okay so I want the inner product between P well I know the wave function
+
+01:04:38
+of p in the position basis it's just what is it it's e to the minus I PX over the < TK of 2 pi if I remember right that's what we uh that's what we wrote down for S Sub P of x that's this guy over here and then we have to multiply that by S of X and integrate but that's exactly equal to side twiddle of p uh with the same notation that I used for Foria transforms in other words the momentum State wave function s twidle of p is exactly the Foria transform of the position space wave function
+
+01:05:29
+that's the upshot momentum and position are related in the same way that ordinary variables positions and uh forer variables are related okay so here we have let's just call a side ttle of p and if you know what this says is if you know the wave function and the position basis you know everything that's enough in fact you can recover the wave function in the momentum basis and also the probability to find the particle with different momenta after all what is the pro uh I've abused the
+
+01:06:09
+notation this shouldn't be a capital S here this should be a small s it's a wave function and of course the probability to measure a given value of momentum is just s twiddle star of P Time s tdle of P so what do you do and some way or another you know what the wave function of a particle is s of X but you're not interested in measuring X you're interested in measuring P how do you determine the various probabilities for measuring different P you take that xwave function you subject
+
+01:06:53
+it to fora transform you find the for your transform of it and its square is the probability for different momentum this is extremely similar to going from the sigma Z basis to the sigma X basis go through it and see if you can uh find the similarities between the two so if you wanted to take a position operator in the momentum space it would be I parti parti right remember P was equal to minus i d by DX and you apply this to a position space wave function you apply it to a position space wave function to find out
+
+01:07:46
+how it acts X not quite parallel not minus i d by DP but plus I D by DP the minus sign difference has a great deal to do with this minus sign here but you can work it out I um this is the first time that I've seen an explanation for a Heisenberg pair of position versus momentum and I assume that a similar relationship would apply to other Heisenberg pairs like time and energy time and energy is a funny one time is not usually regarded as an operator in quantum mechanics it's not usually regarded although you could
+
+01:08:51
+um you know you do measure time you look at your watch the hand of your watch isn't observable and so in that sense uh clock readings can be thought of as observables there's something a little bit funny about them and I don't want to get into it now but um but usually in quantum mechanics time is just considered the parameter by which states evolve but it is true if you have a clock for example and uh you're interested in making that uh making an extremely um accurate observation of the
+
+01:09:27
+clock it will be at the cost of um a lack of uh Precision in the energy of the clock so yeah it is what heberg pairs are there that that I might not be aware of electric and magnetic field just uh almost anything you can think of uh will have a uh a conjugate variable electric and magnetic field um uh what's that temperature and pressure no temperature and pressure are statistical mechanical variables they're not quantum mechanical variables uh what's that angular momentum yeah well okay the angular
+
+01:10:11
+momentum and angle if an angular momentum in a axial ax axially symmetric system the angular momentum and the angular orientation would be another one yeah okay and there are lots of others usually for example if you have some field typically the field and its time derivative are uh are conjugate variables so there's all kinds of uh any the other questions yes what think it seems like when we went from uh uh discret states observables with discret states to continuous there's a kind of subtle change in representation
+
+01:11:02
+in the following s that in that case in the discreet States The Operators operated on the ks the wave function was just an expansion Cod yeah yeah yeah but we could right but we we could also rep remember we also represent the operators as matrices and the Kats as columns but a column is just a list of values of an amplitude as a function of where it's lying how high you know as a function of an igen value so it's uh it really is the same thing um this is closely related to the representation of operators as
+
+01:11:42
+matricies just a concrete concrete uh action in a particular basis when you write column vectors you write them in particular basis right all right last remark last remark about uncertainty is the uncertainty principle for this particular example here I'm not going to derive the uncertainty principle not today and we may get to it but it really is a very simple thing it is simply the statement that uh that this that it's a statement about for year transforms first of all and it transcends quantum mechanics it's
+
+01:12:27
+not only quantum mechanics anytime you have a pair of quantities which are related by Foria in uh or transform in this way it's generally the case that the narrower one Foria pair half of the Foria PA is the broader the other one is in other words the narrower the range of P the broader of X will be and vice versa so I don't want to go into a a mathematical uh statement about um about the uncertainty principle here but whatever it is it really just does have to do with the character of Foria
+
+01:13:11
+uh pairs XMP in this case we'll come back to it I think what I wanted to get on to was the hamiltonians for particles just the simplest possible hamiltonians for particles and how they govern the quantum mechanical Evolution remember what the hamiltonian is the hamiltonian is the thing which first of all enters into the Schrodinger equation and which also governs the time evolution of the state Vector the hamiltonian is to be identified with the classical idea of energy just as it is in classical
+
+01:14:00
+mechanics if you go back we I I discussed this earlier but let's uh let's go on the starting point was the idea of the unitary evolution of State vectors that state vectors evolve by unitary transformation and then we said well what happens if you make a tiny little unit tin tiny little change in time that's correspond to some sort of differential change in the state vector and we found out that that differential change was governed by a Herm Mission operator called the hamiltonian so I if
+
+01:14:39
+you um have forgotten the details of that go back to it now not not right now but uh but you'll remember the equation the equation for the evolution of a state vector is I let's put our H bars in for the moment take them out again in a little while DCI by DT the way the state Vector we can write this in terms of State vectors the state Vector is generally a function of time the state changes with time you can take the difference between vectors and you can differentiate vectors with respect
+
+01:15:24
+to time if a vector happens to be time dependent you can differentiate it I DCI by DT is equal to the hamiltonian operator acting on S that's the time dependent Schrodinger equation we worked at I think we worked out an example for a spin processing in a magnetic field where we just used for the hamiltonian one of the components of the spin here is the general form of the Schrodinger equation the time dependent Schrodinger equation and let's try out some simple hamiltonians see what kind of things we
+
+01:16:05
+learn from them tonight I think we'll just uh study one or two and then we'll go on afterwards the very simplest hamiltonian that I can write down which is quite illustrative and nobody ever writes it down but I'm going to write it down anyway is H now H is an operator not just an operator it's a Herm Mission operator H doesn't stand for Herm Mission stands for hamiltonian but never mind uh I'm going to try H is equal to a number constant C for constant times the momentum perfectly good thing let's see
+
+01:16:55
+what it does let's see what kind of thing we learn from it um is this a reasonable hamiltonian for a particle yeah actually it is and we'll find out in a moment what kind of particle but uh it's not the usual thing what do we usually write for a non-relativistic particle p^ s over 2 m huh momentum squar over twice the mass we'll come back to that but this is simpler this is simpler and worth exploring first just to see how the apparatus works uh everything here should be capitalized
+
+01:17:28
+everything because they're all operators okay but how how is this represented in terms of wave functions in terms of wave functions and we would wave function s of X wave functions in the X basis in the momentum basis wave functions in the X basis are just projections onto the exigen vectors and we can do that inside these equations here it's it's fine um what this reads then is i d s of X by DT this is the way the wave function changes is equal now H is C * P so let's put the C
+
+01:18:15
+there and P is minus I HR d by DX so there's a minus an i an H bar and a d by DX s of X okay what have I done I've Rewritten this equation in terms of wave functions in other words a concrete representation s of x d s of X by DT and I've used here the assumption that the hamiltonian is just equal to C * the momentum and the momentum is i- I HR d by DX well this is a very and of course s is not only a function of X what is s a function of time it's a function of time because in general a state Vector changes with time
+
+01:19:09
+that's all okay we can uh let's cancel out the I bars and I just get DCI by DT is equal to minus C * DCI by DX or DCI by DT plus DCI by DX with a c is equal to zero that's a pretty simple equation in fact it's so simple that I know what not only what a what a solution is I know all of the solutions of this equation anybody know what the solutions of this equation are the general solution a function of xus CT any function let's let's leave it this way any function which is a function of
+
+01:20:21
+x minus CT in other words it doesn't depend on x and t separately it only depends on the combination x minus CT will solve this equation if I differentiate with respect to T that will be minus c times the derivative with respect to X and that's all this equation says any function of this form will solve the Schrodinger equation so let's think about a function of this form what does it do what does it look like you can start at t equal Z cross out T here with any function s of X of course we don't want to take any
+
+01:21:08
+function uh I want my functions to be such that the total probability is equal to one so the integral of s star SI should be finite equal to one uh they shouldn't blow up or or they should be they should fall to zero nicely so that we can integrate them but they can do all they can do whatever you like some sort of lump that can oscillate may or may not oscillate um and rather General and now we let T run we let time go forward what happens to this solution what happens to the solution is it stays
+
+01:21:54
+EX exactly the same shape except every feature of it moves with a velocity C the features of it move to the right with uniform velocity C that's what this function is it's just a function which just moves rigidly without changing its shape and of course it's a complex function so it has a real part and an imaginary part but both of them maintain exactly the same shape and they just slide down the axis uniformly with a velocity C now I chose C for a reason because it's a speed of
+
+01:22:39
+light is this a photon well this is not really the correct description of photons but it's pretty close to the right description of neutrinos at least neutrinos which move with a speed of light real neutrinos probably move a little slower than the speed of light but unmeasurably so so this would be a darn good description of one dimensional neutrinos except that we would have to add another possibility that they can all these were all these are pure Right Moving neutrinos they're pure Right Moving the
+
+01:23:21
+tunos and they do have a funny thing that the energy can be we're going to come back to this not not this quarter I think but the energy can be both positive and negative p is a thing which can be positive or negative so this particle has the property that it can have positive or negative energy but that's not import what's important here is the picture of the wave function moving down the axis with uniform velocity the whole probability distribution rigidly moves down the axis what happens to the
+
+01:23:52
+expectation value of x it moves the same way so the expectation value of x moves with velocity CT and um that's the quantum mechanics of the simple system I would just point out that if we compare this with the classical mechanics of exactly the same system hamiltonian is equal to CP how do we compare the uh how do we do the classical physics we use Hamilton's equations so here it was mainly for this reason right here that we did all quarter of of classical mechanics last quarter so that well not just for this
+
+01:24:40
+one but for all sorts of things like this um Hamilton's equations let's look at Hamilton's equations Hamilton's equations are DH by DP equals x dot and d h by DX equal minus P dot d h by DT is just equal to C right the H by thex that's equal to zero so what this says classically is that the momentum is conserved now we'll come back to the conservation of momentum in quantum mechanics but it also says that the position of the particle moves with velocity C in quantum mechanics the whole
+
+01:25:36
+probability distribution in this case this is a very very simple case sort of engineered just to have a simple answer the whole probability distribution moves with uh but in particular the expectation value of x moves with velocity C so the expectation value of the position behaves according to the classical equations of motion now that's that's this as I said this is a very easy example um which is uh a little too simple to be perfectly General but uh but it does illustrate the uh so this would be the Schrodinger
+
+01:26:21
+equation for this very very simple hamilt I okay I think we're about uh all right let's go a little more little more what about a and of course this would make this a relativistic particle this would not be a non-relativistic particle is a guy who moves with the speed of light okay yeah I mean without using the C just using some other number ver speed of light you know um would this be the the correct hamiltonian for any particle moving in free space no any particle which is always constrained to move with
+
+01:27:06
+the same velocity so right right so for example um you know just as photons are the Quant of the electromagnetic field sound waves and crystals also have quanta and those sound waves are called phon and at least at low energies those phonons move with a uniform velocity the uniform velocity being the speed of sound so if you had one-dimensional phonons you would describe them in a similar way could just do that would you just throw an electron in free space and it wouldn't follow that uh no electrons don't generally move
+
+01:27:49
+with a speed of light I'm just saying at any speed or no no no no you see this this law of physics for this particular kind of particle says that no matter how you throw it with whatever momentum you throw it with it's always going to move the same way right he said replace the C with the V with a what he said replace the C with with velocity V but velocity V means momentum but PB is the same as p^2 2 not quite it's p p uh it's p s M but that's close to the that right that's close
+
+01:28:29
+right imagining that any of one thing for a relativistic particle of course p is not V over M but you're on the right track yeah I was just imagine that any particle has a has a wave function for its position right and if it's moving in space that would that wave function is just moving no no no no you see that's that's that's not quite right um only for this very very simple situation does the wave function move with this rigid behavior and maintain its shape not true more generally if you
+
+01:29:09
+take a non-relativistic electron we're going to work out its equation in two minutes uh the shape of its wave function is not maintained it sort of wobbles and does things and sort of gradually falls apart and disperses uh diffuses disperses whatever you want to call it so um right as I picked this one just because it's easy to solve but um but it doesn't represent uh the most General kind of motion of a particle all right so let's let's talk about let's take a guess let's take a guess for a
+
+01:29:49
+non-relativistic particle um I think I already earlier showed you that the equations of motion for expectation values CL uh Quantum mechanically are very closely related to the corresponding equations of motion classically Hamilton's equations or Pome Pome bracket form of them um so you can imagine that if you want to represent the quantum mechanics of a system which is uh which whose classical physics you know you basically use the same hamiltonian now we will come back to that we'll come back to that and justify
+
+01:30:34
+it better but the natural hamiltonian to guess for a non-relativistic particle is just a good old p^ squ over 2 m this is not a particle with a force on it this is a particle with no force on it a free particle the energy the kinetic energy t is equal to 12 Mass * velocity squared momentum is M * V and we can rewrite the kinetic energy if that's all there is let's call it h as p^2 over 2 m so that's the hamiltonian for a classical particle notice this hamiltonian has a funny feature particles can only move to
+
+01:31:20
+the right there are no there's no left moving motion they all only move to the right uh and that's a funny thing the asymmetry between left and right has to do with the fact that p goes to minus P when you invert left and right the hamiltonian changes sign when you this this hamiltonian when you that that's a funny thing you would the energy of a particle with negative momentum is negative energy of a particle with positive momentum is positive that's a little bit weird okay uh non ordinary non-relativistic
+
+01:32:01
+particle its energy is independent of which way it's moving and that's ensured by the fact that the energy is proportional to p^ squ not P right so let's start with the energy being p^2 over 2m and work out the Schrodinger equation for it now we will work be working out the genuine Schrodinger well the original version of the Schrodinger equation for free particle we just write H is equal to p^2 over 2 m h is also I D by DT now let's put H bar in just to to as Schrodinger would have done
+
+01:32:40
+it on S that's the left hand side thought of as an operator operating on an equ on a uh or sorry that's i h Bar D by DT and the right hand the right hand side of the equation is just H acting on side but H is p^2 over 2 m so let's write that there's a 1 over 2 m and then what is p whatever p is we have to square it but let's write down what p is first minus HR I I derivative with respect to X but we have to square it it's p^ s squaring it just means multiplying it by itself so let's Square this I bar
+
+01:33:42
+squared and then the square of the first derivative is the second derivative mean you just apply it twice Time s or on S of X that's it that's a Stringer equation for a um ordinary non-relativistic particle moving on a one-dimensional line uh let's let's leave the H bars I bar DCI by DT is equal to minus H bar squar the minus comes from minus i^ 2 over 2 m dcai by dx^ 2 this is a kind of wave equation incidentally this is also a wave equation this is a wave equation and S is a wave function this is a wave
+
+01:34:38
+equation s is also a wave function this is the shinger equation for for an ordinary non-relativistic particle it has the property that waves of different wavelength move with different velocity I'm getting a little tired so I we're going to quit soon but um waves of different uh wavelength move with different velocities because of that the wave function does not maintain its shape and in fact it tends to fall apart and uh and um uh spread okay the wave function spreads out with time unlike this very simple
+
+01:35:26
+case over here in this case no matter what the wavelength no matter what the momentum is they all move with the same velocity not so here different momentum move with different velocities and so a wave with a given shape different parts of it will move with different velocity different uh wavelength different wavelengths in it will move with different velocities and it will sort of fall apart uh we'll study it a little in more detail and we'll study Its Behavior but um I think I'm for more please visit us at
+
+01:36:04
+stanford.edu
+

@@ -1,0 +1,336 @@
+00:00:01
+welcome back to my series on quantum spin up until this point we've been thinking about particles like for example an electron as being planted at some point in space and having some spin state you know which is a vector with you know two complex components however we haven't addressed how this electron actually you know moves around in space so in real life electrons they move around they occupy you know different regions of space and they do stuff so in this video we're finally going to
+
+00:00:35
+address particle motion we're going to look at how electrons move around in order to do that we're going to have to introduce wave functions and gaussian wave packets and you know stuff like that and we're also going to look pretty deeply into how magnetic fields affect the motion of an electron so if you have you know it turns out that if you have a changing magnetic field then that electron will feel a force due to that changing magnetic field you know depending on its magnetic moment it'll move around and
+
+00:01:12
+stuff like that so what i want to show you in this video is you know how electrons move around and teach you some basic stuff about it and beyond that i also want to sort of give you some intuition for how this works so at some points i'm not going to be 100 rigorous but i want to instead of you know being completely rigorous i want to teach you ways so that you can get an intuitive grasp on electron motion you know without having to work out all the details necessarily so you know those are my goals for this
+
+00:01:49
+video alright so let's get started okay so particle motion and right now we're going to be ignoring spin and we'll come back to that a bit later so when we want to talk about a particle moving through space we use something called its wave function right so here i'm writing psi of t and x this is called the wave function of the particle here t is some time and x is some position vector right so it's just a three-dimensional vector with components let's say x y and z all right and then psi which is a
+
+00:02:55
+function of t and x is a complex number right so this whole thing is some complex number with a real and an imaginary part okay so if you know this wave function what does it tell you well the absolute value of psi of t and x squared is the probability density of finding the particle at position x at time t okay okay so probability density what is a probability density well let's say you know you have some position x and you have an infinitesimal cube around it with some you know infinitesimal volume let's call
+
+00:04:16
+it dv now the probability that you find the uh particle in this infinitesimal volume with volume dv is just the absolute value of you know psi of t and x squared times dv so the probability of finding it in this you know infinitesimal cube is infinitesimal itself but that's what we mean when we say probability density okay so in particular that means that if you integrate the absolute value of psi of t and x squared over all of space right so here doing a volume integral over all position variables x
+
+00:05:10
+so if you do this integral this should be equal to one and here t is you can choose any particular time we're not integrating over time here so right so this is the condition you should have if your wave function is properly normalized and this just means that you know the probability of finding a particle anywhere in space you know is one all right so the next thing we have to talk about is how this wave function evolves in time so the wave function evolves in time according to schrodinger's
+
+00:06:08
+equation and what is schrodinger's equation well it's just i times h-bar times the partial derivative of our wavefunction psi with respect to t equals negative h bar squared over 2m where m is the mass of our particle and then here we have the second partial derivative of x plus the second partial derivative with respect to y plus the second partial derivative with respect to z of psi so this is schrodinger's equation here right so what is this what is this saying this is saying that
+
+00:07:05
+if you know psi of t and x at some particular starting time t and you know all values of x at that one time then you can use this equation to figure out what psi is going to be at all later times right because you can just you know say one little tiny infinitesimal time step forward you know you can use schrodinger's equation to figure out what psi of t plus delta t is you know based on what you already know at your initial time now you might be looking at this equation you might say boy you know that looks really bizarre
+
+00:07:50
+you know how how do you come after this stuff like is there any way that this makes sense and there sort of is uh something i mean if you've never seen this before you know there's nothing really i can tell you that'll make it seem you know totally obvious because i mean it's not but uh but but here's one way to think about it the kinetic energy of a particle right classically speaking is just one half m v squared right and using that momentum p equals mv you can rewrite this as
+
+00:08:35
+p squared over 2m right so in particular you know the kinetic energy will be equal to one-half rather one over two m times the momentum in the x-direction squared plus the momentum in the y direction squared plus the momentum in the z direction squared all right well in quantum mechanics p momentum let's say momentum in the x direction is this crazy looking operator so it's h bar over i times the partial derivative with respect to x right so in particular you know p x squared is negative
+
+00:09:23
+h bar squared and then the second partial derivative with respect to x so if you you know plug this in here and also do it for you know y and z then this is in some sense the kinetic energy of the particle um and you might say well wait a second you know why is p this weird thing i'm not going to really get into it right now at a certain point you know i'm just telling you what the rules of the game are you know it was pretty hard for people to come up with for the first time and this is in some sense just you know
+
+00:09:59
+what it is okay now there is one very important solution to schrodinger's equation right this is just one particular solution but it's a really important one so i'm just going to write this out real quick okay so you might be thinking well you know this looks extremely complicated but uh it's actually not that complicated let me walk you through what's happening here so okay so let's just start from the beginning so first things first we got a pi to the negative three-fourths out
+
+00:11:03
+front that's just a number nothing so crazy okay then we have a sigma to the negative three-halves what's sigma well uh as we'll as we'll see a bit later sigma should be thought of as the initial position uncertainty of the of the particle but right now it's just a number and then we have c of t to the negative three halves right so as i've written below here c of t is just some other function i'm defined that's equal to one plus i times h bar times t over m times sigma squared now m as i've said
+
+00:11:41
+previously is just the mass of our particle so okay then we have the exponential function right so that's just notation so for instance you know x of you know x is just equal to e to the x you know it's just notation and then we have negative one half and then x squared over sigma squared times c of t plus i times p dot x where here p this this is just a vector with three components you know p x p y and p z and i know previously i said that uh p px was equal to h bar over i times you know partial partial x
+
+00:12:30
+that's not true here here these really are just uh you know three you know real numbers that uh we're putting into our solutions so i don't want to confuse you these are just three real numbers okay and then we have minus i times p squared over two m times t over h bar and then over c of t again okay so you can see there are you know three parameters that go into this there's sigma which is the as you'll see the position uncertainty there is the mass m and there are the you know the momentum
+
+00:13:12
+vector okay so when i say that this function is a you know solution to schrodinger's equation all i mean is that if you were to take this function psi of t and x and you were to plug it in here and here you would you know you would compute the left hand side of the equation and you would compute the right hand side of the equation you would find that this equation holds so that's just what i mean when i say this is a solution i'm not going to you know do out all the you know derivatives here but you know
+
+00:13:51
+you could do it for yourself you want you would find that this holds okay so oops now the next thing you might wonder is what is the absolute value of psi of t and x squared right because that's the probability density of where the particle is so i'm just going to write that out really quick right now so okay there are a lot of things to say about this the first is that if you integrate the absolute value of this wave function squared you know if you do a volume integral over all positions
+
+00:15:12
+you will indeed find that this is equal to one i'm not going to do it here but that is the case so that's the first thing the next thing is what general shape does this function have well you can see that the only way it depends on x right is right here and you can see that the function will be a maximum when x equals p times t over m so in other words i can't draw you know i can't draw it in all three dimensions but i'll just sort of draw on one dimension here you know let's
+
+00:15:58
+just say x what this will look like is it will look like a bump that is maximum where x equals p t over m right so here i'm graphing the absolute value of psi squared and like i said i'm only doing it on one dimension just because i i can't do you know x y and z uh you know on the screen but okay so this is actually called a a gaussian the exact shape furthermore the width of this gaussian right is going to be it's going to be the square root of this thing right here that's what the
+
+00:16:52
+width of the gaussian is going to be so the width is equal to the square root of sigma squared plus h bar times t over sigma times m squared so at t equals zero the width is going to be just equal to sigma right so that's what i meant when i said sigma is the initial width the initial uncertainty of the you know position of the particle uh furthermore actually as t gets really big so as t goes to infinity the width becomes just h bar times t over sigma times m so you know something i thought i'd mention but
+
+00:17:45
+okay it's kind of hard to get uh too much of a sense for this just by drawing these pictures so now i wanna i wanna show you something pretty cool okay so here i have transported us into the land of wolfram mathematica which is a very powerful piece of software which i get for free through my university now what i've done here is i've made a little animation and i'll press play in a bit but what this animation is going to show is how this gaussian wave packet evolves in time now up here is all of the code i've
+
+00:18:25
+written to you know make this little animation so let's just take a quick look here we can see that i've made a function you know psi of x and t i'm only doing it once again in one dimension you know just x instead of x y and z just because it's easier to show here we can see i have you know sigma h bar the mass m the momentum in the x direction p which i've just set to some random numbers here i also have this other variable ts which is like sort of like t scaling i just wanted to scale up how fast
+
+00:19:02
+the animation goes because it i thought it seemed kind of slow so i just wanted to make it go a little faster and um so you know what we have here is we animate how the wave function evolves now i'm really graphing three things i'm graphing the absolute value of the wave function in black i'm graphing the real part of the wave function in blue and i'm graphing the imaginary part in red so when i press this play button what's going to happen is this gaussian wave packet's going to
+
+00:19:35
+move to the right and it's going to get wider now unfortunately because of my recording software there's going to be a bit of lag it's going to be choppy so well let's just press play and see what happens yeah so you can see the animation is a little bit choppy but i have downloaded this animation as a movie file and i will now play that so you can see what it looks like when everything is moving smoothly now there are a few things i want you to notice here the first is that while the envelope
+
+00:20:24
+of this wave function that the black line the absolute value of the wave function is only moving to the right and getting wider the real and imaginary parts are oscillating rapidly and that's generally what it's going to look like now if all you're interested in is the position of the particle you'll never you'll never know about this but it's sort of important for how the wave function evolves in time it turns out that the the phase of the wave function um you know the angle of the complex
+
+00:20:57
+number you know what makes the real and imaginary part oscillate is what encodes the information of the velocity of the uh you know wave function so the higher the velocity the the higher the the frequency of the oscillation is now you know because i have the code up here if you want to play around with the numbers and you have access to mathematica you can just type this into mathematica and you can play around with it for yourself i should say that i kept encountering this weird uh bug where it wouldn't work
+
+00:21:29
+but i saw online that if you go to edit and you go to um where is it oh preferences i there is this wait for preferences whoops ah yeah here's preferences there's this box that was checked called show suggestions bar after last output that's usually checked and if you just go ahead and uncheck that that that made it work so i don't know i don't know why that happened but i'm just letting you know that's what you can do if you get the same error i did okay so now that we have talked a bit
+
+00:22:10
+about how particle motion works in quantum mechanics when you're not taking spin into account now we're going to talk about how it works when your particle has spin so particle motion with spin so now we're going to describe a particle which moves in space and also has spin so when we weren't taking spin into account the state that described the particle was just this wave function psi of t and x now how do we then describe spin you know on top of this well remember that you know when you're
+
+00:23:00
+just thinking about spinning you're not thinking about particle motion your state is just described by a a two-dimensional vector right so this is how you describe your state when you have spin but no motion and this is how you describe your state when you have motion but no spin so how do you think you know you put the two together well the way you put the two together is that you now have two wave functions let's call them psi spin up size spin down two different functions both functions
+
+00:23:37
+of t and x and we can write them in a two-dimensional vector like this so this so so state is a two-dimensional vector of functions where each of these functions you know output a complex number when you put in some time and some position now what is the interpretation of each of these functions well let's say you know the absolute value of psi spin up evaluated at some t and x right take the absolute value squared this is the probability density of finding your particle at position x at time t
+
+00:24:56
+spin up uh with respect to the z axis right so that's what the absolute value squared of psi of spin up is it's the probability density that you know you find your particle at some position x at some time t and that when you find your particle it's also going to be a spin up with respect to the z axis and likewise um the absolute value of you know psi spin down at some t and x squared is the same exact thing but you know spin spin down with respect to the z-axis now if you want to know what the
+
+00:25:48
+probability density of finding it at some particular position is with spin up and some other axis like for example you know spin up in the x-axis or spin up in the y-axis or any arbitrary axis you have to create a linear combination of size spin up and size spin down just the same way we do for you know just the two-dimensional complex vector right so this state for instance has a 100 chance to be found spin up in the x-direction and likewise the absolute value of 1 over root 2 times psi spin up at t and x
+
+00:26:29
+plus 1 over root 2 times psi spin down at t and x all squared this is the probability density that you find your particle you know position x at time t spin up in the x direction right so that's so that's how that works all right hopefully that didn't confuse you too much okay so whenever we have uh some notion of a state in quantum mechanics we have to have some sort of normalization condition so for example when we were just talking about a particle without any spin we had to have
+
+00:27:13
+that the absolute value of psi of t and x squared integrated over all of space we had to have that this was equal to one and that was our normalization condition and it you know just meant that the probability of finding it anywhere you know has to be equal to one so what is the normalization condition here here the normalization condition is just that if you integrate the absolute value of the spin up function squared plus the absolute value of the spin down function squared over all of space right see we're fixing
+
+00:27:59
+time and integrating over all spatial positions this is what has to be equal to one and then this is our normalization condition this you know is just saying that the probability of finding the particle anywhere in space with any particular spin you know either spin up or spin down that has to be equal to one so that's a normalization condition okay so in quantum mechanics there's always only two things you ever need to know you need to know what your states are and you need to know how your states
+
+00:28:34
+evolve in time so here i've just described to you what the states are when you want to describe a particle that moves around in space and has spin and now all i need to do is tell you how the state evolves in time and specifically what i'm interested in is time evolution in electro magnetic field right so when we have our whoops our particle with spin and we place it in an electromagnetic field uh you know how does that state evolve so i'm going to write out the equation and it's pretty long so
+
+00:29:20
+here i go all right now clearly this is a very complicated expression so i have to break down what everything means for you here so right off the bat we have i times h bar times d dt of our state this is how time evolution equations you always start in quantum mechanics and then we have this big thing here now this big thing here is in some sense a two by two matrix and it's it's a little more complicated than that but it's basically a 2 by 2 matrix and you can see that here we have i
+
+00:30:32
+where this i is the identity matrix 1 0 0 1 right so this is the identity matrix and we have this weird thing out front here but this weird thing is just multiplying the identity matrix so we'll get to the weird thing in a second but here you can see we have b dot the the sigma the poly matrices so remember that this sigma with a vector is just a vector of matrices sigma sub x sigma sub y and sigma sub z this is just you know some notation where sigma sub x is the first poly matrix 0 1 1 0 sigma sub y
+
+00:31:24
+is the second poly matrix 0 negative i i zero and sigma sub z is the third poly matrix 1 0 0 negative 1. so b dot the sigma vector you know it's just borrowing notation from the regular dot product so for instance right so b dot sigma equals b x times sigma x plus b y times sigma y plus bz times sigma z so this whole thing you know is just a two by two matrix here so here we have a two by two matrix and here we have q over 2m times h bar now q q is the charge of our particle so if we have say an electron
+
+00:32:32
+then q equals negative e where e is the elementary charge so that's q m is the mass of our particle and here we can see that this term right here b dot sigma this is going to be you know some sort of two by two matrix that mixes up the two components of this vector here so this part mixes up the two components of our vector so the time derivative of the spin up function or the spin up wave function is going to depend partially on the spin down wave function right because this is going to you know
+
+00:33:17
+mix it up and the time derivative of the spin down function is going to depend partially on the spin up function so this this term kind of couples the two components together this term doesn't do that right because this is just a identity matrix and that doesn't couple the the two components of the the vectors together now if you've seen some of my previous videos this term might look familiar to you because this looks an awful lot like negative mu dot b where you know b is the magnetic field and mu
+
+00:34:01
+is the magnetic moment of your particle where you know here we've approximated the g factor equal to two but if you don't know what the g factor is don't don't worry about that but but yeah in my in uh my previous videos where i was interested in how the spin of a particle uh changed in time when it was when the particle was placed in an external magnetic field we were just really looking at this term and we weren't interested in the motion of the particle we were just interested in how the spin of the
+
+00:34:34
+particle changed so you can see that this term is just one piece of the broader equation right so we were only studying earlier just this one piece but now we're looking at the whole equation okay so now it's finally time to look at this crazy term right so if this term governs how the spin of the particle changes in the external magnetic field this term governs how the particle moves in an external electromagnetic field so here we have to start things off one over two m where m is the mass of the particle
+
+00:35:18
+then we got h bar over i times del right where del you know is just this vector with components of partial derivatives in the x y and z directions right and then we got minus q where q is the charge of the particle times a now you might not have ever seen this thing a before a is something called the magnetic vector potential and the what defines a is that the curl of a so del cross a this is this is the curl of a this is equal to the magnetic field b so this is what i mean when i say that a is the magnetic vector potential it
+
+00:36:21
+satisfies this equation if you've never seen this before don't worry about it too much but but basically the magnetic field has some thing that kind of acts as its potential but the potential isn't a no isn't a scalar function it's a vector and that's what a is okay so that's a and then here we then have plus q times phi now phi is the just the regular old electric potential so if you've ever seen the equation that the electric field is equal to negative the gradient of phi yep that's this file
+
+00:37:16
+it's the potential um that the electric field is a gradient of or rather negative the gradient of now actually uh this equation which you may have seen isn't actually perfectly correct you actually have to then add this other part to the equation which is partial a over partial t um yeah this equation is completely correct if you don't if you don't have this it won't always be a correct but you know when you're learning about it for the first time this this will get you far now some of
+
+00:37:56
+you might be wondering you know how can you have this crazy thing here multiplying the identity matrix i like what does that mean and i'll spell it out for you in a simple example let's just say we had del squared times i and this was acting on our vector of functions you know the spin up function and the spin down function right so this would then just be equal to whoops del squared times know the identity matrix 1 0 0 1 and then the spin up and spin down functions here and then here we're thinking of del squared
+
+00:38:43
+is in some sense a scalar which multiplies this matrix so this would then be equal to the following matrix here we have del squared 0 0 del squared then here we have the spin up and spin down functions and then just multiplying this matrix you know by this vector we then get the vector of functions del squared times the spin up function and then del squared acting on the spin down function remember that you know del squared is equal to the second partial derivative with respect to x plus the second partial derivative with
+
+00:39:36
+respect to y plus the second partial derivative with respect to z right so that's how this thing acts and here a is just a vector for really a vector field right because i mean a depends on t and x right see both both phi and a uh depend on t and x in general so you know those would just be functions and those also just you know multiply the identity matrix uh in the way you would expect so okay that's what i'm that's how you can have your crazy stuff multiplying the identity matrix and what that means when
+
+00:40:27
+you write it out okay all right now let's clear a bit of this off now the last thing i want to talk about you know to fully explain everything is what it means that we have this thing here and then it's getting squared like like what does that mean that's the final thing i have to say okay so let me just this out here so h bar over i times del minus q times a squared and then we have the identity matrix and then we have our two component vector of wave functions here so i'm going to
+
+00:41:14
+write this out a little more fully so this is h bar over i times del minus q times a right i've written it the first time and now i'm going to write it a second time that's what the square is instructing me to do and then i'm not going to write the identity matrix because there's not really any point to doing that and i'm going to write here my two component vector of wave functions and then finally i actually need to have a little dot here so usually when you have like a vector
+
+00:41:53
+and then you you write the vector squared that's really just notation which means the vector whoops sorry the vector dot itself and that's the same thing that's going on here so what do we have here well first off the dot means that this is really three terms an x term and y term and a z term so for instance you know del dot del well i mean i kind of wrote that earlier when i said you know del squared that's equal to that's equal to this thing for instance okay whatever so yeah
+
+00:42:47
+right so what is this really saying this is saying that first you act with this operator on this vector right and that's going to get you some result some result and then with this result you act with this whole thing on this so that's what the square means it means first you act with this on this and then with the whole result of that then you act with this on this and they're going to be three terms like that you know one for the x component of this three-dimensional vector one for the y
+
+00:43:29
+and one for the z now in particular they're going to be cross terms where the del is going to hit the a so that's pretty confusing so in general this is going to be if you really wanted to write this out in all the components and everything that would be pretty confusing to write down so hence why we just write squared here it's very compact notation okay so that's what the square means it's pretty confusing okay so now that i've just explained to you what all the notation here means what does this term
+
+00:44:09
+really accomplish what what does this term really do well what it does is you know if you imagine that you're you have a little wave packet this term is basically responsible for the magnetic force in the sense that if this wave packet is traveling with roughly some velocity and it's in an external magnetic field you know then you have the lorentz force you know f equals q v cross b right this is true classically um roughly speaking this is also going to be true quantum mechanically and that the position of this wave
+
+00:44:56
+packet is going to quote unquote feel this force and the average position is going to move like the classical particle would it's going to the average position is going to feel the force and right so this this whole situation here is responsible for the magnetic force oops and this is responsible for the electric force right so this is the uh magnetic force but then there's also the electric force q times the electric field e so in general uh you know this is obviously an extremely complicated expression
+
+00:45:47
+but what i'm claiming and i haven't proved this to you at all i'm just claiming this out of nowhere what i'm claiming is that if you just think about having little wave packets like this right little gaussian bumps you can sort of think about the gaussian bump feeling the regular classical forces and the and the peak the average position of the gaussian bump uh moving accordingly okay so this is clearly a pretty important equation you know very complicated equation but i haven't said what the
+
+00:46:23
+name of the equation is yet this equation is called the poly equation you know the equation that governs how a spin one half particle moves in in an electric magnetic field now there's one final thing i want to talk about which is this term now earlier i said this term is responsible for how the spin of the particle changes but you can also think about this term as giving rise to a force two now what is that force now this force is going to be a force on the magnetic moment and classically this force is equal to
+
+00:47:23
+the gradient of mu dot b so in an earlier video i discussed how when you have a magnetic field which is constant throughout all of space there's going to be no net force on the particle now there can be a torque on the particle which makes the spin process but it's not going to be any net force and a particle but if b if the magnetic field b varies in space then there is going to be actually a net force on the particle you see see if b is constant then this thing right here is also going to
+
+00:48:06
+be constant and then the noble of a constant is zero but yeah a lot of you might not be familiar with this force i certainly wasn't uh too familiar with it for a while i had to you know say okay wait what's the deal with this force but this is the force i want to spend the rest of the video basically talking about so actually i'm only going to for the rest of this video only talk about classical mechanics and i'm going to show how this magnetic moment force arises classically so
+
+00:48:46
+i want you to understand the way i have structured this lecture here right i spent the first part of the video talking about wave packets and i wanted to build intuition for how these little wave packets you know how they operate quantum mechanically but also how you can use classical intuition to think about them in some sense you can kind of think about wave packets in some fuzzy senses you know you have a particle which is you know sort of located in some position there's some position uncertainty
+
+00:49:22
+and it's going to spread out in time but the position of that wave packet you know the average position can you know feel forces you know as i've discussed and and by sort of using this classical intuition of you know forces on a particle we can get a a very uh qualitative sense for how quantum mechanical particles are going to evolve in time and if you have you know a good sense of the classical mechanics you can get a decent sense for the quantum mechanics if you're on if you're only interested in you know
+
+00:50:02
+wave packets so i'm sort of assuming that most of you are familiar with the lorentz force and the regular old electric force but i'm i kind of think a lot of you don't really know too much about this magnetic moment force you know the force exerted on a particle when it has a magnetic moment so for the rest of the video i'm just going to talk about this classical case just so you get some appreciation for this force but in reality i'm kind of really interested in what happens to these wave packets but
+
+00:50:36
+i'm going to be but because i you know spent so long drawing an analogy between wave packets and classical particles it should make sense to you sort of what these things have to do with each other but okay now we're going to transition and i'm going to derive where this force comes from classically all right so now we're going to do the f equals del of mu dot b i.e the force on a magnetic moment derivation now before we get into the math let's just see if we can understand this
+
+00:51:40
+equation qualitatively so let's say we have a loop of current which is our prototypical example of something with a magnetic moment and we're placing it in an external magnetic field so let's say that the magnetic field is stronger you know down here and it's weaker up here so the field lines will kind of look like this the they'll kind of bend outwards like this so remember that the strength of a magnetic field is proportional to the density of field lines so because the field lines are all you
+
+00:52:20
+know close together at the bottom but then they're further apart you know up top in this region you know the magnetic field is you know stronger down here and we grew up here so the magnetic field is changing at the location of the current loop remember this is an external magnetic field not the one induced by the current loop now the question i want to ask is what is the direction of the force that this changing magnetic field will make on the wire so to answer this question we have to use the lorenz force
+
+00:52:57
+law that f equals q v cross b and if we think about this current loop as being some circulating positive charge i mean in real life in a real wire would be circular negative charge but let's just think of it as positive charge for simplicity then at this rightmost point on the wire the velocity vector of you know this positive charge would be going into the page like that well on this left most point the velocity vector would be coming out of the page like that meanwhile at these two points the
+
+00:53:44
+magnetic field would be sort of pointed at an angle so on the rightmost point would be pointed like that and on the leftmost point it would be pointed like that so this is where the magnetic field is pointing now in order to figure out the direction of the force at these two points you have to use the right hand rule so now i'm taking out my right hand and i'm going v going v cross b and on the right side i'm getting that the force is going to go in this direction like that on the left side
+
+00:54:26
+i'm getting the forces going in this direction so if we think about summing up the forces on every part of the wire we're going to get that the net force on this wire is going to be pointed downwards so this is going to be the direction you know of the net force like that so we can see that in this example because the field lines are you know kind of splitting outwards like i've drawn here the current loop feels a downwards force so we can therefore see that when magnetic moments are placed in
+
+00:55:02
+magnetic fields which are varying you know from one point in space to the next they're gonna feel some overall uh net force so now we're gonna quantitatively derive you know the expression for that net force all right so in order to do this quantitatively we're going to make a coordinate system so here's my coordinate system here we have x y and z and now we're going to consider a square loop of current instead of a circular loop so this is a square loop of current the very middle i will make the origin
+
+00:55:50
+so zero zero zero and for this loop of current we have you know the charge flowing in this direction so let's say the total charge that's flowing around this uh this loop is a charge of q now let's also say that the velocity of the charges is what i'll call v and the length of each side of this little square is going to be l so l now we can also write this in terms of the current right here we have q v and l but we can write the current going around the wire that's going to be equal to the linear
+
+00:56:42
+charge density times the velocity so linear charge density is going to be q over well 4l see because there's a charge of q and the total length of this wire is 4 times l then we have to multiply that by v so this is the the current going around the wire and also just write that the area of the square the area equals l squared so first things first let's just label the velocity of the charge in each segment of this you know square loop of wire so for this bottom segment here v the velocity v is equal to
+
+00:57:39
+0 v 0 now for this right segment the vector v is equal to negative v 0 0 for this top component it's going to be 0 negative v 0 then for this left part it's going to be v 0 0. now the next thing we have to label is what the magnetic field is on each of these four segments of wire so remember that the magnetic field is a vector field so for every point in space the magnetic field you know it gives you some vector and we're interested in you know the case where this magnetic field you know changes from place to place
+
+00:58:31
+it's varying over space but here's the thing we actually are only interested in this problem in the limit that this square becomes very small so we're we're sort of imagining that the length of you know this wire l imagine this is very small because you know eventually we're interested in you know an electron an electron is very small so you know over the saw the scale of the size of this wire the magnetic field is varying but not that much so what that means is that we can find the value of the magnetic
+
+00:59:11
+field on each of these four segments of wire by doing a taylor expansion so for instance b at let's say oh location of l over 2 comma 0 0 this is going to approximately be equal to the magnetic field so b 0 0 0 plus l over 2 and then partial x b and then you know this derivative evaluated at you know the origins of zero zero zero um so yeah so this is a first order taylor expansion and here we're assuming that you know l is small and b isn't going to vary much over the length scale of l
+
+01:00:06
+now this means that if we know what the magnetic field vector is in the middle let's say let's let's call that b naught so what i have written here is b 0 0 let's call that you know b naught so b 0. so the magnetic field in the center has a value of b0 and on this let's say let's say this top component of wire here so on this top component of wire which has a an x coordinate of negative l over 2. here for this top component of wire we can take that b is approximately equal to let's say equal
+
+01:00:56
+to b naught and then minus l over 2 right because here x is minus l over 2. and then partial x times b so might be saying well wait a second that's what the value of the magnetic field is at this point you know this point being negative l over 2 0 0. but actually because l is small we can take that to be the value of the magnetic field on this whole segment and the reason for that is because if we figure out what the value of the magnetic field is here we can do another taylor expansion to figure out what it is
+
+01:01:42
+over the whole you know for any point on this segment but that'll be another order higher in l so that'll actually be second order in l and we only want to keep the first order in l here we don't you know because l is small you know we're interested in stuff of order l but we're not interested in stuff of order l squared so to order an l we can just take this point on the wire and just you know figure out what the magnetic field is at this point but not worry about you know what it is at you know
+
+01:02:13
+this point in this point because you know to leading order in l it will be the same all right so let me just get rid of this and let's finish labeling what b is on each of the you know the other three segments of wire so at this bottom segment we have that b is b naught and then here we have plus l over 2 partial x b so yeah the derivative of b you know at uh evaluate at the origin so then on this right component we have b equals b naught and then here we have minus l over 2 partial y b and then on the left we have
+
+01:03:16
+b equals b naught um oh wait a second this should have been a plus y sorry and this should be a minus yeah minus l over two partial y b okay so finally now we figured out what v and b is for all these four segments we can now figure out what the forces on each of these four segments so we're going to do this using the lorenz force law so f equals you know q v cross b so on each of these four segment each of these four segments this this charge q little q that's going to be big q over four because that's one
+
+01:04:17
+fourth of the wire um and for the b as a vector um note that for instance let's say partial xb that's just a vector with components of partial x b x partial x b y and partial x b z so yeah so this is just a vector that we can plug in so in order to do this part um you know you just for each of these four segments plug you know these two things into the lorenz force law and you know to do that you have to look up the formula for the cross product and everything but yeah i'll just write the answer here so
+
+01:05:01
+let's start with this bottom one so here we have all right so this is the result of doing this cross product for all four of the segments you know we just have to use the cross product formula i have it up here so if you want to do it yourself you know you can check against my work here and you know now that we've you know gone through and done all that you know it's just uh you know it just takes a little bit of time but nothing hard about it now we're going to add up all of these forces and see what the net
+
+01:06:08
+force is um well actually let's uh let's just sort of clean up the screen a bit so so it's visually easier to see you know what we're looking at now we don't need v and b anymore all right very cool and bring this up here i guess actually yeah let's delete this all right okay so now we're going to sum up all these forces and see what the net force is so f net equals so you know right out front we still have a qv over four and now for the first component well okay so let's let's see here so
+
+01:07:23
+this segment has something in the first component and so does this one but these two right here have zero in the first component so those don't you know affect it and now note that here we have you know b naught z and negative b naught z so those cancel out so you know that cancels out and that cancels out but crucially the the the term that's first order and l those add right so this is actually the same as this one so these will add together right so this is why we had to keep everything to the
+
+01:07:58
+next leading order in l because you know the what you would have thought was the leading term you know those cancel out to zero so the first component we have l and then partial x v z okay great now let's look at the y component so for the top and the bottom segments of wire now the y component is zero so that doesn't matter and it's now it's the left and the right for which the y component isn't zero and just like before you know this leading piece b naught sub z that gets cancelled out
+
+01:08:44
+because you know see one of them is negative one of them is positive so those cancel out and then it's the the term which is proportional l which no adds so here for f net and the y component we have l and then partial y bz now finally let's look at the z component and the z component is a little different because here we can see that every piece of wire has a non-zero z component so right so okay let's start with uh the the b naught x part so here we can see that once again this the top and the bottom ones cancel
+
+01:09:38
+out and the for b not you know sub y the right and left ones you'll get cancelled out so now what we're left with is you know once again the thing proportional l but here notice that we have actually a few terms so here we have negative you know l over 2 partial x b bx and that you know adds with this one right here and then you know here we have negative l over 2 partial y be y and that adds with this one right here so overall oops we get negative l partial xbx and then minus l partial y b
+
+01:10:39
+y so you can see that the z component you know the z component looks different from the x and the y components here okay so actually now let's uh you know clean up some of this now so we can just focus on f fnet so oops all right very cool so okay it looks pretty weird how the z component looks uh different from the x and the y components right like here we have l partial x b z and then l partial y b z so you might expect that this thing should have been l partial z bz right like you know this is what you might have
+
+01:11:48
+expected to get here but we didn't but actually it turns out that these two things are equal and they're equal for an interesting reason so you may or may not know that uh one of the laws you know maxwell's laws for electromagnetism is that you know del dot b equals zero in other words the divergence of the magnetic field is zero you know this is also the statement that there are no magnetic monopoles and if we write that out a little bit you know more explicitly that's partial xbx
+
+01:12:28
+plus partial y b y plus partial z bz equals zero this is one of maxwell's laws so using this equation we can actually directly see that you know this thing that we got is actually equal to l partial zbz so interestingly enough this law that we're trying to derive up here actually crucially depends on the the uh the fact that the magnetic field is divergent divergenceless you know there's this constraint on b if this wasn't the case then you know this law wouldn't be true but okay so now that we
+
+01:13:14
+found a way to rewrite this component here let's just put it up there all right very cool okay now we've almost finished the job but we just gotta rewrite a few things so if i just bring all these you know symbols up here notice that the current i now think about the current against the current i times the area a that's equal to well qv over 4l times l squared that's equal to [Music] q v l over four and then notice that q v l over four is exactly you know what we're seeing right here
+
+01:14:17
+in our equation for f net so we can rewrite this as f net equals i times a and then times the vector with components partial x b z partial y b z and partial z bz now the next thing we're going to do to clean this up a little bit more is to remember what our magnetic moment vector is so for a little loop of wire our magnetic moment vector is going to have the magnitude of the current i times the area a in the direction normal to this you know loop wire so that means that it's going to have components of
+
+01:15:12
+0 0 and i times a so therefore you know we can also write mu dot b and that's just going to be equal to i times a and then times b z you know the component in the z direction so notice then that we have here i times a you know and then times bz in all these places but we also have you know the derivatives partial x partial y and partial z out front so well so we can write this as equal to partial x acting on the number mu dot b right so right so you see okay so here's here's kind of the interesting thing mu
+
+01:16:27
+is a constant vector you know it has this component i times a now this isn't i and a don't you know depend on x y and z you know x y and z like the coordinate in space but b which is a vector field does depend on x y and z so this should be thought of mu dot b this should be thought of as a function of x y and z it's a scalar function it just outputs a number right because mu dot b that's a scalar and then this gets differentiated you know by x here so yeah so that's the first component
+
+01:17:07
+just actually copy this yeah so we have partial x mu dot b partial y mu dot b and partial z mu dot b so now finally for the last step we can immediately see that this is just equal to the gradient of the function mu dot b and this is the result um that we have been whoops yeah that we've been trying to derive this whole time right so see see up here this was the result we've been trying to derive this whole time okay so now let's uh clear some of this off and let's talk about the
+
+01:18:26
+the generalization of this law so so far we have only derived this law for this square loop of current right however this law would also be true for an arbitrarily shaped loop of wire with a current going around it and to see why this is the case imagine making a grid of tiny little squares inside of this wire and imagine that you had a current of i going around each tiny little uh square loop now if you think about the loop and the this little square and little square next to it you sort of put these two
+
+01:19:20
+you know you sort of draw the arrows of the currents you know you can notice that the currents actually cancel out you know where the squares overlap and this will be true for all the little squares except for the ones in the boundary so overall if you add up you know all the little squares together you just get you know one current going around the boundary of the wire but the important thing is that the areas of all these little squares will add up and therefore these magnetic moment vectors will all add up
+
+01:19:52
+not only that but the net forces on all these little squares will also add up so therefore you can see you know by the linearity of this law that if it's true for this little tiny square it's got to be true for you know any shaped wire so okay now what about an electron usually we think of an electron as a charged spinning sphere um you know when we think about it classically so it's a charge spinning sphere with a constant uh charge density throughout the sphere and it's also spinning you know rotating
+
+01:20:36
+now it turns out that this law here also applies to a charge spinning sphere now why is that well if you if you think about what a charge spinning sphere is you can think about it as actually being comprised of a bunch of charge spinning rings and you know charge spinning rings have some current going through them so you can think about the charge spinning sphere as being made up of a bunch of little loops of current now importantly you have to have that the charge to mass ratio is constant throughout the sphere i'm not going to
+
+01:21:20
+go through the details but i went through it extensively in my fourth video in quantum spin you know showing that when a charge to mass ratio is constant throughout the sphere you know all the little uh magnetic moment vectors you know add up in the way you want them to but you know the point is that this law is true for the little tiny square and using a few extra little steps you can generalize it to the charge spinning sphere which is how we think of our electron so yes the point is that we have
+
+01:21:53
+essentially derived the force law not just for the square but for an electron so okay that's pretty interesting the next thing i want to show you is a much quicker derivation of this lara here so this took us you know a lot of you know sweat to prove but there's a simpler way to prove it i just thought i would share this with you so some of you may be familiar with the equation that force f is equal to negative the gradient of the potential energy u right so you know oftentimes we think
+
+01:22:43
+about this in the context of say well maybe gravity you know you have u equals mg y and then you know you take the negative gradient of this and you get the force of gravity let's say you know u is the potential energy in a gravitational field but for us um you know for a a magnetic moment in an external magnetic field u is equal to negative mu dot b right the potential energy of this um you know of this magnetic moment depends on the value of the magnetic field at the location of our little magnetic moment
+
+01:23:32
+so therefore if we just plug in this value of u into this equation here we just get it's equal to the gradient of u dot b right which is exactly what we got here so so yeah there's a very simple way to prove this but the thing is that i like to i like to uh you know show why this equation is true by you know using the lorenz force law and all the components and seeing it directly so even though this way is really simple i kind of like the harder way just because you know you can see all the components
+
+01:24:08
+for yourself and you know how it comes out okay so the final thing i want to do is tie together everything we've discussed in this video you know the motion of a quantum particle and the force on a magnetic moment from a magnetic field and tie together with a really important example which i'm going to talk a lot about in the next video so if you have some sort of particle emitter that emits a particle with spin and you have some sort of zone i'll just denote this zone with this box
+
+01:24:55
+and in this zone you have a changing magnetic field you know created by some sort of instrument some sort of device which you know we don't have to worry about right now but in this zone let's say that the that the z component of the magnetic field is changing with height so if this particle emitter you know emits some particle then depending on whether the particle is spin up or spin down from this force law we've just derived the particle either be deflected up or be deflected down
+
+01:25:38
+in this zone with a changing magnetic field and then after you know afterwards particle moves on and you could for instance have a a back wall that detects the you know the particle hit it hits it the back wall and you can see where the particle hit okay so this has this is a very important historical experiment it's called the stern experiment and what i wanted to convey to you is how this experiment makes sense quantum mechanically so in the first part of this video i spent a lot of time talking about wave packets right so you
+
+01:26:28
+know have little wave packets which travel with some velocity you know and the important thing to note is that if you just think about the position of the particle as being like the average position of this wave packet right then this wave packet will get deflected depending on whether or not the particle is monopsin down more specifically we have that the state is given by two wave functions one spin-up wave function and one spin down wave function so the spin up wave function for instance will get deflected upwards and a spin
+
+01:27:14
+down wave function will get deflected downwards so the whole point of this video has been trying to explain to you um how to think about this process qualitatively earlier in this video i wrote out for you the poly equation and you know that poly equation was really complicated and the salute and the you know if you were to exactly solve for the solutions analytically they would also look very complicated but sometimes it's important to you know sort of know how something behaves without having to
+
+01:27:50
+solve for it exactly analytically you know you want to approximately you know understand what's basically going on so in quantum mechanics you can often understand uh what's going on with classical intuition by you know making wave packets and then figuring out classically like what the trajectory of these wave packets would be so that's exactly you know what we've done here and it's basically all you need to know in order to understand you know how the stern girl like experiment works
+
+01:28:22
+okay this concludes the video thank you so much for watching i know it's been a long one but we've covered a lot of ground you know i hope we've started out not knowing at all how electrons moved in space and now we know i think quite a bit about how they move around in space so i think that's quite a bit of an accomplishment my next video which will build directly off of this one will look really in depth into the quantum measurement process and will answer a lot of questions that i think people have about the
+
+01:28:54
+quantum measurement process that aren't usually addressed in introductory quantum mechanics classes you know questions of how does observation change a state and all that because we now understand the steering relic experiment pretty well i mean i'll talk more about it next video too but now that you know we can understand it pretty well we can use this measurement process as a springboard to understand stuff about quantum measurement in general so i think that'll be pretty interesting
+

@@ -1,0 +1,489 @@
+00:00:05
+Stanford University okay um tonight we're going to do a number of things we're going to talk about uncertainty we're going uh to talk more about the shringer equation the various versions of the Schrodinger equation we're going to talk about how things evolve with time we've talked about that some already uh let's see what else we have here yeah we're going to apply the shringer equation idea for the evolution of systems to our favorite little system of one spin but then if we have time and
+
+00:00:46
+I hope we will uh I would like to move past the single spin we have we have a general theory of quantum mechanics for which I announced what the basic rules were and the basic principles her Mission operators are observables vectors are states and so forth and so on orthogonal vectors mean distinguishable a very very general set of principles and so far we've applied it to exactly one simple system the simplest possible system in the world we're not finished with it yet but hopefully tonight or next time we will
+
+00:01:25
+move on to the next simple well no it's the next next to next simpler system there's a simpler one in between but uh two spins two spins is the next to next simplest system why do you think that two spins are the next to next simplest system as opposed to the next the simplest a spin has two states how many states do two spins have two um orthogonal states to four so what happened to the state with three states the system with three states you can imagine a system with only three states
+
+00:02:02
+that's the next to simplest so two spins is the next next to simplest but let's uh let's get on first of all the concept of uncertainty I'm not going to do the mathematical uncertainty principle tonight but we should just talk a little bit about the fact that uh there are observables pairs of observables which cannot simultaneously be measured uh um the basic principle is that if you measure something then by the definition of a good measurement you leave the system with the same value that you
+
+00:02:46
+measured otherwise you couldn't confirm in the next round of uh you couldn't confirm what you had measured so it's important that you leave the system at least momentarily or instantaneously having the same value that you measured right uh the measurable quantities of a system are the igen values of the observable operators the obser The Operators that represent observables and the states in which the observables are definite in other words in which there's no ambiguity about them the thing that
+
+00:03:23
+you get after you've done a measurement of a certain quantity is an igen vector or the igen vector s of the observables now supposing we had two observables which could be simultaneously measured if you measure you can measure one and it will leave it in a state with that same value but you can also measure two things simultaneously it doesn't matter it could be one after the other but uh let's let's just call it simultaneously you make two measurements simultaneously of two different things
+
+00:03:58
+and you leave both of them in igen vectors of the quantities that were measured two distinct quantities that must mean that the states that you leave things in are simultaneous igen vectors of two of the two distinct things if you can measure things simultaneously it means basically that they have the same igen vectors or that there exist a complete set a basis a basis of I incidentally the term somebody pointed out to me that the term basis uh that I've been misusing it a little bit and that's probably true I
+
+00:04:43
+use the term basis to mean a complete set of orthonormal vectors meaning to say they're all orthogonal Quantum physicists tend to use it that way uh I think in mathematics the notion of a basis does not require the vectors to be orthogonal it just requires them to be linearly independent all right that's not a big deal I just pointed out to you I will use the term basis to mean a complete set of orthogonal normalized vectors um the igen vectors of an observable can be made to be a complete
+
+00:05:27
+orthonormal basis when I say the can be made to be I mean you you do have the ambiguity what happens if there are two igen values with exactly the same value all right then you have an ambiguity is what you how to choose the igen vectors but you can choose them perpendicular and if you have two distinct operators which can be simultaneously measured and therefore simultaneously left in igen vectors of those quantities it must mean that there is a basis a basis of vectors which are simultaneous igen vectors of
+
+00:06:06
+both quantities in other words there exists a basis if let's let's call the two observables l and m these are Herm Mission operators l and m and it means that if l and m are to be simultaneously measurable it must mean that there's a complete basis basis of states which are both simultaneously igen vectors of L and IG vectors of M so that must mean that L on I equals let's let's um let's use the notation for igen values of L let's use the notation little L little L subi that's instead of Lambda
+
+00:06:56
+Elsa * I that's the condition that I be an igen Vector of L with igen value L sub I and at the same time the same set of states must be igen vectors of the M observable and so this must be true for a complete set of States now let's apply l and m in sequence first L then M and then try it the other way way and see what we get so first let's start with L on I here we have it but now let's take M multiply It by L and then hit the igen vector I well from the first relationship here this is
+
+00:07:51
+equal to M * L sub I * I right all I've done is plug in this first equation but now Els subi that's just number that's a number that's not even a matrix it's just a good old number an igen value and that means we can write it as Elsa M * I but we now know that M * I is just Little M so what does this give this gives L sub i m sub I time I the product okay that's not to surprising I I is a thing which can be measured sorry M and L are things which can both be measured simultaneously and if we multiply the
+
+00:08:38
+two of them together as matrices or as operators they become another observable whose igen values are just the products good but if we did it exactly in the opposite order l m on I we would get exactly the same thing the order these are just numbers and so that the order that you write them down doesn't matter L subi * m subi is the same as M subi * LBI and so this is equal to the same thing same thing now supposing you have two operators which have exactly the same action on every member of a
+
+00:09:25
+basis that means they will have the same action on any superposition of vectors formed out of a superposition of the basis vectors in other words they will have the same action on any Vector M * L and L * m have exactly the same action on any vector and therefore M * L is equal to l * m as operators all right so we've proved the following theorem that if two things are simultaneously measurable the two observables or the two operators representing those observables commute L time M and M * L are the same or L * m -
+
+00:10:13
+M * L which is the commutator which is the commutator L com commutator M must be equal to zero you can prove a stronger form of this the theem and it just goes the other way if you have two operators I'll leave this to you if you have two operators which commute remember if you have two operators which commute it means that you can find a complete basis of states in which both of them simultaneously in which the the complete basis of states are simultaneous igen vectors of the two operators it goes
+
+00:10:57
+both ways given that you have two things which can simultaneously be measured it follows that they commute and if two things commute it follows that they can be simultaneously measured they have a complete set of common igen vectors all right so the condition then for things to be simultaneously measurable is that they commute what if they don't commute in fact we already have some examples of things that don't commute Sigma X X and sigma Y and sigma Z no two of them commute no two of them commute with each
+
+00:11:37
+other and therefore they do not have simultaneous igen vectors and that's no surprise we know that the igen vectors of Sigma Z are up and down the igen vectors of Sigma X are left and right and they're not the same thing they're different they uh they don't Li they're not they're not proportional to each other so there are examples of operators which don't commute in fact we're going to work out the commutation relations for them they don't commute in fact they
+
+00:12:06
+don't commute and that's an indication that you can't measure them simultaneously that's the idea of uncertainty the the idea of uncertainty is when you have two objects two observables Each of which you could decide to measure get a and and get an answer you may not get you may not know what the answer is going to be it's statistical but you can measure them after you've measured them be certain you can repeat the measurement and find consistency each of them but not both of them okay
+
+00:12:40
+In classical physics there's no such thing if you can measure a and you can measure B then you can measure both A and B and you can be certain about both of them if you can be certain about either of them all right so that's uh that's just uh and we'll come back to that theme of uncertainty and quantify it and quantify it um there may be states where although you can't be although you're not certain well all right let's we'll come back to it we'll come back to it we want a quantitative
+
+00:13:13
+measure of uh the necessary degree of uncertainty in measuring two things simultaneously and that is the uncertainty principle but for the moment we have the idea or an explanation of why there are uncertainty uh uh between observables in the first place yeah why have twoes they have to share Comm well if you measure them and you get answers for both of them you have to leave the system in a state which is an igen Vector of either one of them both of them that's the rule when you measure something it leaves it in a state of
+
+00:14:01
+definite thatness whatever that happens to be which means an igen Vector if you measure two things and you and and you if you can measure two things simultaneously it must mean the state that you leave it in is an igen Vector of both of them okay all right let's uh let's come back now to the evolution of systems as I said last time I I went back and looked at the classical mechanics uh notes and I realized and I said okay I have something like about 50 pages of quantum notes the equivalent classically
+
+00:14:49
+was how many pages in The Classical mechanics it was about half about a quarter of a page I think just the statement that states are sets of things and uh that you can right on the Blackboard points on the all right so 50 pages to get to where classical mechanics we were after about 30 seconds when we were and that's just the way it is the next thing we did when we talked about classical mechanics we talked about how States change with time that took another page took another page arrows going from one
+
+00:15:21
+to the next and so forth here it's not so bad it's not going to take us another 50 pages fortunately in fact we've already laid it out it took basically uh I I would say something like about five pages or something in my notes I think four or five page maybe a little more maybe a little more so uh we're beginning to compress and uh things are once you got the idea of States then the next is a little bit easier okay so let's remind ourselves what we said about the time Evolution
+
+00:15:55
+the Schrodinger equation the schinger equation is the equation that govern the time evolution of systems we began with the idea of the conservation of distinctions or conservation of distinguishability of states the implication was that states which are orthogonal remain orthogonal it was easy to prove from that and you I hope you've proved it it's e you should be able to prove it uh that the U operator I should have brought my own pins the U operator remember what the U operator is if you want to know what a
+
+00:16:40
+state is at a later time from its value at time zero this stands for Time Zero then you apply a certain operation it's more than just an operation it's a linear operator okay a linear operator U and you get S at time T U of course is a function of T the later or the earlier that you want to project the vector forward you put in different T's here and that was the basic equation but then we required another ingredient and the other ingredient is that orthogonal states stay orthogonal so for example if we have two
+
+00:17:28
+orthogonal States let's call them for the moment I and j instead of s i and J are orthogonal in fact I and J might be members of an orthonormal basis let's take them to be members of an orthonormal basis and then you allow I to evolve for a time and you allow J to evolve for a Time the bra the K Vector I becomes U let's say U of T time I if you start with i after a time it's U of T of i j evolves with the hermiss conjugate of u j and the assumption is that if I and J were authon
+
+00:18:19
+normal U * I and u startimes j are also orthonormal so the way to say this is if ji is equal to a chronica Delta then this is also equal to a chronica delta in other words putting U and you dagger sandwiching them between authon normal bases here does not change the inner product and from that you can conclude since this is true for any members of the basis that UD dagger U is just the unit operator we did this last time I know the unit operator it does nothing UD dagger times U then we went another step we said all
+
+00:19:09
+right let's consider the evolution from Time Zero to an infinite tally short time later so we're interested in let's call it U of Epsilon where Epsilon is a small time and we argued well first of all if Epsilon is zero nothing happens to say that nothing happens means that you is the unit operator all right so U of zero is just the unit operator it does nothing just leaves the state the same we added one more thing and that was a kind of continuity I may not have spelled it out a kind of continuity and
+
+00:19:50
+that was that youu of a small time is close to the identity in other words in a very small period of time the state doesn't change much so that's the same as saying that uh U is equal to the unit operator plus something small of order Epsilon and I used my freedom of definitions just choosing definitions to write this as minus I Epsilon * H there was no content in that minus I Epsilon I can just absorb it into h i put it there in fact had I uh had I really wanted to keep track of all the
+
+00:20:35
+interesting constants I would have put an H bar over here uh but this is all a matter of convention whether or not we include an H bar whether or not we include an i whether or not we include an Epsilon is simply a definition of how to of uh of H we could have called this whole thing k and then said K is equal to I Epsilon over H you know what I mean I don't have to say it more all right let's take away the H H bar I'm going to forget it anyway uh it's units simply units and then we fed this oh let's
+
+00:21:17
+write the other one UD Dagger of Epsilon is equal to 1 plus I Epsilon H dagger dagger meaning Herm Mission conjugate then we fed these two into the unitarity condition and what did we find we found that H minus H dagger must be equal to zero that's what happens if you feed these two into the unitarity condition or another way to say it is H is equal to H dagger or H is hermiss now that's big news why is that big news it means that H isn't observable it's thing that we can measure and uh we should be interested
+
+00:22:02
+in it what is it and of course the answer is it's the H not of course but as I said last time it is essentially it is apart from a factor of plunks constant it is the hamiltonian what's it got to do with the classical hamiltonian we talked about it a little bit I'll come back to it but for the moment it's just called the quantum mechanical hamiltonian it's a thing which in some way or another well in a very clear way generates Ates time Evolution incidentally you might think
+
+00:22:37
+that this all right well let's let's go on we we went a little bit another step say okay let's write the equation s of Epsilon this is pure review s of Epsilon is equal to S of zero minus I Epsilon h s of Z I just plugged in for What U is and then transposed this to the left hand side and divided by Epsilon transposing to the left hand side makes this minus and makes puts an equal sign here and then divide by Epsilon this is the obvious thing to do and what do we get on the left we get the time derivative of the state
+
+00:23:32
+Vector of the system the time derivative of the state Vector of the system d s by DT is equal to minus i h s so what H is is it's a rule for how you update the state of a system if you know it at an instant of time then at the next instant of time it's you make an incremental change in the state of the system proportional to IUS i h * I it's a little machine for telling you how to update the state of the system now it sounds awfully deterministic it sounds awfully much like classical
+
+00:24:15
+determinism classical determinism is also a set of rules for updating uh the uh the state of a system so in what sense are things not deterministic if you know how to change the state from one instant of time to another well they're not deterministic in the sense that even if you know the state of a system you simply don't know the results of every measurement the knowledge of the state of a system in quantum mechanics is not equivalent to the knowledge of the outcome of every experiment what does it tell you the
+
+00:24:57
+state of the system it tells you prob abilities so this is basically a rule for updating probabilities it's not a rule for updating knowledge complete knowledge of the state of the um of the set of experiments that you could do all right but in some sense or another the state Vector evolves I I I don't want to call it deterministically because deterministically it carries baggage with it but it evolves in a known and definite way now this is true but only if you don't interfere with the system and classical
+
+00:25:37
+mechanics you can interfere with the system arbitrarily gently and not uh cause the cause any changes in the way it's evolving in quantum mechanics when you make a measurement you necessarily disturb the system so this is the evolution of the system of an UND of an undisturbed system that is not in the process of being measured yeah what if the system happens to be in an i state of the measurement you make all right so what then then you would not disturb the system ah well that's a special case yeah you're right you're
+
+00:26:12
+right that's if you that's right if you're in a special case of an igen state of the system and you measure it it doesn't disturb it uh so right so that uh that is an exception to what I said but generally speaking the generic situation is when you measure something you disturb something else about the system okay this equation is the shringer equation now it's sometimes called the generalized shringer equation the actual Schrodinger equation of Schrodinger wrote it down was for a
+
+00:26:55
+particular kind of system the motion of a particle but it has exactly this form this first became known as a generalized Schrodinger equation and then people dro the generalized we now think of this as the sh as a form of the Schrodinger equation and what it is is it's an equation which tells us how States change with time it can be applied to the simplest system of a single spin it can be applied to the second simplest and the third simplest system and to system of arbitrary complexity but this is the form that it
+
+00:27:32
+has all right that's uh that's where we more or or less were last time okay so let's erase everything but the Stringer equation actually this is called the time dependent shringer equation the time dependent Shing or equation is equation for how things change with time there's also another equation which is called the time independent shinger equation H is an observable it corresponds to the hamiltonian but hamiltonian is nothing but energy at least in classical mechanics so one might expect that H is
+
+00:28:15
+the operator that's representing the observable energy of a system okay now we're going to make a measurement of the energy of some system how do we do it let's not worry about that there's one way we could do it we use eal mc^ 2 and then we weigh the system carefully really really carefully and in that way determine its mass and its energy okay that's not a very efficient way to do it because the change of the energy of a system when you heat it up or something is so negligible that uh uh but that's one way
+
+00:28:50
+there are many ways to measure energy but what are the possible outcomes of the measurement of the energy of a system that of course depends on the system it's not something you can ask answer in general but uh depending on the system for example if you measure the energies of an atom you get one of a denumerable family of possible uh answers namely the energy levels of the atom if you measure the energies of a harmonic oscillator again you get a denumerable collection of possible answers if you measure the energy of a particle
+
+00:29:32
+moving in a non-closed orbit uh then in fact you get a continuous possible family of possible answers so the question of what the energies are depends on the system and it depends on the choice of course it's not a choice you the systems have hamiltonians it's not up to you to to dictate to a system what it's hamiltonian is uh it may be up to you to try to discover what it's hamiltonian is but let's use the terminology you get to choose the hamiltonian meaning to say you get to uh
+
+00:30:11
+to study different possibilities and depending on the choice of operator that you put here that you call H you can get different energy levels how do you describe how sorry how do you calculate and determine what the possible outcomes of the Energy Measurement are you use the statement that the values that the energy can take on are the igen values of the hamiltonian like any other observable so you write another equation h on let's call it the I now I now represents an igen state of the energy it doesn't represent any old
+
+00:30:52
+basis it represents in particular the uh in fact maybe we should indicate that by writing in here the energy the I possible energy level h on E subi is equal to the igen value e subi times the igen vector associated with that energy the notation of putting eabi inside the K Vector just means nothing more then this is the K Vector which happens to be the igen vector of H with igen value isi and how many such esis are there well there's a complete basis of them whatever the dimensionality of the
+
+00:31:37
+system is whatever the dimensionality of the space of states is there's that many igen vectors of the energy and your job as a physicist is to try to find them so that's the time independent shinger equation next thing we did again a lot of review tonight next thing we did was talk about the evolution time evolution of expectation values average values okay I complained bitterly about terminology expectation values all right but many many years ago I gave up on this and so it's become
+
+00:32:29
+expectation value but it really should be average it's okay I'm okay with expectation value I'll use expect but it really should be average okay um and here's what we found well what we said is the thing that changes with time is the state Vector so we're interested in calculating s of t remember the expectation value I'll just remind you the expectation value you get by sandwiching the observable in a sandwich between the bra version of the state vector and the K version We proved this we proved that
+
+00:33:15
+this is the same as the average the statistical average uh and I won't go back over that now this is the average value of L the observable L and we can ask how it changes with time it changes with time because s changes with time and here we know how s changes with time there's two factors of s here so when we go to differentiate this with respect to time there will be two terms one coming from differentiating this and one coming from differentiating that that if you remember that when you flip
+
+00:33:54
+from BR to K you have to complex conjugate and that complex conjugating changes the sign of I you will come to the conclusion that this is equal to now I always get the sign wrong let me try to get the sign right I think it's minus I times LH minus HL average value of that s s we worked that out we used that L on S gives you h on S that's this piece over here and we used that L when it acts to the left gives you a term with h acting to the left with a minus sign okay so here's what we find then we
+
+00:34:53
+find that the time derivative of the average of L let's just write it this way d by DT of the average of L I'll use that notation for the average of L as a function of time is equal to minus I times the average of the commutator of L with the hamiltonian if you know what the hamiltonian is as an operator or as a matrix and you know what L is as an operator or a matrix you can compute the expect the um the commutator and when you've computed the commutator you can compute its average
+
+00:35:43
+value just use this rule the sandwich rule let's call it the sandwich Rule and it tells you the left hand the right hand side tells you what the leftand side how it changes with time do you find it odd that there's an i there well I did the first time I saw this first time I saw this I said wait a minute wait a minute the time derivative of a real thing can't be imaginary we're going to find out that commutators of real things are always imaginary so the imaginary will go away we're going to do
+
+00:36:19
+some examples and you'll see this is this is not hard to prove but we'll do it by example sometimes this is written in a short hand the short hand is just a dldt is equal to minus I * a commutator of L with h but at least at this stage of our knowledge what this means is that it should always be sandwiched and thought of as a equation for the average values of things and so there we have what I called the Heisenberg equations of motion of a system that brings us to the study of commutators the study of
+
+00:37:19
+commutators and I want to go through that just again a little bit commutators have some rules associated with them the the rules are very very reminiscent of the rules for proone brackets so go back and read about plusone brackets I'll write down what the rules are general rules algebraic rules of plusone brackets and commutators and then we'll just check are they really true for both of them well the rules for Pome brackets we did last quarter Pome brackets are written this way okay A B and I'm not going to write out
+
+00:38:01
+how you express them in terms of the p's and q's of classical mechanics but there was a few Simple Rules associated with them first of all there was some linearity rules uh that if you uh that if you add two operators oh sorry if you add two things and then take the plus own bracket with a third they add and so forth this is certainly true of commutators but there was a couple of non-trivial rules well first of all the Pome bracket is odd which means that when you interchange the two entries it changes
+
+00:38:37
+sign minus ba a that was one property this is certainly shared by the commutator if you interchange l and H you interchange these two terms and you change the sign of the commutator so that's true of the commutator also let's if a and b are now Quantum variables this is also equal to minus B * a there's really only other one important relationship and it's the product rule the product of A and B poned with C the operation of poning if you remember the Pome bracket was a combination of derivatives
+
+00:39:31
+derivatives of various things uh if you go and use that definition of the plus bracket use the rule for derivatives of products what you'll find out is that this is equal to this Pome bracket side uh it's equal to a time a Pome bracket of B with C plus the Pome bracket of B with c times sorry Pome bracket of a with C time B now the order that you write down a and the Pome bracket that's not important these are just numbers I mean these are just ordinary functions or numbers and it doesn't matter which
+
+00:40:15
+order you multiply them uh but I wrote them in an order which I know that the commutator will also satisfy operators the order does matter matter so I wrote These in a specific order namely I put a on the left over here and then I put B on the right over here maybe it's not too surprising a appears on the left in this uh factor and B appears on the right so I kept the order intact okay let's see if this is true for commutators what would it say it would say well let's write it out a time
+
+00:40:55
+commutator BC sorry go back it would say that commutator of ab with C is equal to we'll put a question mark here I don't know if it's equal to yet a times a commutator of B with C plus a with c yeah a with c times B let's check if that's true this is very easy to do we don't have to do any derivatives all we have to do is write out the meaning of this commutator of ab with C is the same as AB * C minus C * a everybody see why first you put AB on the left time C and then you put C on the left and ab on
+
+00:41:58
+the right and you take the difference definition of the commutator let's see what we get on the right hand side on the right hand side we get a times b c minus CB that's this term and then from here we get plus AC minus CA time B these are operators now and in this calcul their operators the order matters okay let's see what we have we have ABC here's ABC that's good we have all right so this is this is uh a friend we have minus cab that's this one over here cab B that's also a friend our enemies are a
+
+00:42:49
+CB but they occur both the same uh the same way a b c no no a c b that's a bad one but here we have also ACB one with a minus sign one with a plus sign so it's ACB minus ACB and we're finished the commutator satisfies the same algebraic rule as the plus home bracket is this an accident no of course it's not an accident but we'll get to uh we'll get to the deeper reason for it eventually which comes first and which which is more basic certainly the commutator is more basic quantum
+
+00:43:30
+mechanics is more basic than classical mechanics classical mechanics is an approximation to Quantum Mechanics so it stands to reason there ought to be a classical approximation to the notion of uh of commutator and there is it's it's uh that leads us to speculate if you like but uh I'll take it as not a speculation I'll take it as something that we'll discover or we'll be able to prove later that when we go from quantum mechanics to classical mechanics the pone bracket let's see um the pone bracket
+
+00:44:14
+becomes I think minus I now this equality doesn't quite make sense this is something classical on the right hand side maybe we should put arrows there commutator a with B uh in that last equation uh that you wrote there it seems no no the it seems like the right side is twice what the left side is well I don't think so a b c a b c c a b c a b with a minus sign and then we have a couple of extra terms the extra terms are a minus ACB plus ACB yeah okay good you're allowed to make mistakes it's good slow me
+
+00:45:13
+down yeah yeah all right now nothing in what I've done so far tells you that this should be identified exactly with that it might be identified with this times a numerical multiple the bracket might be seven times a commutator or a quarter of the commutator and they would all still make sense in fact there's a dimensional difference between these Pome brackets are derivatives of a with respect to X derivative a b with respect to P they have units which are different than just a b the difference of units is actually
+
+00:45:54
+soaked up in plun constant if we work with plunk constant equal to one then Pome brackets are just minus I times commutators but for dimensional reasons there's an har bar there let's write it another way let's put the H bar on the left hand side certainly classically uh we think of commutators is very small in fact we think of them as essentially zero AB minus ba so in the the classical limit the commutator is something which is just zero how does that happen well it's the H bar here
+
+00:46:35
+when har bar is very very small and units in which H bar is very very small which are just ordinary units I mean units like meters seconds kilogram H bar is an incredibly small number some 10 to the minus or 30 I forget uh it's very small number so in the classical approximation commutators are negligi negligibly small but when keeping track of real quantum mechanics the commutator is not zero okay so that's that's uh that's the meaning or the notion of commutator and the nice property now is
+
+00:47:17
+that this relationship here is simply the quantum analog of an equation that we studied last quarter DL by DT is equal to the Pome bracket of L with the hamiltonian which matches quite well with this that is the essential reason at this stage for identifying H with the hamiltonian classical mechanics when packaged in this fishy way called Pon formulation the fishy formulation encaps you know takes organizes everything into relations involving Pome brackets and in particular it says that d l by DT L
+
+00:48:09
+could be anything incidentally L here is not the angular momentum it's anything d l by DT is equal to the Pome bracket of L with h and in quantum mechanics in the in the in the sense of average value we found that d l by DT is minus I times the commutator so that's that's the essence of the connection between the hamiltonian of classical mechanics and class and quantum mechanics yeah of what L is any observable any observable I used L for linear operator but of course it should be Herm Mission linear operator so I
+
+00:48:58
+might have used H but then I would have gotten caught and found that H H oh H is for Mission and so is L but I used L for a generic uh observable so assume that L is her Mission originally I I used it for linear but now I'm using it to mean linear and Herm mission all right L could be h l could be H right that's a that's uh we could study the equation of motion of how H changes with time or bet yet how the the average of H changes with time let's do so here we are d h the the H by
+
+00:49:51
+DT is equal to minus I time the commutator of H with h but the commutator of anything with itself is zero and so incidentally is the Pome bracket of anything with itself because Pome brackets are odd they change sign when you interchange the two objects that means the Pome bracket of a thing with itself is zero so from a classical point of view we could have derived the conservation of energy from the principle that the time derivative of the energy is the POS bracket of the energy with itself here we find in quantum mechanics
+
+00:50:32
+a very simple thing similar thing the time derivative of the again the hamiltonian is the Pome bra uh is the commutator of the hamiltonian with itself and is therefore zero energy is conserved in quantum mechanics or at least the average of the energy is conserved now it's it's better than that there's a very definite sense in which the energy is exactly conserved but not for tonight the two what if we had two spins yeah absolutely absolutely in fact whenever we build a system out of two
+
+00:51:38
+systems the in general the observables for one of the systems and the observable for the other systems commute with each other that's why you can measure the position of me and Sanjay simultaneously because we're two because our position commute I uh and so do our spins but uh I think that's the question that is the question you were asking yeah okay right yeah but we haven't come yet I was that's where I was going to go later but I don't know if we'll get to it um to
+
+00:52:13
+the question of composing systems taking systems and making bigger systems out of uh composing them and that would bring us to the issue of entanglement I I have a feeling we probably won't quite get there but maybe we'll at least partly get there all right the next thing we want to do is solve Schrodinger's equation I don't mean the one for the igen values and the igen vectors that we solve by standard methods of if we if we happen to know what the hamiltonian is and in particular if we happen to know it in
+
+00:52:47
+some Matrix form then we're just calculating the igen vectors and igen values of some Matrix let's suppose that's done we have the igen vectors we have the igen Val vales let's now find the general solution of Schrodinger's equation in other words how things evolve with time you know I realiz that all of this is abstract that uh the only system that we have to apply this all to is the world's simplest system again and that's not very much so at this stage you're probably saying to yourself when are we
+
+00:53:34
+going to be thinking about real things objects uh systems um we will We Will by all means but I think having all of this apparatus this abstract formulation of quantum mechanics will make it very easy and quick to uh to start applying it to lots of things yeah yeah we know what H is for this for this spin system yet well okay so all right let me let me answer that right now um that depends on what we do with a spin if we have a spin in free space far from anything else then its energy or its hamiltonian
+
+00:54:21
+is just basically zero incidentally adding a constant to a hamiltonian doesn't do anything and the reason is because a constant commutes with everything so apart from a possible additive constant in the energy a spin which is not around anything else it just doesn't it's hamiltonian zero and that means that it doesn't change with time if you put it in a magnetic field if it happens to be a real spin of an electron you put it in a magnetic field the magnetic field induces a hamiltonian
+
+00:54:49
+which I hope we'll get to tonight and it causes the spin to do things to to have a Time dependence and then what the hamiltonian would be would have to do with which direction the magnetic field was in so hamiltonians can be changed I mean you can change a hamiltonian by changing the direction of a of a magnetic field but we'll we'll come we're I hope we get to this example tonight but let's just first write down the general solution of uh of the shinger equation to do that we start by by saying let there be
+
+00:55:27
+a basis of igen vectors I guess we call it this is the same as e subi if I don't want to write eabi I will just write the I igen Vector but it means the igen vector with energy eabi all right we can take any state since I or eabi are a basis of States we can take any state let's call it a or should we call it Sai let's see what did I call it in my notes no I think I called it Sai I did I called it Sai s and let's think about s at Time Zero well no let's leave the time arbitrary
+
+00:56:24
+p is a sum of all of the igen states or all the igen values of some set of coefficients Alpha sub I I've used the term Alpha in the past to denote the coefficients of states of basis vectors so any state whatever can be written as a superposition of igen vectors of the energy since the igen vectors of a Herm Mission operator are a complete basis right so this is and let's say at time T equals z now how does the how does the not a time at time T how does the state change with time what's changing here well the
+
+00:57:08
+states I are just a fixed set of States it's the alphas which change the coefficients here which change with time all right so the coefficients in the expansion of an arbitrary state are typically time depend in coefficients that's what gives rise to a Time dependence in expectation values and other things now let's write the Schrodinger equation so we have I side dot sorry we have side dot which we can now write let's take side dot d by DT of s d side DT that's equal from here summon
+
+00:57:53
+I the alpha sub I of t with respect to T time I to differentiate the state all we do is differentiate the individual coefficients now Schrodinger's equation tells us to set that equal to minus I oh different ey holy smoke okay J J okay set that equal to minus I times H acting on this but H can be brought in through the summation here and this can just be written as summation of I the coefficient numbers Alpha summation of a j j Alpha J of t h on J now what is h on J somebody said zero no no
+
+00:59:13
+no no there I and E subi are the same vectors go up to the top Vector to the top equation h on the ien vector is the energy e subi on the I Vector okay so this just becomes e subj here we have on the left hand side a a sum of basis vectors with coefficients Alpha J sorry where are we did I make a mistake here oh oh sorry this should have gone this should have gone down here this is wrong here this should have gone down here this is Su on J D by DT of alpha J and then h I'm lost this is correct up to here this is
+
+01:00:46
+correct up to here let's uh let's okay yeah right let's let's go back to here and now let's calculate the uh ah let's calculate the time derivative of this what do we do we put in minus I times h on J here is where I use h on J is equal to EJ on J okay I think that's what I had a moment ago anyway isn't it I think it's exactly what I had minus I take out the minus I all right this thing and this thing are the same so this sum must be exactly the same as this sum if you have two sums of basis
+
+01:01:47
+vectors the coefficients must be the same if you have two sets of bases Vector uh sorry sorry if you have two linear superpositions of the same set of basis vectors and they're equal to each other then the individual coefficients have to be equal to each other so it follows that d alpha by DT is equal to minus itimes the alpha J by DT EJ Alpha J all I've done is set d alpha DT equal to the coefficient in this equation over here and that's the whole upshot it tells you how the alphas change with
+
+01:02:39
+time for each J this is a differential equation just think of this as just a differential equation for Alpha what's the solution of this differential equation we've done this kind of equation over and over again the time derivative of something is proportional to to the same thing to the thing itself exponential solution right so the solution of this equation is Alpha J equals Alpha J at time Z * e to the minus I EJ T if we differentiate Alpha J with respect to T it will bring down this
+
+01:03:21
+Factor minus i e subj times the same thing so we can now write the general solution of the Schrodinger equation we've solved it for each individual igen Vector this is the way individual igen the individual coefficients Alpha change with time but now we can go back let's go back to the original equation that the state vector is a sum over the igen vectors and let's plug in what we now know about Alpha we now have solved for Alpha and here we can write that the General State Vector at time
+
+01:04:11
+T if you know it at Time Zero let's suppose we know it at Time Zero at Time Zero it was just Alpha J of time0 time J all that happens is each Alpha J picks up a time dependence and the time dependence is just governed by the energy of the state earthquake all right so all you do to find the general solution is you take the state you break it up into igen vectors of the hamiltonian and then whatever it was at Time Zero the only thing that happens is the phase of each entry here changes with time with an e to the minus itimes
+
+01:05:14
+the energy of the state where would the H bar go in this formula anybody know H underneath the eye or underneath underneath the energy or underneath the time it doesn't matter but it goes into the into the denominator here this is the connection between energy and oscillations okay this is the oscillations of the wave function not oscillations of real things but oscillations of the um of the coefficients of the state vectors while we're at it let's do one more thing let's use our general solution of
+
+01:06:06
+the Schrodinger equation to calculate how the average of L changes with time we have an equation for it but now we actually know how side changes with time and this is just a little bit of gy not gymnastics just a little bit of uh fiddling around with equations some some of you may recognize the equation we're about to get but uh whether you recognize it or not it's just explaining how the symbols are used if you like okay let's calculate given that the state changes like so let's ask how the expectation
+
+01:06:50
+value of an arbitrary observable changes what do you have to know to know how the average or the expectation value of L changes L is some operator I haven't told you what operator of course you need to know what operator in order toh to say how it changes of course you do but still we can uh we can go a little ways let's plug in this formula for S of T this is sum of J Alpha subj e to the minus I EJ T time J now we have L put l over here and now we're going to do the same thing to this bra Vector
+
+01:07:46
+over here but what happens when we do a bra Vector let's do the bra Vector the bra Vector is s of T is summation we better use a different summation variable K and then we will have Alpha star sub K of0 when you go from bras to ks you have to complex conjugate we'll also have to change this to e to the plus I E sub K T times the bra vector k I've changed the summation index here so that I don't don't confuse confuse it with this one I've complex conjugated complex conjugated here and
+
+01:08:32
+flipped from catch the bras all right so I can put this over here summation over a k k Alpha star k Alpha star k at time zero this is a Time Zero times e to the plus I E KT so it's a double sum it's a double sum over K and J that's not terribly Illuminating but let's uh just uh just uh for uh for fun let's work it out now what's the inner product of K with J we see here the inner oh no not not sorry it's not the inner product of K with J what we see here is L sandwiched between
+
+01:09:35
+J and K L sandwiched between J and K the operator L acts on the state J and then you project it onto K let's give that a name let's call that L KJ that's exactly the kind of Matrix elements we computed when we talked about the Matrix represent presentation of observables the inner product of alpha sorry of L on J with K that's what we called L KJ just the Matrix representation of the observable and then we have Alpha star k of zero Alpha J of zero we'll say we'll talk about that in
+
+01:10:24
+a moment and then we have a phase e to the i e sub K minus E subj time T summed over J and K now the main reason I did this was just to illustrate the Machinery I did not do this because this is a formula of uh of any importance right now but some of you may nevertheless repres recognize it it is Heisenberg's Matrix uh formulation of quantum mechanics Heisenberg's formulation of the way averages change with time if you go back to Heisenberg's first paper on quantum mechanics he guessed this
+
+01:11:11
+formula basically just guess this formula every observable has two frequencies associated with it that was weird it was common for people to understand that an observable might be an oscillating observable it might be something that oscillates and would have a frequency associated with it but Heisenberg said there are two frequencies associated with every Matrix element of an observable this is where it came from no this it came out of Heisenberg's head but this is the way dur explained what
+
+01:11:50
+this is the way durak um understood what Heisenberg was saying through this Machinery first just a pieces the pieces this represents the observable whatever the observable is it's its Matrix representation these things have to do with the initial State the state at time T equals z and these things here have to do with the way things change with time everything changes with time with two separate uh frequencies and then you sum it all together and that tells you how L changes with time how the average of L
+
+01:12:33
+changes with time so we're putting together a bunch of Machinery that we'll use are there any questions yeah am I reading this correctly is it the case that the magnitude of the stays the same the alphas are fixed the alpas are just the alpha at time t equal Z period yeah yes you I think you're going back to here yeah yes that's correct the magnitudes of the alphas stay fixed it's the relative phases between them so all of the time Evolution has to do with these relative phases yeah
+
+01:13:16
+soti is what oh oh that it actually doesn't matter this just means the whole derivative with respect to time it's usually written as a partial derivative but it just means it could be written as a total derivative same thing s only depends on time I mean also function same position it's well yeah that's okay that's right we will eventually come to think of s as a function of time and position and that's why it uh uh but uh that's later for the moment it doesn't matter whether we use partial
+
+01:13:57
+derivative or total derivative it just means the change in s in a small time uh and uh it doesn't matter whether which yeah um when you derive the time dependent trangular equation you use the fact that the the states stay orthogonal over time I think that's an empirical fact well it is an empirical fact but in fact I think it's much more than that um the evidence that it's much more than that is also an empirical fact it's a curious empir empirical fact people have tried to change quantum
+
+01:14:39
+mechanics and it seems to be as hard to change quantum mechanics as it is to change arithmetic or logic um if you start fooling around with it and try to change the rules you very quickly find that something really bad happens probability is not conserved um probability is not not positive terrible nonlocalities happen where you can communicate that the infinite distances uh and so quantum mechanics is not a thing which is easily changed in fact there was no known changes that can be made in it uh of course there is one
+
+01:15:26
+known change that can be made you can just replace it by classical mechanics that's a consistent Theory the reason it's a consistent theory is because it's a good limit of quantum mechanics but there's no ways to change it and a you know to deform it a little bit my friend David finlin who was a very wise is a very wise man a great scientist once uh explained to me that there are two kinds of Revolutions in physics he called one a plastic flow and the other a brittle cracking what he meant by that um he
+
+01:16:02
+considered for example general relativity to be a plastic flow you can change it little bits you can deform it a little bit you can change Einstein's equations uh by uh by changing variables it's it's not something that you you cannot change at all and you can change it in little ways and deform it special relativity is very hard to change once you change special relativity uh it uh it's very brittle and um the whole structure of it goes down the drain but you probably but nevertheless you could change it a
+
+01:16:38
+little bit it's harder to change in general relativity most things go wrong but quantum mechanics is absolutely brittle and by that he meant not that the theory is in danger of being broken by anything but that if you try to change it you will get broken uh so quantum mechanics is very hard to change and I think the evidence for that is just all of the years over which people have tried to change it yeah so the E those are both real numbers is the reason that we know that they're real numbers because the I
+
+01:17:22
+states that we chose are I states of the yeah yes we derive from the unit we derived from unitarity unitarity is this condition that UD dagger U is equal to one or I called unitarity from that we derive that the hamiltonian is her Mission and from that we can Define we can derive that its igen values are real yeah M of of of what syntax syntax top you have H Vector equals of that first P of I on the right hand side of the equation is a is an I value no well okay it's this whole thing is an igen value
+
+01:18:16
+igen Vector but it's the IG Vector with igen value e subi so you can you're labeling the igen vectors by their igen values right here it's just the igen value that's what right and incidentally this is a case where repeated indices do not get summed over this is a case of the nons summation convention Let's uh apply some of this apparatus to the problem of a single spin a spin in a magnetic field let's see if we can calculate in particular how the average of the components of the spins
+
+01:19:08
+change as we do this depending on your memory for classical physics you may start to find some of it um familiar if not I will remind you it's not as bad as fingers on the old life no no it's not no no it is not no that wasn't terribly bad it just reminds me of my cat in the middle of the night okay we have a single spin let's put the spin into a magnetic field if we put the spin into a magnetic field along let's take the z-axis let's be simple let's take the z-axis put the
+
+01:20:09
+spin in put the magnetic field along the z-axis a spin in particular the spin of a Charged particle is a little electromagnet charg particle spins around and as it spins around there are currents that flow and it creates a little magnet put a magnet into a magnetic field and you get an energy and basically the energy is proportional to the misalignment of the magnetic field with the spin with the axis of the spin and the simple formula uh is that the energy is proportional to the dot product of the spin with the magnetic
+
+01:20:58
+field that's where we're going to start we're going to start with an energy which is proportional of a magnetic field and uh the magnetic field is along the z-axis so what is the dot product of the spin with a magnetic field that's going to be proportional to the Z component of spin the dot product of the spin with the magnetic field would be the component of the spin along the uh along the axis of the magnetic field that's a guess okay take that as a guess which we could then study and then ask if uh the
+
+01:21:34
+experiments on the spin agree with it okay so we have a spin we have a magnetic field along the z-axis let's call it B subz and we have a spin and the spin has components Sigma X Sigma Y and sigma Z people ask me incidentally why in the book that I'm writing about quantum mechanics there aren't more figures there are lots of figures in the classical mechanics book the reason is is very simple I mean it's a real reason you can't draw quantum mechanical systems quantum mechanical systems are
+
+01:22:06
+by their very nature not things that you can draw if you try to draw them you will always be trying to draw things which cannot simultaneously make sense okay in particular if I try to draw the components of the spin I'll be trying to draw components of the spin which don't commute with each other and and it doesn't make sense to draw them nevertheless there there it is magnetic field in the spin and we're just going to right now we're going to take this as a guess or as a postulate the hamiltonian is just going
+
+01:22:43
+to be proportional to the component of spin along the z-axis times something proportional to the magnetic field I'm not going to write out it contains the electric charge it contains a magnetic moment it contains a magnetic field but let's just call the coefficient here let's call it Omega over two that's a definition of Omega if you like whatever the right combination of magnetic fields charge Magnetic Moment particular charge Magnetic Moment and magnetic field will lump them up and
+
+01:23:18
+call it Sigma over two sorry and call it Omega over two and the reason for the Omega will become clear shortly sorry the reason for the two for both the Omega and the two will become clear shortly okay now what I want to calculate what I want to calculate I want to calculate the time derivative of the averages of the all the components of the spin here we have the Z component in the hamiltonian but I want to find out how all the components Sigma X Sigma Y and sigma Z how they vary with time so in particular
+
+01:23:58
+I want to calculate the time derivative dot for time derivative of Sigma X and sigma Y and sigma Z well what is the rule I'm afraid the rule has been erased but I think you probably remember it the time and by definition now this means the average of Sigma X I'm not going to bother writing the the bracket the uh angular brackets there we now talking about the averages of Sigma X Sigma Y and sigma Z and the time derivatives of the averages all right so if you remember this is equal to minus
+
+01:24:37
+I times the commutator of Sigma x with the hamiltonian right so the hamiltonian is Sigma Z and we get another factor of Omega over two oh uh yeah that's correct likewise here Sigma y with Sigma Z time Omega over 2 and likewise here Sigma Z Sigma Z now one of these is very easy which is the easy one the bottom one everything commutes with itself right everything commutes with itself so this is zero and what does it tell us it tells us that the component of the spin along the magnetic field the average of it does not change
+
+01:25:43
+with time that also tells us well if it was cl if we were doing classical physics which we're not if we doing classical physics it would tell us that the angle of the little Vector here with the magnetic field stays the same but we're not we'll just take this for what it says it says that the Z component doesn't change with time the average so that's the first thing we discover now to go beyond this we have to know what the commutation relations are of the sigmas so let's work them out
+
+01:26:21
+I think we have enough time let's work out the commutation relations of the sigmas or pairs of them and uh see what we get and then plug it into here I'm going to start with Sigma X Sigma Z but instead I'm going to do it the opposite way I'm going to calculate Sigma Z Sigma X it's the same thing except with a minus sign if when you interchange the two of them so we'll have to remember I'm calculating Sigma Z Sigma X we have to remember to change a sign okay so what is this this is the
+
+01:27:16
+product now everybody remember what Sigma Z is as a matrix we're going to do it now by matrices say the way to calculate this is to remember that Sigma Z and sigma X are matrices or at least they have a matrix representation and we just have to multiply the matrices Sigma Z what was that that was one Zer one sorry one minus one and what about Sigma X that's 0 1 1 0 that's the first term in the commutator sigma Z * Sigma X and then the other term is just to put them in the opposite order
+
+01:28:01
+01 1 0 Time 1 0 - one no we just take just the commutators of the uh of the matrices is what it comes down to we could do it without the matrices just by applying in The Operators to the vectors to the vectors up and down and we know what we know enough to actually do that without actually using the matrices but the matrices are a very convenient tool for manipulating operators operator product is the same as matrix product okay so does everybody know how to do a matrix product I hope so let's do this one over
+
+01:28:50
+here the upper left hand corner is the product of this this row with this column 1 * 0 0 * 1 0 the upper right corner is the product of this row with this column 1 * 1 0 0 1 the lower left corner is the product of this row with this column that's minus one and then the last one is this row sorry this column times this row 0 * 1 and uh sorry no zero to this one this one still zero okay now let's do the other one over here minus 0 * 1 this one time this one zero this one * this one minus one this one this one
+
+01:29:45
+time this one 1 Zer uh I think I missed the sign somewhere yeah no no it's right it's right this is plus minus okay so this we got they just gave the same thing but with a minus sign sorry this minus this gave two terms which add so the commutator is just equal to the commutator itself is just equal to 01 no is equal to twice minus one 0 now do you recognize this thing over here if I put an i over here and an i over here you might recognize it as being related to Sigma y let me write down Sigma y Sigma Y is equal to - i i0
+
+01:31:02
+0 and what happens if I multiply Sigma I by I I * minus I is 1 and I * I is min -1 so what this is is it's just twice I Sigma y 2 I Sigma y that's kind of neat it's closing up on itself commutators of sigmas with sigmas are sigmas that's good because it's going to allow me to write equations for the time derivatives of sigmas which are just going to be sigmas again okay so let's uh let's see what we have we have commutator Sigma Z with Sigma X is equal to twice I Sigma y
+
+01:31:54
+Y and now I'll write down the rest of them incidentally as I said if you want to get the opposite order you just change the sign Sigma Z Sigma x with Sigma Y is equal to 2 I Sigma Z and zxy sigma y XY Z Sigma Z is equal to 2 I Sigma X these are the three commutation did these did this remind you of anything do you remember the Pome brackets of angular momentum the Pome brackets of angular momentum were LZ LX equal l y l y LX l y is equal to LZ and l y LZ is equal to LX so apart from a factor of 2 I remember
+
+01:32:50
+there is an i in the connection between Pome brackets and uh and um and commutators these are essentially apart from a factor of two which we can absorb they're essentially angular momentum uh Pome brackets that's there's an important clue there for the meaning of angular momentum uh but uh we're not going to dwell on it for the moment this these are the commutation relations of the components of the spin and they just give back comp the components of the spin again with this funny ordering zxy XY Z yzx they're just
+
+01:33:34
+permuted cyclically okay so let's go over to here now this now becomes Min - I Omega / 2 and now what's the commutator of Sigma x with Sigma Z it's - 2 I Sigma y so we get another - 2 I Sigma y the twos cancel that was the reason that I put a two in the denominator here in the first place because I knew it was going to cancel so let's cancel the two and we have Min - I * - I which is minus1 so what we get is minus Omega Sigma y notice that the I went away the I went away we I was worried
+
+01:34:34
+about it about half an hour ago that oh my goodness time derivatives of real things are going to get imaginary but they didn't they didn't because the commutators themselves had imaginary coefficients and that's General that's General okay so there we are we have have Sigma x dot is equal to minus Omega Sigma Y and sigma y dot here we have the relationship for Sigma Y and it involves twice Sigma X the correct relationship if we work it out is that this is equal to plus plus Omega Sigma X
+
+01:35:28
+okay so Sigma Z dot is zero but what's happening to Sigma X and sigma y can you see what's happening to Sigma X and sigma y you recognize this these equations these are the equations for a thing moving in circular motion right what's happening is simple the exp in the sense of expectation values expectation values are real numbers and uh in the sense of expectation values the spin Vector is processing around the z-axis it's processing around the z-axis sigma x dot is minus Omega
+
+01:36:15
+Sigma y Sigma y dot is plus Omega Sigma X this is the same kind of formula that we discovered in classical mechanics when we talked about a rotor you remember the rotor and we also put the rotor in a magnetic field the angular momentum executed exactly the same and it's also the gyroscope procession it's basically gyroscopic procession a spin a quantum mechanical spin in the sense of expectation values it doesn't make any sense to say that the quantum mechanical operators themselves uh process that doesn't mean
+
+01:36:52
+anything quantum mechanical operators are just these matrices they don't do anything but because the state vectors change with time the expectation values the average values of the spin execute a motion which is basically the same as a classical rotor processing in a magnetic field okay so we have now solve the problem of a spin in a magnetic field we've solved the hardest possible problem associated with a single spin uh there is no hamiltonian which is more complicated than this for the
+
+01:37:30
+single spin it's the most General you of course you could put the SP you could put the magnetic field in the X Direction all right there's a little yes you can solve a harder problem uh you could put the uh the um spin along some uh peculiar axis but what you would find after you work the whole thing out is that it would just process around the peculiar axis of the magnetic field same thing you just rotate it uh so that so that the magnetic field is pointing in a different direction excuse me any hints
+
+01:38:02
+on what's that any hints on why that's the correct value for the hamoni there really aren't very many operators okay so let's here's a general you can work this out yourself this is not hard to prove the most General hermiss operator in two Dimensions is a linear combination of the unit operator Sigma X Sigma Y and sigma Z the most General Herm Mission operator is a linear combination of these putting a unit operator into a hamiltonian that's like adding a constant to the energy
+
+01:38:47
+unit operators commute with everything so putting a unit operator in is not inter interesting it does nothing so we get rid of this the next possibility is a general combination linear combination add them up of a coefficient time Sigma X another coefficient time Sigma Y and another coefficient time Sigma Z that just corresponds to putting the magnetic field at some uh at some angle it's just uh the simple case where we only took one of these is the magnetic field along the z-axis if we took a general
+
+01:39:28
+linear combination let's say n subx Sigma X Plus n suby Sigma y plus n subz Sigma Z this would just correspond to the component of the spin along the N axis and you would do exactly the same calculation except you might work instead in the basis of igen vectors of Sig in so it really is the most General hamiltonian that you can uh that you can write down and that's just because a two-dimensional space is so simple there just aren't very many independent operators in it uh it just is nothing
+
+01:40:12
+else can you comment on the relation between the the two dimensional spaces is the space of States think Dimensions recession right but we worked yeah but remember for every direction that you can think of there is a state for which that component of the spin is definite but that's secondary here we're not uh that we that didn't play much very much of a role here we just follow the rules and uh but yes I mean there there are two things going on here and this is a good place to to focus on those two
+
+01:40:52
+things there are three vectors the vectors in real space those are the components of the averages of Sigma and there's the two-dimensional space of states and they're quite different things although they are related yeah does Omega represent some proper the magnetic field it's Omega is basically the product of the magnetic field times the Magnetic Moment of the little spin right I there may be a two I have to remember but uh no I don't think there uh yeah there is a two yeah Omega over two is
+
+01:41:33
+the product of the Magnetic Moment with a uh with a magnetic field our original technique for creating Sigma Z was to put it in a magnetic field and have a photon below that was last that was last year right you're right um right so I mean if we pursued this and coupled it to a a field we would would see that thing yeah right if we couple the spin now forget the procession if we couple the spin to the magnetic field then there will be two energy states for example if the magnetic field is along the
+
+01:42:14
+z-axis then the energy of the UP State and the down state will be different they'll differ by amount Omega up will have energy Omega over 2 down we'll have energy minus Omega over 2 and there will be an energy difference of Omega all right so one of them has higher energy one of them has lower energy what happens to a real spin if you wait long enough if you put it in a magnetic field the answer is eventually the higher energy state will emit a photon and what will be the fre what will be the energy
+
+01:42:48
+of the photon Omega just the difference between the upper energy and the lower energy and in the process of emitting the photon it will flip so these things are all certainly connected but uh all right we've solved a real genuine quantum mechanics problem yeah so why is V not treated as an operator what's that why is the magnetic field not treated as an Valu is if you were to think of the mag the magnet as part of the quantum mechanic mechical system whenever you whenever you're facing the problem of a real
+
+01:43:28
+Quantum system which is being in interaction with a heavy system with a system like a heavy Magnet or some other kind of detector an almost classical system uh you don't bother trying to think of the heavy system Quantum mechanically you just say it has some now that has to be justified this is not OB is to justify uh why don't we have to think of the magnet as part of the quantum mechanical system that's another way of asking the same question and the answer is that it's so big and it's so heavy that it doesn't
+
+01:44:07
+fluctuate much but event and eventually we want to address that problem for the moment we just think of the magnet as part of a heavy apparatus which is sort of fixed and it's there and nothing that that electron can do is going to cause that the magnetic field to change it's just stuck there for and uh and we get to think of it deterministically when do we get to think about a thing deterministically we get to think about a thing deterministically when it's so heavy and so many degrees of freedom that when we
+
+01:44:43
+calculate the quantum mechanics of it we find that the fluctuations are really small but that has not been established yet so far we've divided the world into the Quant and the apparatuses the heavy apparatuses which we don't have to deal with Quant mechanically that of course has to be a temporary thing real apparatuses are made out of the same thing as the systems we study and so at some point we have to come back and say what was the what was the justification for saying the apparatus was allowed to be considered
+
+01:45:16
+just classically you just point it in some direction and that's the way it is and the spin dealt with Quantum mechanically we have to come back and answer that but uh you know my usual uh statement at this point is not tonight Sig X Sig X do and Sig y dot those arees yes yes that's what you do the experiment what what yeah no in an unpredictable manner M right yes the answer is yes it will occasionally fail but that has little to do with quantum mechanics well it has to do with quantum mechanics but it has to do with
+
+01:46:13
+the use of statistics and probability why does probability work we make a basic postulate and that's that if you do an experiment over enough times the average value that you get in the laboratory will agree to within small Precision with the mathematical averages that you calculate from a probability distribution I am not going to try to justify that the reason is I don't know why it's true and uh why does probability work why if I tell you you flip a coin a thousand times does it come up heads uh 500 times
+
+01:46:55
+no there's no such prediction certainly I mean it might come up 500 times heads but there's no prediction that says it does will it come up 500 times plus or minus square root of a th000 plus orus 30 that's the margin of error not every time no so there's no such prediction what can you say you can say it will probably come up uh you know put we get into the cycle how about if I do it a million times will it certainly come up 500,000 plus a minus square root of n no no matter how many times you do it
+
+01:47:35
+there is no hard and fast prediction from probability that any particular thing will happen why does it work Jesus it beats me but it does many you know I'm not the only one who've been puzzled by this I mean you know I used to like the joke that this is probably the reason that the Einstein didn't like quantum mechanics say it again on compon yeah original now we could have done the same calculation by instead of putting Sigma Z here putting this sigma. n sigma. n is the Matrix in the notation that we've been
+
+01:48:48
+using up till now where the sigma matrices are the things I wrote down it would be the Matrix uh N is a unit Vector n subz minus n subz nx- i n y and NX plus i n y it's just taking the components of N and multiplying them with a corresponding components of Sigma and then you could start with this and say this is the H I'll put an Omega over two and take this to be the hamiltonian and then recalculate what happens to the different components of spin well the component of spin along the N axis what would we do then then we
+
+01:49:39
+would have to calculate commutators of the various components of the spin with sigma. n sigma. in what about the component along the N axis what happen to it commutate is zero right sigma. n commutes with sigma. n so we would find out that the component of the spin along the N axis would be the thing that doesn't change how about the components the spin perpendicular to that axis we could work that out and we would discover that the spin processes about the N axis that's a good exercise to try to do
+
+01:50:21
+I mean was asking what would the refle the orientation if you if you want say it again I was asking whether the Omega the value of Omega reflected the orientation of the St and you moved it from the Omega the no the Omega is just a number because you put the in if you by orientation you mean plus or minus one or you mean Direction no no no no no no no no no no no Omega doesn't have to do with the direction Omega is just the magnitude of the magnetic field magnitude of the magnetic field times the magnitude of
+
+01:51:13
+the Magnetic Moment no not dotted they're just numbers they're numbers the dot product is between Sigma and n Omega is just a spectator it's just a number it's just a number oh you can if you like you you could take this Omega and put it with the end if you wanted to what you think theega depends orientation of what depends on the orientation of the spin one of us is confused I'm not sure which confusion is that the when you had Sig Z up there that implies the magnetic field
+
+01:52:00
+in the Z Direction here the magnetic field was in the Z Direction and that's the Omega Z you had right Omega Z where did I have omega z h sorry Sigma Z Sigma Z yes Sigma Z where is the where is the the um the spatial Vector of the spin represent Omega in means means do product I can't remember which book I read it in but they said whenever you're talking spin you're really not talking one half you're talking that is that yeah I think I read that I read that too I think it was in N
+
+01:52:50
+gingrich's last book I don't know look sigma. n stands for Sigma X and X Plus Sigma Y and Y plus Sigma Z and Z exactly as if Sigma was a classical Vector but of course it's not it's just a collection of three matrices so this stands for Matrix this stands for a single Matrix which happens to be the sum of three particular matrices but that's the definition of sigma. n if you like these are the components of N and they determine the direction of the magnetic field we multiply that by Omega
+
+01:53:37
+over 2 which is just a number just a number nothing uh nothing more complicated than a number and this is what Sigma DN means if the magnetic field is along the z-axis then the only component of n which is not non zero would be n subz okay if the magnetic field was along the z-axis then we would say only n subz if you like would you like me to write down the relationship between n and the magnetic field the relationship between n and the magnetic field is that the magnetic field Vector is equal to the magnitude of the
+
+01:54:20
+magnetic field time the unit Vector n okay the magnetic field as a vector is the magnitude of the magnetic field times the vector n and that stands for a magnetic field that's pointing along the N axis with magnitude B once we know that then we can basically identify the magnetic field with n apart from a numerical coefficient numerical coefficient is buried in Omega here once we know that we can write this as the spin dotted into B so I'm not sure what the questions are there's some
+
+01:55:02
+there's something which is bothering some of you I'm not sure what it is when you you get a frequency is that frequency always the same or does it depend on the it depends on the magnitude of the magnetic field nothing more you're talking about the fre quency of the photon yeah now the frequency of the photon is always just the difference of the energy of the upper energy level and the lower energy level and it is always just Omega doesn't depend on the right if you take sigma. n and you ask
+
+01:55:43
+what its igen values are the igen values don't depend on N they're plus and minus one in any direction h no just the the uh the igen values here let's write out sigma. n all right here's an exercise for you it should be done sigma. n is n subz * Sigma subz that's NZ minus NZ plus NX time Sigma X that's that minus or NY Sigma y That's n. Sigma question what are the igen values of this Matrix somebody's worked them out I know that somebody in this room has worked them out where uh who was it
+
+01:56:41
+uh H the igen values of this Matrix here for any NS as long as they're unit vectors if n is the components of a unit vector in other words N x^2 + n y^2 + n z^2 is equal to 1 you will find that the igen values of this Matrix are always plus or minus one the this this is simply the statement that M no matter what direction you point your detected your apparatus when the apparatus acts it gives you plus or minus one okay so whatever Direction you take here the igen values of this Matrix are plus
+
+01:57:25
+or minus one if you know a little bit about matrices for those who know a little bit about matrices let's prove it the trace of a matrix is the sum of its igen values the trace means the sum of the diagonal elements all right first step there are two igen values let's call them Lambda 1 and Lambda 2 and the trace of the Matrix is zero this one plus this one and that tells us that Lambda 1 + Lambda 2 is 0 or Lambda 1 is equal to minus Lambda 2 so there are two igen values and they're
+
+01:58:05
+equal and opposite what about the determinant of the matrix it's the product of the igen values so we now know they come in equal and opposite pairs what's the product what's the uh determinant the determinant of this Matrix is equal to minus n z^ 2 this times this minus this time this and that's - nx^ 2 - n y^ 2 right NX plus i n y * NX - n y is nx2 + n y^2 here it is and what is nx2 + n Y2 + and z^2 one so the determinant which is the product of the igen values is equal to minus1 there's only one solution Lambda
+
+01:59:05
+1 + Lambda 2 is equal to zero that says Lambda 1 is equal to minus Lambda 2 and the product is equal to minus1 there's only one such pair it's plus one and minus one so all such matrices of this form have igen values which are plus or minus one and therefore the energy levels are always plus or minus Omega over 2 one of them plus Omega over 2 the other minus Omega over 2 and when you flip from one to another you get Omega worth of energy right so it doesn't matter which way things are pointing in yeah I I
+
+01:59:48
+think it's time to go but if an electron is let's say in the Z yeah yeah yeah yeah yeah that's right in in studying in yes I should have said in studying the procession here we've ignored the possibility that it can radiate a photon now the probability to radiate a photon per unit time uh can be pretty small can be very very small small in particular if the energy differences are very small as they would be in an ordinary magnetic field it will process many many times before it emits a photon
+
+02:00:33
+so my question is if it does emit a photon since it's not exactly flipping it's only going 90° going from up to down okay remember the two I the two igen vectors up and down or left and right or in and out correspond to opposite orientations of the uh of the spin even though the state vectors are orthogonal the directions in space are 180 degrees apart so here imaginary situation is not suddenly do something other what it was doing or oral to what it was doing there's a probability for the electron
+
+02:01:29
+to Decay and emit a photon it is and that probability per unit time is typically small so you could be unlucky and after a quarter of a revolution it might emit its Photon but that's extremely unlikely you can estimate how many is it am I asking answering your question I'm not sure no really is really either in the direction it was going or flip opposite it won't suddenly go to some other weird angle like X to y z I think the question is since it's not feels like the electron you no it's in a super position of being
+
+02:02:18
+up and down it's one of the two of those it's only the a average which is sort of in a campus Direction it's in a superposition of being up and down if it's down and down is the lower energy state it won't radiate if it's up it will radiate so if you put the electron in some other direction there will be some probability for it to radiate and a probability for it not to radiate the probability for it to radiate is the probability that it was up yeah very confusing very confusing
+
+02:02:58
+right okay now I see what was bothering you if the magnetic field is that way and the spin is aligned that way you might have thought that when it jumps you only emit half the energy of a photon of the pH half the energy no what's correct is that the probability for it to emit a photon is2 why because there's half a probability that this is actually down and half a probability that it's up if you were to measure the upness and down of it so that means the average energy that it emits is
+
+02:03:35
+half but it either emits Omega or it doesn't emit at all good for more please visit us at stanford.edu
+

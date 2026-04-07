@@ -1,0 +1,324 @@
+00:00:00
+welcome back this is my sixth video on quantum spin the title of this video is H is self-adjoint now H as you may remember is the Hamiltonian matrix and self adjoint is a mathematical property that that matrix has which I will define in a moment now the fact that H is self adjoint has many really important consequences for one it implies that probability is conserved in time I'm going to get to what that means but the this to the fact that H is self adjoint is extremely extremely important so I
+
+00:00:39
+figured I'd make a whole video just on the consequences of what it means that H is self adjoint all right so what is self adjoint mean say a is an M by n matrix just any old matrix then the adjoint of a is an N by M matrix written as a dagger so this symbol here is called the dagger that's just what its shape is and okay oh just to make sure you realize that n by M is the opposite of M by n they're flipped okay so what are the entries of a dagger well the entries of a dagger are given
+
+00:02:02
+by so here we have a dagger and the I J entry of a dagger is equal to the J eyuth entry of a all conjugate complex conjugated so this bar means complex conjugate so you can see that there are two operations involved with taking the adjoint of a matrix first you have to flip all the entries right I J becomes J I and you got a complex conjugate all the entries as well so if you're familiar with linear algebra terminology adjoint the word is the same thing as conjugate transpose where conjugate just
+
+00:03:06
+means you know complex conjugate and transpose is this operation you do we take I J and you make it J I so that's just what the adjoint of a matrix is so I've now defined what the adjoint of a matrix is alright so just give an example of how do you take that adjoint of a few different matrices okay so here are some examples so the first example is say that a is a 2 by 2 matrix and let's just say that a has the entries a B C and D you you know whatever those are those are just you know some
+
+00:03:50
+variables now a adjoint has the entries of a conjugate C conjugate be conjugate and D conjugate C when you take the transpose of a all of the entries on the main diagonal stay the same right so a and D don't go anywhere because they're on the this main diagonal here but B and C flip positions so these get flipped and furthermore obviously you have to complex conjugate each entry so that's how you take the adjoint of a it's pretty straightforward now let's give a different example
+
+00:04:41
+so SCI is 2 by 1 so here sigh borrowing from our quantum mechanical notation is a column vector and a column vector can be thought of as a 2 by 1 matrix so sigh let's just say has the components of alpha and beta okay so what is SCI dagger actually let me put that in parenthesis so what is side dagger well this has the entries of alpha bar and beta bar so note that sy dagger is a 1 by 2 matrix instead of a 2 by 1 matrix but note that the side dagger the adjoint of sy borrowing from our notation is actually the dual vector of
+
+00:05:51
+sy so if sy was a column vector then the adjoint of sy is a row vector also known as a dual vector alright so those were some examples and now I want to talk about a very important property so important property of the of taking the adjoint of a matrix so if a is an L by M matrix and B is an M by n matrix then you can multiply them together take the matrix a B is an L by n matrix right and the what are the entries of a B well the I K a--the entry of a B is equal to the sum from J equals 1 to M of a IJ times b
+
+00:07:35
+JK right this is just the regular matrix multiplication rule ok now what is the important property the important property is that the complex sorry the adjoint of a times B is equal to the adjoint of B times the adjoint of a this is the important property I wanted to mention now if you want to prove this equation right here it follows straight from the definition of matrix multiplication so I'll just show you that proof really quick so the matrix B dagger a dagger if you take the K I ahthe entry of B dagger times a dagger
+
+00:08:31
+and here we got to do ki instead of I K because all the dimensions are flipped then this is just equal to the sum from J equals 1 to N of the K J entry of B dagger times the J eyuth entry of a dagger now this is just equal to the sum from J equals 1 to n of a IJ bar times b JK bar see here i just use the definition of what the adjoint is right i just wrote that in there and this is all just equal to the i ka the entry of a be all with a complex conjugate which is just equal to the K I if entry of a times B dagger right so
+
+00:09:48
+this is just to prove that B dagger times a dagger equals a B dagger and this this might have been a lot to follow you know a lot of little indices and stuff but it does check out all the dimensions work out the the main thing is that the order of multiplication flips right B times a instead of a times B because of the transpose and the complex conjugation doesn't really play that important role just sort of you know goes through without a hitch so yeah anyway this equation is very important and here I have the proof here
+
+00:10:27
+if you want to look at that alright so now we can clear this up and now we are going to talk about the adjoint of the poly matrices so remember that the three poly matrices are given by Sigma sub X which equals 0 1 1 0 Sigma sub y which equals 0 negative I I 0 Sigma sub Z which equals 1 0 0 negative 1 and oh just to remind you what the formula is if a has entries a b c d then a dagger has the entries of a bar C bar b bar and d bar so all right let's calculate the adjoint of Sigma sub X so in order to calculate this you have
+
+00:11:46
+to flip the entries across the main diagonal here and then you have two complex conjugate them so you have to flip one and one and then complex conjugate them but because you know one is a real number you know the complex conjugate of one is 1 so we can see that this is the adjoint of Sigma sub X and it looks like the adjoint of Sigma sub X is just Sigma sub X itself all right let's calculate the adjoint of Sigma sub y once again you can draw this main diagonal and then we have to flip the entries across this
+
+00:12:25
+main diagonal and then complex conjugate them but if you notice the complex conjugate of I is negative I and complex conjugate of negative I is I so when you flip it across this main diagonal fill in the gate but then when you complex conjugate them they'll negate again so overall Sigma sub y adjoint has the entries of 0 negative I I on 0 and that is just Sigma sub y itself now the adjoint of Sigma sub Z finally well we can flip all the entries along this main diagonal and zero to zero nothing changes and you
+
+00:13:10
+know one negative one of real numbers so this is the adjoint of Sigma sub Z and up it looks like the adjoint of Sigma sub Z is Sigma sub Z so these three computations we've just done have shown that Sigma sub X Sigma sub y and sigma sub Z are all what we call self adjoint meaning that they're equal to their own adjoints all right so after all of that we're now ready to finally talk about the Hamiltonian H so let's just remember what our setup is throughout these videos so we're picturing that we have
+
+00:14:13
+some sort of external magnetic field and the strength of magnetic field is given by a B field with components P sub X P sub y and B sub Z and placed in this external magnetic field we have a point like electron with a spin state of sy you know let's say entries alpha and beta now the Hamiltonian H is a 2 by 2 matrix which equals G times e over 2m times H bar over 2 times B dot this Sigma vector so what are all these letters so G is the G factor which is just a number which is approximately equal to 2 e is the well
+
+00:15:19
+it's a positive charge of the electron so in other words negative E is charge of electron and then M is the mass of the electron then H bar is just Planck's reduced constant and then here we have the B field dot the Sigma vector so B dot the Sigma vector here is just be x times the poly matrix in the X Direction plus B Y times the poly matrix in the Y Direction plus BZ times the poly matrix in the Z direction now because B sub X B sub y and B sub Z are all real numbers they don't have any imaginary parts the
+
+00:16:20
+adjoint of B dot Sigma is just equal to itself it's self adjoint and this wouldn't be the case if you know these numbers here had imaginary parts because then these numbers would you don't get complex conjugated and there was the end result would be different but because px py and PZ are real numbers that doesn't happens ok so this thing right here is self adjoint and all these numbers out here are also real numbers so long story short H is self adjoint the Hamiltonian H is self adjoint which as you may have
+
+00:17:05
+noticed is the title of this video so ok we've just shown that Hamiltonian H is self adjoint now that I've shown you that I have to now explain why this is so important and now the really cool parts of the the video start now all right so next we are going to talk about the conservation of probability and what this has to do with the fact that the Hamiltonian is self-adjoint so recall that if you have some states I and the inner product of psy with itself is equal to 1 this means that the sum of the probabilities for
+
+00:18:10
+the outcomes of any measurement is 1 right that's what this condition that the inner product of side with itself equals 1 means it means that if you conduct any measurement you know with some probability you're going to get some different results for that measurement and you want all those probabilities to sum to 1 and now the question I want to ask is so question if the inner product of psy with itself at some particular time t1 is equal to 1 so for some time t1 then will the inner product of side with itself at any other
+
+00:19:18
+time T be equal to 1 so for all of their times T in other words if the inner product of side with itself is one at some initial time will it remain one at all other times now this equation right here is what I mean when I'm talking about the conservation of probability so in other words my question here is just is total probability conserved that's the question that I am asking so now I want to just delete some of this and just bring this up here all right so now let's go about answering this question
+
+00:20:17
+so I'm gonna start writing the answer so I'm going to rephrase what I want to show I want to show whether or not the time derivative of the inner product of the state with itself is equal to zero right so I wrote a little question mark over this equals because I don't know if this is true yet but I just want to know whether or not this quantity is constant in time right because if I take this equation and differentiate both sides when you differentiate a constant you get zero so I'm now rephrasing the
+
+00:21:02
+question that I want to answer all right so now what I'm going to do to this expression here is I'm going to carry out the product rule of differentiation so in order to calculate this quantity we can first differentiate sy on the left and then add it to what happens when we differentiate sorry sigh on the right all right so what did I do I just expanded out this expression here using the product rule of differentiation and if it's not clear to you why this is the regular product rule
+
+00:22:01
+of differentiation you could write this out more explicitly in terms of the components of both vectors and check that you know by the product rule what I wrote here is correct but anyway let's move on so now we have these terms that are the time derivatives of the state and the dual state so what are those well those are just given by Schrodinger's equation so Schrodinger's equation now what is Schrodinger's equation it's just that DDT of sigh of T is equal to negative I over H bar times
+
+00:22:46
+the Hamiltonian H times sy of T right this is Schrodinger's equation now if we take the adjoint of both sides of this equation we can get something called the dual Schrodinger equation right so this just comes from taking the adjoint of both sides and what you get is DDT of the dual state sigh of T is equal to now okay let's think here we have this constant pre-factor out front because we have two complex conjugate everything when we take the adjoint this negative I becomes a positive i right so
+
+00:23:42
+this comes from the fact that we got a complex conjugate and now we got to take the adjoint of H times Phi of T now remember that we have to flip the order of matrix multiplication when we take the adjoint so where as sigh of T here was a to the right of H now we got to put it to the left and H here gets an adjoint right now obviously H equals H adjoint but I'm just going to leave it written as H dagger here for right now all right so now once again I'm going to move some stuff around all right good let me just move this
+
+00:24:37
+over here and now I'm gonna take these expressions I have for the time derivatives of the state and a dual state and plug them in to here and here so this equals C plus I over H bar then we have sy of T and then H dagger and then sy of T again right I just plugged in the dual Schrodinger equation and now plugging in the Schrodinger equation here I have minus I over H bar and then sy of T H and then sy of T again all right that just comes from plugging these two equations in here now I can actually rearrange this a bit and write
+
+00:25:36
+this as I over H bar and then sy of T and then in parenthesis H dagger minus H and then sy of T again here I used the distributive law of matrix multiplication to group h dagger and H here together in one term that's that's all I did in this now here is the final step which is staring us right in the face this right here H dagger - H this is zero because H is self-adjoint so this whole thing is equal to zero straight from the fact that HS f a joint which is just what we wanted to show so yes indeed probability
+
+00:26:30
+is conserved and it comes straight from the fact that the Hamiltonian is self-adjoint now that was basically all I wanted to show it was a pretty straightforward proof but note that I actually showed something stronger than what I set out to show I showed that the time derivative of the inner product is zero but this isn't only true for if the initial inner product is one it could be anything so you could imagine making some unphysical state that had say an inner product of itself of let's say -
+
+00:27:03
+and even though this wouldn't represent a physical state if you evolved this in time via the Schrodinger equation it will still remain - for all time so now using this interesting corollary I now want to show something else so here's the next thing I want to show uniqueness of time evolution so that's the next thing I want to show so let me ask as I like to do a question so question if psy 1 of T and psy 2 of T both solve Schrodinger's equation right there both these are both solutions to
+
+00:28:08
+Schrodinger's equation and psy 1 of T not equals situ of T not for some initial time T not like like kind of like the word to let me make it clear T not does sigh one of t equal side to of T for all times T now let me rephrase this question a slightly different way so what this question is really asking is if you have some initial condition and you then solve the Schrodinger equation giving some initial condition is it possible to come up with two different solutions to the Schrodinger equation
+
+00:29:19
+that have the same exact initial condition is it possible to come up with two solutions that start out the same but then diverge for later times or is it the case that once two solutions are equal at one time they have to be equal at all times so that's the question we're asking them asking about the uniqueness of time evolution now obviously the uniqueness of time evolution is usually something we just assumed in physics in real life you know if some system starts having some initial condition you just assume
+
+00:29:59
+that it's going to evolve in time in some unique deterministic way otherwise you know what are the laws of physics really but it is important to actually prove stuff like this from time to time just to make sure that our mathematical model of the physical world really does work the way we think it should so we have to come up with an answer now the first answer I want to give here so answer is actually incorrect I'm going to give you some in correct reasoning that would lead us to think that time evolution is unique and
+
+00:30:37
+even though the result will in fact be true our reasoning is incorrect so let's see if you can spot why this reasoning isn't correct so the incorrect reasoning goes something like this say that you know psy 1 at T naught equals site 2 at T naught right which is just what we said right now what you can do is you can then add a small time delta T 2 T naught we're thinking of delta T as being a very small number infinitesimal and you can Taylor expand this expression to the first order in delta T and using
+
+00:31:26
+Schrodinger's equation it's just equal to si 1 of T naught minus I over H bar delta T times H times sy 1 of T naught on the top here right and then on the bottom we have the exact same thing but with sy - so I'm just evaluating this in two different ways and we can clearly see now that because this that's I wanna Tina is equal to sy to ax t naught here and here we can see that indeed this this top thing right here equals this bottom thing right here so the incorrect reasoning goes if sy 1
+
+00:32:16
+of T naught equals C 2 of T naught then Taylor expanding in some tiny time step delta-t you then find that the Taylor expansions are equal so if the two states are equal at some time they're equal at a tiny time delta T later and then by some sort of inductive reasoning with an infinite number of you know even test of all time steps delta-t you could then deduce that they have to be equal all later times right not just some impetus full time stuff so that is the incorrect reasoning now this logic as I've said doesn't work
+
+00:33:01
+at all it's actually incorrect and the reason it doesn't work is you can't really do an inductive proof of an infinite number of infinite doesn't really work but there's maybe a clearer way to see why this doesn't work so this reasoning would imply that all first-order differential equations have unique solutions given some initial condition so the only thing that this logic is actually used is that the Schrodinger equation is a first-order differential equation that you can
+
+00:34:14
+expand in delta T and it hasn't actually used any properties of the Schrodinger equation itself so to show you to really hammer home why this reason doesn't work I'm now going to show you a first-order differential equation that doesn't have unique solutions given some initial condition so I'm now going to give you this counter example which is pretty bizarre if you haven't seen it before so here is my example of a first-order differential equation without unique solutions given
+
+00:35:10
+some initial condition so this crazy differential equation is just a well it's a single variable differential equation and it's just y dot equals Y to the 2/3 all right this is thick this is my crazy counter example right so you can see it's a first-order differential equation because it only depends on Y and the first time derivative of Y right here I'm thinking that Y depends on you know some time T so let's say you our initial condition is that Y of 0 equals 0 now I'm claiming that there are
+
+00:36:01
+multiple solutions to this differential equation satisfying that y of 0 equals 0 now what are these solutions well I'll tell you they're given by Y of T equals and then here we have equal to 0 if T is less than some T I'll call T star and it's equal to 1 over 27 t minus T star cubed if T is greater than T star and that's we also have the condition that T star is greater than 0 okay so so what do I have here for every choice of T star some number T star which is greater than 0 you can make a solution Y of T that
+
+00:37:01
+depends on T star that satisfies this initial condition and solves this really funky differential equation I've just written here in fact what these solutions look like is if you graph them here we have T here we have Y of T and let's say you know here we have T star here what these solutions look like is it looks like you know we have Y is equal to 0 below T star and then above T star it goes up like a cubic and there are many different solutions one for each T star so here I'm just drawing a few of them
+
+00:37:48
+for different T stars and I mean yeah I haven't shown you that this does solve this equation but you can check it it's very straightforward now notice that if you were to Taylor expand any of these solutions around T equals 0 to every order in that Taylor expansion you would just get that Y of T was equal to 0 at no order would you ever you know get the full behavior of Y in other words you'd be missing solutions if you just limited yourself to Taylor expansions so this is an example of a differential equation
+
+00:38:29
+where you know you can't just do Taylor expansions to get all the solutions and if you want to know the fancy terminology the condition that this differential equation violates which makes its solutions not unique is it violates something called the Lipschitz condition named after I guess some guy named Lipschitz so anyway this is just something I thought was kind of interesting this is just an example of why it's important to prove that differential equations have unique solutions because some of them don't
+
+00:39:09
+so ok ok so with all of that in mind I am now going to give you the actual proof that the Schrodinger equation has unique solutions given some initial condition okay so the answer to our question is yes and now here is the proof so say that psy 1 of T and sigh 2 of T both solve the Schrodinger equation and psy 1 of T naught equals sigh 2 of T naught right this is just the starting assumption okay let me get any underlying proof okay now define psy tilde of T to be equal to Phi 1 of t minus sy 2 of T note that psy
+
+00:40:38
+tilde of T also solves the Schrodinger equation alright so why does sy tilde solve the Schrodinger equation well we know it solves the Schrodinger equation because any linear combination of solutions to the Schrodinger equation also solves the Schrodinger equation so because we've defined this quote-unquote state site tilde of T that's just sy 1 minus I 2 that's linear combination and therefore it also solves the Schrodinger equation ok so that's the first important thing about site tilde but
+
+00:41:18
+there's something else important so also note that sy tilde of T naught equals the vector with opponents of zero and zero right because Taiwan insights you are equal it T not so Sai tilde of T not is the vector with all components equal to 0 therefore the inner product of site tilde with itself at T naught is equal to 0 right so the inner product of site tilde T naught and Sai tilde at T naught is equal to 0 now because Sai tilde of T solves the Schrodinger equation we know that DDT of site tilde of T with itself is equal to
+
+00:42:39
+0 right in other words the inner product is a constant because sigh till to solve the Schrodinger equation therefore the inner product of site tilde with itself at any time T is equal to 0 so the inner product if side tilde was itself equals 0 at any time T right so how did I get this I just got this because we know that the inner product of site tilde with itself as a function of time must be constant in time and we know that at some particular time T naught is equal to 0 so we know that that constant must
+
+00:43:32
+be equal to 0 at any time okay this is only possible if if sigh tilde of T is the vector with components of zero and zero at all times T all right so we know this because we know what the expression for the inner product of a vector with itself is right so remember that if you have a vector Sai with components of alpha and beta then the inner product of Sai with itself is the absolute value of alpha squared plus the absolute value of beta squared and if this equals zero the only way for the whole thing to be equal to
+
+00:44:31
+zero is if both alpha and beta are equal to zero individually so we know that if the inner product is zero the state must be 0 therefore sigh one of T equals Sai two of T for all T right because we know that Sai tilde which is the difference between c1 and c2 has to be equal to 0 for all times therefore we know that Sai 1 and Sai two have to be equal for all times yay we have just shown that time evolution is unique given by the Schrodinger equation which is exactly what you would expect for a physical law
+
+00:45:26
+to have note that our proof crucially relied on this fact that if a state solves a Schrodinger equation then the inner product of the state with itself is constant in time and we were only able to prove that because the Hamiltonian was self adjoint however it should be noted that actually even if H wasn't self adjoint this this statement right here this question that we asked would still actually be true even though I've sort of hinged this whole proof on the hamiltonian be self the hamiltonian being self adjoint it
+
+00:46:09
+turns out that even if H was just an arbitrary matrix which wasn't self adjoint the statement would still be true however the proof would be a lot more complicated so the self adjoint nosov h allows us to prove the uniqueness of time evolution in a simple way however it isn't actually crucial but I just thought that this was a cool proof and I think that you know the fact that the proof is pretty simple made it worthwhile for me to talk about so you know there is one last thing I want to
+
+00:46:42
+mention is that the state side tilde of T which turns out to be equal to zero isn't a physical state right the only physical states are the ones that have an inner product with themselves of 1 and inner product of a state with itself of 0 you know it's not a physical state you should really just think of this as a sort of a mathematical tool we used in the proof and not truly a state in the in the regular sense of discussing it ok so the next part of this video is going to be entitled energy is a real number
+
+00:47:31
+so let me start by making a claim so claim if H is self-adjoint then every eigenvalue of H is a real number so now let me give you the proof of this claim so proof say psy is an eigen vector of H with an eigen value of e so this means that H acting on psy equals E times psy where e is a number which in general could be a complex number but I'm going to show that it has to be a real number okay so what we're going to do now is going to take this equation and we're going take the adjoint of both sides of
+
+00:48:55
+this equation now what we're going to get first on the left side of the equation is that the order is going to flip and size going to become a bra now so here we have sy times the adjoint of H and this equals the complex conjugate of e and then times the bra of the state's side so this equation is equivalent to this equation now the next thing I want to note is that H is self-adjoint right H equals H dagger so that means that I can just kind of delete this dagger here and we now have these two equivalent equations okay
+
+00:49:44
+now the next step in this proof is that I'm going to write a completely unobjectionable equation so sy times H times I equals sy times H times I so this is a number right and it's just equal to itself there's nothing there's nothing unobjectionable at this equation I hope you agree with this equation but what I'm going to do is I'm going to take this equation and evaluate it in two different ways so here I'm going to first evaluate H acting on side but on the other side of this equation I'm
+
+00:50:30
+going to instead first evaluate you know side times H so I'm going to take these two equations here and plug them into each of these things so in this part we get that it's equal to the energy e times the inner product of side with itself and on this side here we get that's equal to the complex conjugate of e times inner product of sides itself that's just given by you know these things so now if sy is not equal to the zero vector right then we can divide both sides by the inner product of sides
+
+00:51:19
+itself right we can divide by a nonzero vector and this implies that e equals the complex conjugate of e right so this implies that e is a real number and that concludes the proof all right so there is the proof that all of the eigen values of H have to be real numbers it follows straight from the fact that H is self-adjoint and now I'm going to tell you why this is so important it's so important because there is an interpretation that eigen values of the Hamiltonian have that I'm now going to
+
+00:52:08
+tell you so if the state sy is an eigenvector of H with an eigen value of e then we say that sy is a state with an energy of e now this is a pretty profound statement what this is saying is that if you have some Hamiltonian H all of the energies that a state could have are given by the eigen values of H and the states with a definite energy are given by the eigen vectors of H so what this means is say if you have some states I one that has an eigen value of e 1 and you have another States I 2 that
+
+00:53:37
+has an eigen value of e 2 if you construct an arbitrary state I mean I was call it sy that is a superposition of sy 1 in situ then this states I here does not have a definite energy because it is in a superposition of one states I one that has some energy e1 and other states i2 which has a different energy e2 so you don't know for certain what the energy of sy is now if you were to conduct a measurement of the energy of the states I you would sometimes find that the energy was a one and you'd sometimes find energy was e2
+
+00:54:40
+and in fact with probability of the absolute value of alpha squared you'd find that it was a 1 and with a probability of the absolute value of beta squared you would find that it had an energy of e2 right so if you make an energy measurement if you measure the energy of the state's I sometimes you'll find that it's e1 and sometimes you'll find that it's e 2 now if sy itself is an eigenvector right so let's say we were to measure the energy of sy 1 in this case 100% of the time you'd find
+
+00:55:22
+that energy was a 1 so if you measure a state and you are 100% guaranteed to find that the energy is e 1 then we say that sy 1 is a state with energy of e 1 or eat or whatever now this might sound pretty reasonable to you you might be saying okay yeah you know you find all the eigen values of H and those are all the energies that a state could have and the states that are the eigen vectors with those energies you know those are the states of those energies so you might say that's reasonable or you might
+
+00:56:00
+say that's not reasonable at all you might be saying how did you come up with that like can you prove that the eigen values of H are all of the energies that a state could have and to that I say no there is no proof I can give you that the eigen values of H are all the energies see this statement here and why I called it interpretation is because this is more of a linguistic statement than a statement about physics in some ways I'm just defining for you what I mean when I say that a state has some energy in
+
+00:56:40
+quantum mechanics that's why I underlined the word say here we say that sy is a state with an energy of e now you might be saying well wait a second we have a definition of energy in classical mechanics right we say energy is the you know what do we say the ability to do work its force times distance its kinetic energy you know we have a lot of different definitions of energy in classical physics and you might be wondering maybe in some limit we can show that this definition of energy we've given here matches up with
+
+00:57:17
+the definition of energy we have in classical mechanics right so we want so we would hope that maybe these definitions would match up in some way and in fact that is actually the case you can show that the quantum mechanics definition of energy does match up with the classical mechanics definition of energy in some limit however we still need a definition of energy in quantum mechanics when we're not working in some sort of classical limit or something now this might not sound very convincing to
+
+00:57:56
+you but just take my word for it that the older you get and the more and more quantum mechanics you do the more and more reasonable this is going to seem to you this is really the correct definition if there is such a thing as a correct definition this is really the correct definition of what it means for a state to have an energy in quantum mechanics now why am I telling you this remember how a few minutes ago we were talking about how all of the eigenvalues of H are real numbers right I gave you a
+
+00:58:29
+little mathematical proof that all the eigenvalues of the self adjoint matrix a key real numbers well if all of the eigenvalues of HR all the energies a state could have and all the eigenvalues of H are real numbers what we've really shown when we gave it a little mathematical proof is that energy has to be a real number so you know you might hope that all physical quantities you would measure are real numbers and in fact that is the case physical quantities that you can measure in quantum mechanics are still real numbers
+
+00:59:06
+they're not imaginary numbers so that's why this claim I've given here is so important it shows that you know quantum mechanics is weird but it's not so weird that you can measure quantities to be imaginary numbers you know physical quantities like energy so that's why I even was talking about all this stuff in the first place all right that was everything I wanted to say about the interpretation of the eigen values of H and I want to talk about another mathematical fact so I want to talk
+
+00:59:44
+about how energy is being real numbers are basically equivalent to the fact that probabilities are conserved right so I showed that both of these facts came from the fact that H is self-adjoint but now I'm going to tie them together in a more direct manner so say you have a state sy which is an eigenvector of H with an eigen value of e now what happens when you time evolve sy you know given that you know this is the initial condition right in the last video we showed you know by solving Schrodinger's equation that the time
+
+01:00:45
+evolution is given by you know Euler's number e to the negative I over H bar our times the energy e times T times the initial states I write this is how it's going to evolve in time now if you take the adjoint of both sides of this equation right if you take the adjoint of the left side and the right side then what you get is the bra vector of sigh of T equals e to the plus I over H bar right because you got a complex conjugate I times the complex conjugate of e times T times the bra of the
+
+01:01:32
+initial condition now you know obviously we have that the complex conjugate of e is equal to itself but for right now I'm just going to write it like that just to just to make a point in a second now putting these two equations together we get that the inner product of Phi of T with itself is equal to now if you plug these factors you know up front we get it's e to the I over H bar then times e bar minus e times T times the inner product of sie with itself now obviously this is constant you know it should be
+
+01:02:19
+equal to 1 if size is a physical state but look at this phase out here if the energy e were just some totally arbitrary complex number right so if e were equal to a plus b times i or a and b were real numbers and ebar you know that would then be a minus b times i we would then have the e bar minus e is equal to minus 2 times B times I right we would then have that I over H bar times e bar minus e times T that would then be let's see two B times T over H bar right so then plugging this in to here we would then
+
+01:03:24
+get that let me just write it like this this would then be e to the to be T over H bar you know times inner product of sides itself and we could then see that you know as time you know increased as it wasn't zero anymore the inner product of side with itself would it would a change you know it would change to be e to the to be T over H bar but because as we know there is no imaginary part to e you know B is equal to zero this doesn't happen so in other words I've just shown what I wanted to show that the fact that
+
+01:04:04
+energies are real numbers are basically equivalent to the statement that probabilities are conserved that inner product that the inner product of a state with itself remains constant as it evolves in time now that was just a short little point I wanted to make and I now have another short little point I want to make which is related to that one which is just that H being self adjoint is equivalent to the fact that time evolution is unitary so in the last video and by the way if you didn't watch
+
+01:04:57
+the last video just ignore this part but in the last video I showed that we can think about time evolution as a matrix which acts on an initial condition so we call this matrix U of T the time evolution operator and it's given by the matrix exponential of e to the negative I over H bar times the Hamiltonian H times T yeah so didn't watch the last video don't worry about this but I defined a way to exponentiate a matrix and when you exponentiate this matrix this gives you the time evolution
+
+01:05:41
+operator so if you want for the inner product of sigh of T with itself to remain a constant right this is the same thing as having sy times U of T dagger times U of T times I right we want this to be a constant and the way to ensure that this is a constant for any state sy is to have that U of T dagger times U of T equals the identity matrix and when we have this this is the same thing as saying that U of T is unitary this is just the definition of what it means for a matrix to be unitary so I'm going
+
+01:06:40
+through this quickly because some people probably haven't watched last video but if you have watch less video this part is for you so okay what am I saying here I'm saying that if the time evolution operator U of T is what I call unitary ie if u T dagger times u T equals the identity matrix I then we have that probabilities are conserved in time now U of T dagger right well what is that well it's just e to the negative I over H bar times the Hamiltonian H times T and then all of this daggered and then
+
+01:07:19
+to evaluate that we have to well we have two complex conjugate I and then we have to take the adjoint of you know times T and because we have the H self-adjoint ie that H dagger equals H you can just sort of erase that dagger there just have that right okay so then wrapping it up very quick I know we have the U of T dagger times U of T equals e to the I over H bar times H times T and then all times e to the negative I over H bar times H times T and then just like for a regular exponential you can
+
+01:08:08
+actually sort of combine these together to be e to the I over H bar times H times t minus I over H bar times H times T and this is just e to the zero matrix which is just the identity matrix so ok I've shown that H being self adjoint is the same thing as whoops is the same thing as the time evolution operator being unitary which is the same thing as probabilities being conserved okay if you didn't understand that don't worry all right so that was all I had to say about time evolution being unitary and
+
+01:08:51
+now for the next thing on my list I want to just talk about yet another math fact related to the fact that H is self adjoint so claim so this is just one more mathematical fact about self adjoint matrices so claim if H dagger equals H and psy one is an eigen vector of H with eigenvalue e 1 and situ is an eigenvector of H with an eigen value of e2 then the inner product of situ and c1 is equal to 0 this is my claim now no point wasting time let's just go straight to the proof so proof so the first equation we have is that H
+
+01:10:24
+acting on side 1 is equal to e 1 times I 1 and the second equation we have is that H acting on side two is equal to e 2 times Sai 2 now we can just take this equation here and take the adjoint of both sides and well just do that right here so sy 2 H equals 2 sy 2 and here we've used the fact that e 2 is a real number so it won't include the complex conjugate ok now the next thing we're going to do is just write out this quantity sy 2 times H times sy 1 and I hope you can agree that this is just
+
+01:11:25
+equal to itself right nothing you can disagree with here but we're going to do these are going to evaluate this quantity in two different ways so here on the left side we'll start by evaluating this on the right side we'll start by evaluating this so plugging in this equation into here we get that this is equal to e 1 times the inner product of situ and sy 1 and then plugging this equation into here we get that it's equal to e two times inner product of situ with side one and then we can just subtract this
+
+01:12:13
+quantity from both sides and get that e1 minus e2 times the inner product of situ with sy 1 is equal to zero so now let's wrap it all up if we have that one number multiplied by another number is equal to zero then the only way this can happen is if one of these numbers is 0 so if we have that e 1 is not equal to e2 right then this number here isn't 0 but that means that this one has to be 0 so then the inner product of situ with sy 1 has to be 0 and that concludes the proof of my claim if you have two
+
+01:13:11
+different eigen vectors which have different eigen values right so we needed the fact that e 2 and E 1 weren't equal then the inner product of those two vectors has to be equal to 0 so alright that's the proof it's a pretty slick proof but why is this important so here's one reason why it's important say that you have some states I which is a linear combination of side 1 and side 2 so let's say alpha times I 1 plus beta times sigh - so psy 1 has a definite energy of e1 and situ has a definite
+
+01:13:57
+energy of e 2 and this means that psy doesn't have a definite energy and when you measure the energy sometimes we get e 1 and sometimes you'll get e 2 so the expected value for the measured value of the energy is the absolute value of alpha squared times e 1 plus the absolute value of beta squared times e 2 that's the probability measure you want the probability measure YouTube okay so what I claim is that the expected value for energy is equal to this simple expression which is just sy
+
+01:14:45
+times H times sy so now I'm going to give a proof for this claim using the fact of the inner product of situ and sy 1 is equal to 0 so sy times H times sy well that can just be rewritten as alpha bar times the bra so I 1 plus beta bar times the bra of situ and then times H and then times alpha times sy 1 plus beta times situ right and then we can act H on both of these vectors individually and what we would then get is well let me try doing this we would then get that its II 1 times alpha times
+
+01:15:44
+site 1 plus e 2 times beta times i2 now to evaluate this term there are going to be four terms right but note that you know you have the inner product of Phi 1 and Phi 1 is 1 the inner product of Phi 1 in situ is 0 right and that's given by our claim here so that makes you know if you do all four terms out here the only thing you're going to get left over is alpha bar times alpha times e 1 plus beta bar times beta times e2 which is indeed the expectation value for energy as I claimed so yes this equation does hold
+
+01:16:33
+and it relies crucially on the fact that the inner product of C 1 and C 2 is zero so okay that's one cool consequence of this fact gives us a cool expression but then I want to talk about another important math fact which is related to the first one so here's another claim so claim the eigen vectors of H comprise a complete basis of states that is every state can be written as a linear combination of energy eigen vectors now when I say that every state can be written as a linear combination
+
+01:18:13
+of and the eigenvectors I just mean that there are always complex numbers alpha and beta such that for any possible state you could think of sigh you can always write it as you know alpha times I 1 plus beta times I 2 for some alpha and beta and this and all you need for this to work is for H to be self adjoint now the proof of this is given by something called the spectral theorem now it has a really cool name and I'm not going to prove it here but it's a pretty deep and important theorem but
+
+01:18:58
+yeah all you need is that the all you need is for H to be self adjoint order for this to work so the sum total of these two claims is that so for any self adjoint matrix there is an orthonormal basis of states which are eigenvectors of H and the important thing is that this is always true as long as HS l fitori true for any self-adjoint matrix so the self adjoint nosov a matrix is an extremely extremely special and powerful property for a matrix to have that that comes with that many important properties that's the
+
+01:20:17
+main point I'm trying to make it as part of the video and orthonormal is just a vocabulary word which means that the inner products of any two vectors of any two different basis vectors a0 and the inner product of one of the basis vectors with itself is 1 so that's just what the word orthonormal means now the final thing I want to do is I want to say some words about no Thurs theorem now when physicists say they want to you know quote-unquote say some words about something what what they're saying is
+
+01:21:14
+they want to talk about a more advanced topic that they don't think the students will be able to understand a hundred percent at this moment but they just want to talk about it a little bit just so the students hear the vocabulary words and that when they you know grow up and they hear more about the stuff later they'll already have been exposed to it a little bit so I'm not expecting you to fully understand what I'm about to say I just want to say some words about it so later on you'll think oh
+
+01:21:40
+wait you know I think I heard about this already it isn't this really cool so that's what I'm gonna do right now so to start off note that if psy has an energy of e in other words that H acting on psy equals E times psy then the time evolution of psy just delete this year is given by psy of t equals e to the negative I over H bar times e times T times sy so sigh of T also has an energy of e right so you see that as the state evolved some time it just picks up an overall phase but that doesn't change the fact that
+
+01:23:07
+the state is still an eigenvalue of H you know it's an eigenvalue of e so h acting on Phi of T equals E times Phi of T right this phase doesn't change therefore energy is conserved right the energy stays constant as the state evolves in time so this is a pretty cool observation right energy is conserved now we might ask hmm like what what why is energy conserved how do we get here I will say that this is because H is the matrix which appears in Schrodinger's equation so Schrodinger's equation is d
+
+01:24:29
+DT times I of T equals negative I over H bar times H times sy of T so if we used a different matrix in Schrodinger's equation if we didn't have H here then a state which started out as an eigenstate of H wouldn't necessarily be an eigenstate after it evolved in time right if we used a different matrix here there would be nothing special about H but the thing that makes the Hamiltonian special and the thing that allows its eigenvalues to be conserved in time is the fact that it is the matrix which
+
+01:25:11
+appears in Schrodinger's equation so having said that if we look at Schrodinger's equation we notice something kind of interesting see H is energy right so the Hamiltonian is basically you know energy so we have energy on the right-hand side of the equation and we have time evolution on the left-hand side of the equation so roughly speaking we can see the time evolution equals energy in some sense now know thirst Ihram is a theorem in classical mechanics not quantum mechanics but i'm going to talk about
+
+01:26:02
+classical mechanics for a second which says that when you have a symmetry you also have a conserved quantity so when you have a symmetry of space translations you're conserved quantity is momentum when you have a symmetry of rotations you're conserved quantity is angular momentum and when you have a symmetry of time translations you're conserved quantity is energy so if you notice that time translations and energy are intimately related to each other it's very interesting to look at
+
+01:27:09
+Schrodinger's equation and see time evolution and energy be very closely related to each other in other words it seems as though we're somehow seeing a aspect of no thirst theorem baked straight into Schrodinger's equation furthermore it's because time evolution and energy are related to each other that we have that energy is conserved right if time evolution weren't given by this energy matrix but were given by some different matrix then we wouldn't have that energy is conserved but it's
+
+01:27:46
+you know because we see the appearance of energy in the time evolution equation that we're getting that energy is conserved so something is going on here but it shouldn't be it's not clear like what's going on but something deep is clearly going on now I guess I'm running out of space so am i clear this off here and I'm gonna just bring this bring this stuff up here okay now back in the realm of classical mechanics there's something I like to call no Thurs inverse theorem
+
+01:28:32
+and what no Thurs inverse theorem says is that for every conserved quantity there's a way that you can use that conserved quantity to cook up a symmetry now as you might expect if the conserved quantity that you use is momentum the symmetry that gets cooked up is space translations and if you use the conserved quantity of angular momentum they could serve quantity that gets cooked up is rotations and if you use the conserved quantity of energy the symmetry that gets cooked up is time translations now I haven't told you how
+
+01:29:35
+you can cook up a symmetry from a conserved quantity yet so I guess I'll write the formula for you just if you're curious it's given by the change in the iith position variable Q sub I is given by partial Q over partial P sub i where q is the conserved quantity and P sub I is the momentum variable and then the change in P sub I is given by negative partial Q over partial Q sub I now it should be mentioned that no thirst theorem takes place in Lagrangian mechanics and no Thurs inverse theorem takes place in
+
+01:30:32
+something called Hamiltonian mechanics now these are just two equivalent ways of phrasing classical mechanics but there's some important differences between them and you know they're ultimately both extremely valuable ways of looking at classical mechanics and incidentally the term Hamiltonian here is related to the Hamiltonian we've been talking about in this video but in a classical setting and not in quantum mechanics so all right ok so why am I telling you this I'm telling you this because I want you
+
+01:31:12
+to know that in classical mechanics conserved quantities generate symmetries now in classical mechanics what do I mean by generate symmetries I just mean this formula right here that you know you've probably never seen before in your life I just mean that if you have some quantity Q you can use it to cook up a symmetry and you know I've written the equation right here I mean I don't really expect you to have digested it but I'm just telling you there's a way to take a quantity and use it to make a
+
+01:31:51
+symmetry and we as physicists use the language you know that these conserved quantities generate symmetries just given by this equation right here now the really crazy fact is that just as conserved quantities generate symmetries and classical mechanics they also do exact same thing in quantum mechanics so we have already seen that this operator e to the negative I over h-bar times T times H generates time evolution or as you could also say time translation right time evolution time translation is
+
+01:32:36
+just a different word for time evolution so we could say that this operator generates time translations furthermore and you know you just take my word for it now but e to the negative I over h-bar times some distance x times p where p is momentum this generates space translations and e to the negative I over h-bar times some angle theta times angular momentum generates rotations so these and so in quantum mechanics we once again have that energy generates time translation angular momentum generates rotations and momentum
+
+01:33:30
+generates space translations so what I want you to take away from this is that when you look at Schrodinger's equation you are looking at in some sense the beating heart of no Thurs theorem right in quantum mechanics you're looking at the manifestation of energy being conserved and you're looking at the manifestation of energy generating time evolution you're sort of looking at both at the exact same time in other words the conservation of energy is baked straight into the cake of Schrodinger's
+
+01:34:10
+equation or in other words it's written right into the DNA of this this little equation right here so once you know about all of these really crazy things you look at all the stuff you saw you know you know you learned about when you were younger and you're like wow like all this stuff was hidden here the whole time I had no idea and on that note I want to conclude the video thank you for watching the main point of this video was to discuss what it meant that H was self adjoint and what all of the
+
+01:34:42
+consequences of that fact are you know we showed that H being self adjoint meant that total probability is conserved we showed that it meant that energies are real numbers we showed how energies being real numbers are equivalent to the total probability being conserved we showed that oh we gave a cool proof of the uniqueness of time evolution we showed that H we discussed that how about how H being self adjoint meant that we had an orthonormal basis of eigenstates and I guess the overwhelming feeling is
+
+01:35:17
+that there are these you know obscure mathematical facts like this matrix is self adjoint and from this fact Springs all of these very important results that have you know important physical consequences and it's almost difficult to even figure out you know where these you know consequences came from like why does all this reasoning work like why what do all these things have to do with each other but mathematically it's very simple to figure it out but there is also something weirder going on there
+
+01:35:52
+there's some sort of irreducible truth that it's difficult to even think about too much just you know because all these facts are having a party and no thirst theorem is in there to in its having a party so I guess that's the main feeling I wanted to convey in this video just that it's all comprehensible and incomprehensible at the same time so thanks
+

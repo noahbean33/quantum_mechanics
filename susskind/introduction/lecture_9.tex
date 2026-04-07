@@ -1,0 +1,218 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 9}
+\lhead{Quantum Mechanics --- The Theoretical Minimum}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\title{\textbf{Lecture 9: Particles, Fourier Analysis, and the Momentum Operator} \\ \large From Spins to Continuous Systems}
+\author{Based on Leonard Susskind's \textit{The Theoretical Minimum}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Transition to Continuous Systems}
+% ============================================================
+
+Up to now we have studied the foundations of quantum mechanics using the simplest discrete system---a spin-$\tfrac{1}{2}$ particle with a two-dimensional state space.  We now move to a particle moving on a one-dimensional line, where the state space is \emph{infinite-dimensional} and the observables (position, momentum) take continuous values.
+
+Classically, a particle's state requires \emph{both} position $x$ and momentum $p$.  In quantum mechanics, specifying both is too much information---$x$ and $p$ do not commute, so you describe the state by one \emph{or} the other.  The transition from discrete to continuous systems is mainly notational: sums become integrals, Kronecker deltas become Dirac deltas, and column vectors become wave functions.
+
+% ============================================================
+\section{2. Mathematical Interlude: Fourier Analysis}
+% ============================================================
+
+\subsection{2.1 Plane waves}
+For a fixed number $p$, the function
+\[
+    e^{ipx} = \cos(px) + i\sin(px)
+\]
+is a \textbf{plane wave} with ``wavenumber'' $p$.  Larger $|p|$ means shorter wavelength (faster oscillation).
+
+\subsection{2.2 Fourier transform pair}
+A very wide class of well-behaved functions $\psi(x)$ can be decomposed into plane waves:
+\[
+    \boxed{\psi(x) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} \tilde{\psi}(p)\,e^{ipx}\,dp,}
+\]
+where $\tilde{\psi}(p)$ is the \textbf{Fourier transform} of $\psi(x)$.  The inverse relation is
+\[
+    \boxed{\tilde{\psi}(p) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} \psi(x)\,e^{-ipx}\,dx.}
+\]
+$\tilde{\psi}(p)$ gives the amplitude of the wave component with wavenumber $p$ in the function $\psi(x)$.
+
+\subsection{2.3 Physical interpretation}
+In quantum mechanics:
+\begin{itemize}[nosep]
+    \item $\psi(x)$ is the \textbf{position-space wave function}: $|\psi(x)|^2\,dx$ is the probability of finding the particle between $x$ and $x+dx$.
+    \item $\tilde{\psi}(p)$ is the \textbf{momentum-space wave function}: $|\tilde{\psi}(p)|^2\,dp$ is the probability of finding the momentum between $p$ and $p+dp$.
+    \item The Fourier transform connects the two representations.
+\end{itemize}
+
+% ============================================================
+\section{3. The Dirac Delta Function}
+% ============================================================
+
+\begin{definition}[Delta function]
+The Dirac delta function $\delta(x-x')$ is defined operationally by its action on any reasonable function $f$:
+\[
+    \int_{-\infty}^{\infty} \delta(x-x')\,f(x)\,dx = f(x').
+\]
+\end{definition}
+
+\subsection{3.1 Key properties}
+\begin{enumerate}[nosep]
+    \item $\delta(x-x')\,f(x) = f(x')\,\delta(x-x')$ \quad (only nonzero when $x=x'$).
+    \item $\displaystyle\int_{-\infty}^{\infty}\delta(x-x')\,dx = 1$.
+    \item Combining 1 and 2: $\displaystyle\int \delta(x-x')\,f(x)\,dx = f(x')$.
+\end{enumerate}
+
+\subsection{3.2 Fourier representation of the delta function}
+Substitute the Fourier transform $\tilde{\psi}(p)$ into the inverse transform for $\psi(x')$:
+\[
+    \psi(x') = \frac{1}{\sqrt{2\pi}}\int \tilde{\psi}(p)\,e^{ipx'}dp
+    = \frac{1}{\sqrt{2\pi}}\int\left(\frac{1}{\sqrt{2\pi}}\int\psi(x)\,e^{-ipx}dx\right)e^{ipx'}dp.
+\]
+Interchange the order of integration:
+\[
+    \psi(x') = \int\psi(x)\underbrace{\left(\frac{1}{2\pi}\int e^{ip(x'-x)}dp\right)}_{\text{must be }\delta(x'-x)}dx.
+\]
+Comparing with property 3 of the delta function yields the fundamental identity:
+\[
+    \boxed{\delta(x-x') = \frac{1}{2\pi}\int_{-\infty}^{\infty} e^{ip(x-x')}\,dp.}
+\]
+By symmetry (interchanging $x\leftrightarrow p$):
+\[
+    \delta(p-p') = \frac{1}{2\pi}\int_{-\infty}^{\infty} e^{ix(p-p')}\,dx.
+\]
+
+% ============================================================
+\section{4. Particle on a Line: State Space}
+% ============================================================
+
+\subsection{4.1 Position basis}
+The position eigenstates $\{\ket{x}\}$ satisfy
+\[
+    \hat{x}\ket{x} = x\ket{x}, \qquad \braket{x'}{x} = \delta(x-x').
+\]
+The completeness (resolution of identity) relation is
+\[
+    \int_{-\infty}^{\infty}\ket{x}\bra{x}\,dx = \mathbf{1}.
+\]
+Any state can be expanded:
+\[
+    \ket{\Psi} = \int \psi(x)\,\ket{x}\,dx, \qquad \psi(x) = \braket{x}{\Psi}.
+\]
+
+\noindent\textbf{Position operator in wave-function language:} The operator $\hat{x}$ acts on wave functions by multiplication: $\hat{x}\,\psi(x)=x\,\psi(x)$.  The eigenfunctions are delta functions: if the particle is at $x_0$, its wave function is $\psi(x)=\delta(x-x_0)$, and $\hat{x}\,\delta(x-x_0)=x\,\delta(x-x_0)=x_0\,\delta(x-x_0)$, confirming eigenvalue $x_0$.
+
+\subsection{4.2 Momentum basis}
+Similarly, momentum eigenstates $\{\ket{p}\}$ satisfy
+\[
+    \hat{p}\ket{p} = p\ket{p}, \qquad \braket{p'}{p} = \delta(p-p').
+\]
+The overlap between position and momentum eigenstates is
+\[
+    \braket{x}{p} = \frac{1}{\sqrt{2\pi}}\,e^{ipx},
+\]
+which is precisely the plane wave.  The Fourier transform pair follows:
+\[
+    \psi(x) = \braket{x}{\Psi} = \frac{1}{\sqrt{2\pi}}\int \tilde{\psi}(p)\,e^{ipx}\,dp, \qquad
+    \tilde{\psi}(p) = \braket{p}{\Psi} = \frac{1}{\sqrt{2\pi}}\int \psi(x)\,e^{-ipx}\,dx.
+\]
+
+% ============================================================
+\section{5. The Momentum Operator in Position Space}
+% ============================================================
+
+Acting on a position-space wave function, the momentum operator is represented as a derivative:
+\[
+    \boxed{\hat{p}\,\psi(x) = -i\frac{d}{dx}\psi(x).}
+\]
+
+\subsection{5.1 Verification}
+A plane wave $\psi(x)=e^{ipx}$ is a momentum eigenstate:
+\[
+    \hat{p}\,e^{ipx} = -i\frac{d}{dx}e^{ipx} = -i(ip)\,e^{ipx} = p\,e^{ipx}. \quad\checkmark
+\]
+
+\subsection{5.2 Canonical commutation relation}
+Compute $[\hat{x},\hat{p}]$ acting on an arbitrary $\psi(x)$:
+\begin{align}
+    \hat{x}\hat{p}\,\psi &= x\bigl(-i\psi'(x)\bigr) = -ix\psi'(x), \\
+    \hat{p}\hat{x}\,\psi &= -i\frac{d}{dx}\bigl(x\psi(x)\bigr) = -i\bigl(\psi(x)+x\psi'(x)\bigr).
+\end{align}
+Subtracting: $(\hat{x}\hat{p}-\hat{p}\hat{x})\psi = -ix\psi'+i\psi+ix\psi' = i\psi$.  Since this holds for all $\psi$:
+\[
+    \boxed{[\hat{x},\hat{p}] = i\mathbf{1}} \qquad (\text{with } \hbar=1).
+\]
+This is the fundamental commutation relation of quantum mechanics.  Since $[\hat{x},\hat{p}]\neq 0$, position and momentum \textbf{cannot be simultaneously measured}---the basis of the Heisenberg uncertainty principle.
+
+\noindent\textbf{Restoring $\hbar$:} $[\hat{x},\hat{p}]=i\hbar$.  The commutator is the quantum analogue of the classical Poisson bracket $\{x,p\}=1$, via $\{\cdot,\cdot\}\leftrightarrow\frac{1}{i\hbar}[\cdot,\cdot]$.
+
+% ============================================================
+\section{6. Simple Hamiltonians for Particles}
+% ============================================================
+
+\subsection{6.1 Relativistic particle: $H=cP$}
+The Schr\"odinger equation $i\frac{\partial\psi}{\partial t}=c(-i\frac{\partial\psi}{\partial x})$ simplifies to:
+\[
+    \frac{\partial\psi}{\partial t} + c\frac{\partial\psi}{\partial x} = 0.
+\]
+General solution: $\psi(x,t)=f(x-ct)$ for any shape $f$.  The entire probability distribution moves rigidly to the right at speed $c$ without changing shape.  This describes a massless particle (e.g.\ a neutrino or phonon) moving in one direction.
+
+\subsection{6.2 Non-relativistic free particle: $H=\hat{p}^2/2m$}
+The standard Schr\"odinger equation for a free particle of mass $m$:
+\[
+    \boxed{i\hbar\frac{\partial\psi}{\partial t} = -\frac{\hbar^2}{2m}\frac{\partial^2\psi}{\partial x^2}.}
+\]
+Unlike $H=cP$, waves of different wavelength (momentum) now move at different speeds---the wave function \textbf{disperses} (spreads out) over time.  The expectation value of position still obeys the classical equation $\frac{d}{dt}\expval{x}=\frac{\expval{p}}{m}$, but the wave packet broadens.
+
+% ============================================================
+\section{7. Entanglement of Electrons and Photons}
+% ============================================================
+
+A brief example: two electrons in a superposition of singlet and triplet states can emit a photon and become entangled.
+
+\begin{itemize}[nosep]
+    \item Start with an unentangled state $\ket{\uparrow\downarrow}\otimes\ket{0_\gamma}$ (no photon).
+    \item The triplet component decays to the singlet by emitting a photon of energy $\omega$.
+    \item The final state: $\ket{\text{singlet}}\otimes\bigl(c_0\ket{0_\gamma}+c_1\ket{1_\gamma}\bigr)$.  The electrons are entangled with each other; the radiation field is in a superposition of zero and one photon.
+    \item This illustrates that \textbf{superpositions of different particle numbers} are perfectly valid quantum states.
+\end{itemize}
+
+% ============================================================
+\section{8. Summary}
+% ============================================================
+
+\begin{enumerate}[nosep]
+    \item Moving from discrete to continuous systems: sums $\to$ integrals, $\delta_{ij}\to\delta(x-x')$, columns $\to$ wave functions.
+    \item The \textbf{Fourier transform} connects position-space and momentum-space wave functions.
+    \item The \textbf{Dirac delta function} $\delta(x-x')=\frac{1}{2\pi}\int e^{ip(x-x')}dp$ is the continuous orthogonality relation.
+    \item Position eigenstates: $\braket{x'}{x}=\delta(x-x')$; eigenfunctions are delta functions.
+    \item Momentum eigenstates: $\braket{x}{p}=\frac{1}{\sqrt{2\pi}}e^{ipx}$ (plane waves, completely delocalized).
+    \item The momentum operator is $\hat{p}=-i\frac{d}{dx}$; $[\hat{x},\hat{p}]=i$.
+    \item $H=cP$: rigid wave-packet motion at speed $c$ (massless particles).
+    \item $H=\hat{p}^2/2m$: the standard Schr\"odinger equation; wave packets disperse.
+\end{enumerate}
+
+\end{document}

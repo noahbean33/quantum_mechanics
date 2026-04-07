@@ -1,0 +1,357 @@
+00:00:01
+[Music] Stanford University well I don't know should we go over again the basic construction of a simple Quantum field why not it's not exactly what I have written here but we can do it again not again but maybe slightly different yeah we're ready okay so as I said the trick of introducing fields from particles see you can go two ways you can go two ways you can start with particles and reconstruct why they're described by fields or you can start with fields and then work down to
+
+00:00:56
+why fields are described by particles or why Fields um waves wave Fields have quanta go either way and we'll go both ways but we started by starting with particles and we said look that's fine to be talking about one particle or two particles or three particles a fixed number of particles but GE why not try to study all possible numbers of particles and by particles now I'm speaking about a single species of particle we can come later tonight what happens if you have more than one species but but for the moment one kind
+
+00:01:41
+of particle and only one kind of particle uh let's make a theory in which we can simultaneously in one Fell Swoop so to speak uh talk about any number of particles and all the things that multiple particles can do and including situations where the number of particles change now why would be ever be led to that well in Real Life numbers of particles change the number of photons in this room is constantly changing they're being emitted by the electric light bulbs um in other contexts particles Decay
+
+00:02:26
+turning into other kinds of particles uh the neutron can Decay into a proton an electron and a neutrino and in the process the number of neutrons changes the number of protons change number of electrons number of neutrinos and in fact the total number of particles change so however we have to think about particles we have to think not only about the quantum mechanics of a fixed number of them we we have to think of that number as changeable so we need a flexible enough tool to be studying what happens a single quantum mechanics which
+
+00:03:10
+Embraces essentially any number of particles and even changing number of particles that's what um that's what the point is and that's what the point of inventing Fields is all right any questions about that and I'll go over it again since it's a the mathematics is not is not hard hard but it's know it's abstract it's abstract and face it we're not um we're not as young as we used to be for one thing um none of us the mind uh is not necessarily attuned instantly to orthogonal
+
+00:03:52
+functions and um and all that kind of thing and so it's good to go slow I rather you learn something rather than nothing okay so it's very easy to to learn nothing it's little harder to learn something okay so we start with single particle quantum mechanics single particle description of one single particle Quantum mechanically that means that we have state vectors but State vectors for one particle we have wave functions for for those particles if we have a state of a single particle let's call it SII little
+
+00:04:39
+SII little SII will also stand for its wave function if we have a state Vector for a single particle then the wave function is just the inner product of the state Vector with a particle at position X so a state labeled X means a particle at point x the state s means some General State but of a single particle and that's called s of X what do you do with it here's a formula s star of X Time s of x and these are wave functions now these are not Quantum Fields when I go to Quantum Fields I will use large
+
+00:05:36
+capitalized letters even if they happen to be the same as this what is that object what does that correspond to that's the probability to find the particle at X it's the probability density the probability density to find the particle at X all right probability density prob dense you can fill in the rest of the letters a fact about the probability density is that when you integrate it over position what do you get you get one it happens in this case that one happens to be the number of particles
+
+00:06:21
+isn't it so you get one but you could also say you get the number of particles well that's not very interesting because we only had one partic to begin with and we're doing one particle quantum mechanics nevertheless it's a true fact okay now we next introduced a collection of one particle states that formed a basis an orthonormal orthogonal basis and we can do that in a number of ways first of all the X States themselves are orthogonal to each other and they former basis we'll come
+
+00:07:01
+back to that in a minute but there are many many ways of choosing bases essentially you take the igen vectors of any Herm Mission operator will form a basis and in particular if we're interested we may be especially interested in energy IG States for example of a particle in a box that represents a box the horizontal axis is the position the vertical axis is the potential energy when you get to the edge of the Box the potential energy becomes huge and the particle just reflects off it can't get
+
+00:07:36
+through and that case the ground state wave function looks like that the first and we'll call that s 1 of X the next energy ion state looks like that we'll call it S 2 of X and these are basically signs sign of uh you know there two nodes and they're characterized by the number of nodes uh rather peculiarly I started with s one which has no nodes S 2 has one node but so be it s i ofx and since these are supposed to be energy igen States they're orthogonal to each other they form an orthonormal
+
+00:08:22
+basis so let's write the equation for that the equation for that is that integral of s star I of X with s j of X that's the inner product DX what is that anybody remember Delta Delta i j if I is equal to J they're the same state the inner product is one normalized state if they different they're orthogonal corresponding let's say to different energies sorry Delta i j not zero Delta i j that's another fact now I'm going to show you another uh a another little manipulation this
+
+00:09:13
+one yeah um why does the uh probability density have that particular form the definition that goes back to the postulates of quantum mechanics the postulates of quantum mechanics um said that probabilities here s of X this is the inner product of s with a state localized at X it's called the probability amplitude the postulates of quantum mechanics which I invite you to go back to they're in the book say that the square of that is the probability so okay here's a little trick a little mathematical trick that
+
+00:10:03
+uh that occurs over and over again take your orthonormal your favorite orthonormal basis of functions they could be signs they could be cosiness they could be harmonic oscillator wave functions whatever some collection of size which are orthonormal okay and if they're orthonormal and they form a basis then if you take this object what is this object this object is a operator it operates on a state let's see what it does let's let's just explore what it does when it acts on a state what does it do if it acts on a
+
+00:10:47
+state sigh then the beauty of the direct notation is you can just take the formula that you've written down here when you act with this thing on a state s with I is a number it's the inner product of s with I time I that's what it does uh now here's a fact about any orthonormal basis if you sum of all elements of the orthonormal basis in other words in this case all the energy I vors up to Infinity then what do you get the unit operator I the identity operator the operator that when it acts
+
+00:11:36
+on any Vector gives you back the same Vector that's a marvelous theorem it's in the uh it's in the in the notes and you should go back to it don't take my word for it you can even prove it but it's a useful thing to know okay let's use that now in the following in the following way let's take a project let's act with this thing to the right and to the left what we're going to do is we're going to take and we're going to act what are we going to act on we're going to act on a
+
+00:12:11
+state to the right which is localized at position X and on the left we're going to act well actually what we're doing is I'm taking the inner product of a state with a particle at X with a state at y everybody know what that the mathematical symbol for that is dist it's a direct Delta function but let's come to that for a moment let's not write that down yet let's write that that is equal to the sumon i y i i x now all I've done is plug in the UN operator here that does nothing but now
+
+00:13:02
+I have a formula here the inner product of I with Y is s i of Y let's see yeah the inner product of any state with an igen Vector position is the um is the wave function of that state here the state is I and it has wave function SII of Y is over here s i of X and what does that have to equal it has to equal Delta of x - y now I sum over I is there yeah there is uh the second one yes the second one I assume that's what you were asking me yeah the star okay now we have a marvelous theorem if we take take any
+
+00:14:00
+orthonormal basis they could be the igen vectors of any Herm Mission operator but in particular the energy and you multiply for each one of those States s star Time s and then some over them you always get a Delta function that's a good thing to know as we'll see it's useful it means there's many many ways of writing a Delta function just take any orthonormal basis and do this these could be signs and cosiness SS and cosiness are another way of writing a Delta function but uh and this is the basic mathematics no
+
+00:14:42
+more mathematics tonight that's it I think okay now let's come back let's um let's go to the problem of studying Min particles all at the same time okay now how are we going to characterize a State one set of states which is particularly useful is a set of states in which you say how many particles there are with each one of these energies for example how many particles are there with State s One S 2 and S3 and so forth and so we can take the multi-particle system and characterize it by a basis of states
+
+00:15:24
+which are just N1 N2 dot dot dot n I dot dot dot the ends are the occupation numbers they're the occupation numbers which tell you how many particles are with each energy level okay and those are States they're not single particle States they don't even belong in the same Vector space with the single particle wave functions the single particle wave functions are themselves a whole Vector space but we're now talking about a bigger thing a bigger system and so we should not confuse
+
+00:16:00
+the single particle states with the um with the more General structures that we're talking about we use the same notation for them because nobody ever invented a better notation than thex bras and cats but uh okay next we would like to be able to change the number of particles maybe we do or maybe we don't want to change the total toal number of particles that not clear yet but we'd like to be able to change them and so we'd like to be able to raise and lower the ends so we introduce a oscillator for each eye for
+
+00:16:47
+each eye we introduce an oscillator and at the moment this has nothing to do with oscillation this is just a trick this is just a bookkeeping trick although it will be more than that later for each one of these eyes we introduce a creation operator or a uh a raising operator let's call it a creation operator since it's now going to create a particle a creation operator and an Annihilation operator and the creation and Annihilation operators it's convenient to make them just work exactly the same way as
+
+00:17:24
+harmonic oscillators it's just a convenient way of uh dealing with them a plus I and a minus I now I should tell you right now that um another convention for the same things I'll write this in red is to call this a dagger I that looks like a plus sign not quite but nevertheless same thing and just calling this one AI you'll often see it written that way it's the same thing a dagger creates a particle a does not but the uh the correspondence is exactly this okay this space of states of the many
+
+00:18:08
+particle system is called Fox space f FX was a Russian physicist who somehow got his name attached to this I don't really know how okay now we're going to find very con very convenient and you'll see how it works to introduce the notion of a field operator the field operator has the same symbol as the wave function s of X but it's not a wave function it's not a wave function it's not a state Vector for one particle it's an operator and it's an operator that acts on the space of
+
+00:18:49
+states of the mini particle system it itself contains creation and Annihilation operators all right so let's write the notion of a field operator and the best way to motivate it is to use it and see what it does now I use a uppercase sigh I hope I'm a little bit afraid that uh that you won't be able to tell my upper cases from my lower cases all right that's that's an uppercase s right um its definition is the following it's the sum of I of let get it straight the annihilation operator for a
+
+00:19:41
+particle in state I times the wave function of a particle if it were in state I and that's it summed over all I now somebody asked me last week does this have anything to do with Foria transforms and you bet it does if the wave functions here were the wave functions of a free particle the igen states of energy of a free particle in not in a box just in a infinitely big box what are those igen States those igen wave functions they're plain waves e to the I KX and E to Theus I or e to the I PX and
+
+00:20:19
+E to Theus I PX so in that case if we were using free particles in an infinitely big box this would be an expansion in SS and cosiness and those A's would be the coefficients of signs and cosiness they would be the Foria coefficients of a Foria expansion except that they're not numbers they're operators they're operators are things that you measure or things that um that play the role of operators in quantum mechanics okay so that's one thing the complex or the Herm Mission conjugate of
+
+00:20:57
+it side Dagger of X this is of X yeah what does it mean to say we have an operator which depends on X well it just means we have a different operator at every X that's all we have a lot of creation and Annihilation operators out of them we can build a lot of independent operators in fact we can build an operator at each point x by combining the A's with size of of X at point x so if we do this we make a different operator at every position and so we have a operator function of position okay or operate a valued
+
+00:21:40
+function of position it's complex or it's hermiss conjugate is the same thing except creation operators here this is a uh I get so used to yeah okay a A+ Time s dagger so s star I of X now it doesn't matter it's rather weird there were notation some people use a notation where this is called SI star and some people use it one where this is called s and they get all mixed up it uh these are definitions and so you can do what you want but here's the definition we use as I said there are two operative
+
+00:22:27
+functions now neither one of these is a herion operator uh they have the creation operators and Annihilation operators are not her Mission their conjugates are each other if you add them or if you add them you make something that's her Mission if you take any Herm Mission operator sorry any operator and add it to its Herm Mission conjugate it's Herm Mission so if we add these two they become Herm Mission and Herm Mission means observable means something you can measure in the laboratory so the some of them is a
+
+00:23:00
+thing you could measure and the difference is the difference or Mission what happens if you take the difference of of a of a number and its complex conjugate do you get something real you get something pure imaginary but if you multiply it by I then you get something Herm Mission so each the sum and difference of these defin some Herm Mission uh observables okay but right now we're not observing them we're just going to use them as bookkeeping devices okay now let me show you another interpretation of s of X what it
+
+00:23:51
+does in particular let's ask what it does when it acts on the vacuum the vacuum means a state with no particles in it all and so the vacuum that's called vacuum which we usually denote just by o is really the fox based state in which all the occupation numbers are zero all the same thing here vacuum Fox Bas state with which all the occupation numbers are zero sometimes just called the vacuum or just called the state zero okay let's Act yeah let's not act yet let's write down
+
+00:24:33
+the following formula this is a one particle State Nel one particle and only one particle and let's write it in the following form let's use this anybody know what the name for this kind of formula is Project no it's not a uh well it is a projector it's a trivial projection operator it's it's one it's called a resolution of the identity it's a way of writing the unit operator as a sum over a lot of uh um orthogonal vectors all right so let's let's plug in
+
+00:25:15
+the resolution of the identity Su on i i i s i what is I I is a state in which there's one part particle and only one particle in the I energy level here okay what is this thing here this is sorry x x sum of i x i what is this object let's go up to the top formula and you see that when you project on to X you get a wave function this here is s star I of X it's the complex conjugate of the wave function of the I energy level the I energy level has a wave function this is its complex conjugate wave function itself would
+
+00:26:22
+have the opposite order what about this state here that's a state with one particle in the I energy level so I'm going to write it this way I'm going to take a creation operator for making a particle in the I energy and multiplying it by the vacuum I've created one particle in the state I by applying the creation operator on the vacuum and that's exactly the state here on the other hand this is just a complex conjugate of the wave function and my rule is sum did I erase the defin no there's the
+
+00:27:04
+definition of the field operator okay go to the second row SAR the field operator is sum of I A Plus of I times the complex conjugate of the wave function that's exactly what you see here right so this is exactly equal to the field operator at position X on the vacuum that gives us a new interpretation of s it's the operator which creates out of the vacuum a particle at position I I think that's a fairly intuitive thing that it's a Quantum operator position at position X sorry good so the a I create particles
+
+00:28:01
+with certain energy levels the P creates particles at certain locations it's also a kind of creation operator the field operator itself is a kind of creation operator but instead of creating a particle with an energy with a definite energy it creates a particle with a definite position you want dagg here yeah it should be star it should be dagger good you never use star for operators use dagger good question this assumes that the creation operator and wave function no yeah wave functions are
+
+00:28:46
+numbers they're numbers they're not they're they're trivial operators they're numbers sometimes ordinary numbers are called C numbers this was another invention of d C stands for classical just classical numbers operators he called Q numbers for Quantum okay Q numbers don't always commute C numbers always commute with themselves but they also commute with everything else because they're just numbers okay so now we have a lovely new interpretation of the field operator
+
+00:29:21
+it's the creation operator for a particle at a point of space let's look at some interesting quantities I think with uh well well we can put this up just to get a little more experience with this let's play with it a little bit here's an [Applause] interesting here's an interesting quantity integral DX the operator s Dagger of x times s of X now is this the same thing as up on the top of the Blackboard up there the x s star of x s of x no it's not the same thing it looks very
+
+00:30:31
+similar but it's not the same thing in the top formulas up on top the size is just wave functions one particle wave functions they're not operators and the right hand side is just one by total probability this object here is an operator Sai is an operator s dagger is an operator when it acts on a state it does something this one creates a particle this one annihilates a particle so but nevertheless it has some formal structural similarity with the thing up on top one wonders what is it does it
+
+00:31:07
+have some meaning is it uh is it something uh that has a physical significance is it something that you can measure incidentally it's Herm Mission because if you take any operator and multiply it by its Herm Mission conjugate the result is Herm Mission that's like multiplying a uh complex number by its complex conjugate the result is always real okay so let's see if we can figure out what this thing is First Step let's replace the size by their definitions so this is integral DX and now size star that's a sum of
+
+00:31:46
+I it's going to get messy but then it'll get easy AI dagger or ai+ times s star I of X without H without without the what without the which no it's right now I'm going to write the s that has another separate sum not the sum over the same I it's a sum over a different I but I can just call J it's a double sum there's a double sum here and the double sum has AJ s j of X it looks a bit complicated an an integral over an integral over X of a double sum over I and J plus the fact that the integral is
+
+00:32:47
+over all space and I and J go from 1 to Infinity so if you want actually to calculate it to put it on your computer your computer would run forever and ever and ever and ever and would never halt uh however we can do better than that let's do the integral over X first now I think we have a formula here um uh s i ofx there it is there it is right here s i of X with s j that's just the orthogonality relation so when I integrate over x s dag Time s i just get Delta i j that nice let's uh write it in
+
+00:33:37
+a simpler way this is equal to we've done the integral sum over I and J A + I A J times the chronica delta in other words we get a term for each I where for each I and J except only when I and J are equal and so this is equal to the sum of I of a dager i AI what is a dag I * a i for a harmonic oscillator it's just a number operator the thing whose igen values are the N the little n this is the big in so so this can be written as the sum of I of the number operator for each one of these oscillators in other words it's just the
+
+00:34:39
+total number of particles the number of particles in the first mode plus some first wave functions plus the number of particles in the second wave function plus the number of particles in the third wave function so what is this thing it's an operator that represents the total number of particles for each one of these Fox States it's just a sum of the little ends now there's an infinite number of little ends right there's N1 there's N2 there's N3 is this not is this going to be a
+
+00:35:19
+finite number well remember that most of those eyes correspond to very very high energies if the St that we're talking about is not dominated by insanely High energies then these ends Must Fall Off quickly the number of particles with energies of a zillion zillion zillion must be uh essentially zero so in order that the total um energy be finite you certainly have to have a total number of particles finite and this thing here is typically finite notice it's formal similarity with the integral SAR the integral s
+
+00:35:59
+star s was also the total number of particles but only in the case where the number of particles was known to be one and that's just the accident the total probability is one happens that the total number of particles is one and so that's up there but here exactly the same formal looking structure is not telling us total probability it's telling us how many particles we have so if that's true then what corresponds to the probability density at a point of space the probability density at a point of space why not just
+
+00:36:34
+the density of particles point of space probability getes you want a function of all of the X's of all the particles right would be right right remember this is not okay the answer to the question is this thing here is the density of particles Okay so we can write then that why because its integral is a total number of particles now I'm not going to write that it's a probability density I'm going to write that it's a density but the density is not necessarily definite remember we're
+
+00:37:28
+doing quantum mechanics a thing can be an observable but there are states generally typical States the thing is not going to have a definite value you can measure it you can measure the density of particles strictly speaking you wouldn't measure the density of particles in a point what would you do you'd integrate over a little volume and ask how many particles are in that volume so if I integrate this over a small volume not over all space that tells me how many partic are in that small volume I can measure it I won't
+
+00:38:00
+always get the same answer I measure it in one state I measure it in another state it's uh like measuring any other quantum mechanical variable you can get a variety of answers and um but this will tell you what the number of particles is in a small volume that's its role so it's it's a kind of dens it is a density it's literally the density of particles a question yeah it's about the operators as survi dagger and so on is I mean in this formalism the you they only operate on the state vectors
+
+00:38:39
+but not on the wave functions not on the single particle wave functions right now let's come back for a moment this is not the most General State that you can have this is a one of a basis of states you can superpose these just like in any Vector space you can add vectors you can add vectors with different numbers of particles you can add uh even if you have the same number of particles you can add vectors in which there are five particles here seven particles here you can add that to another Vector where the
+
+00:39:14
+sevens and the fives are interchanged 7 and five is 12 you could add it together with a vector with 12 particles all at the same PL same ey there are many states uh and and super positions of States many many possibilities in any part whatever the state is though the operator representing the number of particles in a small volume is s star s it's a thing that you measure it's a thing that you measure when you look in that small volume and you ask how many particles are there so although I haven't told you how
+
+00:39:53
+to measure Sai itself siar SII is a is a is a familiar thing it's just a number of particles in a little volume question if you divide this operator the top of their B in by the number of particles would be fair to interpret it as a probability density of finding a particle at any particle at pointex position so now the look on your fa is like yes but you don't like no it's okay well you could say this volume has a certain fraction of that volume yeah no that's not the point supposing
+
+00:40:34
+you have a lot of particles even just classically you have a lot of particles and you want to know what's the probability that any one particle is in a little volume well to a high approximation if the number of particles are right all you have to do is one measurement measure how many particles are in that small volume and divide by the total number that's not the definition of the probability and you can get you know you could accidentally get zero you could accidentally get too many most of the times within a margin of
+
+00:41:07
+error you will get the number of particles being the probability for a particle to be in there number of particles divided by the number all right so it's it's not an identity to say that this thing when divide appropriately divided by uh the total it's not an identity to say that it is the um is the probability for particle to be in that region the probability can be a half have two regions of space probability a half here and a half here and you have a million particles okay you could accidentally discover that all
+
+00:41:42
+the particles are on one side not very likely but you could Discover it okay you make that measurement and the answer is a million on one side none on the other side not equal to the probabilities but most of the time within the margin of error within about a square root of the number of particles you'll get the probability so that's the sense in which I was a little waffling on whether you want to call it the probability or not this thing really stands for the measure for the uh for the observable which
+
+00:42:17
+really corresponds to the number of particles that you actually get when you look in there however yeah so what happens to say of charge if you have a state with one electron superposed with a state with zero electrons yeah that's a bad thing to do right but what you could do no that that normally doesn't occur but what you could do is have a have a superposition of states in which there's some number of electrons distributed throughout the different states and then add that to some number which is distributed
+
+00:42:53
+differently same number of electrons photons however because they don't have charge you have no problem superposing different numbers of photons now even with electrons you can uh don't forget there are other species of particles in the world in particular there are positrons okay so you can superpose states with different number of electrons and and positrons as long as the total charge adds up to the same number okay but right now we're just inventing for ourselves the concept of a
+
+00:43:28
+Quantum field all right let me do one more little manipulation to show you another example of um of things that you can build I'm a little worried [Applause] um I I was going to start working out the expression the operator made out of the size which stands for the energy of the whole system um we probably won't get quite there tonight but let's uh let's let's let's begin here's what we found we found that the integral of x of side Dag was the same as the sum of the number of
+
+00:44:31
+particles in each uh that was what these little manipulations did told us that this is the same as this now let's do a slightly different thing let's start with a formula for the total energy now I'm interested now only in systems with independent particles particles are not interacting with each other that's typically an approxim it tends to work when the particles are pretty dilute even photons if you make them dense enough will start to interact with each other and then the energy will
+
+00:45:08
+not just be the sum of the energies of the photons now how dense do you have to make them plenty dense much denser than you can make in a laboratory uh but still in principle in Principle Energy is not equal to the sums of the energies of all the particles in the system but typically if the particles are not too dense and there aren't too many of them per unit volume it's generally a good approximation so let's take that approximation and uh think of it now as a principle of free particles free
+
+00:45:42
+particles particles that don't interact with each other then what is the energy the energy is the sum over all modes mode means one of these single particle W single particle States it's the terminology mode mode means a single particle State sum of I of the number of particles in that state times the energy associated with that state okay we called it last time Omega I we could call it Omega H bar I but I'm going to leave the har bar out for now put it back tomorrow Omega I and energy are the same
+
+00:46:26
+thing I just used Omega because we're working with oscillators but um but it is just the energy of the I uh I mode okay this is the energy of um of uh we can also write that as a sum of I of a dagger I AI time Omega I it looks a lot like this over here the only difference each is that each I is weighted with a factor of Omega I what I want to do and I won't do it tonight is to go from an expression like this back to an expression like this except for this Beast over here what we're going to get
+
+00:47:16
+is something involving the field operators and that thing that involves the field operators is going to be the energy of the fields it's going to be the energy be the sum of all the energies of all the particles but it's going to be something that's expressed in terms of the field operators and we'll just call it the uh the energy of the field that's going to be something reasonably familiar uh but we won't do it tonight tonight yeah H Oh I thought it was uh fast it did go
+
+00:47:53
+fast I was oh right right right see if time is not invariant what's happened to the energy okay okay I was wondering about that okay we'll do a little more then yeah the no they're just the energies of the eye State the wave functions are functions of position that's a function of position but the energy that's associated with it is just the energy of the first of the ground state of the system of the ground state of the one particle State no the omegas are not functions of position they're functions of I they're
+
+00:48:47
+functions of which energy level we're talking about okay okay so what are the Omega I the Omega I are the energy levels which are the solutions of the Schrodinger equation the time independent shringer equation to find the energy levels of a system you solve the Schrodinger equation and you find out which igen values on the right hand side of the time independent shorting equation give you Solutions all right so let's write out the time independent shring your equation now we're going to write an
+
+00:49:25
+equation which determines the omegas are we assuming that there are or not interactions no no interactions you w you weren't listening free particles no interactions right so the answer is yes we are are or not no we are not assuming there are interactions yes we are assuming there are no interactions or at least that we're in a situation where interactions are very unimportant particles too far from each other okay all right so what do we know about Omega Omega is a solution of the time
+
+00:50:32
+independent shinger equation let's write down the schinger equation the schinger equation or the time independent schinger equation of course it's just now we're talking about the one particle schinger equation the shinger equation for only one particle and what does it look like well it's the one particle hamiltonian acting on a wave function is equal some SI I and it's equal to the igen value Omega that's the energy level time SII and what's the hamiltonian the hamiltonian is let's just take the
+
+00:51:10
+simplest thing P ^2 over 2m plus a potential energy the particles may be interacting with a potential energy but we're not going to let them interact with each other so it could be electrons orbiting the Sun when're not treating the sun Quantum mechanically we are treating the electrons Quantum mechanically but we're taking the approximation that the electrons don't interact with each other they only interact with the sun okay so um what do we write down for H H is potential kinetic energy p^2 over
+
+00:51:45
+2 M plus v of X where V is potential energy let me write it a little clearer multiplying s of x equals Omega I and this is the I side of X the I energy level is Omega s i of X now this is an odd thing here what do I mean p^2 over 2 m we know what V of X time on S of X means that just means multiply s of X by V of X where V is some potential energy but what does this thing mean p^2 over 2 [Music] m yeah we use P = Min - i d by DX and you can as homework put in the H bars there's of course a component for each
+
+00:53:01
+dimension of space so this becomes px2 + p y^2 + pz ^2 this thing here becomes well if I want to write it in three-dimensional language it becomes D squ which means second derivative with respect to X plus with respect to Y with respect to Z A minus sign because of the I squares I * I gives us a minus sign and we divide it by 2 m now this is the thing we know what to do with this on S just differentiate s twice it's just the sum of the second derivatives in the various directions of space plus v ofx s of
+
+00:53:45
+X Plus V of X let's put it all in one uh in one bracket plus v ofx s i equals Omega s i Omega I SI I Omega depends on which energy level we're talking about well we're not going to solve any shoing or equations tonight we're just going to take omega I * SI I which notice let's see does it no it hasn't appeared yet um we're just going to use the formula when without solving it we're going to use the formula without solving it okay I think the easiest way to get there is to write down the answer and
+
+00:54:41
+then prove that the answer is the same as this it's going to be the easiest way to get there so let's put this up on top I'm going to write down the answer and then we're going to prove it's the same as that okay before I do let me point out something about ordinary quantum mechanics one particle quantum mechanics supposing I wrote down the expression integral DX SAR of X any wave function whatever times - d^ 2/ 2 m + v ofx s of X what would this thing be anybody know it's the expectation value of the
+
+00:55:54
+energy it's the this is H and this is basically sandwiching H between bra and K vectors it's the expectation value of the energy so here's a formula for the expectation value of the energy of one particle what I'm going to tell you is that the actual operator representing the hamiltonian of the many particle system can anybody guess from this what the answer is what's that well no we know that but I'm looking for another expression for the same thing and I want to guess at this point and then show it's the
+
+00:56:31
+same as thatx what's that expand it as plus a plus b and a minus B yeah we can do we can do something like that but I can I make a guess what did we do to go from the um what did we do to go from the probability to find a particle to get to the number of particles in a small region repl the size by the operator indeed we just replaced the little size by the big size and that sort of gave us the sum over all the particles uh of sort of the same question so let's try here's here's
+
+00:57:14
+here's a guess no it's not a guess for me it would be a guess for you except uh of course it's not a guess I remember learning about this when did I learn about it 19 probably 1961 and I was kind of Blown Away this this reading D's book I think reading D's book this just blew me away that this is the same as this let's prove it let's go through the steps the first thing to do is to replace S by um by the definitions up there so let's replace S by the definitions this
+
+00:58:11
+becomes integral DX now this one here is sum of I uh AI dagger SI I star of X right that's this one over here and this one over here is sum over J um so i j of x * A J everybody happy with that a a minus J I guess that's all I did I plugged in the formula this can be written as a sum of I and J and replace the second summation sign there just get rid of it and now sandwich this minus d^ s over 2 M plus v ofx now what the devil does this mean for this to act on this object here what does it mean well it simply
+
+00:59:19
+means that you do these operations on ordinary wave functions this is an ordinary wave function function we know how to differentiate it we know how to multiply it by V of X and so we have an operation that we know how to do we might not be able to do it because it might be too complicated but we can at least Define the Operation this differentiates I twice this multiplies by V but we already know at least I hope we know somewhere on the Blackboard here nope Schrodinger equation here's the shringer equation equation the Shing
+
+00:59:57
+equation tells us exactly what this is- d^ 2 2m plus v of X acting on S just gives us Omega I * I so we can erase I don't like erasing I won't erase we can write this integral DX sum of I and J A + I let's group it together with a minus J over there now there's s i star of X now there's this Beast multiplying s that's just Omega j s of J what's the next step Del integrate over X integrate over X when you integrate over X SAR x i * s j that's just chronic Delta no that's just equal to sum of I
+
+01:01:05
+and J A+ I A minus J Delta i j but with one new factor that we didn't have when we did the probability or we did the just the counting of particles Omega J and that's exactly this we have a lovely expression now this is the energy of a field and it's given in terms of something quadratic in the field with a certain differential operator what can you compare that with in electrodynamics in electrodynamics very very similar kinds of things or in any field Theory you take the fields you differentiate them a
+
+01:01:54
+couple of times make a quadratic expression and integrate over space that's the characteristic um formula for the integral for the energy of a field all field theories have that property that the energy is equal typically to um to something quadratic in the field with a couple of derivatives acting on the fields the derivatives act on S here so this is an example of the energy of a field but it's also the hamiltonian these things are energy these things are operators the left hand side is an operator it's not a number
+
+01:02:30
+it's an operator What operator well it's a thing which has to do with the energy it's the hamiltonian of the field Theory okay it's the hamiltonian of the field Theory but it's also the energy question yeah most fundamental thing how did you go from a multi particle system to a field right there I went through every single step in fact I belabored the steps no no I went I followed all the steps but I don't see why this represents a f it's a function of position that's all yeah
+
+01:03:20
+it's an observable or at least S Plus s dagger is a quantum mechanical observable if you measure it at one place you can measure it at the other place at the same time you can uh so what more do you want it's a function of position it's an observable quantity that uh so we're going to Define this thing because of these properties it has might as well call it a field mean mathematically it is a field that's what you're saying basically you can measure it it depends on position there is no other
+
+01:03:52
+definition now you could ask what field is it the electromagnetic field no it's not the electromagnetic field it stands in the in the same relationship to the electromagnetic field as photons would be in a certain relationship to the electromagnetic field whatever kind of particles we're talking about here these are non-relativistic particles they have a mass they could be uh protons or neutrons moving slowly they could be electrons moving slowly as long as they're not relativistic as long as the
+
+01:04:23
+energy is given by p^2 over 2 n these this field is the field for those particles those particles are the quanta of that field in the same precise sense that photons are the Quant of the electromagnetic field the electromagnetic field would have an expression for the energy it also has two derivatives field squared uh and it's quite similar although not identical excuse me you that white this one here right okay so we've we've invented a Quantum field we've invented two observables one
+
+01:05:20
+of them is the particle density the other is now we have the energy but the energy is the integral over a space of something what would you call a thing uh that's being integrated the energy density it's the energy density so what's in here let's get another color what's in here is the energy density the local energy density by measuring it and or integrating it over a small volume you find out how much energy is in that small volume so it's not integrated over all space you could integrate it over all
+
+01:06:01
+space and it's a total energy that's this but if we have something and the total energy is equal to an integral of it it stands to reason or we can call that thing we might we uh it's a definition of the energy density it's not the only definition there's a little bit of ambiguity but um question please um in that formula eal Su n i Omega I capital N how is it different from the little ends the little ends are the igen values of the big big is an operator little ends are just
+
+01:06:41
+numbers oh thank quick question syntax can you express that field equation in terms of well it's not a field equation yet I mean yeah in terms of direct notation because it's it's it's like very analogous to what you have on the upper board which you can express in the you know uh uh carrot what direct carrot not whatever it's called BR and cats yeah Bret yeah no no no no but these are not States these are operators they don't they're not brasen cats the bras and cats these are the bras and
+
+01:07:28
+cats of the system right but but but you expanded the the to to do the uh little ends that's really sort of an elaboration of it um it's not officially what bracket notation is really you said bracket notation is a notation for a state Vector of a system when you have the little ends is not that's a state that's a state it's a state with one N1 particles in the first state then in this first yeah you have to learn to separate the single particle quantum mechanics from this multiparticle
+
+01:08:03
+quantum mechanics in this multi-particle quantum mechanics there are things which are operators which don't even occur in the single particle the um right now this formalism or this technology does allow you to recover everything that we've ever said about single particle quantum mechanics you just go to the states in which the total number of particles is one okay and you work in that set of States all of this formalism just reproduces the physics of the single particle quantum mechanics but it allows you to deal with
+
+01:08:47
+any number of particles and in particular there are states there are states with large numbers of particles typically remember these are observables now they're operators when there are a large number of particles in the same state then these size tend to behave very much like classical Fields um and we'll talk about that a little more how is this connected to classical field Theory well it's connected to classical Theory like any quantum mechanics is connected to its classical uh to its classical U
+
+01:09:22
+counterpart for example expectation values of things follow the same kinds of equations of motion as the classical equations of motion so you could ask for example what happens to the expectation values of SII SII is an operator it has an expectation value at any time we know the hamiltonian of the system we can use it to work out the time dependence of the state and then we can use that to work out the time dependence of the expectation value of sign guess what it essentially satisfies the classical equations of motion of wave
+
+01:10:02
+Fields with the same classical hamiltonian in fact it satisfies the Schrodinger the time dependent Schrodinger equation so as I said this is a very beautiful formalism it is a bookkeeping device but it's also the the fundamental connection between particles and wave Fields um and there is no other connection this is it that's uh that's the that's the connection we'll explore it in a great deal of uh of um exploration okay uh any yeah I've been struggling with the manipulation of the
+
+01:10:46
+creation Annihilation operators inside that integral you seem to treat them almost like numbers where you can no I I I I never switched that I never commuted them if I had commuted them and switched that order um yeah they're numbers they are numbers here they are I'm sorry the size are numbers the A's are operators but when the okay so if the a operates on a say the last pair when AJ minus operates on S side J it doesn't operate on side J just no no it may operate on some N1 N2 N3 and so forth he
+
+01:11:40
+took advantage of the fact that the size are operate or numbers numbers and because they're numbers you can pull out the whole Delta function right and then you're just left with the AIS and ajs the only manipulation that you wouldn't want to do freely without thinking about it is to move an A minus past an A+ they don't commute with each other that's where the operator character of them would come in but as far as moving them past ordinary numbers that's fine the derivatives here don't act on them the
+
+01:12:13
+derivatives act on the size so uh there's no cause to worry about any of the operations I did there would be a cause to worry if I to move a minus past A+ but we did interchange e IUS i+ but it introduced a plus one in certain certain things we do oh we do yeah I we just have to be careful about it that's all yeah yeah we didn't play some funny game with the but that's only these are only derivatives acting on ordinary functions I'm just saying we sort of pulled it all out into a Delta
+
+01:12:56
+that's the integral over X right right yeah so I mean I didn't say it wasn't valid I'm just saying it was a little that's a little trick that's a little tricky what we did we couldn't do the integral of x in this form what we did was say that this operation here just multiplies s j by Omega once it became Omega then we could do the integral of x yep yeah right so I didn't cheat you I didn't do anything that uh that the that's just a number just a number so you in Sher
+
+01:13:35
+formalism say treat operators as things that can operate on functions on the way functions what say that again in Sher yeah operators can operate on Wave functions they right just these in this form and these operators just operate on state pictures and not right you can imagine how confused they were in the early days before draak mastered all of this and uh and put it together they were very confused about the meaning of the wave function some some people thought it was a field that you you know a real field like the
+
+01:14:09
+electromagnetic field some people thought it was just an auxiliary device for computing probabilities and uh and if that's all it was then what does it have to do with the electromagnetic field and what's the connect there were several different ideas about what the connections between particles and waves were on the one hand the single particle wave function satisfied a wave equation the Schrodinger equation looked sort of suspiciously like Maxwell's equations it does roughly speaking not quite looks
+
+01:14:42
+like Maxwell's equations Maxwell's equations were not equations as far as anybody knew for um for Quantum amplitudes they were equations for measurable values of the field but still there was some connection some funny connection between these fields and particles namely the field was made out of Quant called photons so there was a lot of Confusion And this is the uh the resolution of that confusion that I said for them [Laughter] may no no this is it that's it that's all there is have some background in
+
+01:15:27
+cover spaces Vector spaces no I don't think so so he just had well he made it all up himself which is fortunate because had he used the the notations that were there already you know I taught quantum mechanics last year for the in the mathematics Department which was a lot of fun but there was a crazy point at which I was explaining their act notation and I told them that every Vector we call the we call these a vector space or whatever s and the official term the cats and the official mathematical term for the bras is the
+
+01:16:07
+Dual Vector space it means complex conjugate essentially the Dual Vector space and I learned to say dual that made them happy and then I said there's an inner product between every vector and its dual and they said no no no you can't do that you cannot have an inner product between a vector and its dual you can only have an inner product between a vector and itself and I said look I'm telling you there's a just trust me I know what I'm talking about you can have an inner product between a
+
+01:16:37
+vector no no no illegal not allow not allowed not allowed okay well of course it turned out that the that they just have a notation for the inner product of two vectors take two vectors and you put them next to each other this way and then you put some funny symbol around them like this and that's the inner product between SII and fi what is it equal to it's equal to SII fi when they finally got the hang of this the mathematics professors all said wow this is powerful it makes everything
+
+01:17:15
+work simply for example they were again blown away by this formula that I I is equal to 1 and then all you have to do to multiply it by a state is just do what it says sign and this is the inpr they'd never seen that before right of course they saw of course they've seen it they understood it all completely but they had never seen it in this compact notation where you you almost can't make mistakes anything you do turns out to be right right so D was clever he also he he you know if you ask
+
+01:18:02
+was his mind and ordinary mind it was not he was probably Autistic or something close to it yeah so he saw things in different patterns than most of us do going back to what you were saying a little while ago about this elegant formalism it's sort of begging the question for me are Fields just for ISM no you can measure them but are you just measuring properties of collections of particles yes but they're measuring you're measuring partic properties that you might not have guessed they're
+
+01:18:39
+not no you're not measuring the properties of classical particles you're measuring the properties of quantum particles and Quantum particles have properties like interference and that uh the classical particles don't so yes you're only dealing with a system of particles that's all but because they're quantum mechanical they have kinds of properties interference and entanglement and other things which ordinary particles don't have classical particles and this accounts for all of
+
+01:19:10
+it is there some sort of identification between uh for example let's say the density of photons and the electrical field strength yeah okay yeah well one has to be a little bit careful when you're dealing with relativistic particles and I've been careful not to deal with relativistic particles only non-relativistic when you're dealing with relativistic particles the notion of the momentum of a particle is very well defined the notion of a position of a particle is not and if the notion of
+
+01:19:43
+the position of the particle is not defined then the notion of the density of particles is not defined but what is defined is the density of energy and the density of energy has a similar uh form but you know if if I if we don't split too many hairs then the square of the electric field is qualitatively related to the density of photons so in relativity the you can have a defined momentum but not so much with position is that you're saying yeah position is not a good concept in relativistic uh systems yeah you can
+
+01:20:25
+even you can even make um if you if you define this is not especially useful but it's a fact if you define a vector s out of the electromagnetic field you define it as the electric field plus I * the magnetic field take that quantity size star now there now this is there are three components to this so it's not quite the same as this three components electric field minus I * a mag magnetic field then SAR Sai is not quite the density of photons it's it's the energy density so it's the
+
+01:21:13
+density of photons weighted with the energy of each Photon that's a good concept for photons the the density of photons itself is not a good concept so SAR s is e^2 plus b^ s if you know any electrodynamics you know that E2 + b^2 is the um is the energy density and um and S satisfies a uh a shingle like equation it's fun to work out from Maxwell's equations what s and this is s dagger if you know Maxwell's equations you can work out the equations for S for S and uh it's a simple
+
+01:21:59
+equation simpler than Maxwell's equations themselves okay uh I got got a question quick question um energy equals the integral of capital F dagger five it's well mean I'm just abbreviating that side dagger terms this differential operator here s if you switch the S and the side dagger does that have any meaning it's clearly not you're not allowed to pass them through each other without taking care of the commutator right so it has a meaning but it's just uh but it is what
+
+01:22:35
+it is it's is an IT corresponds to an extra additive constant uh the ground state energy it's uh right let's see if we can make a guess I'm not going to try to prove this it's easier than what I did here and you can try it um and for the single particle quantum mechanics momentum p is equal to minus i d by DX there's some plunks constant in there right what's the expectation value supposing I have a single particle wave function s of X what's the average or the expectation
+
+01:23:17
+value of the momentum well you take you take the C Vector side you take the moment NM operator and you sandwich it usual sandwich to create the expectation value what that means is you integrate overx DX s star times minus I DCI by DX so let's put the minus I on the outside here so I star time d by the X and you integrate it over all space what about the momentum operator not the expectation value of the momentum but the momentum operator for this field Theory do Fields have momentum Fields have momentum if you
+
+01:24:12
+take electromagnetic beam from a laser and you shine it on the wall if the uh laser beam is powerful enough it'll blow a hole in the wall why because it carries a lot of momentum it exerts a force on the wall Fields have momentum classical Fields Quantum fields in the quantum case the field momentum is just the momentum of all the photons okay so here we have a expression for the average momentum of a particle in quantum mechanics can you guess what the expression for the total momentum of all the particles
+
+01:24:50
+is yeah what you Chang oper just replace the size by size of bigger size sigh this is the operator that represents the momentum if you measure the momentum how do you measure the momentum you see how big a hole you blow in the wall by uh by uh right you measure the momentum not the average of the momentum the actual momentum in a wave going by you how do you measure it you see how hard it hits you how much force it exerts on something this is the operator the observable that corresponds to that uh
+
+01:25:55
+to that this is the mathematical Herm Mission operator that corresponds to that observable you can also calculate its expectation value this is an observable it is not the expectation value if you give me a state I can calculate the expect this is something okay this is something we'll do we'll try next week these are operators they have expectation values they are not the expectation values you need a state you need an operator and a state to construct an expectation value where's a
+
+01:26:26
+state give me a state well if you could take those inst States up there N1 N2 N3 and uh calculate the expectation value of the momentum okay um I think we'll finish for tonight unless somebody has some good questions because I've I've um I have not run out of things to talk about but it's a natural Breaking Point next time we'll talk about processes in uh in particle physics physics and how they're represented by these fields in a very simple context in a very simple context we'll talk about
+
+01:27:03
+how field operators Implement processes that take place when particles Decay when particles scatter and so forth for more please visit us at stanford.edu
+

@@ -2,7 +2,6 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T1]{fontenc}
 \usepackage{amsmath,amssymb,amsthm}
-\usepackage{physics}
 \usepackage{geometry}
 \usepackage{enumitem}
 \usepackage{hyperref}
@@ -13,7 +12,7 @@
 \pagestyle{fancy}
 \fancyhf{}
 \rhead{Lecture 7}
-\lhead{Quantum Mechanics --- The Theoretical Minimum}
+\lhead{Quantum Systems via Linear Algebra}
 \cfoot{\thepage}
 
 \titleformat{\section}{\large\bfseries}{}{0em}{}
@@ -22,8 +21,8 @@
 \newtheorem{definition}{Definition}
 \newtheorem{theorem}{Theorem}
 
-\title{\textbf{Lecture 7: Entanglement and the Density Matrix} \\ \large Wave Functions, Reduced Descriptions, and Quantum Correlations}
-\author{Based on Leonard Susskind's \textit{The Theoretical Minimum}}
+\title{\textbf{Lecture 7: The Density Matrix and Partial Trace} \\ \large Reduced Descriptions, Marginalization, and Entanglement Quantification}
+\author{Quantum Systems via Linear Algebra, Differential Equations, and Probability}
 \date{}
 
 \begin{document}
@@ -31,109 +30,96 @@
 \thispagestyle{fancy}
 
 % ============================================================
-\section{1. The Wave Function}
+\section{1. Component Representation}
 % ============================================================
 
-\begin{definition}[Wave function]
-Given a state $\ket{\Psi}$ and a complete orthonormal basis $\{\ket{a,b,c,\dots}\}$ labeled by eigenvalues of commuting observables, the \textbf{wave function} is
+\begin{definition}[Component representation]
+Given a state $\mathbf{v}$ and a complete orthonormal basis $\{\mathbf{e}_{a,b,\dots}\}$ labeled by eigenvalues of commuting observables, the \textbf{component representation} (called the ``wave function'' in physics) is
 \[
-    \psi(a,b,c,\dots) \equiv \braket{a,b,c,\dots}{\Psi}.
+    v(a,b,\dots) \equiv \mathbf{e}_{a,b,\dots}^\dagger\,\mathbf{v}.
 \]
-It is the set of expansion coefficients---or equivalently, the inner products of the state vector with each basis vector.  It encodes the same information as $\ket{\Psi}$; every observable's expectation value can be computed from it.
+It is the set of expansion coefficients.  It encodes the same information as $\mathbf{v}$; every observable's expectation value can be computed from it.
 \end{definition}
 
-\noindent The term ``wave function'' is historical---it grew out of Schr\"odinger's description of particles, where $\psi(x)$ literally describes a wave.  In general, the concept applies to any quantum system and need not involve waves at all.
-
-The state can be reconstructed from its wave function via
+\noindent The state can be reconstructed via
 \[
-    \ket{\Psi} = \sum_{a,b,c,\dots} \psi(a,b,c,\dots)\,\ket{a,b,c,\dots}.
+    \mathbf{v} = \sum_{a,b,\dots} v(a,b,\dots)\,\mathbf{e}_{a,b,\dots}.
 \]
 
 \subsection{1.1 Examples}
 \begin{itemize}[nosep]
-    \item \textbf{Single spin}: basis $\{\ket{\uparrow},\ket{\downarrow}\}$; wave function $\psi(\sigma_z)$ takes two values.
-    \item \textbf{Two spins}: basis $\{\ket{\uparrow\uparrow},\ket{\uparrow\downarrow},\ket{\downarrow\uparrow},\ket{\downarrow\downarrow}\}$; wave function $\psi(\sigma_z,\tau_z)$ is a function of two discrete variables.
-    \item \textbf{Particle on a line}: basis $\{\ket{x}\}$; wave function $\psi(x)$ is a continuous complex-valued function.
+    \item \textbf{Single two-level system}: basis $\{\mathbf{e}_0,\mathbf{e}_1\}$; component representation $v(k)$ takes two values.
+    \item \textbf{Two two-level systems}: basis vectors are Kronecker products; $v(a,b)$ is a function of two discrete labels.
+    \item \textbf{Particle on a line}: basis $\{\mathbf{e}_x\}$; $v(x) \in L^2(\mathbb{R})$ is a continuous complex-valued signal (see Lectures~9--10).
 \end{itemize}
 
 % ============================================================
-\section{2. Expectation Values via the Wave Function}
+\section{2. Expectation Values via Components}
 % ============================================================
 
-For an observable $L$ with matrix elements $L_{a'a}=\bra{a'}L\ket{a}$ (restricting to a single label for clarity):
+For an observable $L$ with matrix elements $L_{a'a}=\mathbf{e}_{a'}^\dagger L\mathbf{e}_a$:
 \[
-    \expval{L} = \sum_{a,a'} \psi^*(a')\,L_{a'a}\,\psi(a).
+    \langle L \rangle = \sum_{a,a'} v^*(a')\,L_{a'a}\,v(a) = \mathbf{v}^\dagger L\mathbf{v}.
 \]
 This is the master formula from which all measurable predictions follow.
 
 % ============================================================
-\section{3. Composite Systems and the Wave Function}
+\section{3. Composite Systems}
 % ============================================================
 
-For a composite system of Alice ($a$) and Bob ($b$), the wave function is $\psi(a,b)$.
+For a composite system of subsystem $A$ (label $a$) and subsystem $B$ (label $b$), the component representation is $v(a,b)$.
 
-\begin{definition}[Product state]
-The wave function factorizes:
+A \textbf{product state} factorizes: $v(a,b) = v_A(a)\,v_B(b)$.  An \textbf{entangled state} is one where no such factorization exists.
+
+\subsection{3.1 Subsystem observables}
+Alice's observable $L$ has matrix elements $L_{a'b',\,ab} = L_{a'a}\,\delta_{b'b}$ (identity on Bob).  Bob's observable $M$: $M_{a'b',\,ab} = \delta_{a'a}\,M_{b'b}$ (identity on Alice).
+
+% ============================================================
+\section{4. The Density Matrix (Partial Trace)}
+% ============================================================
+
+When Alice has access only to her subsystem and cannot observe Bob, she needs a reduced description.
+
+\begin{definition}[Reduced density matrix (partial trace)]
 \[
-    \psi(a,b) = \psi_A(a)\,\phi_B(b).
+    \boxed{\rho^{(A)}_{a,a'} = \sum_b v^*(a',b)\,v(a,b).}
 \]
+Bob's variables have been \textbf{summed over} (``traced out'').  This is \textbf{marginalization}---summing out the degrees of freedom you cannot observe.
 \end{definition}
 
-An \textbf{entangled state} is one where no such factorization exists.
-
-\subsection{3.1 Observables on composite systems}
-Alice's observable $L$ has matrix elements
-\[
-    L_{a'b',\,ab} = L_{a'a}\,\delta_{b'b} \qquad\text{(identity on Bob)}.
-\]
-Bob's observable $M$:
-\[
-    M_{a'b',\,ab} = \delta_{a'a}\,M_{b'b} \qquad\text{(identity on Alice)}.
-\]
-
-% ============================================================
-\section{4. The Density Matrix}
-% ============================================================
-
-When Alice has access only to her subsystem and cannot perform experiments on Bob, she needs a reduced description.
-
-\begin{definition}[Alice's density matrix]
-\[
-    \boxed{\rho^{(A)}_{a,a'} = \sum_b \psi^*(a',b)\,\psi(a,b).}
-\]
-Bob's variables have been \textbf{summed over} (``traced out'').
-\end{definition}
+\medskip
+\noindent\textbf{Engineering analog:} The partial trace is exactly marginalization over latent variables in probability and statistics.
 
 \subsection{4.1 Properties}
 \begin{itemize}[nosep]
-    \item $\rho^{(A)}$ is \textbf{Hermitian}: $(\rho^{(A)}_{a,a'})^* = \rho^{(A)}_{a',a}$.
+    \item $\rho^{(A)}$ is \textbf{self-adjoint}: $(\rho^{(A)}_{a,a'})^* = \rho^{(A)}_{a',a}$.
     \item $\operatorname{Tr}\rho^{(A)}=1$ (normalization).
-    \item For any Alice observable $L$: $\expval{L} = \operatorname{Tr}(L\,\rho^{(A)}) = \sum_{a,a'} L_{a'a}\,\rho^{(A)}_{a,a'}$.
+    \item For any Alice observable $L$: $\langle L \rangle = \operatorname{Tr}(L\,\rho^{(A)}) = \sum_{a,a'} L_{a'a}\,\rho^{(A)}_{a,a'}$.
     \item $\rho^{(A)}$ contains \emph{all} statistical information Alice can ever extract from her subsystem alone.
 \end{itemize}
 
 \subsection{4.2 Product state}
-If $\psi(a,b)=\psi_A(a)\phi_B(b)$, then
+If $v(a,b)=v_A(a)\,v_B(b)$, then
 \[
-    \rho^{(A)}_{a,a'} = \psi_A(a)\,\psi_A^*(a') \cdot \underbrace{\sum_b |\phi_B(b)|^2}_{=1} = \psi_A(a)\,\psi_A^*(a').
+    \rho^{(A)}_{a,a'} = v_A(a)\,v_A^*(a') \cdot \underbrace{\sum_b |v_B(b)|^2}_{=1} = v_A(a)\,v_A^*(a') = (\mathbf{v}_A\mathbf{v}_A^\dagger)_{a,a'}.
 \]
-This is a \textbf{pure-state} density matrix.  It has one eigenvalue $=1$ (eigenvector $\psi_A$) and all others $=0$.
+This is a \textbf{rank-1 projector} $\rho^{(A)} = \mathbf{v}_A\mathbf{v}_A^\dagger$.  It has one eigenvalue $=1$ and all others $=0$.
 
-\noindent\textbf{Proof:} Act with $\rho^{(A)}$ on a vector $\chi(a)$:
+\noindent\textbf{Proof:} Act with $\rho^{(A)}$ on a vector $\boldsymbol{\chi}$:
 \[
-    \sum_{a'} \rho^{(A)}_{a,a'}\chi(a') = \psi_A(a)\sum_{a'}\psi_A^*(a')\chi(a') = \psi_A(a)\cdot\braket{\psi_A}{\chi}.
+    \rho^{(A)}\boldsymbol{\chi} = \mathbf{v}_A\mathbf{v}_A^\dagger\boldsymbol{\chi} = \mathbf{v}_A\cdot(\mathbf{v}_A^\dagger\boldsymbol{\chi}).
 \]
-If $\chi=\psi_A$: result is $\psi_A(a)\cdot 1 = \psi_A(a)$ (eigenvalue $+1$).  If $\chi\perp\psi_A$: result is $0$ (eigenvalue $0$).  So $(\rho^{(A)})^2 = \rho^{(A)}$---a \textbf{projection operator}.
+If $\boldsymbol{\chi}=\mathbf{v}_A$: eigenvalue $+1$.  If $\boldsymbol{\chi}\perp\mathbf{v}_A$: eigenvalue $0$.  So $(\rho^{(A)})^2 = \rho^{(A)}$.
 
 \subsection{4.3 Entangled state}
-For the singlet $\ket{\Psi}=\frac{1}{\sqrt{2}}(\ket{\uparrow\downarrow}-\ket{\downarrow\uparrow})$:
+For the singlet $\mathbf{v}_{\text{singlet}}=\frac{1}{\sqrt{2}}(\mathbf{e}_0\otimes\mathbf{f}_1-\mathbf{e}_1\otimes\mathbf{f}_0)$:
 \[
-    \rho^{(A)} = \frac{1}{2}\begin{pmatrix}1&0\\0&1\end{pmatrix} = \frac{1}{2}\mathbf{1}.
+    \rho^{(A)} = \frac{1}{2}\begin{pmatrix}1&0\\0&1\end{pmatrix} = \frac{1}{2}I.
 \]
-This is a \textbf{maximally mixed} state: both eigenvalues are $\frac{1}{2}$.  Alice's subsystem appears completely random---she has \emph{zero} information about her spin alone, even though the composite state is a perfectly known pure state.
+This is a \textbf{maximally mixed} state: both eigenvalues are $\frac{1}{2}$.  Alice's subsystem appears completely random---she has \emph{zero} information about her subsystem alone, even though the composite state is perfectly known.
 
 \subsection{4.4 Entanglement criterion via the density matrix}
-The eigenvalues of $\rho^{(A)}$ quantify entanglement:
+The eigenvalues of $\rho^{(A)}$ quantify entanglement.  For a pure state $\mathbf{v}$ of the composite system, $\operatorname{Tr}(\rho^{(A)})^2 = \sum_i \sigma_i^4 / (\sum_i \sigma_i^2)^2$ where $\sigma_i$ are the singular values of the coefficient matrix (Lecture~6).
 \begin{itemize}[nosep]
     \item \textbf{Product state (no entanglement):} one eigenvalue $=1$, rest $=0$.  $\operatorname{Tr}(\rho^{(A)})^2 = 1$.
     \item \textbf{Maximal entanglement:} all eigenvalues equal ($=1/n$ for dimension $n$).  $\operatorname{Tr}(\rho^{(A)})^2 = 1/n$.
@@ -141,80 +127,43 @@ The eigenvalues of $\rho^{(A)}$ quantify entanglement:
 \end{itemize}
 
 % ============================================================
-\section{5. Correlations Revisited}
+\section{5. Measurement as Entanglement}
 % ============================================================
 
-\begin{definition}[Correlation]
+A measurement is the process of entangling a system with an apparatus.  Model: the apparatus has two states $\mathbf{f}_0$ (ready) and $\mathbf{f}_1$ (detected).  The interaction:
 \[
-    C(L,M) = \expval{LM} - \expval{L}\expval{M}.
+    \mathbf{e}_0\otimes\mathbf{f}_0 \to \mathbf{e}_0\otimes\mathbf{f}_1, \qquad
+    \mathbf{e}_1\otimes\mathbf{f}_0 \to \mathbf{e}_1\otimes\mathbf{f}_0.
 \]
-\end{definition}
-
-For the singlet:
-\begin{align}
-    \expval{\sigma_z} &= 0, & \expval{\tau_z} &= 0, & \expval{\sigma_z\tau_z} &= -1, \\
-    \expval{\sigma_x} &= 0, & \expval{\tau_x} &= 0, & \expval{\sigma_x\tau_x} &= -1.
-\end{align}
-Every pair of matching components has correlation $-1$.  This is \textbf{maximal entanglement}: knowing one spin's measurement outcome determines the other's with certainty (opposite result).
-
-\subsection{5.1 Criterion for entanglement}
-A composite state is entangled if and only if there exists \emph{at least one} pair of subsystem observables $(L,M)$ with $C(L,M)\neq 0$.  Equivalently, the reduced density matrix $\rho^{(A)}$ is \emph{not} a pure state (i.e.\ $\operatorname{Tr}(\rho^{(A)})^2 < 1$).
-
-% ============================================================
-\section{6. Measurement as Entanglement}
-% ============================================================
-
-A measurement is the process of entangling a system with an apparatus.  Model: the apparatus has two states, $\ket{0}$ (neutral/ready) and $\ket{1}$ (detected).  The interaction rule:
+For a general state $\alpha\mathbf{e}_0+\beta\mathbf{e}_1$, the composite evolves to:
 \[
-    \ket{\uparrow}\ket{0} \to \ket{\uparrow}\ket{1}, \qquad
-    \ket{\downarrow}\ket{0} \to \ket{\downarrow}\ket{0}.
+    \alpha\,\mathbf{e}_0\otimes\mathbf{f}_1 + \beta\,\mathbf{e}_1\otimes\mathbf{f}_0.
 \]
-For a general spin state $\alpha\ket{\uparrow}+\beta\ket{\downarrow}$, the combined initial state $\bigl(\alpha\ket{\uparrow}+\beta\ket{\downarrow}\bigr)\ket{0}$ evolves to:
-\[
-    \alpha\ket{\uparrow}\ket{1} + \beta\ket{\downarrow}\ket{0}.
-\]
-This is an \textbf{entangled state} between spin and apparatus.  By looking at the apparatus, you learn about the spin---that is exactly what a measurement is.
-
-If you include the apparatus in the quantum description, there is no ``collapse''---only the development of entanglement via unitary evolution.  Collapse is what you say when you choose \emph{not} to include the apparatus in the quantum system.  This hierarchy (system $\to$ apparatus $\to$ observer $\to$ \ldots) is \textbf{Wigner's friend} scenario---you can draw the line anywhere, and the results are consistent.
+This is an \textbf{entangled state} between system and apparatus.  Including the apparatus in the quantum description, there is no ``collapse''---only the development of entanglement via unitary evolution.  The state update rule is what you see when you trace out the apparatus.
 
 % ============================================================
-\section{7. Locality and Entanglement}
+\section{6. Locality and No-Signaling}
 % ============================================================
 
 Suppose Alice and Bob share an entangled state and separate to distant locations.
 
-\noindent\textbf{Key result:} Any operation Bob performs on his subsystem alone (measurement, unitary transformation, etc.) has \emph{no effect} on Alice's density matrix $\rho^{(A)}$.  Therefore:
+\noindent\textbf{Key result:} Any operation Bob performs on his subsystem alone has \emph{no effect} on Alice's density matrix $\rho^{(A)}$.  Therefore:
 \begin{itemize}[nosep]
-    \item Bob cannot send a message to Alice by manipulating his spin.
+    \item Bob cannot send a message to Alice by manipulating his subsystem.
     \item All of Alice's measurement statistics remain unchanged.
-    \item This is the \textbf{no-signaling} property of quantum mechanics.
+    \item This is the \textbf{no-signaling} property (proof in Lecture~8).
 \end{itemize}
 
-\noindent The correlations in the singlet state are analogous to the penny-and-dime story: if Alice sees heads, she instantly knows Bob has tails.  But this is just a pre-established correlation, not a signal.  The genuinely quantum feature (Bell's theorem, next lecture) is that these correlations cannot be reproduced by any local classical model.
-
 % ============================================================
-\section{8. Key Conceptual Points}
+\section{7. Summary}
 % ============================================================
 
 \begin{enumerate}[nosep]
-    \item A composite system can be in a definite pure state $\ket{\Psi}$ while each subsystem has \emph{no} definite state of its own---only a density matrix.  You can ``know everything about the whole and nothing about the parts.''
-    \item This was Einstein, Podolsky, and Rosen's (EPR) central puzzle.
-    \item The density matrix formalism makes it precise: the subsystem's statistical description is obtained by tracing over the other subsystem's degrees of freedom.
-    \item Entanglement is \emph{not} the same as ``sharing a state''---it is the failure of the wave function to factorize.
-    \item Measurement is the development of entanglement between system and apparatus---collapse is the description from the perspective of the system alone.
-\end{enumerate}
-
-% ============================================================
-\section{9. Summary}
-% ============================================================
-
-\begin{enumerate}[nosep]
-    \item The \textbf{wave function} $\psi(a,b,\dots)=\braket{a,b,\dots}{\Psi}$ is the set of expansion coefficients in a chosen basis.
-    \item The \textbf{density matrix} $\rho^{(A)}_{a,a'}=\sum_b \psi^*(a',b)\psi(a,b)$ describes a subsystem by tracing over inaccessible degrees of freedom.
-    \item In a product state, $\rho^{(A)}$ is a pure-state projector (one eigenvalue $=1$); in an entangled state, it is mixed (multiple nonzero eigenvalues).
+    \item The component representation $v(a,b,\dots)=\mathbf{e}_{a,b,\dots}^\dagger\mathbf{v}$ is the set of expansion coefficients in a chosen basis.
+    \item The \textbf{reduced density matrix} $\rho^{(A)}_{a,a'}=\sum_b v^*(a',b)\,v(a,b)$ describes a subsystem by tracing over (marginalizing out) inaccessible degrees of freedom.
+    \item In a product state, $\rho^{(A)}$ is a rank-1 projector (one eigenvalue $=1$); in an entangled state, it is mixed (multiple nonzero eigenvalues).
     \item \textbf{Maximal entanglement}: all eigenvalues of $\rho^{(A)}$ are equal ($=1/n$).
-    \item Nonzero correlations $C(L,M)\neq 0$ between subsystem observables signal entanglement.
-    \item \textbf{Measurement is entanglement}: the apparatus becomes correlated with the system via unitary evolution.  Collapse is the description when the apparatus is not included.
+    \item \textbf{Measurement is entanglement}: the apparatus becomes correlated with the system via unitary evolution.  The state update rule is the description when the apparatus is traced out.
     \item \textbf{Locality}: Bob's operations cannot change Alice's density matrix---no signaling.
 \end{enumerate}
 

@@ -1,0 +1,396 @@
+00:00:01
+[Music] Stanford University okay all right so I I figured I have to start with a review because I do understand it's been two quarters since uh since you last had lectures for me on quantum mechanics on the other hand they can't spend the whole quarter doing that what I want to spend the quarter on is the applications of quantum mechanics not the technology but the physics problems and the basic physics problems that I want to go through this quarter are those for which quantum mechanics
+
+00:00:48
+were origin was originally uh invented discovered invented um by Einstein Heisenberg G POI all those people namely atoms electrons I'm going to do atoms first you say how can I do atoms first before I do electrons electrons are a part of atoms it's all right we'll uh we'll do a little bit about electrons just almost nothing but just enough to be able to write down the basic equations of the hydrogen atom discuss the hydrogen atom a little bit and then move on to further investigations of the
+
+00:01:35
+electron and once and when we say the electron was actually studying a class of particles not just electrons a wide class of particles which behave like electrons which include me particles quirks other things like that and then the photon so it's going to be atoms electrons and photons but one of the themes that will recur is symmetries symmetries of Nature and how symmetries are realized in quantum mechanics how symmetries are represented in quantum mechanics and what they tell us about the quantum mechanical system
+
+00:02:16
+symmetries in quantum mechanics are an extremely powerful tool which I'm going to tell you what a symmetry is if you don't know what a symmetry is it's okay at the moment but let's begin with a very very lightning review of the last quarter of quantum mechanics first of all the whole story Begins by asking how do you represent the state of a system we could go back a step and ask what is a system but I'll assume you know what a system is and how do you represent the states of a
+
+00:02:49
+system in classical mechanics the states of a system are represented as points in Phase space in quantum mechanics they're represented by state vectors the idea of a vector is not a vector like a pointer in space pointing in a certain direction in space it's an abstract notion you can add vectors you can multiply them by constants and the mathematical structure of a state Vector is a mathematical Vector in a vector space the vector space is not three-dimensional except in special cases it could be any dimensional so we
+
+00:03:27
+represent States by state vectors and the symbol for a state Vector is D's K symbol K ke T which is the latter half of the term bracket like braet or braet every state can be either represented by a k vector or by a corresponding bra Vector together we often put them together to form a braet or a bracket um the bra vectors are in onetoone correspondence with the c vectors and you should really think of them roughly as being the complex conjugates in the same sense as complex conjugates of complex numbers uh complex
+
+00:04:21
+numbers are ubiquitous in quantum mechanics and so are complex vectors so State vectors are represented by or States states are represented by state vectors the state vectors well we could say a little bit more but uh if I were to say the whole thing of course we would then go through the entire quarter so I won't in addition there are observables things that you measure measurables or observables In classical mechanics there are also observables they're the things you measure but we don't spend a lot of
+
+00:04:57
+time talking about their mathematical structure we just assume you know what I'm talking about when I say position of a particle is measurable or momentum of a particle or the energy of a particle or whatever in quantum mechanics we have to be very precise what we mean by an observable and observables are represented by linear Herm Mission operators are label them with what are these let's see these are Greek letters what kind of letters are are the English Roman Latin I don't know by Latin
+
+00:05:37
+H yeah it's true it's Capital Alpha okay but uh Latin letters are representing observables and they are Herm missan operators that act on the vectors Herm mission for our purposes translates or is the quantum mechanical equivalent of real real as in real or complex or imaginary uh they are the real operators which are equal to their own Herm Mission conjugate every such operator in the space of states is called an observable and presumably there is really a way to to observe it the igen values and igen vectors of
+
+00:06:30
+these Herm Mission operators play a special role so let me just remind you what is an igen value and an igen Vector if you have a Herm Mission operator you can search for vectors let's label the vector let's label it little A or B better yet Alpha since we want to label it with a Greek index let's label it with an alpha and a being an operator can act on Alpha and Alpha is an igen Vector of a if the action of a is just to multiply the vector Alpha by a number in this case I'm use a redundant notation
+
+00:07:22
+the same notation for the igen value and the igen vector and this says that the igen value the igen vector Alpha is an igen Vector of a with igen value Alpha and the significance of that equation is that first of all the set of igen values of an operator or of an observable are the set of possible results of measurement if you have a quantity which when you measure it can take on the value 1 3 and 7even then the igen values of that operator are 1 3 and 7 and so forth the igen vectors are the state
+
+00:08:05
+vectors of the system for which if you make a measurement the answer is definite not statistical determined deterministic and the answer to the measurement is Alpha okay so I assume we all remember this I'm doing this mostly to just refresh your memory okay now the particular systems we're going to be discussing mostly in this quarter are systems of particles particles are largely characterized by saying the things which have a location in space an ordinary location in space for example a space is onedimensional
+
+00:08:47
+then a particle is a thing which has a coordinate X it's located somewhere As an X if it's space is three-dimensional then particles move around they have X Y and Z and so forth let's write formulas for the case of one dimension but I'll tell you what to do for three dimensions in a moment okay oh sorry let's come back one one point that I I need to emphasize for every bra and every cat let's call the bra let's call it fi it is not necessarily the particular bra that goes
+
+00:09:25
+together with Sai with the K Sai for every par like that there is an inner product there is a number that number is in general a complex number and it is represented as the inner product inner product and it's a number it's a number for every pair of vectors uh it represents a kind of product of the two vectors it's similar in its mathematical structure to the dotproduct between two vectors in ordinary space but it's a it's a more abstract object it's the inner product between two vectors and it
+
+00:10:13
+plays an important role in the logic of quantum mechanics in particular if two states are distinguishable uniquely by the property that there's some observable that you could measure which would be different in the two of them let's suppose there's some quantity that you could measure and it is definite that the answer in the state Sai is different than the state fi then no then we would say those two states are distinctly different there's no chance of confusing them there's a measurement you could do
+
+00:10:55
+to distinguish them then those states are said to be orthogonal orthogonal means physically identifiably different and mathematically it's the statement that the two vectors have inner product equal to zero so orthogonality is a fundamental property of relationships between vectors which says that they are different you can't confuse them well you can confuse them but you shouldn't confuse them okay now when it comes to particles the most important observable is the position of a particle and so let's just
+
+00:11:39
+discuss particles moving on a line a line is the x- axis the location of the particle is just a value of x and obviously X should be thought of as an observable okay in particular there are states which are labeled by a a value of position let's call it xn this is the point x not over here I'm just using the KN here to indicate a particular position there are states uh which are labeled by X which have the property that if you measure the particle the particle's position you will definitely find it at X
+
+00:12:32
+knot okay good the next concept oh and of course State vectors for different values let's call them x and x Prime if x and x Prime are two different positions x and x Prime then clearly those two states are distinguishable operationally and by measurement they're distinguishable so these two states are orthogonal now take any state any state whatever of this particle call it s it's inner product with the state representing the particle at X is called the wave function the wave function of the
+
+00:13:29
+particle and it's written as s of X it's the s that goes into the Schrodinger equation it's Schrodinger S I believe the Schrodinger was the first one to uh to call it SII PSI and the meaning of the wave function is closely related to but not the same as the probability that the particle is at position x s of X is an arbitrary function well it's not completely arbitrary but let's say it's some function what does it represent s of x s of X is closely related to the probability to find the particle at
+
+00:14:17
+position X but it's not quite that the probability itself let's call it P of x is the product of the wave function times its complex conjugate the wave function times its complex conjugate is positive any number any complex number times its own conjugate is always positive probabilities are always positive s of x's are generally complex numbers they can be positive they can be negative they can be imaginary they can be uh whatever you like so it would not make sense to say that P is a probability but it does make
+
+00:15:04
+sense to say p times P star is a probability good all right that's the most important uh property of a particle that it has a position it has igen vectors which represent particles of known position and uh we can construct of course a position operator a position Operator just multiplies s of X by X Itself by X all right so that's that's the idea of position the other important observable for a particle there are many OB of course there are many observables for a particle but the other
+
+00:15:46
+particularly important one is called the what the momentum the momentum In classical mechanics and in quantum mechanics positions and momenta come together oh before we do that I should I should discuss the uh the issue of a particle moving not just in one dimension what happens if a particle is moving in three dimensions in other words like a real particle then it has three observable positions the three components of its position namely X Y and Z if you like but since you can rotate axes uh you can just think of the
+
+00:16:27
+position as a point in three diens dimensional space in that case we would just think of X here as a point in threedimensional space we could fill it out we could fill out the equations by saying there are states which represent particles at known locations in three dimensions X Y and Z this represents a particle located at a point in threedimensional Space over here X Y and Z and the rules would be similar very similar uh the inner products of X Prime y Prime Z Prime that would be zero if there's any
+
+00:17:14
+mismatch not if X is not equal to X Prime and Y is not equal to Y but if the entire Point XYZ is not the same as the point x Prime y Prime Z Prime then these are observably different positions for particle and the states are orthogonal to each other I'm not I'm going to suppress the Y and Z but keep in mind that the position of a particle depends on the dimensionality of the space that we're talking about and in the real world space is three-dimensional okay for each component of position there is also a
+
+00:17:55
+component of momentum In classical physics for non-relativistic classical physics the momentum is just the mass times that component of the Velocity in quantum mechanics the momentum is also unobservable and is also represented by an operator by a Herm Mission operator Herm Mission operators can be thought of in the abstract as objects which act on mathematical vectors the space of States on they can be thought of more concretely as operations on Wave functions either one you can think of them concretely as operations that uh
+
+00:18:40
+that you what's what what about X itself what is the operation that represents the operator X well it's just taking the state Vector s of X so taking the wave function and multiplying it by X if s of X is a function representing the amp the probability amplitude s of X is called the probability amplitude or the wave function of a particle then if you want to apply the operator representing position to S of X you just multiply s of X by X that's all uh the igen vectors of X are the wave functions which are highly peaked
+
+00:19:30
+very very narrow direct Delta functions all right in the same way the momentum operator now I'm not going to explain this in detail for this you go back to the lecture notes to or or to the lectures themselves what lecture was it that we talked about the momentum anybody remember art uh several of them but I think around eight around eight May yeah yeah yeah eight eight eight was uh eight was uh that's right I remember with great grief uh lecture eight right okay so the momentum of a particle is represented by
+
+00:20:13
+an operator called p and p also does something to S of X what it does to S of X is it differentiates it it differentiates it with respect to X but not quite the real thing is that it multiplies it by minus I the complex number I there's a factor of plun constant H bar and then it differentiates s d by DX s of X that is the operator that acts on Wave functions that represents the uh the observable momentum everybody remember this yeah it was a we went through it okay now what about the igen vectors of momentum the
+
+00:21:19
+igen vectors of position are direct Delta functions they are functions which are zero everywhere's except at the igen value position in other words the igen vector representing a particle known to be at xnot is a function which is zero everywhere except at X knot where it's very high and very narrow let's not worry about its precise mathematical definition it's called a der Delta function what a and it's not too hard to believe that if the wave function of a particle is so concentrated at a
+
+00:22:02
+particular point that the probability for finding it is zero everywhere as except at that point that of course makes sense now what are the states for which the momentum is certain in other words what wave functions correspond to to particles with definite momentum and those are gotten by solving the igen value equation the igen value equation is that P whatever it is and in fact we know what it is well let's write the form let's let's write the um the abstract equation first that P on
+
+00:22:38
+S is equal to Little P KN Time s the igen value being Little P not Little P not is the value of momentum that this particle has and in this particular State the uh the momentum of the particle is known to be p this equation translates just replacing P by minus i d by DX minus i d s by DX is equal the P not the number a numerical number times s of x s is a function of x s of X and this is easy to solve this is one of these equations which says that the derivative of something is proportional to that same thing derivative of s apart
+
+00:23:33
+from a numerical number the numerical number we could get we could mult get rid of the IH bar on this side it would reappear on this side uh this is the equation of the type that represents an exponential the derivative of something is proportional to the something itself and the solution of it is e to the i p x ided PL plks constant now I often get very tired of writing plunks constant and I often just set it equal to one we'll sometimes do that in fact from uh I I'll try to track it for the time being but later on I may
+
+00:24:17
+just drop it and uh I think by the time I do drop it I will have done it enough times that you'll know where the right uh the right place where where it go question yeah in the two equations you just wrote there the the upper one with the with the cats that would say that those are or that's say igen Vector yeah that says that igen Vector that that s is an igen Vector of p with igen value P but the one below holds for any wave function any you think any wave function is e to the Ia PS no no no but the
+
+00:24:51
+equation before forun no most wave functions don't satisfy this equation oh in fact it's true for basically this wave function okay now you'll notice of course that there's a huge difference between the igen vectors of position which are these narrow little spiky functions and the igen vectors of momentum in particular let's take the probability that's associated with e to the IX that's multiply it by its own complex conjugate what happens if you multiply this by its own complex
+
+00:25:32
+conjugate you get one e to the I something * e to Theus I something is just plain one so this wave function the one which represents a particle at with a definite momentum its probability distribution is smeared out over the entire line by complete contrast the igen vector of a particle located at a definite position is highly concentrated infinitely narrow and this of course is a manifestation of the uh of the uncertainty principle uh if you know well if you know the momentum of a particle then its position is completely
+
+00:26:19
+uncertain and likewise if you know the position of a particle its momentum is also completely uncertain I'll refer you back to the lecture notes uh to for that purpose that's basically quantum mechanics in a nutshell question please I'm a little bit confused I thought you said this we know it's P0 so it's known yeah the momentum is known the momentum is known momentum but then when you try to calculate the probability of this no no the probabil the probability for position what given that the momentum is
+
+00:26:58
+P now an experiment is going to do an experiment not to check its momentum but it's going to do an experiment which measures its position two different kinds of experiments and that was 5 ofx five ofx is the the the probability uh amplitude for position that's right that's right if the argument that's right that's correct now there is also a notion of an amplitude for finding different momenta and I'll just remind you that's connected to Foria transforms of s of X but I'm not going to do that now if we
+
+00:27:36
+need Foria transforms we'll come back to it at the moment uh Foria transforms and the momentum representation this is called the position representation the representation of State vectors by S of x's is called the position representation there is also a momentum representation but I I it will take us to a far field right now question yes um what is the uh probability of the position so in Star s of x if the the the side function the wave function is the is direct Delta function and what is it when you
+
+00:28:16
+multiply that you know when you get into probability what does that look like it looks like the square of a Delta function which is just higher than the Delta function but it's concentrated at the origin it's concentrated at the origin and uh we have not talked about normalizing wave functions making the area under here equal to one that's a thing that we want to do and uh but but uh as I said I I hesitate to go into any given thing too deeply because we'll wind up doing the whole class again yeah
+
+00:28:53
+um so these State vectors are all represented by column vectors is that it you can you can represent them by column vectors in other words but be a little awkward to represent s of X by a column Vector X takes on a continuous Infinity of of values whereas the column Vector is useful for a quantity which takes on some discrete set of values so you can think of it um formally in your head as some kind of continuous column Vector that's for the that's for the K vectors and the bra vectors you can think of as
+
+00:29:27
+row vectors okay but uh let's when we need that I'll I'll remind you by then you will have gone back and studied the the election notes and you won't need it okay next thing how do things change with time things do change with time and the evolution of a system with time is a special case of Transformations that you can do on the state of a system that of course is also true in classical mechanics the uh the motion of a system is represented as a transformation in Phase Bas a transformation of the phase Bas
+
+00:30:06
+position in quantum mechanics the evolution of a system is a special case of a transformation that you can do on the space of States taking every state to some other state and of course the um the idea is very straightforward if the state at one instant of time is some sigh at some later instant of time it is something else and that something else is a transform or a transformation of the original sigh there are some rules in quantum mechanics about the nature of that transformation oh that transformation
+
+00:30:49
+depends on the amount of elapsed time okay if the amount of elapsed time is very very short then you would expect this transformation to practically be the identity Trans in fact let's go back if the amount of time that's elapsed is zero then of course the transformation is completely trivial it just gives back the same state you can say in that case that the transformation was just the identity operation on the uh on the state Vector but more generally the time evolution is characterized or the time
+
+00:31:28
+Evolution operation let's now call it operator it is an operator in uh in the sense of operators it's an operator but it's an operator which depends on the amount of elapsed time so let's give it a name it's usually called u u stands for unary but we'll come back a moment for what unitary means uh and it's parameterized by an amount of elapsed time and it's such that when it acts on a state at a given instant of time it takes you to the state at an amount of time T later so for example if
+
+00:32:21
+it acts on the state whatever the state happens to be at time T equals z then it will give give you s at time T it just updates the state if it acts on some state which happens to represent things not at Time Zero but let's say at time T1 then it takes you to the state at time T1 plus t in other words it represents the evolution of the system from T1 to T1 + T that's the notion of you that's the notion of a uh time Evolution operator it's a linear operator but is not a Herm Mission operator what kind of operator
+
+00:33:17
+is it well now we need a postulate and the postulate is we can say the postulate very easily it goes back to this minus first law of physics that I harp on all the time that information is conserved in quantum mechanics what it means is that if you start with two vectors two states which are observably different which cannot be confused in other words which are orthogonal and you let both of them evolve they will stay orthogonal it will not happen that two states that are observably different will evolve into
+
+00:34:03
+into states which are not observably different all right so what that says is that orthogonal vectors remain orthogonal in fact you can do a little bit better you can prove from that statement that the inner product between vectors is um unchanged by time okay so let me just explore that idea a little bit whatever U is it preserves the relationships between Pairs of vectors so for example if we start with s and fi two vectors they may be orthogonal or they may not be orthogonal if they're orthogonal this inner product
+
+00:34:53
+is zero if they're not orthogonal it is whatever it is okay then the postulate is that if we transform s and we transform fi now fi is a bra vector and it transforms with the hermiss conjugate of U that would be U dagger what this equation says is that the transform of SII when you take its inner product with the transform of fi is the same as the inner product of SII with Fi in the beginning it says that the inner products between vectors don't change with time okay that can only be true for arbitrary
+
+00:35:49
+pair of s and thi if UD dagger time U is the unit operator and that's called a unitary operator UD dagger times U is the unit operator or the identity operator or just one that's the notion of a unitary operator and the time evolution in fact all transformations all interesting Transformations that you do on the space of states and we're going to talk about others besides time Evolution all interesting Transformations ways of transforming vectors into other vectors are unitary UD dagger U is equal to one
+
+00:36:28
+that's different than saying you is equal to one of course you was a unitary operator all right let's uh let's pursue it yeah question yeah the way you first said it is if SII and fi were orthogonal they would remain orthogonal but this is a stronger statement than that this is a actually it's not you can prove that if you is a linear operator and it maintains orthogonality then you can prove that it maintains all inner products but this says the time evolution of a two state or two two
+
+00:36:58
+systems of different states don't even if they're not orthogonal the the overlap is conserved or whatever that's right that's right and and I said that's that's what you're saying is correct um but I would say it follows from the if orthogonality is preserved with time then it's possible to prove that inner products are preserved with time that's a little exercise first of all think about it in just ordinary three-dimensional space supposing you have some operation on vectors ordinary
+
+00:37:29
+vectors which preserves orthogonality okay what kind of operations operators on pairs of vectors will preserve the fact that they're orthogonal rotations right rotations also have the property that they preserve the inner products or the dot products it's the same mathematics it's the same mathematics so this is the definition of a unitary operator there any unitary operators uh so there are many possible things could that could represent the evolution of a system but they're all
+
+00:38:10
+unitary okay let's excuse me what would be an example of non-unitary transformation oh our mission operators are usually not unitary except the momentum is not a unitary operator the position is not a unitary operator uh okay unitary operators are operators whose igen values are phases everybody know what a phase means an e to the I times a real number a point on the unit circle a phase represents on the complex plane a point on the unit circle one is a point on the unit circle I is a point on the unit circle minus1
+
+00:38:55
+and minus I uh 1 over the < TK of 2 * 1 + I is a uh is a phase the unitary operators are the analoges for operators of phases their igen values are All Phases so if I have a unitary operator and I look at its igen values they will be points sprinkled around on the unit circle that's why they're called unitary because in some sense they're link or their the magnitude of their igen values is unit okay now let's let's see what more we can learn about you from making some reasonable
+
+00:39:45
+assumptions the first reasonable assumption is that if T is equal to zero then U is just equal to one all it says is that if you don't allow any time to elapse the vector just comes back to itself and U is equal to the unit operator so U of Zer is equal to I the identity operator the operator whose Matrix representation is just one one along the diagonals it's just the operator which does nothing it just takes the thing back to itself now is U unitary sure it is the Herm Mission conjugate of U
+
+00:40:28
+is the Herm Mission conjugate of the identity operator which is just the identity operator itself and identity time identity is just identity so yes one is one or the unit operator is unitary and it's it's the time Evolution when no Evolution happens okay what about evolution by a very very small amount of time okay so let's instead of writing U of zero let's write U U of Epsilon take U of Epsilon it is not one something happens over time Evolution but it is close to one it's close to
+
+00:41:13
+one that of course is an assumption that's the assumption that systems evolve continuously that they don't make radical jumps over very very short periods of time uh and it is an assumption it's an assumption ultimately which is justified by experiment all right so that says that U of A small time Epsilon if we were to expand it in small in small Epsilon would be 1 plus something proportional to Epsilon times an operator which is a finite uh operator the smallness of Epsilon is represented by Epsilon here
+
+00:41:53
+times something which I'll temporarily call H but it's a wrong identification in a minute we're going to change it okay let me not call it h what's another letter give me another letter quick quick FG no no no no no g g g fgh h yeah g good all right so U is of this form there's nothing wrong with this this is a correct thing the only question is what do we know about G so let's write down U conjugate permission conjugate of Epsilon that's equal to 1 plus Epsilon * G conjugate the Herm Mission conjugate
+
+00:42:43
+of G and now let's multiply these together and insist that the answer to Leading order in epsilon is just one okay so that will say that 1 + Epsilon G dagga * 1 + Epsilon G is equal to 1 looks a little queer 1 * 1 is 1 so what's left over what's left over is Epsilon times G dagger plus G and that must be zero to order Epsilon working to order Epsilon the condition that U is unitary is the condition that G Plus its own Herm missan conjugate is equal to zero in other words getting rid of the
+
+00:43:38
+Epsilon that the conjugate of G is equal to minus G itself operators with this peculiar property do you know numbers that have that property you know any number that has the property that it's minus its own complex conjugate IM it is true but there's a wider class of them pure imaginary things so this is the analog of G being pure imaginary if we multiply it by I it becomes Herm Mission this is called anti-mission Herm mission is when G dagger equals g did we write that someplace yeah a equal a dagger is an
+
+00:44:24
+observable G dagger equals minus G we can fix that very simply just Define G dagger to be now do I want plus or minus I always forget um it always takes me a minute or two to um I want to write 1 + I Epsilon H but I think the right answer is minus that's that's a um whether you put a plus sign or a minus sign here is a convention complete convention it defines H this one becomes 1 + I Epsilon H H dager and the condition just becomes that H equals H dagger in other words if I put a minus I
+
+00:45:29
+Epsilon h no plus I Epsilon H dagger minus I Epsilon H then the condition that U is unitary is just the condition that H is Herm mission in other words that H is an observable yeah um what assumption are we making that allows us to ignore the Epsilon squ term we're just working to order Epsilon we could work to order Epsilon squ but then we would have to be consistent about it and put an Epsilon squar term in here the Epsilon squar term that we would want to put in here would be minus Epsilon 2 / 2 *
+
+00:46:09
+h^2 and uh but we consistently work to one power in epsilon and assume that Epsilon is small enough that we can ignore Epsilon squar we can do that consistently we've done it over and over and over uh but then you're perfectly right we do have to come back and check that the formulas make sense to higher order and they do I'll I'll I'll discuss that a little bit but working systematically to order Epsilon and dropping anything of higher order than Epsilon I I just wondered if what we if we were
+
+00:46:43
+following the details we have to say that H is approximately or something like that yes no well okay with this definition you would say h is approximately her Mission but um allowing notice that Epsilon factors out of both sides of this equation so once it's factored out it just says that h no I think the thing which is approximate is this relationship here yeah and I'll I'll come back and tell you what to do uh if it uh I'll tell you the right formula in a little while at some point
+
+00:47:21
+okay so what do we learn we learn that the that the unary time Evolution which contains a U of [Music] T also is specified in terms of a certain observable that I've called H H stands for hamiltonian it also stands for Herm Mission but it stands for hamiltonian it is the hamiltonian of uh of quantum mechanics and so we come to the conclusion that there exists an H we will call call it the hamiltonian and it is related to the time Evolution for small time intervals by 1 minus I Epsilon H what is the
+
+00:48:08
+general equation if Epsilon is not small incidentally if Epsilon is not small we might want to call it t we might give up calling it Epsilon Epsilon is usually reserved for a very small quantity uh we might try writing U of T but this wouldn't be right for large times it wouldn't be large for for large times Let's uh let's see if we can improve it a little bit well you know I think I won't spend time at it I will just tell you the answer the answer is that this is really should be written
+
+00:48:56
+as e e to the iht now why do I all let me uh let me just um say a word or two about exponentials if you have an exponential e to some small number and let's just call the small number Epsilon where Epsilon is small times an ordinary number and let me call the ordinary number little H Epsilon * h is a small number okay for very small Epsilon e to the Epsilon H is 1 plus Epsilon H does everybody know that that's the formal tailor series expansion of keeping only the first term assuming the second term and higher
+
+00:49:48
+terms are negligible okay now supposing you want to take you want to make Epsilon a little bigger instead of just Epsilon I want to take e to 2 Epsilon * h e to the 2 Epsilon * H is just the square of e to the Epsilon h e to 2 * something is just a square so it's equal to 1 + Epsilon H squared supposing you do this over and over and O which incidentally is equal to 1 plus 2 Epsilon h plus Epsilon 2 h^2 right but this is still an approximation this was an approximation to this this is still an approximation
+
+00:50:48
+to this here's a theorem that if you do this over and over enough enough times let's say n times e to the Epsilon * n * H such that Epsilon * n is finite in other words Epsilon * n Epsilon is an infinitesimally small number but I do it enough times so that n * Epsilon is a finite number namely T I do this over and over what happen excuse me let me go back let's do it this way 1+ Epsilon H and I do this a number of times a large number of times in such that n * Epsilon equals T what do I get anybody know a binomial
+
+00:51:53
+expansion it's a binomial it's a binomial expansion but it's also a construction of the exponential function okay uh it's a rigorous theorem that as Epsilon gets small and N gets large in such a way that n * Epsilon is kept fixed this just becomes e to the HT say it again one person talk I think it's right I think it's right right and the way you can just understand it is by saying that for small Epsilon um 1 + Epsilon H is the same as e to the Epsilon H and if you take it to the nth
+
+00:52:48
+power the Epsilon just multiplies the n and becomes T okay so I will tell you right now the general Iz a of this for finite times one this should be a minus sign here 1us iht for finite T really becomes e to the minus iht and this is an important fact but for small intervals small Epsilon we can just be consistent and work to order Epsilon we'll find out uh everything we need to know okay so there's a concept now of a hamiltonian let's see if we can understand this equation a little
+
+00:53:41
+bit better um let's take the wave function s or the state Vector State Vector s at a time t+ Epsilon I'm starting at time t with a certain wave function and I'm allowing it to change over a tiny time interval what is the answer to this the answer to this is that it is equal to e to the i h Epsilon times s at time T let's just see what I did minus or plus sorry minus minus here that's starting at time T let's update by a small little time Epsilon the rule is we multiply by U of T but
+
+00:54:45
+sorry U of Epsilon we're updating by an amount of time Epsilon and that's equivalent to multiplying by e to the minus i h Epsilon Time s of t so this is the rule for going from a time to a neighboring time but now let's write that out as 1 minus i h Epsilon Time s of T and let's write this side I'm not going to forget the okay yeah okay yeah let's put them in and this one here is s of t plus Epsilon now let's multiply out 1 * s of T is s of T but let's take that over to
+
+00:55:32
+the left hand side that'll give us s of t plus Epsilon minus s of T just the term coming from one the term coming from one will give us the difference between s of t plus Epsilon minus s of T you see where we're going we're building a differential equation right for s s of t + Epsilon minus s of T is just equal to - I Epsilon s of T and finally divide by Epsilon okay what's the left hand side the left hand side is the time derivative of the state Vector s and the right hand side is just minus i
+
+00:56:30
+s of t Okay so that leads us finally to the Schrodinger equation the Schrodinger equation says that d by I'm DCI by DT this could be a wave function or it could be the state Vector I will leave the notation a little bit um abused I won't bother writing the K Vector here it stands for both the equation for the state vector or the equation for the wave function itself DCI by DT is equal to minus i h s if you want to put vectors in if you want to turn it into a equation for a state Vector you put
+
+00:57:23
+uh K notations there other wise it's just the equation for a wave function this is the Schrodinger equation this is the the time dependent schro schinger equation okay this is Schrodinger equation time dependent the TDS time dependent shinger equation and what it tells you is how the state Vector changes as a function of time if you are so lucky to know what the hamiltonian is is hamiltonian is a Herm Mission operator and you can make all kinds of quantum mechanical systems just to play with by choosing different hes
+
+00:58:05
+we did this last quarter okay um what about the time independent shring or equation the time independent Shing equation is just the statement that H is a Herm Mission operator it has igen values it has igen vectors its igen values are the observable uh values that you would get if you measured H and what are they called they have another name energy levels energy levels incidentally I promised you that I would keep around plunks constant and I've already dropped it uh it goes over here it goes over
+
+00:58:55
+there all right I don't promise by any means that I will be consistent about plunk constant yes I will be completely consistent by choosing plunk constant to always be equal to one sometimes I'll put it in sometimes I won't put it in but I will never confuse it with I or the square root of two okay so that's the time dependent the time independent schinger equation that's just the igen value equation for the igen values of H and all it says is that h on an igen Vector of the energy a state
+
+00:59:31
+with definite energy is equal to e time the energy e being the IG value of H E being the igen value of H so this equation here is the equation which tells you how to find the states and the values of energy that go with them that correspond to states of definite energy you solve this equation and it gives you a whole bunch of possible igen values and igen vectors those are the igen vectors and igen values of the energy operator okay and again we went through this we did some examples last uh last two quarters ago
+
+01:00:18
+on the other hand this equation tells you how the state Vector changes with time and as you can see it's the same h on both in both equations so the the question of the energy levels of a system are intimately bound up with the way that the system changes with time okay so good and that's uh that's quantum mechanics in a uh I said before it was quantum mechanics in a nutshell well it's a slightly bigger nut but uh but that's it that's that's what you need to know that's a summary of uh a quarters
+
+01:00:58
+worth of quantum mechanics that we did any questions can you if if in the time dependent equation independ equation if in the time dependent Shing equation you replace S with e s with e yeah can you can you do yeah then then you can drop the K things right then it becomes just an equ a differential equation because H * e will be just e * e no no we don't want to drop the the Cat symbol leave this leave the cat symbol there right leave the cat symbol there for the moment what we can do is we can
+
+01:01:55
+ask how a igen vector changes with time that we can do so we can plug in here and we can ask how the igen vector changes with time and the answer is that the igen vector will change with time by just multiplying it by I times the energy level that's what tells us how igen vectors change with time anybody remember the answer how an igen Vector changes with time it just gets multiplied by e to the I * the energy time time okay so that uh we can go through that we don't need it's in the notes go back to it and
+
+01:02:34
+uh and check it out all right now the time evolution is one example of Transformations that you can do on a system uh which preserve certain facts about the system in particular which preserve the inner products between uh vectors in other words Words which preserve The Logical relationships between vectors preserve the notion of orthogonality preserve the notion of vectors being the same vectors and uh and that kind of um uh there are many other kinds of Transformations that you may want to do
+
+01:03:17
+on a system in particular among them are symmetry Transformations we will need to talk about symmetry Transformations now I will tell you where we're going one of the most important symmetries of nature that occur over and over and over again in all sorts of contexts but in particular in the theory of atoms is rotational symmetry a atom in particular a hydrogen atom a hydrogen atom is an electron moving in a central force field the equations of a hydrogen atom are rot Ally symmetric and that's
+
+01:03:57
+because the potential energy the Kum potential is rotationally symmetric it's a central force and so hydrogen atoms and basically all systems in nature really but hydrogen atoms in particular enjoy rotational symmetry if you rotate all it means is that if you rotate your coordinates the description of the hydrogen atom doesn't change or another way to say it is if you rotate the hydrogen atom at it's still a hydrogen atom it may or not may not be the same state but it's still a hydrogen atom
+
+01:04:33
+described by the same set of equations so the notion of a symmetry is Central in quantum mechanics it is also in classical mechanics but it uh comes up and really hits you over the head in quantum mechanics and we need to explore largely for the purposes of understanding rotational symmetry we need to understand the concept of a symmetry so I'm going to spend 15 minutes explaining exactly what a symmetry is keep in mind if you want to keep one in mind there are two that you can keep in mind uh for uh just to have something
+
+01:05:16
+in your head one of them is rotation symmetry where it just says that if you take a system which satisfies a certain set of equations and you rotate it physically rotate it physically rotate about an axis you may or may not change it I can tell you this if you rotate me you'll change me right yeah you will uh if the Earth weren't here and I was in outer space and free space then the uh the lard equation whatever the equation governing me is would be the same for the rotated or the unrotated another way
+
+01:05:52
+of saying it is I couldn't tell whether I was rotated or not if you're rotate me and then just go away I can't tell that I was rotated because the equations that govern my metabolism my internal structure and so forth are exactly the same as had not rotate been rotated okay so rotation symmetry is one example another example is translation symmetry if you take me in outter space and you set me down and you say how do I feel I feel fine you take the same state but you translate me over by a meter and
+
+01:06:24
+you ask me how I feel I say exactly the same as I felt before it's a symmetry on the other hand there are situations where translations may not be a symmetry you know if there was a uh furnace over there a fire hot fire and you put me over here and you said how do you feel I feel fine now translate me over to here how do you feel well I don't feel so fine okay so the presence of an object may break translation symmetry on the other hand if you think about it a minute wait a minute what if I really
+
+01:07:01
+translate everything me and the furnace then we restore the translation symmetry so symmetries are operations or there are operations that you can do on states of systems and if the operation doesn't change the equations doesn't change the properties of the system doesn't change the way you describe the system then that transformation is called a symmetry for a free particle for for any ordinary system if it's out in out of space far from anything else and you translate it that's a symmetry you
+
+01:07:40
+rotate it that's a symmetry what if you squeeze it change its Dimensions by squeezing it that's generally not a symmetry you know if you take a crystal of rock salt or something and you squeeze down on it and compress it by a factor of two it's doesn't behave the same way uh so there are all kinds of things which are not symmetries nevertheless they still may be operations that you can Define but they may not be symmetries okay let's uh let's talk about the condition let's first of all
+
+01:08:16
+try to quantify that idea we have States let's the generic or typical state of the system that we're interested in is called Sai we're going to do an operation on it that operation might correspond to rotating the system it might correspond to translating the system or it might correspond to something uglier than that like squeezing it or stretching it but doing something to it and let's represent that by an operator V I use V because I've already used U you but I intended to be a unitary
+
+01:08:58
+operator why a unitary operator well if I really have a symmetry and I have two states which are different than each other I apply the Symmetry operation I expect them to stay different if there are two states of uh of me happy me and sad me they're different from each other they're observably different there's a there's an observ that you can measure the happiness uh operator and the different if you then rotate the state out in outer space the distinction should remain so that means that
+
+01:09:41
+orthogonal states should remain orthogonal when you do a symmetry operation and that says that the operator V should be unitary so V is unitary and it represents V equal V dagger V = 1 I don't use U because I'm saving you for the special case of time translation of evolution okay now let's suppose oh uh yeah this is a little bit tricky so we'll there's U's and there's v's and it's it's it's quite tricky it takes me half an hour each time I try to do do
+
+01:10:25
+this to get it right but it's also very very simple okay let's suppose that a wave function or a state Vector I'll use them interchangeably let's call it S1 under time Evolution becomes S 2 if I take S1 and I allow it to evolve with time let's represent that by putting a little U here U represents time Evolution V does not V is something else and if I take s 1 and allow it to evolve for a certain amount of time it will become S 2 okay so that's under U another way to say that over here is
+
+01:11:20
+that U on S 1 is equal to S 2 that's all evolve s 1 for a little bit of time and you get S two okay now let's imagine the transformed version of this transformed it could be by rotation it could be by translation by some symmetry operation what does this equation say for the transformed things well let's call this let's call this S Prime now there are too many let's let's keep in mind exactly what's going on here one and two represent some initial State and some final State Evolution
+
+01:12:05
+from one to another Prime and unprimed represent the action of the Symmetry operation which could be rotation could be rotation or it could be translation okay here's what I maintain If there really is a symmetry then s 1 Prime if we were talking about rotations then s 1 Prime is just the rotated state of S1 s 1 Prime will evolve to the rotated version of S 2 let's see what that says okay if I evolve myself over a period of time and I'm in some State and I get some other state I go from happy to not so
+
+01:13:04
+happy then when I rotate myself I should also find under the same Evolution that I go from the rotated Happy State to the to the rotated Noto Happy State that's what it really means to have a symmetry that um that the evolution of the transformed State behaves the same way as the original state it's a little bit tricky okay let's see if we can make an equation out of this now [Music] um yeah okay so the first the first row here is just the equation that S 2 is U S 1 that's what this
+
+01:13:53
+says the second equation let's go to the second equation to go from unprimed to Prime you multiply by V so the second equation here says that V it says that I'm sorry I this always confuses me um ah it says that 2 Prime is equal to U Time s 1 Prime to go from one to two is time Evolution to go from unprimed to Prime is V is the Symmetry operation all right so s 1 Prime is V * s 1 right all right so we have u v * I 2 is U Time s 1 Prime and S 1 Prime is V * s 1 okay that's the rightand side the left
+
+01:15:13
+hand side is V on S 2 but S 2 is U * s 1 so after per ual confusion that uh that uh is uh stumps me every time I try to do this on the Blackboard what it says is that if a thing is a symmetry in other words if it preserves the way EV Evolution takes place if it's a transformation which preserves the time relationships between vectors then it says that V * U must be equal to U * V this of course must be true for every state if it's to be a true symmetry of nature a true symmetry of nature
+
+01:16:00
+rotation symmetry for example is not something which only applies if I'm standing vertically upright it should apply to any particular state of the system and so if V * U on any S one is equal to U * V on any s 1 what it says is that symmetries of nature are such their operations their V's unitary operators which commute with the time Evolution operator for all for all for all yes in fact for all time it we'll see it's enough let be true for one time and it will be true for all time but yes
+
+01:16:51
+that's correct okay so Unity AR operations things you can do to the state vectors which preserve orthogonality which commute with the time Evolution operator are symmetries that preserve the evolution uh The evolutionary relationships so physically you're saying you can rotate and then wait or you can wait and then rotate exactly the words are very simple and they make perfect sense and uh yes that's exactly what it says okay so how do we identify symmetries we look for operations which
+
+01:17:34
+commute with a Time Evolution operator now remember that the time Evolution operator is itself let's take the limit of a small time Evolution just to analyze it a little bit this says well first of all yeah okay it says the V Time 1 + I Epsilon H 1 - I Epsilon H 1 - I Epsilon H is equal to 1 - I Epsilon H this is the first order again times V I'm just expanding it out uh the first order is good enough it gives us everything we really want to know first of all V * 1 is equal to 1 * V so those
+
+01:18:27
+cancel and what it says is that minus I Epsilon VH equals minus I Epsilon HV or canceling out the minus I Epsilon it says that V commutes with the hamiltonian okay let's cancel out these things the minus I epsilons a symmetry is a unitary operation which commutes with the hamiltonian any unitary operation which commutes with the hamiltonian is a symmetry and any symmetry is a unitary operation which commutes with the hamiltonian that's very abstract that's extremely abstract and in order to appreciate it we have to do
+
+01:19:17
+a couple of examples we'll do some examples in a moment but let's just focus on that that unary operations on the space of states which commute with the hamiltonian are symmetries what liaran what's that what limited V to being unitary what limit sorry what limited what required that V is unitary oh yeah a symmetry whatever a symmetry is it preserves logical relationships between the vectors so it's an assumption it's an assumption that the symmetries of nature take orthogonal states to orthogonal
+
+01:19:54
+States okay that uh seems plausible a symmetry should not take two states which are distinctly different from each other and act on them to give states which are not distinctly different from each other you wouldn't call that a symmetry you could say mutually exclusive yeah mutually exclusive things should stay mutually exclusive right okay so we now have a abstract mathematical definition uh of any symmetry operator of any symmetry this will become much clearer when we do some examples symmetry commutator of H with v
+
+01:20:56
+is equal to zero that's what it says do you remember from uh two quarters ago what the commutator of a thing with the hamiltonian is the time derivative of it yeah so what this says is that whatever the operator V is it's conserved conservation of a certain quantity in this case v meaning that it commutes with a hamiltonian is the same as saying there's a symmetry you've seen this before In classical mechanics what's the connection between symmetries and conservation laws called In classical
+
+01:21:45
+mechanics it's called nerus theorem right it's much simpler in quantum mechanics it's much simpler in quantum mechanics uh we don't need any fancy lran or anything else all we need to know is that time Evolution commutes with the Symmetry operation itself and that can be read in two different ways it can say that doing the Symmetry operation um well it says what it says it can be read two different ways but uh but they both say the same thing okay so that's now let's go one step further there are
+
+01:22:28
+different kinds of symmetries let me give you some examples of two different kinds of symmetries there are discrete symmetries and there are continuous symmetries let me give you an example of a discrete symmetry um think about reflection in a mirror reflection in a mirror takes a right hand to a left hand okay um that's the mirror image of a left hand as a right hand that's a discrete operation it takes left to right but there's nothing sort of in between it's just a discrete operation left to right let me
+
+01:23:07
+give you another example of a discrete operation um let's suppose we have a pair of electrons or a pair of particles a pair of particles and they happen to be the same the same kind of particle a pair of electrons or a pair of protons then if I take the two particles and I interchange them whatever the state is I interchange one particle with the other particle that's a symmetry why because the particles are of exactly the same kind a proton over here and a proton over here is the same as a proton over here and a
+
+01:23:44
+proton over here that's just interchange of them those are discrete operations uh discrete operations means that there's sort of nothing in between or let's say heads and tails just say heads and tails a head and a tail if the coin happens to have no markings on it whether it's heads or tails and you turn it over then the physics of the coin and flipped coin are exactly the same those are discrete operations by discret I mean in distinction to continuous operations and continuous operations are like rotation
+
+01:24:19
+in space rotation in space you can do a very small rotation small means one by a very small angle in fact you can go further you can say that every rotation about an axis can be built up by tiny rotations about that same axis that means that the rotations have a continuity to them that the flip of a coin does not have flip of a coin is either its heads or its tails and there's nothing in between for for classical coins um for systems in three-dimensional space you can or two-dimensional space
+
+01:24:59
+for that matter you can rotate them you can rotate them by 90° that's a big that's a transformation but you can build up that 90 degree rotations by lots and little lots of little infinite tal transformation those are called continuous symmetries what about translation symmetry it's translation symmetry continuous or discrete well it's continuous you can take any translation of a system and think think of it as being compounded out of lots of small translations The Continuous symmetries
+
+01:25:32
+are the ones in particular the rotation symmetries and translation symmetries are the ones I want to focus on okay what do we know about continuous symmetries we know we can build them out of lots of little Elementary small Transformations so let's focus on the small Transformations we're going through basically the same manipulations that we went through over here time translation is a continuous thing you can build up a time translation by 10 seconds by thinking of it as lots of little time translations
+
+01:26:11
+by micros seconds okay and that led us to the conclusion that use are related to to her Mission operators through this relationship here exactly the same is true of every continuous symmetry exactly the same thing is true every continuous symmetry can be thought of as being built up by little infinite tmal ones which have the form 1 - I Epsilon not times a hamiltonian but something some Herm Mission operator let's call it g g stands for generator G stands for generator and what we're thinking about now is a
+
+01:27:09
+symmetry transformation but one of them which is very close to being the identity such a transformation can always be represented as something close to the unit operator and close to the unit operator means just shifted by a small amount by the same argument that told us that H is Herm Mission G is also her Mission symmetry operations which are continuous can be represented in terms of infinitesimal Transformations which are generated by a generator G and if we plug this into here and we then write
+
+01:27:56
+that commutator of H with 1 - I Epsilon G is equal to0 what does that say what's the commutator of H with one commutator anything with one is zero everything commutes with a simple with the oper the operator zero the I Epsilon that factors out and what it tells us is that um symmetry operation are generated by this is what it means to be generated by generated by means can be built up by lots of little ones they're generated by things which commute with the hamiltonian so if you want to find all
+
+01:28:39
+of the symmetries of a problem you'll start looking around for all the things which commute with the hamiltonian there's another feature of things which commute with a hamiltonian do you remember from last quarter it's true both in the what was that conserved they're conserved so conservation and symmetry are closely connected if you want to find all of the symmetries of a problem it's equivalent to finding all the things which are conserved all right now this was very abstract and so we need to do an example
+
+01:29:16
+or two to get the idea let's do an example and let's [Music] begin with translation translation of a particle from one place to another okay translation of a wave function we want to take a wave function here's a wave function and we're going to move it a little bit we're going to translate it to a new wave function and we want to find out what operation does that if we have a s of X what operation do we do to translate it to a new position we're going to take that new position to only deviate by a small
+
+01:30:12
+amount by amount Epsilon but we know what the answer is the answer is s of X goes to S of x x + Epsilon Epsilon now could be a large number we're just translating by a large number but in specifically I want to think about the case of a small translation translation by a little bit okay so s of X in other words we can write that the translated wave function in fact we can write it this way whatever V is whatever V is we haven't figured out V is yet but whatever V is it acts on S of x to give
+
+01:31:00
+us s of X Plus Epsilon that's pretty easy that's how that's that's what a v is that's what the V does in this case it acts on S of X and it translates the wave function by amount Epsilon okay now if Epsilon is small we can also write that this is equal to S of X plus the derivative of s I with respect to X time Epsilon so what V does what V on S does is it gives back the same S Plus something proportional to the derivative that suggest doesn't suggest it proves that whatever V is is it's the
+
+01:31:53
+unit operator that's the first term here it acts on S of x to give back s of X plus a small change and the small change is Epsilon times the derivative operation I haven't written on X we could write on x v sorry Time s v is an operator it's the unit operator plus Epsilon time the derivative oper operator we can act on any wave function and what it will give us is the wave function infinitesimally displaced okay now what about DCI by DX what about D by DX d by DX is an operator it operates on Wave functions
+
+01:32:47
+it's a linear operator right it's connected with the momentum operator remember the relationship the momentum operator P equal minus i d by DX all right so what do we want to do we want to write let's uh let's multiply by I get rid of the I here and divide by har differentiation is I over har time momentum so let's write this that way 1 plus Epsilon I Epsilon over HR times the momentum we now have an example of a infinite decimal symmetry operation by infinite deal I mean just by a little
+
+01:33:39
+bit of a shift and we found out what its generator is the G where was it did we do we have G here no yeah V is 1 - I Epsilon G in this case I would have much preferred that I defined things so that this came out to be minus here but uh the momentum definition yeah F to the right further to the right upper right upper right yeah this one I think that's right Theus multip no no that's right H you think this is wrong no it's right right so let's see so I substituted I think I got this
+
+01:34:38
+right wait wait sorry did I yeah that's right do you disagree with this nothing think it's right all right now um ah I think if I shift the wave function to the right if I shift the wave function to the right that's really putting a minus sign here yeah yeah I made a mistake in defining a shift to the right a shift it looks like it should be X Plus Epsilon but s of X goes to S of x minus Epsilon so this is actually a minus sign here if you track that through we will find out that there's a um a minus sign
+
+01:35:32
+here yeah okay so it identifies for us what the Symmetry generator G is for translations and what is it it's the momentum divided by plunks constant right momentum divided by plunk constant we can write that the generator of translations here's the language the generators of the generator of X translation is p subx p subx strictly speaking divided by plunk constant uh we can drop the plunks constant I will drop the plunks constant and as a matter of fact the definition the official definition really doesn't have
+
+01:36:30
+the plunks constant in it but um there's an example there's an example P of X now is p of X is the momentum along the x axis conserved depends on the hamiltonian it depends on the hamiltonian so let's write down a hamiltonian the hamiltonian for free particle a particle moving in empty space with no forces acting on it h in that case is just p^2 over 2 m the momentum squar divided by twice the mass if this is a one-dimensional problem then it really is just PX just the X component of momentum does The X
+
+01:37:18
+does the hamiltonian commute with PX well that becomes equivalent to the question of whether PX commutes with px^ squar yes every operator commutes with every function of itself P of X commutes with P of x^2 it commutes with P of X cubed it commutes with any function of P of X so for a free particle moving along the x- axis we first of all find that the momentum is conserved and of course we also have a translation symmetry the translation symmetry is just the fact that the free particle will behave
+
+01:37:58
+the same way wherever you start it if you start it here and it gets to here then if you start change the starting point it'll just everything will just translate okay so that's that's an example p is both a conserved quantity and the generator of translations what if there are more directions of space if there are more directions of space then there are several symmetries you can translate along the xaxis you can translate along the Y AIS you can translate along the z-axis in that case the hamiltonian
+
+01:38:31
+becomes px^ 2 + p y^ 2 over 2 M plus pz ^2 over 2 m and the translation symmetry along the xaxis is still just PX translation along the y- axis the generator is py and so forth and each of them commutes with a hamiltonian so this is an example of the connection between symmetries and conservation laws which is very simple the next time it looks like we're about out of time the next time we will do rotation symmetry rotation symmetry is much it's much more interesting it's much more involved it uh and it will bring us to
+
+01:39:15
+the subject of group Theory uh there's some group Theory here but the group theory is completely trivial the next time we will talk about rotations in space and what's interesting about rotations in space is they don't commute with each other a rotation about X followed by a rotation by Y is not the same as a rotation by y Rotation by X and that will give us the idea of non-commuting symmetries symmetries collections of symmetries which don't commute with each other and when we find those they have power they
+
+01:39:51
+have real power to tell us about all kinds of physical properties of a system okay so next time rotation symmetry for more please visit us at stanford.edu
+

@@ -1,0 +1,435 @@
+00:00:01
+[Music] Stanford University all right so last quarter we studied classical mechanics and classical mechanics is fairly intuitive the basic ideas are things that you can visualize you can picture in your head motion of particles motion of objects it gets a little hard when you start thinking of 10 particles all at the same time uh but nevertheless the whole thing is based on um Concepts that are drawn from pretty much the everyday world of course it gets more and more abstract as you go along the crazy French who were obsessed with
+
+00:00:57
+Elegance kept making it more and more and more mathematic elegant Lans Pome brackets blah blah blah turned out all to be tremendously important uh the abstractions though are not all that difficult to understand and the basic concept is the concept of updating well before that the concept of a space of States what is a state of a system even before that the concept of a system a closed isolated system that doesn't interact with anything and whose motion and whose Evolution whose history you
+
+00:01:44
+wish to predict classical mechanics is predictive it's deterministic and the first concept as I said after the concept of a system is the concept of the state of a system now systems can have a collection of different states we talked about some very simple examples the first day of the quarter last time I just described for you the most Elementary simple systems consisting of nothing more for example than a coin heads and tails the only states of the system are heads and tails they form a mathematical set
+
+00:02:30
+the states two of them for heads and tails two points one space two states and uh we can draw them as dots this one stands for heads this one stands for tails and uh you know it's it's easy to picture in your head from there we talked about equations of motion equations of of motion or laws of evolution for the simple very simple system of a couple of points heads Tails we formulated some very very simple possible Laws of Motion the simplest being nothing happens if you start with heads you stay heads
+
+00:03:19
+heads heads heads Heads if you start with tails you stay Tails Tails Tails tails tals that was a very simple law of motion a more complicated law of motion if you begin with heads you go to Tails if you begin with tails you go to heads if you and just oscillate back and forth the basic idea is the idea of updating if you know everything there is to know about a system at an instant of time then classical mechanic everything that there is uh to know essentially means everything that's needed in order
+
+00:03:58
+to predict the future if you know everything that needs to be known then classical mechanics consists of a set of equations which tells you how to update the state given its value at any given time and to go from one time to the next uh that basic idea for example well I don't think I need to describe the examples again we described them at length last time uh and that's extremely intuitive in going from these very simple discret examples to a world of continuous motion indeed we have to abstract we have to replace
+
+00:04:43
+the idea of a small number of states a small finite number of configurations by an infinite number of configurations for example the motion of a particle along a line uh we have to label the states by the points along a line as well as their velocities and so it does get more complicated but nevertheless classical physics consists of equations which tell you how to update the state at any given time and it's completely deterministic and as I said easy to visualize or at least by comparison easy
+
+00:05:19
+to visualize because it makes use of Concepts from The Ordinary World which your brain is rather hardwired to be able to uh to understand now I always give a little sermon at this point and I'm going to give it again probably you've heard it a dozen times uh about the way one has to think about physics Beyond classical physics when you move past classical physics I don't think it can be said enough and it's so rarely said that I think I will say it again and it's that once physics moves
+
+00:05:58
+past the realm of parameters that has to do with ordinary experience either objects which are so small that they're far beyond what ordinary physics is about or velocities which are so fast that they're far beyond ordinary velocities whenever we move out of the range of parameters that we're familiar with from ordinary experience we inevitably run into things that we cannot visualize nobody can visualize the motion of an electron it's just not wired for it nobody can visualize four-dimensional
+
+00:06:44
+space or four dimensional SpaceTime uh let alone 10 or 11 Dimensions it's not the way physics is done now I I often read some of the stuff that goes back and forth between some of people I suspect people in this class about trying to explain to themselves to each others or to ask questions of each other about uh certain abstract physical questions and I I I noticed very much that a lot of the mistakes a lot of the confusion happens because of trying to visualize things using the old old-fashioned or standard intuitions
+
+00:07:34
+that you're hardwired for you may think that physicists good physicists are especially good at visualizing these things they're not I cannot visualize five six seven dimensions any better than you can but I know how to use abstract mathematics to describe it there's no substitute there really is no sub subtitute for the process of abstracting and using mathematics to describe the things which are beyond your ability to directly visualize the example that I always give and I'm going to I'm going to do it
+
+00:08:13
+again tonight I just want you to really focus on it and realize that you're not going to understand quantum mechanics by trying to visualize it as some uh funny form of classical mechanics won't work you'll always get it wrong uh but just the idea of visualizing space of Dimensions different than three dimensions in particular I always used to say okay how many people here can visualize five dimensions and everybody would say no we can't of course there was a few fakers a few um clowns in the class who would say
+
+00:08:49
+yeah I can do it I can do it but they couldn't and they know they couldn't they can't visualize five Dimensions uh but then I began to realize also so You' probably heard this before that it's equally hard to directly visualize two dimensions and so I would say to the class okay how many people now can visualize two dimensions and almost everybody would raise their hands and I would say no you're wrong close your eyes try to visualize two dimensions and they would say Okay I I
+
+00:09:22
+see it I see two-dimensional uh curved space what they're seeing is not two-dimensional curved space what they seeing is a two-dimensional surface embedded in three dimensions even try to see one-dimensional space onedimensional abstract one-dimensional space is just a line you cannot see that line in your head without seeing it as a line drawn in a plane and the plane you can't see without seeing it as embedded in three dimensions what's going on why can't you I hate to tell you this but you're
+
+00:09:54
+prisoners of your own neural architecture your neural architecture was built for three dimensions all right how do you get around it well you don't get around it by training yourself to see four five six dimensions you get around it by training yourself to think abstractly about it okay if 3dimensional space is a point X Y and Z then four-dimensional space is XYZ and W and you learn to manipulate the symbols now that's not to say that after a while you don't start to gain a new kind of intuition for things you do
+
+00:10:34
+but the intuition is not the process of physical visualization of the same kind as when you visualize a wave as a wave in the ocean uh so I warn you about that and I will tell you quantum mechanics is about as abstract as anything can B uh well perhaps it's perhaps things are even getting a little more abstract now but again quantum mechanics is about things that your evolutionarily developed uh neural structure is not prepared to deal with directly and how do you deal with it abstract mathematics
+
+00:11:22
+again and relativity it's also true of Relativity it's worse than quantum mechanics okay let's uh let's begin with quantum mechanics at the very very simplest most primitive question you can ask what is the state well I I think we can ask the most primitive question is what is a system now I don't think I can answer it it's uh it's a sort of undefinable you start with the idea of a system uh and I don't think I will try to give it a definition but in particular a closed
+
+00:12:10
+system a closed system is one which at least temporarily is not in interaction with anything else it's isolated it is not interacting with anything else and so it can be described by itself as a lonesome entity with nothing involved um In classical mechanics or let's it's it's even it's not even a question of classical mechanics it's a question of classical Logic the logic the whole logic of quantum mechanics is different than the logic of classical mechanics the logic of classical mechanics again begins of
+
+00:12:52
+course with a system which I won't try to describe but the next step is the space of states the collection of possible states of a system if the system is a discrete system like a coin or a Dy Dy you know the six side the six-faced die it can have six states of course a real d a real genuine die in three-dimensional space of course can be in all sorts of orientations it has infinitely many states but what I mean by a d now is I mean an abstract mathematical die which whose States just consist of one of six numbers
+
+00:13:29
+okay the space of states is a set 1 2 3 4 five six this is the space of state of a d this is the space of states of a coin now again an abstract coin which only has two states heads or taals this would be heads this would be Tails uh the abstract space of a point particle moving along a line what is that anybody know what that is what's the abstract space of a particle moving along a line well I'll remind you that the term is Phase space the space consists of the set of possible positions of the
+
+00:14:26
+particles and the possible momenta the possible velocities and so for a particle moving on a line the possible states of the system form a plane and the plane has a position sometimes called q a momentum sometimes called p and every point on that plane is a possible state of the point particle moving along the line but it's a set in this case it's a continuously infinite set of two dimension ions in this case it just consists of two points in this case it consists of six points and uh we can now start building
+
+00:15:09
+some logical concepts for classical physics for example Concepts such as or and and what do they mean um or and and are Concepts which apply to collections of states let's consider a proposition proposition such and such uh the proposition could be that the D is uh locate has a value which is even is even valued okay that's a subset of the space of states in fact it consists of three of them if I'm not mistaken three odd one three and five yes and another proposition would be the D is odd no did
+
+00:16:02
+I say odd I odd even whatever the other the other possibility is that's another nonoverlapping set of configurations let's take another case let's take two propositions one of which again is that the die is odd and the other proposition is that the D is less than or equal to three three all right so let's see uh is 1 3 5 is 2 4 6 and less than or equal to three is this set over here so now they're overlapping sets and we can ask for Concepts like and and or for example the proposition that it is that the D is
+
+00:17:00
+both less than or equal to three and odd is the intersection of these two subsets one and three is odd and less than or equal to three so there's a concept of and and that's in this subset and in this subset the mathematical um concept is the intersection of two sets is the intersection of two sets or the sets which satisfies both things and that's the concept of and given two propositions each proposition is a collection of states the concept of and is intersection what about the concept of
+
+00:17:53
+or or becomes the concept of Union what uh what set of States here here either is less than or equal to three or odd it's the inclusive or incidentally inclusive or means it can be both all right that's not the intersection of the two sets it's the union of the two sets the union meaning everything in both sets everything in here is either less than or equal to three or it is odd in inclusively with both being uh allowed so the inclusive or translates into the union and the uh and the concept of and is the intersection
+
+00:18:41
+of sets that's the logic of classical reasoning to a large extent um here's a concept two sets are completely nonoverlapping this one and that one that simply means the and statement is false there are no States in there for which both things are true that's so there's a whole logic that is connected with the space of States being a set and it's the logic of set theory we're not going to do the logic of set theory but uh it's important for me to tell you right now that the logic of
+
+00:19:25
+quantum mechanics is different it is not based on the idea that the state of a system is a set the state of a system is something entirely different and only in certain limits only in certain limits where systems behave classically does whatever a space of states of quantum mechanics whatever it is does it approximately reduce to the concept of a mathematical set in fact just to tell you what it is it's a vector space we'll talk about that all right but before we do before we start to um talk about the abstract mathematics
+
+00:20:10
+of vector spaces and and spaces of states of quantum systems let's uh talk about experiments and describe the simplest possible system in quantum mechanics it's the coin of quantum mechanics the system with two states heads and tails we have to completely erase the Blackboard and start over again so we have some system and whenever we measure that system whenever we measure something or other about that system namely the analog of whether it's heads or tails we either get heads or tails right let's uh give that a
+
+00:21:00
+um mathematical notation I'm not going to call it a coin I'm going to call it a cubit a cubit is a system which can have two states and Q stands for Quantum the analog for classical physics is called a cbit classical bit and is simply the idea of a coin heads or tails we're going to see that a qbit is a much more interesting uh well complicated for sure but a much richer idea even though it only has in some sense two states okay so the cubid the Cubit when it's measured we're
+
+00:21:47
+going to talk about measuring in a moment is either heads or tails but let's describe it another way let's give it a degree of Freedom a mathematical degree of freedom and I'm going to call that mathematical degree of Freedom Sigma Sigma is a traditional name for a for the degree of Freedom describing a cubit and sigma can either have take on the value one or it can take on the value minus one it's one when the Cubit is heads and it's minus one when the Cubit is Tails and there's no more content in it
+
+00:22:26
+other than heads and tails but it allows us to start being able to write equations for something we can also describe this another way by a picture I'm going to describe Sigma equal 1 by an arrow pointing up and sigma equal minus one by an arrow pointing down no implication here of anything geometric for the moment just a notation a notation three different notations heads or tails Sigma equal 1 or Sigma equal minus one and arrow pointing up and arrow pointing down okay now let's imagine an
+
+00:23:07
+experiment an experiment involves more than just a system it involves a second system and the second system is called the apparatus In classical mechanics we never bother thinking too much about the details of unless we happen to be experimental physicists and really going to go into the laboratory in doing do an experiment we sort of don't worry very worry very much about uh uh at least in a deep sense we think the system can be described completely without ever worrying about how you detect it how you
+
+00:23:43
+measure it or anything else but in quantum mechanics one cannot get away ignoring the concept of a appar apparatus so let's introduce an apparatus and I'll tell you what an we're going to make a mathematically abstract apparatus I'm not going to tell you how it works it's a black box it's a black box we're going to call it a a for apparatus it's a box and it has a little window here's the window it also it really is a box it's like a carton it's like the carton you get in
+
+00:24:27
+the mail which says this side up this side up you want it to stand upright okay here's a little window by a window I mean a little screen and numbers appear on that screen and it has some sort of uh detector on the end of a wire that uh that uh senses that senses the Cubit and it sens is whether the Cubit is + one or minus one so you start with your Cubit and you don't know what state it's in the experiment is to determine what state it's in so the cuit begins in the unknown not the unknown state but
+
+00:25:20
+unknown we don't know whether it's one or minus one and we're going to do an experiment the experiment as I said not going to tell you how the how the detector works it's not important for us it's only important that detectors do exist and we're going to we will talk later about the process of detection but not for now so it has a a sensor over here bring the sensor over to the Cubit and what does it do a number lights up in here either plus one oh first of all let's start before we do
+
+00:25:55
+the detection the apparatus is in the neutral State the blank State no number there at all so let's just call that the blank configuration of the apparatus we take the apparatus over close enough to the cuit to interact with it and if it's a good faithful apparatus it will then register a number here and that number will either be+ one or minus one + one or minus one depending on which way whether it was heads or tails that's the act of measurement now you may or may not be there to look at the apparatus this is a
+
+00:26:36
+secondary the apparatus has detected and recorded what has gone on here so that's that's something that um In classical mechanics of course we do the same thing there's nothing particularly quantum mechanical about this but we tend never to think about it in formulating the basic principles of quantum mechanic uh classical mechanics okay so that's an experiment that measures the state of or measures whether Sigma is plus one or minus one but we can also think of it as another way we can think of it not so
+
+00:27:12
+much as a measurement but as a preparation a preparation of the system here's the idea supposing we in fact do measure Sigma to be + one supposing that's the outcome of the experiment then we can erase uh the one that it wasn't and start over and then say let's let's back off reset the apparatus reset it means start it over in the blank State and then redo the experiment again let's say we do it uh fast enough so that there wasn't much time for anything else to happen What happen
+
+00:27:58
+happens what happens is that the detector records again and if it's a good detector and the system hasn't had a chance to change very much it will simply record the same number again it will confirm the previous experiment this is important that experiments can be confirmed again no difference between classical in quantum mechanics in this respect we just emphasize it in in quantum mechanics experiment experments can be confirmed we can then do it again and again and again and again and we will
+
+00:28:35
+continue to get the same answer that we got in the first place so we can say it a little bit differently the first experiment instead of saying that it determined whether it was heads or tails we can say it prepared it in a state which was in this case heads after the first detection it's now known to be heads it has been prepared in the state heads we can do the experiment over and over and over again and always get the same answer all right so uh a device that measures is also a device that prepares
+
+00:29:15
+a system in a given state of course the same thing would be true had the device determined in the first round that Sigma was minus one then it would continue to uh to detect the same thing of course there can be bad detectors not all detectors are wellmade and uh not all detectors work the way you want them to work in which case it just wasn't a good detector it didn't do what you wanted it to do what does heads and tails have to do with any at this point what's the purpose of having a
+
+00:29:56
+heads and a Tails there's just two possibilities I you want to know you want to know what it actually has to do with a head and a tail there's just two possibilities I just use that uh for familiarity doesn't have anything to do with heads and tails okay now we're going to do something new we're going to do a new experiment first first we're going to start with a preparation the preparation determined that the spin was or a spin I call it a spin I'm giving away it is a
+
+00:30:42
+spin the Cubit is in the state plus one all right so the cubit in the other notation is an arrow pointing up we've prepared it we now know we can do it a few times to check but once we check it we now know that this Q bit is up and if we continue to do it we will continue to get the same answer but now we're going to do something funny after we've determined or prepared the cuit we're now going to take the detector and turn it over a I don't know this side up we've turned the detector
+
+00:31:35
+over and now we're going to probe the cuit again and what do we learn in this case we discover we discover that instead of getting + one we get minus one by turning the detector over we get the opposite answer what is this telling us what is this telling us about the nature of this system what it's telling us oh and of course then if we uh if we uh take our upside down detector and continue to do the experiment over and over we'll continue to get minus one of course what happens if after we do it 35
+
+00:32:27
+times we determine we we turn the detect the back upright then we get plus one what we are learning is that whatever this system is this particular Cubit has a sense of directionality to it that when I drew it as up versus down there really was a sense in which orientation is being distinguished by turning turning the detector upside down I interchange up and down well that's what I normally mean by up and down turn it over look at it upside down and it changes the sign of the Cubit that's an
+
+00:33:13
+indication that the Cubit has some directionality in space spatial directionality associated with it now not all cubits do have spatial directionality associated with them but by doing this experiment we discovered that whatever this Cubit is it really does have a sense of orientation an upness and a down to it in space so that's a piece of interesting information we might begin to suspect that it's a vector we might begin to suspect that since it has a directionality in space it's a
+
+00:33:49
+vector when it's pointing up it's different than what it's pointing down we can make well yes all right so that's that's the basic idea of a cubit which also happens to have a sense of directionality it's like this like this pin and our detector when we measure it either measures it up or measures it down but now we're going to do something else oh we might here's what we might believe here's what we might believe given that the detector has an orientation to it and it does have an
+
+00:34:23
+orientation to it there's a right side up and a wrong side up in fact in the detector we might even think that there's something which is itself an orientation something built into the detector which has an orientation in it and you know what we might think we might think that this detector is detecting the value of the component of a vector along the direction of the detector itself so when the detector is right side up and it detects this thing here it's detecting the component of some Vector
+
+00:35:08
+in the plus Direction when you turn the detector over it's measuring the component of the same object except with respect to an axis which has been flipped so you might might start to think this thing is a vector this Cubit okay so now we do something and say all right let's let's do something else now let's turn the detector on its side let's turn the detector on the side we have initially determined that the qbit was up we've definitely made sure it's up we've done it a thousand times with the
+
+00:35:45
+right side up detector and we know for sure it's up it's not down and now we detect take the sideways detector uh a this side up over here with its internal arrow pointing in this direction over here and what should we expect ordinarily ordinarily we would say well if this thing is going to measure now not the vertical component of some Vector but the horizontal component of some Vector we know that that Vector was pointing upward by the initial preparation what should you get here well what's the component of this Vector
+
+00:36:31
+along the horizontal axis zero so the answer is we should get zero If This Were classical physics and this were a classical little Vector that's exactly what we would get so we go and do the experiment probe it and we get not zero but either one or minus one again which one do we get one or minus one one and minus one sort of seem to be symmetrically located relative to the axis of the detector so I say all right we got I got one let's do this experiment a whole bunch of times let's
+
+00:37:14
+go back let's go back get us a new Cubit throw this Cubit away we're finished with it get us a new Cubit make sure that it's pointing up and do the same experiment again well we might get plus one again but again again we might get minus one we do it many many times exactly the same experiment with a cubit known to be pointing up and we measure what we would have like to think was the horizontal component of it and we always get plus one or minus one randomly randomly but in such a way that
+
+00:37:55
+if you do it a great many times then the average value is zero as many Zer as many plus ones as minus ones so you do it a great many times and you find every single one of them is either plus one or minus one but on the average it adds up to zero you said you threw the Cubit away what if you kept the cub and looked at it again well if you reoriented it if you reoriented it and made sure was up again then it wouldn't matter whether it was a new Cubit or not if you look at the same Cubit with the side waves and
+
+00:38:34
+you look at it okay super good question all right good good good so let's go back good question we started with a cubit known to be up we made a detection and we got + one the implication of that is the qbit is lying in the horizontal Direction somehow somehow we've Det detected a + one but a plus one relative to a new axis not the original axis but a new axis supposing we now take that same Cubit don't modify it but do the same experiment over and over and over again we will always get the same +
+
+00:39:19
+one with right once that Cubit has registered + one and we don't disturb it do the experiment again again and again we will continue to get plus one in other words we will confirm we will confirm the experiment yeah the difference between the two actions that you projected from going from top side to the bottom side that's 180° whereas the other is only a 90° that's right that's that's right when I turn the Detector by 90° I no longer have definiteness about the answer the answer
+
+00:39:58
+is random but only the first time once I do it once I do it and I determine whether the horizontal component is+ one or minus one then it's determined and if I do the same horizontal experiment over and over again I will continue to get the same answer okay well then I could come back and say okay now having done that and been pretty sure that the horizontal component of it is in the plus Direction I can come back and turn my detector again guess what will happen I will find a random result half the times plus half the
+
+00:40:43
+times minus but again once it's determined and I do it over and over and over again it stays the same yeah this is probably not important but on your sideways uh detector M your arrows are I think going the wrong way how so uh they point from a oh oh oh this was an a here yeah this side off I right yes you're right you're right that's interesting okay so there therefore after having done this experiment and found out that I get a plus one I do it over and over and over a few times I get a plus one each time
+
+00:41:39
+let's say then I take the detector and turn it around by 180° what do I get minus one but what happens if I only deter it by 90 degrees random right all right but what uh random means a particular the kind of Randomness equal probability for up and down all right equal probability for Plus for plus one or minus one and that means that if I were to do the same experiment the whole thing over and over uh perhaps with a whole bunch of different cubits I have a whole I have a whole reservoir of cubits over here lots of
+
+00:42:22
+them I don't I don't even know what direction they're are they're in whatever they're doing and I take them one at a time I subject them to the first experiment if I get up I keep them if I get down I throw them in the trash at the end of the day what I've gotten myself is a whole bunch of cubits known to be pointing up now I take one of them and subject it to the sideways experiment I may get one or maybe get one minus one good I record what I got throw it away go to the next one do
+
+00:43:06
+the same experiment I may get plus one minus one record what I get take this whole collection large collection of them and do the sideways experiment for all of them what will be the average result 50% zero 50% zero I will have as many plus ones as minus On's and so the average will be zero let's write that in this case here by saying that the average value we need a symbol for the average value but after this experiment here we will discover that the average value of the X of the horizontal
+
+00:43:53
+component of the uh Cubit here is zero classically if we would have created a little Vector in the up Direction and we measure the horizontal component we simply get zero in the real world in the real world of quantum mechanics we always get plus or minus one but in such a way that the average is zero is that true even if you don't throw away the ones that were measured to be minus one yeah actually it's still uh it's still true yeah that is that's correct yeah yeah the answer is yes
+
+00:44:32
+yeah in your description either detector or the Cubit seems to have some type of memory to it some type of yeah we're that's right we're assuming that uh that the law of motion of the cubbit is that nothing happens to it so it remembers when you when you detect it and then you detect it again instantly after it it hasn't changed right that's correct right now later on we're going to consider possibilities where during the intervening time between measurements some interesting thing may happen but at
+
+00:45:10
+the moment we're supposing nothing interesting happens in between it's the analog of the classical coin whose law of physics was just nothing happens we don't talk about collapsing a a wave function [Applause] that's of course what's going on but uh but no let's not talk about that yet let's talk about the um operational things that we might do to discover the laws of quantum mechanics and then then we'll put some words on them such as collapse of the wave packet okay
+
+00:45:59
+so things are funny in some average sense the horizontal component of something is zero but in each individual instance you only get plus one or minus one now let's go a little further let's oh incidentally the same thing would be true if instead of turning the detector this way we deter we turned it this way so that the internal Vector was pointing outward would still be true same thing okay now let's do a little different experiment same setup to begin with but instead of rotating the Detector by
+
+00:46:44
+90° let's rotate it by 45° in fact any angle let's not do 45° let's rotate it by an arbitrary angle so that the internal detector orientation is now characterized by some angle Theta relative to the vertical so it's been rotated by angle Theta and do the same experiment now we take the first qbit subject it now to the um uh to the detector oriented at angle Theta what do we get + one or minus one do it again what do we get + one or minus one what do we get do it again plus one or minus one never anything in
+
+00:47:53
+between but in this case the average value value of the experimental value of what comes out here is not equal to zero it's equal to what do you expect it to be equal to cosine of theta cosine of the angle exactly like the X component of a vector would be or exactly like uh yes exactly like the component of this Vector along the detector axis the component of this Vector along the the the detector axis would be smaller by amount cosine Theta classically Quantum mechanically we simply get + one minus
+
+00:48:46
+one plus one plus one minus one plus plus plus whatever uh in such a way as to average to the cosine of the angle as the detector gets more and more upright cosine Theta gets closer and closer to one and that just means it gets closer and closer to the value to the uh to the to to the answer if the detector were perfectly upright now and then you might get a minus sign but mostly plus signs and as soon as the detector gets perfectly right side up all plus ones what about when the detector is almost upside down well then you get
+
+00:49:33
+mostly minus ones but here and there a few plus ones and so it seems that the average values of Sigma are behaving as if Sigma was the component of a vector this is something you know really different this is because you've prepared these as UPS if you just took raw cubits You' get all 50/50 you get zero right Thea is only because you started with the UPS yes uhhuh yes that's true why do we need a collection of cubits why do we need what a collection of cubits since nothing is happening to the
+
+00:50:21
+Cubit why can't you take the same one again and again no if you take the same one and do it over and over again with the same detector you'll just get the same answer over and over you'll just confirm the previous measurement so if you take one cubit known to be up because you've made it you you know that it's up and you subject it to this angularly distorted angularly rotated experiment you'll either get plus one or minus one but if you do it the second time you'll just
+
+00:50:56
+get the same answer you got the first time you won't learn anything new incidentally if that weren't the case there would be no way to confirm that the answer that you got the first time was in any sense the right answer the only way that you confirm that the answer is right is by checking it and uh one way to check it is just you know if I close my eyes and I look at and I look at you and I see you upright and then I close my eyes again and look at you again I've confirmed that the first time you were
+
+00:51:30
+upright but the other one is also prepared in the same state say it again the other one is also prepared in the UP State this one here second one yeah what I'm saying is if you only have one of them then all then you do the experiment you either get plus one or minus one and then if you do the same experiment again on the same one over and over you just get plus one but if you have a sequence of them and you do the experiment with a sequence of them all having been prepared the same way then you'll get a
+
+00:52:04
+uh statistical distribution yeah so if you turn off the detector and turn it on again will it still have a memory of the same unit mhm switch it off switch it off that's what I mean by measuring it again switch the detector off and do it and turn it back on so does the detector seem to store memory or the detector has an orientation to it and uh and when I say how does it know you changed or did not change the unit change the say again how does it know you changed or did not change the Cub no it knows that it didn't change
+
+00:52:39
+that you didn't change the detector no but you switch the cubid and now it's reset but if you don't switch the the cuid it gives you the same reading answer is it knows it knows it gives the same it it was only one cubit you did the same isn't it I mean the the the detector isn't remembering anything it's just a cubit has changed I have a bunch of students in the audience some of them are sitting upside down some of them are sitting right side up if I randomly open my eyes at a
+
+00:53:14
+student 50% is standing up right side up or not close my eyes look at another student 50% I don't know but if I if I open my eyes and then close them then open them close them and look at the same student is always the same way how did my eyes know that the student was going to that I wasn't looking at a different student answer is I just looked at the same student okay so the whole thing is not that weird that we can't keep track and remember which of these things that we're looking
+
+00:53:52
+at yeah so so basically we can think of it as the act of observing uh causes you to prepare that particular Cubit so once you observed that one you prepared it yeah so now you're always going to get that answer until you intervene by something else doing something if if you change Cubit but leave the the measuring apparatus in the same position yeah you you you'll still get plus one okay so let's what are we going to do now well you're not you're not going to change the orientation of
+
+00:54:24
+the measuring device but you just measure a sequence of different cubits are they always going to be up you know plus one or minus one it depends it depends on how they were prepared somebody might have given you a sequence of cubits which happen to be up down up down up down up down you might have gotten them from someplace you got them from a you know from a cubit store where they weren't where they didn't have good quality control but if all of these cbits were prepared the same way and and identical way and then you
+
+00:54:59
+send them through here they will continue to be identical right um okay so what this is telling us is there's something funny about the notion of the state of a system it's not as clearcut and not as simple as the state of either a coin which is either heads or tails or a little Vector which has components in different directions but for example when you measure the component along an axis perpendicular to the known direction of the vector you get zero not so so there's something there's something intrinsically
+
+00:55:41
+different uh and the difference does trace to the big difference between the notion of a state in quantum mechanics and a state in classical mechanics one point you had here uh everything up plus one and then one by one you turn it and some are plus one and some are minus one and that each one you bring up that which was minus one then becomes minus one back on the original if you do the experiment say again if if you uh you bring one down and let's say that it's minus one down here okay then you turn
+
+00:56:18
+the uh apparatus up again and now you said it will be minus one from now on no no not if you turn the apparatus if you turn the apparatus if you turn your apparatus I thought you said if you turn your apparatus up that if it measured minus when it was turned that it would stay minus when you turn the apparatus up when you turn the apparatus then you get a statistical distribution okay when you turn the apparatus once you have the cubbit that comes out of this apparatus let's say it was + one let's
+
+00:56:58
+say it came out plus one and now you take that CU bit over here and you turn the apparatus back up again then you're going to get a random plus or minus random then it'll be random when you turn it back up yeah so in that way then every time you turn it it'll be random random of you'll end up with a random bunch of cubits yeah yeah now it depends on the angle if the angle is not too large if the angle is small then mostly you'll get pluses right mostly you'll get pluses you
+
+00:57:35
+postulated a two-state system and then a detector but what would be the difference in logic and saying your your Sigma was a variable because your detector is a two-state system that you seems like you get the same output s here you you've postulated a two-state system plus and minus one but then you have a detector that always produces plus and minus one if you postulated a variable to start with your detector seems like it would still give you what your detector would still be what you're it seems like you're you're
+
+00:58:12
+really saying your detector is a two-state system that you can Orient and it doesn't seem to imply that right State no no you're absolutely right that at some point we have to come back to this and St say the detector is a system and it has States and understand the combined system as a Quantum system composed out of two Quantum systems but let's let's not do that yet let's uh let's divide the world into detectors and systems and then come back later and say look a detector
+
+00:58:50
+really is a system and we have to be able to describe it quantum mechanically ALS Al as a system and to understand the entire thing as the interplay between two Quantum systems but that would take that that will take some uh some steps before we get there what if change what what what if we change the axis of rotation does it matter you mean if we rotate this way instead of yeah no it doesn't matter so I mean uh if we do one rotation in one using one axis and then different axis yeah right you're right you're right in
+
+00:59:33
+guessing that the whole story is much more complex but still um the story is more complex but not inconsistent with what I said so don't try to guess too far ahead don't try to guess too far ahead let's take the simple uh version of it first and then we'll eventually come to a much more Rich understanding of it so for now is it correct to think of the detector as something that could potentially return a continuous value from plus one to minus one but the system will only be the Cubit will only St for now yes right
+
+01:00:08
+right if you like you may think of yes for now we may think of the detector as a thing which can be oriented in any direction and when we measure it it behaves like a classical system yeah eventually we'll have to reconcile that with the idea that detectors themselves are Quantum systems uh and uh have to respect the same laws as the systems themselves okay okay now let's I leave you I leave you with that the Ponder now and we're going to separate from this for a while and discuss mathematics we're going to
+
+01:01:00
+discuss the mathematics of the state space or the space of states of a Quantum system and as I said it's not a set it is not a set in the same sense that the set of uh configurations of a die is a is a set of six configurations it's more complicated all right but we need some mathematics we need some mathematics we need some abstract mathematics and the mathematics as I said it's not the mathematics of set theory it's the mathematics of vector spaces now let's just uh discuss the
+
+01:01:37
+word Vector for a moment you're familiar of course with the idea of a vector a vector is an arrow pointing in a certain direction in ordinary space and that's one concept of a vector but there's a more abstract notion of a math matical Vector space and mathematical Vector spaces can Encompass many many kinds of mathematical objects which are not necessarily pointers along a axis in space I generally when we get to this point I generally make a new name a non-conventional name that nobody else
+
+01:02:18
+that I know of uses for the notion of an ordinary Vector in ordinary space in other words a thing pointing in ordinary space space I call it a pointer to distinguish it from the abstract mathematical concept of a vector we're going to talk now about the abstract mathematical concept of a vector don't think of it as pointing in three-dimensional space ordinary three-dimensional space we'll discuss in what space it points right all right so let's uh talk about Vector spaces a vector Vector space is a
+
+01:02:57
+collection of mathematical objects just like numbers are a collection of mathematical objects and numbers just the real number axis for example is a vector space it's a special case of a vector space it's a one-dimensional vector space complex numbers are two-dimensional Vector spaces all right we're going to be talking about Vector spaces of for the moment unknown dimensionality and we're just going to write down a mathematical notation for an object object in the vector space and
+
+01:03:28
+as I said Vector space is now just a name for a collection of mathematical objects completely abstract a is a vector and that's the notation for an abstract Vector it's dirx notation and it consists of a vertical line a crooked line and a letter in between and that stands for the Vector a whatever the vector a is what can you do with vectors well you can add them I'm not going to tell you how to add them I'm just going to tell you that given any two vectors A and B you can form their
+
+01:04:15
+sum and their sum is another Vector let's call that other Vector the vector C so a vector space consists of a collection of objects which can be added numbers I'm I'm I'm sorry I'm just confused Vector versus Vector space Vector space is a collection of vectors right a vector space is a collection of vectors the same distinction between number and numbers the numbers are all the numbers number is a specific number okay so as I said numbers are a special case of this you can add
+
+01:04:57
+them okay you can do something else with numbers you can multiply them by other numbers well you eventually we will talk about multiplying vectors but not yet what we can do is multiply vectors by numbers ordinary numbers or complex numbers and we're going to be thinking about complex numbers I hope everybody is comfortable with complex numbers if not you got to quickly get up to speed on complex numbers but we're not we don't need to know too much you need to know that a complex number is a combination of a real number
+
+01:05:38
+and an imaginary number and uh how to multiply add complex numbers and you need the notion of complex conjugate how many people here are familiar with the concept of complex conjugate most people right almost everybody so so I'm not going to go in it now but basically for every complex number there is another complex number with it it's complex conjugate it's a mapping between numbers and their complex conjugates that's an important notion keep it in mind because it's going to come back but for the
+
+01:06:17
+moment ordinary vectors let's go back to or you know pointers pointers in space ordinary pointers you can multiply by ordinary numbers positive or negative a pointer which is of a certain length in that direction if you multiply it by two it's just twice as long in the same direction multiply it by minus one it just becomes in the same direction except in the opposite well you know in the opposite direction so yes you can multiply vectors by numbers and in a complex Vector space we're now going to talk about complex
+
+01:06:55
+Vector spaces you can multiply vectors by complex numbers now do not try to picture this in your head as any kind of pointer in some Direction Just except we're now talking about a mathematical abstraction where a vector any given Vector can be multiplied by any complex number I'm going to use let's see what shall I use for complex number uh I in my notes I used C but I don't want to use c z Z is a standard notation for you know X Plus i y is equal to Z so you can take any complex sorry any Vector multiply it
+
+01:07:36
+by any complex number and it is still some I'm not going to try to draw it for you stop trying to think about drawing vectors if there is a vector and there's a complex number you can multiply them and it gives you some new vector let's call it uh well let's call it a prime so you can multiply vectors by numbers complex numbers and that's about it that uh that's all it really is to a vector space any set of objects for which you can do this is a vector space give you some examples of vector spaces if A's
+
+01:08:23
+and B's are comp a are uh if A's and B's are just real numbers then you can add them to make new real numbers but you cannot multiply them by complex numbers and still expect to get real numbers okay you can multiply them by real numbers and get other real numbers so the real numbers are a real Vector space how about the complex numbers are the complex numbers a uh a complex Vector space space yes you can add them and get new and get other complex numbers any two complex numbers you can
+
+01:09:03
+add and any complex number you can multiply by another complex number and get back a complex number so the complex numbers are the simplest example of a complex Vector space okay let me give you another example of a complex Vector space this one's incredibly complicated but still pretty easy to write down take any function of a variable let's call it s of X now X may be an ordinary real variable a function on a line function on a line but it's a complex function on a line it has a real
+
+01:09:43
+and imaginary part complex function on a line can you add two functions and get another function certainly so function just functions are things you can add to get other functions can you multiply a complex function by a complex number and get a complex function yes take any complex function multiply it by a complex number you get another complex function so so functions form a vector space now that's a complicated idea and I don't want to get that complicated yet so let's erase that from the Blackboard
+
+01:10:27
+I'll give you another Vector space another complex Vector space let's just make some symbols a bracket and put in entries two entries into the bracket and the two entries are the themselves complex numbers alpha 1 and Alpha 2 Alpha equals a complex number both alpha 1 and Alpha 2 and Alpha 1 and Alpha 2 can be anything the collection of such symbols is also a complex Vector space Here's the rule supposing you have two of them here's one and here's another one beta 1 beta 2 and you add them what
+
+01:11:21
+does that mean definition the definition of the sum of two these are called columns the sum of two columns like that is just to add the entries alpha 1 plus beta 1 Alpha 2 plus beta 2 so given any two abstract symbols in which the entries are filled in with complex numbers any two of them Alpha and beta we can add them and get a third one okay so column vectors like this little Columns of two entries like this satisfy the first rule and the second rule is that if you want to take a column and multiply it by a complex
+
+01:12:14
+number all you do is multiply each entry by the complex number you multiply each ENT separately and then you construct something which is just Z times that so just pairs of complex numbers like this form a vector space it's a very abstract concept but not very hard how about triples of them sure right so any length of column like that now what you don't want to do is add a column of two to a column of three you don't have a rule for that all right so Columns of different length form different Vector spaces
+
+01:13:04
+completely different abstract Vector spaces any question about the meaning the ab and this is not hard but it is abstract are those the only two requirements for Vector space yeah well I think it's also important that there be a zero Vector zero V Vector is the unique Vector which when you add it to any other Vector gives back the same uh the same uh the same Vector right I I didn't feel like writing it down but uh closure requirement the general closure requirement the result be closed under
+
+01:13:43
+under what particular space closed under addition I think right Clos under multiplication by which I think you've Illustrated yeah yeah yeah that's right is this the same as wees this is the same as matrixes as a what mat Matrix yeah this is a usually the term matrices in this class in any case will be reserved for square matrices Square matrices are collections of numbers which form Square arrays as many rows as columns but the general notion of a matrix can have different numbers of rows in
+
+01:14:26
+columns and the vector would be a matrix with only one column in this case two rows so yes this would be a special case of a matrix but um you know in many context one reserves the term Matrix for a square Matrix and I will use it that way I will use the term Matrix to mean a square Matrix uh so I I didn't want to use that terminology okay are are you thoroughly uh saturated with abstract mathematics this is this is this should be this should be um straightforward for you okay now we introduce another
+
+01:15:16
+abstraction another abstraction basically it's the abstraction of a comp given a complex Vector space the complex conjugate of the vector space the complex conjugate of the vector space is sort of the space of complex conjugate vectors just like you can have for any number a complex conjugate any uh complex number there's a complex conjugate to go with it so in that sense the complex number system uh has a a a dual version which is the complex conjugates of the original numbers so do the complex conjugate Vector spaces and
+
+01:16:09
+roughly speaking the complex conjugate Vector space or the the Dual Vector space usually called a dual is roughly speaking the complex conjugates of the original vectors we'll make that more precise as we go along but what it is is a separate vector Vector space whose elements are in one: one correspondence with the elements of the original Vector space so if there is a vector a in the original space let write it this way then there is a vector in the Dual it's called the Dual Vector space but as I said it is
+
+01:16:52
+more or less the complex conjugate and it's written this way it's just written as a backward dra symbol we learned to call these things bra vectors and these things K vectors but no this is the K Vector this is the bra Vector but for the moment they're just symbols um an example if the vector space is just the space of complex numbers then the Dual Vector space is just the space of complex conjugates of those numbers okay okay so there's a one toone correspondence between vectors and their
+
+01:17:34
+complex conjugates Let's uh write down first some postulates about the complex conjugate Vector space and then test it out by seeing if we can find a concrete representation of the notion we'll write down some abstract postulates and then check just as we did did here we said here's a concrete representation of the Notions that we wrote down over here let's write down the abstract postulates about the Dual Vector space right so first of all for any Vector there is a dual Vector they're in on to one
+
+01:18:23
+correspondence next if you take two vectors and you add them together then the Dual of the sum is just the sum of the DU so if you take a vector which is made up out of the sum of two other vectors then Its Reflection In the Dual space is just the sum of the individual dual vectors these are postulates these are postulates if you like but they're not so obscure the third assumption is that if you take any vector and multiply it by a complex conjugate Sorry by a uh by a complex number then Its Reflection In the Dual
+
+01:19:24
+space now anybody want to guess of course it involves the Dual Vector to a but not multiplication by Z but multiplication by the complex conjugate of Z Zar Zar is the complex conjugate of V of Z this would be true of complex numbers if you take a complex number and multiply it by another complex number then the complex conjugate of the whole thing is the product of complex conjugates that's all this is saying so we think of the Dual Vector space as basically just the complex conjugate Vector space in some
+
+01:20:12
+sense okay let's see if we can make any sense out of this in terms of um in terms of these column vectors here quick question yeah is is a plus b the same as B plus a yes yes a plus b is the same as B plus a good question yes when you add vectors and you can see that from here I should have all right I I'm sorry somebody asked me are there any other rules about the definition of vector spaces and indeed there are among other ones uh this that may be all there is that it doesn't matter which order you
+
+01:20:46
+you you add them in yes but you can see that here uh the sum of two vectors is just given by numeric adding the complex numbers here and of course numerical addition of complex numbers doesn't matter which way you you order them good so that's a good point okay so let's come back now to let's put this up on top and come back to this concrete non-abstract representation of the complex uh Vector space here we have a vector this object is representing the vector a the one that I erased with beta that's
+
+01:21:44
+representing the vector B but right now I don't need the vector B okay what about the object if if this object represents a then what is the object which represents the Dual vectors the Dual Vector the corresponding dual vector and the answer is it's the same pair of numbers except they complex conjugates the same pair of numbers not quite they're complex conjugates alpha 1 star and Alpha 2 Star but just to keep track that we're talking about a different Vector space we write it in row form not as a column
+
+01:22:30
+but as a row this is just a trick to remember that this object belongs to the Dual Vector space this object belongs to the original Vector space and that they're different all right so the Dual Vector space image of alpha 1 and Alpha 2 is Alpha 1 star Alpha 2 Star okay that's the uh that's the Dual vector and now you can check you can check uh with this definition are the postulates namely that if you add two vectors and then take the duel that whether or not you get the sum of duels and you can check whether when you
+
+01:23:22
+multiply this by a complex number and then mult and then take its duel whether it just multiplies by the complex conjugate number answer is yes so just laying out a pair of complex numbers like this makes a vector space and the Dual Vector space is the same pair of numbers except complex conjugated and laid out in a row laid out in a row just to remember uh that it's not the same creature doesn't live in the same space of things and that's the idea of uh a complex Vector space as I said again very abstract and
+
+01:24:10
+very easy final concept well it's not the final concept but a the N plus first concept I'm not sure what it is how many people find this hard it's not very hard how many people find it familiar quite a lot of people find it familiar that's good those who don't find it familiar apparently didn't find it hard that's also good the product of two vectors the inner product of two vectors the inner product of two vectors it's the analog of the dot product for pointers the analog of
+
+01:25:07
+the dot product for pointers the inner product between two vectors is strictly speaking the inner product between a vector and a vector and a The Duel of a vector given two vectors let's call them A and B one does not form the product of a with B the inner product instead one takes B and constructs its image in the Dual Vector space and then takes the product of the vector a with the Dual Vector B in dra's language you take a k vector and you multiply it by a bra vector and when you do so you make a bra CET or a
+
+01:26:09
+bracket a bracket the bracket of course is this thing over here and the two together I think this one is called the cat and this one is called a bra so it's a bra Kat so the the inner product of two vectors is really a product of a vector and the Dual of a vector now is it the same as multiplying the bra Vector a with the K Vector B question is it the same to multiply the bra B with a k a or the bra a with a k b and the answer is no the answer is no it is not the same operation but in fact they're closely
+
+01:27:00
+related the the the axium we we're still talking about axioms now the Axiom is that these two are related by complex conjugation I complex conjugated a to go from the from the K Vector to the bra Vector I complex conjugated B to go from the bra Vector to to the C Vector so if this is the product of a roughly speaking time B Star this is the product of B Star time a this is the complex conjugate of this so a another postulate another axium of uh of complex Vector spaces is that the inner product of
+
+01:27:51
+a with B is complex conjugate of the inner product of B with a star so what that I mean in in in normal Vector space uh language or whatever nothing to do with quantum mechanics per se I mean there the inner product is just all the vectors are in the same Vector space in an ordinary Vector space right yes but so this this this is still called an inner product even though it's kind of the special thing with the complex conjugate so yeah the the usual Vector spaces that you think about are real Vector spaces and for a real Vector
+
+01:28:34
+space for a real number there's no difference between the number and its complex conjugate so the real Vector space satisfies the same postulates except it's uh the complex conjugation is completely a trivial operation but I mean you could have a vector space where you take the inner product of two complex vectors and it doesn't it doesn't involve any conjugation just m multiply them component wise and take the S right yes you could you could invent such things then of course the
+
+01:29:02
+inner product of a vector with itself would not be real that's okay who cares so you could invent such things turns out not to be terribly useful in the context of quantum mechanics so you know it's largely a question of what's useful and what's useful winds up being this concept right but yes you could do you could certainly Define such a thing uh it's not a commonly defined thing doesn't seem to have a lot of use this structure occurs over and over in all kinds of places not only quantum
+
+01:29:40
+mechanics I mean this this complex Vector spaces are very very common things in mathematics and uh okay let's check now let's see if we can postulate a construction for the inner product of the Dual Vector beta remember we when you you complex conjugate when you take times the original Vector Alpha this is supposed to be now I guess I called it B A and I haven't all I've didn't written down the notation for B and the notation for a column Vector for a row Vector for B complex
+
+01:30:43
+conjugated right I will tell you now what the rule is again we're making up rules which will satisfy those uh postulates up there and it's a very simple construction it's just beta 1 star * alpha 1 plus beta 2 Star time Alpha 2 in other words you take the first entry of the Dual Vector times the first entry of the of the uh of the vector Alpha add it to the first ENT to the second entry times the second entry so it's actually just just a generalization of multiplying beta time Alpha but it's also a generalization of
+
+01:31:30
+the dot product if you remember about dot products of ordinary vectors you simply take the the sums of the products of the components if you have two pointers and they're labeled by components both of them then the dot product is just the sums of the products of the components does that satisfy the rules up here uh what where are the rules I think I must have erased the rule huh I did erase the rule the rule was [Music] um lost it okay what happens if you interchange Alpha and beta or A and B then this
+
+01:32:33
+becomes alpha 1 star Alpha 2 Star Time beta 1 beta 2 if I interchange them and that's equal to Alpha 1 star beta 1 plus Alpha two star beta 2 and that's just the complex conjugate of this it really is the complex conjugate so so interchanging Alpha and beta or A and B really does interchange n the value of the product and its complex conjugate that's the notion of a complex Vector space and an inner product on the complex Vector space now let's just take a couple of uh special cases of inner
+
+01:33:22
+products what about the inner product of a vector with itself or a vector with its image in the Dual space let's take the inner product of a with a what do I know about that well first of all Let's uh let's let's I'm setting b equal to a that tells me that the inner product of a Ed with itself is equal to its own complex conjugate I just substituted for for B A the inner product of a vector with itself is equal to its own com its own complex conjugate what kind of number is equal to its own complex
+
+01:34:13
+conjugate a real number so the inner product of a vector with itself is always real that's pretty obvious just from here if I take Alpha and multiply it by its image I get Alpha star Alpha plus Alpha 2 Star Alpha 2 each one of these is real not only is it real it's also something else positive Alpha star Alpha a number of times its own complex conjugate is always positive so it's real and positive the inner product of a vector with itself is real and positive and it's considered to be the
+
+01:35:03
+square of the length of the vector the square root of the inner product of a vector with itself defines the length of the vector so complex vectors have real lengths real and positive lengths also the square of the uh the uh both the square and the length itself are defined to be positive so that's not too obscure every complex Vector has a length which is the square root of the sums of the squares of its components but squares now mean uh multiply by complex conjugate next no notion important
+
+01:35:51
+notion the notion of orthogonality of vectors notion of orthogonality of vectors is as we'll see is a very important one I'll give some examples in a few minutes the notion of orthogonality between two vectors is exactly the same as it is for ordinary vectors that the inner product read do product if you like the inner product is zero if the inner product of two vectors is zero they are said to be orthogonal it defines or perpendicular okay so two vectors are orthogonal if the inner product between
+
+01:36:43
+them is zero let's see if we can make up some orthogonal vectors it's very easy oh oh oh what about reading what about uh if I take the inner product the opposite order it's just a complex conjugate of zero but the complex conjugate of is zero of zero is zero so saying that two vectors are orthogonal it doesn't matter which order you put them in the notion of orthogonality doesn't depend on order although the general idea of in a product does right so now we have the notion of
+
+01:37:24
+orthogonal vectors in a real Vector space how do you define the dimensionality of the real Vector space or give me a definition of the dimensionality there many definitions of course but uh anybody have one entries on the vector yeah but let's let's work in a more abstract way without uh without uh yes that's of course correct but uh the maximal number of orthogonal vectors that you can find in the space okay so if the vector space is two-dimensional ordinary two-dimensional Vector space there are two mutually
+
+01:38:09
+orthogonal vectors you cannot find a third Vector which is orthogonal to both of them right so the maximal number of mutually orthogonal vectors in three dimensions where's my I've got three mutually orthogonal vectors of course there are many sets of three mutually orthogonal vectors but given three I cannot find a fourth one right so a three-dimensional Vector space has a maximum number of three mutually orthogonal vectors and the same is true or the same definition it's definition is true for a
+
+01:38:48
+complex uh Vector space the maximum number of orthogonal vectors that you can find find is equal to the dimensionality of the space it does correspond to the number of entries here the number of components it is the same and you can prove that it's a little exercise prove that the number of components of the vector is the same as the number of mutually orthogonal vectors but let's just talk let's just are there any mutually orthogonal vectors we can write down sure loads and loads of them but a very
+
+01:39:23
+simple case would be 1 Z Now one and zero are one and zero complex numbers well yeah real numbers are special cases of complex numbers so a real a complex number can be real here's one and here's another one uh 0 one this one has a one in the first place it has a zero in the first place this one has a zero in you get the idea the inner product is 0 * 1 + 1 * 0 okay so the two vectors or let's let's just write it in terms of column vectors one Z and 01 one0 and 01 are orthogonal vectors the inner product of this one
+
+01:40:17
+with the Dual of this one is zero that's because 1 * 0 + 0 0 * 1 is just zero all right so there are plenty of orthogonal vectors around but in two dimensions in theist two Dimensions once you found two of them you cannot find a third so there's a little exercise prove that there can be no Vector which is both orthogonal to this and orthogonal to that that's not hard to do it's very easy to do hm oh oh yeah yeah Z 0 is always orthogonal to everything right yeah yeah uh right so one should be careful and say the
+
+01:41:07
+maximal number of nonzero orthogonal mutually orthogonal vectors good point right okay um that's a mathematical interlude for tonight complex Vector spaces and the next time we will discuss how the space of States and what it means for the space of states of the simple cubits to be two dimensional Vector spaces very very different than saying that they consist of points in a set the space of states is in fact a vector space and then try to make contact with the mathematics of vector spaces and the
+
+01:41:49
+strange things that are happening or that seem to be happening here with these uh these um uh these funny properties of measurements that's where we want to go so we've done some Physics some experimental physics on this Blackboard up there and we've done some abstract mathematics over here and next time we want to connect them and show what uh what the abstract mathematics how it represents or how it can be used to represent this unusual kind of uh uh logic of cubits working strictly over the
+
+01:42:29
+patterns is it going to be meaningful to define a multiplication operation where we create a 2X two Matrix which would be beta one star alpha 1 data star Alpha One you're asking yes the answer is yes yes absolutely we'll construct inner products outer products so all sorts of products yeah yeah that's right the outer product of two MJ of two vectors is a matrix yeah yeah and of course how do you represent it uh just well the outer product of two vectors is represented this way and it is a matrix but we'll come to
+
+01:43:21
+that all the postulates apply to a vector space of functions for example as well is less obvious than yeah a vector space of functions can be thought of as column vectors but in but where the entries are continuous so we have alpha alpha is the function and Alpha of the first entry alpha of the second entry instead of that we have a continuous family of Alphas Alpha evaluated at Point X1 Alpha evaluated at Point X2 Alpha evaluated at Point X3 and of course we can't really write it as a literally as a as a um as
+
+01:44:05
+a discrete collection like that but if you like think of these Alphas here alpha 1 and Alpha 2 is just a function of two variable a function of an entry one and two instead of a function of X it's a function of a variable which is either one or two so yes complex functions form complex Vector spaces the inner product we will we will discuss that right back on the upper left board where you have that apparatus turned at anglea if you consider the sequence of inputs going to outputs the proportion of minus
+
+01:44:50
+1es to ones would be given by cosine Theta is there anything interesting about the distribution of the minus ones within the ones what does that mean well like higher order statistics maybe still what does it mean oh oh oh they're just completely random completely random yeah just a completely random variables you're talking about the relationship between the different uh replications a whole bunch of spins and you subject them all to the same and the question is you I think you're asking
+
+01:45:26
+whether there are correlations between them no no they're completely independent uncorrelated uh variables so still with the Cubit experiment there um does it make sense to say that when you when you're measuring the Cubit you're you're you're affecting it so you're actually preparing in a new state yes yes yes yes that's exactly right that's why you the first time does some something and the second time keep that and that's a big difference between classical mechanics and quantum
+
+01:45:58
+mechanics in classical mechanics you can measure something sufficiently gently to not affect it to not disturb it in quantum mechanics whenever you measure something you always disturb it so this is an example of how measuring something disturbs it and puts it into a new state and that's a that's a good point yes okay for more please visit us at stanford.edu
+

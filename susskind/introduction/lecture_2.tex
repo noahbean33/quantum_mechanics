@@ -1,0 +1,280 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 2}
+\lhead{Quantum Mechanics --- The Theoretical Minimum}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{postulate}{Postulate}
+\newtheorem{definition}{Definition}
+
+\title{\textbf{Lecture 2: Spin States and Vector Spaces} \\ \large Quantum Logic, Bra-Ket Notation, and Representing Spin-$\tfrac{1}{2}$}
+\author{Based on Leonard Susskind's \textit{The Theoretical Minimum}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Review: The Spin and Its Apparatus}
+% ============================================================
+
+The qubit is now called a \textbf{spin}.  The word ``spin'' carries the connotation that the system has a sense of spatial direction---it is not just a featureless coin.
+
+\medskip
+\noindent\textbf{Terminology.}  An ordinary arrow in 3D space is called a \textbf{three-vector}.  The abstract elements of a complex vector space are simply called \textbf{vectors}.  Do not confuse the two.
+
+\subsection{1.1 Three components of spin}
+We set up coordinate axes: $z$ (vertical), $x$ (horizontal), $y$ (out of the board).  When the apparatus points along the $z$-axis, we say it measures $\sigma_z$.  Rotated to point along $x$, it measures $\sigma_x$; along $y$, it measures $\sigma_y$.
+
+\begin{itemize}[nosep]
+    \item No matter what direction the apparatus points, the outcome is always $+1$ or $-1$---never any intermediate value.
+    \item This is strange: for a classical unit vector, the component along an arbitrary axis ranges continuously from $-1$ to $+1$.
+\end{itemize}
+
+\subsection{1.2 The general experimental law}
+Prepare the spin along unit three-vector $\hat{n}$; measure along unit three-vector $\hat{m}$.  Each trial yields $\pm 1$, but the statistical average over many identically prepared trials obeys
+\[
+    \boxed{\expval{\sigma_m} = \hat{n}\cdot\hat{m} = \cos\theta_{nm}.}
+\]
+If $\hat{n}=\hat{m}$ (same axis), $\expval{\sigma}=1$: every trial gives $+1$.  If $\hat{n}\perp\hat{m}$, $\expval{\sigma}=0$: equal numbers of $+1$ and $-1$.  If $\hat{n}=-\hat{m}$ (opposite), $\expval{\sigma}=-1$: every trial gives $-1$.
+
+\subsection{1.3 Classical vs.\ quantum measurement}
+In classical physics, measurements can be \emph{arbitrarily gentle}.  You can shine arbitrarily weak light on an object, form an image, amplify it, and learn everything without disturbing the system.
+
+In quantum mechanics, \textbf{every measurement inevitably changes the system}.  If you prepare $\sigma_z=+1$ and then measure $\sigma_x$, the act of measuring $\sigma_x$ randomizes $\sigma_z$.  A subsequent measurement of $\sigma_z$ will give $\pm 1$ with probability $\frac{1}{2}$ each.  Reproducibility holds only when you repeat the \emph{same} measurement.
+
+% ============================================================
+\section{2. Quantum Logic vs.\ Classical Logic}
+% ============================================================
+
+\subsection{2.1 Classical propositions as sets}
+For a die with states $\{1,2,3,4,5,6\}$:
+\begin{itemize}[nosep]
+    \item Proposition ``even'' $\to$ subset $\{2,4,6\}$.  NOT ``even'' $=$ ``odd'' $\to$ $\{1,3,5\}$ (complement).
+    \item \textbf{AND} $\leftrightarrow$ intersection of subsets.
+    \item \textbf{OR} (always the inclusive or) $\leftrightarrow$ union of subsets.  ``$A$ or $B$'' is true if $A$ is true, if $B$ is true, or if both are true.
+\end{itemize}
+
+\noindent\textbf{Spin analogy:} For the spin, $\sigma_z = +1$ and $\sigma_z = -1$ are mutually exclusive---no state can be both.  ``NOT ($\sigma_z=+1$)'' is simply ``$\sigma_z=-1$.'' So far this resembles classical logic.
+
+\subsection{2.2 Quantum propositions fail classical logic}
+Consider two propositions about a spin secretly prepared in $\ket{\uparrow}$ (i.e.\ $\sigma_z = +1$):
+\[
+    A:\; \sigma_z = +1, \qquad B:\; \sigma_x = +1.
+\]
+
+\noindent\textbf{Experiment 1: measure $A$ first.}
+\begin{enumerate}[nosep]
+    \item Measure $\sigma_z$: get $+1$ with certainty (the spin was prepared up).
+    \item Since $A$ is true, ``$A$ OR $B$'' is \textbf{certainly true}---we need not even check $B$.
+\end{enumerate}
+
+\noindent\textbf{Experiment 2: measure $B$ first.}
+\begin{enumerate}[nosep]
+    \item Measure $\sigma_x$: get $+1$ or $-1$ with probability $\tfrac{1}{2}$ each (spin was prepared along $z$, perpendicular to $x$).
+    \item Suppose we got $\sigma_x = -1$.  The measurement has now \emph{prepared} the spin along $-x$.  When we subsequently measure $\sigma_z$, we get $+1$ or $-1$ with probability $\tfrac{1}{2}$ each.
+    \item So with probability $\tfrac{1}{2}\times\tfrac{1}{2}=\tfrac{1}{4}$, \emph{both} $A$ and $B$ are $-1$, making ``$A$ OR $B$'' \textbf{false}.
+\end{enumerate}
+
+\medskip
+\noindent The truth of ``$A$ OR $B$'' \emph{depends on the order} of measurement.  In classical logic, OR is symmetric and order-independent.  In quantum mechanics it is not.  This is because checking $B$ (measuring $\sigma_x$) disturbs the value of $A$ (the state of $\sigma_z$).  The entire framework of classical propositional logic, built on sets and their intersections/unions, breaks down.
+
+% ============================================================
+\section{3. Vector Spaces --- Mathematical Framework}
+% ============================================================
+
+The space of states of a quantum system is a \textbf{complex vector space}.  This is the central mathematical postulate.  (Review of definitions from Lecture~1; we include them here for completeness.)
+
+\begin{definition}[Complex vector space]
+A set $V$ with two operations:
+\begin{enumerate}[nosep]
+    \item \textbf{Addition}: $\ket{A}+\ket{B}=\ket{C}\in V$.  Addition is commutative.
+    \item \textbf{Scalar multiplication}: $z\ket{A}\in V$ for any $z\in\mathbb{C}$.
+    \item There exists a \textbf{zero vector} $\ket{0}$.
+\end{enumerate}
+\end{definition}
+
+Note the key contrast with classical physics: in a set, you cannot ``add'' two states to get a third.  In a vector space you can.  This ability to form \emph{superpositions} is the mathematical root of all quantum weirdness.
+
+\subsection{3.1 Dual space (bra vectors)}
+For every ket $\ket{A}$ there is a dual (bra) vector $\bra{A}$, living in the \emph{dual vector space}.  Rules:
+\begin{align}
+    \bigl(\ket{A}+\ket{B}\bigr)^\dagger &= \bra{A}+\bra{B}, \\
+    \bigl(z\ket{A}\bigr)^\dagger &= z^*\bra{A}.
+\end{align}
+The complex conjugation of $z$ in the second rule is essential.
+
+\subsection{3.2 Inner product}
+\[
+    \braket{B}{A} \in \mathbb{C}, \qquad \braket{B}{A} = \braket{A}{B}^*.
+\]
+\begin{itemize}[nosep]
+    \item \textbf{Length squared}: $\braket{A}{A}\geq 0$, always real and positive (zero only for $\ket{0}$).  Analogous to $\vec{a}\cdot\vec{a}$ for three-vectors.
+    \item \textbf{Orthogonality}: $\braket{A}{B}=0$ means $\ket{A}$ and $\ket{B}$ are orthogonal.  Since $\braket{A}{B}=\braket{B}{A}^*$, orthogonality is symmetric.
+    \item \textbf{Dimension} = maximum number of mutually orthogonal nonzero vectors.  For columns of length $N$, this is $N$.
+\end{itemize}
+
+\subsection{3.3 Concrete representation: column vectors}
+A two-dimensional complex vector space:
+\[
+    \ket{A} = \begin{pmatrix}\alpha_\uparrow\\\alpha_\downarrow\end{pmatrix}, \quad
+    \bra{A} = \begin{pmatrix}\alpha_\uparrow^*&\alpha_\downarrow^*\end{pmatrix}, \quad
+    \braket{B}{A} = \beta_\uparrow^*\alpha_\uparrow + \beta_\downarrow^*\alpha_\downarrow.
+\]
+
+% ============================================================
+\section{4. States of the Spin}
+% ============================================================
+
+\begin{postulate}[State space]
+The space of states of a single spin is a \textbf{two-dimensional complex vector space}.  The states $\ket{\uparrow}$ and $\ket{\downarrow}$ (prepared by measuring $\sigma_z$ and getting $+1$ or $-1$) are orthonormal:
+\[
+    \braket{\uparrow}{\downarrow} = 0, \qquad
+    \braket{\uparrow}{\uparrow} = \braket{\downarrow}{\downarrow} = 1.
+\]
+Since the space is two-dimensional, $\{\ket{\uparrow},\ket{\downarrow}\}$ forms a complete basis.
+\end{postulate}
+
+Any state can be written as a superposition:
+\[
+    \ket{A} = \alpha_\uparrow\ket{\uparrow} + \alpha_\downarrow\ket{\downarrow}, \qquad
+    \alpha_\uparrow,\alpha_\downarrow\in\mathbb{C}.
+\]
+
+\begin{postulate}[Distinguishability $\leftrightarrow$ orthogonality]
+Two states that can be \textbf{unambiguously distinguished} by a single experiment are represented by \textbf{orthogonal} vectors.  Up and down are orthogonal because a $z$-detector tells them apart with certainty.  By contrast, $\ket{\uparrow}$ and $\ket{\rightarrow}$ are \emph{not} orthogonal---a $z$-detector cannot reliably distinguish them (a spin prepared right has a 50\% chance of measuring up).
+\end{postulate}
+
+\begin{postulate}[Probability rule]
+If the system is in state $\ket{A}=\alpha_\uparrow\ket{\uparrow}+\alpha_\downarrow\ket{\downarrow}$ and we measure $\sigma_z$:
+\[
+    P(\uparrow) = |\alpha_\uparrow|^2 = \alpha_\uparrow^*\alpha_\uparrow, \qquad P(\downarrow) = |\alpha_\downarrow|^2 = \alpha_\downarrow^*\alpha_\downarrow.
+\]
+Since total probability must be 1:
+\[
+    |\alpha_\uparrow|^2 + |\alpha_\downarrow|^2 = 1 \quad\Longleftrightarrow\quad \braket{A}{A}=1.
+\]
+Physical states are therefore \textbf{unit vectors} (normalized vectors).
+\end{postulate}
+
+% ============================================================
+\section{5. Representing the Six Cardinal Spin States}
+% ============================================================
+
+Since the space is two-dimensional, every state---including those prepared along $x$ or $y$---must be a linear combination of $\ket{\uparrow}$ and $\ket{\downarrow}$.  We now determine the coefficients.
+
+\subsection{5.1 Deriving $\ket{\rightarrow}$ and $\ket{\leftarrow}$}
+Prepare a spin with $\sigma_x=+1$ (``right'').  Then measure $\sigma_z$: we get $+1$ or $-1$ with probability $\tfrac{1}{2}$ each.  So
+\[
+    \ket{\rightarrow} = \alpha_\uparrow\ket{\uparrow}+\alpha_\downarrow\ket{\downarrow}, \qquad
+    |\alpha_\uparrow|^2 = |\alpha_\downarrow|^2 = \tfrac{1}{2}.
+\]
+The simplest choice: $\alpha_\uparrow=\alpha_\downarrow=\frac{1}{\sqrt{2}}$, giving
+\[
+    \ket{\rightarrow} = \frac{1}{\sqrt{2}}\bigl(\ket{\uparrow}+\ket{\downarrow}\bigr).
+\]
+Now $\ket{\leftarrow}$ must be \emph{orthogonal} to $\ket{\rightarrow}$ (since right and left are distinguishable) and also have $|\alpha_\uparrow|^2=|\alpha_\downarrow|^2=\tfrac{1}{2}$.  The unique (up to overall phase) solution:
+\[
+    \ket{\leftarrow} = \frac{1}{\sqrt{2}}\bigl(\ket{\uparrow}-\ket{\downarrow}\bigr).
+\]
+\textbf{Check}: $\braket{\rightarrow}{\leftarrow}=\frac{1}{2}(1)(1)+\frac{1}{2}(1)(-1)=0$.\;$\checkmark$
+
+\subsection{5.2 Reciprocal relationship}
+We can invert to express $\ket{\uparrow}$ and $\ket{\downarrow}$ in terms of $\ket{\rightarrow}$ and $\ket{\leftarrow}$:
+\[
+    \ket{\uparrow} = \frac{1}{\sqrt{2}}\bigl(\ket{\rightarrow}+\ket{\leftarrow}\bigr), \qquad
+    \ket{\downarrow} = \frac{1}{\sqrt{2}}\bigl(\ket{\rightarrow}-\ket{\leftarrow}\bigr).
+\]
+The coefficients again have magnitude $\frac{1}{\sqrt{2}}$, confirming the symmetric relationship: starting from $\ket{\rightarrow}$ or $\ket{\leftarrow}$ and measuring $\sigma_z$ gives $\pm 1$ with equal probability.
+
+\subsection{5.3 Deriving $\ket{\text{in}}$ and $\ket{\text{out}}$}
+We need a third pair with the \emph{same} properties:
+\begin{itemize}[nosep]
+    \item $|\alpha_\uparrow|^2=|\alpha_\downarrow|^2=\tfrac{1}{2}$ (equal probability for up/down).
+    \item $\braket{\text{in}}{\text{out}}=0$ (distinguishable).
+    \item When re-expressed in the $\{\ket{\rightarrow},\ket{\leftarrow}\}$ basis, the coefficients must \emph{also} have magnitude $\frac{1}{\sqrt{2}}$ (equal probability for right/left).
+\end{itemize}
+These constraints uniquely determine (up to an overall phase):
+\[
+    \ket{\text{in}} = \frac{1}{\sqrt{2}}\bigl(\ket{\uparrow}+i\ket{\downarrow}\bigr), \qquad
+    \ket{\text{out}} = \frac{1}{\sqrt{2}}\bigl(\ket{\uparrow}-i\ket{\downarrow}\bigr).
+\]
+The factor of $i$ is what makes this pair different from left/right.  It is ultimately related to the handedness (chirality) of the coordinate system.
+
+\textbf{Check orthogonality}:
+\[
+    \braket{\text{in}}{\text{out}} = \tfrac{1}{2}(1)(1) + \tfrac{1}{2}(-i)(i) = \tfrac{1}{2}-\tfrac{1}{2}=0.\;\checkmark
+\]
+
+\textbf{Check in the $\{\ket{\rightarrow},\ket{\leftarrow}\}$ basis}: substituting $\ket{\uparrow}=\frac{1}{\sqrt{2}}(\ket{\rightarrow}+\ket{\leftarrow})$ and $\ket{\downarrow}=\frac{1}{\sqrt{2}}(\ket{\rightarrow}-\ket{\leftarrow})$:
+\[
+    \ket{\text{in}} = \frac{1-i}{2}\ket{\leftarrow} + \frac{1+i}{2}\ket{\rightarrow}.
+\]
+The magnitude of each coefficient: $\left|\frac{1\pm i}{2}\right|^2 = \frac{1+1}{4}=\frac{1}{2}$.\;$\checkmark$
+
+\subsection{5.4 Summary table}
+\[
+\renewcommand{\arraystretch}{1.4}
+\begin{array}{c|c|c}
+\textbf{State} & \textbf{Ket} & \textbf{Column vector} \\\hline
+\ket{\uparrow}\;(\sigma_z=+1) & \ket{\uparrow} & \begin{pmatrix}1\\0\end{pmatrix} \\[4pt]
+\ket{\downarrow}\;(\sigma_z=-1) & \ket{\downarrow} & \begin{pmatrix}0\\1\end{pmatrix} \\[4pt]
+\ket{\rightarrow}\;(\sigma_x=+1) & \dfrac{1}{\sqrt{2}}\bigl(\ket{\uparrow}+\ket{\downarrow}\bigr) & \dfrac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix} \\[4pt]
+\ket{\leftarrow}\;(\sigma_x=-1) & \dfrac{1}{\sqrt{2}}\bigl(\ket{\uparrow}-\ket{\downarrow}\bigr) & \dfrac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix} \\[4pt]
+\ket{\text{in}}\;(\sigma_y=+1) & \dfrac{1}{\sqrt{2}}\bigl(\ket{\uparrow}+i\ket{\downarrow}\bigr) & \dfrac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix} \\[4pt]
+\ket{\text{out}}\;(\sigma_y=-1) & \dfrac{1}{\sqrt{2}}\bigl(\ket{\uparrow}-i\ket{\downarrow}\bigr) & \dfrac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}
+\end{array}
+\]
+
+\subsection{5.5 Equal probabilities for perpendicular axes}
+Starting from any one of these six states and measuring along a \emph{perpendicular} axis always gives $P(+1)=P(-1)=\tfrac{1}{2}$.  The three pairs (up/down, right/left, in/out) are symmetrically related: expanding any pair in terms of any other pair always produces coefficients of magnitude $\frac{1}{\sqrt{2}}$.
+
+% ============================================================
+\section{6. Counting Degrees of Freedom}
+% ============================================================
+
+A general state $(\alpha_\uparrow,\alpha_\downarrow)\in\mathbb{C}^2$ has \textbf{four real parameters} (real and imaginary parts of each component).  Two are physically irrelevant:
+\begin{enumerate}[nosep]
+    \item \textbf{Normalization}: $|\alpha_\uparrow|^2+|\alpha_\downarrow|^2=1$ removes one parameter.
+    \item \textbf{Overall phase}: multiplying both components by $e^{i\theta}$ does not change any physical prediction.  Every measurable quantity involves products like $\alpha^*\beta$; the common phase cancels.  This removes one more parameter.
+\end{enumerate}
+This leaves \textbf{two real parameters}---exactly the number needed to specify a direction in three-dimensional space (e.g., polar angle $\theta$ and azimuthal angle $\phi$).
+
+\medskip
+\noindent\textbf{The deep connection to 3D space.}  We found three mutually symmetric pairs of orthogonal states (up/down, right/left, in/out).  Can a fourth such pair (call them ``fat'' and ``skinny'') be found, with the same symmetric relationships?  The answer is \textbf{no}---not without increasing the dimension of the vector space.  This impossibility is precisely the statement that ordinary space has three dimensions.  If space were nine-dimensional, a spin-like system would require a higher-dimensional vector space to accommodate the additional independent directions.
+
+\medskip
+\noindent\textbf{Aside: non-unit vectors.}  In intermediate calculations, vectors need not be normalized.  A non-unit vector $\ket{A}$ can always be renormalized: $\ket{A}\to\ket{A}/\sqrt{\braket{A}{A}}$.  The physics is contained in the \emph{direction} of the vector, not its length.  In this sense, a non-unit vector and its normalization represent the same physical state.
+
+% ============================================================
+\section{7. Summary}
+% ============================================================
+
+\begin{enumerate}[nosep]
+    \item Quantum measurements are \emph{not} gentle: measuring one spin component randomizes others.  This breaks classical propositional logic (OR becomes order-dependent).
+    \item The space of states is a complex vector space, not a set.  Superposition replaces classical logic.
+    \item A spin-$\tfrac{1}{2}$ state space is $\mathbb{C}^2$ with the standard inner product.
+    \item \textbf{Distinguishable} states are \textbf{orthogonal} vectors.
+    \item The six cardinal states ($\uparrow,\downarrow,\rightarrow,\leftarrow,\text{in},\text{out}$) are determined, up to overall phase, by requiring equal probabilities ($\frac{1}{2}$) for perpendicular measurements and mutual orthogonality of opposite states.
+    \item The coefficients for $\ket{\text{in}}$ and $\ket{\text{out}}$ require factors of $i$---real coefficients alone cannot produce a third symmetric pair.
+    \item Only \textbf{two real parameters} characterize a physical state (after removing normalization and overall phase), matching the two angles needed for a direction in 3D space.
+    \item The impossibility of finding a fourth symmetric pair of states reflects the three-dimensionality of physical space.
+\end{enumerate}
+
+\end{document}

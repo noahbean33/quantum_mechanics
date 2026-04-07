@@ -1,0 +1,249 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 4}
+\lhead{Quantum Mechanics --- The Theoretical Minimum}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{postulate}{Postulate}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+
+\title{\textbf{Lecture 4: Principles of Quantum Mechanics} \\ \large Postulates, Time Evolution, and the Schr\"{o}dinger Equation}
+\author{Based on Leonard Susskind's \textit{The Theoretical Minimum}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. The Postulates of Quantum Mechanics}
+% ============================================================
+
+\begin{postulate}[Observables]
+Every observable (measurable quantity) is represented by a \textbf{Hermitian operator} $L$ acting on the state space.  (The folk rule: every Hermitian operator corresponds to \emph{some} observable; whether it can be measured in practice depends on available apparatus.)
+\end{postulate}
+
+\begin{postulate}[Eigenvalues as outcomes]
+The possible outcomes of measuring $L$ are its \textbf{eigenvalues} $\{\lambda_i\}$.  Since $L$ is Hermitian, these are real---consistent with the fact that measurement results are real numbers.
+\end{postulate}
+
+\begin{postulate}[Distinguishable states $\leftrightarrow$ orthogonality]
+Physically distinguishable states---those that can be unambiguously told apart by some experiment---are represented by \textbf{orthogonal} vectors.
+\end{postulate}
+
+\noindent\textbf{Example.}  $\ket{\uparrow}$ and $\ket{\downarrow}$ are distinguishable: orient the apparatus along $z$ and the result is unambiguous.  But $\ket{\uparrow}$ and $\ket{\rightarrow}$ are \emph{not} distinguishable: if you measure $\sigma_z$ and get $+1$, that is consistent with the spin having been prepared either up \emph{or} right (probability $\frac{1}{2}$ for right).  There is no single experiment that tells them apart with certainty.  Correspondingly, $\braket{\uparrow}{\rightarrow}=\frac{1}{\sqrt{2}}\neq 0$---they are not orthogonal.
+
+\begin{postulate}[Born's rule]
+If the system is in state $\ket{A}$ and observable $L$ is measured, the probability of obtaining eigenvalue $\lambda$ is
+\[
+    \boxed{P(\lambda) = \bigl|\braket{\lambda}{A}\bigr|^2,}
+\]
+where $\ket{\lambda}$ is the normalized eigenvector of $L$ with eigenvalue $\lambda$.  The complex number $\braket{\lambda}{A}$ is called the \textbf{probability amplitude}; squaring its absolute value gives the probability.
+\end{postulate}
+
+\noindent\textbf{Why the square?}  Inner products are in general complex---they cannot directly be probabilities.  But $|\braket{\lambda}{A}|^2$ is always real and non-negative, making it a valid candidate for a probability.  The justification is ultimately experimental.
+
+\subsection{1.1 Degenerate eigenvalues}
+If several eigenvectors $\ket{\lambda_1},\ket{\lambda_2},\dots$ share the same eigenvalue $\lambda$ (degeneracy), the total probability is the sum:
+\[
+    P(\lambda) = \sum_k \bigl|\braket{\lambda_k}{A}\bigr|^2.
+\]
+The degenerate eigenvectors can always be chosen to be mutually orthogonal (by the Gram--Schmidt procedure), so this is just ordinary probability addition.
+
+\subsection{1.2 Measurement as preparation}
+When you measure $L$ and obtain result $\lambda_i$, the system is left in the eigenstate $\ket{\lambda_i}$.  The measurement has \emph{prepared} the system.  (A deeper understanding of this ``collapse'' will come when we discuss entanglement between the system and the apparatus.)
+
+% ============================================================
+\section{2. Time Evolution --- Classical Recap}
+% ============================================================
+
+In classical mechanics:
+\begin{itemize}[nosep]
+    \item States are updated deterministically from one instant to the next by equations of motion.
+    \item \textbf{Reversibility} (the ``minus-first law''): states that are different at one time remain different at all times.  Two distinct states never ``merge'' into one.  This means: if you know the state now, you can reconstruct the past as well as predict the future.  Information is conserved.
+\end{itemize}
+Quantum mechanics will have exactly the same principle, expressed as preservation of inner products under time evolution.
+
+% ============================================================
+\section{3. Quantum Time Evolution}
+% ============================================================
+
+\begin{postulate}[Time-evolution operator]
+The state at time $t$ is obtained from the state at time $0$ by a \textbf{linear operator} $U(t)$:
+\[
+    \ket{\psi(t)} = U(t)\ket{\psi(0)}.
+\]
+Crucially, the \emph{same} $U(t)$ applies to every initial state---it does not depend on which state you start with.  (Attempts to make $U$ nonlinear or state-dependent lead to violations of locality, causality, or the probability interpretation.)
+\end{postulate}
+
+\noindent\textbf{Important caveat:} This describes evolution of an \emph{isolated} system---one not being measured or interacting with anything external.  During a measurement, the system interacts with an apparatus and the simple unitary evolution no longer applies to the system alone.
+
+\subsection{3.1 Conservation of distinguishability}
+If $\braket{\phi(0)}{\psi(0)}=0$ (states initially distinguishable), then $\braket{\phi(t)}{\psi(t)}=0$ for all $t$.  More generally, the \textbf{inner product is preserved}:
+\[
+    \braket{\phi(t)}{\psi(t)} = \braket{\phi(0)}{\psi(0)}, \qquad \forall\; t.
+\]
+This is the quantum version of the minus-first law: the ``overlap'' (degree of similarity) between any two states never changes.  States that start orthogonal stay orthogonal; states that start with overlap $\frac{1}{\sqrt{2}}$ keep that overlap forever.
+
+\subsection{3.2 Unitarity}
+Inner-product preservation requires
+\[
+    \bra{\phi(0)}\,U^\dagger(t)\,U(t)\,\ket{\psi(0)} = \braket{\phi(0)}{\psi(0)},\qquad \forall\;\ket{\psi},\ket{\phi}.
+\]
+\begin{theorem}
+This holds for all vectors if and only if
+\[
+    \boxed{U^\dagger(t)\,U(t) = \mathbf{1}.}
+\]
+Such an operator $U$ is called \textbf{unitary}.  Equivalently, $U^\dagger = U^{-1}$.
+\end{theorem}
+
+% ============================================================
+\section{4. Infinitesimal Time Evolution and the Hamiltonian}
+% ============================================================
+
+\subsection{4.1 Setup}
+For an infinitesimal time step $\epsilon$:
+\[
+    U(\epsilon) = \mathbf{1} - i\epsilon\, H + \mathcal{O}(\epsilon^2),
+\]
+where $H$ is some operator.  The Hermitian conjugate is
+\[
+    U^\dagger(\epsilon) = \mathbf{1} + i\epsilon\, H^\dagger + \mathcal{O}(\epsilon^2).
+\]
+
+\subsection{4.2 Hermiticity of $H$}
+Imposing unitarity $U^\dagger U = \mathbf{1}$ to first order in $\epsilon$:
+\[
+    \mathbf{1} + i\epsilon(H^\dagger - H) = \mathbf{1} \quad\Longrightarrow\quad H^\dagger = H.
+\]
+Hence $H$ is \textbf{Hermitian}.  Since Hermitian operators represent observables, $H$ is itself an observable---the \textbf{Hamiltonian}, identified with the energy of the system.
+
+% ============================================================
+\section{5. The Schr\"{o}dinger Equation}
+% ============================================================
+
+Starting from
+\[
+    \ket{\psi(\epsilon)} = (\mathbf{1} - i\epsilon H)\ket{\psi(0)},
+\]
+rearrange:
+\[
+    \frac{\ket{\psi(\epsilon)}-\ket{\psi(0)}}{\epsilon} = -iH\ket{\psi(0)}.
+\]
+Taking $\epsilon\to 0$:
+\[
+    \boxed{i\frac{d}{dt}\ket{\psi(t)} = H\ket{\psi(t)}.}
+\]
+This is the \textbf{time-dependent Schr\"{o}dinger equation} (with $\hbar=1$).
+
+\subsection{5.1 Interpretation}
+\begin{itemize}[nosep]
+    \item The Schr\"odinger equation governs the evolution of an \emph{undisturbed}, isolated system (no measurement taking place).
+    \item It is \textbf{deterministic in the state vector}: given $\ket{\psi(0)}$ and $H$, $\ket{\psi(t)}$ is uniquely determined for all $t$.
+    \item But the state vector encodes \emph{probabilities}, not certainties, for measurement outcomes.  The determinism is in the probabilities, not in the individual results.
+    \item It is the quantum analogue of the classical equations of motion.
+\end{itemize}
+
+\subsection{5.2 Restoring $\hbar$}
+We have been working in natural units with $\hbar=1$.  Restoring Planck's constant (which has units of energy $\times$ time):
+\[
+    i\hbar\frac{d}{dt}\ket{\psi} = H\ket{\psi}.
+\]
+This is the standard form found in textbooks.
+
+\subsection{5.3 Time-translation invariance}
+If $H$ does not depend explicitly on time, the system has \textbf{time-translation invariance}: the same experiment at a later time gives the same statistical results.  This is directly analogous to the classical case.  A time-dependent $H$ (e.g.\ a changing external magnetic field) breaks time-translation invariance and energy conservation.
+
+% ============================================================
+\section{6. Finite-Time Evolution}
+% ============================================================
+
+For time-independent $H$, repeated application of infinitesimal steps yields
+\[
+    U(t) = e^{-iHt}.
+\]
+This exponential is defined by its power series and is manifestly unitary since $H$ is Hermitian:
+\[
+    U^\dagger(t) = e^{+iHt} = U^{-1}(t).
+\]
+
+% ============================================================
+\section{7. Expectation Values and Equations of Motion}
+% ============================================================
+
+\subsection{7.1 Expectation value of an observable}
+The \textbf{expectation value} (average value) of observable $L$ in state $\ket{A}$ is defined as
+\[
+    \expval{L} = \sum_i \lambda_i\, P(\lambda_i) = \sum_i \lambda_i\,|\braket{\lambda_i}{A}|^2.
+\]
+This can be rewritten compactly as a ``sandwich'':
+\[
+    \boxed{\expval{L} = \bra{A}L\ket{A}.}
+\]
+\textbf{Proof:} Expand $\ket{A}=\sum_i \alpha_i\ket{\lambda_i}$ in eigenstates of $L$.  Then $\bra{A}L\ket{A} = \sum_{i,j}\alpha_j^*\alpha_i\,\lambda_i\braket{\lambda_j}{\lambda_i} = \sum_i |\alpha_i|^2\lambda_i$, which is the definition of the average.\;$\square$
+
+\medskip
+\noindent\textbf{Caveat:} ``Expectation value'' is a misnomer---it is the average, not the most likely outcome.  For a spin with equal probability $\frac{1}{2}$ of $+1$ and $-1$, the expectation value is $0$, which is a value the spin \emph{can never take}.
+
+\subsection{7.2 Time evolution of expectation values}
+Let $\expval{L}(t) = \bra{\psi(t)}L\ket{\psi(t)}$.  Differentiating and using the Schr\"odinger equation ($\frac{d}{dt}\ket{\psi}=-iH\ket{\psi}$, $\frac{d}{dt}\bra{\psi}=+i\bra{\psi}H$):
+\[
+    \frac{d}{dt}\expval{L} = i\bra{\psi}HL\ket{\psi} - i\bra{\psi}LH\ket{\psi} = i\expval{[H,L]},
+\]
+where $[H,L]\equiv HL - LH$ is the \textbf{commutator}.  So:
+\[
+    \boxed{\frac{d}{dt}\expval{L} = i\expval{[H,L]}.}
+\]
+(Restoring $\hbar$: $\frac{d}{dt}\expval{L} = \frac{i}{\hbar}\expval{[H,L]}$.)
+
+\subsection{7.3 Connection to classical mechanics: Poisson brackets}
+In classical mechanics, the time evolution of any quantity $L(q,p)$ is governed by the \textbf{Poisson bracket}:
+\[
+    \frac{dL}{dt} = \{L, H\}_{\text{PB}}.
+\]
+Comparing with the quantum equation $\frac{d}{dt}\expval{L} = \frac{i}{\hbar}\expval{[H,L]}$ reveals the fundamental correspondence (due to Dirac):
+\[
+    \boxed{\{\cdot,\cdot\}_{\text{PB}} \;\longleftrightarrow\; \frac{1}{i\hbar}[\cdot,\cdot].}
+\]
+Poisson brackets and commutators share the same algebraic properties: antisymmetry, linearity, and the product rule.  The commutator is typically of order $\hbar$ (small in classical units), so classically $AB-BA\approx 0$---multiplication is approximately commutative.
+
+\subsection{7.4 Energy conservation}
+Set $L=H$ in the equation of motion:
+\[
+    \frac{d}{dt}\expval{H} = i\expval{[H,H]} = 0,
+\]
+since any operator commutes with itself.  Therefore the \textbf{average energy is conserved} for any time-independent Hamiltonian, regardless of the state.  This is the quantum analog of classical energy conservation.
+
+% ============================================================
+\section{8. Summary}
+% ============================================================
+
+\begin{enumerate}[nosep]
+    \item Four core postulates: observables are Hermitian operators; outcomes are eigenvalues; distinguishable states are orthogonal; probabilities follow Born's rule.
+    \item Time evolution is generated by a linear, \textbf{unitary} operator $U(t)$.
+    \item Unitarity is the quantum version of information conservation (reversibility).
+    \item Expanding $U$ for small times reveals the \textbf{Hamiltonian} $H$---a Hermitian operator identified with the energy.
+    \item The \textbf{Schr\"odinger equation} $i\frac{d}{dt}\ket{\psi}=H\ket{\psi}$ determines how states evolve between measurements.
+    \item The \textbf{expectation value} $\expval{L}=\bra{\psi}L\ket{\psi}$ evolves via $\frac{d}{dt}\expval{L}=i\expval{[H,L]}$.
+    \item The commutator $[H,L]$ plays the role of the classical Poisson bracket: $\{\cdot,\cdot\}_{\text{PB}}\leftrightarrow\frac{1}{i\hbar}[\cdot,\cdot]$.
+    \item Average energy is automatically conserved: $\frac{d}{dt}\expval{H}=0$.
+\end{enumerate}
+
+\end{document}
