@@ -1,0 +1,16 @@
+Things worth fixing before publication:
+Lecture 3, Section 7.2 has an incomplete calculation — the X01X_{01}
+X01​ derivation trails off with
+... mid-computation. That needs to be finished or the intermediate step cleaned up.
+Lecture 4 says "called the Hamiltonian in physics" in the axiom parenthetical, which is fine, but then Section 3.1 says "Engineering analog: energy eigenstates are the normal modes" — this is correct and good but you should also add that the eigenvalues EkE_k
+Ek​ have units of energy, i.e. E=ℏωE = \hbar\omega
+E=ℏω, connecting to the oscillation frequency earlier than Section 3.2 currently does. Right now the E=ℏωE = \hbar\omega
+E=ℏω connection appears slightly buried.
+
+The Lecture 5 precession section gives the expectation value trajectory equations but doesn't state explicitly that (⟨X⟩,⟨Y⟩,⟨Z⟩)(\langle X\rangle, \langle Y\rangle, \langle Z\rangle)
+(⟨X⟩,⟨Y⟩,⟨Z⟩) is *not* the state vector — it's a vector of expectation values living in R3\mathbb{R}^3
+R3, not C2\mathbb{C}^2
+C2. An engineer might conflate these. One sentence disambiguating would prevent confusion.
+
+One gap relative to the spec:
+The spec called for Python/computational sidebars integrated into the lectures, and those are absent here. The scipy.linalg.expm note in Lecture 4 is the only one. Given that the original Python notebook was the seed of this whole project, the computational layer is either a separate companion notebook or needs to be threaded in more systematically. That's probably a deliberate choice for now — get the notes right first, add code second — but worth flagging as the major remaining gap before this becomes the Substack series.
