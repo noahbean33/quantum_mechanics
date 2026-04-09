@@ -1,0 +1,148 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 7}
+\lhead{Advanced Quantum Mechanics}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{definition}{Definition}
+
+\title{\textbf{Lecture 7: Quantum Fields} \\ \large Field Operators, Particle Density, and the Many-Body Hamiltonian}
+\author{Based on Leonard Susskind's \textit{Advanced Quantum Mechanics}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Motivation: Variable Particle Number}
+% ============================================================
+
+Many physical processes involve changes in the number of particles:
+\begin{itemize}[nosep]
+    \item An atom emits a photon (one photon is created).
+    \item A neutron decays into a proton, electron, and neutrino.
+    \item Particle--antiparticle pair creation and annihilation.
+\end{itemize}
+The single-particle Schr\"odinger equation cannot describe such processes.  We need a framework in which the number of particles is a dynamical variable.  This is precisely what the field-operator formalism provides.
+
+% ============================================================
+\section{2. The Field Operator}
+% ============================================================
+
+\begin{definition}[Field operator]
+The \textbf{annihilation field operator} at position $x$ is:
+\[
+    \Psi(x) = \sum_i a_i\,\psi_i(x),
+\]
+where $\{a_i\}$ are the annihilation operators for single-particle states $\{i\}$, and $\{\psi_i(x)\}$ are the corresponding single-particle wave functions.  The \textbf{creation field operator} is its Hermitian conjugate:
+\[
+    \Psi^\dagger(x) = \sum_i a_i^\dagger\,\psi_i^*(x).
+\]
+\end{definition}
+
+\subsection{2.1 What the field operators do}
+
+\begin{itemize}[nosep]
+    \item $\Psi^\dagger(x)\ket{0}$ creates a particle at position $x$ from the vacuum.
+    \item $\Psi(x)$ annihilates a particle at position $x$.
+    \item These are \emph{operators}, not wave functions.  They act on the Fock space of many-particle states.
+\end{itemize}
+
+\subsection{2.2 Contrast with single-particle wave functions}
+
+\begin{center}
+\begin{tabular}{l l}
+\textbf{Wave function $\psi(x)$} & \textbf{Field operator $\Psi(x)$} \\
+\hline
+Complex number at each $x$ & Operator at each $x$ \\
+Describes one particle & Describes any number of particles \\
+$|\psi(x)|^2$ = probability density & $\Psi^\dagger(x)\Psi(x)$ = particle density operator \\
+Not an observable & Built from observables \\
+\end{tabular}
+\end{center}
+
+% ============================================================
+\section{3. Particle Density and Number Operator}
+% ============================================================
+
+\subsection{3.1 Particle density operator}
+
+The operator
+\[
+    \hat{n}(x) = \Psi^\dagger(x)\Psi(x)
+\]
+is the \textbf{particle number density} at position $x$.  Its expectation value $\expval{\hat{n}(x)}$ gives the average number of particles per unit length (or volume) at $x$.
+
+\subsection{3.2 Total number operator}
+
+Integrating the density over all space gives the total particle number:
+\[
+    \hat{N} = \int dx\;\Psi^\dagger(x)\Psi(x) = \sum_i a_i^\dagger a_i.
+\]
+This is the sum of the number operators for each single-particle state, confirming the consistency of the formalism.
+
+% ============================================================
+\section{4. The Many-Body Hamiltonian}
+% ============================================================
+
+\subsection{4.1 Kinetic energy}
+
+The kinetic energy of a system of non-interacting particles is:
+\[
+    H_{\text{kin}} = \int dx\;\Psi^\dagger(x)\left(-\frac{\hbar^2}{2m}\frac{d^2}{dx^2}\right)\Psi(x).
+\]
+This operator sums the kinetic energy $p^2/(2m)$ of each particle.
+
+\subsection{4.2 External potential}
+
+If the particles move in an external potential $V(x)$:
+\[
+    H_V = \int dx\;V(x)\,\Psi^\dagger(x)\Psi(x).
+\]
+This simply counts the particles at each point $x$ and assigns each one the potential energy $V(x)$.
+
+\subsection{4.3 Full single-particle Hamiltonian}
+
+Combining kinetic and potential terms:
+\[
+    \boxed{H = \int dx\;\Psi^\dagger(x)\left[-\frac{\hbar^2}{2m}\frac{d^2}{dx^2} + V(x)\right]\Psi(x).}
+\]
+This is the second-quantized Hamiltonian for non-interacting particles in a potential.  The expression in brackets is just the single-particle Hamiltonian acting between the creation and annihilation field operators.
+
+% ============================================================
+\section{5. Physical Interpretation}
+% ============================================================
+
+The second-quantized Hamiltonian encodes all single-particle physics:
+\begin{enumerate}[nosep]
+    \item The field operator $\Psi^\dagger(x)$ creates a particle at $x$.
+    \item The differential operator $-\frac{\hbar^2}{2m}\frac{d^2}{dx^2} + V(x)$ acts on that particle.
+    \item The field operator $\Psi(x)$ closes the expression by annihilating a particle at $x$.
+    \item The integral over $x$ sums contributions from all positions.
+\end{enumerate}
+The result is an operator that, when acting on a many-body state, returns the total energy (kinetic plus potential) of all the particles.
+
+\subsection{5.1 Constant potential and rest energy}
+
+If $V(x) = mc^2$ (a constant), then $H_V = mc^2\hat{N}$---each particle contributes its rest energy.  This term does not exert any force but keeps track of the total rest energy proportional to the number of particles.
+
+\medskip
+\noindent\textit{In the next lecture, we will explore the physical consequences of this formalism: tunneling, mixing of states, neutrino oscillations, and the properties of the electron.  We will also examine how the commutation relations of field operators encode locality and causality.}
+
+\end{document}

@@ -1,0 +1,198 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 9}
+\lhead{Advanced Quantum Mechanics}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{definition}{Definition}
+
+\title{\textbf{Lecture 9: Interactions and the Dirac Equation} \\ \large Momentum Conservation, Feynman Diagrams, and Relativistic Electrons}
+\author{Based on Leonard Susskind's \textit{Advanced Quantum Mechanics}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Momentum Conservation in Quantum Field Theory}
+% ============================================================
+
+\subsection{1.1 The Hamiltonian in momentum space}
+
+Consider the second-quantized Hamiltonian for non-interacting particles with a constant potential $mc^2$:
+\[
+    H = \int dx\;\Psi^\dagger(x)\left[-\frac{\hbar^2}{2m}\frac{d^2}{dx^2} + mc^2\right]\Psi(x).
+\]
+Expanding the field operators in the momentum basis via Fourier transform:
+\[
+    \Psi(x) = \int\frac{dp}{\sqrt{2\pi\hbar}}\;\tilde{a}(p)\,e^{ipx/\hbar}, \qquad
+    \Psi^\dagger(x) = \int\frac{dq}{\sqrt{2\pi\hbar}}\;\tilde{a}^\dagger(q)\,e^{-iqx/\hbar}.
+\]
+
+\subsection{1.2 The delta function and momentum conservation}
+
+Substituting and integrating over $x$:
+\[
+    \int dx\;e^{i(p - q)x/\hbar} = 2\pi\hbar\;\delta(p - q).
+\]
+The delta function enforces $p = q$: the momentum of the annihilated particle must equal the momentum of the created particle.  The result:
+\[
+    H_{\text{mass}} = mc^2\int dp\;\tilde{a}^\dagger(p)\,\tilde{a}(p),
+\]
+which simply counts each particle and assigns it an energy $mc^2$.  The kinetic term similarly gives:
+\[
+    H_{\text{kin}} = \int dp\;\frac{p^2}{2m}\;\tilde{a}^\dagger(p)\,\tilde{a}(p).
+\]
+
+\subsection{1.3 General momentum conservation rule}
+
+For any Hamiltonian of the form $H = \int dx\;\mathcal{H}[\Psi^\dagger(x), \Psi(x)]$---where the integrand involves products of field operators all evaluated at the \emph{same} point $x$ and integrated over all space---the integration over $x$ produces a delta function:
+\[
+    \delta\!\left(\sum_{\text{created}} q_i - \sum_{\text{annihilated}} p_j\right).
+\]
+This enforces \textbf{total momentum conservation}: the sum of momenta of particles created must equal the sum of momenta of particles annihilated.  Individual momenta may change, but the total is preserved.
+
+% ============================================================
+\section{2. Interaction Terms}
+% ============================================================
+
+\subsection{2.1 Contact scattering}
+
+Consider two species of particles (e.g., ``electrons'' and ``protons'').  A short-range interaction at the same point:
+\[
+    H_{\text{int}} = g\int dx\;\Psi_e^\dagger(x)\,\Psi_p^\dagger(x)\,\Psi_e(x)\,\Psi_p(x).
+\]
+This operator:
+\begin{enumerate}[nosep]
+    \item Finds an electron and a proton at the same position $x$.
+    \item Annihilates both.
+    \item Creates an electron and a proton at the same point (possibly with different momenta).
+\end{enumerate}
+The coupling constant $g$ determines the strength of the interaction.  Total momentum is conserved, but individual momenta can change---this is \textbf{scattering}.
+
+\subsection{2.2 Particle decay}
+
+If particle $A$ can decay into particles $B$ and $C$:
+\[
+    H_{\text{decay}} = g\int dx\;\bigl[\Psi_B^\dagger(x)\,\Psi_C^\dagger(x)\,\Psi_A(x) + \Psi_A^\dagger(x)\,\Psi_C(x)\,\Psi_B(x)\bigr].
+\]
+The first term annihilates an $A$ and creates a $B$ and $C$.  The second term (the Hermitian conjugate) describes the reverse process: $B + C \to A$.  The Hamiltonian must be Hermitian, so both directions are always present.
+
+\subsection{2.3 Coupling constants}
+
+The parameter $g$ is the \textbf{coupling constant}:
+\begin{itemize}[nosep]
+    \item Small $g$: weak interaction, low scattering probability.
+    \item Large $g$: strong interaction, high scattering probability.
+    \item $g$ is typically determined experimentally.
+\end{itemize}
+
+% ============================================================
+\section{3. Feynman Diagrams}
+% ============================================================
+
+\subsection{3.1 Iterating the Hamiltonian}
+
+The time-evolution operator expanded to second order:
+\[
+    U(t) \approx 1 - i\epsilon H - \frac{\epsilon^2}{2}H^2 + \cdots
+\]
+The first-order term $H$ gives direct processes (single vertex).  The second-order term $H^2$ gives compound processes (two vertices), leading to a rich set of scattering and exchange phenomena.
+
+\subsection{3.2 Exchange diagrams}
+
+If the Hamiltonian contains a term $A \to B + C$, then $H^2$ contains the process:
+\[
+    A + B \;\longrightarrow\; C \;\longrightarrow\; A + B,
+\]
+where $C$ is a temporary (virtual) intermediate particle.  This is an \textbf{exchange diagram}: the interaction between $A$ and $B$ is mediated by the exchange of $C$.  The amplitude carries a factor $g^2$.
+
+\subsection{3.3 Self-energy corrections}
+
+Another second-order process: a particle $A$ emits a $B$ and $C$, which then recombine into $A$:
+\[
+    A \;\longrightarrow\; B + C \;\longrightarrow\; A.
+\]
+This modifies the effective properties (mass, charge) of particle $A$.  Example: an electron emitting and reabsorbing a virtual photon---the electron has approximately a 1\% probability of containing a virtual photon at any given time.
+
+\subsection{3.4 Vertices and diagrams}
+
+Each vertex in a Feynman diagram corresponds to a term in the Hamiltonian and carries one factor of the coupling constant $g$.  A diagram with $n$ vertices contributes at order $g^n$.  The full amplitude for any process is the sum over all possible diagrams, providing a systematic perturbative expansion.
+
+% ============================================================
+\section{4. Introduction to the Dirac Equation}
+% ============================================================
+
+\subsection{4.1 Motivation}
+
+For a relativistic particle, the energy--momentum relation is:
+\[
+    E^2 = p^2c^2 + m^2c^4.
+\]
+Dirac wanted a wave equation that is \emph{first order} in time (like the Schr\"odinger equation) rather than second order (like the Klein--Gordon equation $-\hbar^2\partial_t^2\psi = (-\hbar^2c^2\partial_x^2 + m^2c^4)\psi$).
+
+\subsection{4.2 The one-dimensional massless case}
+
+For a massless particle moving to the right, $E = p$ (setting $c = 1$):
+\[
+    i\hbar\frac{\partial\psi}{\partial t} = -i\hbar\frac{\partial\psi}{\partial x}.
+\]
+Solutions are right-moving waves $\psi(x - t)$.  Similarly, $E = -p$ gives left-moving waves.
+
+\subsection{4.3 Two-component structure}
+
+To describe both left- and right-movers, introduce a two-component object $\Psi = \begin{pmatrix} \psi_1 \\ \psi_2 \end{pmatrix}$ and a matrix $\alpha$:
+\[
+    H = \alpha\, p, \qquad \alpha = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix} = \sigma_z.
+\]
+The eigenvalue $+1$ corresponds to right-movers and $-1$ to left-movers.
+
+\subsection{4.4 Adding mass: the $\beta$ matrix}
+
+To obtain $H^2 = p^2 + m^2$, add a mass term:
+\[
+    H = \alpha\, p + \beta\, m.
+\]
+Squaring: $H^2 = \alpha^2 p^2 + \beta^2 m^2 + (\alpha\beta + \beta\alpha)pm$.  We need:
+\begin{align}
+    \alpha^2 &= 1, \qquad \beta^2 = 1, \qquad \alpha\beta + \beta\alpha = 0.
+\end{align}
+The solution uses two anti-commuting Pauli matrices:
+\[
+    \alpha = \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}, \qquad
+    \beta = \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}.
+\]
+
+\subsection{4.5 The one-dimensional Dirac equation}
+
+The full equation:
+\[
+    i\hbar\frac{\partial}{\partial t}\begin{pmatrix}\psi_1 \\ \psi_2\end{pmatrix} = \left[\alpha\!\left(-i\hbar\frac{\partial}{\partial x}\right) + \beta\, m\right]\begin{pmatrix}\psi_1 \\ \psi_2\end{pmatrix}.
+\]
+Written out:
+\begin{align}
+    i\hbar\,\dot{\psi}_1 &= -i\hbar\,\psi_1' + m\,\psi_2, \\
+    i\hbar\,\dot{\psi}_2 &= +i\hbar\,\psi_2' + m\,\psi_1.
+\end{align}
+The mass term $\beta m$ \emph{couples} the two components: it mixes left-movers and right-movers, giving the particle a mass and allowing it to move slower than the speed of light.
+
+\medskip
+\noindent\textit{The one-dimensional Dirac equation captures the essential physics: the necessity of a multi-component wave function, the role of the mass as a coupling between chiralities, and the emergence of both positive and negative energy solutions.  In the next lecture, we extend this to three dimensions and confront the Dirac sea.}
+
+\end{document}

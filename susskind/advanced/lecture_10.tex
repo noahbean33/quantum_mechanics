@@ -1,0 +1,212 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 10}
+\lhead{Advanced Quantum Mechanics}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{definition}{Definition}
+
+\title{\textbf{Lecture 10: The Dirac Equation in Three Dimensions} \\ \large Fermion Fields, Chirality, Zitterbewegung, and the Dirac Sea}
+\author{Based on Leonard Susskind's \textit{Advanced Quantum Mechanics}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Fermion Anti-Commutation Relations}
+% ============================================================
+
+\subsection{1.1 From bosons to fermions}
+
+For bosons, creation and annihilation operators \emph{commute}:
+\[
+    [a_i, a_j^\dagger] = \delta_{ij}, \qquad [a_i, a_j] = 0, \qquad [a_i^\dagger, a_j^\dagger] = 0.
+\]
+For fermions, replace commutators with \textbf{anti-commutators}:
+\[
+    \{a_i, a_j^\dagger\} \equiv a_i a_j^\dagger + a_j^\dagger a_i = \delta_{ij}, \qquad \{a_i, a_j\} = 0, \qquad \{a_i^\dagger, a_j^\dagger\} = 0.
+\]
+
+\subsection{1.2 Pauli exclusion from anti-commutation}
+
+From $\{a_i^\dagger, a_i^\dagger\} = 0$, we get:
+\[
+    (a_i^\dagger)^2 = 0.
+\]
+Trying to create two fermions in the same state gives zero---the \textbf{Pauli exclusion principle} is built into the algebra.
+
+\subsection{1.3 Symmetry of creation and annihilation}
+
+For bosons, creation and annihilation operators are fundamentally different: the spectrum $n = 0, 1, 2, \ldots$ is unbounded above but bounded below.  For fermions, the occupation number is either 0 or 1.  This creates a \emph{symmetry} between creation and annihilation: $a^\dagger$ takes $\ket{0} \to \ket{1}$ and annihilates $\ket{1}$; $a$ takes $\ket{1} \to \ket{0}$ and annihilates $\ket{0}$.  The algebra alone does not distinguish which is which.
+
+\subsection{1.4 Fermion field operators}
+
+The fermion field operators satisfy anti-commutation relations:
+\[
+    \{\Psi(x), \Psi^\dagger(y)\} = \delta(x - y), \qquad \{\Psi(x), \Psi(y)\} = 0, \qquad \{\Psi^\dagger(x), \Psi^\dagger(y)\} = 0.
+\]
+Two-particle states are automatically \emph{antisymmetric}:
+\[
+    \Psi^\dagger(x)\Psi^\dagger(y) = -\Psi^\dagger(y)\Psi^\dagger(x).
+\]
+
+% ============================================================
+\section{2. The Dirac Equation in Three Dimensions}
+% ============================================================
+
+\subsection{2.1 The massless case: $H = \vb*{\sigma}\cdot\vb{p}$}
+
+In three dimensions, the momentum $\vb{p} = (p_x, p_y, p_z)$ is a vector.  For a massless particle, Dirac wrote:
+\[
+    H = \vb*{\alpha}\cdot\vb{p} = \alpha_x p_x + \alpha_y p_y + \alpha_z p_z.
+\]
+Requiring $H^2 = p^2 = p_x^2 + p_y^2 + p_z^2$ demands:
+\begin{align}
+    \alpha_i^2 &= I \quad \text{for } i = x, y, z, \\
+    \alpha_i\alpha_j + \alpha_j\alpha_i &= 0 \quad \text{for } i \neq j.
+\end{align}
+The three Pauli matrices satisfy these relations, so $\alpha_i = \sigma_i$ works:
+\[
+    H = \vb*{\sigma}\cdot\vb{p}.
+\]
+This is a $2 \times 2$ matrix equation acting on a two-component spinor.
+
+\subsection{2.2 Helicity}
+
+The energy eigenvalues satisfy $E = \pm|\vb{p}|$.  For positive energy ($E > 0$), the spin must be aligned with the momentum ($\vb*{\sigma}\cdot\hat{p} = +1$).  For negative energy ($E < 0$), the spin is anti-aligned.
+
+The quantity $\vb*{\sigma}\cdot\hat{p}$ (spin projected along the momentum direction) is called the \textbf{helicity}.  A massless particle has definite helicity: either right-handed (spin along $\vb{p}$) or left-handed (spin opposite to $\vb{p}$).
+
+\subsection{2.3 Adding mass: 4$\times$4 matrices}
+
+To add a mass term $H = \vb*{\alpha}\cdot\vb{p} + \beta m$, we need a matrix $\beta$ that anti-commutes with all three $\alpha_i$.  No $2\times 2$ matrix can anti-commute with all three Pauli matrices.
+
+The solution: go to $4\times 4$ matrices.  The Dirac matrices in one standard representation:
+\[
+    \alpha_i = \begin{pmatrix} \sigma_i & 0 \\ 0 & -\sigma_i \end{pmatrix}, \qquad
+    \beta = \begin{pmatrix} 0 & I \\ I & 0 \end{pmatrix},
+\]
+where each block is a $2\times 2$ matrix.  One can verify:
+\[
+    \alpha_i^2 = I_{4\times 4}, \qquad \beta^2 = I_{4\times 4}, \qquad \{\alpha_i, \beta\} = 0, \qquad \{\alpha_i, \alpha_j\} = 2\delta_{ij}I_{4\times 4}.
+\]
+
+\subsection{2.4 The full Dirac equation}
+
+The three-dimensional Dirac equation:
+\[
+    \boxed{i\hbar\frac{\partial\Psi}{\partial t} = \bigl(\vb*{\alpha}\cdot\vb{p} + \beta\, mc^2\bigr)\Psi,}
+\]
+where $\Psi$ is a four-component \textbf{Dirac spinor}.  Squaring the Hamiltonian:
+\[
+    H^2 = p^2c^2 + m^2c^4,
+\]
+the correct relativistic energy--momentum relation.
+
+% ============================================================
+\section{3. Chirality}
+% ============================================================
+
+The four components of the Dirac spinor encode two binary degrees of freedom:
+\begin{enumerate}[nosep]
+    \item \textbf{Spin}: up or down (the physical angular momentum).
+    \item \textbf{Chirality}: right-handed or left-handed (the relationship between spin and momentum).
+\end{enumerate}
+
+For a \textbf{massless} particle, chirality is conserved---a right-handed particle remains right-handed.  The mass term $\beta m$ is off-diagonal in the chirality basis, so it \emph{mixes} left-handed and right-handed components.  In this sense, \textbf{mass is a coupling between chiralities}.
+
+The spin operator is \emph{not} $\vb*{\alpha}$ but rather:
+\[
+    \vb{S} = \frac{\hbar}{2}\begin{pmatrix} \vb*{\sigma} & 0 \\ 0 & \vb*{\sigma} \end{pmatrix},
+\]
+which acts identically on both chirality components.
+
+% ============================================================
+\section{4. The Velocity Operator and Zitterbewegung}
+% ============================================================
+
+The velocity operator for a Dirac particle is obtained from:
+\[
+    \dot{x}_i = \frac{i}{\hbar}[H, x_i] = \alpha_i.
+\]
+This is remarkable: the velocity is the matrix $\alpha_i$, whose eigenvalues are $\pm 1$ (in units of $c$).  The particle always moves at the speed of light instantaneously!
+
+However, $\alpha_i$ does \emph{not} commute with $H$ (because $\alpha_x$ does not commute with $\alpha_y$ or $\alpha_z$), so the velocity is not conserved.  The particle undergoes a rapid oscillatory motion called \textbf{Zitterbewegung} (``trembling motion'').
+
+The time-averaged velocity is $\expval{\vb{p}}/m$ for slow particles, which is the expected classical result.  The Zitterbewegung is a high-frequency quantum oscillation superimposed on this smooth classical motion.
+
+% ============================================================
+\section{5. Negative Energy and the Dirac Sea}
+% ============================================================
+
+\subsection{5.1 The problem}
+
+The Dirac equation has solutions with $E = \pm\sqrt{p^2 + m^2}$.  Negative-energy states are problematic: a particle could radiate energy indefinitely, cascading to ever-more-negative energies.
+
+\subsection{5.2 Dirac's solution}
+
+Dirac proposed that the vacuum is the state in which \textbf{all negative-energy states are filled} with fermions (the \textbf{Dirac sea}).  The Pauli exclusion principle prevents any additional particles from entering these states, stabilizing the vacuum.
+
+This would not work for bosons, since any number of bosons can occupy the same state---there would be no bottom.
+
+\subsection{5.3 Positrons as holes}
+
+A \textbf{hole} in the Dirac sea---a missing negative-energy electron---behaves as a particle with:
+\begin{itemize}[nosep]
+    \item \textbf{Positive energy} (removing negative energy increases the total).
+    \item \textbf{Positive charge} (a missing negative charge).
+    \item The same mass as the electron.
+\end{itemize}
+This is the \textbf{positron}---the antiparticle of the electron, predicted by Dirac in 1931 and discovered by Anderson in 1932.
+
+\subsection{5.4 Pair creation and annihilation}
+
+A photon with sufficient energy ($E \geq 2mc^2$) can excite an electron from the Dirac sea to a positive-energy state, creating an electron--positron pair.  The reverse process---an electron falling into a hole---is pair annihilation, producing photons.
+
+% ============================================================
+\section{6. The Modern Viewpoint}
+% ============================================================
+
+Modern quantum field theory dispenses with the Dirac sea picture.  Instead:
+\begin{itemize}[nosep]
+    \item The annihilation operator for a negative-energy electron is \emph{relabeled} as a creation operator for a positron.
+    \item The field operator $\Psi(x)$ is split into positive-frequency (electron annihilation) and negative-frequency (positron creation) parts.
+    \item The vacuum is simply the state annihilated by all annihilation operators---no sea required.
+\end{itemize}
+The physics is identical; only the language changes.
+
+\subsection{6.1 Connection to solid-state physics}
+
+The same Dirac-sea picture appears in condensed matter:
+\begin{itemize}[nosep]
+    \item The \textbf{Fermi sea}: electrons fill energy levels up to the Fermi energy.
+    \item A missing electron below the Fermi level is a \textbf{hole}---a positively charged quasiparticle.
+    \item Excitations above the Fermi level are electrons; excitations below are holes.
+\end{itemize}
+Dirac's idea preceded the solid-state application by decades.
+
+\subsection{6.2 Vacuum energy}
+
+The filled Dirac sea carries an infinite negative energy.  Bosonic fields contribute infinite positive zero-point energy ($\frac{1}{2}\hbar\omega$ per mode).  In practice, these infinities are subtracted (renormalized).  The residual vacuum energy is the \textbf{cosmological constant problem}---one of the deepest unsolved problems in physics.
+
+\medskip
+\noindent\textit{This concludes the Advanced Quantum Mechanics lecture series.  Starting from the review of quantum mechanics and symmetries, we have built up through angular momentum, identical particles, and second quantization to the Dirac equation and the prediction of antimatter---one of the greatest achievements of theoretical physics.}
+
+\end{document}

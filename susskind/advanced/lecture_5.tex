@@ -1,0 +1,156 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 5}
+\lhead{Advanced Quantum Mechanics}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{definition}{Definition}
+
+\title{\textbf{Lecture 5: Identical Particles and the Exclusion Principle} \\ \large Pauli Exclusion, Spin-Statistics, and Atomic Shell Structure}
+\author{Based on Leonard Susskind's \textit{Advanced Quantum Mechanics}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Identical Particles in Quantum Mechanics}
+% ============================================================
+
+In classical mechanics, identical particles can always be distinguished by tracking their trajectories.  In quantum mechanics, this is impossible: there is no trajectory, and identical particles are truly \emph{indistinguishable}.
+
+\begin{definition}[Identical particles]
+Two particles are \textbf{identical} if no measurement can distinguish one from the other.  The physics must be invariant under interchange of the two particles.
+\end{definition}
+
+\subsection{1.1 Exchange symmetry}
+
+Consider a two-particle state $\psi(x_1, x_2)$.  Exchanging particles 1 and 2:
+\[
+    P_{12}\,\psi(x_1, x_2) = \psi(x_2, x_1).
+\]
+Since $P_{12}^2 = I$, the eigenvalues of $P_{12}$ are $\pm 1$.  There are exactly two possibilities:
+\begin{itemize}[nosep]
+    \item \textbf{Symmetric}: $\psi(x_2, x_1) = +\psi(x_1, x_2)$ \quad (bosons).
+    \item \textbf{Antisymmetric}: $\psi(x_2, x_1) = -\psi(x_1, x_2)$ \quad (fermions).
+\end{itemize}
+
+% ============================================================
+\section{2. The Spin-Statistics Connection}
+% ============================================================
+
+One of the deepest results in physics:
+\[
+    \boxed{\text{Integer spin} \;\Longleftrightarrow\; \text{bosons (symmetric)}, \qquad \text{Half-integer spin} \;\Longleftrightarrow\; \text{fermions (antisymmetric)}.}
+\]
+This is not an assumption---it is a theorem in relativistic quantum field theory.  Key observation: a $2\pi$ rotation of a half-integer spin particle introduces a phase factor of $-1$, which is directly connected to the antisymmetry of the wave function.
+
+% ============================================================
+\section{3. The Pauli Exclusion Principle}
+% ============================================================
+
+\begin{definition}[Pauli exclusion principle]
+No two identical fermions can occupy the same quantum state.
+\end{definition}
+
+\noindent\textbf{Proof from antisymmetry.}  If both particles are in state $\phi$:
+\[
+    \psi(x_1, x_2) = \phi(x_1)\phi(x_2).
+\]
+This is symmetric under exchange, so it cannot describe fermions.  The antisymmetrized version:
+\[
+    \psi_A(x_1, x_2) = \frac{1}{\sqrt{2}}\bigl[\phi(x_1)\phi(x_2) - \phi(x_2)\phi(x_1)\bigr] = 0.
+\]
+The state vanishes identically.  Two fermions \emph{cannot} be in the same state.
+
+\subsection{3.1 Bosons: the opposite behavior}
+
+Bosons have no such restriction.  In fact, bosons \emph{prefer} to congregate: the probability of finding two bosons in the same state is enhanced relative to distinguishable particles.  This is the origin of Bose--Einstein condensation, laser coherence, and the integer quantum Hall effect.
+
+% ============================================================
+\section{4. Multi-Particle States}
+% ============================================================
+
+\subsection{4.1 Two distinguishable particles}
+
+If particle 1 can be in states $\{\phi_i\}$ and particle 2 in states $\{\chi_j\}$, a general two-particle state is:
+\[
+    \psi(x_1, x_2) = \sum_{i,j} c_{ij}\,\phi_i(x_1)\,\chi_j(x_2).
+\]
+
+\subsection{4.2 Two identical bosons}
+
+The state must be symmetrized:
+\[
+    \psi_S(x_1, x_2) = \frac{1}{\sqrt{2}}\bigl[\phi_a(x_1)\phi_b(x_2) + \phi_a(x_2)\phi_b(x_1)\bigr].
+\]
+
+\subsection{4.3 Two identical fermions}
+
+The state must be antisymmetrized:
+\[
+    \psi_A(x_1, x_2) = \frac{1}{\sqrt{2}}\bigl[\phi_a(x_1)\phi_b(x_2) - \phi_a(x_2)\phi_b(x_1)\bigr].
+\]
+This can be written as a \textbf{Slater determinant}:
+\[
+    \psi_A(x_1, x_2) = \frac{1}{\sqrt{2}}\begin{vmatrix} \phi_a(x_1) & \phi_b(x_1) \\ \phi_a(x_2) & \phi_b(x_2) \end{vmatrix}.
+\]
+The determinant automatically vanishes if $a = b$, enforcing the exclusion principle.
+
+% ============================================================
+\section{5. Atomic Shell Structure}
+% ============================================================
+
+\subsection{5.1 Filling order}
+
+In a hydrogen-like atom, each electron state is labeled by quantum numbers $(n, \ell, m, m_s)$.  The Pauli exclusion principle dictates that each combination of quantum numbers can be occupied by at most one electron.
+
+For a given $n$ and $\ell$:
+\begin{itemize}[nosep]
+    \item There are $2\ell + 1$ values of $m$.
+    \item Each $m$ has 2 spin states ($m_s = \pm\frac{1}{2}$).
+    \item Total: $2(2\ell + 1)$ electrons per subshell.
+\end{itemize}
+
+\subsection{5.2 Shell capacities}
+
+\begin{center}
+\begin{tabular}{c c c c}
+\textbf{Subshell} & $\ell$ & \textbf{States} & \textbf{Max electrons} \\
+\hline
+$s$ & 0 & 1 & 2 \\
+$p$ & 1 & 3 & 6 \\
+$d$ & 2 & 5 & 10 \\
+$f$ & 3 & 7 & 14 \\
+\end{tabular}
+\end{center}
+
+\subsection{5.3 The periodic table}
+
+The structure of the periodic table arises directly from the Pauli exclusion principle applied to atomic electrons.  As atomic number $Z$ increases, electrons fill successively higher energy levels.  The chemical properties of an element are determined primarily by the number of electrons in the outermost (valence) shell:
+\begin{itemize}[nosep]
+    \item Noble gases: filled shells, chemically inert.
+    \item Alkali metals: one electron beyond a filled shell, highly reactive.
+    \item Halogens: one electron short of a filled shell, highly reactive.
+\end{itemize}
+
+\medskip
+\noindent\textit{The Pauli exclusion principle, combined with the shell structure of atoms, explains the periodicity of chemical properties---one of the great triumphs of quantum mechanics.  Next, we move to the formalism of second quantization, which provides a natural language for many-particle systems.}
+
+\end{document}
