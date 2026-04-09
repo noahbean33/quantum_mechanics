@@ -1,0 +1,34 @@
+This is a solid pedagogical foundation — McIntyre's six postulates with good linear algebra translations and Bloch sphere visualizations. Let me read the truncated section and then build a substantially expanded version.Good — I now have the full picture. Here's what I'd do to meaningfully expand this:
+
+**Structural improvements:**
+- `QuantumState` and `QuantumOperator` classes to make the pedagogy cleaner and reusable
+- Fix a subtle bug: `np.linalg.eig` doesn't guarantee sorted or real eigenvalues for Hermitian matrices — swap to `np.linalg.eigh`
+
+**Content additions per postulate:**
+- P1: Global phase vs. relative phase, Bloch sphere as CP¹ ≅ S²
+- P2: Spectral decomposition, projection operators `P_n = |ϕ_n⟩⟨ϕ_n|`, commutators, expectation values
+- P3: Degenerate eigenvalues, continuous spectrum remark
+- P4: Variance/uncertainty from Born rule, projection operator form of probability
+- P5: Degenerate collapse (projection onto subspace, not just eigenvector), POVM mention
+- P6: Heisenberg picture, Rabi oscillations, animated precession
+
+**New sections:**
+- Robertson uncertainty principle as a commutator consequence
+- Two-qubit tensor products and Bell states
+- Density matrix formalism (the real generalization)Here's a breakdown of what changed and why:
+
+**Structural overhaul — `QuantumState` and `QuantumOperator` classes.** The original notebook used bare numpy arrays, which made the relationship between bras, kets, and operators implicit. The new classes make `psi.expect(A)`, `psi.variance(A)`, `psi.prob_of(eigenvec)`, `op.spectral_decomposition()`, and `op.commutator(other)` first-class operations — pedagogically cleaner and reusable across sections. Also replaced `np.linalg.eig` with `np.linalg.eigh`, which is the correct call for Hermitian matrices (guarantees real, sorted eigenvalues).
+
+**Deeper content per postulate:**
+- **P1** now covers global vs. relative phase (the CP¹ ≅ S² identification — the Bloch sphere is the projective space, not the Hilbert space itself)
+- **P2** adds the full spectral decomposition with projection operators P_n = |ϕ_n⟩⟨ϕ_n|, expectation values/variance, and commutator algebra
+- **P5** uses the proper projection postulate (`P_n|ψ⟩/‖…‖`), handles the degenerate case, and mentions POVMs
+- **P6** adds the Heisenberg picture with a numerical verification that both pictures give identical expectation values
+
+**Four new bonus sections:**
+1. **Robertson uncertainty principle** — derived from the commutator, verified numerically across all Bloch sphere angles, shows the bound is state-dependent
+2. **Two-qubit tensor products and Bell states** — separability/entanglement detection via partial trace and purity Tr(ρ²)
+3. **Density matrix formalism** — pure vs. mixed states, von Neumann entropy, the Liouville-von Neumann equation, density matrix visualization
+4. **Rabi oscillations** — driven two-level system at and off resonance, shows the connection between the Hamiltonian and qubit gate operations
+
+The summary table at the end ties each postulate to its core mathematical tool, which I find is the thing students most need to see written down plainly.
