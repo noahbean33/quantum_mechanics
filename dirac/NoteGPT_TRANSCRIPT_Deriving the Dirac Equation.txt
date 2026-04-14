@@ -1,0 +1,105 @@
+00:00:09
+hello my friends today I have the pleasure of sharing with you my favorite equation of all time the dck equation there is so much that can be said about the D equation there's so many different ways of formulating it and ways of looking at it and exploring it there's so much structure in this equation and it has such far-reaching implications that you could read books upon books about it so today I have a pretty modest and narrow goal I just want to derive the D equation so that you can see where
+
+00:00:37
+the equation comes from so let's put on our Chef's hats and cook up an equation first thing we have to know is what are the ingredients so first things first we're going to put in the mass shell so the essence of the mass shell is that the for momentum of a particle dotted with itself always has magnitude McAn squared regardless of the inertial reference frame of the Observer so you know you know four momentum is a four vector and if you want to split that up in terms of energy and momentum
+
+00:01:05
+relative to a given coordinate system you can do that and applying the movi metric we see that e over c^2 minus the magnitude of the 3 momentum squ equals MC s that is the equation that we're going to be working with for the mass shell okay now next ingredient number two in our equation is going to be the uh Quantum energy and momentum operators so this is that the four momentum is I * H bar * the four gradient of the wave function and again if you want to write that in terms of energy and three
+
+00:01:34
+momentum we get that the energy operator is I * H bar * partial derivative with respect to time and the momentum operator is I * H bar * the gradient okay now wait a minute you might be thinking hey this is just Klein Gordon all over again I don't want Klein Gordon I want dck I came here for the darac equation so last but not least ingredient number three is that the equation has to be first order in space and time and that that constraint is the cause of all of the wonderful beautiful mysterious structure and texture of the
+
+00:02:06
+dck equation as we're about to see it's really really hard to mix the third ingredient in with the first two and have everything work out and when we do this we're going to find that we have to encounter some pretty bizarre mathematical objects okay so where do we go from here how do we get these things to mesh together well the first and second principle are pretty straightforward because the mass shell gives us an equation where we have energy in momentum and so all we have to do then is plug in the energy and
+
+00:02:33
+momentum operators into that equation problem is as long as the mass shell has energy and momentum squared then those energy and momentum operators are going to be second order so that's no good okay well what we want to do now is just combine the first and third principle so that we can write the mass shell in a way which doesn't have any squared energy terms or squared momentum terms but rather just has energy and momentum appearing in the equation to the first power because then when we put in the
+
+00:03:02
+energy and momentum operators we'll end up getting first derivatives okay so given the mass shell equation how do we rearrange it so that e and P just appear to the first power so how do we do it well uh first things first why don't we try taking a square root of both sides ah but the problem is okay you can put a square root sign over it but how do you actually factor out that square root because it's not as simple as it looks so here's what we're going to do we're going to force that square root to be
+
+00:03:27
+linear and what I mean by that is we're just going to write out the form that we want it to take so we know we want it to be linear and so we can write out what we want to have so on the left side of this equation we have a * energy over speed of light plus b * momentum in X plus C * momentum in y plus d * momentum in Z and now we're just going to say by theot that that has to equal the square root of the four momentum dotted with itself which is that expression under the square root with the squares of the
+
+00:03:55
+energy and momentum and now the question arises what are a b c and d well let's go ahead and square both sides of this equation so that we have the quantity oh and by the way do you mind I'm going to drop out the C factor for the speed of light I'm just we'll put it back in later I just don't want to carry it around um so this just makes the equation look a little simpler okay so what happens when we Square both sides well first let's look at the left hand side of this equation we have the
+
+00:04:22
+AE plus bpx plus cpy plus dpz quantity squared and so when you square that whole thing instead of four terms you're actually going to get 16 terms right distributive multiplication like foil but with more and the best way to look at this I think is geometrically so what I'm showing here is a square that represents that square that represents that quantity squared you can see along each of the sides we have each of those terms listed out so that the side length of the big square is AE plus bpx plus cpy plus dpz and
+
+00:04:56
+then when we Square it we get that whole thing squared but then you can also o see the squares and the rectangles corresponding to those individual terms now before going further I want to simplify this a little bit so as it turns out these numbers that we're looking for these a b c and d uh they're a little bit weird and they don't multiply the same way that things usually multiply so we're going to be careful not to switch up the order that we're multiplying those but the momentum and
+
+00:05:25
+energy terms these are just scalar quantities and they all commute with one another and so we can go ahead and pull those out to the right hand side of each expression so what I'm showing here the square on the right it's exactly the same equation but I'm just factoring out those energy and momentum terms and putting them on the right notice when we do that there's the implicit assumption that those ABC and D terms commute with energy and momentum and it turns out they do but just be aware that that's a
+
+00:05:51
+little implicit assumption in there okay so that is the left hand side of that equation and now let's go ahead and look at the right hand side of the equation so when we look at the right hand side of the equation we have energy squ minus the momentum component squared and I'm representing that with a very similar kind of diagram as before but this time it's just the diagonal terms it's just the terms where the components are squared with themselves and also the other thing we have to keep in mind is
+
+00:06:18
+that the energy square is positive but the momentum squares are negative because of the makovsky metric oh and by the way I'm letting these squares breathe because we have to solve this for all possible energy and momentum and those things are variables so we're not allowed to like set them to be certain values and then do some kind of trick where the rectangle here adds up to a different rectangle no no we have to solve it for a general energy and momentum okay so how can these things possibly be equal I mean there's a
+
+00:06:45
+number of problems here first of all clearly the off diagonal terms have to go because on the left side they're there and the right side they're not there so somehow they have to cancel each other out but because this diagram is allowed to breathe the only way we can ensure that those cancel out is if each off diagonal cancels out with its own symmetric counterpart so in this diagram each of the off diagonal rectangles has to cancel out with the other rectangle of its same color because otherwise as the thing breathes
+
+00:07:12
+you know if you were to say okay two of these rectangles cancel out one of those well that's not going to hold in general right so they have to cancel out as pairs at the same time along the diagonal uh how do we make those momentum terms negative when we have b^ S c^2 and d^2 that's a little weird right but maybe that's not so weird well anyway so after staring at this for a while you can figure there's a certain set of constraints on a b c and d that actually make these two things equal and
+
+00:07:40
+that must be true if these things are to be equal and so the first thing the most straightforward thing is that a s has to equal 1 look at that white square that energy Square on the left side we have a squ e^ s on the right side we have e s so therefore a squ must be one likewise uh b^ 2 c^2 and D squ all have to be -1 okay we're familiar with a complex number so the idea that we're squaring something and getting 1 that's not so unusual and if that's all we had we might say oh maybe that's something like
+
+00:08:11
+the imaginary unit but the plot thickens because look when you figure that the off diagonals have to cancel each other out look at those uh those pink squares ab and ba well therefore AB plus ba a must equal zero and likewise AC plus CA those light green squares those have to cancel out too so that also has to equal Z and a d plus DA has to equal Z and BC plus CB has to equal 0 and BD plus DB has to equal Z and CD plus DC has to equal Z and so look we have this set of constraints this set of 10 constraints
+
+00:08:44
+on what a BC and D have to be and it's kind of confusing because you'll notice that for example take the equation a plus ba equal 0 that means that a * B is not the same thing as B * a so these numbers a b C and D they're not going to be commuting with one another in other words the order matters how you multiply a * B matters and that right away tells us that ABC and D cannot be real numbers and they cannot be complex numbers because both the real numbers and the complex numbers are commutative you know
+
+00:09:17
+AB equals ba whether it's real or complex and if we want to do something that doesn't commute then we need something that's more exotic than just a real number or a complex number just to give you an intuitive example of how this kind of thing might be possible consider the cross product you know U cross V is actually negative V cross U by the right- hand rule it's the same magnitude either way but the directions are exactly opposite depending on the order that you take the cross product in
+
+00:09:42
+so the cross product gives us an example of how there's at least one kind of multiplication that can be non-commutative and if we want to generalize that notion we find a lot of flexibility in Matrix algebra so for the rest of the video we will be looking at the solution that D came up with for ab C and D where each of these is a 4x4 Matrix and it's important to know that this is not the only direction we could have gone in there's actually very many different mathematical objects that obey
+
+00:10:11
+these commutation relations that is that obey these constraints on what the products and the sum of the products have to be the Dirac matrices are just one way of doing it but they're sort of the most standard way of doing it all right so here are the Dirac matrices the durac matrices are also called the gamma matrices so gamma 0 Gamma 1 gamma 2 gamma 3 uh in spirit the gamma matrices are just the ABC and D that we were looking for by the way you do not have to memorize the D matrices okay you can
+
+00:10:42
+look them up so now if we return to the equation where we took the square root of the mass shell and we substitute in the Dirac matrices for a b c and d what we end up with is an equation where each of the gamma matrices is multiplied by each of the components of the four momentum of the particle and that equals the square root of the four momentum dotted with itself right which equals McAn squar and so you take the square root you get MC so effectively what we've done here is that we've taken the square root of the mass
+
+00:11:10
+shell so it turns out that there's a way of writing this equation in a really concise form so notice that each of the Dirac matrices is multiplying by each of the components of the for momentum so if we want we can write it in a really cool shorthand where we just say gamma mu P mu so what that means is the repeated indices mean we just sum over all of these indices so mu goes from 0 1 2 and 3 and we add up these terms so this is the Einstein summation convention where if you get a repeated index you add over
+
+00:11:38
+all those terms and so what we're looking at here is the derac equation in momentum space where we see that when you take each of the D matrices multiplied by each of the components of the for momentum and you add it all up that gives you the mass of the particle times the speed of light that's a beautiful concept and there's so much to say about it we' got so much exploration to do in future videos I'm really excited for all of that but now to go from momentum space to position space let's go ahead and plug
+
+00:12:06
+in our quantum mechanical energy momentum operator so remember that second principle we started with when we were listing out our ingredients of the D equation is that the four momentum is I * H bar * the 4 gradient well we plug that into our momentum space Tock equation and we can keep it concise for now we can use the summation convention we'll unpack it in a moment but just to keep things nice clean we end up getting that gamma mu * I * H * partial mu equal MC so now let's go ahead and divide by I
+
+00:12:38
+* H bar and let's go ahead and move M over to the left side of that equation and what we end up with is the derac equation there it is you'll often see this written with the I and the H bar on the left side in the gamma terms doesn't matter so I know the Einstein summation convention can be a bit cryptic sometimes but if we go ahead and unpack that and write that all out in terms of the derivatives we can see that basically what we do is we're going to take the derivative of s with respect to
+
+00:13:04
+time with respect to X Y and Z and each one of those terms is going to be multiplied by the corresponding Tock Matrix and then you're going to add in MC over H bar time the imaginary unit Time s and all of that balances out so that equals zero and if you look at this equation it's like a flattened version of the Klein Gordon equation it's like we've taken the square root of the Klein Gordon equation in some sense so the fact that we were able to do that is going to resolve all of our concerns
+
+00:13:29
+that arose from the kin Gordon equation relating to the second order in time so that's great we've done it fantastic but well here's the thing so but think about what this means for SII so SII can't just be a complex valued wave function anymore because you have to be able to multiply it by a matrix at least in this formulation of the D equation you know we're using gamma matrices so therefore Sai has to be a four component vector or for component something in order to do the matrix
+
+00:13:58
+multiplication now as it turns out Sai is what's called a byy spinner and believe me we're going to unpack that in a future video but long story short there are these things called Spinners and a spinner is usually represented as two complex numbers so Sai in the context of the daac equation is a thing that involves four complex numbers at every point in SpaceTime but those four complex numbers really should be thought of as two spinners where each spinner is a pair of complex numbers for reasons that we'll see in
+
+00:14:29
+future videos when you write S as a column Vector like this s 1 S 2 S 3 S 4 where each one of those is a complex number then the first number s 1 corresponds to a spin up electron the second number S 2 corresponds to a spin down electron the third number S 3 corresponds to spin up positron and then S 4 corresponds to spin down positron so contained within s are two spinners one for matter one for antimatter and each spinner has this spin up spin down kind of component kind of situation now Spinners are highly
+
+00:15:05
+non-trivial objects they're very difficult to imagine and visualize so I think in the next video I'm just going to look into different ways of visualizing Spinners um because you know when you're dealing with a daac equation it's a by spinner field it's two coupled Spinners at every point in SpaceTime so in order to really work with this equation we've got to become familiar with what a spinner is so I'm going to go into that a little bit in more depth in the next video and over time as we
+
+00:15:30
+practice with these equations we'll start to develop a familiarity of it but the weirdest thing about Spinners you can imagine it sort of like a flag so you know a vector points in a direction and has a magnitude but there's no rotational sense around the axis of the vector a spinner has Direction and magnitude and also has kind of that orientation the flag rotation angle you know but when you represent Spinners that way there's actually two spinners for every imaginable flag and when you
+
+00:15:57
+rotate a spinner a full 360 back to itself it becomes the opposite flag and then you have to rotate at another 360 and then it becomes its original flag so Spinners give us a double cover of the rotations and it's really cool it's really trippy and this is at the heart of why electrons are Fons and they spin one half and it's really weird and there's beautiful structure here so anyway there's there's a lot more to talk about in the future videos but for today my goal was to derive the dck
+
+00:16:23
+equation and uh I hope that I have done a decent job of that and yeah so there you go thanks for watching and I'll see you in the next one
+

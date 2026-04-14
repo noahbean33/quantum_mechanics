@@ -1,0 +1,38 @@
+This one's tighter than Lecture 1 and the pedagogical move at its core is genuinely good. You're deriving the eigenvectors from *symmetry constraints* rather than handing them down from the Pauli matrices and asking the reader to verify. That inverts the usual physics-textbook ordering and it's exactly right for this audience — the linalg-fluent reader gets to see the constraints generate the answer, which is much more satisfying than "here are the Pauli matrices, here are their eigenvectors, trust me."
+
+The §3.3 argument that the Y eigenvectors *require* complex coefficients because real ones can't produce a third symmetric pair is the highlight. That's the moment where the reader understands why ℂ and not ℝ — not as a stipulation but as a forced consequence of wanting three mutually unbiased bases. Most intros never make this argument and it's one of the deepest motivational facts in elementary QM. Keep it, and consider expanding it by half a paragraph: explicitly say "if we tried to find a third pair $(a, b)$ and $(a, -b)$ with $a, b \in \mathbb{R}$ and $|a|^2 = |b|^2 = 1/2$ and orthogonal to both Z and X eigenvectors, no solution exists — the dimension of the real solution set is exhausted after two bases. Complex coefficients add the degrees of freedom needed for the third." That's a one-paragraph riff that converts "essential" from an assertion to a demonstrated fact.
+
+Things to push on:
+
+**The lecture never writes down X, Y, Z as matrices.** This is a strange omission given the title says "eigenvectors of the three standard observables" — you give the eigenvectors but not the operators they're eigenvectors of. The reader has to either remember the Pauli matrices from Lecture 1's example or take it on faith that *some* Hermitian matrices have these eigenvectors. Add a half-page subsection (probably as 3.0, before 3.1) that just states:
+$$Z = \begin{pmatrix}1&0\\0&-1\end{pmatrix}, \quad X = \begin{pmatrix}0&1\\1&0\end{pmatrix}, \quad Y = \begin{pmatrix}0&-i\\i&0\end{pmatrix}$$
+and notes that the eigenvectors derived in 3.1–3.3 will be verified against these by direct computation. Then close 3.3 with a one-line check: "$Y \mathbf{y}_+ = \mathbf{y}_+$, as expected." This closes the logical loop. Right now you're deriving constraints that the eigenvectors of *something* satisfy without ever pinning down what that something is.
+
+The alternative framing — and this might actually be better — is to *not* introduce the matrices at all in this lecture and instead make the entire lecture about the abstract derivation, with a forward reference: "In Lecture 3 we will see that there exist self-adjoint matrices Z, X, Y whose eigenvectors are exactly these, and we will compute them by reverse-engineering from the eigendecomposition." That makes Lecture 2 about the *states* and Lecture 3 about the *operators*, which is a clean split. But you have to commit to one framing or the other; right now the lecture is in the awkward middle where it talks about "the observable X" without ever showing X.
+
+**The "experiment says" box in §2 is doing real work this time and should be expanded.** The claim that $\langle M \rangle_v = v^\dagger M v$ is *the* operational definition of expectation value, and the box hand-waves it. Spend three lines: $\langle M \rangle = \sum_i \lambda_i P(\lambda_i) = \sum_i \lambda_i |e_i^\dagger v|^2 = \sum_i \lambda_i v^\dagger e_i e_i^\dagger v = v^\dagger (\sum_i \lambda_i e_i e_i^\dagger) v = v^\dagger M v$, where the last step uses the spectral decomposition. That derivation does two things at once: it justifies the formula and it sneaks in the spectral theorem in a place where the reader will accept it because it's serving a concrete computation. Free pedagogical real estate.
+
+**§3.5 is true but understated.** "The three pairs are symmetrically related" is the mutually-unbiased-bases concept, and it's worth naming it. One sentence: "Three orthonormal bases with this pairwise property — that every vector in one basis has equal-magnitude overlap with every vector in another — are called *mutually unbiased bases*. The X, Y, Z eigenvectors form a maximal set of three mutually unbiased bases in $\mathbb{C}^2$, and this maximality is special to two dimensions in the sense that..." and you can stop there or you can cite that the maximal number of MUBs in $\mathbb{C}^d$ is $d+1$ when $d$ is a prime power and is an open problem otherwise. The bridge audience will *love* that there's an open problem hiding inside the elementary picture. It's one of those moments where elementary content earns trust by acknowledging that the elementary content is sitting on top of real research.
+
+**The degrees-of-freedom counting in §4 is correct but begs for the Bloch sphere.** Two real parameters → sphere. You don't have to do the full Bloch sphere construction in this lecture, but a one-sentence forward reference ("These two real parameters can be visualized as a point on the surface of a sphere, the Bloch sphere, which we construct in Lecture N") gives the reader a target. The Bloch sphere is also the first place in this whole sequence where you can produce a *picture*, and pictures are disproportionately valuable for retention and Medium clickthrough. When this becomes an article, the Bloch sphere visualization is the OG image.
+
+**Aside on non-unit vectors should be more emphatic.** "The physics is contained in the direction of the vector, not its length" is correct but soft. The hard version: this means the state space is not actually $\mathbb{C}^2$, it's $\mathbb{C}^2$ modulo the equivalence relation $\mathbf{v} \sim z\mathbf{v}$ for any $z \in \mathbb{C}^*$, which is the complex projective line $\mathbb{CP}^1$, which is topologically the 2-sphere — and *that's* why the Bloch sphere works. You don't have to introduce $\mathbb{CP}^1$ in this lecture, but you can plant the seed: "the true state space is not $\mathbb{C}^2$ but the set of *directions* in $\mathbb{C}^2$, which we will see has the geometry of a sphere." Again, forward-reference, plants the hook for the next lecture.
+
+**Code suggestion for the Medium version.** When this becomes an article, the killer notebook cell is:
+
+```python
+import numpy as np
+Z = np.array([[1,0],[0,-1]])
+X = np.array([[0,1],[1,0]])
+Y = np.array([[0,-1j],[1j,0]])
+
+for name, M in [("Z",Z),("X",X),("Y",Y)]:
+    vals, vecs = np.linalg.eigh(M)
+    print(name, vals, vecs)
+```
+
+Six lines, produces all six eigenvectors that the lecture spent three pages deriving. The pedagogical pairing is: derive them by hand from constraints (the lecture), then show that `np.linalg.eigh` agrees (the notebook). That's the satisfying loop — the reader sees that the abstract symmetry argument and the numerical computation produce the same six vectors, which is the moment they trust the framework.
+
+Strategic note: Lectures 1 and 2 together make exactly one Medium piece, not two. The natural article is "Two-Level Quantum Systems from Scratch" — four axioms (compressed from L1 §2), the non-commutativity example (L1 §3.2), the eigenvector derivation (L2 §3), the degrees-of-freedom count (L2 §4), and the notebook. That's one tight 8-minute read with a runnable Colab, and it's a direct sequel to the existing QM article that's already pulling SEO traffic. The vector-space machinery from L1 §5 goes in an appendix or a separate "linear algebra refresher" article that the main pieces link back to.
+
+If the rest of the lecture series is at this density, you're sitting on something like 6-10 Medium articles' worth of material. The bottleneck isn't writing — it's the discipline of cutting the formal lecture-notes scaffolding and letting each piece be an article rather than a chapter.

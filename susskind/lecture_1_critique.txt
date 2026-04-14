@@ -1,0 +1,29 @@
+This is the right backbone for the series. The four-axiom compression is the move — most QM intros bury the rules under three chapters of Stern-Gerlach and historical motivation, and your bridge audience doesn't need that. They want the rules stated, the algebra to compute with them, and code to run. You're 90% there.
+
+Specific things that work:
+
+The norm-preservation → unitarity → Hermitian generator derivation note is the best thing in the document. That's the kind of insight physicists usually skip because it feels obvious to them, but it's exactly what the linalg-fluent reader wants — it tells them *why* H has to be Hermitian rather than presenting it as an arbitrary stipulation. Keep that, and consider promoting it from a "derivation note" to its own subsection. It's load-bearing.
+
+Calling them "self-adjoint matrices" instead of "operators" is correct for this audience. "Operator" is physicist code-switching that costs you nothing to drop. Same with "two-level system" instead of leading with "qubit" or "spin-1/2" — you let the reader meet the math first and then learn that physicists have three different names for the same ℂ² later.
+
+The commutator → shared eigenbasis framing at the end of §3 is exactly right. That's the linear algebra fact that makes the uncertainty principle stop being mystical, and you state it cleanly.
+
+Things to push on:
+
+**Drop ℏ.** Carrying ℏ through the time evolution axiom in a course explicitly aimed at people who don't have physics background is a tax with no payoff. Set ℏ=1 in §2, note in a sentence that it's a unit choice physicists make for dimensional reasons and you'll restore it if and when units matter, and move on. The equation `i v̇ = Hv` is dramatically less intimidating than `iℏ v̇ = Hv`, and the reader you're targeting will read the second one as "ah, physics, here come the weird constants" and tense up. You're not writing for physicists; let them complain.
+
+**Flag the global phase early.** The fact that `v` and `e^{iφ} v` represent the same physical state should be in §2 or as a footnote to Axiom 1. It's a one-sentence remark and it prevents three lectures' worth of confusion later when the reader notices that the math seems to have extra degrees of freedom the physics doesn't care about.
+
+**Show the X eigenvectors in §3.2.** You assert "$|e_±^† e_0|^2 = 1/2$" and the reader has to take it on faith. For the audience you're targeting, the whole appeal is that they can verify everything. Spend three lines computing `(1/√2)(1, ±1)` as the eigenvectors of X and then doing the inner product. It costs you nothing and it converts the example from "trust me" to "watch me." Same in any future example — never assert a numerical result you could show in two lines.
+
+**§5 is too long for the audience.** The bridge reader knows what ℂⁿ is, knows what an inner product is, knows what orthogonality is. The whole "definition of a complex vector space, examples, conjugate transpose, inner product, orthogonality, dimension" arc is appropriate for a true from-scratch course but it's review for someone who already does numerical linear algebra for a living. Two options: (a) move it to an appendix and reference it for readers who need the refresher, or (b) compress it to a one-page "notation reference" that establishes your conventions (column vectors, dagger for conjugate transpose, $v^† v$ for the squared norm) without re-teaching the material. Option (b) is probably better for the lecture-notes form factor; option (a) is better when this gets translated to Medium.
+
+**The "experiment says" boxes are slightly miscalibrated for the audience.** They're great pedagogical devices for physics students who need to be reminded that this isn't pure math, it has empirical content. But the bridge audience isn't suspicious that QM is empirically grounded — they're suspicious that it's *computable*. Their question isn't "does this match experiment" but "can I actually do anything with this." Consider replacing or supplementing the experiment-says boxes with "code says" boxes: a four-line numpy snippet that produces the result you just claimed. That's the move that converts lecture notes into bridge-audience content.
+
+**The motivation section overpromises on control theory analogies and then doesn't deliver them in Lecture 1.** You name-drop LTI systems, state-space models, Fourier, bandwidth-duration product, and then Lecture 1 has zero of those. Either thread one through (the time evolution `v(t) = e^(-iHt) v(0)` is *literally* an LTI system response to an initial condition with system matrix -iH, and you should say so explicitly when you state Axiom 4) or trim the motivation. The state-space connection in particular is free and it would land hard with anyone who's done any controls work.
+
+Strategic note on how this feeds the Medium pipeline:
+
+Lecture 1 as written is one Medium article, maybe two. The natural split is "Quantum Mechanics in Four Axioms" (sections 2-3, the rule statement and the non-commutativity example) and "Two-Level Systems from Scratch" (section 4 plus the X eigenvector computation plus a Colab notebook that simulates a Z-then-X-then-Z measurement sequence and recovers the 50/50 statistics empirically). The first piece is the conceptual hook, the second is the runnable thing, and the second links back to the first. Both target distinct search keyword neighborhoods and both should funnel back to the same Colab.
+
+If the rest of your lecture series is at this quality, you have something like 8-12 Medium articles already drafted in latent form, and the marginal cost of converting each is low: prose translation, ℏ removal, code notebook, done. That's a publication schedule for the next four to six months that compounds on the QM piece's existing SEO authority.

@@ -1,0 +1,174 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 8}
+\lhead{Advanced Quantum Mechanics}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{definition}{Definition}
+
+\title{\textbf{Lecture 8: Tunneling, Mixing, and Symmetry} \\ \large Neutrino Oscillations, the Electron Dipole Moment, and Field Commutators}
+\author{Based on Leonard Susskind's \textit{Advanced Quantum Mechanics}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Quantum Tunneling and Mixing}
+% ============================================================
+
+\subsection{1.1 The double-well potential}
+
+Consider a symmetric double-well potential with a barrier between two minima.  If the barrier were infinite, there would be two degenerate ground states---one localized on the left ($\ket{S_L}$) and one on the right ($\ket{S_R}$), each with the same energy $E_1$.
+
+When the barrier is finite, the wave function can leak through (tunnel).  The true energy eigenstates are \emph{not} $\ket{S_L}$ and $\ket{S_R}$ but their symmetric and antisymmetric combinations:
+\[
+    \ket{S_+} = \frac{1}{\sqrt{2}}\bigl(\ket{S_L} + \ket{S_R}\bigr), \qquad
+    \ket{S_-} = \frac{1}{\sqrt{2}}\bigl(\ket{S_L} - \ket{S_R}\bigr),
+\]
+with energies:
+\[
+    E_+ = E_1 - \epsilon, \qquad E_- = E_1 + \epsilon,
+\]
+where $\epsilon$ is an exponentially small splitting determined by the barrier height and width.  The symmetric state $\ket{S_+}$ has the lower energy.
+
+\subsection{1.2 Oscillations between left and right}
+
+If a particle is prepared on the left at $t = 0$:
+\[
+    \ket{\psi(0)} = \ket{S_L} = \frac{1}{\sqrt{2}}\bigl(\ket{S_+} + \ket{S_-}\bigr).
+\]
+Time evolution gives:
+\[
+    \ket{\psi(t)} = \frac{1}{\sqrt{2}}\bigl(e^{-iE_+ t/\hbar}\ket{S_+} + e^{-iE_- t/\hbar}\ket{S_-}\bigr).
+\]
+After a time $T = \pi\hbar/(2\epsilon)$, the relative phase reverses and the particle is entirely on the right:
+\[
+    \ket{\psi(T)} \propto \ket{S_R}.
+\]
+The particle oscillates back and forth with period $\pi\hbar/\epsilon$.
+
+% ============================================================
+\section{2. Neutrino Oscillations}
+% ============================================================
+
+Neutrino oscillations are a direct physical realization of the mixing phenomenon:
+\begin{itemize}[nosep]
+    \item The \textbf{flavor eigenstates} (electron neutrino $\nu_e$, muon neutrino $\nu_\mu$) are the analogs of $\ket{S_L}$ and $\ket{S_R}$.
+    \item The \textbf{mass eigenstates} (definite energy/mass) are the analogs of $\ket{S_+}$ and $\ket{S_-}$.
+    \item The mass eigenstates have slightly different masses, producing a splitting $\epsilon$.
+\end{itemize}
+
+A neutrino created as $\nu_e$ (e.g., in a solar nuclear reaction) will oscillate into $\nu_\mu$ over a characteristic length scale set by $\epsilon$.  This was experimentally confirmed and explains the observed deficit of solar electron neutrinos.
+
+\subsection{2.1 Spin precession analogy}
+
+The same mathematics describes spin precession.  A spin-$\frac{1}{2}$ particle in a magnetic field $\vb{B} = B\hat{x}$:
+\begin{itemize}[nosep]
+    \item The energy eigenstates are $\ket{\text{left}}$ and $\ket{\text{right}}$ (aligned/anti-aligned with $\hat{x}$).
+    \item An electron prepared in $\ket{\uparrow}$ ($z$-direction) oscillates between $\ket{\uparrow}$ and $\ket{\downarrow}$ with a period set by the magnetic field strength.
+\end{itemize}
+
+% ============================================================
+\section{3. The Electron Dipole Moment and Symmetry}
+% ============================================================
+
+\subsection{3.1 Is the electron a sphere?}
+
+A common misconception: the absence of an electric dipole moment does not imply spherical symmetry.  An object can lack a dipole moment but have higher multipole moments (quadrupole, octupole, etc.).  The electron, having spin $\frac{1}{2}$, is intrinsically \emph{not} spherically symmetric---it has a spin axis.
+
+\subsection{3.2 Quantum mechanical ``sphericity''}
+
+For any bosonic system in a state of zero angular momentum ($\ell = 0$), the wave function is rotationally symmetric.  Even a dumbbell-shaped molecule in its ground state has a spherically symmetric probability distribution, because $\ell = 0$ implies invariance under all rotations.
+
+Whether this counts as ``spherical'' depends on the energy resolution of your probe.  If the energy gap to the first rotational excitation is much larger than the probe energy, the system appears perfectly spherical.
+
+\subsection{3.3 Parity and the electric dipole moment}
+
+If the laws of physics are invariant under spatial reflection (parity $P$), and if there is only one species of electron, then the electron cannot have an electric dipole moment.  The argument:
+\begin{enumerate}[nosep]
+    \item Under reflection, the magnetic moment (an axial vector from circulating current) does \emph{not} flip.
+    \item Under reflection, the electric dipole moment (a polar vector from charge displacement) \emph{does} flip.
+    \item If the mirror image must be the same particle, the dipole moment must be zero.
+\end{enumerate}
+However, parity is violated in the weak interaction, so this argument alone is insufficient.
+
+\subsection{3.4 Time-reversal symmetry}
+
+A stronger constraint comes from time-reversal symmetry $T$:
+\begin{enumerate}[nosep]
+    \item Under $T$, currents reverse $\Rightarrow$ the magnetic moment flips.
+    \item Under $T$, static charges are unchanged $\Rightarrow$ the electric dipole stays.
+    \item Again, the mirror image differs from the original unless the dipole is zero.
+\end{enumerate}
+Time-reversal violation exists in the Standard Model but is extremely small.  The predicted electron electric dipole moment is far below current experimental sensitivity.  The non-observation of an electric dipole moment constrains extensions of the Standard Model.
+
+% ============================================================
+\section{4. Fourier Transforms and Momentum-Space Fields}
+% ============================================================
+
+\subsection{4.1 Single-particle Fourier transform}
+
+The position-space and momentum-space wave functions are Fourier conjugates:
+\[
+    \tilde{\psi}(p) = \frac{1}{\sqrt{2\pi\hbar}}\int dx\;e^{-ipx/\hbar}\,\psi(x), \qquad
+    \psi(x) = \frac{1}{\sqrt{2\pi\hbar}}\int dp\;e^{ipx/\hbar}\,\tilde{\psi}(p).
+\]
+
+\subsection{4.2 Field operators in momentum space}
+
+The same relation holds for field operators:
+\[
+    \Psi(x) = \frac{1}{\sqrt{2\pi\hbar}}\int dp\;\tilde{a}(p)\,e^{ipx/\hbar},
+\]
+where $\tilde{a}(p)$ annihilates a particle of momentum $p$.  The creation field operator is:
+\[
+    \Psi^\dagger(x) = \frac{1}{\sqrt{2\pi\hbar}}\int dp\;\tilde{a}^\dagger(p)\,e^{-ipx/\hbar}.
+\]
+The relationship between position-space and momentum-space creation/annihilation operators mirrors the Fourier transform of wave functions.
+
+% ============================================================
+\section{5. Commutation Relations and Locality}
+% ============================================================
+
+\subsection{5.1 Field commutators}
+
+The commutation relations of the field operators are:
+\[
+    [\Psi(x), \Psi^\dagger(y)] = \delta(x - y), \qquad [\Psi(x), \Psi(y)] = 0, \qquad [\Psi^\dagger(x), \Psi^\dagger(y)] = 0.
+\]
+
+\subsection{5.2 Physical meaning: locality}
+
+The vanishing of $[\Psi(x), \Psi^\dagger(y)]$ for $x \neq y$ (which holds when considering the real and imaginary parts as observables) has profound physical meaning:
+\begin{itemize}[nosep]
+    \item Measuring the field at point $x$ does not disturb the field at point $y \neq x$.
+    \item There is no Heisenberg-type interference between measurements at different spatial points.
+    \item This is the quantum-mechanical expression of \textbf{locality}: operations at one point do not instantaneously affect distant points.
+\end{itemize}
+In relativistic quantum field theory, this locality condition extends to spacelike separations, ensuring consistency with special relativity: no signal can propagate faster than the speed of light.
+
+\subsection{5.3 Entanglement and locality}
+
+Entanglement does \emph{not} violate locality.  Measuring an entangled particle at one location does not ``kick'' the distant particle.  The mathematical reason is precisely that field operators at different points commute: $[\Psi(x), \Psi^\dagger(y)] = 0$ for $x \neq y$.  Entanglement creates correlations but does not transmit information.
+
+\medskip
+\noindent\textit{This lecture bridges the abstract formalism of quantum fields to concrete physical phenomena---from neutrino oscillations to fundamental symmetries.  Next, we examine momentum conservation in quantum field theory and the interaction terms that lead to scattering and particle decay.}
+
+\end{document}

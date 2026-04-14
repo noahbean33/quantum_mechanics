@@ -14,3 +14,41 @@ C2. An engineer might conflate these. One sentence disambiguating would prevent 
 
 One gap relative to the spec:
 The spec called for Python/computational sidebars integrated into the lectures, and those are absent here. The scipy.linalg.expm note in Lecture 4 is the only one. Given that the original Python notebook was the seed of this whole project, the computational layer is either a separate companion notebook or needs to be threaded in more systematically. That's probably a deliberate choice for now — get the notes right first, add code second — but worth flagging as the major remaining gap before this becomes the Substack series.
+
+This document is one of the best "QM for engineers" resources I've seen. It is exactly pitched at a software engineer / data scientist who already lives in linear algebra, state-space models, SVDs, probability, and a bit of signal processing / control theory. The author strips away the usual physics baggage (no historical experiments, no Schrödinger cat, no "wave-particle duality" mysticism) and rebuilds everything from four clean axioms using the exact mathematical toolkit you already use every day.
+What works extremely well
+
+Linear-algebra-first approach: States are unit-norm column vectors in ℂⁿ, observables are self-adjoint matrices, measurement = Born rule on eigenvectors, dynamics = matrix exponential of a skew-Hermitian generator. This is literally just "complex-valued LTI systems with unitary flow." The Pauli matrices (Z, X, Y) are introduced as the three standard observables on ℂ² and their eigenvectors are derived with the same "equal-probability + orthogonality" constraints you would use in any symmetric signal-processing problem.
+Perfect analogies for our background:
+Time evolution = scipy.linalg.expm(-1j * H * t / ħ) on a state vector.
+Unitary = lossless two-port network (S†S = I).
+Schmidt decomposition = SVD of the coefficient matrix Ψ (Lecture 6). This is gold for anyone who does ML or data science.
+Partial trace = exact marginalization over latent variables (Lecture 7). The density matrix ρᴬ is just the reduced covariance after tracing out Bob.
+Precession of expectation values ⟨X⟩, ⟨Y⟩, ⟨Z⟩ under H = (ω/2)Z is classical Larmor precession / Bloch-sphere rotation — again, familiar from control or graphics.
+
+Two-level system (qubit) focus first: You get the full machinery (superposition, measurement update, non-commutativity, entanglement, density matrices) before any infinite-dimensional stuff. This is the right order for anyone who might later touch quantum computing or quantum ML.
+Concise and rigorous: Proofs are short and linear-algebraic (e.g., why [L,M]=0 ⇔ simultaneous eigenvectors; why self-adjoint ⇒ real eigenvalues + orthogonal eigenvectors). No hand-waving.
+
+Places that still feel a little confusing (or could be tightened)
+
+Overall phase invariance (Lecture 2, §4)
+It says "multiplying by e^{iθ} does not change any physical prediction because v†Mv cancels the phase." This is correct but a bit abrupt. A one-line example would help: show that the probability |⟨eᵢ|v⟩|² and the expectation ⟨M⟩ are both phase-invariant. (You already know global phase is irrelevant from ML loss functions, so this is easy to make click.)
+The "Experiment says" boxes
+They are motivational but feel slightly out of place in an otherwise pure linear-algebra document. For a pure software-engineer reader they could be shortened to footnotes or removed; the math already stands on its own.
+Commutator → uncertainty intuition (Lecture 5)
+The proof that [L,M]=0 ⇔ simultaneous eigenvectors is crystal clear. The leap to "you cannot have definite values for both" is fine, but a 30-second Python simulation (prepare |0⟩, measure X then Z vs Z then X) would make the "order dependence destroys information" visceral. The notes don't have code yet — that would be the single highest-leverage addition.
+Y matrix and the factor of i (Lecture 2)
+It correctly says "real coefficients alone cannot produce a third symmetric pair." That's true, but the geometric picture (the three Pauli directions are mutually perpendicular on the Bloch sphere) is missing. A one-sentence "these are the three orthogonal axes in the space of traceless Hermitian 2×2 matrices" would connect it to the familiar 3-D rotation picture you already know from computer graphics or robotics.
+Density-matrix section (Lecture 7)
+The derivation of ρᴬ via partial trace is perfect, but the entanglement criterion Tr(ρᴬ)² is given without the explicit link back to the singular values σᵢ you just saw in Lecture 6. One line would close the loop:
+Tr(ρᴬ)² = Σ σᵢ⁴ / (Σ σᵢ²)²
+(product state → 1, maximally entangled → 1/n, etc.). You already live in trace norms and nuclear norms in ML, so this is natural.
+
+What you can safely drop (for now)
+
+The very end of the provided excerpt mentions "remaining 14 pages" that presumably go into position/momentum on L²(ℝ), Fourier transforms, continuous spectrum, etc.
+If your goal is quantum information / quantum computing / quantum ML, you can skip or skim those until later. The core conceptual payoff (qubits, gates, entanglement, measurement, density matrices) is already complete by Lecture 7.
+Any deeper dive into the historical Stern-Gerlach experiment motivation. The math stands alone.
+
+Bottom line
+This document is outstanding for exactly your background. It is the fastest on-ramp I have seen to "thinking like a quantum information scientist" while speaking fluent linear algebra and Python. The only real missing piece is a companion Jupyter notebook with the 2-qubit simulations (state evolution, expectation-value precession, singlet correlations, partial trace in NumPy, etc.). If you implement those while reading, the material will lock in permanently.

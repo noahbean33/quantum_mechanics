@@ -1,0 +1,270 @@
+00:00:11
+all right the time has finally come to look at the Klein Gordon equation what a wonderful day so before we get started there's a couple of things I have to say about the scope of this video so the reason that I'm interested in showing you the Klein Gordon equation is that ultimately I want to show you the darac equation so that we can better understand the nature of the electric so in that context the Klein Gordon equation is kind of a stepping stone between the Schrodinger equation which
+
+00:00:37
+is non-relativistic and the D equation which is relativistic and captures the spin of the electron the Klein Gordon equation is a relativistic wave equation but it doesn't capture the electron Spin and so it's a natural step I mean we already saw the shinger equation if you check out the hydrogen videos you can see how it's used we had a video on why relativity breaks the shinger equation so we're in a good position now to make that equation relativistic but we're not yet ready to go full to rock and start
+
+00:01:07
+talking about spin and antimatter and all that so today I want to give you the standard mainstream derivation of the Klein Gordon equation I want to check out a few of the solutions energy momentum igen States and talk about how it Compares and contrasts to Schrodinger just to give you some familiarity with the equation and then after that we'll look into some of the concerns with the Klein Gordon equation that dck had back in the day and after we see those concerns turns we'll be in a better
+
+00:01:31
+position to start looking into the durac equation and appreciating the work that darac did and what his equation meant all right enough of the Preamble let's get into the Klein Gordon equation okay so we want to unify special relativity and quantum mechanics so let's begin our derivation with a principle from special relativity in particular we'll start with the mass shell as we saw in the other video the mass shell is what determines the relationship between energy momentum and Mass mass and special relativity so
+
+00:02:02
+that's the relativistic part of our relativistic wave equation now on to the wavy part we're going to take our quantum mechanical energy and momentum operators and that is that the energy operator is I * H bar * the partial derivative with respect to T and the momentum operator is I * H bar * the gradient now if we look at the right hand side of our Mass shell equation we see energy and momentum so that e over c^2 term we're going to go ahead and replace that by applying the energy operator twice and then dividing by c^2
+
+00:02:35
+so that term becomes h^ 2 c^ s * the second derivative with respect to time and similarly those momentum terms become h^ s * second spatial derivatives the derivation of the Klein Gordon equation is in many ways very very reminiscent of the derivation of the Schrodinger equation except now we're using the mass shell instead of P 2m all right let's go ahead ah head and write out these equations so we can see how the mass shell transforms into the Klein Gordon equation when the energy and
+
+00:03:07
+momentum terms are written in terms of the quantum operators the first thing we do like we were just saying you replace those terms with the second derivatives now after that if you look at this equation there's a whole lot of H bars so we can divide everything by H bar squared move some stuff around make it look nice and pretty and finally the last thing we have to do is we look at this equation we see there's a bunch of operators so let's give it a wave function to act on just slap on a ey and there you have it
+
+00:03:33
+that is the Klein Gordon equation it is a partial differential equation that describes the wave function of relativistic spin zero particles now here I'm showing a form of the Klein Gordon equation where all of the partial derivatives are listed out in gory detail and although this involves a good number of characters it also lets us see exactly which operators are going into the equation exactly which space and time derivatives and how and where but if we're willing to bust out the triangles and squares we can actually
+
+00:04:04
+really simplify this equation the first thing we can do is we'll notice that all of those second derivatives in space can be replaced with the llan so rather than minus all those second derivatives let's just say that's minus the llan and this already gives us a much simpler way of writing the Klein Gordon equation but now we can go one step further ask yourself this what would the relativistic operator that's like a llan b well you would expect it to involve a second derivative in time as well as the
+
+00:04:37
+Lan and you would expect a factor of 1 over the speed of light squared on the time derivative in order to get the units right right in order to translate time into space and you would also expect a minus sign between the time derivative and the Lan and that's a reflection of the movy metric and that's exactly what we have on the left side of that equation and so what we're looking at there is something called the Del ersan operator it's symbolized by a square I like to think of that as a square is
+
+00:05:07
+like if a triangle had four sides and you know it's relativity and there's four dimensions okay so it's kind of an elegant symbolism problem is nowadays in the age of the internet you also see a square when the symbol doesn't load so sometimes you see an equation with the dersion and it's like wait hold up has the symbol loaded or is this the SpaceTime llin thing but anyway so uh that lets us really simplify all of that second derivative stuff you just draw a square so how hard is that and now if
+
+00:05:35
+you look at that term MC over H bar let's go ahead and just replace that with the letter mu and mu is very much like the mass in fact if we're using natural units where C and H bar are one then mu is exactly equivalent to the mass I like to write it as Mu because technically there is that factor of speed of light there is that factor of H bar so you know it's in my opinion it's not exactly the same thing as mass but I'll say save my rant on natural units for another day anyway the difference
+
+00:06:03
+between mass and mu is kind of like the difference between mass and weight you know if your mass is 100 kg you might as well say you weigh 100 kg and then of course there's that pedantic guy who's going to be like well actually if you were on the moon you'd weigh 16 kgs or whatever but like because the gravitational acceleration is constant mass and weight are basically interchangeable well so too if we have this quantity MC overh bar you might as well just call it Mass because as long
+
+00:06:27
+as you're in this universe where the speed of light is constant and H bar is constant there's hardly any difference anyway all of that's to say what the Klein Gordon equation really is is that square plus Mass squar operating on S is zero the Elegance of this equation is not a coincidence if you go back to the simplest definition of the mass shell which is that the four momentum dotted with itself is equal to mcant squared then if you also unify the energy and momentum operators into this thing that
+
+00:06:57
+is the four gradient of the wave function up to factors of I and H bar then by combining those two equations directly you can basically arrive at this fact so we went the long way as far as looking at the specific derivatives and then recombining it because I think the first time you see this that's the right way to go but if you're comfortable thinking in terms of the triangles and the squares then you'll see that there's actually a lot of Elegance and simplicity here even more
+
+00:07:21
+so than was evident in our derivation so what do the solutions of the Klein Gordon equation look like let's begin exploring the solutions by first looking at energy momentum igen States these are very similar to the shrodinger plane waves that we've looked at in previous videos but the difference is that here the equation is actually more concise and more unified so a cin Gordon plane wave is just an exponential where in the argument of the exponential you have netive I overh bar and then the
+
+00:07:53
+four momentum dotted with the position four Vector so here p and X are four vectors so p is energy divided by speed of light and then the three spatial components of momentum and X is the speed of light time time and time is multiplied by the speed of light so that it becomes a spatial thing right so it fits in the four vector and then the following three components of the four Vector are the position Vector X Y and Z and by the way in front of the exponential we have some arbitrary constant a that's a complex number and
+
+00:08:23
+also of course the for momentum is constrained to be on the mass shell and here because p and X are four vectors the dot product is to be interpreted as using them in kovsky metric so if you want we can go ahead and write out the spatial part in the time part separately by taking that dot product with the minkovsky metric multiplying through by a minus sign while we're at it and then in the exponential we have the three momentum the regular old momentum Vector dotted with the three position the
+
+00:08:51
+regular old X Y and Z vector and then minus the product of energy in time and bear in mind the energy is still on the mass shell but as as long as we're unpacking this in detail we can actually go one step further and say instead of energy let's just write it out explicitly as C * the square root of the magnitude of the three momentum squ plus m^2 c^2 and so now this equation is kind of a mess but it's also very specific but remember all this is is the four momentum dotted with the four position
+
+00:09:19
+so really it's not as complicated as it looks and this form of the equation is going to be helpful later on when we derive the dispersion relation and the dispersion relation is going to let us calculate the group velocity of a Klein Gordon wave packet okay but before we get there there's some mathematical exploration that we have to do just to get a familiarity with the Klein Gordon equation and to learn some of the basics so first of all let's actually make sure that these plane waves solve the Klein
+
+00:09:47
+Gordon equation so to do this the first thing that we do is we split up the Klein Gordon equation so we write it as the Del ersan operator acting on S equals mu ^2 Time s and now the question we have to ask is when we apply the Del imersion operator to our wave function does that have the same effect as multiplying by mu ^2 well let's find out so we write the Del ersion operating on S as the Del imersion operating on our plane wave which is the exponential with I overh bar time the four momentum do the four
+
+00:10:23
+position you might notice here I omitted the arbitrary factor of a and the reason I did that is because you can see by the nature of the equation that it doesn't matter what a is if a is constant we can set a equal 1 without loss of generality because it just divides out of the equation either way okay so to make things a little bit more visible let's go ahead and write out that dotproduct as the dotproduct of the three momentum do the three position minus energy time time like we saw earlier okay now let's actually apply
+
+00:10:56
+the dersion operator remember that the definition of the Del ersion is 1 c^2 * the second derivative in time minus the llan so when we go ahead and apply that to our wave function we end up getting a factor that comes from the energy when we take the time derivative and that gives us this uh e over CH bar squ negative time the exponential so that comes from taking the derivative in time likewise when we apply the llan we get this factor of the magnitude of the momentum over H squ also times the
+
+00:11:28
+exponential okay and this equation is MC h^ 2 * s reason being that we recognize from the definition of the mass shell that those terms involving e and C and H and P all that is is the dotproduct of the for momentum with itself which because the for momentum is on the mass shell we know that's going to equal mcant squ but there's also that factor of H bar underneath the fraction and so actually on the right side we end up with MC over hty squ oh and there's a minus sign in there too and then we recognize that
+
+00:12:03
+exponential term as being our wave function s and so look indeed the deltion operator acting on S is the same thing as negative MC over hant squ acting on S so yes these plane waves actually do solve the Klein Gordon equation I'll leave it as an exercise for you to show that the Klein Gordon plane waves are igen states of the four momentum operator to do that it's very similar to what shown on the screen now but instead of taking the dersion you take I * H * the four gradient and then you want to show that you recover the
+
+00:12:34
+original wave function times the four momentum igen value another super important concept we have to know about when working with the Klein Gordon equation is that any superposition of wave functions that satisfy the Klein Gordon equation also satisfies the Klein Gordon equation and that lets us create a complex landscape starting with the simple basis set of functions let's say you have two wave functions that satisfy the Klein Gordon equation call them s 1 and S 2 so both s 1 and S 2 satisfy the Klein Gordon
+
+00:13:09
+equation now let's call their sum S3 so S3 = S 1 + S 2 the question then arises does S 3 satisfy the Klein Gordon equation well yes it does and we can show that first by writing S 3 as s 1 + S 2 and then the crucial Insight here is that because the Del inversion is a linear operator right it's just the sum of second derivatives we can actually split out that expression into the Del inversion plus Mass squ acting on S 1 plus the Del inversion plus Mass squ acting on S 2 and because both s 1 and S
+
+00:13:45
+2 satisfy the clan Gordon equation that ends up being 0 + 0 which is 0 and so yes S 3 does satisfy the Klean Gordon equation similar reasoning applies not just to the sum of two wave functions but also to to scaling up a wave function or taking the arbitrary sum over many wave functions or even more usefully if you have a basis set of functions that satisfy the client Gordon equation then you can make wave functions out of that basis set by summing over them with some series of coefficients and that's how we actually
+
+00:14:17
+use energy and momentum igen States most of the time so think of these Klein Gordon plane waves as being like threads that we can use to weave together all kinds of more complicated Landscapes but before we get into that I want to take a closer look at these threads I want to explore these Klein Gordon plane waves in more depth and in particular I want to see how they compare and contrast to schinger what we're looking at here is on top we have a Klein Gordon energy momentum Igan state for a particle at
+
+00:14:50
+rest and on the bottom we have a schinger plane wave for a particle at rest the first thing that really stands out to us is that the top one one the Klein Gordon plane wave is vibing with the frequency of its mass energy whereas the bottom one the shrodinger equation is inert it's lifeless it's dead there's nothing to it and so you see that relativity is not just a high energy High Velocity thing no even for things that are at rest there is a radical difference between the relativistic
+
+00:15:18
+perspective and the non-relativistic perspective relativity tells us that the particles are alive even when they're at rest now there is a way of treating things semi-classically where you say okay we let's use the Schrodinger equation but just add an MC 2 term so instead of p^2 2m let's use mc^ 2 + P2 2m okay but then you're just taking a low order tailor expansion of the mass shell so at that point you may as well just use the mass shell and Go full relativistic now as we put the Klein
+
+00:15:46
+Gordon plane wave into motion the first thing that stands out is whoo this thing is going way faster than the speed of light so in this chart I have those white dots representing the speed of light and you can see that the wave is just propagating super fast so um excuse me isn't this relativity isn't it you can't go faster than the speed of light right what so what happened here did we get something wrong with our math what what's going on but what you have to keep in mind is that when you're looking
+
+00:16:16
+at the energy momentum igen State this is something where you precisely know the particle's energy and its momentum and so therefore you don't know its position at all and so it's not actually correct to look at the speed at which its phase propagates and say that that's the speed of the particle no no not really that's actually What's called the phase velocity now with the Schrodinger equation I was able to kind of gloss over the difference between phase velocity and group velocity but here
+
+00:16:42
+when we're talking about Klein Gordon and relativity we really do have to look at the difference between these two things to see the difference between phase velocity and group velocity check out this little wavy guy here so this is a Klein Gordon wave packet and you can see that the phase velocity is going much faster than the group velocity to see the phase velocity you want to pick any color and track it and watch how fast it's going so for example look at Blue and you see how fast that phase is
+
+00:17:12
+propagating okay but now the group velocity is the velocity of the wave packet as a whole and you can see that relative to the phase velocity it's actually much slower and that's just how it is with client Gordon waves because the mass of the particle gives it this kind of energetic vibration in time so you give it a bit of momentum now that time vibration goes a little bit in space and the phase just goes super fast but nonetheless wave packets will still go the group velocity which is much
+
+00:17:40
+slower so now let's calculate the group velocity and we'll see that it's always less than the speed of light okay so in order to calculate the group velocity of a Klein Gordon wave packet we first have to calculate something called the dispersion relation the dispersion relation is when the Ang angular frequency of the wave is written as the function of the wave number so to calculate the angular frequency of our plane wave what we want to look at is what is the factor that is multiplying I
+
+00:18:11
+* time and that comes from the fact that if you have a wave normally it's e to the something minus I Omega T right so our question is what is that Omega factor and by inspection of the Klein Gordon plane wave equation we can see that our angular frequency Omega is going to be C over H bar * the square root of the magnitude of the three momentum s+ m^2 c^2 now also similarly we can ask what is the wave number and that's sort of like the angular frequency but if that were in units of space rather than time and so that's
+
+00:18:42
+going to be the thing that multiplies time IX rather than time I T and so if you look at the equation you see what is it that multiplies IX well you end up getting the magnitude of the three momentum / H bar so that's what sets our wave number and so now we know both the angular frequency of our plane wave and also the wave number but now if you look in the angular frequency equation you can see there's that factor of the momentum's magnitude squared so let's go ahead and rearrange the wave number
+
+00:19:10
+equation to get an expression for the magnitude of the momentum squared in terms of the wave number all right so we can see that P vector magnitude squ equal h^ s k^2 where K is the wave number and so by substitution now we can write the dispersion relation we can write Omega the angular frequency in terms of a function of the wave number simply by substituting in that momentum squared term and we end up with the dispersion relation that Omega is C over H bar * the < TK of h^2 k^2 + m^2 c^2 let's go ahead and multiply in that
+
+00:19:45
+c overh bar factor and we can clean up the equation a little bit so that we end up with Omega equal the < TK of kc^ 2 plus mc^2 over h^ 2 and that is our dispersion relation okay so the dispersion relation is a very important equation in Signal processing in the physics of waves oh and by the way I'll be putting all of these equations on my patreon along with supplemental materials and resources and I'll also be on there to answer any questions you might have about physics or math or life
+
+00:20:16
+so now that we have the dispersion relation we're going to use this formula from signal processing that the group velocity of a wave is the derivative of the angular frequency with respect to the wave number if you look up group velocity you can see where that comes from but for now we're just going to take that as a given and move on okay well we have an expression for Omega in terms of K right we have our dispersion relation so we put that into the formula for the group velocity okay when you work out the
+
+00:20:43
+derivative you end up with the equation that the group velocity is going to be KC over the < TK of k^2 + MC h^ 2 and that's all fine and good but now instead of having the group velocity as a function of wave number let's go ahead and write it as a function of momentum using the relation that the wave number is the magnitude of the three momentum divided H bar and when we do that we end up with the equation that the group velocity is going to be C * the magnitude of the 3 momentum / theare
+
+00:21:11
+root of magnitude of 3 momentum squ plus mc^ squ and this equation never goes faster than the speed of light how do we know that this equation never goes faster than the speed of light well if you look at it there's a factor of the speed of light and it's multiplied by all these other things and all those other things are a fraction where the numerator is less than the denominator because the magnitude of the momentum appears on the top and bottom but also on the bottom side you have McAn squared
+
+00:21:42
+and so for non-zero Mass you're always going to have a bigger denominator than your numerator and so the group velocity of the particle is always going to be less than the speed of light because it is the speed of light times a factor that's less than one also for a massive particle as the momentum increases es the size of the momentum relative to that MC term is going to increase and increase so this fraction approaches one and the group velocity approaches the speed of light you can see in this
+
+00:22:10
+equation that the group velocity is going to ASM totically approach the speed of light as the momentum of the particle increases without bound also we notice in this equation that when the particle is massless when its mass is zero then on both the numerator and denominator we have the same thing the magnitude of the three momentum and so this equation also tells us that a massless Klein Gordon wave packet will always travel at the speed of light regardless of its momentum so wait a minute let's think
+
+00:22:40
+about what this means we've been poking around exploring the Klein Gordon equation making wave packets calculating group velocities but we've run into a speed limit for mass of particles the speed of light and we've shown that massless particles will always travel the speed of light this is like the essence of Relativity and and at the same time it's all wavy and quantum mechanical so what's the problem why is dck not satisfied with the Klein Gordon equation well to answer that question we
+
+00:23:08
+have to go deeper so the math is about to get a little bit fancy but I think you can handle it the most important thing is passion and don't give up so imagine we have a particle that doesn't have a definite precisely known for momentum but instead it's kind of smeared out on the Mass lell so here I'm just showing one dimension of momentum let's say that's momentum along the X Direction and we'll say that Y and Z don't worry about it okay one spatial dimension for now and I'm also showing
+
+00:23:39
+energy there on that vertical axis and so here I'm showing a particle that occupies a bit of the mass shell so to get some visual intuition if you'd like you can draw out a probability Dimension and then think of this as a bell curve on the mass shell but you know in relativity we've got too many dimensions to deal with anyway way so you don't want to keep it in your mind as a probability Dimension Forever at some point you do want to squish it back down into something that feels more like a
+
+00:24:06
+temperature or like the density of a fog or something so anyway that's what I'm trying to convey here all right now the question becomes what does the wave function in space and time look like for a particle that has this kind of momentum distribution well if you think about it actually the information we have here is not quite enough because we can think of some momentum distribution as a superposition of infinitely many specific momenta so we can say okay this distribution is just like infinitely
+
+00:24:38
+many igen states stacked on top of each other and each of those igen States is going to have some weight and so to calculate the wave function in SpaceTime all we have to do is take a weighted sum of all the igen states corresponding to each one of these momentum points right aha but when you do that when you calculate that integral and it's an integral because it's just just a sum in the continuous limit but really in spirit it's just a sum but when you do that what you find is that actually
+
+00:25:06
+there's a phase degree of freedom on each and every momentum value because as you're superimposing all those different igen states the question becomes okay but what is the phase of each one of those igen States let's just say relative to the SpaceTime origin so when you think about that you realize that actually we don't want to talk in terms of this real valued probability distribution in the momentum space that is a valuable concept but in order to translate between momentum space and
+
+00:25:32
+space time what we have to be able to do is actually Define a complex valued momentum space wave function and the phase of that complex function encodes the phase of each one of those corresponding momentum igen States so let's say your wave function is purely real valued then you're adding up a bunch of IG states that are all in the same phase at the origin right and now let's say you take a function that is entirely imaginary valued well that's the same basic idea but now everything's just rotated 90° in the
+
+00:26:09
+complex plane and so in real space what that corresponds to is all your waves are going to be phas shifted by 90° but it's more or less the same thing but think of you know you have infinitely many degrees of freedom in a complex valued function because the phase can vary from one place to the next okay I know it seems a little complicated but it's actually the minimally complicated thing that it can be in order to have all the degrees of freedom that we need to Splash around Klein Gordon Style with
+
+00:26:37
+full generality so what am I really trying to say here well okay to go from the momentum space wave function to the position space wave function you do a forier transform now why do you do a forier transform there's a couple of different ways to think about that so one way to think about it is think of a four momentum igen State you see there's that term p.x the four momentum do the four position but in that equation you'll recognize that P and X play an identical role because mathematically p dox is the
+
+00:27:11
+same as x.p and so you could switch them up in the equation it wouldn't make any difference so p and X are sort of like reciprocals of one another and the space of all possible for momenta is sort of like the reciprocal of space time if you imagine the full four-dimensional space of all four momenta including things that are off the mass shell then you restrict that to the three-dimensional Subspace within that space of four momenta corresponding to the mass shell that space if you then want to fill it
+
+00:27:40
+in with an arbitrary function of complex numbers an arbitrary distribution of complex numbers in the mass shell that corresponds to all possible clein Gordon like legitimate ways to have a wave function that's sloshing around in accordance with the Klein Gordon equation anyway the reason I bring that up and the reason that that's relevant here is because then and by the way this is the point I've been building up to here is that once you see that there is a one to one connection between all
+
+00:28:08
+possible wave functions that satisfy the Klein Gordon equation in SpaceTime and all possible ways of decorating the mass shell with complex numbers then you recognize that we truly do need both halves of the mass shell in order to have a complete basis set to take these forier transforms from momentum space into position space in other words if we get rid of one of the mass shells let's say we just want one Mass shell we don't want to bother with this duality of shells well you can't do it I mean you
+
+00:28:37
+could but then the question arises why why do you get to just get rid of a mass shell arbitrarily that doesn't make any sense the equations say we should have two options here but now if you keep both Mass shells the question arises how do you deal with the negative energy because we have a positive energy shell we have a negative energy shell how do we interpret this what do we make of it if you look at the the mass shell it's one thing to say okay a particle with a lot of momentum is going to have a lot
+
+00:29:02
+of energy fine makes sense right but a negative energy particle you'd say like okay well if it has a lot of momentum now it has negative super negative energy so it somehow has less energy how do you have a particle where you put in more momentum and you get less energy it defies reason and this is something that D had a problem with as far as Klein Gordon is concerned now even though technically it also applied to the D equation the same concern but the Rock equation taught us how to contextualize
+
+00:29:30
+this by teaching us about antimatter and we can see this to some extent in Klein Gordon although it wasn't I think fully appreciated this point about antimatter until after the derac equation and the discovery of the positron in 1932 but anyway just uh we're skipping ahead a little bit but just want to tell you the resolution of this apparent Paradox is you want to look at the energy operator E equals IH bar partial s partial T and now ask yourself okay if we have a negative energy can't we just move that
+
+00:29:59
+minus sign on over to the other side of the equation and can't we interpret that then as the operator negative IH bar partial s partial T so in other words this negative energy half of the mass shell can't we interpret this as the wave function kind of being the opposite way oriented in time relative to the positive side of the mass shell now when you see that then you see the yin and yang of matter and antimatter and you see how it follows from the combination of Relativity and quantum mechanics if
+
+00:30:27
+you know that if you've studied the Klein Gordon equation the derac equation the pra equation you know you're familiar with the standard model in modern Quantum field Theory you've read Weinberg you can go back and put the Klein Gordon equation in that context and you see how antimatter slides right in but to say that the Klein Gordon equation predicted antimatter would really be an overstatement because at the time that this thing was published back in the day back in the late 20s people were not thinking in terms of
+
+00:30:53
+antimatter anyway so that's one critique when it comes to the Klein Gordon equation the facts that it has all of the problems with the negative energy situation and yet it doesn't offer us the Redemption of teaching us about antimatter so you know it's a mystery okay another critique and this one I think is more fundamental is that the Klein Gordon equation is second order in time now think back to the Schrodinger equation the Schrodinger equation is first order in time when you have an
+
+00:31:21
+equation that is first order in time then all you need to know at any moment is the situ with the wave function what is the wave function like in any moment and then the shinger equation says you take ation and do some things and that gives you the time evolution of the system right but you don't have to specify the rate of change of the wave function all you need is what is the wave function now and you can predict what is the wave function going to be as long as it's evolving under the shinger
+
+00:31:48
+equation but because the Klein Gordon equation is second order in time that opens up another kind of degree of Freedom which is okay but well what what is the rate of change of the wave function because when you have an equation that's second order in time then now all of a sudden the first derivative in time becomes an initial condition and so you see the equation is too loose it gives us too much Freedom we want something that's more restrictive we want something where we can just give it a wave function at one
+
+00:32:17
+moment and say okay now we're going to March the clock forward and we're going to get the time evolution of the thing okay this is one of Dock's more fundamental critiques with the Klein Gordon equation the fact that a second order in time and this goes against the usual rules of quantum mechanics and actually that critique is very closely related to another problem with the Klein Gordon equation which is that when you calculate the probability densities that arise out of a Klein Gordon wave
+
+00:32:44
+function you see that they can sometimes be negative now at the time that the Klein Gordon equation was published and first being explored these negative probability densities were kind of a huge deal so these really upset dck dck was not happy with this at all he found the situation to be intolerable he was like you can't have negative probability it doesn't make sense and while other physicists were happy saying well you know maybe it's not that much of a puzzle whatever who car sweep it under
+
+00:33:14
+the rug dck was like no we got to solve this so you know on this channel I like to get mathematical and really go into the details so I'd like to take a moment to show you how we can actually calculate the probability density and probability current now there is a really cool way of getting to this result from no's theorem but that's a bit beyond the scope of this video so today I just want to show you a short little algebraic way of getting there and it involves a bit of pattern matching so you know it's maybe not
+
+00:33:41
+fully rigorous but I hope you'll find it to be satisfying and interesting so anyway don't worry about no's theorem don't worry about variational calculus don't worry about any of that stuff for now all we need to do is say let's say we have a wave function s that satisfies the Klein Gordon equation so here it is Klein Gordon equation Del ersion acting on S Plus mu^ 2 * s = 0 now suppose we take the complex conjugate of this equation so in the equation we're going to swap the
+
+00:34:10
+real and imaginary parts so we can take the complex conjugate of both sides of an equation because the two things are equal and so therefore if you swap out the reals and the imaginary components then the equations are still equal so let's look at it term by term first of all what is the complex conjugate of the dersion operator acting on S well it turns out it's just the dersion acting on the complex conjugate of s because the D ersion involves a bunch of derivatives and derivatives don't
+
+00:34:36
+actually switch up the real and imaginary parts so there's nothing in the Del imersion that interferes with the complex conjugation all right next if we look at the mass squared term that's straightforward enough so mu^ squ that's a real number so when we take the conjugate of mu s s we just end up with mu ^ 2 * the conjugate of s okay so what have we learned here well well if you look at these two equations what you can see is that if we have a wave function s that satisfies the Klein Gordon equation
+
+00:35:04
+then so too does its complex conjugate so that's you know it's a little interesting something that we learned just now but we're not done yet so now what we're going to do is let's go ahead and multiply these equations by the following factors the top equation will multiply by negative s conjugate and the bottom equation will multiply by S why well don't worry about it but just with me here there's nothing stopping us from multiplying equations by factors right okay now let's go ahead and add up these
+
+00:35:34
+two equations when we do that the mass squar terms drop out of the equation and what we're left with is that s * the Del ersion of s conjugate minus s conjugate time the dersion of s equals 0 and that is a really pretty equation and this is at the core of the uh the probability density and probability current of the Klein Gordon equation so let's explore it in more detail and in particular let's go ahead and unpack the Del ersion because you know the Del ersion is kind of a cryptic operator if
+
+00:36:05
+you're not super used to it and it's always helpful to write it out in terms of its space and time derivatives okay so when we write things out in terms of space and time derivatives all we have to do is replace those Del ersan terms with 1 / c^2 * the second derivative in time minus theion now let's go ahead and multiply through these terms terms on the left one multiply through by S on the right one multiply through by S conjugate and we end up with an equation where the terms are all listed
+
+00:36:36
+out okay now I'd like to regroup these terms so we're going to put the time derivative terms together and we're also going to put the spatial derivative terms together okay we're almost there don't worry so now let's look at this equation and you see we have these second order derivatives but the way we've got it set up here we can actually factor out a derivative from each of these terms so on the left side we'll say okay let's take a Time derivative of the term in the parentheses and if you
+
+00:37:05
+want to go ahead and evaluate that derivative you can prove to yourself that that is in fact a legitimate move and likewise for the llan terms we can go ahead and split that out too because the llan is the Divergence of the gradient so now what we have interestingly is an equation where we have a Time derivative term acting on some quantity and we have a Divergence of some quantity this feels a lot like a continuity equation but before we get there what we're going to do is we're going to
+
+00:37:32
+multiply everything by netive I bar/ 2m what that's going to do is that's going to make the terms in the brackets real and it's also going to give them the units we need for the next step of our derivation okay so when we do that we get this equation shown here now here I want you to notice something very interesting about this equation if you've studied physics before and not just relativistic stuff but even like fluid dynamics then you'll recognize this as a continuity equation
+
+00:38:02
+what we have here is that there's a Time derivative of some quantity and when that's added to the Divergence of another quantity the result is zero so how can I put that into words you know it's like uh if the field is decreasing at a certain point then it also has to be spreading out it has to be diverging at that point imagine like a fluid flow likewise if the field is increasing at a point then you have to have the field coming in to make it increase and in this context what that lets us do
+
+00:38:30
+by identifying the terms in the parentheses with probability density and probability current respectively is we can write out what currents do we get from our client Gordon wave function but now here we run into a very serious problem and the problem is this if you look into the equation for probability density you recognize that this is not a strictly positive quantity in particular if this term s conjugate partial s partial T is less than S partial s conjugate partial T then the thing goes negative but it
+
+00:39:04
+could also be positive you know because it'd be one thing if it was only always negative then we could reinterpret it as always positive but no this can be positive or negative depending on the relative sizes of those two quantities and this is a fundamental problem if we're going to take the notion of probability density literally and so now this equation in particular is something that dck really was not a fan of and notice by the way that the culprit in this equation the thing that makes it go
+
+00:39:30
+negative sometimes is the existence of this time derivative of the wave function which shouldn't be a factor in any of these equations right if we had a equation that was first order in time we wouldn't be dealing with this time derivative partial s partial T causing all these problems so what we really need is to replace the Klein Gordon equation with something that's first order in time and this is yet more evidence in that direction and finally and perhaps most importantly of all there's another thing that
+
+00:40:02
+bothered dck about the Klein Gordon equation and this thing is still absolutely relevant today you know the other things you can sweep under the rug and say it the problem was that the equation was taken out of context but with this thing with this critique you know this is really fundamental and will always be super important and that is the Klein Gordon equation doesn't say anything about spin it applies only to spin zero particles but you have to remember back in the day people were looking for a relativistic
+
+00:40:30
+theory of the electron and electrons have spin 1 half now it was known that electrons have spin 1/2 before the Klein Gordon equation was published you still had the stern gerlock experiment in 1922 before that you had the Zan effect discovered way back in 1896 and of course from chemistry you have this knowledge that there are twice as many electron States in an atom than there should be right if you look at the hydrogen atom video we talked about Schrodinger's equation and calculated the igen states well in practice you
+
+00:41:01
+actually get two electrons per igen state which is completely baffling from the perspective of Schrodinger's equation so anyway all of this is to say at the time that Klein Gordon was published physicists and chemists were aware that there was something really weird going on with the electron where it had this kind of two possibility configuration but like why why is the universe giving us this D said something to the effect of why is nature not satisfied with the point particle for the electron like what the heck is going
+
+00:41:30
+on while other physicists were thinking okay fine we can take the Klein Gordon equation we know it doesn't have spin but maybe we can tack on spin somehow we can say okay we've got cllean Gordon we're going to add on this term that's going to give us Spin and we can model the spin of the electron and that's a reasonable enough assumption but it turns out that that never would have worked had physics gone in that direction it would have just been the wrong direction and the the fundamental
+
+00:41:57
+nature of electrons would have remained mysterious on the other hand the approach that darac took and the derac equation ended up revealing to us the nature of the electron spin sort of like for free like it comes out of Relativity and quantum mechanics and the other assumption that D made which we'll talk about in a future video and as an added bonus the very same algebraic structures revealed the existence of antimatter but hey anyway so before we get going I'd like to end this video with uh some words from Paul D Rock
+
+00:42:30
+himself well that was the situation which we had in 1927 and it worried me very much but it did not seem to worry other physicists at the time I remember very much an incident at the solve conference in 1927 during the interval before one of the lectures Neils B came up to me and asked me what are you working on now I told him I was trying to get a satisfactory relativistic theory of the electron then V answered but Klein has already solved that problem kle had this equation this interpretation K and Gordon had worked
+
+00:43:30
+it out independently and B considered that as a solution of the problem of getting a relativistic theory of the electron I started to explain to B that I wasn't satisfied with that and wanted to explain to him why but just then the next lecture started and our talk was cut short I never did get a chance to explain just what my objections were to this theory of clim objection of course is that we have a very beautiful and Powerful quantum mechanics based on this equation of sh and the corresponding equation of the
+
+00:44:21
+Heisenberg the it is so beautiful so powerful that it seemed to me that it had to be right I was very much impressed by the power of this Theory because I had seen it grow up step by step and had taken a part in it and then people wanted to scrap all this beauty and power and replace this basic Shing equation by something different something to which you can cannot apply the standard rules of quantum mechanics and that I found just intolerable I was very much working alone then other physicists were pretty well
+
+00:45:11
+satisfied to go on with this kind of theory here bringing the spin of the electron develop that theory but I just stuck to the fundamental ideas that we did not have a satisfactory relativistic theory of the electron and it was necessary to make some radical change well eventually I was able to guess what this change has to be
+

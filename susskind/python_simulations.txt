@@ -1,0 +1,93 @@
+Comprehensive List of Python Simulations for "Quantum Mechanics for Engineers" Notes
+As a software engineer / data scientist, the notes translate quantum mechanics into exactly the tools you already use daily: complex NumPy arrays (state vectors), matrix operations (observables), scipy.linalg.expm (time evolution = LTI system), SVD (Schmidt decomposition), partial trace (marginalization over latent variables), Monte-Carlo sampling (Born rule), and expectation-value dynamics (like tracking means in a stochastic process).
+The following simulations form a self-contained Jupyter notebook series (one notebook per lecture group, or one big repo). Each is minimal (≈20–50 lines), uses only numpy, scipy, matplotlib, and optionally pandas/seaborn for stats. They directly mirror the notes’ axioms, examples, and engineering analogies. I prioritized visual, interactive, and reproducible demos so you can tweak parameters and see the linear-algebra consequences instantly.
+I grouped them by the notes’ lecture structure, with a short “why this matters to you” note for each.
+Lecture 1–3: Two-Level Systems, States, Observables, and Linear Algebra
+
+State Vectors, Normalization, and Born Rule
+Purpose: Visualize any state v = [α₀, α₁] in ℂ², compute probabilities for Z/X/Y measurements, confirm v†v = 1.
+Visuals: Bar plot of |⟨eᵢ|v⟩|² for each observable; complex-plane arrow plot for α₀, α₁.
+Key code: np.dot(v.conj().T, v), np.abs(eigvec.conj().T @ v)**2.
+Manual vs. Library Eigenvectors of X, Y, Z (Pauli Matrices)
+Purpose: Reproduce the exact eigenvectors given in Lecture 2 (x±, y±, e₀, e₁) and verify they match np.linalg.eig.
+Visuals: Table comparing manual vs. library results + orthogonality check (v†w == 0).
+Engineering tie-in: Same as finding principal components or normal modes.
+Monte-Carlo Measurement Simulation & State Collapse
+Purpose: Sample 10 000 measurements on a superposition, histogram outcomes, demonstrate instantaneous collapse to eigenvector.
+Visuals: Histogram + live animation of state update after each measurement.
+Key code: np.random.choice([+1, -1], p=probs) + state reset.
+Non-Commutativity Demo (Order Matters)
+Purpose: Prepare |0⟩, measure Z→X vs. X→Z; show statistics differ dramatically (Lecture 1 §3.2 & Lecture 5).
+Visuals: Side-by-side histograms + probability tables.
+Why you care: Classic “order of operations destroys information” — exactly like non-commuting matrix multiplies in feedback control.
+Pauli Matrix Algebra Checker
+Purpose: Verify X² = Y² = Z² = I, XY = iZ (cyclic), commutators ≠ 0.
+Visuals: Printout of matrices + [X,Y] result.
+
+Lecture 4–5: Time Evolution as LTI System & Precession
+
+Unitary Time Evolution with Matrix Exponential
+Purpose: Evolve any initial state under U(t) = exp(-i H t / ℏ) (set ℏ=1).
+Visuals: Plot Re/Im of each component vs. time + norm ||v(t)|| (must stay 1).
+Key code: from scipy.linalg import expm.
+Norm Preservation & Unitary Check
+Purpose: Demonstrate that H = H† ⇒ U†U = I (Lecture 4 derivation).
+Visuals: Plot ||U†U - I||_F over many t (should be machine epsilon).
+Stationary (Energy Eigen) States
+Purpose: Evolve e₀ or e₁ under H = (ω/2)Z; show probabilities never change.
+Visuals: Static probability bars + phase winding animation.
+Bloch-Vector Precession (Expectation-Value Dynamics)
+Purpose: Compute ⟨X⟩(t), ⟨Y⟩(t), ⟨Z⟩(t) under H = (ω/2)Z (Lecture 5 §2.4).
+Visuals: 3-D parametric plot of (⟨X⟩, ⟨Y⟩, ⟨Z⟩) tracing a circle/cone + time-series subplot.
+Engineering tie-in: Exact analog of a classical LTI system’s oscillatory response (or a gyroscope precessing).
+General Two-Level Hamiltonian Explorer
+Purpose: Let user pick unit vector n = (nₓ, nᵧ, n_z) → H = (ω/2)(nₓX + nᵧY + n_zZ).
+Visuals: Interactive slider widget (ipywidgets) showing precession axis + conserved ⟨n·σ⟩ component.
+
+Lecture 6–7: Composite Systems, Entanglement, Density Matrices
+
+Two-Qubit Kronecker Products & Product States
+Purpose: Build |ψ⟩ = |a⟩ ⊗ |b⟩, print coefficient matrix Ψ (4×1 reshaped to 2×2).
+Visuals: Heatmap of |Ψ_{ij}|².
+Schmidt Decomposition (SVD of Coefficient Matrix)
+Purpose: Exactly as Lecture 6 §3.2 — compute SVD of Ψ for any two-qubit state; display singular values.
+Visuals: Bar plot of σᵢ (rank = number of non-zero singular values).
+Why you care: Identical to PCA / low-rank approximation you already use in data science.
+Product vs. Maximally Entangled (Singlet) State
+Purpose: Compare rank(Ψ) = 1 vs. rank(Ψ) = 2 for singlet (Lecture 6 example).
+Visuals: Side-by-side heatmaps + singular-value bars.
+Joint Measurement Correlations in Singlet
+Purpose: Monte-Carlo joint measurements of Z⊗Z, X⊗X, Y⊗Y on singlet (Lecture 6 §5.1).
+Visuals: Correlation table + scatter plot of Alice vs. Bob outcomes (perfect anti-correlation when same observable).
+Key code: Kronecker product of Pauli matrices: np.kron(Z, Z).
+Reduced Density Matrix via Partial Trace
+Purpose: Implement ρ^A = Tr_B(|ψ⟩⟨ψ|) exactly as Definition 11 (Lecture 7).
+Visuals: Heatmap of ρ^A for product state (rank-1 projector) vs. singlet (½I, maximally mixed).
+Key code: rho_A = np.einsum('ij,ik->jk', psi.conj(), psi) reshaped or explicit loop over Bob index.
+Purity & Entanglement Quantification
+Purpose: Compute Tr(ρ^A²) for states with varying entanglement (Lecture 7 §4.4).
+Visuals: Plot Tr(ρ²) vs. entanglement parameter (interpolate between product and singlet).
+Range: 1 (pure/product) → ½ (maximally entangled).
+
+Bonus / Extensions (Still Pure Linear Algebra, Highly Recommended)
+
+Expectation-Value ODE Solver
+Purpose: Numerically integrate d⟨L⟩/dt = i/ℏ ⟨[H, L]⟩ and compare to analytic matrix-exp solution (Lecture 4 §5).
+Visuals: Overlay numerical vs. exact curves.
+Animation of Bloch Precession
+Purpose: Real-time animation (FuncAnimation) of the Bloch vector rotating under arbitrary H.
+Libraries: matplotlib or plotly for interactivity.
+Density-Matrix Time Evolution (Mixed-State Preview)
+Purpose: ρ(t) = U(t) ρ(0) U†(t) for an initial mixed state; compute purity decay (if you want to peek ahead of the notes).
+“Classical Analog” Counterfactual
+Purpose: Simulate a classical probability vector (real, non-negative, sums to 1) evolving under a stochastic matrix vs. quantum unitary. Show that classical version cannot reproduce non-commuting measurement statistics.
+
+Implementation Tips for You (Software Engineer Perspective)
+
+Repo structure: One folder qm_engineer_simulations/ with lectureN_*.ipynb.
+Dependencies (requirements.txt): numpy scipy matplotlib pandas ipywidgets seaborn.
+Reproducibility: Seed random number generators; include assert np.isclose(v.conj().T @ v, 1).
+Interactivity: Use ipywidgets sliders for ω, initial state angles, n-vector — turns the notes into a live playground.
+Performance: Everything runs instantly on a laptop (2×2 or 4×4 matrices).
+
+These 20 simulations cover every core concept in the provided notes (and the natural next steps). Running them while reading will make the linear-algebra → physics mapping permanent — exactly like implementing a new ML architecture to truly understand it.

@@ -1,0 +1,49 @@
+This is the strongest of the three. The structure is nearly perfect: build the operator machinery (resolution of identity, matrix elements, adjoint, spectral theorem) and then *use* it to derive the Pauli matrices from the eigenvectors you already have. That payoff at the end — "we derived the eigenvectors from symmetry in Lecture 2, now we reverse-engineer the matrices from the eigenvectors" — is the kind of structural elegance that makes a reader trust you. It also retroactively justifies the Lecture 2 approach: you weren't just deriving eigenvectors of unspecified operators, you were establishing the data that uniquely determines those operators.
+
+The two short proofs in §5.2 and §5.3 are exactly the right level. They're complete, they're four lines each, and they use only the algebraic moves the reader already has. Most QM intros either skip these or banish them to an appendix on the grounds that "the spectral theorem is technical." It isn't, in finite dimensions, and you correctly treat it as elementary. The bridge audience will appreciate that you didn't condescend.
+
+The framing of the adjoint as "the matrix analog of complex conjugation" and self-adjoint as "the matrix analog of real" is a cleaner pedagogical handle than I usually see. Worth preserving and possibly even leaning on harder — you could draw the full analogy table:
+
+| numbers | matrices |
+|---|---|
+| $z^*$ | $M^\dagger$ |
+| $z = z^*$ (real) | $M = M^\dagger$ (self-adjoint) |
+| $|z|^2 = z^*z$ | $\|v\|^2 = v^\dagger v$ |
+| $|z| = 1$ (unit complex) | $U^\dagger U = I$ (unitary) |
+
+That table is one of those things that costs nothing and saves the reader a chapter of confusion later when unitaries show up. The unit-complex-numbers ↔ unitaries analogy in particular is going to do real work when you get to time evolution.
+
+Things to push on:
+
+**§7.2 has a broken computation.** The line
+$$\mathbf{e}_0^\dagger X\mathbf{e}_1 = \tfrac{1}{2}(\mathbf{x}_+^\dagger+\mathbf{x}_-^\dagger)(\mathbf{x}_+-\mathbf{x}_-+\mathbf{x}_--\mathbf{x}_+)\dots$$
+trails off into "..." and the parenthetical is wrong (it sums to zero when it shouldn't). You then assert "Direct computation gives $X_{01}=X_{10}=1$" without showing it. This is exactly the kind of place where a reader who's been carefully following along loses faith — they'll try to reproduce the computation, find that it doesn't work, and conclude either that they're missing something or that the lecture is sloppy. Neither is good.
+
+The fix is to do the computation cleanly. The easiest path is to expand $\mathbf{e}_1$ correctly:
+$$X\mathbf{e}_1 = X \cdot \tfrac{1}{\sqrt{2}}(\mathbf{x}_+ - \mathbf{x}_-) = \tfrac{1}{\sqrt{2}}(\mathbf{x}_+ - (-\mathbf{x}_-)) = \tfrac{1}{\sqrt{2}}(\mathbf{x}_+ + \mathbf{x}_-) = \mathbf{e}_0$$
+Then $\mathbf{e}_0^\dagger X \mathbf{e}_1 = \mathbf{e}_0^\dagger \mathbf{e}_0 = 1$. Three lines, no expansion gymnastics. The general principle is that when you have eigenvectors, the cleanest way to compute matrix elements is to apply the operator to one of the basis vectors (using the eigenvector expansion) and *then* take the inner product, rather than expanding both sides simultaneously.
+
+The same approach makes §7.3 a one-liner instead of "proceeding as above, the unique result is" — you should actually do Y, not handwave it. The handwave is especially conspicuous because Y is the only one with imaginary entries, and the imaginary entries are precisely what the reader will be most uncertain about. Skipping Y on the grounds that it's analogous to X is the wrong call here.
+
+**§7.6 introduces $X^2 = I$, $XY = iZ$, and the commutators with no derivation.** These are stated as "key algebraic properties" but they're each one or two lines of computation, and the reader will believe them much more if they see one of them done. At minimum, derive $X^2 = I$ explicitly (it's a 2x2 matrix multiplication), then state the rest. Even better: derive $XY = iZ$ and observe that since the matrices don't commute, $YX \neq XY$, and in fact $YX = -iZ$, so $[X,Y] = 2iZ$. That's the commutation relation that defines the Pauli algebra and it's worth stating cleanly because it shows up *everywhere* in the rest of the subject. You can then close with: "These three commutation relations $[X,Y] = 2iZ$, $[Y,Z] = 2iX$, $[Z,X] = 2iY$ are the defining relations of the Lie algebra $\mathfrak{su}(2)$, which is the algebraic structure underlying all spin and angular momentum in quantum mechanics." That's a forward-pointing sentence that costs you nothing and gives the reader a target for later.
+
+**The resolution of identity in §1 deserves a worked example.** You state $\sum_i \mathbf{e}_i \mathbf{e}_i^\dagger = I$ and call it "indispensable" but you never use it concretely in the lecture. The reader meets it as an abstraction and then sees it disappear. Show one application — for instance, in §2.1 when you derive $w_i = \sum_j M_{ij} v_j$, you actually *use* the resolution of identity (the line $M\mathbf{v} = M(\sum_j \mathbf{e}_j \mathbf{e}_j^\dagger \mathbf{v}) = \sum_j (M\mathbf{e}_j)(\mathbf{e}_j^\dagger \mathbf{v})$), but you don't call attention to that fact. Make the use explicit: "inserting the resolution of identity from §1." This is one of those moves that connects the abstract tool to a concrete payoff and trains the reader to recognize when to reach for it.
+
+**The adjoint definition in §3 is technically wrong as stated.** You wrote
+$$(\mathbf{u}^\dagger M^\dagger)\mathbf{v} = (M\mathbf{u})^\dagger\mathbf{v}$$
+which is true but trivially so — both sides are literally the same expression once you apply $(M\mathbf{u})^\dagger = \mathbf{u}^\dagger M^\dagger$. The standard defining property of the adjoint is
+$$\langle \mathbf{u}, M\mathbf{v}\rangle = \langle M^\dagger \mathbf{u}, \mathbf{v}\rangle$$
+or in dagger notation $\mathbf{u}^\dagger M \mathbf{v} = (M^\dagger \mathbf{u})^\dagger \mathbf{v}$. The point of the definition is that the adjoint is the operator you "move to the other side of the inner product" — that's the *content* of the definition, and your version obscures it. Fix the equation and add a sentence: "The adjoint is the operator that, when an operator is moved from the right side of an inner product to the left side, takes its place." This framing also makes the analogy to complex conjugation crisper, since for numbers $u^* (z v) = (z^* u)^* v$.
+
+**The note on basis dependence in §2.1 is correct but undersold.** "The specific numbers $M_{ij}$ depend on the choice of basis. A different basis gives different matrix elements for the same abstract operator." True, and important, but the reader who's done numerical linear algebra will immediately want to know: what *doesn't* change under a change of basis? The answer — eigenvalues, trace, determinant, rank — is one of the most useful facts in the subject and you have a perfect opportunity to plant it. One sentence: "The matrix elements depend on the basis, but the *eigenvalues* do not — they are intrinsic to the operator. This is why measurement outcomes (which are eigenvalues, by Axiom 2) are physically meaningful while individual matrix entries are coordinate-dependent artifacts." That sentence does enormous work: it explains why physicists obsess over eigenvalues, it foreshadows trace and determinant invariants, and it grounds the abstract spectral theorem in a "this is the basis-independent part" framing that the linalg-fluent reader will immediately recognize.
+
+**Strategic note on what to cut for the Medium version.** Lectures 1-3 collectively are closer to a small textbook chapter than to three articles. The natural Medium decomposition is probably:
+
+1. **"Quantum Mechanics in Four Axioms"** — L1 §2, L1 §3.2 non-commutativity example, no proofs, no vector-space refresher. The hook piece. Sells the framework.
+2. **"Two-Level Systems and the Three Mutually Unbiased Bases"** — L2 §3 (eigenvector derivation by symmetry), L2 §4 (degree-of-freedom counting), and a forward reference to the Bloch sphere. Targets the "what is a qubit really" search keyword neighborhood.
+3. **"Why Observables Are Hermitian: The Spectral Theorem from Scratch"** — L3 §5 with the two short proofs, plus the §6 connection to the axioms. This is the article that the math-curious ML person has been waiting for. The title alone will pull search traffic.
+4. **"Deriving the Pauli Matrices from Their Eigenvectors"** — L3 §7 done correctly (with the broken §7.2 fixed and Y actually computed), plus the algebraic properties in §7.6 with at least one derivation. Pair with a Colab that verifies everything numerically. This one is the showcase piece because the reverse-engineering move is *unusual* — most presentations go matrices → eigenvectors, and you go the other direction, which is more memorable.
+
+That's four articles from three lectures, and the four together form a coherent mini-series that funnels into each other and back to the original Nov 29 piece. If you ship one a week you have a month of compounding SEO with content you've already largely written. The marginal effort per article is roughly: cut the lecture-notes scaffolding, write a 2-paragraph intro that hooks the bridge audience, drop ℏ and any physicist code-switching, build the Colab cell, and ship.
+
+The bottleneck is going to be discipline about the Colab. Each piece needs its own runnable notebook that the article links to in the first 200 words. The QM piece you already have works because it does this — the Colab link is right there at the top, and people click it. Don't ship any of these without the notebook attached, because the notebook is the thing that converts a curious skim into a follower.

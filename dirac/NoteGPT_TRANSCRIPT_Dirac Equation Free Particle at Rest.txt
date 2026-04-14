@@ -1,0 +1,78 @@
+00:00:09
+hey everyone so in the last video we derived the derac equation and today we're going to look at one of the solutions to the D equation for a pretty simple physical scenario so imagine we had a particle at rest so the particle is not moving and it's floating out in the vacuum of space so it's not interacting with anything it's just chilling somewh and we don't know where because we know for sure it's totally at rest and so therefore its location is wherever all right well this may not be
+
+00:00:39
+the most physically interesting system but it's a great place to start because if we can solve the darac equation for the simple scenario then we can build from there so by studying the particle at rest we can start to develop a conceptual framework that we can then elaborate on to address more complicated and interesting scenarios because we're dealing with with an igen state of the four momentum we can go ahead and use the derac equation in momentum space that we derived in the last video so remember we
+
+00:01:09
+had to invoke these special matrices these gamma matrices and these have the special anti-commutation properties that allowed us to take the square root of the mass shell so anyway I'm not going to say too much more about where the derac equation comes from I mean we did just do a video on that and you can go back and check that out if you want but for today this is going to be our starting point so we have our momentum space dck equation and remember the gamma mu PM that's Einstein's summation
+
+00:01:35
+notation for summing over all of the gamma matrices times all of the components of the for momentum oh and here we have to be a little careful so you know the four momentum P mu is p 0 P1 P2 P3 which is e over C PX py pz but notice that all the indices are upstairs but in the D equation as we've written it here the indices on the P are actually downstairs and so so the only difference all that means is we're going to slap on the menovsky metric to our four Vector so now P mu equals p 0 P1 P2
+
+00:02:08
+P3 which equals e over C PX py pz now because our particle is at rest it actually doesn't have any three momentum so the momentum in X and the momentum in y and the momentum in Z are all zero and that's nice because look how simple it makes our for momentum we just have that p = e over C 0 0 0 okay so if you go ahead and put that into the derac equation all of the gamma matrices except gamma 0 go away that's why we're starting with the particle at rest cuz it makes all those other matrices
+
+00:02:41
+disappear and that's pretty nice well okay so now we just have gamma 0 e over cus MC acting on S equals 0 Let's go ahead and put the MC term on the right side of the equation divide by E * C and we get the equation gamma 0 * S = mc^ 2 e * s now for clarity we should go ahead and write this out so let's write out the gamma 0 Matrix this is very much like the 4x4 identity Matrix but the last two terms are negative 1 instead of positive 1 okay so that multiplies by S which is this four column by spinner and when you
+
+00:03:19
+multiply that by S that's the same as multiplying s by MC squ e so look this is an igen Vector igen value problem because multiplying s by the Matrix has the same effect as scaling s by the igen value mc^2 e okay so s must be an igen Vector of the Matrix gamma 0 and it must have igen value mc^ s e but our particle is at rest and what is the rest energy of a particle it's mc^ 2 eal mc^2 but remember the mass shell we're operating within this framework where the energy could be positive or negative and really
+
+00:03:56
+the negative energy solutions are positive energy antimatter Solutions but we'll get to that later okay so let's go ahead and transform this equation we'll keep it exactly the same but just go ahead and replace that mc^2 over e with a plus or minus one + one corresponding to an electron and minus one corresponding to a positron let's start with an electron first so the plus or minus becomes a plus let's go ahead and split up this Matrix equation into a system of four equations first we have s
+
+00:04:24
+1al s 1 and then s 2al s 2 these are not very restrictive equations you know and then S3 = S3 and S4 = S4 so first if we look at those first two equations s 1 equal s 1 S 2 equal 2 it's like well yeah you know AAL a so that's true for any s 1 and S 2 that are complex numbers but if you look at the second two equations S 3 = netive S3 S4 = netive S4 well that's only true if S 3 and S4 are zero CU zero is the only thing that equals its own negative so let's combine those two facts and we can
+
+00:05:04
+say that now we've shown that the wave function of an electron at rest must have the form ab0 0 where A and B are some arbitrary complex numbers by the way by the exact same reasoning if you go through and work it through with a positron you just replace the plus with a minus you'll find that a positron at rest must have the wave function 0 0 a where again A and B are just arbitrary placeholders for a complex number here all I'm showing is that that an electron at rest and a positron at rest they sort
+
+00:05:32
+of live on two different channels that's not really a technical word but you know you know what I mean the electrons up top positron down below and later on we'll see when you move the particle at relativistic speeds the lines get a little bit blurred but for now you really do have the electron and the positron living on the two different halves of the B spinner and that's why it's appropriate to regard this four component complex thing as uh two different Spinners where each spinner is
+
+00:05:57
+a pair of complex numbers but now the question becomes what kind of structures on those A and B like for example are they functions of space are they functions of time like what's going on so because the particle at rest is a momentum igen state right its momentum is precisely known then applying the momentum operator to our wave function is going to be the same thing as multiplying our wave function times the momentum and so if you put in the momentum operator negative IH bar time the gradient and the momentum is
+
+00:06:27
+zero because the particle's at rest then we see that IH bar * the gradient of s equals 0 now okay my notation here might be a bit improper because you know when you take the gradient of a scaler field you get a vector field when you take the gradient of a b spinner field there's more components so it's a rank two tensor it's like a vector made out of B Spinners if you will anyway so my zero Vector notation might be a bit improper but the point is that s is going to be constant in space uh there's no
+
+00:06:53
+dependence on the position similarly the fact that Sai is an energy I State means that the energy operator acting on S is going to be the same as multiplying s by the energy igen value so if we write that out we get IH bar * partial s paral t and that's going to equal plus orus mc^ 2 * s and here plus is for electron and minus is for positron let's go ahead and move that IH bar over to the right side of the equation and when we do that the plus or minus becomes a minus plus so on that equation now the electron
+
+00:07:24
+goes with a minus and the positron goes with a plus now if you look at that equation we can see that taking the derivative of s with respect to time has the same effect on S as multiplying it by a constant so that's a classic exponential situation and by inspection we can write out these wave functions as uh some arbitrary by spinner times the exponential of I overh mc^ 2 * time with a minus if it's an electron and a plus if it's a positron we should recognize that that exponential term is the same
+
+00:07:55
+thing we saw when looking at the Klein Gordon equation for a particle at rest and in fact in many ways the durac equation is so closely related to the Klein Gordon equation I mean they both come from the mass shell uh the only difference is that we linearized the equation and so those gamma matrices popped out and so we get by Spinners but the space and time behavior of solutions to the D equation are very reminiscent of solutions to the Klein Gordon equation in fact if you take any component of a d by spinner on its own
+
+00:08:24
+that's going to solve the Klein Gordon equation but there's a lot of nuance and texture and structure in the way that the components of the B spinner relate to one another and so a lot of the interesting structure in the D equation has to do with the relationship between the components in the B spinner and how they transform under rotations and theen boosts and all that stuff by the way now that we've worked out the space and time dependence of sigh we can put a constraint On A and B which is that here
+
+00:08:50
+A and B which again these are just dummy variables they're just placeholders but now in this context we recognize that neither a nor B can be functions of space or time you know there's another way of writing these wave functions that you see all the time which is basically the same thing we're writing but instead of putting a and b in a certain position we can use a and b as coefficients that multiply orthogonal unit Spinners so for example for the electron we'll call them U1 and U2 likewise for the positron we
+
+00:09:18
+use u3 and u4 where the U terms are igen Spinners so you can see for a particle at rest they're just a one at a certain place and then zeros everywhere else and this applies for particles at rest there is more Nuance once we boost the particles also those u3 and u4 terms are typically redefined in terms of V1 and V2 and there's kind of a Switcheroo on the indices we'll get to that next time around when we look at particles in motion but for now the point I want to emphasize here is that very often you'll
+
+00:09:47
+see the wave function of a firmon expressed in terms of a sum like a weighted sum of these Spinners that act as sort of a basis set oh and by the way you'll often see that the Spinners are normalized meaning that they have unit length so of course the igen Spinners have unit length but if the electron is in a state that is a superp position of spin up and spin down igen states where you have some complex factors A and B multiplied by each of the igen states you'll often see this normalized such
+
+00:10:15
+that the magnitude of the complex Vector a is 1 and so to do that you just divide by the square root of a * a conjugate plus b * B conjugate which in other words is the root of magnitude A S Plus magnitude of b^ s so it's very Pythagorean situation so there is a whole lot more that can be said about Spinners and what I realized while making this video is that I really need to do a video just on spinners and in particular the flag diagram of a spinner so for example this is a depiction of the spinner 1 Z
+
+00:10:47
+corresponding to a spin up electron and if we multiply it by the electron's phase Factor then we end up seeing that multiplying the spinner by the complex phase causes the thing to rotate and similarly if we take a spin down spinner so 01 also multiply that by the same kind of phase then we see that that one rotates and it rotates the other way and so if you think in terms of angular momentum and angular momentum vectors this kind of gives us a picture of how we might interpret what a spinner is we
+
+00:11:21
+can also take a superposition of states and that's the flag that's kind of at an angle and again we find that multiplying by the complex phase Factor has the effect of rotating the flag about the axis of the flag pole so that's pretty cool and you can imagine that this is going to be a helpful visualization but the problem is almost everyone looking at this is going to say okay but like what even is the flag what does it represent where does it come from how does it relate to a pair of complex
+
+00:11:46
+numbers and so that I'm going to save for the next video just to keep this video relatively brief and concise oh but I will say while we're on this topic of spinners quantum mechanics is so weird and one of the things that makes it weird is that if you have an electron at rest that's in a super position of spin States so not purely spin up and not purely spin down and if you measure it let's say you measure the spin along the z-axis right so when you actually measure it it's either going to be spin
+
+00:12:13
+up or spin down you'll never measure it at some weird spin angle or whatever it's either spin up or spin down like magic and this is deeply unsettling I wish I had an easy explanation for why this is but I don't all I can do is say if you look into the stern gerlock experiment you can see that experimentally this has actually been verified like an electron it's either going to be spin up or spin down when you measure it and that is super weird it defies intuition and it's one
+
+00:12:42
+of those super unsettling but also intriguing and addicting things about quantum mechanics it's like what even is going on all right well I think I've said enough for today I uh got to start packing for a holiday trip so I hope you all enjoy the holidays and I'll see you in the new year and we'll talk about spers
+

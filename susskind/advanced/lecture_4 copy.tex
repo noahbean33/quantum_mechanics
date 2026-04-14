@@ -1,0 +1,166 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 4}
+\lhead{Advanced Quantum Mechanics}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{definition}{Definition}
+
+\title{\textbf{Lecture 4: The Harmonic Oscillator and Spin} \\ \large Wave Functions, Creation/Annihilation Operators, and Spin-$\frac{1}{2}$}
+\author{Based on Leonard Susskind's \textit{Advanced Quantum Mechanics}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Algebraic Structure of the Harmonic Oscillator}
+% ============================================================
+
+The harmonic oscillator Hamiltonian is:
+\[
+    H = \frac{p^2}{2m} + \frac{1}{2}m\omega^2 x^2.
+\]
+The entire spectrum can be derived algebraically using the creation and annihilation operators.
+
+\begin{definition}[Creation and annihilation operators]
+Define:
+\[
+    a = \sqrt{\frac{m\omega}{2\hbar}}\left(x + \frac{ip}{m\omega}\right), \qquad
+    a^\dagger = \sqrt{\frac{m\omega}{2\hbar}}\left(x - \frac{ip}{m\omega}\right).
+\]
+These satisfy the canonical commutation relation:
+\[
+    [a, a^\dagger] = 1.
+\]
+\end{definition}
+
+\subsection{1.1 The number operator}
+
+The \textbf{number operator} is:
+\[
+    N = a^\dagger a, \qquad N\ket{n} = n\ket{n}.
+\]
+The Hamiltonian expressed in terms of $N$:
+\[
+    H = \hbar\omega\left(N + \frac{1}{2}\right) = \hbar\omega\left(a^\dagger a + \frac{1}{2}\right).
+\]
+
+\subsection{1.2 Commutation relations with $N$}
+
+\begin{align}
+    [N, a] &= -a, \\
+    [N, a^\dagger] &= +a^\dagger.
+\end{align}
+These show that $a$ lowers the eigenvalue of $N$ by one, and $a^\dagger$ raises it by one:
+\[
+    a^\dagger\ket{n} = \sqrt{n+1}\,\ket{n+1}, \qquad a\ket{n} = \sqrt{n}\,\ket{n-1}.
+\]
+
+\subsection{1.3 The ground state}
+
+The ground state $\ket{0}$ is defined by $a\ket{0} = 0$.  All excited states are built by repeated application of $a^\dagger$:
+\[
+    \ket{n} = \frac{(a^\dagger)^n}{\sqrt{n!}}\ket{0}.
+\]
+
+% ============================================================
+\section{2. Harmonic Oscillator Wave Functions}
+% ============================================================
+
+\subsection{2.1 Ground-state wave function}
+
+The condition $a\ket{0} = 0$ translates in position space to:
+\[
+    \left(x + \frac{\hbar}{m\omega}\frac{d}{dx}\right)\psi_0(x) = 0.
+\]
+The solution is a Gaussian:
+\[
+    \boxed{\psi_0(x) = \left(\frac{m\omega}{\pi\hbar}\right)^{1/4}\exp\left(-\frac{m\omega x^2}{2\hbar}\right).}
+\]
+
+\subsection{2.2 Excited-state wave functions}
+
+Higher wave functions are obtained by applying the creation operator:
+\[
+    \psi_n(x) = \frac{1}{\sqrt{n!}}\left(\frac{m\omega}{2\hbar}\right)^{n/2}\left(x - \frac{\hbar}{m\omega}\frac{d}{dx}\right)^n \psi_0(x).
+\]
+These are Gaussian functions multiplied by Hermite polynomials $H_n$:
+\[
+    \psi_n(x) \propto H_n\!\left(\sqrt{\frac{m\omega}{\hbar}}\,x\right)\exp\left(-\frac{m\omega x^2}{2\hbar}\right).
+\]
+The $n$-th wave function has exactly $n$ nodes, consistent with the general principle that higher-energy states oscillate more rapidly.
+
+% ============================================================
+\section{3. Ubiquity of the Harmonic Oscillator}
+% ============================================================
+
+The harmonic oscillator appears throughout physics:
+\begin{itemize}[nosep]
+    \item \textbf{Molecular vibrations}: atoms in a molecule oscillate about equilibrium positions.
+    \item \textbf{Phonons}: quantized vibrations of a crystal lattice.
+    \item \textbf{Photons}: each mode of the electromagnetic field is a harmonic oscillator; the quanta are photons.
+    \item \textbf{Any stable equilibrium}: expanding any smooth potential about a minimum gives $V(x) \approx V_0 + \tfrac{1}{2}V''(x_0)(x - x_0)^2$, which is a harmonic oscillator.
+\end{itemize}
+
+% ============================================================
+\section{4. Spin-$\frac{1}{2}$}
+% ============================================================
+
+\subsection{4.1 Intrinsic angular momentum}
+
+Particles possess an intrinsic angular momentum called \textbf{spin}, which has no classical analog of a spinning object.  For an electron (spin-$\frac{1}{2}$), the spin operators satisfy:
+\[
+    [S_i, S_j] = i\hbar\,\epsilon_{ijk}\,S_k,
+\]
+the same algebra as orbital angular momentum.  The spin quantum number is $s = \frac{1}{2}$, giving two states:
+\[
+    S_z\ket{\uparrow} = +\frac{\hbar}{2}\ket{\uparrow}, \qquad S_z\ket{\downarrow} = -\frac{\hbar}{2}\ket{\downarrow}.
+\]
+
+\subsection{4.2 Pauli matrices}
+
+The spin operators for spin-$\frac{1}{2}$ are $S_i = \frac{\hbar}{2}\sigma_i$, where the \textbf{Pauli matrices} are:
+\[
+    \sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \qquad
+    \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \qquad
+    \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}.
+\]
+Key properties:
+\begin{itemize}[nosep]
+    \item $\sigma_i^2 = I$ for each $i$.
+    \item $\sigma_i\sigma_j + \sigma_j\sigma_i = 2\delta_{ij}I$ (anti-commutation).
+    \item $\sigma_i\sigma_j - \sigma_j\sigma_i = 2i\epsilon_{ijk}\sigma_k$ (commutation).
+\end{itemize}
+
+% ============================================================
+\section{5. Bosons and Fermions --- Preview}
+% ============================================================
+
+Particles come in two fundamental types:
+\begin{itemize}[nosep]
+    \item \textbf{Bosons}: integer spin ($s = 0, 1, 2, \ldots$).  Examples: photons, phonons, mesons.
+    \item \textbf{Fermions}: half-integer spin ($s = \frac{1}{2}, \frac{3}{2}, \ldots$).  Examples: electrons, protons, neutrons.
+\end{itemize}
+The distinction is \emph{not} merely a label---it has profound consequences for the behavior of identical particles, which will be the subject of the next lecture.
+
+\medskip
+\noindent\textit{The spin-statistics connection---that integer-spin particles are bosons and half-integer-spin particles are fermions---is one of the deepest results in theoretical physics.  Its consequences include the Pauli exclusion principle and the structure of the periodic table.}
+
+\end{document}

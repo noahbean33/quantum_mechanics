@@ -1,0 +1,134 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Lecture 6}
+\lhead{Advanced Quantum Mechanics}
+\cfoot{\thepage}
+
+\titleformat{\section}{\large\bfseries}{}{0em}{}
+\titleformat{\subsection}{\normalsize\bfseries}{}{0em}{}
+
+\newtheorem{definition}{Definition}
+
+\title{\textbf{Lecture 6: Second Quantization} \\ \large From Harmonic Oscillators to Quantum Fields}
+\author{Based on Leonard Susskind's \textit{Advanced Quantum Mechanics}}
+\date{}
+
+\begin{document}
+\maketitle
+\thispagestyle{fancy}
+
+% ============================================================
+\section{1. Review of the Harmonic Oscillator Algebra}
+% ============================================================
+
+The algebraic structure of a single harmonic oscillator:
+\[
+    [a, a^\dagger] = 1, \qquad N = a^\dagger a, \qquad H = \hbar\omega\left(N + \tfrac{1}{2}\right).
+\]
+The states $\ket{0}, \ket{1}, \ket{2}, \ldots$ are the occupation-number eigenstates, with $a^\dagger\ket{n} = \sqrt{n+1}\,\ket{n+1}$ and $a\ket{n} = \sqrt{n}\,\ket{n-1}$.
+
+% ============================================================
+\section{2. Many Independent Oscillators}
+% ============================================================
+
+Now consider a collection of independent harmonic oscillators, each labeled by an index $i$ and having its own frequency $\omega_i$.  Each oscillator has its own creation and annihilation operators:
+\[
+    [a_i, a_j^\dagger] = \delta_{ij}, \qquad [a_i, a_j] = 0, \qquad [a_i^\dagger, a_j^\dagger] = 0.
+\]
+The total Hamiltonian is:
+\[
+    H = \sum_i \hbar\omega_i\left(a_i^\dagger a_i + \frac{1}{2}\right).
+\]
+A general state is specified by the occupation numbers of each oscillator:
+\[
+    \ket{n_1, n_2, n_3, \ldots} = \frac{(a_1^\dagger)^{n_1}}{\sqrt{n_1!}}\frac{(a_2^\dagger)^{n_2}}{\sqrt{n_2!}}\cdots\ket{0, 0, 0, \ldots}.
+\]
+This is the \textbf{Fock space} representation.
+
+% ============================================================
+\section{3. Reinterpretation: Particles as Excitations}
+% ============================================================
+
+The key insight of second quantization is a \emph{change of language}:
+\begin{center}
+\begin{tabular}{l l}
+\textbf{Oscillator language} & \textbf{Particle language} \\
+\hline
+Oscillator $i$ in $n$-th excited state & $n$ particles in single-particle state $i$ \\
+$a_i^\dagger$ raises excitation of oscillator $i$ & $a_i^\dagger$ creates a particle in state $i$ \\
+$a_i$ lowers excitation of oscillator $i$ & $a_i$ annihilates a particle in state $i$ \\
+$N_i = a_i^\dagger a_i$ counts excitation level & $N_i$ counts particles in state $i$ \\
+Vacuum $\ket{0}$ (all oscillators in ground state) & Empty space (no particles) \\
+\end{tabular}
+\end{center}
+
+\medskip
+The mathematics is identical; only the interpretation changes.  The occupation number $n_i$ is now the number of particles in single-particle state $i$.
+
+\subsection{3.1 Total particle number}
+
+The total number of particles is:
+\[
+    \hat{N}_{\text{total}} = \sum_i a_i^\dagger a_i.
+\]
+This operator counts the sum of all occupation numbers.
+
+% ============================================================
+\section{4. Bosonic Many-Particle States}
+% ============================================================
+
+For bosons, the commutation relations $[a_i, a_j^\dagger] = \delta_{ij}$ allow any number of particles in each state.  The symmetry of the wave function under particle exchange is automatically guaranteed by the commutation of creation operators:
+\[
+    a_i^\dagger a_j^\dagger = a_j^\dagger a_i^\dagger.
+\]
+Creating particle $i$ then particle $j$ is the same as creating $j$ then $i$---the state is automatically symmetric.
+
+% ============================================================
+\section{5. Creation and Annihilation Operators for Particles}
+% ============================================================
+
+\begin{definition}[Creation operator]
+The operator $a_i^\dagger$ \textbf{creates} a particle in single-particle state $i$:
+\[
+    a_i^\dagger\ket{n_1, \ldots, n_i, \ldots} = \sqrt{n_i + 1}\,\ket{n_1, \ldots, n_i + 1, \ldots}.
+\]
+\end{definition}
+
+\begin{definition}[Annihilation operator]
+The operator $a_i$ \textbf{annihilates} (removes) a particle from single-particle state $i$:
+\[
+    a_i\ket{n_1, \ldots, n_i, \ldots} = \sqrt{n_i}\,\ket{n_1, \ldots, n_i - 1, \ldots}.
+\]
+If there is no particle in state $i$ ($n_i = 0$), then $a_i$ gives zero.
+\end{definition}
+
+% ============================================================
+\section{6. Why ``Second Quantization''?}
+% ============================================================
+
+The term ``second quantization'' is somewhat misleading.  There is really only one quantization---the standard rules of quantum mechanics.  The name arose historically because the procedure \emph{looks like} quantizing the already-quantized single-particle wave function by promoting it to an operator.
+
+\medskip
+The real power of the formalism is:
+\begin{enumerate}[nosep]
+    \item It automatically handles identical-particle symmetry (symmetric for bosons, antisymmetric for fermions).
+    \item It naturally describes systems with a \emph{variable} number of particles (creation and annihilation).
+    \item It provides the natural language for quantum field theory.
+\end{enumerate}
+
+\medskip
+\noindent\textit{In the next lecture, we will construct the quantum field operator $\Psi(x)$ as a superposition of annihilation operators weighted by single-particle wave functions, completing the bridge from particles to fields.}
+
+\end{document}

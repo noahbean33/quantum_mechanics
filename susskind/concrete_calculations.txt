@@ -1,0 +1,79 @@
+Comprehensive List of Concrete Calculations
+(Exactly what a software engineer / data scientist would want to compute while reading the notes)
+I’ve turned every major claim in the notes into explicit, verifiable calculations you can do in a Jupyter cell (NumPy + SciPy) or even by hand. Each one is a short, self-contained computation that directly mirrors a line or example from the document. They are grouped by lecture for easy reference.
+Lectures 1–3: Two-Level Systems, States, Observables, Linear Algebra
+
+Born-rule probabilities for a general state
+Let $  \mathbf{v} = \begin{pmatrix} \alpha_0 \\ \alpha_1 \end{pmatrix}  $ with $  |\alpha_0|^2 + |\alpha_1|^2 = 1  $.
+Compute $  P_Z(+1) = |\langle e_0 | \mathbf{v} \rangle|^2  $, $  P_Z(-1) = |\langle e_1 | \mathbf{v} \rangle|^2  $, and the same for X and Y.
+(Pick concrete numbers, e.g., $  \alpha_0 = \frac{3}{5} + \frac{4}{5}i  $, renormalize, verify sum = 1.)
+Manual vs. library eigenvectors of the three Pauli matrices
+Define
+$  Z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}  $,
+$  X = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}  $,
+$  Y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}  $.
+Compute eigenvalues + eigenvectors by hand (as in Lecture 2) and with np.linalg.eig; verify they match the notes’ expressions up to global phase.
+Orthogonality and inner-product checks
+For every pair of eigenvectors (e₀, e₁, x±, y±), compute $  \mathbf{u}^\dagger \mathbf{v}  $ and confirm it is 0 when they belong to different eigenvalues.
+Non-commutativity explicit matrix products
+Compute $  ZX - XZ  $, $  XY - YX  $, $  YZ - ZY  $ and verify they equal exactly the cyclic relations in Lecture 5 §1.4: [Z,X] = 2iY, etc.
+State-update after measurement (collapse)
+Start with $  \mathbf{v} = \frac{1}{\sqrt{2}} \begin{pmatrix} 1 \\ 1 \end{pmatrix}  $.
+Compute probability of Z = +1, then set state to e₀; recompute probability of Z = +1 (must be 1).
+
+Lectures 4–5: Time Evolution & Precession
+
+Matrix exponential for H = (ω/2)Z at specific times
+Set ℏ = 1, ω = 2π. Compute $  U(t) = e^{-iHt}  $ at t = 0, 0.25, 0.5, 1.0 using scipy.linalg.expm.
+Show that U(0.5) = -iX (exact closed form).
+Unitarity verification
+Compute $  U^\dagger(t) U(t)  $ for the above times; confirm the Frobenius norm of the difference from I is < 10^{-14}.
+Expectation-value dynamics (analytic + numeric)
+For initial state $  \mathbf{v}(0) = \frac{1}{\sqrt{2}} (e_0 + e_1)  $, H = (ω/2)Z:
+Compute ⟨X⟩(t), ⟨Y⟩(t), ⟨Z⟩(t) at 20 evenly spaced times using both (a) direct matrix exponential and (b) the ODE formula $  \frac{d}{dt}\langle L \rangle = i\langle [H,L] \rangle  $.
+Verify they match and plot the circular trajectory in the XY-plane.
+General n-direction precession
+Let $  \mathbf{n} = (n_x, n_y, n_z)  $ with $  \|\mathbf{n}\|=1  $.
+Form H = (ω/2)(nₓX + nᵧY + n_zZ).
+Compute the conserved quantity $  \langle \mathbf{n}\cdot\boldsymbol{\sigma} \rangle(t)  $ and show it equals its initial value for any t.
+
+Lectures 6–7: Composite Systems, Entanglement, Density Matrices
+
+Kronecker product construction of two-qubit states
+Build |ψ⟩ = |0⟩ ⊗ |+⟩ and the singlet
+$  |\psi_\text{singlet}\rangle = \frac{1}{\sqrt{2}} (|01\rangle - |10\rangle)  $ using np.kron.
+Reshape the coefficient vector into a 2×2 matrix Ψ.
+Schmidt decomposition (SVD of Ψ)
+For both the product state and the singlet, compute U, S, Vh = np.linalg.svd(Ψ, full_matrices=False).
+Report the singular values σ₁, σ₂ and confirm: product state → one nonzero σ; singlet → σ₁ = σ₂ = 1/√2.
+Joint correlation matrix for the singlet
+Compute the four expectation values
+⟨Z⊗Z⟩, ⟨X⊗X⟩, ⟨Y⊗Y⟩, ⟨X⊗Z⟩
+using np.kron of each Pauli pair and the projector |ψ⟩⟨ψ|.
+Verify ⟨M⊗M⟩ = -1 for M ∈ {X,Y,Z} and cross terms = 0.
+Partial trace (reduced density matrix) — explicit sum
+For the singlet state vector ψ (4×1), compute
+ρᴬ_{a,a′} = Σ_b ψ*(a′,b) ψ(a,b)
+using nested loops or np.einsum('ij,ik->jk', ψ.conj().reshape(2,2), ψ.reshape(2,2)).
+Show ρᴬ = (1/2)I exactly.
+Purity calculation for varying entanglement
+Parameterize a family of states Ψ(θ) = diag(cosθ, sinθ) (in the computational basis).
+For θ from 0 to π/4, compute Tr(ρᴬ²) and confirm it goes from 1 (product) to 1/2 (maximally entangled).
+Rank-1 projector test for product states
+Take any product state |a⟩⊗|b⟩. Form ρ = |ψ⟩⟨ψ|, compute ρᴬ, then verify ρᴬ² = ρᴬ (idempotent) and Tr(ρᴬ) = 1.
+
+Bonus Calculations (Natural Extensions the Notes Hint At)
+
+Rayleigh quotient = expectation value
+Pick any state v and any observable L ∈ {X,Y,Z}. Compute v† L v both directly and as Σ λ_i |⟨e_i|v⟩|²; confirm equality.
+Commutator → uncertainty trade-off (numerical)
+Prepare a state that is an eigenstate of Z. Compute Var(Z) = 0 and Var(X) = 1.
+Then rotate the state by a small angle and recompute both variances; observe the product Var(Z)Var(X) ≥ 1 (the uncertainty relation implied by [Z,X]=2iY).
+Overall phase invariance
+Multiply any state v by e^{iφ} for φ = π/4, π/2, etc. Recompute all Born probabilities and ⟨M⟩; show they are identical.
+Trace of density matrix after time evolution
+For a pure state ρ(0) = |ψ⟩⟨ψ|, evolve ρ(t) = U(t) ρ(0) U†(t) and confirm Tr(ρ(t)) = 1 for all t.
+Expectation-value ODE vs. exact solution
+Numerically integrate the vector of expectations (⟨X⟩, ⟨Y⟩, ⟨Z⟩) using scipy.integrate.solve_ivp with the right-hand side i[H, ·] and compare to the closed-form matrix-exponential result.
+
+These 20 calculations are the exact “prove-it-to-yourself” exercises a data scientist would run while reading the notes. Each one is < 15 lines of NumPy code, produces a single number or small matrix you can eyeball, and directly confirms a statement the author makes.
