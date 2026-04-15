@@ -1,0 +1,269 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathrsfs}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{remark}{Remark}[section]
+
+\title{\textbf{Classical Field Theory\\in the Algebraic Framework}\\[6pt]
+\large Lecture by Romeo Brunetti}
+\author{Lecture Notes from the AQFT 50th Anniversary Conference}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Romeo Brunetti presents a rigorous algebraic formulation of classical interacting
+field theory on globally hyperbolic spacetimes, developed in collaboration with
+Fredenhagen and Rejzner. The framework distinguishes kinematical structure
+(configuration space, observables, wavefront set conditions) from dynamical
+structure (generalized Lagrangians, M\o ller operators, Peierls brackets).
+The resulting observable algebra is nuclear, carries a Poisson structure via
+Peierls brackets, and fits naturally into the locally covariant framework.
+\end{abstract}
+
+\tableofcontents
+
+%---------------------------------------------------------------------
+\section{Motivation}
+%---------------------------------------------------------------------
+
+Classical field theory in the algebraic setting received limited attention
+historically (Roberts--Leyland 1978, D\"utsch--Fredenhagen 2003). Physicists
+typically use either geometric methods (multisymplectic geometry, jet bundles)
+or functional methods (infinite-dimensional Lagrangian mechanics). The algebraic
+perspective offers a fresh viewpoint---one that is strongly biased by structures
+appearing in perturbative quantum field theory.
+
+A key insight: \emph{classical field theory, when formulated algebraically,
+is not so drastically infinite-dimensional---the observable algebra is nuclear,
+meaning it is very close to being finite-dimensional.}
+
+%---------------------------------------------------------------------
+\section{Kinematical Structure}
+%---------------------------------------------------------------------
+
+\subsection{Configuration Space}
+
+The configuration space is the space of all smooth functions on a globally
+hyperbolic spacetime $(M, g)$:
+\begin{equation}
+  \mathcal{E} = C^\infty(M),
+\end{equation}
+equipped with the standard Fr\'echet topology.
+
+\subsection{Observables as Nonlinear Functionals}
+
+Observables are smooth functionals $F: \mathcal{E} \to \mathbb{R}$
+subject to two types of restrictions:
+
+\subsubsection{Support Properties}
+
+The support of a functional $F$ is defined analogously to distribution theory:
+\begin{equation}
+  \mathrm{supp}(F) = M \setminus \{x \in M \mid F \text{ is constant
+  on configurations differing only near } x\}.
+\end{equation}
+We require $\mathrm{supp}(F)$ to be compact.
+
+\subsubsection{Additivity}
+
+A functional $F$ is \textbf{additive} if
+\begin{equation}
+  F(\varphi_1 + \varphi_2 + \varphi_3) = F(\varphi_1 + \varphi_2)
+  + F(\varphi_2 + \varphi_3) - F(\varphi_2)
+\end{equation}
+whenever $\mathrm{supp}(\varphi_1) \cap \mathrm{supp}(\varphi_3) = \emptyset$.
+This generalizes the shift-like properties of distributions to nonlinear
+functionals, allowing decomposition into arbitrarily small pieces.
+
+\begin{proposition}
+Any additive, compactly supported functional can be decomposed into a
+\emph{finite sum} of such functionals with arbitrarily small support.
+\end{proposition}
+
+\subsection{Regularity: Differentiability in Fr\'echet Spaces}
+
+The directional derivative of $F$ at $\varphi$ in direction $h$ is:
+\begin{equation}
+  F^{(1)}(\varphi)[h] = \lim_{t \to 0} \frac{F(\varphi + th) - F(\varphi)}{t}.
+\end{equation}
+$F$ is $C^1$ if this derivative exists for all $\varphi, h$ and the map
+$(\varphi, h) \mapsto F^{(1)}(\varphi)[h]$ is jointly continuous. Higher
+derivatives are defined iteratively. The fundamental results of basic
+calculus (Leibniz rule, chain rule, fundamental theorem, Schwarz lemma)
+remain valid.
+
+\subsection{Local and Microlocal Functionals}
+
+\begin{definition}[Local Functional]
+A smooth functional $F$ is \textbf{local} if the support of any
+$n$-th derivative $F^{(n)}(\varphi)$ lies on the thin diagonal
+$d_n \subset M^n$, with wavefront set orthogonal to the tangent
+bundle of $d_n$.
+\end{definition}
+
+Typical example: $F(\varphi) = \int f(x)\, L(\varphi(x), \partial\varphi(x),\ldots)\, dv_g(x)$,
+where $L$ is a polynomial in the field and finitely many derivatives.
+
+\begin{definition}[Microlocal Functional]
+A smooth functional $F$ is \textbf{microlocal} if the wavefront set
+of $F^{(n)}(\varphi)$ does not contain elements where all covectors
+simultaneously lie in $\overline{V}_+^*$ or all in $\overline{V}_-^*$.
+\end{definition}
+
+\begin{theorem}
+In the smooth case, local functionals and additive functionals coincide.
+The algebra $\mathscr{F}(M)$ of microlocal functionals is a
+\textbf{nuclear, sequentially complete topological algebra}.
+\end{theorem}
+
+%---------------------------------------------------------------------
+\section{Dynamical Structure}
+%---------------------------------------------------------------------
+
+\subsection{Generalized Lagrangians}
+
+\begin{definition}
+A \textbf{generalized Lagrangian} is a map $\mathfrak{L}: \mathcal{D}(M) \to
+\mathcal{F}_{\mathrm{loc}}(\mathcal{E})$ satisfying:
+\begin{enumerate}[nosep]
+  \item $\mathrm{supp}(\mathfrak{L}(f)) \subset \mathrm{supp}(f)$.
+  \item $\mathfrak{L}(f_1 + f_2) = \mathfrak{L}(f_1) + \mathfrak{L}(f_2)$
+        whenever $\mathrm{supp}(f_1) \cap \mathrm{supp}(f_2) = \emptyset$.
+\end{enumerate}
+\end{definition}
+
+For $f \equiv 1$ on a relatively compact region $\mathcal{O}$, the
+Euler--Lagrange equations are:
+\begin{equation}
+  \frac{\delta \mathfrak{L}(f)}{\delta \varphi}\bigg|_\mathcal{O} = 0.
+\end{equation}
+
+\subsection{Linearization and Hyperbolicity}
+
+The linearized field equation around any background $\varphi_0$ is obtained
+from the second functional derivative of $\mathfrak{L}$:
+\begin{equation}
+  P_{\varphi_0} = \frac{\delta^2 \mathfrak{L}(f)}{\delta\varphi^2}\bigg|_{\varphi_0}.
+\end{equation}
+This is required to be a \textbf{strictly hyperbolic differential operator},
+guaranteeing the existence of unique advanced and retarded Green functions
+on any globally hyperbolic spacetime.
+
+\subsection{M\o ller Operators}
+
+\begin{definition}
+Given two Lagrangians $\mathfrak{L}_1$ and $\mathfrak{L}_2$, a \textbf{M\o ller
+operator} is an endomorphism $r: \mathcal{E} \to \mathcal{E}$ satisfying:
+\begin{enumerate}[nosep]
+  \item \textbf{Intertwining}: $\frac{\delta \mathfrak{L}_2}{\delta\varphi}
+        \circ r = \frac{\delta \mathfrak{L}_1}{\delta\varphi}$.
+  \item \textbf{Retardation}: $r(\varphi) = \varphi$ outside the future
+        of the perturbation support.
+\end{enumerate}
+\end{definition}
+
+\begin{theorem}[Existence and Uniqueness]
+For $\mathfrak{L}_2 = \mathfrak{L}_1 + \lambda V$ with $V$ compactly supported,
+the M\o ller operator exists and is unique in a neighborhood of $\lambda = 0$,
+for any background configuration $\varphi_0$.
+\end{theorem}
+
+The proof uses the Nash--Moser implicit function theorem, adapted to
+Fr\'echet spaces via:
+\begin{enumerate}[nosep]
+  \item Decomposition of the perturbation into small pieces.
+  \item Solution via a priori energy estimates for the propagator.
+  \item Composition to glue pieces back together.
+\end{enumerate}
+
+\subsection{Peierls Brackets}
+
+The Poisson structure is introduced via the \textbf{Peierls bracket}:
+\begin{equation}
+  \{F, G\}_{\mathfrak{L}} = \left\langle \frac{\delta F}{\delta\varphi},\;
+  (G^+ - G^-) \frac{\delta G}{\delta\varphi} \right\rangle,
+\end{equation}
+where $G^\pm$ are the advanced and retarded Green functions of the
+linearized equation around $\varphi$.
+
+\begin{theorem}
+The Peierls bracket satisfies the Jacobi identity and the Leibniz rule,
+making $(\mathscr{F}(M), \mathfrak{L}, \{\cdot,\cdot\}_{\mathfrak{L}})$
+a \textbf{Poisson algebra}.
+\end{theorem}
+
+%---------------------------------------------------------------------
+\section{Consequences}
+%---------------------------------------------------------------------
+
+\subsection{Darboux Theorem}
+
+\begin{theorem}[Functional Darboux Theorem]
+The M\o ller operators are \textbf{canonical transformations}: they intertwine
+the Peierls brackets of $\mathfrak{L}_1$ and $\mathfrak{L}_2$. In particular,
+the Poisson bracket can be locally put into normal form.
+\end{theorem}
+
+\subsection{On-Shell Theory}
+
+The space of functionals vanishing on solutions forms a \textbf{Poisson ideal}.
+The quotient $\mathscr{F}(M)/\mathcal{J}$ gives the on-shell observable
+algebra. In the nonlinear case, solutions may have finite lifespan, so
+the morphisms between quotient algebras may \emph{fail to be injective}---a
+genuinely new phenomenon.
+
+\subsection{Symplectic Structure}
+
+The Casimir functionals (center of the Poisson algebra) are generated by
+elements $\int f(\varphi)\,\frac{\delta\mathfrak{L}}{\delta\varphi}\, dv_g$
+and constants. Quotienting by the Casimir ideal yields a \textbf{symplectic}
+(nondegenerate) Poisson algebra.
+
+All quotients remain in the nuclear topological class.
+
+%---------------------------------------------------------------------
+\section{Locally Covariant Formulation}
+%---------------------------------------------------------------------
+
+The entire construction is functorial. A natural Lagrangian is a natural
+transformation $\mathfrak{L}: \mathcal{D} \Rightarrow \mathscr{F}_{\mathrm{loc}}$
+satisfying additivity and naturality:
+\begin{equation}
+  \alpha_\chi \circ \mathfrak{L}_M = \mathfrak{L}_N \circ \chi_*.
+\end{equation}
+
+\begin{theorem}
+Additivity in test functions combined with naturality automatically implies
+that $\mathfrak{L}_M(f)$ is a local functional. The functor
+$\mathscr{F}_{\mathfrak{L}}: \mathbf{Loc} \to \mathbf{NucPois}$ satisfies
+all axioms of a locally covariant field theory, including the causality axiom
+(now in terms of the Peierls bracket).
+\end{theorem}
+
+%---------------------------------------------------------------------
+\section{Conclusions and Outlook}
+%---------------------------------------------------------------------
+
+\begin{itemize}[nosep]
+  \item The algebraic framework provides a rigorous foundation for
+        interacting classical field theory with good topological properties.
+  \item The construction works for semilinear equations; for quasilinear
+        equations, tools of Klainerman may be applicable.
+  \item Extension to \textbf{gauge theories} requires BRS/BV constructions.
+  \item Extension to \textbf{Einstein's equations} requires paradifferential
+        calculus.
+  \item A long-term goal: deformation quantization of this classical
+        Poisson algebra to produce interacting quantum field theories.
+\end{itemize}
+
+\end{document}

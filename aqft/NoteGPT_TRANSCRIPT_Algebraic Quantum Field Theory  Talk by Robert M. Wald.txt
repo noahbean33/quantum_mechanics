@@ -1,0 +1,306 @@
+00:00:00
+thank you I'm impressed at how many people are awake at this hour of the morning although I better not check in an hour uh to see whe that's still the case but uh I'll try to keep this uh as Lively as possible so the work I'm going to uh be talking about was all uh the part that's not review of other work uh is all done with in collaboration with stepan Holland and the the details of the newest parts of the work are all in uh this paper that posted on the archives that's to appear in Communications and
+
+00:00:34
+mathematical physics so I should begin by first saying what Quantum field theory in curved space time is so it's simply a theory a theory that we're seeking uh uh to formulate uh uh where all the matter fields are treated fully in accord with the basic principles of quantum field Theory now what the basic principles of quantum field R is the main subject of the talk uh but what I want to emphasize here is that gravity is being treated classically in accord with general relativity as a curved space-time metric
+
+00:01:13
+uh so there's no attempt being made to do a quantum theory of gravity gravity is basically treated as a background external field here uh no one expects this to be an exact theory of nature but I think it's reasonable to expect that it would be a good approximate description of nature in situations where you're away from plon scales and Quantum effects of gravity itself don't play a a dominant role and I think it's fair to say that even though it's treated gravity classically uh probably
+
+00:01:48
+some of the deepest insights that we presently have into the nature of quantum gravity itself come from the study of quantum field theory in curve space time and effects like the Hawking effect uh and so on but I won't be discussing anything related to quantum gravity uh gravity will be a fixed classical background uh in everything that I'll be saying from this point on well my own interest in Quantum field Theory and curve SpaceTime uh you know certainly started out with direct interest in the physical phenomena near
+
+00:02:26
+black holes and early universe and so on and uh my interest certainly remains there but uh in trying to understand those uh phenomena better the one really needs to have a clearer formulation of what Quantum field theory in curved space time is and for that uh I think that leads to questions about what the Essential Elements of quantum field Theory itself are even in flat spased time so if one is attempting to take what one knows in flat space time and generalize it to curved space time then as I'll be describing much more
+
+00:03:08
+explicitly very shortly uh one notices that there are a lot of elements of quantum field Theory the way it's usually formulated whether in textbook non-rigorous treatments or as I'll describe white man axioms or anything uh in between or or to the sides of that they contain many elements special to manowski SpaceTime but uh you know we're now in this room uh SpaceTime is curved but we can certainly neglect that treated as nearly flat and uh you know perhaps do some perturbative correction
+
+00:03:49
+of uh uh Quantum field theory in flat space time and perfectly well get away with that but the most interesting phenomena that one would hope to treat in this context would be things in the early universe or near black holes where you certainly can't even approximate flat SpaceTime as nearly flat so one really wants a formulation of the theory that works in an arbitrary curved space time or at least in arbitrary globally hyperbolic curved SpaceTime so that there aren't any causal pathologies and
+
+00:04:23
+classically one has deterministic Behavior now in classical field Theory one has in some sense the same issue of you know we know Maxwell's equations very well in flat space time but we'd like to have them to uh you know electromagnetic the classical electromagnetic theory in flat space time we'd like to have that in curved SpaceTime uh there isn't a big fuss made over how to generalize classical field theories from Flat to curved SpaceTime because it's basically quite easy and
+
+00:05:00
+straightforward to do at least once you're in the swing of general relativity in curved space time I claim that that's because there's really in the classical formulations of classical field Theory a completely clean separation between field equations and solutions uh right we've got Maxwell's equations we've got solutions to Maxwell's equations the idea or the point is that field equations can quite straightforwardly be generalized to curved space time in a completely local
+
+00:05:37
+covariant manner that's entirely satisfactory if you want to generalize solutions from Flat to curved SpaceTime you've got a big problem because there's no not necessarily any correspondence between Solutions I don't know what a plane wave in some SpaceTime with no symmetries that's not ASM totically flat is supposed to be I wouldn't know how to formulate that uh but I don't need to because uh for the formulation of the theory I just have to say what the generalization of the equations are and
+
+00:06:11
+I'm done I mean of course there's a lot of work to be done in solving those equations in a curved space time of interest but those are more practical problems the formulation of the theory is is clear now in Quantum field Theory I would argue that states are very much the analog of Sol ions in classical field Theory but in the formulation of quantum field Theory as opposed to classical field Theory properties of states are very deeply embedded in the formulation of the theory maybe the most
+
+00:06:45
+clear example of that is the existence of a punk array invariant vacuum State uh well if you're in some curved space time with no symmetries uh and you have to generalize this notion to that curved space time to formulate the theory I would claim you're in a lot of trouble so for this reason and for other reasons that I will get into it is not at all straightforward to take Quantum field Theory as usually formulated in flat space time and reformulate that in curved space time and now let me get
+
+00:07:19
+into more of the details of that or be much more explicit about that by uh taking an explicit look at white men axioms in manowski SpaceTime I've just chosen this because it's a clear clean set of basic principles of quantum field Theory but again any other formulation I'd have uh very similar things to say so I've listed here just copied straight out of streer and Whiteman uh the Whiteman axioms uh which uh well you can probably read for yourself but I mean it starts out with States arrays in a hbert
+
+00:07:58
+space and that hbert space carries a representation of the poner group then we have the Spectrum condition that was mentioned in a number of talks here the last couple of days that basically say that total energy is positive or total for momentum is Tim likee or no uh then we have this uh condition that I've already alluded to that we have some unique pay invariant State uh then we have a statement that we've got uh the Quantum fields are represented as operator value distributions on a dense
+
+00:08:34
+domain okay that's not too bad but is poner invariant as well as invariant under the action of fields in their adjoints then we've got Fields transform in a covariant manner under punkay Transformations and then we have a a statement that Quantum Fields commute or anti-c commute at space-like separations so you might say what's the problem with these in curved SpaceTime well much easier question to answer is what's okay with these in curved space time that's a really short list what the
+
+00:09:07
+problems are is practically everything uh so the one of the most obvious ones is a generic curv space time won't have any symmetries at all so you're certainly not going to require pay invariance but you're also not going to have in general any other I mean if you wanted to do Quantum field in desit SpaceTime you could impose Deiter and variance in a similar way and perhaps proceed but if if you want to do a general curved SpaceTime with no symmetries there's no invariance or covariance of any under any kind of
+
+00:09:45
+SpaceTime symmetry so everywhere the word punan variant was used uh there's a problem uh there's also a problem where the word hbert space uh was used as appeared in several places uh even if you go to the case of free fields which you know one does have a good clear understanding of uh if you consider them in space times with uh non-compact Koshi surfaces uh there are plenty of uh I mean infinitely many obviously unitarily inequivalent hbert space constructions of of uh free Quantum Fields well there
+
+00:10:26
+is in flat space time as well but the punkay symmetry Tre and the presence of a vacu of a punkay in variant state in one of these representations can be used to pick out a preferred representation that one can just declare to be the Hilbert space and so on but in a uh again a general curved SpaceTime and the absence of symmetries with the non-compact Koshi surface none of these uh I mean there doesn't appear to be any one representation that's preferred over the others uh the Punker and Varian vacuum State uh
+
+00:11:07
+Axiom is in punan variants was already in a lot of trouble uh as I've described here but even picking out some Preferred Choice of vacuum state is a problem as I'll I mean a major problem as I'll uh uh elucidate further in in a few minutes and then in the Spectrum condition as I'll say a few words about very shortly uh I claim there's no analog of the spectrum condition in a again a general curved SpaceTime uh without any time translation symmetry that could be formulated in terms of
+
+00:11:46
+total energy momentum of the quantum field well even with time translation symmetry you'd have a problem so if you ask uh what's the situation with the white man aums every one of these has a very serious problem except the last space-like separations are just as well defined and curved as in flat SpaceTime and you can impose this condition with no uh problems but nothing else I claim generalizes straightforwardly so let me say uh a few more words about what the problems and issues are so say a few things about the
+
+00:12:24
+Spectrum condition so first of all In classical field Theory I mean one has uh a stress energy tensor one has conservation of the stress energy tensor but what's interesting in general relativity is the conservation of stress energy this local uh kind of conservation of stress energy law expressed in this manner doesn't lead to a global conservation of energy unless you have a time translation symmetry well more generally if you have any Vector field that you're going to take as as the generator of time translations
+
+00:13:04
+even if it's not a symmetry it's natural to Define total energy at some time Sigma corresponding to some Koshi Surface by doing this integral over space time for physically reasonable Fields uh the dominant energy condition holds which guarantees the positivity of the integrand and so classically you have positivity of energy but you don't have unless you this T is a symmetry uh which you won't have in general uh you don't have any Global conservation law of energy associated with
+
+00:13:44
+that if we move over now to Quantum field Theory I think there's every reason to expect the smeared stress energy tensor smeared in with some test distribution will be well defined and I think there's every reason to expect that it can be defined in such a way as to be conserved but now uh it was since we have to do the space-time smearing it was really the conservation of energy that allows one to Define energy at a sharp moment of time because it doesn't really matter if you smear over time it
+
+00:14:20
+doesn't change the value of energy uh so we wouldn't expect to have an energy defined at a sharp moment of time much more significantly as is well known uh the stress energy uh operator won't satisfy any energy conditions at all uh uh one would be able to find states where pointwise this uh can in fact be made arbitrarily negative at those uh points and in a curved Spa I mean that's true in flat space time as well but in flat space time the uh integral will still be positive uh but in a curved SpaceTime there's no
+
+00:15:02
+reason to expect uh e to be positive and indeed there are simple examples of uh you know for example just in a 1 plus onedimensional SpaceTime with uh the spatial Dimension made into a circle you get Kazmir like negative energies uh in the ground state of the uh of the field and and you don't get positive energy so I claim that there doesn't appear to be any way of generalizing the usual flat space time Spectrum condition to curved space time in terms of stating the positivity of of something
+
+00:15:49
+representing total energy there are energy inequalities uh uh that allow one to put lower bounds on E uh at least over Tim like curves or things like that smeared over uh uh but uh one shouldn't expect to get any uh good way of uh generalizing the Spectrum condition in this kind of Global Way um let me make a few comments now on this uh lack of a preferred vacuum state of any kind or and for that matter notion of particles and again let's uh start with the free field in manowski SpaceTime I claim if you look at the
+
+00:16:40
+standard Notions of particles vacuum and so on for a free field that is intimately related to the notion of positive frequency Solutions of the classical field equations but this notion of positive frequency Solutions very much depends on the existence of a time translation symmetry so if you want to generalize these Notions to curved space time well if you have a stationary curved SpaceTime it's straightforward basically to generalize these Notions and Define some notion of of a vacuum and particles for a free field but if
+
+00:17:20
+you're talking about curved space times with no uh uh time translation symmetry uh then there's no obvious way of doing it the problem is that there's not that there's no way of doing it there are just many ways of doing it and none of them seem preferred uh one can pick out a kind of class of states that are vacuum like in character namely the Quasi free states uh uh that have you know the correlation functions satisfying again I'm talking in the free field context uh satisfying
+
+00:17:57
+the same relations as in the VAC vacuum the usual vacuum state but there are lots of Quasi free states um and one has the notion of a hadamard state which for which The Singularity of the two-point function uh of the field is as the points come together is like that in flat space time uh so one can demand these properties to characterize a vacuum State and once you've uh chosen one of these you'd have a corresponding notice notion of particles but the problem is there are lots and lots of quasifree
+
+00:18:39
+hatmor states in a curved SpaceTime and in the absence of some symmetry none of them appears uh preferred even worse uh as I've already indicated if you have non-compact Koshi surfaces uh in the case where you have comp Koshi surfaces all of the fu representations that you get by choosing different quasifree hatmor states lead to the same representation but in the case with a non-compact Koshi surface that's not true and you get unitarily INE equivalent hbert space constructions of the theory so there's not not only is
+
+00:19:20
+there not a unique vacuum State there's not a unique hbert space that one can pick out by any criteria that seem reasonable in the absence of symmetry countes so to me at least uh uh you know my own reaction uh is that the situation uh with respect to seeking a preferred vacuum state is really a lot like the situation in classical general relativity of at least students learning general relativity for the first time who've uh learn special relativity in terms of global inertial coordinates
+
+00:19:58
+would like to know okay if you're not in flat space time what is the analog of global inertial coordinates and what preferred coordinate system should you use well I think it's safe to say now that more than 90 years has uh passed since the formulation of the theory and no one has come up with a uh useful notion of a preferred coordinate system in fact there are theorems that you can't globally over all space times choose consistently some preferred coordinate system but anyway even if one could it's
+
+00:20:34
+not particularly useful it's much better to formulate the theory geometrically and not have to specify some choice of coordinate system to formulate the theory uh you know my feeling is that although only about 40 years has passed with people trying to do the same kind of thing in curved SpaceTime I think it's reasonable to conclude that it's fruitless to look for a preferred vacuum state in general space times and indeed it's best to formulate the theory in terms of an algebra of local field
+
+00:21:12
+observables where you don't have to introduce a state or representation at the outset to formulate the theory uh you have the formulation of the theory with the specification of the algebra of local field observables okay well now uh with a little bit having indicated some of the difficulties let me now uh talk about overcoming the difficulties which will be the rest of the the subject of the rest of the talk so one of the difficulties the one with the word hbert space and uni and the fact that there are these unitarily
+
+00:21:57
+inequivalent constructions is very nicely and simply overcome as I've already indicated by simply taking the algebraic approach uh to formulate the theory to formulate the AL you know State what the algebra of observables is rather than stating what the hbert space is and what operators on the hbert space uh are you know what action they have uh formulated in the algebraic way and uh you know in since one is getting away as I've already indicated from any notion of particles any notion of SM
+
+00:22:37
+Matrix Etc in the curved SpaceTime context uh the algebraic approach really also is extremely compatible with the idea that the fundamental observables are the quantum Fields themselves that uh make up at least in the Viewpoint that I'm taking the uh the algebra that one is working with I I think it would be fair to say that had the algebraic approach not been formulated 50 years ago or so uh for other reasons in flat space time I would think it would have been formulated in curved SpaceTime just
+
+00:23:18
+to deal with this issue of there just doesn't seem to be any preferred hbert space construction of the theory I'm not saying all of the machinery would have been developed but the basic concept that one wants to formulate uh the theory in this way uh the difficulties that I alluded to with the Spectrum condition can be very nicely overcome by formulating the Spectrum condition in a completely local way as a microlocal spectrum condition that restricts Singularity structure I'll just say a few quick words about
+
+00:23:56
+that in a moment for people who are not familiar with that at all uh but I won't uh explain get describe this in detail and finally well not finally because there's one more condition that we'll have to deal with but uh many aspects but not all of them not punay and variance of a vacuum state but basically the other places where Punker and variants or co-variants are used can be very nicely replaced by a requirement that Quantum Fields be local and covariant I don't mean here that they're
+
+00:24:33
+constructed out of the metric that you uh make the fields out of the metric but that you use only the the metric in a local and covariant way in the construction of the quantum field Theory I'll explain what that is uh what I mean by all this uh in in a moment so just to say a few words because this is a a major advance in the subject in the last 15 years uh just to say a few words about what this is and how one solves the problem of formulating a spectrum condition uh well the idea is to use
+
+00:25:16
+microlocal analysis techniques basically if you have a distribution and multiply it by some function of compact support near X so that you kind of localize ize it near X and look at the Decay properties of the forier transform and look at properties that hold no matter how small the support of the uh test function near X that you've multiplied the distribution by R uh you can thereby by looking at the Decay properties of the forier transform get a notion not just of the points at which a distribution is singular but the
+
+00:25:57
+directions in the cotangent bundle because the forier transform variable is most naturally thought of as a a a vector in the cotangent space uh so you can get a notion of the singularities of a distribution in Phase space not just in position space that's called the wavefront set and that really provides uh uh an ideal way of characterizing singular behavior of the distributions that you get by applying a Quantum a state to uh a product of fields uh because it allows one to describe a kind of locally positive
+
+00:26:46
+frequency character to the singularity structure of this uh distribution that captures the notion that positive frequencies are really underlying all of this even though there's no Global notion of forier transform in the SpaceTime one has no Global notion of positive even in the free field case of positive frequency Solutions anything like that but you can still talk about the singularities uh of the in particular endpoint distributions of being of this uh positive frequency type so that allows one to formulate Spectrum
+
+00:27:29
+conditions by demanding that the wavefront set of this distribution lie in a certain Subspace of the cotangent bundle uh that satisfactorily replaces this spectrum condition the concept that allows one to find an adequate replacement for a very satisfactory replacement for most aspects of pker invariance and covariance is this notion that the quantum Fields be local and covariant um and the idea as I've already indicated is we want the construction of the quantum field Theory to depend I mean Quantum field theories
+
+00:28:15
+in different curved SpaceTime are different theories but we want the construction of the theory to depend on the space-time metric only in a local and covariant way well the first so what I'm going to do now is explain uh how to formulate that kind of notion uh the first thing to notice is that if you're going to formulate that kind of notion you better not just try to formulate uh your Quantum field theory in one or some highly restricted class of curved space times it would be best uh to formulate the theory in all
+
+00:28:55
+globally hyperbolic curv space times because what we what I want to say or the way that this notion you know would be formulated uh uh is that if we're trying to look at what the quantum field algebra is localized near point x if we vary the metric in some arbitrary way away from point x nothing happens to the local algebra near X I mean that's I would claim the clear the key idea of this uh uh condition but if we're uh going to be saying that nothing happens when we make these arbitrary variations we better
+
+00:29:37
+have the theory formulated in all or an extremely wide class at least of uh curved space times so how do we how does one formulate this kind of notion well suppose that you have a space time that in fact can be isometrically embedded into to some open region of some other SpaceTime uh in a way that preserves all of the causal relations uh that is all of the causal relations between events here in this SpaceTime are the same as here right if uh you could have a situation where you took this and embedded it in such a way that it kind
+
+00:30:22
+of curved around and came back near itself and you'd have other ways of getting Within this SpaceTime uh between two points here and here than you had over here but if we have a causality preserving isometric uh uh embedding then what I we want to say is that the this embedding always induces a natural isomorphism of the quantum field algebra that you had here into the quantum field algebra associated with this uh local region here in this SpaceTime that's the idea that despite the fact
+
+00:31:07
+that we've got lots more stuff going on here the uh uh Theory didn't change uh we further want to demand that under this isomorphism of the algebras I mean the algebras are I'm assuming are being generated by Quantum Fields uh we want this I om orphism to take the quantum field that we called f of f uh sorry over uh G back too far yeah we want the quantum field uh uh that we called f of f over here to to be uh carried into the quantum field with the same label uh but with the test function be
+
+00:31:56
+being the uh push lowed of the test function that we were smearing in with here so I claim that is this basic idea is formulating the idea that the uh Quantum Field construction is local and covariant in the space-time metric now that's a condition that might sound reasonable to impose what might be harder and hardest to understand is what in the world does this have to do with puner covariant um well that I think can be seen by taking a particular example of this where this SpaceTime is manowski
+
+00:32:40
+spacetime this SpaceTime is manowski space time the region o Prime is all of the space time and this isometric embedding is a a proper poner transformation uh then this condition gives you an isomorphism uh well of the field algebra now to itself uh associated with every puner group element so it gives you an action of the puner group on the field algebra and this condition on the quantum Fields tells you that the quantum Fields themselves transform covariant under the Punker Transformations so the imposition
+
+00:33:26
+of this local and covariant condition contains uh well is a condition that uh I when specialized to the mansky SpaceTime example can be seen to contain uh much of the essential ingredients of punkay invariance and puner covariance of the field but now it's been formulated without making any reference to symmetries in the context of a general curved space time and it has the same power that requirements of Punker invariant and covariant do but without the without any need for symmetries so uh it's now time to take
+
+00:34:15
+stock of things and see how we're doing in generalizing the white man axium to curved SpaceTime so I've repeated the white miniums in Black here there was a problem here with helbert space and pker group but if you formulate the theory in the algebraic approach and impose this local and covariant field condition that's a completely adequate replacement for this first Axiom then we had the Spectrum condition and that's completely which is hopeless I claim as a global condition to generalize but that's very
+
+00:34:49
+nicely replaced by the microlocal Spectrum condition we had a condition of there's a unique punan variant State the vacuum State uh that's in red because we I haven't said anything yet to generalize that that's a a real problem still given what I've said but the rest of uh things are fine this uh stuff with the dense domain and uh the punkay invariance of the domain is uh uh fully adequately replaced by just doing the given a state the gns construction and the algebraic approach that will autom atically give
+
+00:35:28
+you this kind of dense domain that's invariant under the fields and their adjoints and the local and covariant field condition will give you the punay invariant part of that uh or will give you a condition that adequately replaces the punay invariant part of that uh the fields transform in a covariant matter is uh adequately fully satisfactorily replaced by the local and covariant field condition and the last axium was the only one that was okay in the first place so taking stock of things using
+
+00:36:04
+the ideas that I've described so far that I would regard as fully wellestablished and accepted uh uh you know by people or I think not controversial at all what leaves us though is uh the issue of what do we do in curve SpaceTime to adequately replace the requirement that there be a punk aray invariant State and this notion is used very critically in a lot of aspects of quantum field Theory and proof of spin statistics theorem PCT theorem uh uh and so on the existence of a puner inv variant State plays a critical role
+
+00:36:51
+we can't just abandon this or we'd lose a lot of the content of uh that we have in flat space time Quantum field Theory so the proposal that uh Stefan Hollands and I have is that in fact the appropriate uh uh replacement of this is something that has nothing to do really with States at all or nothing to do with any kind of preferred States or anything like that but that the appropriate uh uh replacement is is the to postulate that Fields have an operator product expansion now uh many people in this audience who know
+
+00:37:38
+a lot more about operator product expansions than I do but for the people who don't know uh uh uh anything about them right the simplest example of the kind of operator product expansion that I'm talking about here is what you'd have for say a Klein Gordon field while in flat or in I think I want to consider in curved SpaceTime it's an ASM totic formula for the product of fields uh when the two points become close uh the notion of a hadamar state I mean one way of formulating it the old way of
+
+00:38:13
+formulating it there are Nic much nicer ways in terms of the wavefront Set uh uh ideas but the uh one way of formulating it is that as you bring the points close together this goes uh well the singular part of this becomes some locally and covariant constructed hadamar distribution times the identity operator plus a remainder the leading order term in the remainder actually provides you the definition of the wick power F squared and other terms in this expansion well would in the free field case would just provide you I
+
+00:38:53
+guess derivatives of f^ squar uh in fact well uh key point is that this is more singular than any of the other distributions well the other distributions are not even singular at all in this case uh so an operator product expansion for arbitrary products of uh Fields including these Wick powers or composite type fields exists for free fields in curved SpaceTime and Hollands showed several years ago that it exists order by order in pertubation theory uh at least for renormalizable interacting fields in curve space time one wouldn't
+
+00:39:44
+expect an operator product expansion to exist for non-renormalizable theories or theories that are not uh uh suitably free in the short distance uh limit uh but our proposal is that uh uh this should be elevated to a fundamental status in the properties of quantum fields and the key well there's more that I'll uh want to say about this in a minute but uh you know the key motivation for that is that this appears to provide a completely adequate replacement for the existence of a Punker invariant State again you might
+
+00:40:30
+wonder what in the world does an operator product expansion have to do with punkay invariant State well of course it doesn't have anything to do with the punan variant State because we're not going to have anything like this in the quantum field Theory but the coefficients of the identity element in operator product expansions I mean of arbitrary components uh arbitrary products of fields are going to play the kind of role in this formulation of Theory as vacuum expectation values play in manowski Quantum field Theory so
+
+00:41:05
+that's why I'm referring to it as a replacement of this uh condition so our present viewpoint on Quantum field theory is well we start with some background structure that I've been assuming all along of a space-time manifold the space-time metric and we also will have choices of time orientation space-time orientation if we're dealing with spinner Fields we'll have uh spin structure to deal with and the idea is that for every choice of M or every in a wide class like globally
+
+00:41:41
+hyperbolic space times we're going to have some algebra uh of local that's comprised by local field observables now in usual approaches one would normally assume that this contains the algebra itself contains the full information about the quantum field theory in our Viewpoint the algebra contains very little information the information is actually going to be in the operator product expansion the algebra will contain some information but it's really in information about relations between
+
+00:42:20
+elements in the algebra that can be derived from the operator product expansion so all of the non-trivial in information about in our Viewpoint about the quantum field Theory should be that you know that distinguishes one Theory from another aside from the list of fields uh would be in our Viewpoint contained in an operator product expansion which by which we mean an asmic sort of formula for the product of fields in terms of distributions and onepoint Fields where this formula is supposed to hold in a
+
+00:42:58
+limit as all of the X's approach the point Y so the further axioms then of or of the theory or the the the specification of the theor theory would consist of specifying the operator product expansion coefficients and the axioms of the theory then from this point of view would be properties that the uh operator product expansion coefficient have to satisfy uh I will not discuss this in uh a lot of detail you can look at the paper that I referenced at the beginning to to uh State these I'll I've this is
+
+00:43:42
+the first four of the conditions uh these are this has already basically been defined and we want that to hold for these distributions uh there are simple uh uh conditions involving the identity element ability of the star operation there are obvious causality conditions uh I will explain a a little bit about this Dimension and scaling degree because that will be needed to just explain what how this gives rise possibly to relations in the algebra uh uh there are Spectrum conditions and so on the this associativity condition
+
+00:44:24
+that as we call it is a very important one uh which again I won't be describing in detail but the idea is that if you have a product of more than two Fields you could consider situations where you bring two or more of the points uh together closely first and then the rest follow later and you could then imagine you could have done an operator product expansion for the first group first written it out in this kind of way and then then done an operator product expansion you know replaced three of
+
+00:45:02
+these fields here with one point Fields here uh the associativity condition is just the statement that you'll get the same Final Answer uh if you do it in these different ways uh and use operator product expansion formulas in the intermediate steps uh going along so it essentially reduces things down to knowing operator expansion coefficients for twoo uh distributions just so you have a little of the flavor of what we're doing or trying to do I'll just mention these uh well the definition of the
+
+00:45:43
+dimension uh uh and of the of the fields in our list of fields that generate the algebra uh uh and the a condition the scaling degree of the distributions just so that at least I'm saying something about what we're uh doing and then I'll I'll move on back to the more General ideas uh so if we consider the uh operator product expansion of a field and its adjoint uh uh well if we single out the identity element in that uh uh expansion we de demand that the scaling degree of the coefficient of the
+
+00:46:30
+identity be positive in other words this be singular uh we use the scaling degree of the coefficient of the identity to define the dimension uh and then we are basically require that all of the other coefficients not be more singular than this well taking into account what the dimension of these fields are so the uh uh one of our conditions uh restricts the scaling degree of uh the other coefficients in terms of the dimensions of the fields that occur there that basically guarantee that this be uh that
+
+00:47:13
+there'll be no more term in in the uh expansion more singular than the coefficient of the identity now we get relations in the algebra which might be things like field equations for the uh field it might be uh other relations that occur uh for the fields those we arise you know in our way of thinking about it only from operator product expansion basically if you can find some linear combination of fields uh such that when you formally perform the operator product expansion for this linear combination if the
+
+00:48:03
+uh most s if if none of these terms are singular then we declare this o to be zero which gives a relation which might again be field equations this list of fields includes you know all composite Fields as well so uh there are nonlinear relations uh of course that occur that can occur even though I've written this as a linear sum so the algebra then is in this view is taken to be basically quite trivial it's really taken to be just the free star algebra that we generate from the list of fields but then we Factor it by
+
+00:48:48
+uh uh any relations that arise in the manner that I just described from the operator product expansion and uh it's also factored by commutativity or anti-com commutativity relations but nothing else the state space then is taken to be uh as usual a positive linear functions but we also impose the microlocal Spectrum condition on the states and uh we of course demand that the distributions we get by applying the states uh satisfy the op relations the point is that everything is then uh uh uniquely determined by the operator
+
+00:49:34
+product expansion now let me just uh back up and say I I mean we were led to this proposal from as I've described the issue of how do you replace and get the content of punkay invariant vacuum state in a general you know in the general curved space time setting as and as I've explained the coeffic as I've indicated I haven't explained the coefficient of the identity appearing in an operator product expansion and its properties plays a lot of the role in arguments uh spin statistics PCT theorem that uh the punk
+
+00:50:17
+array and variance of the vacuum State played uh in the manowski formulations of the theory but the other uh uh reason why at least this is attractive uh you know I like this proposal is that uh it I don't see how one will easily get uh algebraic you know relations in the algebra that will be of this local and covariant character uh unless I mean let me say it this way this if if all of the non-trivial relations in the quantum field Theory are derived from uh expressions of relations of this
+
+00:51:08
+kind of form the theory is going to be automatically local and covariant in its nature and it's not obvious to me how to construct a theory that is of this local and covariant nature that I believe one needs without going to something that in essence is is expressing point-like relations now you'll never have ordinary point-like relations holding between fields and operator product expansion is the closest thing that you can come to H I would argue to having point-like relations between the quantum fields and
+
+00:51:46
+in our Viewpoint that is what is effectively providing all of the relations in the in the theory so in terms of results we've uh uh proven the you know repr proven the spin statistics theorem in this uh uh framework largely by copying the minowsky SpaceTime proof a little bit more interestingly uh we can prove a version of the PCT theorem but this has a very different character in the curved SpaceTime context because we don't have parody and time reversal symmetry uh so in fact what the PCT
+
+00:52:32
+theorem does is relate the algebra of observables and states in a background structure that consists of A Spacetime with a particular choice of time and space time orientation with uh a corresponding background structure that's the same SpaceTime as a manifold and Metric and the same in terms of the space time orientation but has the opposite choice of time orientation and if we're dealing with spinner Fields has the corresponding choice of spin structure the claim is that these algebras are
+
+00:53:13
+then naturally anti-linear isomorphic and we have a corresponding uh isomorphism of the state space in this case so what this means is that the PCT theorem uh doesn't tell you about if you're let's say in an expanding Universe it doesn't tell you that you know relations with particles if you've defined those or at least you know fields are related to phenomena with their with the conjugate fields or whatever it tells you that relation you know phenomena dealing with fields in an
+
+00:53:53
+expanding Universe are related to phenomena with the corresponding conjugate field in a Contracting Universe uh I mean it it is because of the reversal of the time orientation the uh you know one is effectively dealing with a different space time I mean the expanding and Contracting universe space time that I just alluded to are the same as manifold and Metric but have opposite choice of time orientation Okay so to conclude let me comment on the Outlook of this and uh reveal you know some of my grand hopes
+
+00:54:36
+that are still you know very far from being realized in this but it is something that I hope uh you know will be able to gain some further evidence on uh uh as time goes on so the our attempt to formulate or generaliz the formulation of quantum field Theory to curve space time which was successful without a radical reformulation of the theory in terms of doing everything except this existence of a preferred vacuum state to get this Incorporated in some analog of this Incorporated in the curved space time
+
+00:55:19
+has led us to a Viewpoint where operator product expansion is elevated to a fundamental status and in in this Viewpoint then uh the operator product expansion is what would contain the non-trivial information about a particular Quantum field Theory what I very much like about this is that it really gives a perspective uh uh that's much closer to classical field Theory because the entire content of the theory is really expressed by local relationships Satisfied by the fields and I mean really local now I mean this
+
+00:55:57
+is as local quantum physics as I think one can get because the these relations although not exactly at a point are arbitrarily close uh to a point the key thing is that uh I mean we've succeeded at least to the level of giving a proposal that uh you know you know that may have a chance of going somewhere because we've completely gotten rid of any role of symmetries and preferred WR preferred states in the formulation of the theory and that's uh I think a very critical aspect now on to the Grand hopes
+
+00:56:41
+uh of course there's you know it's extremely well known that uh pertubation Theory uh in Quantum field theory has major convergence problems at least some of the convergence problems and I'm wondering if perhaps not all of them uh Trace back to the fact that one has a vacuum State appearing in here and that the vacuum State itself is clearly going to have a nonl non-analytic dependence on coupling parameters um my hope is that by getting rid of the vacuum state or any other states in the formulation of the theory
+
+00:57:24
+and working entirely with the operator product expansion coefficients one might uh get around this uh major issue and difficulty so let me illustrate that and the only good example that I have to illustrate this which unfortunately is a free Quantum field Theory but we can consider a massive Quantum field Theory with the mass squared being the parameter of the theory so of course a vacuum state in this theory is let's say in four dimensions is only going to exist when m^2 is greater than or equal
+
+00:57:59
+to zero and it's well known that this vacuum expectation value has this character as a function of M2 and the log M2 that you see here is illustrative of the non-analytic behavior and there'd probably be something wrong if this vacuum expectation value behaved analytically in m^2 uh at m^2 equals 0 because you'd be able to continue it to negative m^2 but there's no vacuum State at negative m^2 so something uh should be wrong so vacuum expectation values uh and expectation values in physical states
+
+00:58:42
+are going to have this non-analytic dependence but the operator product expansion doesn't coefficient doesn't SE suffer from that at least if it's defined properly I won't go into the reason all of the reasons why it's really necessary to do this but apart from trying to make something analytic in M squared uh the claim is that uh to properly Define the operator product expansion one has to introduce a uh length scale mu squared uh the ambiguity in choosing the MU squared corresponds to an ambiguity in defining
+
+00:59:32
+f^ squared that ambiguity can be fixed in flat space time but in curved space time that ambiguity can't be fixed one genuinely has to introduce a uh length scale in curved SpaceTime uh to Define this operator product expans expansion and if one takes the curved space time uh you know that for other reasons one has to do it this way over now back to Flat space time this is the operator product expansion uh that is perfectly analytic at M squared and in fact from this point of view Klein Gordon Theory with
+
+01:00:12
+negative m^2 is a perfectly good theory it doesn't have a punkay invariant state but that's not part of the theory anymore it has a perfectly good operator product expansion it has uh a perfectly good wide class of States uh it's an unphysical Theory just like classical Klein Gordon Theory with negative Mass squared because there are instabilities classically you get exponentially growing Solutions and in the quantum theory you'll have similar unphysical growing behavior of field
+
+01:00:48
+expectation values but there's nothing wrong just as negative Mass squared Klein Gordon equation is a perfectly good hyperbolic equation with perfectly good deterministic Evolution perfectly good well-posed initial value formulation now in this point of view negative Mass squared Klein Gordon Theory would be a perfectly good Quantum field Theory uh it just doesn't have a uh preferred vacuum it doesn't have a punk oray invariant vacuum state in flat space time so it would be interesting then I think
+
+01:01:25
+to uh base the formulation of the uh perturbative type calculations of quantum field Theory uh on the operator product expansion coefficients and very recently Hollands and also Hollands in collaboration with Oberman uh Oberman have made quite a bit of progress which I think Stefan will be talking about in a couple of hours uh to developing perturbative rules that would enable one to direct ly compute in perturbation Theory operator product expansion coefficients when this Machinery is more developed uh I think it would be very
+
+01:02:05
+interesting to re-examine the convergence issues within this framework so thank you very much um you insisted that um your F the be either normalizable or ASM totically free but uh I don't quite see that why that plays an crucial role for the existence of an operator oh yeah no I okay so I was yeah let me I I in a general theory that is not renormalizable or ASM totically free I would expect that I would think one would not normally expect an operator product expansion to exist I I may have worded this uh badly
+
+01:02:56
+but I'm not it's not theories for in in where they quite well known which don't satisfy either of that and they obviously have a good operator product expansion okay so an operator product expansion of this uh kind of type I mean yes they do oh okay well then I mean no it's not large anomalous Dimensions you might say okay well our we should talk further about that I mean so no I'm not using that in I'm not using renormalizability or asymptotically free or anything like that in any way I was just uh cautioning
+
+01:03:38
+that at least an operator product expansion of the type we were considering and uh uh satisfying the properties that we're considering and I should find out more about what these properties are uh I was cautioning that one shouldn't necessarily expect that to exist that was all that my Mark was intended to to be but again we should talk further uh another question what in your setting guarantees that there is any state oh no I mean we've just pushed the we've pushed all the difficulties
+
+01:04:12
+off into I mean nothing at the moment I mean uh well I mean yes so I mean I you know the way I've presented it it it it might seem you know kind of but uh right I mean that would be a major issue we have absolutely nothing if we if we wrote down this infinite sequence of operator product expansion coefficients and verified that they satisfy all the conditions that we're imposing at that point we would have absolutely no guarantee that there are any states so that's clearly a major shortcoming which however uh you know
+
+01:05:00
+for the moment we've just pushed off to the side uh another question here can you also say when two theories are some since your alas don't carry information and sometimes there are no States whatsoever it might be hard to detect by some variant that your theories are really well I mean one you know for the operator product expansion coefficients I mean you can of course do field redefinitions and make those look very I mean the the two theories from this point of view would be the same if they had the same
+
+01:05:38
+operator product expansion coefficients however you know it wouldn't necessarily be obvious uh if you gave me you know a list of two different looking operator product expansion coefficients whether the theories the theories might still in fact be the same there might be some field redefinitions that make them equivalent uh I mean I'm not sure if I'm was can you some detect that they really differ or are the invariance that they really can't be made Same by some recognitions and then the about p and um
+
+01:06:19
+um do they say they they just say that they have the same Al in the same state because that might not be enough really the same Theory well I mean I think it's clear the notion that the they're the same theory if they have the same operator product expansion coefficients but of course you have field readed I mean I think that's a clear concept that there isn't any ambiguity on uh telling in practice whether they're the same Theory might be extremely difficult again I'm not
+
+01:06:54
+sure I mean the information in the theory in this Viewpoint is in the operator product expansion coefficients and uh but telling whether two theories are differing from each other just by field redefinitions and they're really the same Theory wouldn't be an easy thing to do I mean in general relativity if I give you two you know the same metric written in completely different coordinates it won't be very easy for you to tell whether they're the same if your question is is there some invariance
+
+01:07:24
+that could be calculated ated that would immediately tell you that they're different uh yeah that might be I mean that's not something that we've that's certainly not something I've thought of uh so I'm I can't give you an answer but there might be some easy checks that would show that two theories are not equivalent you know one more questioning the number of conforming theories which have perfect uh which are preserved under scaling so they reproduce themselves asically but
+
+01:08:01
+you would call them Astic right yeah so what's U so op can very well exist right so I'm very much regretting having made that remark which was just a cautionary remark that this might all I was trying to indicate was that this might you know if is putting opes as a fundamental status that might restrict the class of things that one otherwise would have called uh uh Quantum field theories but uh as I say I'm regretting having uh uh formulated that idea of you wouldn't necessarily expect ASM
+
+01:08:45
+totically free or non-renormalizable theories to have the this sort of operator product expansion maybe we better cut off the questions there and uh thank our speaker again this
+

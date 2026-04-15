@@ -1,0 +1,204 @@
+00:00:00
+the subject but it seems to me that at least in this room The Long Winter of qu theory is about to give way if only briefly to the spring of classical Theory and the magician who will do this for us is not gandal but someone with GS so thanks a lot for the nice introduction beautiful introduction the beautiful I have had most beautiful I have had um yeah usually uh I I perhaps would like the to to thank the organizers for the nice conference and for the opportunity to give a talk today yeah usually one doesn't start a
+
+00:00:56
+talk by asking forgiveness but I should ask forgiveness for two things the first is that I didn't bring any foras to it so I'm wearing like a member of an heavy metal group so this is so please forgive me for that and the second forgiveness is that uh in my talk there will never appear almost never appear the word Quantum huh so I'm a little bit ashamed to present you something for classical Feld theory on classical time is not even the space time is quantum so just so some some you may even wonder
+
+00:01:39
+why doing these things today h in the age of quantum field theory on Quantum SpaceTime strings or whatever I think that there is still something to say on especially if you take uh if you have in mind the algebraic perspective of doing field theories so what I would like to present today is a joint work with Claus fredagen and Pedro laitz and REO and uh I asked it for for forgiveness but uh a partal think is that you see that uh looks like a mistake here huh should ask forgiveness three times no this is
+
+00:02:27
+because I'm much ahead of time so that's the so I'm like the old ladies who turn failers into something positive you know so um this is the outline of the talk I would like to give some brief introduction and then shape the the the talk into match the algebraic uh uh flavor meaning uh separating kinematical structure from dynamical structures then some of course consequences of what I would say and then uh uh a little bit of conclusions so classical field theor on classical SpaceTime
+
+00:03:25
+uh among our group this didn't uh had much attention as far as I remember at least the there is only the paper on CM on communication mathematical physics uh which John Roberts and leiland uh published in 78 which had to do with netology and classical field Theory and then more a little bit more recently uh the paper of Dutch and freden 2003 much of what I will say is some spirit is already contained in this last paper but there are also some differences so typically uh mathematicians from mathematical physic
+
+00:04:14
+is study classical field Theory by using geometrical techniques so mainly you know all these people binstein maren kosi they use a multis simpatic approach huh Faith spaces and other things like this there are also mathematicians like vinogradov who uses algebraic geometry and topology uh with a certain amount of uh good results um physicists like to uh deal with other methods no geometry essentially not geometry at all but using the functional methods which are very uh near to them to be used for for
+
+00:05:01
+uh for the path integral in Quantum field Theory so in the in the in this functional methods uh usually one thinks uh of an infinite dimensional generalization of Lano mechanics of course tically sometimes this can be has been made rigorous by mainly using banak space techniques uh we want to do something different but let me just let appear this catchy phrase classic of theory you will see that it's not so terribly infinite dimensional so the Ric is there but uh it is infinite dimensional but not so
+
+00:05:48
+much at least if you take the algebraic perspective so the aim of course is what I was said saying is to give a new a fresh look uh of interacting classic a theory um and it strongly biased by some structure which appeared in perative Quantum field theory in recent years and I showed you I I already told you about the paper DCH Fagen and then the other papers especially uh sorry especially this one which will appear in advances the mathematical physics September October 20 this year and then this is lectures not on
+
+00:06:36
+physics there are some lectures which also will appear soon but there these papers are already on on the archives so you can find there so the setting of what I will be talking about is I will deal with the easiest example which is scalar field real scalar field and of course the geometry is always told several times especially today uh consider globally hyperbolic space times with genetic Dimension but fix it so let us start with the perspective of algebraic Quantum algebraic uh uh setting we know usually we had to decide
+
+00:07:25
+what are the states what are the observables uh as a rem In classical mechanics States points on a manifold huh which is called configuration space and then the observables are us usually taken to be the smooth functions over this configuration space and moreover they have also additional structure especially if you want to introduce Dynamics we have a Pon structure on that and this is the structure that we want to imitate also for the classical field Theory so we need to single out configuration observ and observables to
+
+00:08:07
+have to deal with the kinematics and the p s structure for the for the Dynamics so let me start with the configuration space um yeah we can take as a motivation this the case of classical mechanics the fin dimensional so and our fav favorite choice is uh the one in which the configuration space is uh just the space of all smood functions on the global abolic space time with the usual fret topology uh and I will use the script e as a simplified notation for that so this is what corresponds to what uh corresponds
+
+00:08:57
+to what physicist called The Off shell set and uh the space of all such functionals under this pointwise product here uh certainly makes an associative Community algebra but in any case not much things can be said at this level of generality one needs to make further restrictions to have good uh working properties and I would like to separate the Restriction in two parts one is has to deal with the support properties and the other with the regularity properties so as far as the support properties are concern we Define the
+
+00:10:39
+support of the of the functional much uh uh with a definition which is very near to what is used in distribution theory in the in spite of the fact that these are nonlinear functionals so this is self- explaining I think it's um and of course this this support has uh nice properties and of course as the properties that you expect as a support for the for instance for the for the sum is the union and the for the product is just intersection and the F requirement that this all functions have to has to have
+
+00:11:20
+compat support on space time so one other requirement restriction is what uh we call additivity which means that the function has to satisfy this property here written over here whenever the elements of configuration space 51 5 2 and 53 are such that the intersection of the first and the third is empty so this replaces the shift like typical properties of distributions it's a sort of we replace for linearity and this allows to do what the shift property does for the for the distribution to break it break a
+
+00:12:09
+distribution into small pieces and indeed we have a okay very simple result that says that any additive and compactly supported function can be decomposed into a finite sum of such functionals with arbitr small support so it's amusing to uh to notice that uh this uh notion of additivity goes back to the very early times of the of mathematics of the last century so covich gave it first in 38 but it appears several times in mathematics although it's not a mainstream notion seems to be seems to
+
+00:12:52
+appear in several places for instance you find it uh in the fourth volume of girlan Shilo for for well perhaps in the multiplicative sense but it's there it is used several times so as far as the regularity is concerned remember that the road map says that we have to define the observable as some smooth functions huh uh we would like then to Define what is smooth observable but just remember that the configuration space is not a banak space it's a fret space and the usual notion of differentiability are a little bit
+
+00:13:39
+different nothing that uh that cannot be uh carefully uh defined and used H so uh perhaps it's not also this notion not is not terribly mainstream uh in m for mathematicians but mathematical physicists already know it if at least they read the lectures no in infinite dimensional Le group given by Milo on Lush in which he uses this notion already uh even more General so the definition is very simple a derivative of functional uh directional deriva is at the point with respect a certain uh direction is just
+
+00:14:34
+uh okay I gave different equivalent way of uh writing this derivative is when this uh limit exist whenever this exists this is the D derivative of Fe with respect to this direction then the function is said to be differentiable at this point if the derivative exists in any direction and continuously differentiable if it is differentiable for all Direction and all evaluation points and moreover the derivative as a map is jointly continuous from E * e to R then when this happens the function is said to be in C1 from E to R valued
+
+00:15:22
+in um so as a map uh this derivative is uh typically non linear at the evaluation point and linear in the Direction one can of course by using the iteration uh Define also the I order derivatives what is really important is the the fundamental results of of basic calculus are still valid so you have Li n through chain rule the fundamental theorem of calculus the Schwarz LMA and so forth um well so coming back to to the observables we would just give this definition so observables are all possible
+
+00:16:12
+functionals such that they are smooth so they are infinitely differentiable in this sense and the K order derivatives are distribution of compat support however we would like also to put other structures on this algebra for instance we would like to put uh Pon structures and proving yakobi identity other things and uh but this involves a multiplication of distributions so this is not yet enough we need to put further restrictions to allow multiplication or distributions so the other restrictions
+
+00:16:58
+are just restrictions on the wfront sets uh there are several possibilities I will tell you just two the most relevant for for for this stok and for the for our purposes the first is the definition of local functionals which is just a smoth functional in which the support of any derivative is in is uh sits inside the diagonal this is the thin diagonal in the uh M to to the N so the space time appropriate space time over that and the wave front set is should be orthogonal to the tangent bundle of the diagonal seen as a sub
+
+00:17:45
+bundle of the cotangent bundle so a typical example is what you would expect H take uh some function of compat support and uh okay this is the uh jet pration pardon prolongation the prolongation yes okay you you just take a certain number a polom here with uh of the the field uh and certain finite number of derivatives so this would be a local functional but uh the local function have the nasty I think that this they do do not make an algebra if you multiply two these are on different points and so
+
+00:18:34
+this is not local anymore so you get out of that so one needs a little bit to to enlarge a little bit this class and the class which is preferred sort of minimal enlargement is what can be called microlocal functionals micro Cal functionals whatever doesn't matter much the names we will call it this smooth really smooth observable these are all smooth functionals sorry for uh for which this restriction hold so the wave front set on the end or the derivative should not uh touch this uh uh this sub uh subset
+
+00:19:23
+in cotangent bundle so this just amount to say that the n M inside this wont set and never all together in the forward light conses or all together in the backward lons huh so this should not happen now using this uh this new notion one checks that you can multiply the distribution because this is exactly the purpose of this restriction H um let me then call the complement of this set here and the cotangent bundle by gamma n with the warning that this is an open cone this is a warning to those which knows what is microlocal analysis
+
+00:20:13
+and these things and then the algebra the observable algebra of the micral functions I we call it a script F of M now coming to the results of the first part the f is that uh in the smooth case for so for smooth functionals uh local functionals are just equivalent to the additive functionals this was a little bit of a a surprise so uh you just can forget the difference between additivity and locality they are just the same and another more important result is that the the algebra of observables is a nuclear a sequentially
+
+00:21:04
+complete topological Al so I would like just to sketch why it is nuclear you consider the topology on this as the initial topology we SP to all these Maps here H so it's the weakest top weakest locally convex topology for which all these maps are continuous then uh the topology here would be already nuclear if the distribution spaces uh were nuclear H but this is so only when this is a closed con but in our case this is open so one needs a little bit more work in any case what uh comes out that this
+
+00:21:57
+is the uh uh countable inductive limit of nuclear spaces and since then this is a accountable inductive limit by the um properties of which were Pion by grend so this permanent properties of nuclear spaces this is also a nuclear space and since any initial topology on nuclear space is nuclear then the the the algebra of functional is nuclear as well I will not tell you why sequential complete this another construction for brevity I would skip that so it is here that now I remind you the fact that
+
+00:22:39
+classic field Theory not is not so terribly infinite dimensional because it's a nuclear space so it's very near to be finite dimensional so it's infinite dimensional but not so drastically infinite dimensional so just a summary we introduce the configuration space the observables just the nonlinear functional with appropriate restrictions on the way front set of the derivatives so all W Front set should sit inside this open cones then we have notion of additivity additive functional local
+
+00:23:12
+functional but actually in the smooth case these are equivalent and the algebra As Nice topological properties I would just also like to remark that so far this is just the Cinematic kinematical structure so no Dynamics appear and this looks like the property we have in Quantum field theory in the local Forman algebra case that we always have a 31 factor in irrespective of the theory of the Dynamics or whatever so each time that you have a classical field theory in this algebraic sense this is a
+
+00:23:49
+nuclear space topological space so let me then come to the dynamical part uh to discuss about the Dynamics I need the notion of LR this was uh uh already written in this paper so the notion of lrang also Claus if I remember well told you something it's just an action function it's just a map from test functions to the local functional such that these two properties all the support of this object here this is you see L of f is just a local function so an element here is inside the support of the test
+
+00:24:34
+function and additivity holds for the test functions it's not I'm not requiring additivity of course as members here this would be automatic so whenever of course these uh the two test functions do not overlap so a typical example is just what you expect take uh this will be the leading example also for what I will say later so this is the lron density and then this is the action functional so let me discuss a little bit and then on the Dynamics we consider a test function which is identically one
+
+00:25:19
+on a relatively compact open sub space time of our space time then the lrange equation oil lrange equation are just written over there there and you see one restricts to the uh relatively compact Subspace time then on this space time f is equal to one and then these are the usual equation since n is arbitrary this equation would hold everywhere in the space time okay what it will be important uh next is uh the linearization of the field equation around a certain background any arbitrary background actually this
+
+00:26:02
+means that we have to compute the second order derivative of this L of the lron again taking the same trick as before uh okay this was uh related to the example H the example I gave before again in the example we would have this object here huh so you see that this is the again this sort of differential operator and uh this case would be essentially obvious but in the general case we have to require that this uh differential operator is a strictly hyperbolic operator uh which have and advanced green functions uniquely
+
+00:26:51
+determined on any globally abolic space time so the Dynamics in this off shell setting is introduced by looking to something into something uh different I will not use the equation of motions uh I will use some other kind of Dynamics the Dynamics that we will use is something very similar to what has been what is done in quantum mechanics like the merer intertwiners so we consider the F the derivative of certain l or action as a map from configuration to distributions and then we called M meler
+
+00:27:35
+operator as certain endomorphism in configuration space for which you see intertwines the two Oiler lrange operat of the of two different actions so this is the intertwining relation with a certain retardation property which is written over here so the main task is the following we would like of course to construct examples of these M Maps so consider L2 as fixed lran L1 as this lron plus a pertubation Lambda is a real parameter then the main task is to prove existence of uniqueness of this map
+
+00:28:23
+around any possible configuration I'm not doing perturbation around the vacuum so F equal to zero any possible configuration this is quite different what you find in literature even for classical F Theory usually things are done around zero background so around the vacuum so the main theorem is that this map exists and are unique in an open neighborhood of the test function of the intera part so I'm I'm very brief about these things uh um especially for for the result the result is really to the force in our
+
+00:29:11
+function analysis and can't give you any details this would require talk in itself uh but just the idea so um consider the the the definition that we had before the intertwining relation the retardation and write we would like to write down a differential version of this St of this of this uh stuff uh ring up a sort of flow equation in Lambda in this real parameter so Define Fe of Lambda is the image under this map of the configuration fee and then if you take the derivative of the relation before
+
+00:29:55
+gives you that that uh that equation here so the second order functional derivative evaluated over F of Lambda plus this all these terms here maybe there is some Lambda missing somewhere but and then we uh by applying the retardation property and strong hyperbolicity we can use the propagator just to uh to erase this term essentially right because because this is the retardation of propagator is the solution of this differential Operator by definition and then this equation is written down in this
+
+00:30:39
+formula then this appears to be an ordinary differential or equation with respect to to to this parameter on a fret space as as you know if you are in banak space everything under some assumption everything works quite well straightforwardly in freshet space this is really a mess um so one has to use of course a much more elaborated technique and essentially these techniques are um using implicit function theorems of nation m h so but the procedure is essentially in very brief term you break up the perturbation into very small
+
+00:31:30
+pieces essentially you go on RD but still with the uh with the metric of the global hyperbolic space time so it's still curved it's not flat and use the composition uh then solve uh the implicit function theorem for or use the implicit function theorem to give a solution to this equation via a prior estimate so essentially uh for for the propagator ear and U T T Energy estimate essentially and then use a composition property to glue again back this these pieces that you have to have the full
+
+00:32:12
+proof on on SpaceTime um part of this uh um of this result is in on the poster outside so if you want to look a little bit more in details so do these things now coming to definition of the pon structure for classical F Theory then if one uses this uh the construction of the Mel map one really can give a rigorous construction of P brackets I would like to avoid this Al together I just give you a definition straight forward definition uh the P bracket is just uh defined over here it just you see that
+
+00:33:01
+on certain action functional to uh uh observable have the Wason bracket written as the first functional derivative and compose it with the commutator function the advanced minus uh green functions okay so one proves that this P bracket satisfy all the aom for being a real Plus on bracket namely yakobi identities and live needs identities and this entails that the Bon structure is defined in our sense as a triple the observable an action functional and this P bracket here um of course by giving the P
+
+00:33:52
+bracket we have an additional Le algebra structure even infinite dimension so let me give you the summary of this dynamical part it's uh we introduce the generalized lents uh which lead to hyperbolic equation but this is more uh in the sense that the second order functional is an hyperbolic differential strongly hyperbolic differential operator and of course you can have all Poss all possibility linear equation semi linear equation quasi linear equation whatever you want then we introduce a dynamic
+
+00:34:36
+which is just the off shell Dynamics in the sense of these M Maps then also the pon structure via P brackets I should also say that this notion of P bracket is already in the papers of D and fredagen so um they were the first to really check uh the the this stuff uh many years ago so let me also now pass to some consequences of these two structure kinematical and dynamic structure besides the existence of the meler map yeah so we found that locally you can prove the existence of uniqueness of this sort of maps for any
+
+00:35:32
+possible um variation yeah for any possible interaction perturbation um but this a strong implication for the pon structure so I'll tell you the first one which is the daru theorem essentially so one proves that this map are canonical transformation for the pon structure so the intertwines the two Pon structure Associated to L and the perab L like that in particular this allows us to put even off shell this Plus on bracket in normal form H so this is a sort of locally background independent functional daro
+
+00:36:27
+theorem and to prove this you you need something very similar to what it is done of course in the Nash mosa stuff situation moreover one can Define subspaces of the observable namely one can Define for instance a Subspace of all functionals which vanish on Solutions now I'm using uh equation exists it is indeed also a solution of the equation of motions indeed uh it is uh uh sorry for t equal to Z this is the solution the started solution the starting solution and if you derive this relation you get L2 times
+
+00:38:21
+this one this object here but since this is the fundamental solution of L2 then this is zero huh uh this means of course that the functional F which we started with also vanish along any of these elements of this uh this one parameter family of functions now then if we take the derivative with respect to T of this of this object we just get by using this relation just the pon bracket and the pon bracket at zero just because this is zero okay so this proves that of course this is a this Subspace of functionals is a Quon idea
+
+00:39:13
+because as Vanishing pass on bracket for for Solutions and of course to prove that this the solution for this equation exists one uses again the same strategy as before for the construction of the M map so uh then one can say something even more as far as the simplec structure is concerned one may characterize the center of the algebra by looking at the casim functionals so so these are all functionals which vanish with have which have was some bracket Vanishing for possible GN Fe so just the element with
+
+00:39:57
+respect to the structure so what one can prove that these are generated by elements of this sort or here and fi here this functions these are test function or compat support they should depend on fi also and constant functional so one may then quoti the algebra of of observables by the pon ideas or the km ideas okay this is an idea the km idea is an idea with respect to the structure not of course with respect to the pointwise uh product structure huh then the quotient we can form at least two quotients one is this one which is uh
+
+00:40:46
+respect to the um Pon ideal which would give the theory on shell uh so this quoti thing passes from off shell to off shell structures either one can use the quo with respect to the cimat and this would give you a simplec structure in the sense that now the pon bracket is not the generate anymore Al so since all the ideas are linear subspaces they are Nuclear by the permanence properties of grow and but they are also closed then when you take the quotient all this uh all these quotients uh remain the same
+
+00:41:31
+nuclear class H so they are they remain in the same topological class they remains uh nuclear topological spaces so one may then ask where is the real algebraic structure so the next structure but this can be done by just restricting uh the supports of the functionals to have functional fitted into uh diamond or whatever but I would not say much on this and pass to actually to the more modern form which is the local equarian uh fashion uh this is because I I wish also to I just want to tell you that the all
+
+00:42:18
+the construction can be made locally coant so far we use only one SpaceTime now we try we try to use the ftorial situation so actually what results is that we have a Fanta from the category of manifold which I like to call lock as locality category uh of course as um Chris and and Rina said these are just the same categories as they explained so I will skip any detail and the observable of course are um F Elements which are just the algebra of observable we constructed before um one can also use another
+
+00:43:08
+category by the by using the P brackets to do that we have to enlarge the meaning of of the generalized lran so namely I want to promote the lran to be natural Transformations which something very natural so the natural arrang are just natural transformation between these two Fant this is the Fant that sois mentioned the Fant which associate to any space time the test function of compat support relative to to to to the space time itself and this is just the fanto that I was defining before so this
+
+00:43:48
+means that we have a family of maps so usual sort of Lent such that whenever you have an embedding between space time we have this condition which is the naturality condition so an important point so you see that here I'm defined I wrote this in Brackets just because this is not really the local function as I defined before actually it turns out that if you consider this map with the additivity property uh and the naturality property together they say that this is a local componentwise these
+
+00:44:32
+are automatically local functional so you use additivity in the test function the naturality properties and then you just prove that this is a local functional so local functional comes uh for free in this context then uh using uh the fact that the fast the deriv the oiler aan uh operator is the equational motions and the second functional derivative is a strictly hyperbolic operator uh one and do this uh um and one and do the algebra with the p structure as before we had just the main of this part that the the fun F of L
+
+00:45:28
+from the category of SpaceTime to those of nuclear Pon algebra is satisfy all the axioms of local or locally karian fields of course the Cal the Axiom is here in terms of the plus bracket so let me make uh more or less conclusive remarks um actually can extend this construction to the case of tensor categories since uh we have nuclear spaces and they behave well under tensor products so I can send this to to this case in this case uh of course the uh uh the categor is here ofon T ofon this is s explaining in the
+
+00:46:26
+case of ality the tensor category as the structure that the tensor product of two space time is just the this joint Union so you don't have you don't deal anymore with the connected SpaceTime but this connected pieces H and the embedding are admissible when two space time embeds into a third one perhaps I should write something I forgot to do that um so an embedding M1 M2 into a third space time is admissible when the image are space like separated in the cality of course structure the final
+
+00:47:32
+SpaceTime okay so one can work out these things uh I hope that they will appear in the in the paper um there is however one interesting point which has to do with the fact that uh we are uh when we uh use the pon ideas we are using the equation of motions uh um the important point is that of course um if we want to go to the onell theory we know that because of fantality the ideas transform in this way when this is the embedding isomatic embedding if we quo with respect to the structures then the quau is again a good
+
+00:48:24
+fun but uh uh due to the due to this relation which has to do with the possibility that uh in nonlinear hyperbolic equations you may have solution with a finite uh life uh span LIF span then it might be that the morphism is are not anymore injective so then it would be really interesting to check whether in this uh when we quotient so in this structure when we can prove the times lights axium uh when we replace injectivity by subjectivity because for sure in the nonlinear case this is will never be
+
+00:49:15
+injective due to this uh to this uh to this relation this means that you may have Solutions here that cannot extend to the old space huh because of the blow up yeah okay so um just at the final consideration um I showed you that uh one can really try to construct uh with a certain success using the algebraic ideas classical field Theory even interacting classical field Theory so you can construct the kinematical structure and the dynamical structure via the pon uh p plus on brackets of course um I forgot to
+
+00:50:04
+mention that uh much of what I said for sure works for the semi linear case so whenever you have a fast order lanja which means just contains fast order derivative of the of the of the of the configuration uh elements uh for the Quasi linear case uh maybe this also works thank to certain tools which have been uh invented by Christo dulu some years ago actually oh sorry yeah Kleiner man not Christo dulu but they almost equivalent sometime yeah this is um commutator Vector field structures for sh CLA
+
+00:50:52
+thanks um of course an import an point would be to make the Ascension to gauge theories uh and this requires further elements so probably a classical BRS constructions other things like this and even more ambitiously of course we would like to extend this construction to Einstein equation as you um may have noticed perhaps I didn't say explicity but all the construction is always loal so around the support of the interaction um this of course would need uh even to dive into more complicated tools which
+
+00:51:40
+is parad differential calculus and maybe the last one is maybe uh there would be some possibility to apply this sort of construction to do uh to go beyond what kich did some years ago h he did it for finite dimensional plus structure this is infinite dimensional perhaps just because you can really construct explicitly explicitly all this structure maybe one can even try to do uh this of course this is just a hope it's nothing concrete and I think my talk is over thank you thank you very much
+
+00:52:47
+you yes the possible to general relativity there might be a problem that when about something that's not a solution to actually understand do not get a system ofab have do you have G you see way I think I don't have a very precise IDE a s to to start essential to do to see what are really the programs what tools can be used I don't know whether Pedro clus or something better op since we didn't yet touch uh these things concretely can't say we will see any further questions comments I'm not my eyesight is not very
+
+00:54:07
+good so please make yourself quite clear uh yes please also another question you have this construction where you you have to have construction where you pass the actual have those you know G or something but that also seems to be notoriously no no of course this [Music] is it's possible that uh um what you really need is uh is just the fields As Natural transformation this is what I I would expect of course I do not expect to have local seem to be quite complicated stuff but for for sure we will have the
+
+00:55:05
+fields As Natural transformation Le this is the old but have gra to matter and then theti from the matter Fields these would be the Serv you could have have course can come now could you could you please uh speak up because you were only speaking I think that not many people outside very narrow cone heard you it's like gra of course right you have to restrict have to cou to M and restrict matter sector uh then to gravity but to the matter sector you can speak about okay I think the discussion will go on for for
+
+00:56:22
+a very long time so at least I hope that it will but one again thank you very very much for a very algebraic uh uh flavor meaning uh separating kinematical structure from dynamical structures then some of course consequences of what I would say and then uh uh little bit of conclusions so classical field theor on classical SpaceTime uh among our group this didn't distribution theory in the in spite of the fact that these are nonlinear functionals so this is self explaining I think it's um and of course this this
+
+00:57:27
+support has uh nice properties and of course as the expect as a support for the for instance for the for the sum is the union and the for the product is just intersection and further requirement that this all function has have to has to have compact support on space time so one other requirement
+

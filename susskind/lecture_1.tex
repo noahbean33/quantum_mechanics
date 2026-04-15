@@ -47,6 +47,9 @@ The entire framework rests on four axioms.  These are the \emph{complete} rule s
 The state of a system is a normalized column vector $\mathbf{v}$ in a complex vector space ($\mathbf{v}^\dagger\mathbf{v} = 1$).  For a two-level system, $\mathbf{v} \in \mathbb{C}^2$.
 \end{axiom}
 
+\medskip
+\noindent\textbf{Global phase invariance.}  The states $\mathbf{v}$ and $e^{i\varphi}\mathbf{v}$ (for any real $\varphi$) represent the \emph{same} physical state: every Born-rule probability $|\mathbf{e}_i^\dagger\mathbf{v}|^2$ and every expectation value $\mathbf{v}^\dagger M\mathbf{v}$ is unchanged by the phase.  This removes one real degree of freedom from the state description.
+
 \begin{axiom}[Observable]
 A measurable quantity is represented by a self-adjoint matrix $M = M^\dagger$.  Its eigenvalues $\lambda_i \in \mathbb{R}$ are the only values a measurement can return.
 \end{axiom}
@@ -58,13 +61,26 @@ Measuring $M$ on a system in state $\mathbf{v}$ returns eigenvalue $\lambda_i$ w
 \begin{axiom}[Time Evolution]
 An isolated system evolves according to the linear ODE
 \[
-    i\hbar\,\dot{\mathbf{v}}(t) = H\,\mathbf{v}(t),
+    i\,\dot{\mathbf{v}}(t) = H\,\mathbf{v}(t),
 \]
-where $H = H^\dagger$ is the system matrix (called the Hamiltonian in physics).  Solution: $\mathbf{v}(t) = e^{-iHt/\hbar}\,\mathbf{v}(0)$.
-\end{axiom}
+where $H = H^\dagger$ is the system matrix (called the Hamiltonian in physics).  Solution: $\mathbf{v}(t) = e^{-iHt}\,\mathbf{v}(0)$.
 
 \medskip
-\noindent\textbf{Derivation note (norm preservation $\Rightarrow$ unitarity $\Rightarrow$ Hermitian generator).}  Hermiticity of $H$ is not a separate assumption---it follows from Axiom~4 plus norm preservation.  If $\mathbf{v}^\dagger\mathbf{v} = 1$ must hold at all times, then $U(t) = e^{-iHt/\hbar}$ must be unitary ($U^\dagger U = I$), which requires $H = H^\dagger$.  Present in this order: norm preservation $\Rightarrow$ unitarity $\Rightarrow$ Hermitian generator.
+\noindent\textit{Units:} We set $\hbar = 1$ throughout.  This is a choice of units (energy measured in radians per second) that physicists make routinely; $\hbar$ is restored only when numerical SI values are needed.
+
+\medskip
+\noindent\textit{LTI analogy:} This is a linear time-invariant system with system matrix $A = -iH$.  The state-transition matrix is $\Phi(t) = e^{At} = e^{-iHt}$---the initial-condition response of a first-order vector ODE $\dot{\mathbf{v}} = A\mathbf{v}$.  In Python: \texttt{scipy.linalg.expm(-1j * H * t)}.
+\end{axiom}
+
+\subsection{2.1 Why $H$ must be Hermitian}
+
+Hermiticity of $H$ is \emph{not} a separate assumption---it follows from Axiom~1 (normalization) plus Axiom~4 (linear evolution):
+\begin{enumerate}[nosep]
+    \item \textbf{Norm preservation.}  Axiom~1 requires $\mathbf{v}^\dagger\mathbf{v} = 1$ at all times.
+    \item \textbf{Unitarity.}  The evolution operator $U(t) = e^{-iHt}$ must satisfy $U^\dagger(t)\,U(t) = I$.
+    \item \textbf{Hermitian generator.}  Differentiating $U^\dagger U = I$ at $t = 0$ gives $H^\dagger = H$.
+\end{enumerate}
+This is the same argument that forces the system matrix of any norm-preserving linear flow to be skew-Hermitian: $\dot{\mathbf{v}} = A\mathbf{v}$ preserves $\|\mathbf{v}\|$ iff $A + A^\dagger = 0$, and $A = -iH$ gives $H = H^\dagger$.
 
 % ============================================================
 \section{3. Measurement: State Update and Non-Commutativity}
@@ -79,7 +95,7 @@ This is Bayesian conditioning: you observed an outcome, so you update to the sta
 
 \medskip
 \noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
-\textbf{Experiment says:} When a two-level system is prepared and immediately re-measured with the same observable, the result is always the same.  \textit{(Motivates: state update rule---measuring $M$ and obtaining $\lambda_i$ resets the state to $\mathbf{e}_i$, so the next measurement of $M$ is deterministic.)}}}
+\textbf{Code says:} \texttt{v = e0; prob = abs(e0.conj().T @ v)**2} $\to$ \texttt{1.0}.  After collapsing to $\mathbf{e}_0$, the probability of re-obtaining the same eigenvalue is exactly~1.  \textit{(Verify: set \texttt{v = e0}, recompute all Born-rule probabilities.)}}}
 
 \subsection{3.2 Non-commutativity}
 Sequential measurements of \emph{different} observables are order-dependent.  This has no classical probability analog.
@@ -91,14 +107,19 @@ Sequential measurements of \emph{different} observables are order-dependent.  Th
 \noindent\textit{Path A:} Measure $Z$ $\to$ get $+1$ with certainty $\to$ state stays $\mathbf{e}_0$ $\to$ measure $Z$ again $\to$ get $+1$ with certainty.
 
 \medskip
-\noindent\textit{Path B:} Measure $X$ $\to$ get $\pm 1$ each with probability $\tfrac{1}{2}$ (since $|\mathbf{e}_{\pm}^\dagger \mathbf{e}_0|^2 = \tfrac{1}{2}$) $\to$ state resets to eigenvector of $X$ $\to$ measure $Z$ $\to$ result is now random.
+\noindent\textit{Path B:} The eigenvectors of $X$ are $\mathbf{e}_+ = \tfrac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}$ and $\mathbf{e}_- = \tfrac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix}$ (eigenvalues $+1$ and $-1$).  Computing the Born-rule probabilities:
+\[
+    |\mathbf{e}_+^\dagger\mathbf{e}_0|^2 = \left|\frac{1}{\sqrt{2}}\begin{pmatrix}1&1\end{pmatrix}\begin{pmatrix}1\\0\end{pmatrix}\right|^2 = \frac{1}{2}, \qquad
+    |\mathbf{e}_-^\dagger\mathbf{e}_0|^2 = \frac{1}{2}.
+\]
+Measure $X$ $\to$ get $\pm 1$ each with probability $\tfrac{1}{2}$ $\to$ state resets to $\mathbf{e}_+$ or $\mathbf{e}_-$ $\to$ measure $Z$ $\to$ result is now random.
 
 \medskip
 The act of measuring $X$ destroyed the definite value of $Z$.  This happens because $[Z, X] = ZX - XZ \neq 0$, so they share no common eigenbasis.  Any state that is an eigenvector of $Z$ is a superposition in the eigenbasis of $X$, and vice versa.
 
 \medskip
 \noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
-\textbf{Experiment says:} Measuring one observable of a two-level system randomizes the other.  A system prepared with definite $Z$-value gives $\pm 1$ with equal probability when $X$ is measured.  \textit{(Motivates: $[Z, X] \neq 0$---no shared eigenbasis, so a $Z$-eigenstate is an equal superposition in the $X$-eigenbasis.)}}}
+\textbf{Code says:} \texttt{Z @ X - X @ Z} $\to$ $\begin{psmallmatrix}0&-2\\2&0\end{psmallmatrix} = 2iY \neq 0$.  Because $[Z,X]\neq 0$, they share no eigenbasis: a $Z$-eigenstate is an equal superposition in the $X$-eigenbasis.  \textit{(Verify: \texttt{np.linalg.eigh(X)} returns $\mathbf{e}_\pm = (1,\pm 1)/\sqrt{2}$; then \texttt{abs(e\_plus.conj().T @ e0)**2} $\to$ \texttt{0.5}.)}}}
 
 \medskip
 \noindent\textbf{The general rule:} Two observables $M$ and $N$ can be simultaneously measured (have simultaneous definite values) if and only if $[M, N] = 0$.  This is a pure linear algebra statement: commutativity $\Leftrightarrow$ shared eigenbasis.
@@ -119,84 +140,24 @@ A \textbf{two-level system} is a quantum system whose state space is $\mathbb{C}
 Any state can be written as $\mathbf{v} = \alpha_0\,\mathbf{e}_0 + \alpha_1\,\mathbf{e}_1$ with $|\alpha_0|^2 + |\alpha_1|^2 = 1$.
 
 % ============================================================
-\section{5. Complex Vector Spaces}
+\section{5. Notation Reference}
 % ============================================================
 
-\subsection{5.1 Definition}
-A \textbf{complex vector space} is a collection of objects (vectors) satisfying:
-\begin{enumerate}[nosep]
-    \item \textbf{Addition}: For any two vectors $\mathbf{u}$, $\mathbf{v}$, there is a sum $\mathbf{u}+\mathbf{v}=\mathbf{w}$ which is also in the space.
-    \item \textbf{Commutativity}: $\mathbf{u}+\mathbf{v}=\mathbf{v}+\mathbf{u}$.
-    \item \textbf{Scalar multiplication}: For any complex number $z\in\mathbb{C}$ and any vector $\mathbf{v}$, the product $z\mathbf{v}$ is also in the space.
-    \item \textbf{Zero vector}: There exists a unique $\mathbf{0}$ such that $\mathbf{v}+\mathbf{0}=\mathbf{v}$ for all $\mathbf{v}$.
-\end{enumerate}
-Any collection of objects satisfying these rules is a vector space.
-
-\subsection{5.2 Examples of vector spaces}
-\begin{enumerate}[nosep]
-    \item \textbf{Complex numbers} $\mathbb{C}$: the simplest complex vector space (one-dimensional).  Addition and scalar multiplication are just ordinary complex arithmetic.
-    \item \textbf{Column vectors} $\mathbb{C}^N$: a column of $N$ complex entries.  Addition and scalar multiplication act entry-by-entry.
-    \item \textbf{Complex-valued functions} $f(x) \in L^2(\mathbb{R})$: you can add two functions, and you can multiply a function by a complex number.  This is an \emph{infinite}-dimensional vector space.
-\end{enumerate}
-
-\subsection{5.3 Concrete representation: columns}
-For a two-dimensional complex vector space:
-\[
-    \mathbf{v} = \begin{pmatrix} \alpha_1 \\ \alpha_2 \end{pmatrix}, \qquad
-    \alpha_1, \alpha_2 \in \mathbb{C}.
-\]
-Addition and scalar multiplication:
-\[
-    \begin{pmatrix}\alpha_1\\\alpha_2\end{pmatrix} + \begin{pmatrix}\beta_1\\\beta_2\end{pmatrix}
-    = \begin{pmatrix}\alpha_1+\beta_1\\\alpha_2+\beta_2\end{pmatrix}, \qquad
-    z\begin{pmatrix}\alpha_1\\\alpha_2\end{pmatrix}
-    = \begin{pmatrix}z\alpha_1\\z\alpha_2\end{pmatrix}.
-\]
-Columns of length 2 and columns of length 3 belong to \emph{different} vector spaces; they cannot be added.
-
-\subsection{5.4 Conjugate transpose}
-For every column vector $\mathbf{v}$ there is a corresponding row vector $\mathbf{v}^\dagger$ obtained by transposing and complex conjugating:
-\[
-    \mathbf{v}^\dagger = \begin{pmatrix} \alpha_1^* & \alpha_2^* \end{pmatrix}.
-\]
-The rules:
-\begin{align}
-    (\mathbf{u}+\mathbf{v})^\dagger &= \mathbf{u}^\dagger+\mathbf{v}^\dagger, \\
-    (z\mathbf{v})^\dagger &= z^*\mathbf{v}^\dagger.
-\end{align}
-Note the complex conjugation of $z$ in the second rule---this is crucial.
-
-\subsection{5.5 Inner product}
-The standard Hermitian inner product pairs a row vector with a column vector to produce a complex number:
-\[
-    \mathbf{u}^\dagger\mathbf{v} = \beta_1^*\alpha_1 + \beta_2^*\alpha_2.
-\]
-
-\noindent\textbf{Key properties:}
-\begin{enumerate}[nosep]
-    \item \textbf{Conjugate symmetry}: $\mathbf{u}^\dagger\mathbf{v} = (\mathbf{v}^\dagger\mathbf{u})^*$.  Swapping the two vectors conjugates the result.
-    \item \textbf{Squared length}: $\mathbf{v}^\dagger\mathbf{v} = |\alpha_1|^2+|\alpha_2|^2 \geq 0$, always real and non-negative.  It defines the \textbf{norm}:
-    \[
-        \|\mathbf{v}\| = \sqrt{\mathbf{v}^\dagger\mathbf{v}}.
-    \]
-    \item \textbf{Positivity}: $\mathbf{v}^\dagger\mathbf{v}=0$ if and only if $\mathbf{v}=\mathbf{0}$.
-\end{enumerate}
-
-\subsection{5.6 Orthogonality and dimension}
-Two vectors are \textbf{orthogonal} if $\mathbf{u}^\dagger\mathbf{v}=0$.  Since $\mathbf{u}^\dagger\mathbf{v}=(\mathbf{v}^\dagger\mathbf{u})^*$, orthogonality is symmetric.
+This section fixes the linear algebra conventions used throughout.  If you already work with complex matrices in NumPy, this is review---it is here only to establish notation.
 
 \medskip
-\noindent\textbf{Example:}
-\[
-    \mathbf{e}_0=\begin{pmatrix}1\\0\end{pmatrix}, \qquad
-    \mathbf{e}_1=\begin{pmatrix}0\\1\end{pmatrix}.
-\]
-Then $\mathbf{e}_0^\dagger\mathbf{e}_1=1^*\cdot 0 + 0^*\cdot 1 = 0$, so $\mathbf{e}_0$ and $\mathbf{e}_1$ are orthogonal.
+\noindent\textbf{Vectors.}  A state is a column vector $\mathbf{v} \in \mathbb{C}^n$ with $\mathbf{v}^\dagger\mathbf{v} = 1$.  The \textbf{conjugate transpose} (dagger) of $\mathbf{v} = \begin{psmallmatrix}\alpha_1\\\alpha_2\end{psmallmatrix}$ is the row vector $\mathbf{v}^\dagger = \begin{psmallmatrix}\alpha_1^*&\alpha_2^*\end{psmallmatrix}$.  Key rule: $(z\mathbf{v})^\dagger = z^*\mathbf{v}^\dagger$.
 
 \medskip
-The \textbf{dimension} of a vector space is the maximum number of mutually orthogonal \emph{nonzero} vectors.  In a two-dimensional space, once you have found two orthogonal vectors, no third nonzero vector can be orthogonal to both.
+\noindent\textbf{Inner product.}  $\mathbf{u}^\dagger\mathbf{v} = \sum_k \beta_k^*\alpha_k \in \mathbb{C}$.  Conjugate symmetry: $\mathbf{u}^\dagger\mathbf{v} = (\mathbf{v}^\dagger\mathbf{u})^*$.  Squared norm: $\|\mathbf{v}\|^2 = \mathbf{v}^\dagger\mathbf{v} \geq 0$.
 
 \medskip
-\noindent\textit{For a two-level system, the state space is a \textbf{two-dimensional} complex vector space $\mathbb{C}^2$.  Next time we will determine the eigenvectors of the three standard observables and their explicit column-vector forms.}
+\noindent\textbf{Orthogonality.}  $\mathbf{u} \perp \mathbf{v}$ iff $\mathbf{u}^\dagger\mathbf{v} = 0$.  The \textbf{dimension} of the space is the maximum number of mutually orthogonal nonzero vectors.  For a two-level system, $\dim = 2$.
+
+\medskip
+\noindent\textbf{Standard basis.}  $\mathbf{e}_0 = \begin{psmallmatrix}1\\0\end{psmallmatrix}$, $\mathbf{e}_1 = \begin{psmallmatrix}0\\1\end{psmallmatrix}$.  Any $\mathbf{v} \in \mathbb{C}^2$ decomposes as $\mathbf{v} = \alpha_0\,\mathbf{e}_0 + \alpha_1\,\mathbf{e}_1$ with $|\alpha_0|^2 + |\alpha_1|^2 = 1$.
+
+\medskip
+\noindent\textit{For a two-level system, the state space is $\mathbb{C}^2$.  Next time we determine the eigenvectors of the three standard observables and their explicit column-vector forms.}
 
 \end{document}

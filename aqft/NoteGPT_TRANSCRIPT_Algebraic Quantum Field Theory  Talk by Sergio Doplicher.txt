@@ -1,0 +1,327 @@
+00:00:00
+Sergio doer and since about half of the people in the audience seemed such an age that they weren't born yet when Sergio wrote his first papers I would like to mention at least a few highlights uh the first work I'm aware of was on covariant algebras or cross products with cair and Robinson which was very influential And Then There came the Magnificent series of papers by and Roberts that were already mentioned uh culminating in the work by Dr and Roberts on the Reconstruction of the gates group I would like to
+
+00:00:33
+emphasize that I believe that that's the first use of category theory in physics and more generally the whole style of reasoning was I think completely new in physics and even in mathematical physics then later on Sergio worked or introduced even split property the notion of local life charges in a given in a certain sense he was also one of the pioneers of quantum field theory on noncommutative Space times and I'm sure we'll hear new ideas by Sergio even now so the title is the principle of
+
+00:01:06
+locality fi and challenges thank you very much class for this so kind introduction and also would like to thank uh the organizers for this privilege and honor to talk in this nice occasion which is to celebrate the 50 years of this great idea of Rudolph which actually was formulated in public first in 57 so in a way this is a way of honoring Rudolph and I would like to mention that 57 was also the year of passing of f noyman so in a sense it was a rebirth of f noyman in algebraic qu toi Theory which started in that year
+
+00:01:51
+but we are here uh I should like to mention also for another great occasion they is a reason why I wrote it in the Roman letters that live and the reason is that if you permute the letters you get light and of course everybody knows fat looks which in the original read yeah which means that God said let there be light and there was light but did he say that I think he thought this but uh you know you know God is a Quantum field theorist and I'm sure he likes algebraic Quantum field Theory so probably he
+
+00:02:45
+thought of that and of gauge theory in local in terms of local algebras that precisely what we don't know to do how to do but Einstein said that when he were asked why he does physics he answered I would like to know the SS of God so my best wishes that love to go on on this road thank you well as a joke I would like to point out that uh not only this date is a round date for locality but my all own personal career discovered uh thinking of this talk that it is an important day nonetheless date nonetheless today I
+
+00:03:33
+have absolutely nothing new to say no result I have to tell you only opinions and mostly they will be heretic opinions but maybe for the last part some of these heretic opinions already shared by somebody since long time in that case they will be bored especially okay I'll tell that at the at the right moment anyway this is the plan of the talk I will first talk of the plans scale which refers to the fate of locality and then I we talk something refers to the challenges namely massless particles I will be very brief on that
+
+00:04:11
+and the epr Einstein podski Ros and Paradox and the quantum the measurement and I think there is an interesting challenge there to be to be taken over okay for the fate of locality I think the Fate is the same as the Phenix bird not after 500 but maybe even after 50 years to be burned to a new birth yeah and uh the reason why I think it uh it has to be abandoned or reformulated or reinvented is the same reason why I believe that space time in the plank scale is quantum and not the classical manifold
+
+00:04:58
+namely and that's the reason why to abandon locality let's just think to the localization of an event which I describe um symbolically by the operation to on some Quantum state of our system yeah so the effect of localizing an event with the some uncertainties in SpaceTime will be to change your state from the state Omega some state to Omega yeah now this state is a Quantum State and it will have some energy momentum densities mean values which were Omega of T before and to Omega of tunu
+
+00:05:48
+after if you want really to claim that you localize your event with those uncertainties you have to demand that if this equation had no singularity is no closed traid surfaces before your measure there should be also no traid surface created by this new contribution to the to the energy momentum density due to the localization measurement which would trap your localized localization region inside otherwise for distant Observer no signals could come out and it would be an empty statement to say that certain is were hot you clim
+
+00:06:30
+yeah so this is a sort of a principle which limits the possible uncertainties yeah and uh to make this principle to a quantitative statement one should have to solve exactly this the semi classical equations which is uh plainly impossible so the best you can do is to uh solve some approximation and the best you can do is to take the linear approximation but also the are no good workable conditions to describe to prevent the formation of closed trapet surface that's also a very hard problem so the
+
+00:07:10
+best you can do is to use the linear approximation and use some primitive condition the Primitive condition we used in a work with the CLA and John Roberts 15 years ago uh is the condition that if you start with the a flat mosan space time you solve your equation you find some deviation of the metric from the flat metric this deviation should never become negative the z z component should never become negative if you think of it a moment this is exactly semi classically as the condition that the
+
+00:07:48
+photon cannot Escape because the total energy has to remain positive up to I mean taking only orders of magnitude of course because you get a one half rather than one from general relativity anyway if you use this condition and you tackle this problems in some uh simple free field models you end up with a Bound for the modules of the potential which is created of this form so in flat space time the in the vacuum rather would say you have the condition this five should be of modulus smaller than one and then
+
+00:08:27
+you have this should be bounded below by the order of one yeah uh more generally you would have to take in the linear approximation you have to take the G z0 due to toe omega as the sum in this linear approximation these two terms and the condition bound you would found would be these funny relations on which I will comment later but let's now take the case where you are in the vacuum then you have one on the right hand side yeah and then you want to implement this set relations with commutation relations
+
+00:09:03
+let me thisty relation just tell you that you cannot use uh c number or classical variables for the coordinates but you have to use operators which are based on commutation relations we should Implement exactly this unty relation with one here yeah okay this was done in this work 15 years ago and the quantum condition we found which are working perfectly for this purpose were rather simple you have to you you may suppose that the commutator is Central and you may suppose that this two tensor given
+
+00:09:41
+by the commutator contracted with itself is zero the only thing which has to be not zero is this funing variant which I take in the Square because otherwise it's a p pseudo scalar not a scalar yeah and then you get up with the model of quantum space time which exactly implements this uncertainty relations but which is completely invariant under the full one group yeah okay this is just Quantum condition some operators we would like rather a sister algebra which is the Quantum deformation due to this physical
+
+00:10:17
+reason of the continuous functions falling off at Infinity on R4 and then how do you get from this to Sister algebra well you first take this commutation relation in the vile form because you want to regular representation and then take the enveloping sister algebra the vi relations and the result after a bit of work is that this envelop exister algebra is just a a trivial continuous field of the algebra of compact operator separate space based on a manifold which is just defined by this same equation
+
+00:10:53
+when you put in the place of the commutator a generic real anti- symmetric to tensor c number yeah and then you get an equation for a manifold this manifold is Sigma it's just a a I mean a a quotient of the SL2 Toc by the diagonal okay now you get a model to which the uh an algebra to which the uh coordinate operators are affiliated in in a natural mathematical sense and which carries an action of the full one car Group which acts as a sh of the coordinates and important for us will be the center of the multiplier algebra
+
+00:11:39
+which is just the continuous BND function on this infinite mle Sigma yeah okay this coordinates Q will describe one event is the new geometrical basis to start on uh where you want to develop Quantum field Theory which takes into account some minimal effects of GRA ity in presence of quantum theory okay now if you want to consider more events you should take as usual in quantum mechanics tensor products of copies of this system but it is wiser to take the tensor product not over the C numbers but over this Center what does it mean
+
+00:12:19
+the commutator itself is Affiliated to this thing yeah so this means that you just stipulated the commutator is the same at all spots in the tensor product yeah with this Choice yeah you can consider the minimal ukian distance between two distinct events which is just given by this operator Su of the squares of the coordinates of QJ minus qk and you find out by a simple generalization of a computation we had in the first paper that this is bounded below by something of order one one here means of course in the absolute unit so
+
+00:12:57
+the distance one is the plank length okay so this is very interesting from the physical point of view because it gives you a relativistic model yeah where the minimal ukian distance which is not an invariant but is always bounded Below in all reference frames which contradicts some statement that you currently find in the literature the minimal distance is in conflict with relativity okay now this difference operator which enter in the distance can be interpret Ma ma matically as the a picture of the
+
+00:13:33
+differential the universal differential calculus this is not so is a this is a universal calculus which is not so Universal because you took this quotient module of the center first and second we stipulated that the differential of the identity is zero which is a sort of limitation but apart from this is quite a general calculus yeah and to work with this calculus is better to work with the the following algebra the this is the direct sum of all the tensor powers of e with itself as the Z modules but you
+
+00:14:05
+take it not only as a space But as an algebra with this funny tensor operator which you might well call the E by module tensor product because you see when these two factors touch you use not the tensor product but the product in the algebra e yeah this is the right algebra to work with if you want to compute the with the differential calculus and why is it so useful because this is a has two different algebraic structure it has the structure of a sister algebra which is just the direct sum of sister algebras if you complete
+
+00:14:39
+it in appropriate way and it has this the structure of star algebra which is appropriate for the differential calculus why do you need the two because if you want to evaluate uh measures of differential operators you have to take the norm in the sister algebra direct sum but when you compute algebra regulation have to take products in this algebra so uh I just uh mention briefly what you find with this algebra I said already that our condition tension product just mean that the differential of the commutator is zero yeah and the
+
+00:15:17
+differential of the Q is just the this the difference of the coordinates of two distinct events yeah then as I said before if you look at the a minimal distance ukian distance you can express it actually there is a mistake no this that's all right you can say that this sum of modules Square in the sension is bounded below by four yeah but then you can go on from distance to area and volumes and this is quite interesting because if you compute the area operators space space area or the time space area you find the bounded below by
+
+00:16:00
+one always in absolute units then there's something more funny oh first of all why did they put here the modulus except the distance all the other operator area and volume operators are not self adjoined operator they're only normal operator it's not even clear why they are normal but certain is clear why they are not going to be S jointed think of the volume of a solid if you permute two uh vertices mathematically this means that you change the order of some operator which do not commute and then there will be an
+
+00:16:35
+additional term which is I time something which the commutator which is SK adjoint yeah so the operator itself cannot be self adjoined right except the case where you cannot permute anything you have just one one factor yeah what is less obvious and actually is I don't know any priority reason why all the operator we write down turn out to be normal operators yeah so they commute with their Joy or if you want the form a plus I a b commuting s a joint operator why should they commute is not entirely
+
+00:17:07
+clear anyway if you go over from the area to the three volume you find something is slightly surprising the spectrum of this operator which is a normal operator is the whole complex plane but if you go to the four volume you find the interesting Spectrum which is uh well uh separated by quantity of order one absolute unit from the origin this means that the minimal volume is of order one in plant units but the Spectrum the rest of the spectrum is rather complicated as you can see here from this formula all these results that
+
+00:17:46
+I mention these slides are an unpublished yet unpublished work with Cloud fren Hager which we hope be be I should say yet Unwritten it's written down but not written up in the cison language yeah but it will be written soon I hope yeah now this is strange but not surprising because if you think a moment of our uncertainty relation you see that by a very naive intuitive argument you you have to expect exactly this because this is just expression that the minimal uncertainty times the maximal certainty
+
+00:18:25
+has to be in space has to be of order one yeah and this gives you this are bound but if you take the three coordinates you forget about time three space coordinates you can very well make the set that is in two very small and leave the third as large as the product with the common value of the other is of other one this means that the volume can be as small as you like but if you take into account this the time coordinates then the product of the time uncertainty times the minimum space uncertainty has
+
+00:18:57
+again to be V one so the of the fourties is again of the other one this explains why the volume has this Gap this four volume has this Gap okay so I want say more about this is just a hint how the quantum space time might give you quite an interesting geometrical structure who has to be uh explored but of course this was just geometry you want Quantum fi Theory well you we indicated already in our first paper mention how to do Quantum field Theory you define a field on Quantum space time by the usual
+
+00:19:29
+formula you take the anti transform it's F transform or the other way around but in One Direction you use the normal F trans and going back you use the V operators and this gives you for the for prescription of evaluating a function of this non commutative quantity yeah which works for the shreding As qmp and works here too yeah okay so this gives you a field operators which are affiliated to tensor product of some algebra fields and to the algebra Quantum space time and this is the natural thing to look at
+
+00:20:04
+because just the generalization of the tens product of a which is C4 which just a different way of writing the continuous functions vanish in Infinity from R4 to a yeah so this tensor product is just the precise noncommutative notion on functions on the quantum space time and of course this is not the real operator you have to take the usual provisors that we know from white1 C okay but once you have this you can again Define local algebras even if you don't have the minkovski space local algebras are defined as we heard already
+
+00:20:40
+this morning as a map which sends nice regions in space time to for algebras here you have to replace the nice region by its characteristic function the characteristic function is a projection in some algebra function which is not the continuous function of course but it's a Boral completion if your region was nice yeah it's and you have to do the same you take some voral completion of your algebra you take in the sense of G Pon you take the projections in this algebra and you take any s join
+
+00:21:13
+projection here inside and to that you associate the forom algebra how you just take the field operators evaluate qu space time and you evaluate them on this uh condition expectation which takes aate only on the E part yeah and then you get your your field evaluated at estate which is the generalization of a point yeah and then you take all states which are supported by E yeah and then you generate a phenomal algebra these are the local algebra from Quantum space time this is a nice notion which has not been
+
+00:21:49
+exploited much excep in some again unpublished work with CLA where we studied a lot of ways to to recover the classical algebras in the classical limit was a bit complicated so I will not tell anything on that we just give you a striking example if you take a fre firery field and you take the simplest projection you might think of just the spectral projection of this operator ukian square of your coordinates uh Associated to the minimum of the spectrum so you just pick this discrete point out yeah it's not the disc point
+
+00:22:30
+this minimum out yeah and then you evaluate the the local algebra with that it answer out to be fin a dimensional just because you have just one state left with that property it's not exactly one state because you have to take to account to the center but the function you get with this Omega of Q is just one one specific function just a gotion okay but if you take this local algebra you triy it a little bit in space time with a small neighborhood of the of the origin you generate a phenomenal algebra
+
+00:23:05
+with this translates you get an irreducible algebra so you have this striking Behavior yeah okay and U one other thing to be mentioned on this local algebra the case of free Fields this net of forom algebra Associated to Quantum space time is fully covariant yeah but there is nothing like local commutativity because the very notion of space like separation loses its meaning and it will lose much more its meaning if you introduce interactions so in the case of just fre Fields you could still have some meaning special
+
+00:23:45
+localization on wedges for special values of the central variables but for it's all going to be lost in interactions on top of that if you compute the commutation relation between Fields if evaluated at optimal local optimally localized stat when the center one moves away from the other in space Direction you find the commutator which is not zero space like Direction but drop drops out like a gion so the H locality is lost what about interactions you can introduce interaction densities for instance for a
+
+00:24:22
+polom interaction by generalizing the usual formula but again you get the this is equivalent to an from the point of view of scattering Theory to a an ordinary non local interaction on classical space MOSI space so locality is lost in all senses and also you meetting on top of that problems with Len kovarian which are not problems starting from the geometry but from the interaction yeah it's the lack of a proper formulation of interaction which preserves lence in variance there is a something subtly you could do
+
+00:25:01
+that we did with dorota BS CL and gell published back in the 2003 to redefine the qu the vi product as the quantum VI product when you where you take into account that if you take the vi ordinary Vic product at different independent events you are not allowed them to put QJ minor q k equal to zero because as I told you earlier these are quantum variables which have a non non trivia computation relations with the between the different components and the ukian square is bounded below by something order one so I cannot put it
+
+00:25:44
+equal to zero so the best you can do is to evaluate the state on the differences on the algebra gener by the differences which correspond to the lowest value of sum of QJ minus qk mu squ sum over mu yeah and if you do this you can do this this is given by an appropriate conditional expectation that we studied in that paper yeah and you find out a new definition of the density which of the hamiltonian uh D density which in the GMA laow expansions give you perturbative city with no ultraviolet divergences left no Ultra left at all
+
+00:26:25
+there is a price you pay that you have to take an anabatic off in time which is very hard to remove and um of course there's a fter priz that in order to give a physical meaning to this you cannot avoid the renormalization renormalization has still to be done but has to be a finite renormalization yeah done in such a way that when you take the limit with Lambda plank is becomes negligible gives you back exactly the ordinary r ization expansion normalized expansion and this is also a hard problem has not been
+
+00:27:04
+seriously tackled so far okay now I would like to come back very shortly before passing over to the comment I made the beginning the beginning I made that if you consider the effect of some background Quantum State not curved space time but you have a Quantum space or minkovski space yeah which has his own energy momentum density it will give rise in a semil classical approximation to some uh field which is the solution of of the Einstein equation yeah and then you have to take account of that as a background and then
+
+00:27:45
+if you take that background in account you see immediately as a as a scenario which results from that that you have to expect that the commutator between the coordinates cannot be a geomet iCal entity taken from outside but it has to be in turn a function of the metric tensor then it has to be a function of the fields now this scenario is really terrific I would like you to consider for a moment this situation because these are no longer condition that you can put beforehand but become equation
+
+00:28:18
+of motions which are coupled to the Einstein equation if Einstein equations remain as such in the quantum domain which we don't really know and to the field equations which are contained the metric of course through the covariant derivatives in there so all this is a set a terrific set of coupled equations and this scenario would show something which I do believe rather firmly also I'm far from knowing any specific form for this gadget yeah that not only geometry becomes Dynamics but which is the case in classical
+
+00:28:55
+generativity but in quantum generativity algebra has to become Dynamics yeah in particular if you believe for a second in theistic estimates I proposed before then cty relation would have this funny term g0000 inverse on the right or something more civilized which has the same motivations yeah anyway out of this suggestion I just take one indication that what's here on the becomes Divergent near singularities I think this is the part of the scenario which is uh has to be expected and if you take this particular
+
+00:29:39
+formula just to get an idea what happens you see that its effect is of changing the plank length to the plank length divided by the square root of g0 0 which means this is exactly what was standing on the right in those relation has to be as the range of a caal effects due to the quantum natural gravity so this scenario would tell you that near singularities the range of a causality is not the plank lines but something which diverges and this is not bad at all because this would tell you a deep
+
+00:30:20
+reason why uh there is there was equilibrium in the cosmic M microwave background yeah and the the I mean the equilibrium problem disappears you don't need inflation to explain the equilibrium because near the the initial Singularity the equilibrium was established instantaneously yeah because of this effect okay but this is a scenario which has to be uh understood I would say that uh to in my point of view this is the the most interesting direction of future developments but in which no suanes step has been taken
+
+00:31:00
+anyway one way or another which is clear by this short discussion is that the locality is lost is it lost forever in all form well I believe that like like the phoenix bird locality will be born again in a new form after a marvelous song yeah and but we don't we have no idea which new form might be but what we expect we you we ought to expect that there is some deep form of locality that we don't yet know which is exact not just an asymptotic you can always formulate in asymptotic condition but
+
+00:31:39
+that gives you nothing it's useless you need a sharp mathematical statement I believe that there is such a sharp M mathematical statement which expresses locality at the plank scale and which becomes ordinary locality in the regime where the plank distance can be neglected but we have no idea what might be there is one possible vague hint that uh I would like to mention if you think of ordinary locality you might say why interacting Fields obey locality well the free field OB Bas locality but
+
+00:32:17
+this does not mean much physically yeah and the fact that the locality of the free field is preserv is due to the fact that interactions are local yeah and why the interactions are local there's a deep reason that's gaug inv variance combined with minimal coupling so one might hope that gauging variance combined with minimal cing can be formulated in a proper way in the noncommutative setting and be used as a form as a replacement locality but there's a big butt here we don't know even in MOSI space how to formulate
+
+00:32:57
+local gauging variance in terms of local observables that was the problem that Rudolph mentioned this morning and there are of course these nice results that CL explained us but in the perturbative setting I don't know of any sharp statement which is not perturbative which expresses the mathematical phase of local gauging variance in terms of local observables that's if you know something please tell me okay so this is a a very bad problem and it tells you that uh what rudol said this morning is he
+
+00:33:39
+kept telling me in the last 40 years at least yeah that this was the main problem of quantum physio you to understand local gauges in algebraic terms it pops out again even in the plank regime as a really fundamental problem okay so let let me say two brief words on chapter 2 local Quantum is extremely successful if you assume that you're dealing with the theory who are no massless particles if there are massless particles around you meet problems now are there massless particles around now the neutrino has
+
+00:34:19
+left the scene since a decade or so yeah now it is massive they are massive okay but there are still two candidates dates the photon exactly and the graviton the best estimate I know dates a few monthes it comes from a paper by gold Hub NATO which is in the web in March 2009 I owe this reference to Nikos momat who gave me few weeks ago yeah and uh I can show you the paper and you have this estimate the upper limit of the photon mass is 10 Theus 18 electron Vols and for the gra of mass is 10us 24 electron
+
+00:35:02
+volt so we can well believe that they are massless yeah if you are interested in details you can see this paper which looks like a very pleasant paper to read by the way anyway uh so there are many problems we meet with mless particle especially with electrodynamics it could be that the algebraic Theory super selection sector statistic extends yeah but this does not mean that we have understood the local gauge transformations of course as far as you can see the there there something which is very nice in the classical domain it
+
+00:35:44
+becomes intractable in the quantum domain and this is precisely the uh the concept of local gaug invance it becomes intractable in the algebraic Quantum domain when you want you want to keep the positive ity of probabilities okay one step is to go to indefinite HB space all and we know all that becomes very complicated we want to keep the discussion with observables on positive metric it become local G Theory seems to be intractable and despite the fact that physically they seem to be the real key
+
+00:36:17
+to understanding nature if you think of the standard model but there's something very similar with general relativity if you think of the general coordina variance in general relativity which is the key point of the formulation of general relativity well mathematically it poses very similar problems but also physically myself I will consider this doubtful because it's based on a on a ganen experiment which is the gank experiment of the Einstein's falling lift this is a wonderful classical idea
+
+00:36:52
+but in the quantum world if the lift Becomes of the size of the plank scale our poor experimental will not have much possibility of doing experiment inside so it this suggest that the principle might turn to something completely different at the blank scale but we don't know of course okay I will unfortunately I don't have anything more to say on chapter two now we will come to chapter three Nam the measurement process I think there too there is a a challenge to be taken for local the principle of locality let's uh if you
+
+00:37:28
+moment very shortly the measurement process in the classical formulation we know that we have two time types of uh change on States the shredding Evolution which is irreversible and unitary and the changement when you measure a projection an operator say with finite Spectrum yeah then the a state Omega change a pure State EV change to a mixture by this famous formula yeah so you have this drastic change pure to mixture and if you Rec it if one of the specific values is recorded you have the phenomenon of reduction we Pockets the
+
+00:38:10
+other components are suppressed instantaneously over the whole space and this suggests something non local in fact the Einstein Podolski and Rosen Paradox was exactly based on this I will very fast review that for you if you have say put it in the language of local algebras if you consider two space like separated regions which are very well spacely separated then there will be type one factors which include one and the other which still commute with one another so these two type of factors will generate
+
+00:38:46
+a tensor product in the HB space now if you this comes from the split property if you take your observables one in the first region the other in the second region region then you have uh your vectors uh in this H spaces where and one and two leaves which are uh I vectors of those projections and then in the tensor product you can construct if you like this entangled Vector state but N1 and N2 generate a subalgebra your qu local algebra so you might well take this as an entangle State vector over the whole
+
+00:39:29
+quasilocal algebra which is entangled when it is restricted to this algebra okay now say if one is here now and the two is on Andromeda now you measure EJ here now you find the value the J's value and you say haha now on Andromeda my My Pal is measuring B and he founds also the J value the corresponding operator which this is Einstein podolsk Heros and Paradox which is a reformulation at least which of course sounds absurd yeah and this sounds like a sort of a very serious non locality of course the most common view is
+
+00:40:13
+that this effect is based on an axium of quantum mechanics the axium that when you measure an operator you can do that instantaneously and if you record one particular value the state is reduced instantaneously over the whole Space to that component yeah this is an action and the uh the other uh point is locality and people say they're not in contrast because you cannot use Einstein Podolski Rosen even to transmit information you cannot do use it for anything but still it exists I will present to you another heretic view
+
+00:40:54
+besides the heretic view on the distance of extension of a cal effects in quantum gravity which is that the statement is not true my statement which might be not new at all is that Einstein P phenomenon does not exist the reason is that uh the measurement process that I describe for you has in my view has not to be taken literally the that descriptions is only a very naive uh limit where you you took the following limits the duration of the measurement process is zero the number of molecules which which
+
+00:41:41
+are the making up the amplification part of your apparatus is infinite and the volume occupied by the microscopic part of your aparatus is infinite or if you take these three limits you may say what I said but if you take none of these limits your measurement will take place here your amplification aparat will be here in a larger region and the effect of the whole operation will extend in space and time propagating with the speed of light this is the picture okay uh how much time do I have still class
+
+00:42:19
+20 minutes okay that will be quite enough thank you very much so I I started telling you that there is this big difference between the time Evolution and the reduction we pockets in the measuring process yeah the first step to fill up this Gap has been made in a very very nice way by F noyman just for a change he said how you can reduce a way to reduce the process two to process one by considering the states of the composed system The observed systems and the apparatus yeah then you have a HB space for both and you have a tensor
+
+00:43:01
+product of the two HB space for the compos system yeah then you have to look at the total hamiltonian which will be the hamiltonian of the system the hamiltonian of the apparatus and the interaction who determines the measure and the idea of a noral was that it is enough to look at the evolution between zero and T A iite Time and this V will be responsible for the full measurement in this finite interval but T will be so short that you can even neglect these two parts because the change in the normal evolution of the
+
+00:43:39
+observable itself and the observables Theus is uh not important yeah okay then the evolution of the time interval is given just to by the shredding operator e to the I VT and then comes the crucial point in the for noral discussion this Evolution has to act in the following way there is a distinguished State Vector for the apparatus which is gives you the state ready to measure a yeah so your composed system is origin some states for the system itself composed with the state ready to measure a of the apparatus and the
+
+00:44:24
+composed System state is described by the tensor product if the state you start with of the system was already in value of your projection operator EJ then under this Evolution the first Factor does not change and the second Factor becomes some State Side J which means that the apparatus tells you I read the J's value yeah so that's the position of a counter or whatever yeah a click in a in a counter Etc and of course the states J are orthogonal to one another now if you apply this by linearity to
+
+00:45:06
+any state you get of course this uh uh result you get just the sum of the projections of along EJ T of which Chang into the sum of the project of EJ T J remember the j a mutually orthogonal now if you take this Vector it is of course what happened this was shreding Evolution change a vector to a vector by unit Evolution but there is something subtle here that the original Vector was a product vector and the final Vector is no longer product Vector but in the language which is so much uh that most
+
+00:45:48
+people like so much is an entangle State yeah this means that if you take this entangle state vector and you evaluate the ER mean value of an observable alone without putting anything on the second side then if you develop your scalar product you get the scalar product sjm K which is a Delta and then you get back your mixture this is just the well-known fact to anybody who study rudiments of phom algebras yeah that the ER normal state of B ofh adjust the vector state of b ofh t or one if you take one big
+
+00:46:30
+enough yeah on infinite Dimension space yeah okay but now at this point we just shifted the problem bit further because for Norman now asks how do we know that the J value has been read and why do we forget about observables of the apparatus and he said this two steps are taken because you have three terms the system the apparatus but then he wonder where does the apparatus end the apparatus will have some microscopic part then some amplification this amplification will hit my eye my ears whatever where do I put the cut he said
+
+00:47:10
+well the cut is the consciousness of the Observer yeah and this is the weak point yeah because he said it is the consciousness of the Observer who chooses something and this determines the choice of one of these values and the passage from the uh pure state to the mixture Okay so this was not very uh very much appreciated by the physics Community for a long time there were lots of work I don't know maybe Steve knows the story very well I don't know the whole story I don't know what to me
+
+00:47:41
+is a milestone also I admit I never succeeded to read the original paper but the myone to me is a paper by three Italians the longer prosperity in 1962 I guess yeah which h proposed the differ thing proposed the effect of statistical mechanics has to be taken into account namely they propos that the threefold de composition Forman is not that one but another one system microscopic part of the apparatus plus the macroscopic part of the apparatus which has the role of amplifying the result of the measurements to our scale
+
+00:48:23
+yeah so this microscopic part will will H be done by by a finite but enormously large number of particles yeah then you have to take the tensor part of the three HB space yeah you have to take into account another interaction besides the previous one which is interaction between the microscopic and the macroscopic part which gives rise to the amplification but this is my own presentation as I said I did not read the original paper but uh the important point is that there is no interaction between
+
+00:48:58
+microscopic part and the system why think of an example you want to measure the position of a charge particle or rather better you want to measure some charge density operator in Quantum f is me over a small volume with a test function this small volume is the volume occupied by a molecule in the liquid of a bubble chamber you take you think of a single molecule yeah now this molecule can be in two states non ionized or ionized you forget the rest this is no simplification yeah if the molecule is not ionized your system read
+
+00:49:40
+nothing the particle is not here the charge is zero whatever yeah if the molecule gets ionized then your Cosmic aray passes away very quickly but after it passes this ionized molecule give rise to the formation of a bubble because it's a perturbation your metastable liquid which was a liquid artificial but wanted to be a gas then he he see it seizes this occasion to become a gas and the bubble is formed this is an irreversible process yeah it takes place in a little bubble but it's a genuinely irreversable process which
+
+00:50:17
+has nothing to do any longer with your observed particle which has passed away so this is just an interaction between the microscopic part the molecule and the microscopic part which is the surrounding liquid okay now note also an important point that we don't have to make any transition from classical to Quantum you treat this microscopic part also Quantum mechanically but the point is that you have a dependence upon the number of particles yeah you have that after the uh measurement your state if the
+
+00:50:57
+the system was in the already I state of EJ your state will be tens product of EJ with P J the microscopic part read the value J T with P J Prime of n which is the state amplif of microscopic part of apparatus amplification of the fact that this microscop states in the state J yeah and as n this is the central point of D long Prosperity as n tends to Infinity the state induced by this Vector S Prime J on whatever algebra you had yeah will tend to states of different uh phases yeah which are disjoint representations yeah so the
+
+00:51:48
+phases will be completely lost it will be the result will be a mixture because these states the limiting states are one liquid and the other gas yeah of an infinite system because you approximated the number of components by Infinity yeah you took the thermodynamic limit if you do not take the limit there will be certainly um how you say interference terms but it be so small that it will be absolutely impossible to measure them so no information of the phases can be retrieved yeah I mean to retrieve that
+
+00:52:23
+information would be the same as asking yourself how long do I have to sit in this room in order that all the molecules of this gas pack them together in a corner and we just suffocate because there's no air it may happen yeah but don't be afraid you can if you want to wait for that event you have to wait several times the age of the universe yeah so we are pretty safe but the same thing would happen for the measurement yeah this is to me a very convincing explanation of the ER decoherence now I want to come to the
+
+00:53:00
+main point yeah of of this talk uh this is always a b deance by the way we made already this approximation that is much smaller than than one yeah and then we made also this approximation n goes to Infinity to get the transition from Pure to mixed yeah in practice of course T will not be much smaller than one but will be infinite I think we discussed that with rudol very long ago in Rome yeah and we decided that measurement Pro process was something impossible to think exactly because it always based on
+
+00:53:37
+a scattering process what the the infinitesimal process is really always a cutting process and as such it would mathematically should require Evolution from minus infinity to Infinity not to Zer to T yeah so this is a very hard very sharp approximation yeah but the the main point is another yeah so uh and before I mention that I want to mention the all what I said about the bubble chamber can be repeated for cation counters for the modern descendants of the G counters name multiwire drift chamber counters all that they all work
+
+00:54:17
+in the same way you have an irreversible process which is luned by some microscopic effect which is the detection of the particle or whatever yeah anyway the main point is the following I said that you have these three hilber spaces but this is all right in quantum mechanics of Finly many particles now if you are in Quantum phys you don't have three you have one you have one h space which describes all possible situation describes your your system which is a specific Quantum state of the fields or you have to add some
+
+00:54:52
+with some creation operator the microscopic part of your operators or with a huge creation operator a product of 10 to the 23 field creators whatever you have to add to that in the same h space Also the amplifying part everything lives in the same h space as a consequence the time evolution is not something you can invent as in the model for nor but this one is given once for all yeah but even more important than that your microscopic part of the measuring operators and also your macroscopic part have to be somewhere
+
+00:55:34
+there cannot be some Global thing uh floating in there think for a moment of the forom picture you can describe the addition to a of the microscopic part as an isometry which sends P to p and of course if you add also the microscopy part you have a similar isometry to add more the time evolution in the approximate sense I discussed before is described by sending this isometry in the heisen B picture when you compose it with EJ which ought to commute with it of course in the previous picture to WJ EJ where
+
+00:56:16
+WJ is another isomet again commuting with EJ actually all observables which sends P to J now in quantum Theory these IET should be elements of the quas local algebra and as such they cannot commute with with all observables actually I said commuter should have said intertwin it they intertwin observable into differentation if there were interwin for the observ for all observ would be just a multiple identity yeah and the vacuum would be not change which is not possible so in a brief this W and WJ
+
+00:56:56
+have to be somewhere and now we come close to a point that we always kept in a closed in a in a shelf and never discuss that in quantum fys theory I would like to say that quoting this that Ang P get in their their local Quant people which are not too young will know this quotation said you know it if you are 150 years old yeah because that's the beginning of the Manifest of marks and Angels yeah anyway what is this uh this ghost this ghost is what is an operational definition of local observables we never discussed that what
+
+00:57:39
+does it mean operationally to say that a is localized in O can you invent a a a process which measures something which is localized in very tiny region the best I can think is of a region of order a few uh compon wavelengths of a molecule where I take creation operator of a nonionized molecule applied to the vacuum and this is my system if this creation operator is very well localized this is the creation of the measuring operator for the position in the sense I said yeah this is the best I can think
+
+00:58:12
+of anyway this W and WJ have to be somewhere and if you want that your observ were localized in O they it's reasonable to ask they in the same region at least in microscopic part of course the microscopic part can be localized some else but we also decided that the time needed for the evolution to which performs the measurement is very small so if you just change o by a slightly larger region you can also say that also the time evolved the alpha T of w is in the same algebra yeah now the effect of the
+
+00:58:51
+statement is rather dramatic yeah uh W is the isometry which creates uh acting on the state Vector side state of the system the state system inside plus the microscopic part of the measuring apparat so it will be in practice for instance if your molecule was just one well it will not be hydrogen it will be some more complicated gas well it will be just the creation operator the appropriate barion number and zero charge of the molecule strictly localized in a small region of course if the molecule is ionized it
+
+00:59:28
+will be no longer strictly localized because the welln problem localization of charges in quantum theory but it will be approximately localized and up to epsilons if you use the cluster property what I'm going to say will still remain unchange yeah anyway so you have this picture yeah that uh uh and this is what I just said in words yeah this is exactly the situation and I also warn here with this curly sign of dangerous turn that it is not stly localized when it is charged but anyway okay so let me jump the what is
+
+01:00:08
+not essential the main conclusion is that W is in O and also Alpha T of w is in O which means that if you take now your state Omega whatever it was and you measure a this observable localized in O with finite Spectrum Spectra projection was were EJ Etc yeah then the state with the microscopic part of the uh apparatus added before or after the measurement we all look these three states will all look the same when restricted to observables which are space separated because W will commute with any
+
+01:00:48
+observable which is space separated and then the effect will be nothing yeah so the effect of the measurement will only Pro propagate from the region o in the Cal shadow of o yeah and if you are out of that Cal Shadow you will not know that that the other projection has been measured that this projection has been measured you will see no effect what does this mean this means that uh let me see do I have to show this uh maybe not because I have little time oh and also I could add to this statement that the same will happen if
+
+01:01:25
+you also add the microscopic part the amplification part provided you go faster away because the microscopic part will occupy some finite volume in practice it will go from few microns to few centimet yeah but it could be also the size of the laboratory but certain if you think of the Ein of the epr Paradox if you sit in Andromeda all these regions I mean your instrument your laborator the S will be a point yeah so it's said that the size that would not matter and the same will if you take the composition of these two
+
+01:01:58
+isometries creation of the microscopic part plus the creation of the microscopic part yeah and then the state the resulting state if you go really very far in space Direction you always look the same what does this mean this means that if you have the classical Epi Arrangement yeah you have your pairs of rangle photons being sent halfway between here and Andromeda 1 million and something years ago yeah it arrives now one arrives now here Alice measures it she finds some polarization left hand or right handed
+
+01:02:34
+yeah and Bob is on the on the and that's the same experiment and Alice and Bob we find always a super position independently whether the other one does or not experiment until one or two Waits 2 million and a half years until he enters or she enters the coal shadow of the other laboratory in that case he he or she will see the correlations so this is very tic yeah but I must say two things the first is that this is probably not new at all because at least the conclusions were already proposed by
+
+01:03:16
+hellan Crow more than 30 years ago the beginning of the 70s and I'm told that Rudolf has important comments in the second edition of his book do not possess yeah on the measurement process which might even contain the same point so I was it was very risky to expose this without having gone and seen first the second edition of your book yeah on the other side one must compare with experiments because there this marvelous experiments of aspect where he's able in his laboratory to deal with space like
+
+01:03:53
+separated events but this very smart technique or using polarizers which change so fast in time that they change faster than the time one Photon employs to reach one side from one side to the other of the instrument yeah but his photons travel in wave guides these wave guides Define a Lauren system which is there I mean to believe in that result I will wait until aspect does the same experiment to satellites and the photon travel in the vacuum and they are really disjoint uh measurement but uh I
+
+01:04:32
+must say that as all atian yeah once I reached this conclusion I found for the first time in peace with myself I thought that this this corner of quantum mechanics was something which always Disturbed me deeply I could not believe in the pr epr setting but I could not understand what was the wrong point to me this is a reasonable picture I'm quite satisfied with it probably I'm not new as most politicians they don't say new things but all artian have a common feature once they reach they believed
+
+01:05:09
+they keep it firmly you know the last words that jordano Bruno was allowed to say was I'll die as a martyr and willingly and I'm sure that there is nothing in my thoughts I should regret about and uh this is the reason why he was sent to fire with the Iron Mask in such a way he not speak to the people because they did not want him to repeat these things yeah anyway in the same way now I in peace with my Consciousness until the aspect experiment I understand it well say because it might well be if I study it
+
+01:05:55
+more carefully or somebody explains to me I will have to to take it back but or new experiments are done but they would like to stress in conclusion this points the usual picture is the resulting of these three limits yeah you have to take the volume occupied by your instrument going to the whole space time the time of the interaction going to zero and the number of particles according to G to to The PRP longer go to infinity and I it's even doubtful that you can take these three limits together because they somehow in
+
+01:06:34
+Conflict but I will not enter in this detail my point is that these three limits are a reasonable picture if you deal with non relativistic quantum mechanics with the finite number of particles that it's quite good so I'm not questioning at all quantum mechanics so quantum mechanics is to me the most sacred realm of our knowledge so far yeah I'm just questioning the interpretation of the measuring process which in my view is pushed too far beyond those limits if you forget about these limits
+
+01:07:05
+you meet the paradoxes actually the fact that this limit is needed already appear long ago in the work of araki yanaz where they pointed out that additivity of angular momentum is in contradiction with the possibility of measuring the classical sense okay I should end just adding some references uh to what I said I think the first important reference is the prosperan loer then there's this paper of H CR which does not seem to use my picture it's not identical but they propose the conclusions they propose the
+
+01:07:44
+same conclusions yeah then there are some paper by aronov and other people then there's the paper of SW who takes up the point of the long and makes some computation about the exact the cerence only in the limit and goes to infinity and the paper wrote here for curiosity the Free Will CR Conway there some paper on stochastic uh quantum mechanics and measurement process but also should mention about the existence of I I mentioned this point earlier on that the existence of anang state is not at all in
+
+01:08:20
+contradiction with locality because in Quantum fys you can construct very easily in tangle St and this can be found in much more detail in the papers of Sam Verner and ver Verner andol which I quoted here and uh so I think I passed largely my time I don't know but let me just end showing you a picture of our father oh thank you for this beautiful expose you did go over time a little so let's have very few and very quick questions only yes yeah I had just a short comment on Serio's beautiful slide
+
+01:09:08
+about light in our book mathematical foundations of Gage theories written with professor javani baruchi of fenzi we begin with a poem with title in the beginning the first stanza is then God said let there be gauge theories see and there was light clear and bright followed by particles fundamental or other very nice right I would like to comment on those commun variables so so usually those arguments implicitly assume existence of quantum gravity and interaction of gravitational field so instead we can
+
+01:09:50
+just we have on the market some models of qual gravity some of them are simplified some of them take into account all the degrees of freedom although they may be not physical because assume existence of some M Fields C matter which may physical from the mathematical point of view there are models of quantum gravity and we can just check if the quantum structure defined by the operator of gravitational fi in those models agrees with our teristic expectations or not and what and uh did you do that what's the result
+
+01:10:28
+no because so please okay I if you want to do that I'm interested in the result but I would tell you that if you don't find this I will say that your mother is wrong let's leave it on that now so according to Hing we will resum uh 20 to 4 so 10 minutes past schedule but let thank thank thank you thank you for not having interrupt I did not realize I not realize so much to say you know yes
+

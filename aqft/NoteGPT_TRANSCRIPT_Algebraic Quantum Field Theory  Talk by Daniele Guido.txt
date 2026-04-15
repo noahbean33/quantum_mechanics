@@ -1,0 +1,180 @@
+00:00:00
+you will see s name grov perhaps you know that m grov is the Russian mathematician who got the Aro price this year for his contributions to differential geometry and one of his contributions are so called h of cor of limits and you will show how it is related to Quantum Fe the please thank you thank you very much uh so okay first of all let me thank the organizers of this conference to give me the opportunity to to talk here and um also because I mean the invitation to talk here was a good motivation to try to to finish this work
+
+00:00:51
+in time so it's um as you see it's um it's a joint work with hening bosselman and Luca suano um my point is try to describe the relation between uh Quantum Grom ofor limits and scaling limits in Quantum field Theory um more precisely to give um to the scale limits of buol and f um a more um m mathematical description in terms of limits in in a suitable metric space um this was exactly the point of Riel when he introduced the so-called Quantum gr F of metric tried to describe the distance between two spaces for
+
+00:01:45
+example to sister algebras and to to study convergence with respect to this metric um so let me first introduce what the quantum metric space and the corresponding Quantum gr f distance is according to Mark reel um this is a short bibliography uh there are some papers by Mark reld when where he introduced all these Notions and then uh some papers by David K and Han Fang Lee two uh former students of Riel uh David care introduced the so-call matricial quantum ground F of distance and hang Le started
+
+00:02:32
+in particular the consequences of death for sister algebras there is also a paper of um me in collaboration with Tomaso Isola in which he also studied some uh connections of this metric with the the problem of completeness for cisar algebras um originally the the notion uh of mar reel refer to order unit spaces um according to um basic results of cison uh an order unit space is the same as a space of a fine real valued functions on a compact convex Set uh the order structure is then simply the point-wise order of functions the norm
+
+00:03:14
+is the usual subn norm and the unit is simply the constant function equal to one um then um liip seminorm on such a order unit Space X is a densely defined seminorm uh with these two properties first the L vanishes only on the multiples of the identity and second that if you take the elements with Norm with bounded norm and bounded lip Norm you get something which is Norm compact uh such an object was called Quantum metric Space by Mark riell and uh the an important observation is that the lip seminorm induces a Distance on
+
+00:04:05
+the states so you simply Define the distance between two states as the supremum of the the difference on an element X and the supremum being taken over all elements of Norm less than one um ah okay of course there are always errors in the slides uh this is not the norm this should be the lip um seminorm uh um in this way um DL is a distance which induces the W star topology on all bounded sets so in particular on the states of this order unit space uh of course this is a noncommutative version on what you
+
+00:04:46
+expect on functions on spaces so the lip Norm is the usual lip shits Norm on on functions and the corresponding distance is simply the uh what you get when you pass from distance is from a distance to between points to distances between measures in this case States um using this um notion uh refel defined a distance between order unit spaces um so once you have a Quantum pair of quantum metric spaces so order unit spaces with lip Norms uh you consider the family of all leap Norms on the direct sum which indu uh
+
+00:05:30
+respectively the the lip Norm LX on X and L Y on Y and uh Define the quantum gram of of distance between X and Y as the infimum over all this uh lip Norms of the houseo distance of the states over X and the states over y um embedded in in the states over s di sum of Y um so it is essentially the same as taking the Grom of distance between S ofx and S of Y but instead of taking all possible metric embeddings you only take those embeddings in which the the distance is comes from ellipse seminorm um this implies that once you have um
+
+00:06:22
+distance zero then this is actually an isomorphism between the corresponding or Unis spaces so in particular the the isometry becomes linear so this is the theorem of refill that uh this is first of all a distance on order unit spaces and also it is a complete distance so whenever you get a sequence of uh order unit spaces it's it's convergent to an order unit space um okay then the second step is to pass from order unit spaces to Sister algebra so of course the selfadjoint part of a sister algebra is in a simple way in
+
+00:07:05
+order unit space you have an ordered unit Norm um but if two um cister algebras are isomorphic as or uni spaces this doesn't mean in general that they are isomorphic assist algebras so one should modify a bit the distance in order to get a distance between sister algebras this was mainly due to David care um for cister algebra is enough to consider only 2 by two matrices uh so the the D2 Quantum gr F of distance between A and B will be defined as the infimum over lip seminorms of the house distance between
+
+00:07:48
+the two states over a and the two states over ah there should be a b of course in the second Point uh well by S2 of a I mean the units are completely positive maps from a to the 2x2 matrices over C and um and the distance on on two such unit completely positive uh Maps is defined um as here misprint the the one misprint is that the second a should be a b of course is this yes um I'm sorry yes that's right that's right thank you it's already the same mistake in the previous slide but
+
+00:08:43
+okay um so the the of care is that the this D2 Quantum is indeed a Distance on the space of lip algebra's modulo isomerisms um so this is a way to to modify the quantum fdor in order to to get the distance between sister algebras um let me note that this distance is not complete on sister algebra so in general it is not true that if you have a sequence Co sequence of cister algebra you get a limit as this is algebra and uh essentially this is due to the fact that the lip Norm is not multiplicative
+
+00:09:24
+in a sense so that if you have a bound on L of X and L of Y this does not give any bound on L of XY um however if you assume uh soal liess properties on L so that L of a is lower or equal than the norm of a Time L of B plus L of a Time the norm of B then uh sequence of um lip Norm sister algebras with such a property uh is converging to a sister algebra so if you recover in a sense some kind of multiplicativity uh then you get the The Limited assist algebra and this property Labis property is for example satisfied
+
+00:10:05
+whenever the lip Norm is simply the norm of the commutator with a given operator for example the the con dir operator in noncommutative Geometry um in general one can extend these Notions to uh operator systems uh replace the the distance with a complete distance and and then you get a complete space so in general a kosi distance a kosi sequence would will converge to an operator system not necessarily to aister algebra only if you add some kind of property like the one mentioned before you get the the limit is in the
+
+00:10:46
+the sister algebra okay um so this is the setting of refill care Le Etc on convergence of lip Normy algebras now let me see if one can do something uh in Quantum field Theory uh in particular let me mention the typical properties of compactness as you see compactness plays a main role in the Ral uh distance um so the properties of compactness are usually expressed in term of nuclearity of maps um these are uh some references of course there are very many references about that but the the starting paper by Hagin via and U
+
+00:11:35
+then this unpublished note by Fagen herle um which then uh was finally written and developed by bookos and porman and the the the paper by bual and Wickman and then um a paper by bual Anton Longo on nuclear on modular nuclearity um so generally the compactness property for local algebra has this form you have a map from local algebra R ofo to some Target space banic space p and you ask that such a map is compact or nuclear um I will use in particular the the book called PMA nuclearity in the following
+
+00:12:20
+uh so in this case this map uh is a dual of a suitable map t uh star uh um which is a map from the pr of B ofh to the pr of the phom algebra ofo with dense range which is given by uh such a formula you take um a normal uh State on B ofh uh you multiply left and right by e to the minus H generally e to the minus beta H but I mean I simply put beta equal to one in this case and you restrict to to the algebra of all so once you have such a nuclear map in particular you you can get a sort of lip Norm on the range of um the produ of
+
+00:13:11
+T which is defined uh as in this way and um and using this lip Norm of course you get that the the pr overo is is nor comp with element with lip Norm less than equal than one is not Compact and uh you get a dual lip Norm on the Phan algebra which is expressed exactly as the Dual of the lip normal states um in such a way that then the unit Bowl uh is compact in this LP Prime and in particular uh the topology induced by this Norm on on the bounded sets is simply the wear topology of The Duality between the
+
+00:14:00
+is PR well okay let me just note that um uh instead of having seminorms in this case we have Norms this is essentially due to the fact that the starting space is not an order unit space here but a state space so there is no Unity so there is no need to to have Annihilation and multiples of the unity um but the main point is that uh the framework we get is in a sense opposite to that of U refel so the refel setting is that The Duality is between a sister algebra and its state space and the lip Norm is in the sister
+
+00:14:42
+algebra a dual lip Norm is in the state space while in Quantum field Theory you have an opposite situation you have The Duality between a prual of a foman algebra and the foman algebra the lip Norm is on the states and the Dual lip Norm is on the phenomen algebra so we cannot actually use the riell construction but we have to to modify it to adapt to the situation which we have in Quantum field Theory so um this is the definition that we gave um lip for Norman algebra uh ml Prime this Prime is simply
+
+00:15:22
+to recall that it is not a lip Norm but a dual lip Norm um has a this dual lip Norm which is a starting variant Norm uh which induces the W star topology so the weak star topology on the bounded subset of n or equivalently uh the pru as a densely defined Norm such that the elements of lip Norm less than one is normal compact um once we have uh this notion of lipon algebras one can try to define a distance exactly as RL did but with the ideas of curve so passing to matricial uh to a matricial distance um
+
+00:16:10
+so first of all one extends L Prime to the 2x2 matrices Over N uh it is not very important how to extend it for example one may take simply the the maximum of the lip Norms of the entries and then for a pair of lip algebras um one consider the set of all dual lip norms on the direct sum which restrict to L Prime 1 L Prime 2 and M1 M2 and then Define um the corresponding Quantum gr F of distance as the inum over all this uh dual Li Norms allda of the House of distance between the uh positive part of the unit bolts of the
+
+00:16:55
+matrices over M1 respectively of M2 the the okay there is also yes there should be a a two here okay um so this is the notion of distance that one can produce and the point is that this is indeed a distance so the the the starting point is that this is the distance on the space of Li foman algebra's modular isomorph so if if two phom algebras with dual lip Norms of Doo distance they are actually isomorphic as phom algebras this is in a sense the nontrivial Nal property to show that distance zero actually imply
+
+00:17:44
+isomorphism um as in the case of sister algebras it is probably not true even though we did not found counter examples yet that uh this Norm this distance is complete essentially because again as above we do not have an estimate for L Prime of the product um also in this case it is POS probably possible to extend this Theory to dual operator systems to get a distance to get completeness Etc but this we did not do up to now um then um I introduced the next uh topic so the question of ultra products
+
+00:18:28
+um because Ultra products will be the bridge between Quantum Gras of limits and uh Bol F scaling limits um so okay these are just very few references I mean the first reference concern uh Ultra products on ban spaces the second is chapter five of a book of Adrian oano in which he defined some Notions of ultra products for n algebras uh even though we do not use his definition of Ulta product from algebra indeed there are some ideas that we borrowed from that paper and then um again the paper with the Isola in which
+
+00:19:12
+we already um showed a relation between Ultra products and Quantum gr limits in the case of the uh refel notion so um what is an ultra product you you take family let's say a sequence MN L Prime n of lip algebras with corresponding PRS and an ultra filter uh then consider first um uh the spal Infinity of n predu so the sequences which are bounded in Norm uh uniformly bounded in norm and then um sort of restricted uh L Infinity in which we ask that also um the lip Norm is uniformly bounded and then you
+
+00:20:05
+take the the nor closure as a Subspace of the previous one uh third you consider a banak sub space uh K of U which is simply the sequences of Omega n um whose limit with respect to the ultra filter of the norm is equal to zero and finally you you consider the the quotient projection um with respect to to this um KU then uh this final object L Infinity of MN star over modulo KU is the usual what is called the ultra product of banak spaces but here uh we consider a smaller object what we call the restricted Ultra
+
+00:20:54
+product so instead of taking the the projection of all L Infinity of MN star we consider only the the image of the restricted part so the part in which you also have the supremum over uh the lip Norm to to be uniformly bounded um this in general is a ban space and it's what we call restrict product then you may do a sort of dual construction on the Dual space uh so again you consider um the space l Infinity uh of M n of uniformly bounded sequences uh in this case one takes no restriction on
+
+00:21:36
+the Dual Li Norm also because the Dual Li Norm is weaker so of course there is no need to to take any uh restriction but then as a sub space with respect to which one takes the quotient one take the elements for which the limit of the Dual lip Norm is zero so of course this is bigger than uh the space of the elements whose Norm goes to zero with respect to R filter and then you take the following quotient projection and again one defined uh mu as the image under this projection of the space Infinity of men um so this is what we
+
+00:22:13
+call dual restricted Ultra product uh let me note that this K Prime is not an ideal so in general you should not expect that this quotient is an algebra um now uh this theorem gives the first relation between the quantum Gro of House of limit and the ultra product construction so suppose that you have a sequence of lion algebras which is convergent to a Phenom Al to a li phenoman algebra in the quantum F of sense then actually this limit is the same as the Dual restricted Ultra product mu for any Ultra filter
+
+00:22:59
+so whenever a limit exists as a phenoman algebra any Ultra filter will produce it um the second result uh is a sort of a Converse first of all let me say that the family of Li algebra is uniform if it possesses two properties so the first is uh uniform compactness so that the family of unit bolts with respect to the Dual LIF Norms is uniformly totally bounded um this notion would be enough uh to guarantee a sort of precompactness uh in the case of banak spaces uh but since we have forom albas we need a
+
+00:23:47
+further condition which is this uniform normalizer condition um so this is the part in a sense which was Borrowed by um okano uh so once you have uh you should take a quotient with something which is not an ideal what can you do well you simply restrict the original space and take the normalizer of this ideal so of course the quotient is then necessarily an algebra um so okay I need some further steps to arrive to the conclusion but of course you you see that um uh this uniform normalizer condition is
+
+00:24:30
+um related to this Norm n of a which is sort of um multiplicative Norm normalizer Norm with respect to DL Prime and uh what is this condition is the fact that we can approximate elements in the unit Bowl uh with elements still in the unit bow but with this N Norm which is finite and what kind of approximation do we need um let me recall you that L Prime induces the W star topology the we star topology so this means that A and B are Clos in the wistar topology so we have a uniform uh density in a sense uniform
+
+00:25:14
+with respect to the um um with respect to this Norm um okay and then the the theorem is the following once you have a uniform sequence of lipon algebras then this is quantum gropal or precompact so such a sequence um as um a subsequence which is converging to a phom algebra and so in particular if you pick any Ultra filter then the ultra product a mu Co inides with the quantum F of limits along the ultra filter U and this is of course a lip phom algebra so in a sense uh Quantum F of limits and Ulta products are the same
+
+00:26:13
+under this kind of uniform condition okay so these are just some properties of this Norm n uh which can explain why it was useful uh so the fact that in general it's infinite but um first of all uh the elements with finite Norm uh with finite N Norm form an algebra because of these two properties and also um there is this property so you can now estimate the L Prime of ab in terms of lb and na so in terms of n you get some estimate of the L Prime of a product um so why you get uh in this case under
+
+00:27:06
+this hypothesis Phan algebra well first of all you may consider the the space a under line a of elements which are bounded not only in Norm but also uniformly bounded in this N Norm then uh exactly because this is simply the normalizer the quotient so the image under the the the the quotient projection is then sister algebra um and uh if you have this uniform property it means that this s algebra is then weekly dense in a phenoman algebra and this foman algebra turns out to be simply the we closure uh of this um
+
+00:27:48
+direct sum representation of a where the direct sum is is over all the states of a which are represented by sequences Omega n of normal states uh for which you have uh this uniform uh L Norm estimate so you actually prove that the limit is a phenoman algebra showing that there is a weak closure of a suitable sister algebra which is obtained in this way okay um now um great um I'm exceptionally now the final part on scaling limits um okay these are just few references of course the first two papers by buas and
+
+00:28:46
+F in which this notion was introduced and the recent paper by bosel Manon Monella on further Notions on on that and um okay so let me consider now the kind of assumptions that we will use in in the following um so now o in our will be a local local net of phom algebra in the vacuum representation AG will be the generator of the time translation so the energy and uh an assumption we will consider is uniform nuclear it so that you have um nuclearity of these Maps uh uniformly in R over beta where
+
+00:29:38
+beta is the coefficient of H and R is the size of the region um nuclearity was proved by of this map was proved by Bal and porman and uh we proved that indeed also this uniform nuclearity holds for the free scalar re scalar field of mass m in at least three special special dimensions so um this is the let's say uniform nucle Bol Spa nuclearity um then let me consider another kind of assumption so in a sense it's very similar to the previous one but I replaced the exponential uh Decay with a simply with
+
+00:30:32
+a simple inverse power Decay so 1 + Lambda a to Theus one a 1 + Lambda H the minus one the request also in this case will be of uniform compactness so instead of nuclearity uniform compactness uh well actually um at the first site one could say why should this assumption be satisfied uh want to only consider uh exponential decay in order to get some kind of uh compactness but um uh but indeed this is satisfied at least in the sense that uniform nuclearity implies uniform compactness so that when whenever you
+
+00:31:18
+have uh uniform nuclearity so in the in the sense here uh you get uniform compactness for any fun function of the energy with decays with any kind of Decay I mean even inverse logarithmic I mean there is not no importance on on the rapidity of the Decay um I mean this is actually the proof of these results is in a sense it's very simple and indeed it was essentially the given by bual and porman when they proved uh that uniform nuclear that nuclearity implies uh for for some beta implies compactness for any beta
+
+00:32:01
+they use an argument which immediately extends to the fact that you can take any any decay of the in the energy um so okay I hope I convince you that this assumption is reasonable at least as soon as it is reasonable the Assumption of uniform nuclearity and um and then um as a result uh one gets that if the net o in R ofo satisfies uniform compactness then one may set L Prime of Lambda of a uh as in this formula and you get a lipom algebra uh so the compactness is exactly the one needed to to say that it is a
+
+00:32:53
+dual lip Norm um as you remember in the the construction of the limit one uses um also a further Norm this normalizer norm and uh a simple calculation shows that this Norm uh is indeed equivalent to this other Norm so and Lambda of a bounded means exactly that Norm of a plus Lambda Norm of the commutator with the energy is bounded um uh okay there is another assumption actually um let me just explain what does assumption mean uh means U So when you say that the theory is in regular you usually mean that if you
+
+00:33:45
+take a family of regions which increases to a bigger region then the corresponding Union of foman algebra is is dense in any suitable Wick topology in the phenoman algebra of the big region um here I say essentially the same but first of all um I consider the wear topology as the topology which is metrized by L Prime because I mean the fact that L Prime is a dual Li Norm in price that L Prime Rises start topology and second I need that this kind of in regularity is uniform meaning that only depends on on this parameter R
+
+00:34:32
+so that I rescale the algebra with o Lambda multiplying Lambda by R and the estimate should be uniform in R um okay um then then the theorem uh if one has a a net o in r o which is local and such this F is uniform compactness so the compactness with respect to the multiplication left and right with one plus Lambda H to the minus one and this uniform inner regularity which I mentioned here um then the family Lambda o in R of Lambda O is a uniform family of liom algebras which means that uh any um Ultra filter gives rise to a limit so
+
+00:35:27
+one can Define R O of U with respect to the ultra filter U as the quantum gr of f of limit along the ultra filter of our Lambda when Lambda goes to zero the ultra filter will be an ultra filter looking at Lambda going to zero um this rou form a local net uh which we call then the quantum gr of f scaling limit so I simply take the limit in the quantum gr f um sense uh for Li forom algebras of the family of uh Contracting regions um okay uh of course uh okay it's nice that we have a limit but one should show if there is some
+
+00:36:21
+relation of this notion with the bual ver notion um so the the first part actually works quite well so if you remember the the phom algebra the the Quant F of limit phom algebra was given as a suitable we closure of a sister algebra uh the sister algebra was defined uh in this way so the elements uh in a Infinity of R of Lambda o where the supremum of n Lambda of a Lambda is less than infinity and then Norm closed um but since uh this Norm is simply uh equivalent to Norm of a plus Lambda the norm of the commutator it is
+
+00:37:13
+the same as taking the sequences in which the supremum is bounded and then the norm closure and then a simple computation shows that taking the Nome closure here is exactly the same as taking the sequences uh in L Infinity for which uh uh this supremum goes to zero and T goes to zero so the uh the elements for which the time translations are uniformly continuous this is the meaning of this property um so the the quantum ground F of uh Forman algebra is simply the weak closure of this um of a suitable quotient of this sister
+
+00:38:02
+algebra and uh one can easily compare this with the bookal fair scal in algebra this was defined uh in a way which is exactly analogous so you take sequences which are uniformally bounded in norm and you take the the same kind of uniform limit but here instead of taking only time translations you should take any space-time translation but clearly if the time translation is is uniformly continuous by Spectrum condition one gets also this condition so um the two sister algebras indeed coincide so that first of all we can
+
+00:38:42
+reconstruct the the balir scaling algebra uh using our Notions um the second point is of course to compare the representations uh well these are different as as you will see but maybe not too much different so the quantum ground F representation uh of this sister alra let's say the one Associated to one region is simply the direct sum over all these representations with respect to States uh which are given by sequences uh in which you have this uniform uh boundedness of Omega Lambda um while uh book and F
+
+00:39:32
+consider sort of a vacuum representation well actually it's a vacuum representation so instead of taking this direct sum they simply take one uh gns representation as and as a state um they consider a state which can be written in this way so the limit over an ultra filter to to mean any any limit of a state which is uh obtained in this way so you take a state Omega on on the local algebra you apply to the Lambda uh element in the family A Lambda and then you take this the limit over Lambda
+
+00:40:13
+going to zero um so um well uh okay of course uh with the assumptions above any scaling limit in the sense of bookold and F of the original Theory embeds as a sub subrepresentation of the in the quantum grow F of scaling limit for for a suitable Ultra filter of course uh maybe one can say something more but as I mentioned at the beginning this is still a work in progress so uh we should still understand if uh this phenoman algebra is actually the same or or not um okay um I think with some anticipation I'm very close to the end I
+
+00:41:07
+simply want to to make uh three points in the Outlook so um okay of course the first point would be that we need to do is to clarify the relations between the two representations the one considered by bukon and F and the one considered according to the quantum gr F of scaling algebra uh let me say that um of course uh for the Quantum griles of limit we need to take uh this kind of representation because this is the the only kind of representation which implies that you have actually a limit in the in the sense of a distance so it
+
+00:41:52
+is this foman algebra which is the limit of the sequence which I considered before um and also in general uh this kind of uh prescription so to take only the states which are in a sense constant along Lambda uh for a general Quantum ground F of limit is meaningless on the other hand if you actually consider only scaling limits so dilations of this of a given Theory then of course the idea of a constant state is natural so um I mean also in the abstract setting or in the quantum ground F setting one
+
+00:42:36
+may always consider in the case of scalings scaling limits uh this kind of sub representation and and so the question of the relation between these two representations is Meaningful also in the abstract setting of quantum growth House of limits um well okay the the second point of course I hope and this is one of the reasons why we we tried I mean to study this question is that Quantum F of limits may help to prove some structural properties of uh of scaling limits uh but of course we did not even
+
+00:43:15
+start that and also I think that this is also an important issue I think that this kind of limits can of liom algebras can be used in different context still related to of course to to Quantum field Theory so using the kind of compactness that one can expect in the setting of quantum field Theory uh okay I'm [Applause] finished thank you very much for this interesting lecture ask questions or comments please I would like to ask you a question about your starting point what this this definition of distances
+
+00:44:05
+between you start describing the distance between the state space as compact space you said that's not enough put about if you equip the state space with additional structure of Al and Sh and as a bundle with the uh orientation or whatever can you cook some distance of of that structure and then becomes approp uh well okay I don't know I mean of course it is a natural idea I I agree with you and U so probably it is possible but I mean to make a distance is not very easy you know so in a sense
+
+00:44:50
+I think that certainly the idea of Rael and uh and Care is the most economic I mean they simply take the distance between metric spaces and then they show that indeed it it implies equivalence of sister algebras I mean isomorph sister algebras but of course other ways are certainly possible and uh I think it's interesting question next one somehow related to previous question can you apply for instance this house of gr of distance function to the classification of f for instance take two one factors try to
+
+00:45:31
+relate how to find it from other fig please could you repeat the question yes okay so the the question was is there any way to to consider the this notion of distance between phenomenal algebras and the question of classification of factors so is there any distance between I don't know type one type two type three something like that or within type two one even between yes well so okay the first the first problem is that these are distances on phom algebras with a dual lip Norm this is a crucial point
+
+00:46:16
+and uh so you may have two equal phom algebras with different dual Li norms and their distance is not zero so it's a farther structure that uh I mean I don't see any way to associate to a general foran algebra a canonical dual lip Norm in order to to follow your suggestion maybe of course it's possible but presently I I don't do not see it I mean it's so no questions so then I would like to thank again now we have a break of 40 minutes
+

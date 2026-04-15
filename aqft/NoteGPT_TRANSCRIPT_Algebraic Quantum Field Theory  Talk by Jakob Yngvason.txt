@@ -1,0 +1,288 @@
+00:00:01
+I'm especially glad that I could present I but I could announce this in the presence of because I think you are one of the most important students and coworkers of you please okay thank you very much it's of course a great pleasure and a privilege for me to speak at this conference on algebraic Quantum field Theory well yesterday when I came here my the first thing I did was to uh undertake a nostalgic trip to the center of gutan uh where I hadn't in fact been for for a couple of years now and um looking
+
+00:00:59
+at all the new Cafe and pups and also the old ones where I myself and my fellow students used to hang out in the in the olden days was a a great pleasure likewise uh talking here at this conference or attending this conference rather is also a nostalgic trip for me and um just as it was uh wonderful to see all these young people and all these new uh local ities and fancy restaurants I I really look forward and enjoy very much to see all these young people here and hear about new results and this uh even much more so
+
+00:01:43
+because as many of you know uh Quantum field theory has not really been my my main subject for for quite some some time now but this is the area and this is the town where I was brought up scientifically by Bas and I have of course very many font memories from here and I also like to come back to Quantum field Theory occasionally I think my last paper that was in fact something which which SP uh was is really responsible for that and we had a very enjoyable collaboration um resulting in a paper
+
+00:02:24
+with with yans Mund which appeared 3 years ago so it's not so long time ago but I have been doing something in this area anyway uh what I want to do now is to talk about um the borus ulman algebra and some of its descendants in fact few were in fact essentially only two fewer than I had originally planned but it turned out when I uh started to write uh down this view graphs uh that um I had soon filled 28 slides and I thought this is more than enough and uh uh it's not uh so there are a few things that I would
+
+00:03:11
+have liked to talk about but has to leave out so here's uh just a brief uh uh uh sketch of the topics which I want to mention first I want to define the basman alra of course many of you know and recall the concept of white man functionals then I will review some U uh well fairly old results obtained mainly in the the 80s and '90s about the abundance of states which satisfy at least parts of the white mums uh a natural question which uh uh which came out of that was the question uh although it may not be of great
+
+00:03:55
+physical uh uh significance but since as you know of course uh whiteitem man fields in four dimensions are not so abundant I think it's nevertheless still a very interesting question is about whether there exist both of fields where the field operators are bounded operators and this is a question which resulted actually from these investigations and which was uh taken up among others by my good friend Claus Bowman who passed way uh about 10 years ago uh prematurely and also by U by handing Reen and and uh and
+
+00:04:41
+co-workers so this is one thing I want to mention briefly then I will uh come back to uh joint work with uh with Hans boras uh which I have put here under the heading non-commutative moment problems and what I want to mention there also is our work on the connection between between whitean Quantum field Theory and algebraic Quantum field Theory defined by local phenoman algebras now I will uh say a few words uh about deformed borus woman algebras here I am I'm just in on two view graphs or so I am just uh
+
+00:05:24
+making some propaganda for work of Harold gr and gandaf lner where they use this formalism again in in a deformed form and finally I will say a few remarks about an a certain extension problem for states which was in fact one of the first problems or the first questions about this in this area that Bas proposed to me and which is still completely unsolved and I I still think it will not be really it's not feasible to have a complete solution to it but nevertheless Le I have recently been convinced that it's may be worth looking
+
+00:06:04
+at it again in view of some developments in many body non-relativistic many body quantum physics anyway that's what I want to do at the last so now let me just start by mentioning the seminal papers in this area starting of course with uh Whitman's uh paper of 1956 where he defines uh the whitean functions and proves the Reconstruction theorem namely that the whitean functions if they satisfy some conditions which are necessary and sufficient conditions for the the whitean aums to be fulfilled then you
+
+00:06:47
+can reconstruct your Quantum field from the whitean functions now next come two paper well by the way this paper I checked it the word algebra does not occur in this paper now here are these two very first papers which in fact are completely independent they uh uh were submitted in an in an interval of about four weeks in fact the paper of uh buman about months earlier than that of Bas where the uh reconstruction theorem is uh stated and proved in a completely algebraic fashion these papers are not
+
+00:07:38
+uh identical in content you can also see it a little bit from the from the length they they are different and uh but nevertheless they both have this essential um idea of of recasting the white man aums and the Reconstruction theorem in a u framework which looks uh in fact extremely elegant and this what what is also used to this very day when you uh present the Reconstruction theorem then the last of these seminal papers is here a uh uh review or of the knowledge uh up to the year 71 by Bas this is in h
+
+00:08:28
+this was a conference in AA called statistical mechanics and field Theory and here this paper also has some of the constructions which I will mention u in the sequel so this is really the only uh uh to this day I mean this is probably the longest review of this subject that exists still and and maybe somebody should really expand on it because lots of things have of course also happened since anyway so here is now the definition and I'm going to um restrict myself to the usual case of a scalar Herm missan bif field everything
+
+00:09:15
+of course and even I'm going to assume that they have a temperate uh field it could also uh be of course the uh the the test function space could be also the uh schz space of test function with compact support uh like it was in fact in in the ulman paper but uh uh so for concreteness I'm going to stick to this and the Bas ulman algebra is simply the tensor algebra completed in its appropriate topology the tensor algebra formed over the space of test functions by which the quantum fields are smeared
+
+00:09:57
+and these are the dimension is from of course variable to be interesting it should be larger or equal to two but the physically most interesting case is of course four so here is the concrete definition uh the notation s0 is simply the complex number SN is the n Fold tensor product of this completed so it is simply the test function on R to the ND and the elements are terminating sequences so finite except uh so to say from here on for from some number on which depends on on the on the element you have simply zeros and the product is
+
+00:10:34
+simply the tensal product so the end component of such an element uh of the product is is is a function now of can variables and it's given by the usual tensor product of functions so there is also um an anti-linear involution which is obtained by taking complex conjugation and inverse the order of the variables now via gns construction as we uh talk about it now there is a one to one correspondence between the cyclic star representations of this algebra by h space operators denoted by FF and these will in general
+
+00:11:21
+be unbounded operators there is a uh one to one correspondence between these representations and positive linear function and the positive linear functionals on the algebra are precisely those elements of the Dual space so they consist here of sequences of distributions this is just a complex number this is a these are distributions in the Dual space of the test function space which are positive on the squares in the algebra and the correspondence as in the usual in the gns construction is simply
+
+00:11:54
+given that this uh expectation value here of the field operators thesis so to say is a is a is a polinomial in in the in the field operators just by this compact notation I can write it in this Sleek form because this has of course many components here this function here and this is the cyclic vector and this is normalized if the length of the vector is one and that means that the zero component has to be one and the uh here is just a notation I will denote this uh positive linear function by S
+
+00:12:36
+prime plus and the normalized elements that are those with Omega 0 equal to one will be called States now one of the first general mathematical results about the algebra is due to to lner and the wman and was published in communication mathematical physics in 68 and this result was that positivity uh put so to say no constraints uh on the representation in the sense that uh the positive functionals they separate points in the algebra so the algebra has a faithful h space representation now um um this uh result um is is maybe not so
+
+00:13:33
+surprising because after all there are no U no relations here this is so to say a completely free algebra but a prior you could expect that maybe maybe positivity uh well puts additional restrictions and as we will see in fact topologically this is the case but algebraically that is not so if you just consider the algebra then then you have this basic result here this basic fact now there was a stronger result uh proved somewhat later and that was result that positive functionals can in a certain way be arbitrarily singular
+
+00:14:14
+in the sense of distributions namely that for if you if you give a a continuous seminorm on the algebra which means that the seminorms on the algebra can be simply the semins on the test functions spasis and and they are simply then add it up to get a seminorm on the algebra here if you if you take such an arbitrary seminorm you can always dominate it by a positive functional and the components of this seminorm here they they degree so to say the uh number of derivatives and the powers of uh 1 plus X squ involved they
+
+00:15:01
+can grow with the the number of components so this can be a very big seminorm and nevertheless you can always find a positive functional which dominates it so this implies of course in particular that points are separated now character very corollary of this is a is a characterization of those linear functionals this is purely mathematical result of course still but of the linear functionals which belong to the linear span of the states namely they are characterized by a certain continuity property that the the
+
+00:15:42
+bilinear form here defined by the functional has to be jointly continuous this is not trivial because the product on the algebra is only separately continuous and in fact just a little example which shows a little bit about the subtleties which are involved when you combine positivity and topology here of the test function space here is an example of a linear functional on the algebra which cannot be written as a linear combination of States namely well uh you simply take the Delta function and uh some derivatives with respect to
+
+00:16:21
+some variables to the order n and take the tensor product of this and you let this uh order here grow with the number of variables you can uh simply see that this will never uh be be representable by a linear combination of positive functionals because positive functionals they satisfy the C Schwartz inequality and that uh will simply violate the structure here now so far of course there is very little physics here the only physics if you like is the probability interpretation of quantum mechanics which is the positivity
+
+00:17:01
+condition as it stands here but the real uh meat on the bones comes when you put in conditions and these are of course the physical conditions of cality uh which is uh encoded in local commutativity stability Spectrum condition and relativistic invariance and uh the beauty of this algebraic approach is that you can U formulate these conditions in terms of natural algebraic structures namely the locality in terms of the locality ideal which is the two-sided ideal uh generated by the commutators if the
+
+00:17:40
+supports of the test functions are space like separated likewise the Spectrum ideal is the ideal generated by the elements you take an arbitary element of the algebra and then you translate it this Alpha a is the the the translation in space so it act on test functions like this and then you integrate it here over a function which has a fua transform in the complement of the forward light cone and you take the left ideal generated by these elements here there is a more explicit description of it but
+
+00:18:20
+this is a particularly nice algebraic way of describing it you can also use this way also in the C star context so so I prefer to write it like this so these are the two ideals the locality ideal Spectrum ideal and then you have also uh the translations I had written here you have more generally panker Transformations also Laurence transformation they operate on the test functions and and that is the way they do it now uh once you have defined these Concepts you can State precisely what is a whitean functional a whitean function
+
+00:18:59
+is by definition a normalized linear functional or state on the Borman algebra which satisfies the following conditions which are the white Manon conditions first of all it's positive it vanishes on the locality ideal it vanishes on the Spectrum ideal and it's invariant under funer Transformations so these are conditions now formulated on a completely concrete algebra with a concretely defined ideal and concretely defined automorphism so this looks all extremely elegant and seems to be a starting point of a very long
+
+00:19:41
+friendship between physicists and these white mon aums well of course uh it as you will uh suspect and know things are of course not at all so simple as they may look at first side and I will have something more to to say about that but now what I want to discuss first are some Elementary operations that you can do with whitean functionals you will maybe the U conosur among you will notice that I have left out the cluster property uh that it has a s to say a special role that has to do with the
+
+00:20:20
+uniqueness of the vacuum um that can be dealt with by integral decomposition theory so I will uh leave that out although that is uh less trivial in this case as in the case of C algebras but anyway uh if we forget about the cluster property there are uh certain Elementary operations that you can do here uh in the set of whitean whitean functionals so these are so to say operations which will make new whitean functionals starting from old ones one is you can simply take conver combinations of course course you will
+
+00:20:59
+in this way you will violate uniqueness of the vacuum but nevertheless you will satisfy all the linear conditions and positivity then there are two products uh two nonlinear operations which you can uh do one is has been called by bares the P product and it's simply the pointwise product of the whitean functions well you might object and say well this is not defined because the whitean functions are distributions what does it mean well because of the spectrum condition this is perfectly well defined the easiest
+
+00:21:36
+way to see it is is maybe to say that you can by the Spectrum condition you can uh extend these to analytic functions and there the product makes perfect sense of course or you can also say in fous spaces it's just convolution and because the functions have support properties in cones this is well defined so the the only non-trivial aspect here is that this is a positive linear functional again but this is so to say corresponds to the chronical product of matrices and then there is another product which uh is related also to
+
+00:22:15
+truncation and this is you take two functionals then you you you sum here overall partitions of these uh of the indices one to n into two groups here and then you take the the appropriate uh mu newo functions and new Point functions and you take the sum of all this and this is uh this is another operation which also leads to uh a new white man functional if you start with with old ones now here is also remarked that this this product uh can in fact be um def defined uh uh not only for for for positive
+
+00:23:00
+functionals you don't need positivity for it it's just that if you if you take two positive functional then the results will the result will will be again a positive functional um also you can you can Define uh you you can Define infinite power series with respect to this product um if you have a if you have if you have a power service with an um with an infinite radius of convergence if you have as a finite radius of conversion there will be a condition on the t0 component but uh in particular you can
+
+00:23:36
+Define the exponential function with respect to this product of an arbitrary linear functional and um uh this uh this operation is uh will then also satisfy the linear conditions if you if you perform this now uh conversely you can invert this operation by taking the logarithm and this is just the the truncation so this is a very nice algebraic way of defining truncation there is a sufficient but no means necessary condition for this uh exponential function with respect to this product to be positive is that t is
+
+00:24:20
+conditionally positive namely that the T of a square is positive for all FS with a zero component equal to zero now this these notations are in fact have analogies in the commutative settings so this you can be can be understood as non-commutative uh extensions of some notion Notions from from probability Theory and you can a natural question for instance is the converse question whether if you have a given functional whether you can decompose it into non decomposable fields which you could call
+
+00:25:04
+Prime fields and this question was studied in fact by hegerfeld in two papers uh well this is so to say in the white man setting and this later paper 10 years later is a paper when a uh more general setting for non-commutative probability Theory now I mention these things which may be known to many of you but I I my guess is that this is not known to to everybody in fact uh one justification for me to give this talk was that I as hope to uh to convey some messages to to young people about about
+
+00:25:48
+some basic facts which are not so easily found in textbooks are widely scattered and uh I thought it might probably maybe be useful for you to to have them collected here so you know about them now of course this is uh the big Scandal still of quantum field Theory the uh known examples of white man fields in dimension four or larger has not increased over the past 50 years almost almost well because uh these Notions of the p and the s products were not so clearly spelled out for a while so you can say they are A
+
+00:26:32
+new ingredient but what are they they are you have the generalized free Fields you have the wick pooms and certain generalized Wick pooms in such fields and you have fields which are obtained from these two by convex combinations and by S and and P products and now I want to warn you that although this looks a little meager uh the uh structure of such combinations can be extremely complicated and if somebody presents you with an example and tells you ah here here I have a new white man f it may be
+
+00:27:15
+extremely tricky and far from obvious to uh to uh to dist entangle so to say the structure and for instance see that it really belongs to the set and as a little anecdote in that context I think it was about 10 years ago anding R may remember it better there was a paper uh by a mathematician who claimed to have uh constructed new examples of rman fields and this was extremely it was entirely motivated by the desire of a mathematician to construct uh white man functional which satisfies all the conditions he was not at all concerned
+
+00:27:58
+about physical justification or or anything well anyway so here was this list of whitean functions with an extremely complicated construction and the first thing was of course to check whether it it satisfies all the conditions and that turned out to be the case if I remember correctly but what was it and I I I must say I I really admired hening rarin extremely for his stamina because he he was able to look through the mist and and and see that well it is really a generalized we polinomial of generalized free fields
+
+00:28:34
+and this was I think a great achievement okay anyway so why is the construction ofman functionals so difficult well it's only one aspect of this question is to make a comparison with the SE star situation of course it's it's only one aspect you can say lots and lots and more about it but if you nevertheless I think it's instructed to be the following in mind that if you have given a c star algebra then you can uh rely on on the U on the on the fact that the that the cone of positive elements in the algebra
+
+00:29:14
+has interior points to use extension theorems to to construct States so you only have to construct them on a some sub space and then you can always extend them uh so this is for one way to obtain translational invariance States you can use the fact that the translation group is what is called an a minable group that has an invariant mean so you can simply do that you always have bounded functions and and you can do that and if you want to construct states which one is on a left ideal then you can apply the fact that
+
+00:29:52
+every left ideal is is generated by a projector in the enveloping for algebra and you can you can use that of course it can happen that you will always get something trivial in this way and this is the example of Sergio the do here for instance where he gave an example of a c algebra local C algebra which did not have any representation satisfying the Spectrum condition but anyway you have these basic tools and none of these tools is a prior available for the for the bman algebra nevertheless U this um algebraic
+
+00:30:33
+formulation of whitean theory it certainly raises natural questions about the compatibility between positivity and one of of more of the linear whitean conditions and such questions were U Were discussed and and considered by several people I should also mention here I I which I have not done so far that this the Borum algebra was also studied in particularly intensely in Li uh maybe more from a mathematical point of view um uh and um but there were lots of of results obtained about the mathematical structure of of this
+
+00:31:22
+kind of algebras and related questions by by lner and his students among them geralt Hoffman who is here today and also of course by well I we already mentioned this first result by L and dulman anyway um so I'm here I'm only going to quote uh two or three results which uh U I managed to obtain uh when I was really seriously engaged in in in this uh uh Enterprise in the ' 80s and '90s and I have chosen here only a few such results which uh can be formulated in a rather slick way there are much much
+
+00:32:10
+more results but these are I think they at least look uh particularly nice so that's the reason I have chosen them as a sample one is here U about the compatibility between Spectrum condition translational invariance and positivity and this is a I have chosen here a formulation so it looks uh exactly like the uh theorem I quoted before the namely for every continuous seminorm there is a positive functional which dominates it but here I have here is the additional thing is that this seminorm now vanishes on the Spectrum
+
+00:32:53
+ideal and is uh is is translationally in variant and the functional here is not just a positive linear functional but it also vanishes on the Spectrum ideal and is translationally invariant so it it satisfies these parts of the of the white man aums and you have lots and lots of functionals which satisfy this this is a now the construction so this is really done in a constructive way and I'm just quoting here the results and not saying anything about the methods so you may wonder how how it is done and uh
+
+00:33:35
+well I can say quite generally now maybe to to save time I will just say that uh most of the these results are obtained uh by using the fact that the test function space is a nuclear space and in fact the space of a special kind uh where you can Define the topology by by Hilbert seminorms uh which are given by by by powers of of some fixed operator that's one thing another thing is this uh s product which I had uh mentioned before and the fact that I maybe go back to this namely that if I have a
+
+00:34:20
+conditionally positive functional then the exponential of it is is positive and this is also something that is is used repeatedly in these constructions just to give you an idea of what is involved there um another a coroller of this is that you can characterize now the linear functionals which belong to the linear spans of translationally invariant states which anate the spectruml and here is a condition which is should be maybe compared to the previous one which was just uh here namely that it was that
+
+00:34:54
+it was jointly continuous this product here you have of course more and the constru the condition is is here namely not only has this to be jointly continuous but also if you translate here and you integrate then you have to have this estimate here it means in particular that as a distribution uh this uh expression here has to be the fer transform of a measure so this is something which uh follows from translational invariance and positivity now here is a result about the locality ideal and translational
+
+00:35:38
+invariance this result is obtained in a different way by a completely different uh construction namely by mapping the basman algebra into U what uh we called partially commutative tensor algebras over finite dimensional spaces and studying such algebras that's a kind of a discretization procedure and there you could also prove a result a little bit similar to to that but I prefer to uh to uh present here a result which is a little surprising in fact and it's about bounded representations and locality namely uh
+
+00:36:24
+to uh it can be formulated in this simple way the algebra the quotient algebra of the ban algebra with respect to the locality ideal so this is so to say the free algebra where you have no relations except those imposed by locality this algebra has a faithful translationally covariant til space representation by bounded operators and this result is rather surprising and leads to the question whether the field operators of uh B field can be bounded op in a in a white man Theory namely whether there exist bounded
+
+00:37:05
+representations of of this quotient algebra here satisfying the Spectrum condition the Spectrum condition is of course here the really tricky thing and such well such Fields would certainly be new examples I'm not saying that they would be really very important for for physics but if you really want to understand what is Behind These axioms and whether we are stuck forever with these examples that we know I think this would be a very interesting thing to to uh to uh to understand now in two
+
+00:37:45
+Dimension there is a very simple example and it was uh shown to me by death I think it was about 1994 maybe it was in so what um no no this was uh the Beamer went off Beamer went off okay H the be H to sh so okay so so let me then just uh try to continue I was uh saying something about bounded B fields I was saying that uh they would certainly be new examples and therefore mathematically I think at least quite interesting the first example as I said was uh uh presented by Death and uh that was simply by taking the tensor product
+
+00:39:31
+of two fmy fields on on light rays in in uh in uh two Dimensions so it's coming back wait okay we can we can just wait now the U ah wow ah okay so the general structure of uh analysis of such Fields well uh well there was in fact uh Hing Ren uh presented lots of examples uh using more complicated ingredients in two dimensions and the general structure of such fields which satisfy conformal covariant and the H principle was undertaken by Claus bman as I said and also by gr andrin and in in that case namely if you have
+
+00:40:35
+conformal covariance and and the H principle their conclusion was that there is no scattering even if the white man functions can look quite complicated in that case whether that is General feature in two Dimension or if it is also the case in four dimensions that is still an unsettled question now I want to go here brief ly into something which was so to say a byproduct of this Endeavors of understanding the states on the boras algebra the the boras ulman algebra and that was uh done by extending the
+
+00:41:15
+algebra by including something which could be called abstract resolvent and um uh the motivation for this that was that we wanted to understand the relation between the in general unbounded field operators and local Nets of for Norman algebra this of course a classical problem in the comparison between whitean Theory and the har casair or H cair arati framework and so this extension is obtained by well for notational reasons I will now denote this quotient algebra here simply by p and you should think of
+
+00:41:59
+this so to say as partially commutative pols in the test functions and it can regard as free star algebra with generators the uh the real test functions and the relations are simply commutativity if the test functions have space like support suppar Port Port the unit is denoted by one and now this algebra is extended to a a new algebra by adding simply new generators which I denote by r+ and R minus which is supposed to be the adjoint of r+ and the relations which stand here which simply tell you that this r+ and R minus are so
+
+00:42:40
+to say on the abstract level the inverses of these f plus or minus I so these are the ABS the uh the abstract resolvents and the relation is of course that these resolvents should also commute if this is H space like now this is what I just said here and a remark is that such abstract solvents have recently be applied by buol and grundling however in a different way U with more relations because they are involved in they are interested in the ccrs and uh so they Define in this way a novel C star
+
+00:43:24
+algebra so this is just to remark that uh that such extensions are uh are also uh nowadays quite interesting for for other purposes now uh one defines now the set of bounded elements in this abstract algebra here as uh the elements of this form here some power of the test function and some higher power or at least as as a as a high negative power so this is s of SE formally bounded and this is what we call bounded elements and then we Define a positive cone in the algebra in in this way this looks a
+
+00:44:05
+bit bit complicated but this is so to say nevertheless manifestly positive in a in a way if this were just functions you would immediately see that this is just a square so this would be positive and now is a result by borus and myself about selfa joint extensions leading in possibly out of the hbit space and it's the following if you have a state on this partially commutative algebra here and corresponding field operators then the following are equivalent that the state is positive not only on the squares here in the in
+
+00:44:47
+this polinomial algebra but also on these extended squares namely on the positive part of this extended algebra including these solvents this is equivalent to The Operators having self adint extensions possibly in a larger hit space such that these extensions they commute strongly in the sense that the bounded functions of these CA joint operators they commute if the supports are space like separated and now this General result uh can be combined with some previous ideas of powers on the one hand uh on the math purely mathematical
+
+00:45:28
+side and by D suus and Wiman 1986 to derive a Criterion for the existence of local Nets of for normal algebras associated with a with a given white man field and there are two more Concepts that are needed one is the concept of the weak commutant if you have a set of closable but in general unbounded operators then the their weak commutant is defined as the set of bounded operators that commute so to say in the sense of Matrix elements so you never have to worry about domains of definitions of the product so to say
+
+00:46:04
+you never apply C to some element in the domain but you do everything everything in the terms of Matrix elements in this way so you never get into this problem this is a weak commutant and another concept is the concept of a centrally positive State on an abstract star algebra you consider the cone of squares in the algebra namely the cone generated by the squares and then you say that the state is centrally positive with respect to a to an element in the algebra if it is positive not only on all squares but
+
+00:46:46
+also on all the elements of this form here where uh a n in the algebra are such that that this is a square or rather a sum of squares for all real numbers are that this is not the same as being simply positive is seen by the standard examples of soal Hilbert polinomial which are polinomial in more than one variables which are positive but cannot be written as sums of squares so this is a stronger notion that simple simple positivity anyway so here is uh our result about the local Nets of foran algebras
+
+00:47:33
+uh corresponding to a given white man field so State and denote by P the the the sub algebra of this abstract quotient of the bman algebra here generated by the test functions with support in in O this is very natural notation and uh a different P namely calligraphic P the corresponding star algebra of the of the operators in the gns representation and now if you know that the weak commutants are not only weekly closed which they which they all which they which they always are but and they are this is of course always a
+
+00:48:23
+weekly closed linear space but if you know that the product of two elements here is also in the in this set here this is something which is not automatic if you know that then the following statements are equivalent namely that this net very concretely defined net of annoyment algebra is a local net that is the algebra corresponding to space like separates regions commute and the other the equivalent condition is that for every open set and every real test function with support in U this open set the state is centrally
+
+00:49:04
+positive in the sense defined before on the on the sub algebra generated by F and the test functions with support in the coral complement and uh now this condition that uh uh that that this here that this we commutant is an algebra may look terrible I mean how would you check that but fortunately it is possible to check that by uh by fairly weak uh energy bounds namely if you know that the field operator its closure multiplied by this exponential function here of the hamiltonian essentially e to the minus
+
+00:49:55
+hamiltonian to the to to to the power Alpha if this power is less than one then you know that these week commutants are in fact for Norman algebras and you say that then that that this satisfies a generalized AG bound so this is a very useful criteria but nevertheless this you can of course check in in a concrete model more difficult of course is to check this Al positivity because that is a rather rather tricky uh condition but one uh one good thing about that is that such positivity conditions are stable
+
+00:50:40
+under the limits so if you construct your state as a limit of states which satisfies this condition and that may be easier to prove for the approximating functions then you know that it is satisfied so this condition is maybe also even useful in practice now I have fairly little time left and uh there are uh uh two uh topics I wanted at least to mention briefly well I the title of the talk is after all the Borman algebra and its descendants I have mentioned one of its descendants namely this extended
+
+00:51:19
+algebra there is another descendants or or a family of descendants I would have liked to discuss namely the use of the man algebra or the basman type algebras in the quantum field theory on commuted on on on on curved space times but as I said this was not possible here also another topic which would have been uh maybe worth discussing is the ukian context the oal shadder positivity the representability by shinger functions by measures Etc that is another topic on which we worked in the 70s and in the 80s but uh now I
+
+00:52:00
+want to to mention just or rather make propaganda for the lecture of Gandalf by just mentioning that the uh deformations of the bman algebra have been used uh quite recently uh to uh to con to to uh to discuss deformations uh of local Nets deformations which uh deform the Nets in such a way that you may not fulfill the the full locality but you still uh fulfill wet locality and uh one way of there are so to say the main the the first papers were by gr and lner and it was this was essentially for
+
+00:52:57
+for free Fields the first papers but then there is a a more General uh paper which which also works for for interacting white man Fields uh and this was also taken up by by deff and and Steven Summers and mor for Morales there's also working on this in Vienna U now the formulation I want just to mention here is based on the deformation of the Borman algebra and I will probably not go through it here in all detail because this is something that that gandal will talk about but so I this is so to say just a preparation
+
+00:53:48
+for for his talk and it's based on the myal tensor product of two functions namely if you have given a for so so these are functions now on Force Space or rather on the on the nth tensorial power of Force Space and if you have two such functions and you have an uh anti- symmetric for by4 Matrix then the moal product is defined in this way namely you take here these two two functions here multiply them pointwise then you translate by aai and here by a q and then you multiply by this phase factor and you integrate here this is
+
+00:54:32
+the deformed product and this extends to a bilinear separately continuous associative product and you can also do it here for different thas of course and uh this is associative for if you have a fixed Theta but in general you do not have it if you have here different theas now if you have a white man you can define a a deformed state in this way and this means in the term you can write it explicitly in terms of the F transforms that you simply multiply here by a phase factor and U now this twisting so to say
+
+00:55:14
+of the white man functions is something which is only non-trivial for for the higher Point functions for the twoo function one point function it's not defined for the twoo function it's just the same so you see it for the threo function higher now an important remark is that these different deformations namely uh corresponding to the different antisymmetric thetas they can be defined on a common HP space namely the h space of the undeformed field defined uh from the original field and now there is another
+
+00:55:53
+there is a correspondence between these uh anti- symetric mates and wedges and a key result of gr and lner is that the deformed Fields even if they are not local they are still wet local and this is what is stated here and here uh uh and this result is also in the in the Bas in the in the bookold Summers formulation this is a result which they prove in the context of Sear here it is proved in the context of this bman algebra deformed now the last uh problem I want to mention here very briefly is a question which um as I
+
+00:56:44
+already said or or mentioned was post at the very be very beginning of this investigations in the 70s by Bas and it's the following well as uh as you know it's uh it's the uh the most General structure of a two-point function in vitment theory is simply the the Helen lemon lemon representation and U so if you have any such function then you can always extend it to a white man functional namely that of a generalized free field with with the given two-point function now also and this can
+
+00:57:31
+be a a very sophisticated result variants of which were proved for instance by Claus bman uh if the lion weight decreases sufficiently fast with the mass then the extension is even unique the original version of this was the uh of course the uh uh the the Y row and which tells you that if the two-on function satisfy the the Cent Cent Gordon equation then you necessarily have a free field now anyway knowing this a very natural question appears to be the following if you have given a two point functions let's say W2
+
+00:58:14
+up to some W 2 m with M larger or equal to two in particular if you have given Omega 2 and Omega 4 which additional conditions are necessary if you know well let's suppose that you know that they satisfy the whiteitem man conditions when you restrict them to to the test functions where they make sense which are which additional conditions are necessary in order that that this finite sequence can be extended to a white man functional on the whole of the Borman algebra now this is a formidably difficult problem and in fact
+
+00:58:53
+I was very rather soon convinced that it's completely hopeless but uh some results which I have recently learned about um might indicate that it's worth looking at it again and so let me uh mention what I have in mind here namely I want to compare it with a different but uh closely related or rather some what related how closely you can maybe argue about it formally at least it it looks close namely the the famous representation problem for reduced density matrixes in non-relativistic many body quantum
+
+00:59:35
+mechanics uh to write it in a form so that the analogy with this uh Quantum field theoretical problem is uh clear uh then I have chosen here to write the hamiltonian of a uh particle system uh in a in a in a second Quan form so the so now you have to think that you have a system of particles non-relativistic particles and they are sitting in an external potential w v and they have a two-on interaction let's say little wi and then the hamiltonian can be written in with creation and dilation operators
+
+01:00:19
+in the following form here is the kinetic energy here is the interaction with the external potential and here here is the interaction between the particles and here you have this creation and dilation operators so this is the way of writing the hamiltonan now if I now have some uh wave function and particle wave function I I denote in this way the expectation value then you see of course that the expectation value of the hamiltonian is completely determined by the so-call reduced one and two particle density matrices namely
+
+01:00:57
+these are simply the expectation values of a product of two creational dilation operators and the products of four uh creation and Annihilation operators so these are so to say the two-point function and the fourpoint function and whereas the original wave function has of course extremely many variables in fact since you can always obtain the one particle density matrix by simply integrating out here the uh intermediate variable here in the two particle it's really only row two that is needed that determines everything and
+
+01:01:35
+this observation and it was made apparently very early in fact I found somewhere that Coleman it say not Sydney Coleman of course but Coleman in 1951 he observed that well this is apparently a vast simplification of the question of the ground stad den of many bodies system so all you have to do is to take the infin over all possible rad TOS instead of taking the infin over all wave functions well of course there is a big snack to this and the snack is a representation problem namely it's not
+
+01:02:13
+known which functions on R Ford are possibly reduced two body density matrices some necessary conditions are however known and conditions which I did not know about until recently in particular for fermal and taking the infim over all row which satisfy such conditions as leads in any case to a lower bound and interestingly enough such bound can even in some cases be quite good numerically if you just take the most naive necessary conditions you will get very lousy lower bounds but there are in fact
+
+01:02:49
+lower bounds which will which uh conditions which will allow you to do that now here is I'm just mentioning it I mean there is analogy with the extension problem for the white function however there is also a big difference namely this is always for the CCR or C C algebras and that makes things in a way simpler but anyway a necessary condition is is in both cases that these functions can be complemented to obtain a positive linear functional on the algebra in this case on CCR or C and this is now my last
+
+01:03:24
+or second last transp in the whitean case very little is known about this extension problem and but there is a very simple necessary condition which simply comes from the co Schwarz inequality namely that the fourpoint function you must be able to estimate it by the two-point function and some continuous seminorm here and you can of course then then iterate it because this really comes from a positive definite six point function so you can repeat it and that will uh uh lead to further but of course more
+
+01:03:59
+complicated questions now uh this is uh then essentially the last thing I wanted to say it's just a warning that uh if you just ignore the linear conditions and just ask if when when you can extend a given twoo and a fourpoint function to a to a to a to a positive functional there are example that show that you will always need infinitely many conditions you will never be able to do with with finally many namely it's possible to construct an example of the following kind you can uh construct a two-point and a fourpoint
+
+01:04:40
+function such that you can for a given n you can extend it to functions here F which have at most n components but it so to say carries the Zed of of death in it in the sense that you cannot go one step further so this is what I said you will need infinitely many but even if a complete solution to the extension problem is probably not feasible the search for new necessary conditions might still merit further effort now let me just then allow me to say a few words in in conclusion well I wanted to to give you
+
+01:05:28
+a a review view of some of the facts about the borus ulman algebra which are known to me this formalism has really proved its validity in in many contexts including Quantum field theor on curv SpaceTime deformations uh comparison with u with the uh Forman setting and uh there are uh still uh interesting questions I I just mentioned two one was the bounded bif Fields another is this extension problem here it's not that I'm not working on them the reason for that is not that I don't find them interesting
+
+01:06:10
+it's just that um well life is only finite and and there are other things that I have thought that I I simply simply had to do and things have simply turned out so so that I have not been able to devote my uh my my time to this but I would be certainly be be very happy if somebody would look into this and maybe have some fresh ideas how to proceed okay thank you very much [Applause] I have a question some work with this alas but for the swinger function yes and there was a very interesting paper where you address the
+
+01:07:17
+question which were M sufficient conditions for this finger functions to be moments of a complex measure CRI yes and these conditions look very similar to ones you need to have an operator prod expansion exactly say a few words about that well I mean that was uh in fact on my on my original agenda I wanted to have have a few transparencies about that but uh I don't know I maybe I should talk to you about this in private rather than taking up the coffee break for that but thank you much for mentioning this because this is
+
+01:07:58
+really something which uh yeah I think we we really worked on very hard and we're we were able to to prove a a result that looked surprisingly Sleek at least to us and it was not not quite so simple for okay one more question yeah you had the there St giving a Criterion when field operator had a Sint yes yeah see that that could be applied to let's say w product of the three field yes yes yes in fact that uh that could uh uh probably because you could um uh because you could uh by this approximation method which I mentioned
+
+01:09:03
+yes yes I think that's U well because the wick as you know of course the wick wi polinomial are in general not self adjoined but uh uh and they may even in there are examples in in well that's in in one dimension one SpaceTime dimensions so it's s to say a quantum mechanical example where you even have nonsymmetric defect indices so they don't even have self adjoint extensions in the same h space But nevertheless uh you could still have locality in the sense that bound bound would take the
+
+01:09:44
+polar decomposition then you would get it and um that could there this Criterion could in principle be applied by simply approximating uh it it by by by a good less singular object uh where you could where you would have this this positivity condition and and take the limit thank you again speaker for
+

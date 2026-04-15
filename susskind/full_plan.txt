@@ -1,5 +1,0 @@
-These 10 lectures (discrete systems foundation) — ~55 pages
-4–5 lectures on the harmonic oscillator and particle-in-a-box (the canonical exactly-solvable systems) — ~30 pages
-3–4 lectures on angular momentum and the hydrogen atom — ~25 pages
-2–3 lectures on identical particles and basic perturbation theory — ~20 pages
-Python companion section — ~20–30 pages

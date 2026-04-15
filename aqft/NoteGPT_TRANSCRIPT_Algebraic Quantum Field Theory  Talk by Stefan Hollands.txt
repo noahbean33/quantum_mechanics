@@ -1,0 +1,339 @@
+00:00:08
+of years in the United States and also we heard his name many times this morning so we're looking forward to hearing what he has to say about Curative H field Theory via vertex oper thank you Arthur yes uh thanks uh very much to the uh organizer to organizers Henning and dorota and de LEF and Pierre and all the others who put in so much work to this meeting uh for inviting me and uh in fact giving me the opportunity to uh to speak on something uh on the topic of my choice and um I have chosen uh some sort of
+
+00:00:53
+more mathematical work uh to to present that to you and uh it's uh has this this long title uh here's the the pointer and uh I was tempted to so so it has certain buzzword there perturbative Quantum fi Theory and vertex algebras and I I what I what I'll try to to explain to you a little bit is um is uh how these how sort of um want to present to you a viewpoint on Quantum field theory that I guess was was explained to some extent in the in the talk by Bob wal this morning um but I want to explain it and
+
+00:01:33
+sort of give it a different slightly different twist and sort of emphasize maybe a little bit more the mathematical structure uh behind this so this three cartoon pictures this is a a collider experiment two particles are smashing together I suppose and this supposed to these two are supposed to stand for the pillars of of quantum fuse Theory as as as they are probably viewed by by many people that is one is sort of diagrammatic expansions to to calculate things and the other ones is symmetries
+
+00:02:08
+I mean this is the platonic solids and it's a famous famous uh um drawing by uh I suppose i' forgotten who who's the the artist there anyway so symmetries play a key role in in in constructing models and it's sort of the combination of the two that that gives the whole thing a considerable power but uh this is not quite the view point of this audience I suppose and I want to say maybe a little bit how how they can be married to some extent and maybe shed some new light on this anyway uh here's
+
+00:02:43
+my my outline um I won't want to go too much into this so so there as you know there are different approaches to to Quantum field Theory Q of um a very popular one and a absolutely elegant one in my opinion is the passing integral um it has many many advantages I I think the the the key Advantage is that it's very easy to remember because you know that formula isn't so long and it's it's an integral something we're used to it's a supposed to be a functional integral with where you integrate a quantity
+
+00:03:19
+related to the classical Theory the action of the field configuration over the space of all configurations and uh to get some to get your swinger functions or ultimately Wiman functions you you may want to put in some sort of source term and uh anyway I mean the key Advantage probably is that it's easy to remember and but it's also very nice because it's it's very closely related to the classical Theory and it's I think psychologically it's also um it has a definite advantage that that it's an
+
+00:03:52
+integral after all it's a functional integral but uh integrals are something that that we we grow up with and the fact that is an integral over an infinite dimensional space is not maybe such a big psychological hurdle as as imagining that things don't commute and have some crazy probability interpretation as as is sort of what is emphasized in other approaches to to qu Theory or quantum mechanics and this this this integral is not at all easy to Define I mean if it were then uh then uh
+
+00:04:26
+we we all would be a lot easier of and in fact a lot of beautiful work has been done on this um so particularly in the formulation where you where you continue the the this this lenan type expression to to a ukian signature you you can actually it turns out you can make nonperturbative sense of this expression and um this has led to some absolutely beautiful mathematical work with be with discovery of beautiful combinatorial expansions of a completely new type lots of lots of new tools from analysis have
+
+00:05:03
+come out out of this and this is the work of of glim and jaffy and uh Bridges and uh also John deok and um R so and many other people um which I I won't go into uh the other use of this is that it's quite easy to to um to to formally Drive lots of identities in qu F theory that is you get some sort of understanding of anomalies you yet you can derive things like um word identities or some all that kind of stuff and in a relatively easy way but uh it's it's formal and the third Advantage I I think
+
+00:05:44
+is that this also leads to the standard perturbative expansion if one sort of does the standard split of s into a free and an interacting part and just expands out the exponential I think it is a very slick way to to derive this just by just from this integral this is not the only approach though there's uh people or there I mean I guess that approach U is not so popular anymore but it is has come up again uh as you probably heard in the talk by Ganda where you somehow put an S Matrix on top of everything and you
+
+00:06:20
+derive try to dve things from an S Matrix and that too has has nice uh advantages I mean it certainly has a clearcut uh relation to to scattering experiments which after all are uh you know are the most interesting experiments I suppose done with Quantum with Elementary particles um the S Matrix if you if you add in the magic formula of Ls Z and galman in low you you get sort of nice graphical expansion for this and um also it's used in uh some people for example in string theory for a long time the S Matrix was all had
+
+00:07:00
+and you didn't have any sort of analog of local Fields so so some people certainly would take the view that the S Matrix is the key thing to consider why we are here we here not to celebrate these two ideas we're celebrating another circle of ideas and um which I think can be called algebraic approaches because um um because actually after all um we've already I think heard in all those talks I mean that this these uh approaches they have many facets and many different different variants thereof um one of the well I
+
+00:07:39
+think I personally like um obviously we all know sort of the the style of this these algebraic approaches that was uh pioneered by Rudolf har and then carried forward by many other very brilliant people there's another there other variants though of this I think that also can be thought of as as in essence algebraic and I think those um those uh those approaches are not are quite used actually in in by by many people and they have to do with sort of basically putting the operator product expansion
+
+00:08:17
+uh to uh well taking that to take the uh the center stage in the in the in the uh in the in the in the scheme of things and um that was basically proposed by Wilson and one of his his very famous early papers uh is called the um uh non I think it's called non lagrangian models of current algebra so he I think that title as that title suggests that he too probably thought about some thought of this as some sort of algebraic structure that um that uh that um that is behind field Theory at at this time probably current algebras
+
+00:08:54
+um were were very popular so I think that's that's the current algebra bit I think that's not so much the the key thing but it's sort of the algebraic twist the algebraic um flavor of this this expansion that that um I think puts it in this this category um anyway so I think AR though um well he had another as you all know of course he had another view of this and he thought in terms of sear algebras and and Nets of of sear algebras and I I think really um this was a a great idea and you know
+
+00:09:30
+probably still very much ahead of of of his time certainly and probably still ahead of our time in a way and I think one should maybe um be open to to to the idea that um there there are many ways I mean if if I think the key thing is that you think of fear theor as as having some sort of algebraic um description but but what exactly that is I think one should be maybe quite open about at this stage anyway so in this talk I want to focus uh on this sort of operator product expansion and what what the algebraic
+
+00:10:06
+content is of this and um so uh this expansion I said already was proposed first by Wilson and um but then um I think his was just a just a proposal and uh then simmerman and um and together also with Wilson in uh some very famous papers they they showed that this actually works for for in perturbation Theory which is is actually very non-trivial thing but anyway the the idea is basically and I think that was uh that was already U pointed out in the talk by Bob you have a sort of a a typical product of of Point like Fields
+
+00:10:46
+so so you're doing dealing with Point like fields in this approach mostly and you take an expectation value and um so these labels a here I think they I'm using a slightly different notation here label a yes so by fa I mean this is a generic symbol for composite field so you may think of this as something like d mu5 t to the 7 or t muu or if you have a current J mu or J mu J new whatever so whatever comes to your mind um the label a is supposed to differentiate between these these all these fields and also
+
+00:11:38
+should be S of as incorporating any tensor or spinner or other indices you you have and then the idea is you this this operator expansion is some sort of a factorization so you have you see that um you say that this this kind of complicated function factorizes in a sum of products of of So-Cal coefficients which depend on the field species that you you're talking about and certain other quantities which involve the state and um these things are supposed to not depend on the state and so so that all
+
+00:12:15
+the dependence on the state is really in these quantities here and um it's sort of but as this this Wiggly Tilda suppose it's called Suggest is not usually thought of as a as an equality mainly because um because one doesn't really expect this thing to converge and basically the idea is you have um an expansionist going on here but on in physical terms the expansion parameter so there a small parameter is not something like a coupling or or or H bar or something the small parameter is in a sense the ratio
+
+00:12:53
+of the typical distance here between the points and the energy energy scale of the state so you want that distance to be much smaller than the energy scale of the state and then that's a small parameter and then that's that's a good expansion anyway there has been a lots of applications of this this expansion I'm sort of uh in Yang Mills theories it's applied to to deep in elastic scattering because um these things can be calculated very reliably in perturbation Theory whereas these things have non
+
+00:13:31
+preservative information which can't be calculated in any way at all and so you just say that this is something you make some reasonable guesses for or you parameterize you just take this as three parameters and then you get a nice expression for the endpoint function say of currence that's the idea um it's also extensively used in in two dimensional conformal fear theories where where this operator expansion also takes a central place so um I want to then uh basically take the Viewpoint that so these things
+
+00:14:08
+are like the structure constants of an algebra or structure functions or structure distributions I'm not very precise at this Sage as was um advertised also in the talk Bob and I want to I have the same philosophy here and um to for the to appeal to the mathematicians I'm going to do something that they love and I use an index free notation which all makes everything look much nicer so instead so the C so I I declare that the fields they're just names they're not you're not supposed to
+
+00:14:42
+think of them as operators or something just as abstract generators of an algebra and so the these span you declare them to be basis vectors of an abstract Vector space and this thing is then for each configuration of points X1 through xn a tensor or a linear map from the N for tensor product of this space V whose elements whose basis elements are in one to one correspondence with the field to to V so the V here is the upper index here and the other copies of V are the lower lower index here so I'm working in a ukan form in a
+
+00:15:23
+ukian version of quantum F Theory I'm not working on curved space at all in this in this in this talk just um I think it can everything can be generalized to curved space but I just want to leave out that that complication and um so I want to basically say that these things are the data of some of some mathematical structure and so these data basically are the are the data of some sort of algebraic structure I don't say in algebra it's something like an algebra um and so they they're supposed to have
+
+00:15:55
+some some nice properties some covariance under obvious uh representation of the D dimensional ukian group on this space and then you have some if you flip if you apply a permutation to these tensor factors and points you're going to have some local commutativity or anti- commutativity which is think of this space v as a graded space really space V is graded in many ways one way is a sort of a a Z2 Bose FY grading and then you want them to be defined for non-coincident points and they want to be you want them to be
+
+00:16:33
+analytic real analytic functions in in these n variables from RD and you have some notion of heran adid it's another operation on this V which is supposed to be consistent and so on the main point is what is the analog of the associativity condition and um that's what I'm going to describe and I want to see how this leads to a new formulation of obervation Theory and how it can be used as a constructive uh constructive tool and so what is this consistency condition I think we've heard about this
+
+00:17:08
+this morning I'll tell you again so the idea is um so it's a Uris derivation it's not a mathematical proof you want to just arrive at some condition now that you can reasonably impose so you just say you have let's say as usual with some sort of associativity you you don't consider the product of two things but of three things and you have three Fields letter at three different points and then you you can place the brackets in different ways as you do when you uh try test an
+
+00:17:40
+associativity law and um so what the bracket means here is that you perform the operator product expansion of these things and then subsequently you perform the operator product expansion of the result with this and this is the other way around and you just say this this this should be equal and so if you write it in terms of these coefficients you're going to get a quadratic condition which um like everyone like the has the same flavor as the jacobe identity in the algebras or something just that it has
+
+00:18:13
+these additional dependencies on the points and um for because um well for reasons um because of these um sort of hierarchy sort of of energy and things like that that I briefly alluded to you you only expect this to converge on this domain so R12 is the ukian distance between point one and two and so one so this is supposed this is an infinite sum of all Fields C and then um this is supposed to be an inequality on this domain now if you're not in this domain you're not expecting any of the sums to
+
+00:18:50
+converge so so it's really only an equality onate so as the the philosophy again in this talk is to say that now this you know now you could say la now maybe Arthur jaff would say he has some he has the path integral and he he he makes sense of it and then afterwards um if I come and say I'm very interested in the operator product expansion he proves that there is such an expansion and I don't want to do that I want to say that um this this is supposed to be my starting point so these things are
+
+00:19:22
+supposed to be what I have to calculate and I forget about the whole the whole rest and then um that is the the idea is then you then in that way if you're given these things you give you give them the algebra okay so now this is the same consistency condition written in this coordinate invariant so this index free notation I think it's a lot easier to remember and now this e ID is the identity on this space V and this is um viewed abstractly as I said before as a mapping from V cross V to V because this
+
+00:19:56
+has two down indices these are these two copies and one up index and that's this copy it's an index fre notation um and it's again an identity that's valid here so this is my starting point and um I want to say that um my viewpoint here is that if if you can find a solution to this quadratic equation you've constructed a Quantum field Theory that's my viewpoint just as if you can find a solution to the jacobia identity you've given a Lee algebra right so is that's kind of the
+
+00:20:30
+the idea and um so normally in algebra you ask you can ask um you know this is associativity AB the same as ABC here and you can you can for example ask um whether you sort of higher associativity conditions are independent of this one or whether they're actually new conditions you prob when you in your sort of undergraduate algebra course I mean that's something you prove that um once you have this three um this uh relation for three um for a product of three guys you can you can um you
+
+00:21:08
+conclude that this such equations automatically hold so they're not new new conditions but um in this in this context it's actually not so not quite so clear um what happens and um actually it is though true that in some sense there would be other higher order associativity conditions but um in some sense they can be all reduced to this one so so mathematicians call this a coherence theorem so it's a me Lane coherence there are tons of such theorems in for algebras that's the simple one and the more more General uh
+
+00:21:42
+mathematical structures with like algebras where such theorum holds and here's another structure where where this kind of thing thing holds okay right so now um interesting question is of course how on Earth you going to get any solution to this because um this is a quadratic equation if you think of Le algebra you say you you take you want to construct a Lee algebra you give yourself the jacobe identities with f a c Etc the structure constants the jacobia identity is a sort of a quadratic equation or system of
+
+00:22:21
+quadratic equations and if you just count equations and variables you see it's a very overdetermined system and it becomes more and more over determined um when the the the dimension of the of the Le algebra increases so yeah so you have basically equation when variable counting and so this is supposed to be an equation on in some sense an infinite dimension of space so this is supposed to you're going to get very lucky if you at all if you're going to get any solutions to this just from this naive argument and
+
+00:22:51
+anyway you know from the algebra that to nobody finds a Le algebra by solving the jacobia jacobia ident for the fbcs but what you do is you realize somehow your your Le algebra has a symmetry of some other object like a quadratic form or something and that's how you find them and so to I think to just approach this problem by trying to Brute Force find a solution to this is just going to be completely impossible so the idea is um one idea um which you can you can have is that suppose you have one solution so um
+
+00:23:28
+certainly you can get some solutions like because free Fields provide solutions to this equation and conformal field theories in two Dimensions provide Solutions suppose you have one Solutions then a natural idea is to see whether you can find any nearby Solutions so um so what does it mean suppose you have a solution to this equation that depends on a parameter Lambda so you might think of this as a coupling parameter or it could be actually something like a large n correction to a large n limit so it
+
+00:23:59
+would be 1 / n it might be H bar is not really um said at this point what it is so um so suppose you have a sort of a one parameter family of such coefficients and then this they're going to satisfy this consistency condition for all Lambda and then you can ask what does that mean for these tailor coefficients so to speak of this so the idea is you have the zero order one and you're trying to find the first second order so on to in in such a way that this sort of at least at in the sense of
+
+00:24:35
+formal series is a solution so so that is what is said here this should be satisfy the order by order version of this condition here so the low low and the idea is the lower order condition to some extent determines the higher order conditions and um to get some sort of it's nice that you can get some sort of more algebraic description of this problem and um that works in terms of a ring I mean it's not surprising that some chology rings appear here because they're always associated with
+
+00:25:11
+deformation problems of algebraic structures um so here's a ring which is uh defined as follows so um so we got step back and we just say generally let's consider uh chains that's how this is set up so these are functions that depend on X1 X2 xn analytic depending on these tens of linear maps on for each given X1 xn there a linear map to this uh between this tensor power and V and DN is some domain one can write it down what it should be and then one introduces a linear operator on these things and this
+
+00:25:53
+linear operator is defined in terms of the zeroth order operator product coefficient so that's a you're supposed to know and that's going to Define your differential it's some sort of formula like this uh very similar to the H Shield differential and the thing it's it's done in made in such a way that b^2 is zero so you appli b again to this now then um because of the consistency condition at Zero's order b^ s is z so b^ s0 is is the zero or consistency condition in a
+
+00:26:25
+way and then you say well now let's look at the first order consistency condition right so you have a condition that involves C1 linearly because the original equation is quadratic so at Zero's order it's satisfied then at first order is going to give a linear equation for the C1 that will also involve the C not and if you look at it it's precisely that b C1 equal to zero so um right so you can say the first order deformations are the ones in the kernel of b um that's not quite the
+
+00:27:02
+whole story because you see if you have an algebra you're asking for deformations what you can always do is you can relabel your generators and write the relations in terms of the new generators they may look quite different but of course you haven't done anything really um so you really want to mod out by this type of trivial deformation and so what you do is a deformation in this Quantum field series setting it's just the endomorphism Z from V to V there's lots of gradings and everything there as
+
+00:27:34
+well but should all respect that it's not so important anyway so if if if the new deformation if the deformed solution just comes from def Rel labeling the generators of your original Theory which is a very boring thing to do then the C1 you can see looks like a B of A Z1 of such endomorphism so you want to take those Solutions but mod out by these Solutions these Solutions are automatically solutions to that too because b^ s is zero so then what you do mathematically you take this you look at this quotient
+
+00:28:09
+space a standard construction and this is called a a chology ring and so you can say that the first order perturbations of your operator product expansion or my view is the field theory is an element of H2 yeah now you want to go on and say well first order perturbation theory is nice you will certainly want to go to arbitrary orders and then you see you can do that too and you see that the condition you're going to have to solve is of the form b c i i is the I order perturbation you want to
+
+00:28:43
+find and given equal to some Source W where the source W is given by the lower order perturbations some complicated expression now you check automatically BW is zero so this is certainly a necessary condition for this equation to be true but you want this basically says that this w i which is what you got from the lower perturbation is exact so wi then is an element in H3 because it's closed but if it's non not exact it's a non-trivial element in H3 so yes the C's yes the C's are are linear
+
+00:29:26
+maps from V * a to V oh they're all two points so yes you see the B the B is going to increase the so the chain complex is sort of has some some the order of right so it's B bc1 has order has three so the three here is not the order of the perturbation here it's the fact that this is a three form so to speak yeah so the source of this equation is a three form because C I already was a two form that's the H3 yeah okay so this if this is is a non-trivial element you're not going to
+
+00:30:11
+get a solution to this equation and you're stuck you're not going to get any further and that's why you call it in mathematics an obstruction you're not not going to get anywhere and the idea is that um if you did this for gauge Theory um which had uncurable anomalies then this would stop at pretty low order yeah so then that would be the sort of interpretation of of this so is it it's an anomaly yeah so physicist call this an anomaly something that tells you the quantum theory doesn't exist yeah so you
+
+00:30:43
+can't go on at least non at least perturbatively yeah okay so now you want to also do gauge theories gauge theories I want to mention this because um that is after all what people are really interested in and one wants to really see whether this naturally fits into this and um of course what is a gauge Theory I mean I haven't really said how you get the C's what is this space of fields or something but um in a typical Theory like um um Yang Mills Theory you have what is the space V is the space of all
+
+00:31:19
+composite Fields but you want to include also some some auxiliary Fields some gauge some ghost Fields so you take a mathematician would say the free commut or graded commutative algebra given by all formal expression of this so D is sort of a formal differential and then this could be an AM mu field a ghost field or uh that kind of thing and then on this space V you define your BS transformation that's the standard formula for the BS transformation in a nonan theory it depends also on Lambda
+
+00:31:53
+and it has also The Marvelous property so here this is now a la a map from V to V and it also has The Marvelous property that it squares to zero we have another differential and you want to express the fact that your theory is BRS invariant so the idea is that the operator product of bis so in your mind always replace B invariant with Gauge invariant so the idea is the the product of gauge invariant Fields give gauge invariant Fields so if you do if you say what this means in terms of this s is this
+
+00:32:28
+condition here all right so in general if you want to step back and see what's the general structure here you just say so s is some map from V to V squares to zero and it it anti commutes with some sort of bmy grading operator that's the abstract properties of this B differential and this is then gives an an a sort of a compatibility condition between the C and the S and to make this into some sort of chological addition you introduce another differential now capital B and it's sort of given by this nice formula
+
+00:33:05
+here and then if you look at this what this you get you got to get b^ S to zero and it anti-c commutes with the B I had earlier this one here there a kind calculation bit longer not so difficult so what you can do is you can form what is called the double complex so the diagonal complex take the sum then this is going to still Zero by the binomial formula basically and then what you can do is you can discuss simultaneous the BRS invariance and this consistency condition in terms of this double complex s for okay and uh then you can
+
+00:33:46
+just combine everything in one so that's the that's a mathematical idea okay so now I've said that uh my viewpoint is quantum Feud theory is a is the operator product expansion the operator product expansion has some properties but the key one is the associativity law which takes this form I wrote and then if you ask for perturbations you get sort of a chology interpretation or formulation of this what what this is but um chology is nice and I told this to you because I thought it was maybe appeals to some people's
+
+00:34:24
+sense of mathematical Elegance or something I don't know I mean it's all of course very education dependent but um it doesn't really I mean chology is nice if you have some way to calculate chology Rings like um exact sequences um things like that um and you can write down some exact sequences here but I don't think I wasn't able so far to directly calculate let's say you start with a free Theory directly calculate these Rings parameterizing the deformations from some sort of exact sequences which
+
+00:34:58
+you can write down this is not a problem but um I wasn't able to and I think it's more like as I think maybe also John said in his talk this chology is really more a language here and it's not really I don't see I mean I have some ideas but I don't see it's not obvious to see how how this helps you with the solution of the problem of actually finding a solution to this big consistency condition here even curatively yes this looks like the entire cylic phology and your solution would be the J
+
+00:35:32
+co uh yes I yes it's though not um I think it's a bit different because it doesn't have the cyclicity type property I mean it's a we can talk about it later I I also thought that it might be I know what your your your C your cycli hology I think it's something different though but um it has many things in common though but um all all right so now where was I so uh I want to put another Twist on this and um this uh was noted by myself and uh my student H alberman who who did the part of the
+
+00:36:11
+work uh with me that is now going to follow so PhD student and um so what is this t and turned off again all right like in a theater all right so you just repackaged this a little bit and um it doesn't look like much really uh to start I mean you just say now this is an object with three indices it depends on a on two points but if am I a translationally invariant situation it depends on the difference so I just put in one point and then I just say well for fixed a this is an object with two indices so
+
+00:36:55
+it's a it's a it's a linear map it's like a matrix and so I just say for fixed a I call this Matrix y so more precisely I mean if in some sort of braet type notation if basis vectors of V are called VA then the right side is defined by this left side yeah so it's a definition of why for each by a where each choice of basis you get an endomorphism whose Matrix elements are given by this it's just like you pass from a IJ Matrix notation in sort of undergraduate algebra to a or
+
+00:37:32
+something yeah this that kind of thing so so um and because I'm lazy I don't want to write F A I'm just going to write a so this is supposed to be basis Vector now and and I call these vertex operators why do I call them vertex operators so you see these these C's I still haven't told you how to get them though like this this should be familiar to you in algebraic Quantum fi Theory you have lots of things but nobody tells you how to get them um this satisfy this consistency condition and clearly you're
+
+00:38:04
+going to get a corresponding condition here for the Y I just what if you just ask it's just a completely straightforward exercise just with indices and that's the condition here so um it's on this domain you have this condition so now y depends on A Spacetime point x and a vector a vector representing a composition field and if you multiply them you get this so it's a quadratic quadratic type relation as it should there are also other things you get um so this is you can make this as
+
+00:38:40
+some sort of fancy definition but basically for us that's the condition you have on this domain here same condition just different letters of the alphabet so to speak but it it looks a bit different and it sort of gives you gives you some ideas what you what you can do and that's that's what what was useful so why is it called vertex algebra it's called as that name because um um there is a sort of a branch of mathematics that or sort of constructions in mathematics that um have called vertic algebra they very
+
+00:39:14
+famous and um have been used mainly in two-dimensional cfts and um I would say exclusively and uh they uh they basically postulate a relation that's forly equivalent to this one so I say formally there's some subtle differences but um I think it justifies this the same name so but I don't assume conformal invariance or two Dimensions or anything here right so I still want to C get some solutions and so also the only thing I could come up with at least ptiv is to say well after all it start with a free
+
+00:39:52
+field Theory and what on Earth could you have other than a coupling constant so you just say well let's suppose classically I have a field that's described by this nonlinear equation Lambda is my coupling constant and I try to calculate sort of the the vertex algebra associated with this theory perative in Lambda so zero is order you have the free vertex algebra so the free operat operator product expansion of the free massless Bose field on idian Space well known you calculate your y's from
+
+00:40:24
+that just an exercise and but but you want this one so if you if you are if you say that this is sort of a an equation for composite Quantum Fields you can multiply by another quantum field and you get a euristic equation that you believe must be true for these vertex algebra it's just it looks like exactly the same equation but it's comes from the op so the idea then is to say that well my perturbation answers is this so I'm going to write this as a form series and Y not is my Zero's order term
+
+00:41:02
+and then that's the free field and then I order contributions and I want these things to be true that if I want my consistency condition I now write it straight away in terms of the I order contribution and I want my feeld equation and that's this because you see Lambda gives you you know increases the order so to speak that's why you have IUS one here and I so my claim is that so before I had just this but now I also have this and my claim is that if I put these together I get really a scheme for for calculating
+
+00:41:39
+these perations and um how does this work so basically this is the equation to look at first so let's say you have the Zero's order guy so I is one then by inverting block this is La plus operator I'm bit sloppy here this not the wave operator I get y1 and this is rise to an obvious reduction but the thing is so that's what is written here so why not if you have that the free Theory you get this but um that the problem is now you want to go next you want to repeat this and now put y1 here and Y not there and
+
+00:42:21
+um but you don't know y one of the composite field V cubed you only know y one of V so it looks like you're completely stuck you're not going to go anywhere with this and now is the trick now is where the consistency condition comes oops so let's just do f^ squ first you show that um y1 squar and next you're going to do y1 Cub or y1 squ first using the consistency condition you can write it as some sort of limit like this and on this right hand side the thing is you know everything already
+
+00:42:55
+so you you have a way now you do pi cubed Etc similar formula so this is sort of the formula and these things you subtract they just the left hand side the right hand side of this consistency condition to the appropriate order that's relevant in the limit they're called counter terms they not counter terms in the sense of renormalization theory they're more like what Arina said this hardar subtraction and that's sort of the generalization of this subtraction all right so you do this and
+
+00:43:27
+the idea is you do this and you start from the free field and you you uh you crank out more and more terms and you see what you get and you define a Vertex algebra in this way for this Lambda Pi Cube Theory Lambda 54 would be the potential okay so first you have to find some decent parameterization of the space of composite fields and so it turns out it's going to get a complete mess if you just if you don't have a nice Bas is there and um what you do is you take spherical harmonics and D
+
+00:44:02
+Dimensions you put in a derivative operator and then that gives a basic field with derivatives and then if you take products of this you get all fields and then your your LM are supposed to give you the the labels of the of the composite Quantum fields and um what turns out to be convenient is to think of this space v as some sort of a fox space as nothing to do with with the fox the true Fox space of the you know the true Hilbert space it's just a a made up Fox space of the whose elements are in one to one correspondence with
+
+00:44:38
+your composite Fields anyway it's convenient to think about it that way and then this that's the rule so this one operator plays the role of the vacuum and then this is of the B plus by definition creates this and this annihilates by definition that and you impose this so you you generate you you give your space the structure of a fox space certainly nobody can keep you from doing that that's your business it just turns out to be convenient and then the real the good thing is this should be a
+
+00:45:09
+why not the free field vertex operator then has a nice simple form in terms of creation and Annihilation operators yeah so I should emphasize this is not a new Theory Quantum field Theory I'm cooking up I'm just taking the standard free bosonic field in ukian dimensions comput op and then I repackage that information in the Y and this is what I get I I don't make this up or something it's something you calculate with some meod there are some definitions yeah s are these harmonic
+
+00:45:40
+pols as they're called or spherical harmonics and the dimensions right so this is your starting point and then here's your Fe equation to get the first order now you have some R is the radial coordinate you have some laas operator to invert on this and now the next trick is you just invert this algebraically so you just uh find write down the inverse on the class of functions that are radial Powers times harmonic pols then it becomes a purely algebraic problem just like inverting the laas operator on
+
+00:46:15
+e to the ikx is very easy right so it's something like that and um right so you do this you go to second order you do some similar thing you could do it for a general interaction so not just just a convenience here anyway you get some sort of iterative iterative process in that way where um where you always get some the i+ first order is always some triple product like this involving lower orders with the inverse of the LA plus operator and some counter terms which can be a bit complicated and I didn't write them
+
+00:46:57
+down so um if you look at this expression I don't know if you already very tired or something and you don't want to look at it anyway so that's if you look at it and you a bit familiar with this type of expansions you immediately see that that's how you should think about it it's some the three factors here are the roots so to speak of some sort of Elementary tree and this factor is the new guy and then obviously if you repeat that you're going to stick these things together and
+
+00:47:29
+you build up a tree yeah um that's the origin of the tree the trees that appear in sort of um you know if you do findan diagrams that you know without loops and you're going to get tree diagrams it's kind of that kind of tree that appears here it's uh it's also related to this uh um gavoi Nicolo trees and some people probably know this kind of stuff anyway so you build up a a big tree and then you get a representation of the ice order vertex Operator by some of a sum of of trees and the the uh the
+
+00:48:07
+uh incidence number of the tree is is as usual given by the type of the interaction right and then you work out what this La plus inversion and all this what this what this amounts to and the death is a somewhat of a headache um but um you play some nice residue tricks and you do various things and you get some sort of rules for the N order perturbation of this vertex operator and so the rules are you write down lots of trees with n vertices and in fact all of them and then you have lines and the lines carry
+
+00:48:44
+some uh these are some sort of hyper geometric functions with some certain factors and the vertices carry some sort of Delta function these indices new I are complex numbers then you have some Delta I there sort of small numbers you take later take a residue of in those you get certain things for the end points of the the leaves of the tree so to speak uh well it's like f a bit like Fineman rules um except that there are no no Loops at this stage just just trees and you have uh this is a bit like
+
+00:49:19
+a propagator this just the angular part it's okay right so you write down all these factors then you integrate over the these intermediate points over a sphere you integrate over these these numbers of complex numbers you take some residues in the end and you take some sums and you get a big fat expression you would never guessed this would be the solution to your consistency condition in the first place but that's what you led to um this is an example doesn't look very nice yeah so uh these are basically residues so we
+
+00:49:56
+you have a four-fold which you have to take in the right order here are the your angular integrals and then you have these these hyper geometric functions and a lot of uh creation so this would be one contribution to this vertex operator at order three okay now there's another there are various other representations which you can derive for this uh there this one is the one in terms of hyper LeAndre functions really these p then uh there's another representation which is purely in terms of sums and
+
+00:50:33
+that gives functions of generalized hper geometric type and I think that together that I mean so the idea here is you have your your your your operator product expansion your consistency condition you find a perturbative solution then this perturbative solution is given in terms of certain special functions like like a class of sort of thing things you can think of as you know quite generaliz type of geometric functions but the consistency conditions give you a lot of functional relations between these
+
+00:51:03
+functions you you get that and that's in that that sense they're special I think anyway if you want to get a taste of this so you get this this is a matrix is yet another basis so why is it called hyper geometric well has some residues here as well you get always get a gamma gamma gamma functions everywhere is that kind of that typical type of hyper geometric functions you you derive that take some take some time anyway there another representation which is um in terms of um graphs that um that are
+
+00:51:37
+actually Loop graphs and um they arise in a certain way and what you get is some sort of triangulated surfaces and um your vertex algebra as you know operator has sort of basically three indices but your operator product coefficient c a b c and this can be written as a the sum of surfaces with holes I mean that idea is quite um closely related to to to what you do with fan diagrams is sort of a Genus expansion but then you also have instead of the um angular Integrations you have on these um triangles you have sort of
+
+00:52:15
+things like 6j symbols for for S so s o d 6j 9j and and so on that's a and um this makes it a bit similar to to what people in Loop quantum gravity it what I've seen there these spin Foams which are also structures like this which are labeled by by representation data so but I don't in this case it's uh the origin of these six or 9j symbols are just the of angular Integrations but there might be some interesting interesting connection I don't know these are certainly not topological models or
+
+00:52:52
+anything right um I wanted to uh I I think uh since you probably all hungry I wanted to uh conclude here and I wanted to just try to emphasize again what I what I try have tried to present to you um in the spirit of uh the approach that uh Bob presented to you sort of joint idea we I I thought um what was what was a good idea was to take algebraic Quantum field Theory maybe more more seriously than algebraic Quantum field theorists and and take it really as a constructive tool so you don't say well
+
+00:53:32
+you do all kinds of other things auxiliary constructions and at the end of the day you get your algebras I thought you just start directly with the algebras and try to compute the algebras directly that was sort of the philosophy and you have to get a handle what I mean to compute an algebra I mean what is this I mean and right I so you have to get something to get your hands on that you can that you can do things wor and the only thing that I could think of and Bob I mean Bob we together was this
+
+00:54:02
+operator product expansion and um and that turns out when combined with the field equations and when combined with this consistency conditions does really allow you to to to do calculations and you see this very not very nice but uh well nice depends on your Viewpoint again but uh um very explicit formulas right so so um so this is what I'm saying here so perturbations can be characterized intrinsically that's this hawell chology business I think it's a nice language as of now it's not doesn't give you particularly
+
+00:54:39
+new methods to actually solve the problem but um one nice thing I well there the issue of renormalization and that's interesting here because that's somehow taken care of automatically that's the idea because you automatically get counter terms it's not something you have to impose or something from the outside it's it's built into the whole thing from the start I like that about it um yeah so I I think um what but what why I really thought this might be interesting was that um I too have the
+
+00:55:15
+dream to one day win this million doll clay prize and that unfortunately asked for non-perturbative solution and um I thought with Bob together we thought that maybe um um because this operator expansion has sort of less information really than the whole thing um it also probably has less less of the the difficulties I mean all this uh physics that about of of qcd engage theories is really in in in the vacuum State or the states and the states are not you are not um considered when you do the operator product expansion at the first
+
+00:55:50
+stage so we thought we had a better shot at maybe getting another way to to do non-perturbative Quantum field Theory um I must say that as so far I haven't really been able to I I certainly have some ideas but I haven't really been able to fulfill that promise I um except for um and I'm I'm sort of not sure how far one can get really get a non perative solution to this this operator expansion um it's certainly possible to get numerical bounds using something like the Wen Wagner Pinsky flow
+
+00:56:31
+equ but it's not uh I didn't have a a good idea as yet how to do this nonp conservatively and uh I guess I have to wait for the million dollars another 50 years and maybe uh uh anyway so this I want to conclude here I think I'm also used up my time thank you very much [Applause] thank you for a very beautiful talk are there questions many uh you say renormalization is not needed but can you impose normalization conditions yes so um so what is there of course is is the sort of finite
+
+00:57:19
+renormalization ambiguities if you like so so and um that takes the form of field r definitions so the idea is that um if you were sort of a perturbative guide using sort of findan diagrams you'd find these finite um ambiguities and the statement would be that they can all be absorbed into redefinitions of the coupling constants and red definitions of the fields and um those fre that freedom you have here anyway so I think probably that's the same amount of freedom but I I quite frankly I we're
+
+00:57:57
+only starting this I haven't really I cannot prove it but yeah you seem to have the freedom but you have to be able to impose the condition low energy Norm right but um I think the I think the conditions that people usually impose I mean they relate to States and um what you basically want to say is something like um I think that's a really good point and uh I think lots of the so H yes so how do I so um so in the lran or I wrote a field equation but of course you can write Lan something you
+
+00:58:45
+have four now I put in the mass just for for def so you want to somehow say that um this parameter m² is the physical mass of the of the theory right now the physical Mass really is defined not by this bogus thing in the lrin because that's just your starting point your physical mass is defined by you take some of P of X at sort of a space like separated points in the vacuum say and you say this goes for large distances this goes like minus M put call this MP M physical yeah so this is in position space you can write
+
+00:59:27
+it in momentum space of X1 so this is the definition of mass and you want to the renormalization condition is that this m that appears in your expansion be equal to that M that appears here yeah so that's the renormalization but you clearly see this going to involve the state right and so so with the other renormalization condition of this Lambda now I don't want to do that particularly because um I want I I I don't have states to to play with in the beginning and I think in in a way that's an
+
+01:00:01
+advantage because there there are lots of complicated physics going in the states that I don't have to to deal with so I just I can make up some complete bogus renormalization condition where the beta function vanishes up to its first three coefficients or something that's that's all okay in this approach yeah so so um I should say um in a curved space I mean this is not in a curved space but in a curved space you wouldn't be able to write this down in the first place anyway so I don't see any partic I mean
+
+01:00:33
+it's very practical because an experimentalist wants to you know he has some formula with M you know and he wants to make sure for cross-section he wants to make sure that m is actually the physical mass and not some some uh some parameter that's related to that by some complicated function but um from as a matter of principle I think that is not so not so really that important there other questions yes well when you have a field equation like the 5 Cube equation to start with then it entails other field equations
+
+01:01:07
+like the conservation of the stress energy tensor or what so in your list of fields which you supposed to be a basis of your box space there are actually linear relations among these these objects yes and some basis vectors are missing or yes depend of each yes so is this this obviously prod some problem it doesn't produce a problem it produ yeah it doesn't produce a problem it produces the difficulty I mean it uh okay so the real way to do it and I is to work in a in a formalism where like so my I think what
+
+01:01:51
+you're referring to here's my space of fields so now I might in this space of fields there might be a field like 5 7th log vus Lambda Cub now that's my field equation actually and so so you better say that well if that's supposed to be zero you better say that the field V block V is is the same as the uh it mixes the order that's right so so so the uh so the way we do it is that this thing by definition never is in in there so it's always this is the always the representative right now the right I
+
+01:02:35
+mean a better way I think this is a just a for because we started doing in that way and the better way I think is to work with everything don't Factor by any ideal I mean basically I heard someone said from the audience Factor Rob yes yes so basically you affected by an ideal but the ideal um basically has to come out of perturbation Theory itself because of the all these anomalies and something so better way to do it is to not Factor by this ideal and then you there's a nice way to deal with it when you introduce
+
+01:03:09
+yet other auxiliary field so-called anti fields and then you work with everything and at the end you you factor by the ideal using some chology stuff again yeah so that's basically what you do and but the the the differential there this an this new differential that takes care of this der relations that's gen that's computed so to speak in the construction process and then in the end you just yet another you get a third differential now already and you have no difficulty to introduce a force and so on but um I
+
+01:03:46
+didn't want to do it but that would be the right way to do it so let me ask a question um I I asked before about this chology yes seems that your diagrams also reminded me of the diagrams I saw Dirk ker draw when he explained his Huff oh what is the connection yes so uh yeah I think um right so many people draw diagrams of course yeah so so uh um not aome everything yes and um it's not really that surprising you get trees no I don't you can yeah you well yeah you can I mean these counter terms
+
+01:04:38
+can be organized by a hop Algebra I mean the combinatorics of these terms that I've written in dots or something they can be their combinatorics again is governed by hop algebra um yeah you can do it that way I don't think you get that many insights from that but um if you if you so like you can um just combinatorial level yeah so but you're completely right I think yeah it's more like the H algebra of rooted trees I mean that's really no I mean I don't know I mean yeah I don't I think con crime
+
+01:05:24
+stuff that's interesting um I I don't think in this context you you can introduce hop algebras to you know to to make your combinatorics look algebraic I mean say but I don't think it gives you that many in additional insights I would say into the problem are there any other questions yes you applies this to the ukan framework frame yes what is the content of your your well it's not really the I mean the um it's not really I I mean it's more like um because you have a reference point I
+
+01:06:11
+mean it's not really an Al actually an algebra in the in like it's some structure that's reminiscent in many ways of an algebra so um so it's not a bilon I mean you really talk about that I mean one way to see this is you have a if I write this this is so here's my consistency condition which you you so you would ask um why I mean aan would mean you know I can flip them that on to the other side but the problem is that's only going to converge this this is this involves a domain
+
+01:07:02
+issue you want to apply this to a vector C let's say and um for this to be defined at all it is necessary that the modulus of X be greater than the modulus of Y otherwise you can't even write you can formally write down the other way the other thing but then it just it's meaningless it's not in the domain yeah so um so people in vertex algebras in sort of two Dimensions they get around this by saying well they're not actually doing analytic fun and not working in the category of analytic
+
+01:07:37
+functions but they're working in a category of formal lauran series um and in that category you can actually turn this around and you get a slightly different version of this but you can't do the category of formal lauran Series in for generic field series because the coefficients have singularities that are much more General than you know one / X or one/ X squ I mean you have logs you have all kinds of things so you can't so I think um yes it is in some sense it's not clear it's not
+
+01:08:12
+really I think it's misleading to call it an algebra as you know it's not really fulfills the axioms of algebra as you so so read them on page three in in some algebra book or something but it's uh that's why it's called yeah but um if the As for the analytic continuation that can be easily done in practice because then at each finite order this y involves R to some maybe minus 10 and l r 2015 and R is the ukian distance now just to make that into the lenan distance with a i with the right I
+
+01:08:51
+ileon and you that's that's that's it basically h so I think that you can take uh the constructive field Theory examples in two and three dimensions as ex which are non perur oh yeah yeah I think so too I mean the question would be to really verif from the cluster expansion what the local yeah I think so I I I we've we've been yeah yeah I I think so too but we would have liked to get some our motivation was not that we thought um you know motivation was really um if you had a a really
+
+01:09:28
+lorenzian um or so was to to look at this from the other side rather try to you know at the end of the day construct the field Theory from sort of a purely algebraic Viewpoint and then maybe uh to compare to to to what you and um all the other people did um so it's complimentary I think but it's the same Theory one is talking about after all yeah are there other questions let's thank the speaker for very [Applause]
+

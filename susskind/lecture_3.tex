@@ -65,9 +65,11 @@ Given a basis $\{\mathbf{e}_i\}$, the operator $M$ is fully characterized by its
 \]
 This is a concrete complex number obtained by: (1) applying $M$ to basis vector $\mathbf{e}_j$ to get a new vector, then (2) taking the inner product with $\mathbf{e}_i^\dagger$.
 
-If $M\mathbf{v}=\mathbf{w}$, insert the resolution of identity:
+If $M\mathbf{v}=\mathbf{w}$, insert the resolution of identity (from \S1: $I = \sum_j \mathbf{e}_j\mathbf{e}_j^\dagger$) between $M$ and $\mathbf{v}$:
 \[
-    w_i = \mathbf{e}_i^\dagger\mathbf{w} = \mathbf{e}_i^\dagger M\mathbf{v} = \sum_j (\mathbf{e}_i^\dagger M\mathbf{e}_j)(\mathbf{e}_j^\dagger\mathbf{v}) = \sum_j M_{ij}\,v_j,
+    w_i = \mathbf{e}_i^\dagger\mathbf{w} = \mathbf{e}_i^\dagger M\mathbf{v}
+    = \mathbf{e}_i^\dagger M\!\underbrace{\Bigl(\sum_j \mathbf{e}_j\mathbf{e}_j^\dagger\Bigr)}_{=\,I}\!\mathbf{v}
+    = \sum_j (\mathbf{e}_i^\dagger M\mathbf{e}_j)(\mathbf{e}_j^\dagger\mathbf{v}) = \sum_j M_{ij}\,v_j,
 \]
 which is simply matrix--column-vector multiplication:
 \[
@@ -79,6 +81,9 @@ which is simply matrix--column-vector multiplication:
 \medskip
 \noindent\textbf{Basis dependence:} The specific numbers $M_{ij}$ depend on the choice of basis.  A different basis gives different matrix elements for the same abstract operator.  This is analogous to how the components of a vector change when you rotate your coordinate axes.
 
+\medskip
+\noindent\textbf{What doesn't change:} The \emph{eigenvalues} of $M$ are intrinsic to the operator---they are the same in every basis.  (So are the trace $\operatorname{Tr}(M) = \sum_i M_{ii}$, the determinant, and the rank.)  This is why measurement outcomes, which are eigenvalues by Axiom~2, are physically meaningful: they are basis-independent facts about the operator, not coordinate-dependent artifacts.
+
 \subsection{2.2 Quadratic form}
 For any vectors $\mathbf{u}$, $\mathbf{v}$ and operator $M$, the scalar $\mathbf{u}^\dagger M\mathbf{v}$ is unambiguous---it reduces to a sum over matrix elements.  The special case $\mathbf{v}^\dagger M\mathbf{v}$ is the \textbf{Rayleigh quotient}, already familiar from linear algebra.
 
@@ -89,11 +94,25 @@ For any vectors $\mathbf{u}$, $\mathbf{v}$ and operator $M$, the scalar $\mathbf
 \begin{definition}[Hermitian conjugate]
 For every matrix $M$, there is a unique matrix $M^\dagger$ (the \textbf{Hermitian conjugate}, or \textbf{adjoint}) satisfying: for all $\mathbf{u},\mathbf{v}$,
 \[
-    (\mathbf{u}^\dagger M^\dagger)\mathbf{v} = (M\mathbf{u})^\dagger\mathbf{v}.
+    \mathbf{u}^\dagger(M\mathbf{v}) = (M^\dagger\mathbf{u})^\dagger\mathbf{v}.
 \]
 \end{definition}
 
-\noindent The dagger operation is the matrix analog of complex conjugation for numbers: just as every complex number $z$ has a conjugate $z^*$, every matrix $M$ has an adjoint $M^\dagger$.
+\noindent The adjoint is the operator that, when moved from the right side of an inner product to the left side, takes $M$'s place.  For numbers, the analog is $u^*(zv) = (z^* u)^* v$.
+
+\medskip
+\noindent The dagger operation is the matrix analog of complex conjugation.  The full analogy:
+\[
+\renewcommand{\arraystretch}{1.3}
+\begin{array}{c|c}
+\textbf{Numbers} & \textbf{Matrices} \\\hline
+z^* & M^\dagger \\
+z = z^* \;(\text{real}) & M = M^\dagger \;(\text{self-adjoint}) \\
+|z|^2 = z^* z & \|\mathbf{v}\|^2 = \mathbf{v}^\dagger\mathbf{v} \\
+|z| = 1 \;(\text{unit complex}) & U^\dagger U = I \;(\text{unitary})
+\end{array}
+\]
+The last row---unit complex numbers $\leftrightarrow$ unitary matrices---will do real work when we reach time evolution.
 
 \subsection{3.1 Matrix elements of the adjoint}
 \[
@@ -237,29 +256,50 @@ The eigenvectors of $X$ are $\mathbf{x}_+=\frac{1}{\sqrt{2}}(\mathbf{e}_0+\mathb
     \mathbf{e}_0 = \frac{1}{\sqrt{2}}(\mathbf{x}_++\mathbf{x}_-), \qquad
     \mathbf{e}_1 = \frac{1}{\sqrt{2}}(\mathbf{x}_+-\mathbf{x}_-).
 \]
-Compute $X_{00}$:
+The cleanest approach is to apply $X$ to each basis vector first, then take inner products.  Since $X\mathbf{x}_+=\mathbf{x}_+$ and $X\mathbf{x}_-=-\mathbf{x}_-$:
+\[
+    X\mathbf{e}_0 = \frac{1}{\sqrt{2}}(X\mathbf{x}_++X\mathbf{x}_-) = \frac{1}{\sqrt{2}}(\mathbf{x}_+-\mathbf{x}_-) = \mathbf{e}_1,
+\]
+\[
+    X\mathbf{e}_1 = \frac{1}{\sqrt{2}}(X\mathbf{x}_+-X\mathbf{x}_-) = \frac{1}{\sqrt{2}}(\mathbf{x}_++\mathbf{x}_-) = \mathbf{e}_0.
+\]
+Now the matrix elements follow immediately:
 \begin{align}
-    \mathbf{e}_0^\dagger X\mathbf{e}_0
-    &= \tfrac{1}{2}(\mathbf{x}_+^\dagger+\mathbf{x}_-^\dagger)\,X\,(\mathbf{x}_++\mathbf{x}_-) \\
-    &= \tfrac{1}{2}(\mathbf{x}_+^\dagger+\mathbf{x}_-^\dagger)(\mathbf{x}_+-\mathbf{x}_-)
-      \quad\text{[since $X\mathbf{x}_+=\mathbf{x}_+$, $X\mathbf{x}_-=-\mathbf{x}_-$]} \\
-    &= \tfrac{1}{2}(1-1) = 0.
+    X_{00} &= \mathbf{e}_0^\dagger(X\mathbf{e}_0) = \mathbf{e}_0^\dagger\mathbf{e}_1 = 0, &\quad
+    X_{01} &= \mathbf{e}_0^\dagger(X\mathbf{e}_1) = \mathbf{e}_0^\dagger\mathbf{e}_0 = 1, \\[4pt]
+    X_{10} &= \mathbf{e}_1^\dagger(X\mathbf{e}_0) = \mathbf{e}_1^\dagger\mathbf{e}_1 = 1, &\quad
+    X_{11} &= \mathbf{e}_1^\dagger(X\mathbf{e}_1) = \mathbf{e}_1^\dagger\mathbf{e}_0 = 0.
 \end{align}
-Similarly $X_{11}=0$.  For the off-diagonal:
-\begin{align}
-    \mathbf{e}_0^\dagger X\mathbf{e}_1
-    &= \tfrac{1}{2}(\mathbf{x}_+^\dagger+\mathbf{x}_-^\dagger)(\mathbf{x}_+-\mathbf{x}_-+\mathbf{x}_--\mathbf{x}_+)... 
-\end{align}
-Direct computation gives $X_{01}=X_{10}=1$.  Therefore:
+Therefore:
 \[
     X = \begin{pmatrix}0&1\\1&0\end{pmatrix}.
 \]
 
 \subsection{7.3 Computing $Y$}
-The eigenvectors are $\mathbf{y}_+=\frac{1}{\sqrt{2}}(\mathbf{e}_0+i\mathbf{e}_1)$ with eigenvalue $+1$ and $\mathbf{y}_-=\frac{1}{\sqrt{2}}(\mathbf{e}_0-i\mathbf{e}_1)$ with eigenvalue $-1$.  Proceeding as above, the unique result is:
+The eigenvectors are $\mathbf{y}_+=\frac{1}{\sqrt{2}}(\mathbf{e}_0+i\mathbf{e}_1)$ with eigenvalue $+1$ and $\mathbf{y}_-=\frac{1}{\sqrt{2}}(\mathbf{e}_0-i\mathbf{e}_1)$ with eigenvalue $-1$.  Express the basis vectors:
+\[
+    \mathbf{e}_0 = \frac{1}{\sqrt{2}}(\mathbf{y}_++\mathbf{y}_-), \qquad
+    \mathbf{e}_1 = \frac{1}{i\sqrt{2}}(\mathbf{y}_+-\mathbf{y}_-) = \frac{-i}{\sqrt{2}}(\mathbf{y}_+-\mathbf{y}_-).
+\]
+Apply $Y$ to each basis vector:
+\[
+    Y\mathbf{e}_0 = \frac{1}{\sqrt{2}}(Y\mathbf{y}_++Y\mathbf{y}_-) = \frac{1}{\sqrt{2}}(\mathbf{y}_+-\mathbf{y}_-) = i\,\mathbf{e}_1,
+\]
+\[
+    Y\mathbf{e}_1 = \frac{-i}{\sqrt{2}}(Y\mathbf{y}_+-Y\mathbf{y}_-) = \frac{-i}{\sqrt{2}}(\mathbf{y}_++\mathbf{y}_-) = -i\,\mathbf{e}_0.
+\]
+The matrix elements:
+\begin{align}
+    Y_{00} &= \mathbf{e}_0^\dagger(Y\mathbf{e}_0) = i\,\mathbf{e}_0^\dagger\mathbf{e}_1 = 0, &\quad
+    Y_{01} &= \mathbf{e}_0^\dagger(Y\mathbf{e}_1) = -i\,\mathbf{e}_0^\dagger\mathbf{e}_0 = -i, \\[4pt]
+    Y_{10} &= \mathbf{e}_1^\dagger(Y\mathbf{e}_0) = i\,\mathbf{e}_1^\dagger\mathbf{e}_1 = i, &\quad
+    Y_{11} &= \mathbf{e}_1^\dagger(Y\mathbf{e}_1) = -i\,\mathbf{e}_1^\dagger\mathbf{e}_0 = 0.
+\end{align}
+Therefore:
 \[
     Y = \begin{pmatrix}0&-i\\i&0\end{pmatrix}.
 \]
+The imaginary entries arise because the $Y$ eigenvectors have factors of $i$---this is the matrix-level consequence of the argument from Lecture~2, \S3.3 that complex coefficients are essential for the third basis.
 
 \subsection{7.4 Summary of the $X$, $Y$, $Z$ matrices}
 \[
@@ -276,12 +316,34 @@ Each is self-adjoint ($M = M^\dagger$), each has eigenvalues $+1$ and $-1$, and 
     Y: &\quad \mathbf{y}_+=\tfrac{1}{\sqrt{2}}(\mathbf{e}_0+i\mathbf{e}_1)\;(\lambda=+1),\quad \mathbf{y}_-=\tfrac{1}{\sqrt{2}}(\mathbf{e}_0-i\mathbf{e}_1)\;(\lambda=-1).
 \end{align}
 
-\subsection{7.6 Key algebraic properties}
-\begin{itemize}[nosep]
-    \item $X^2 = Y^2 = Z^2 = I$ (squaring any of the three matrices gives the identity).
-    \item $XY = iZ$ (and cyclic permutations: $YZ=iX$, $ZX=iY$).
-    \item No two of $X$, $Y$, $Z$ commute: $[X,Y]\neq 0$, $[Y,Z]\neq 0$, $[Z,X]\neq 0$.  This non-commutativity is the mathematical expression of the fact that you cannot simultaneously know the values of two different observables.
-\end{itemize}
+\subsection{7.6 Algebraic properties (with derivations)}
+
+\noindent\textbf{Each Pauli matrix squares to the identity.}  For $X$:
+\[
+    X^2 = \begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix}
+    = \begin{pmatrix}1&0\\0&1\end{pmatrix} = I.\;\checkmark
+\]
+Similarly $Y^2 = Z^2 = I$.  (Equivalently: each Pauli matrix has eigenvalues $\pm 1$, so its square has eigenvalues $(\pm 1)^2 = 1$, which means $M^2 = I$.)
+
+\medskip
+\noindent\textbf{Products of distinct Pauli matrices.}  Compute $XY$ explicitly:
+\[
+    XY = \begin{pmatrix}0&1\\1&0\end{pmatrix}\begin{pmatrix}0&-i\\i&0\end{pmatrix}
+    = \begin{pmatrix}i&0\\0&-i\end{pmatrix}
+    = i\begin{pmatrix}1&0\\0&-1\end{pmatrix}
+    = iZ.
+\]
+Since $X$ and $Y$ do not commute, the reversed product differs:
+\[
+    YX = \begin{pmatrix}0&-i\\i&0\end{pmatrix}\begin{pmatrix}0&1\\1&0\end{pmatrix}
+    = \begin{pmatrix}-i&0\\0&i\end{pmatrix}
+    = -iZ.
+\]
+Subtracting: $[X,Y] = XY - YX = iZ - (-iZ) = 2iZ$.  The full set of cyclic commutation relations:
+\[
+    \boxed{[X,Y] = 2iZ, \qquad [Y,Z] = 2iX, \qquad [Z,X] = 2iY.}
+\]
+These three relations are the defining relations of the \textbf{Lie algebra $\mathfrak{su}(2)$}---the algebraic structure underlying all spin and angular momentum in quantum mechanics.  Non-commutativity ($[M,N]\neq 0$) is the mathematical expression of the fact that you cannot simultaneously know the values of two different observables.
 
 % ============================================================
 \section{8. Summary}

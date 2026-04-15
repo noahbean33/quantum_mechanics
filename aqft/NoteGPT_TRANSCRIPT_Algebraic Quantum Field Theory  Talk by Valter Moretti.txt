@@ -1,0 +1,207 @@
+00:00:00
+years of alra theory and we have the pleasure to welcome Professor Mor from the University of tent will speak of on the space time with no like boundaries and the B to boundary correspondence thank you um first of all let me say that it's a true honor for me to be here to give a seminar in this occasion and I would add that I joined this community several years ago but I feel myself still as an outsider in some sense I don't know why okay my seminar uh concerns some recent results obtained in collaboration
+
+00:00:59
+with my colleague Nia CLA dagi and Nica pinamonti from Hamburg and concerning the last paper which is still work in progress in collaboration with aletti of T my University that is the plane of the U seminar and let's pass directly to the general motivations and the general results okay the motivation the general motivation of these all these uh papers is to study how the asymptotic in general asymptotic but not necessarily asymptotic geometry of certain classes of space times selects distinguished adamar state for
+
+00:01:54
+linear Quantum F Theory and to investigate the general properties of those States I have to to say that for the moment all the theory is confined to the case of a free field linear means free in that case free obviously it interacts with gravity we hope after the summer to pass to consider the case of interacting um Fields self with self interaction the o sorry the general structure of all considered class of space time times is the following we have a bulk a space time which will be in all cases globally
+
+00:02:45
+hyperbolic and we have a boundary in general this is only a part of the boundary but in the during this to I will call it the boundary this boundary is actually actually a light like threedimensional submanifold uh of the SpaceTime of or in certain cases of a larger SpaceTime when one deals with h space times which are asymptotically flat at null Infinity in this case the boundary doesn't belong to the manifold but but is a boundary in a larger and physical manifold and this picture represent a
+
+00:03:39
+conformal um diagram the future new like Infinity is obtained approaching the infinity along uh no like geodesics the first case we shall examine is this one the class of asymptotically flat space times and at now Infinity a second class we shall examine is a class of expanding universes with the past cosmological past Horizon the third actually this is only one manold and not a class the third case is part of the extended The Spar Shield SpaceTime this region containing the speld wedge the vent Horizon and the
+
+00:04:40
+black hole region and the last case we consider is nothing but a diamond in the four dimensional moski SpaceTime uh the boundary in all those cases as a suitable structure which is made as follows the boundary is theomorphic to this product or is a union of several P pieces of this form and the matric on each part of the boundary takes this form where this is the standard matric of a two sphere and this one is the metric and light coordinates in the two dimensional moski space time so we admit that there is a
+
+00:05:41
+coordinate patch around the boundary where the metric takes this form and the boundary is reached when V equals zero U is an aine parameter of the of the null geodesic form geodesics forming the the manifold the boundary okay in all examined case actually in the first two cases in in the class of asymptotically flat space times and the class of cosmological models the boundary admits also a certain group of Def morphisms which as a a certain certain meaning I will analyze later and it's possible
+
+00:06:39
+to to equip the group with a suitable structure in order to obtain an infinite dimensional Le group and in general depending on the case the action of the group on the boundary takes this form is a generic element of the group this is a fun function depending on the element and those are functions depending on the element of the group it happens in know examined case that the group G includes a suitable group of killing isometries of every bulk which matches the boundary namely there is an injective
+
+00:07:32
+group of homomorphisms which transforms each element of a a certain group of isometries of the bulk into a corresponding element of the group of the boundary in in this case in the case of asymptotically flat space times this group is the full group of all killing isometries of the space m it's important to stress here that the boundary structure is universal namely the geometry on the boundary doesn't depend on the bulk the metric takes this form and the group of theisms this distinguished
+
+00:08:25
+group of the fer doesn't depend on the on the bulk but only on the structure of the boundary okay this embedded group VM paron the image of the embedded group VM that depends really on yes obviously yes because these homomorphisms depends on them so also the image okay yes and then obviously the image is a finite finite dimensional okay as we have no it's possible to construct with this geometry a simplec space on the boundary so we have a space of functions and in all considerate case the the space of
+
+00:09:24
+function we we deal with is um contains always the space of compactly supported smooth function defined on the boundary and we Define also this simpatic form on this space uh the coordinate U is that is that which appear here actually is possible to rescale the coordinate U um without changing the symplectic form since we have a symplectic space Oh the space is the precise shape of this space is fixed once one has a particular class of space times in general is different for asymptotically flat space
+
+00:10:25
+times or cosmological cosmological expanding universes but the space doesn't depend on the bulk okay is a universal as the geometric structure of the boundary okay since we have a simplec space we also have a sister algebra which is associated in a standard way and defined it up to Star isomorphisms uh to this Spa to this simplec space it happens in all considerate case that the structure appearing here is invariant under the action of the group of the boundary as a consequence is POS is is possible to define a
+
+00:11:27
+representation of the group in terms of star automorphisms of the V algebra of the boundary okay but this is completely unrelated with the bulk and now we are interested in studying the interply of this algebra of the boundary and some algebra for instance of f observables defined in any different bulk which matches the boundary uh a natural candidate for the for the algebra and the bul is the algebra the vile algebra generated by a scolar field a clan Garden scolar field okay and in this case the F algebra is obtain
+
+00:12:30
+constructing a simplec space where the space of functions is the space of solution of Cl Gord equation which are comp which have compact supported data and kosi surfaces of the SpaceTime I I always consider globally hyperbolic space times and the simplec form takes this standard form um the relationship between the algebra of the bul and that of the boundary is obtained is sketched in this image this figure is obtained by extending the solution associated with some kosi data up to the boundary and taking a
+
+00:13:28
+restriction of the solution in case of an asymptotically flat space time at null Infinity it is necessary H to rescale the the field before taking the restation because the the at Infinity the the field vanishes so we have to use an infinite rescaling okay um essentially by the stok sprinker theorem without without paying much attention to mathematical details using this form pardon no this one this form of the simplec form of the boundary and the other form of the simplec form on the in the bulk it
+
+00:14:27
+arises that the Restriction the the map which Associated a function a wave function in the bul with the its restriction on the boundary preserves the simplec for actually this is not straightforward because information May Escape by this apparent Point actually this is not uh a point in the manifold in general it could be a whole so this identity has to be examined Case by case considering different the different um classes of space times okay anyway if the map constructed as I said previously taking the
+
+00:15:26
+essentially taking the Restriction of this solution I on the boundary exists and preserves the simplec form then it induces an injective star algebra homomorphisms which Maps the algebra of the bulk into the algebra of the boundary and these injective s homomorphisms is completely determined by this constraint this object is the Gen generic generator of the V algebra of The Bu okay in this way if you have a state defined on the algebra and the boundary using the pullback of this immersion we obtain an induced
+
+00:16:21
+State H in The Bu okay now it would be nice fixing a state a universal State on the boundary which by construction doesn't depend on the particular bulk attached to the boundary which fulfills the following requirements no such that the induced state in the in each bu satisfies the the follow the following constraints we may ask that the state induced in the bulk is invariant under all the king symmetries if any obviously of The Bu we may ask for obtaining a state induced in the bulk which has positive energy with
+
+00:17:20
+respect to every globally Tim likee killing symmetry of every bulk we may ask very important this point that the state induced in the B is admer and a natural final requirement is that the state induced in the bul coincides with known States when the bul is a wellknown bulk for instance in case m is the MOSI the MOSI SpaceTime we expect that the induced state is the moski vacuum in case the bulk is is the The Sitter SpaceTime or or part of the C SpaceTime we expect we we want actually that the induced state is the banch
+
+00:18:09
+Davis vacuum in case the bu is the extended farfield manifold containing the Event Horizon the and the black hole region and the the farfield wedge a natural candidate for the induced bul state in bul is the AR state for several physical reasons concerning the condition one it is satisfied if the embedding of algebras and the hom homomorphism which Maps the isometries of the bulk into the symmetries of the B boundary roughly speaking commute in this case following this chain of equalities one obtains that the state
+
+00:19:09
+defined induced in the bulk is invariant under the group GM of isometries of the bul itself okay so a central question is to the to determine G variant State defined it on the bulk there is a natural candidate which arises several times in in the literature for instance by seil by demok and K but also by k w in the their celebrated report about the uniess of AD States in a manifold containing a killing Horizon before K King Horizon and a natural candidate for the G variant State on the boundary is that having these two point
+
+00:20:17
+function obviously it necessary to extend this twoo function to the whole simpatic Space because in general this twoo fun function is defined only in general but it can be extended is defined only on the smooth compactly supported functions def defined in the bu okay in all considered cases it turns out that this state is well defined and is invariant under the group of symmetries of the boundary it arises that this state admit positive energy with respect to the symmetries in the boundary which
+
+00:21:11
+arise uh from Tim like killing Vector of any bulk space Ty um it it also happens that this positive energy property determines complete this state which must have this form the proof is based on in the class of quasif free state this uniqueness holds this uniqueness property holds in the class of quasif free states defined on the V algebra of The Bu but there is a second uniqueness property in the volume of the state the proof is quite complicated but it it is based on cluster property and a uni uniqueness
+
+00:22:08
+theorem proved by Bernard K I don't remember when okay is a classical theorem about uniqueness of quasif free states okay in all examined cases it turns out also that if the the state induced in bul exists it is invariant under the killing symmetries of M or the restricted or a restricted killing symmetry group of The Bu I will examine later um oh okay also the h our property holds for the state defined induced in the bul and a rough proof of this property can be obtained by using standard theorem of composition of wave
+
+00:23:18
+front sets obtained by arander uh noticing that the two-point function no these twoo functions actually not this one but the twoo function of the state induced in the bul can be constructed by composition of three distributions this one defined on the boundary and two coal propagators defined in the bulk with one of the argument restricted to the boundary the coal propagator is the difference of the advanced and  um fundamental solution okay if one can use those theorems of compositions composition of wfront
+
+00:24:20
+sets it arises that the wavefront set of the state induced the two-point function of the state induced in the bulk as exactly the adamar form in other words it satisfies the microlocal Spectrum condition however it holds provided those compositions can be can be constructed effectively and this is not obvious because due to the singular support of the coal propagator which could be singular too singular about the tip of the cone so in general the tip of the cone I mean look at this figure here so in general when as to check the
+
+00:25:24
+behavior of the singular support actually of the wavefront set of this object near the the tip of the Coe okay let's let's let's examine the first case I will consider in this talk this is the case of the class of um space time space times which are asymptotically fled null Infinity future null Infinity a space time with this shape is roughly speaking a solution of vacuum Einstein equations about the boundary at least which tends to to MOSI space time approaching the null Infinity this is a
+
+00:26:18
+very rough definition uh rigorous definition is for instance contained in World textbook and the boundary in this case is by essentially by definition as this form which is exactly that we need for use our theorems uh here there is a more precise the definition but I don't want to stick to this definition I only notice that the matric with with the form we need is not the matric of the physical space but is the matric of of the unphysical space time which contains the physical space uh and the boundary is a boundary
+
+00:27:17
+a true boundary in the larger and physical SpaceTime this form of the metric is um is the form of the unphysical matric one has to rescale the physical matric using this factor which vanishes exactly on the boundary okay the amp physical space time which is necessary to give the previous definition is not completely determined by the physical oh sorry by the physical uh space as a consequence the geometry of the boundary is not completely fixed and a group of different merms arises which describe such
+
+00:28:13
+ambiguity this is the group of found by Bondi metna and saak the BMS group the famous BMS Group which is topologically takes this form topologically is an in infinite dimensional a group but the important property of this group obtained in several steps by G Ash exos is that for a given bul which is asymptotically flat at n infinity there is the homomorphism injective homomorphism of from the group of isometries the killing isometries of the bulk into the group The BMS group um this injective homomorphism is obtained
+
+00:29:15
+in practice extending the killing vectors of M up to the boundary rescaling in some sense um in this case we consider for the algebra of the B the algebra associated with the masses conformally caped field and in this case the projection of the field on the boundary is constructed using this uh factor which diverges exactly on the orise on the boundary but the boundary is at Infinity the the field vanish at infinity and this product is finite turns out to be finite um in this way the projection
+
+00:30:13
+map when when exists providing several conditions about the behavior of the solutions the Restriction of the solution to the boundary are satisfied the problem is what happens about the tip of the cone once again in this case if the behavior is okay the symplectic form is preserved uh the problem now is to find sufficient condition for globally hyperbolic asymptotically flat space times uh which are enough to define the state on the boundary this is equivalent to study the to fix the behavior of the solutions
+
+00:31:08
+the Restriction of the solutions about e+ because this corresponds to give a precise definition of the simplec space of the boundary which must contains all the restrictions obtained by all wave function of all possible bus okay Alo sorry I'm a bit tired those conditions sufficient conditions are the following for instance but uh I don't think they are necessary if the we restrict restrict our to the case of globally hyperbolic asymptotically flat SpaceTime which admits future time like future n
+
+00:32:08
+infinity and this means simply not simply but um roughly speaking that this is a true point in an extended manifold this object is a point and the structure about this point is just the structure of a nonee in for instance in MOSI SpaceTime in this case the behavior of the restrictions of the wave functions about e+ is so good that all condition are verified and everything can be proved in particular the embedding of algebras exists the state for every B can be the induced state from the uh Universal
+
+00:33:12
+Universal State defined on the bul can be induced in any bul with this property this state induced in the bul is invariant under every isometry killing is ometry of The Bu if any it has positive energy with respect to any time time like killing Vector of the bul is Adar and in case the bul is coincides with MOSI SpaceTime Omega coincide just with the MOSI vacuum just a comment about the Adar property the ad Adar property in this case is proved following the composition of wave front sets but after I obtained this proof
+
+00:34:11
+referee of CMP pointed out to me that a similar proof it was contained in the PHD thesis of Stefan Hollands in a completely different context okay let's pass to the second class of um of Universe of space times where our Machinery works this is a class of models of expanding Universe in practice is a they are um space times which are perturbations of the sitter SpaceTime in some sense but in general homogeneity and isotropy are not necessary in this case roughly speaking we have to consider um a class of SpaceTime space
+
+00:35:14
+times which admit um confirm and killing vectors which becomes no like uh about a two three dimens null surface and becomes tangent to this surface this is nothing but a past cosmological Horizon the integral lines of this Vector can be considered as the word lines of galaxis in this model and the surfaces the three surfaces ortogonal to these Vector can be considered as the SP the rest frame of the com the comoving frame with the galaxis in this case we uh also assume that the metric exactly on the past
+
+00:36:14
+cosmological Horizon takes this form in order to apply our Machinery there is also in this case um sorry just a moment I forgot to no okay um also in this case there is a distinguished group of isometries of the boundary which takes this form the action is quite complicated this group is universal and it has the property that it exist exist an injective um homomorphism of groups which Maps the symmetries The Killing symmetries of any bulk attached to to the boundary into the group in this case The Killing symmetries we are we
+
+00:37:18
+consider are only those which be becomes tangent become tangent to the boundary approaching there in this case we may consider we can consider in general um a general U Clan Garden field which every possible coupling with the curvature and every value of the mass differently from the other case and also in this case the problem is finding sufficient conditions for the existence of the eding um the embeding function of the algebras from The Bu to the boundary and sufficient conditions for the existence
+
+00:38:10
+of the induced State sufficient hypothesis are that the bul space times belong to a certain class of suitable globally hyperbolic fredman Robinson space time times which are perturbation of the city of SpaceTime I will not enter into details but it's a quite large class of space times and describing inflation for instance in particular for instance okay in this case once again it happens that the embedding is well defined the state induced in every bulk is invariant and the group of isometries
+
+00:38:59
+of the bul but only the isometries which are tangent to the boundary the state induced in the bulk as positive energy with respect to the confir time that defining no sorry I'm not very clever with these Al Echo with respect this killing Vector okay this state is admer once again and when the bu is just the c space time the induced State coincides with the wellknown banch Davis vacuum actually The Bu in this case is not the complete the C SpaceTime only an expanding region of the c space time I'm not very familiar with this
+
+00:40:03
+point but my colleagues are they told me that the properties of the two-point function of this state as the the the property as such that it can be used in cosmology to model the scalar fluctuations of the cosmic background radiation ask them anyway okay in this case the adomar property cannot be proved by adding the point the tip of the cone because the structure is too singular in the presence of a positive Mass it appears on Divergent potential about the tip of the cone in this case but it can be uh
+
+00:40:57
+proved using an approximation of the twoo function in by means a sequence of distributions in with respect to the arander topology and using the fact the fact that that those distributions have a suitable wavefront set using is a it's a a continuity property of wavefront that use in this case well the other case I will consider is this one in in this case the SpaceTime the relevant SpaceTime is the union of the far Shield wage The Event Horizon and the black hole region the boundary is made of two parts in this case the
+
+00:41:57
+posterized and the past null Infinity so we have two parts for the boundary in both cases the metric takes the correct expression the simplec space of the boundary is a direct sum of the two simplec space on each part of the boundary the state the universal state defined in the boundary is the tensor product of the states defined in on the two different parts of the boundary um to to use our Machinery it's necessary pardon is necessary that the simplec space on the boundary contains the restrictions of the way
+
+00:43:02
+functions the solution of Clan Garden equation of the bul and um this is not a trivial task to give such a definition but it was possible due to this recent work by the felos and rodnianski were precise estimate of the falloff behavior of the restrictions of the way from wave functions Solutions of CLA Garden equations a restriction to the boundary is are given it's given a precise estimate so we can Define very precisely the simplec simplec space but these extensions is not simple is not straightforward because apparently using
+
+00:44:10
+the estimate by the ferus and roansy it seems that the fallof behavior of those restrictions is too slow so the E extension procedure was very complicated and involved several steps with the in practice we de composed each function in several parts and obtained an extension for each part and defined the final extension summing the results and we had to prove that the final extension doesn't depend on the the composition used to the de composition used for the Restriction to the boundary of the
+
+00:45:06
+way functions okay anyway using the results by the fos and ransi it's possible to construct this embedding it turns out that the state induced well now one can Define immediately the state on the boundary the state induced in the bul is invent on under all killing symmetries of the bul as before this state turns out everywhere adamar in the static region on the Event Horizon and in the black hole region the proof is quite involved and relies on some properties of passive States concerning the region the propagation of
+
+00:46:05
+singularities by front sets using a result by Fagen and a it's possible to prove that this state describes hooking radiation about the future n infinity because this state is admer around the event rizon this is a general result by um a and Fred and okay the procedure used to define the induced State and the property of the app appearance of oing radiation at Infinity is completely in agreement with the ideas of U about the definition of a suitable state which describe um oing radiation in a realistic
+
+00:47:13
+collapse of spherically symmetric matter this state is called the U state so in practice we think that our state this state is the Ru state in fact there is another definition of this state given by deok and K but given only in thear Shield wedge and using an interesting technique based on the ASM metric Machinery but to up to now uh we are we were not able to prove that those state coincide is an open issue it's possible to extend this state to the whole cuscal manifold uh adding this part of the
+
+00:48:16
+boundary using this boundary but we don't expect that the obtained state is admer on the whole crusan manifold due to the theorem of K A World about the uniqueness of um ad states which are invariant and the killing the isometries because in this case the state should coincide with the arching state which is completely different from this state okay let's pass to the last case just a moment I have to okay this last case is very Elementary but however is interesting let's consider a simple
+
+00:49:25
+diamond in for dimensional MOSI space time and consider a double cone in practice and considering this situation a claim Garden filled with strictly positive Mass the state we are fix a state in in moski SpaceTime which is nothing but the standard MOSI vacum and consider this gns tripal ER restricting the gns representation to the diamond so we are in fact considering the algebra of the diamond in the gns representation of mos vac the the associated Forman algebra is the Restriction of moski vacuum in
+
+00:50:24
+cyclic and separ separating for these thean algebra generated by the gns representation of the diamond so there is a modular group but up to now no explicit representation exist for the modular group in case of Vanishing Mass there is a an important result by his isop and Longo which uses confirmed techniques and reduces to the rindler wge with by means of a confirmable transformation but in case of of strictly positive mess the the problem is open there is anyway a result by folini and Guido who
+
+00:51:14
+obtained an indirect representation of the generator of the modular group in terms of the generator of the mass massless modul group even for more General regions than the diamond our Diamond okay in this case in this case we may apply our Machinery defining the state on the boundary which is completely independent on the mass for by Construction the embedding of algebras exists in this case is straightforward to prove that the existence of this embedding it's possible to define the induced state in the bul and it turn
+
+00:52:15
+turns out that the induced state in the bul coincide just with the MOSI vacuum restricted to the diamond but this is not the only interesting thing result because it it turns out that the fman algebras associated with the gns representation of the Restriction of the okay the gns representation of the diamond yes this one and the fman algebra constructed on the boundary with respect to the universal state are unitary equivalent by means of a unitary which implements this embedding this is not trivial because this is not
+
+00:53:14
+subjective so these results holds only at level of fan algebras um okay okay in this case we can uh study construct uh the modular operator of the bulk in terms of the modular operator of the boundary using the inter unitary intern which contains all the information about the mass by construction the mass must enter only these object object there is no no other place where the mass can enter okay the point is that this modular operator doesn't depend on the mass because it's completely constructed in this foran
+
+00:54:14
+algebra which is defined with respect to a state which doesn't know the value of the mass okay so we have to study the modular operator of the theory of the boundary and it turns out that it has an geometric interpretation in fact it is just the um Group which implements the one parameter group generated by this Vector field defined on the boundary in practice this Vector field is that found by isop and Longo projected on the boundary where the mass in some sense vanish in some sense so we have another indirect geometric
+
+00:55:18
+representation of the modular group of the massive theory in a diamond the next all information about the mass is contained in the unitary The Next Step which is still work in progress is give an explicit representation of the gener self adjoint generator of the modular group in the bul using the explicit expression of this unitary operate the problem is quite complicated technically complicated because when faces the gura problem the characteristic kosi problem which is not so simple to handle okay
+
+00:56:07
+uh I can pass to the conclusions the most important open issue concern the fact that we consider it only the non- interacting case so we want in the next future to try to extend our result at least to V Pol nomials I mean we we want to try we we will try to extend this embedding it's in fact a St homomorphism of injective St homeomorphism of sister algebra in some sense we we wish to extend this object to PO V pooms of the field at least to Encompass interaction at perturbative level at least um another important
+
+00:57:15
+issue is to investigate investigate the the unu state the existence of the unu state exist no the definition of the unu state by means of our Machinery in the case of a massive fi the basic problem is that we have no estimate for the falloff behavior of the restrictions of wave function on the boundary in this case so it's not very simple is it is it impossible at the moment to define a simplec space on the boundary next an important issue is to extend our Machinery to give a proof of existence of the arol looking state in
+
+00:58:11
+the whole um crusan manifold this is a quite complicated because it seems that the fallof behavior of the rest restrictions of the wave functions on the future Infinity is not appropriate for a KMS state for a twoo function of a KMS state but perhaps it only means that the hard looking State cannot be defined using our approach and nothing nothing F okay that's so thank you very much speaker for this interesting lecture and uh are there now some questions or comments yes you would you also expect
+
+00:59:21
+spinner fields to fit into this framework yes I expect that the Machinery could be can be extended to that case and in this case perhaps things are more simple because concerning for instance the gar problem there is um a result about the several interesting properties for our our procedures which are valid only for the spinorial case but not for the scalar case so it could be possible to control the behavior of the restrictions of the wave functions about e+ automatically without any complicated
+
+01:00:19
+procedure yes similar question what about the electromagnetic field no I I don't I don't know it is known that the generator in some models of the yes yes now you can restrict the Boost operator to no no it's not the Boost operator no is a differential operator I think is much more complicated is not standard differential operator I have a a form but I cannot write now because it's a work in progress but it's completely different is not the Restriction of the Boost any other questions or
+
+01:01:19
+comments I have a question yes U is for example the uh investigation concerning anti base and uh theories of the boundary related can be envisaged from this type of meurs no in my opinion my honest opinion this approach has nothing to do with this the conjecture yes in my opinion um at least up to now perhaps con including interaction the picture could be changed completely because in that case interactions as far as I know are very important in so I don't know also in that case the boundary
+
+01:02:12
+is Tim like and not and not null like so our Machinery cannot be applied there is notic form which is preserved in some sense thank you no other questions so we thank again to the tradition as the last chairman of the conference I will two words very short uh concerning of conclusion concerning this conference I think it has been a very great pleasure for me and as far as I heard from all all people uh to have this uh big conference which was a success on three points first of all by the high quality of all
+
+01:03:18
+the conferences uh by the number of participants interested in this conference and by the quality of the organ organization also and these three uh in these three aspects one has to stress the interference active interference between old generation and Young Generation that's fantastic to see the all this Young Generation interested by uh this subject and how in this subject which is not the case maybe of all subject of research there has been a a very wide transmission of knowledge throughout the
+
+01:04:02
+generations and uh I think this leads us to to thank at all levels the organizers first of all I begin by the young org organizers Doran and P martinetti but also I I want I have to to thank specially I think for his uh enormous work of organization r on which the the very hard all aspect of all this organization has has been taken in charge and of course the immense pedagogical work which is behind uh which is uh and then it leads me to to quote in particular to quote of course the pedagogical work and talent
+
+01:05:02
+of De bhars and I think really this achievement of this conference is for him a magnificent uh celebration for his 65 years for his career of of of Professor and so I can now Express on in a twofold way my wishes best wishes to the quantum field Theory algebraic Quantum field Theory with its opening to all of techniques and best wishes also for the future the future carer of researcher of pure carer of researcher of De bols now and so I uh I hope that uh in the next future we'll have again such wonderful
+
+01:06:19
+conference thank you very much for these work and uh I want to thank especially the speakers for their excellent talks and interesting talks I want also to thank the audience for their interest and uh participation through questions and discussions U like you mentioned the s for of knowledge between Generations I think this is a transfer both that's probably what you meant yes it's not I think the the young people active in this field really produce interesting new insights and uh which
+
+01:07:01
+the people from the old generation may not have dreamt of and uh so this is uh yeah I can just agree to what you said it's this transfer between the generations maybe the most interesting or most um promising aspect of uh what we have uh seen here so thank you very much again to everybody and and uh I wish uh all of you a a good uh way home or to park or to other places wherever you go and uh we shall see each other again in some place of this world thank you very much [Applause]
+

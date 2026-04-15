@@ -1,0 +1,226 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{mathrsfs}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\newtheorem{definition}{Definition}[section]
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{lemma}{Lemma}[section]
+
+\title{\textbf{Cohomology in Algebraic Quantum Field Theory}\\[6pt]
+\large Lecture by John E.\ Roberts}
+\author{Lecture Notes from the AQFT 50th Anniversary Conference}
+\date{}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+John Roberts surveys the role of cohomology in algebraic quantum field theory,
+beginning with an analogy to the classification of locally trivial $G$-bundles
+and developing the theory of net cohomology and its application to superselection
+theory. He discusses the extension to curved spacetimes, where the topology of
+the underlying manifold influences the superselection structure, and argues that
+cohomology has become the preferred tool for tackling problems in superselection
+theory.
+\end{abstract}
+
+\tableofcontents
+
+%---------------------------------------------------------------------
+\section{Introduction to Cohomology}
+%---------------------------------------------------------------------
+
+Cohomology is a pervasive tool in mathematics, appearing in essentially every
+mathematical theory. Although it comes in many varieties, there are unifying
+features. Roberts illustrates these with an example closely analogous to its
+use in superselection theory.
+
+\subsection{Locally Trivial $G$-Bundles}
+
+Consider a locally trivial bundle $F$ over a base space $B$ with structure
+group $G$. Local triviality means there exists an open covering $\{O_i\}$
+of $B$ and isomorphisms $\phi_i: F|_{O_i} \xrightarrow{\sim} O_i \times G$.
+Computing transition functions:
+\begin{equation}
+  \phi_i \circ \phi_j^{-1}(x, g) = (x,\, z_{ij}(x)\cdot g),
+  \quad x \in O_i \cap O_j,
+\end{equation}
+one obtains a \textbf{1-cocycle} $z_{ij}$ satisfying:
+\begin{equation}
+  z_{ij}\, z_{jk} = z_{ik}
+  \quad\text{whenever } O_i \cap O_j \cap O_k \neq \emptyset.
+\end{equation}
+
+Two 1-cocycles $z$ and $z'$ are \textbf{cohomologous} if there exist
+$y_i \in G$ such that $z'_{ij}\, y_j = y_i\, z_{ij}$, corresponding
+to equivalence of $G$-bundles.
+
+\subsection{General Features of Cohomology}
+
+From this example, we extract typical features:
+\begin{enumerate}[nosep]
+  \item Cohomology has a \textbf{degree} (here $n=1$).
+  \item In low degree, cohomology \textbf{classifies} objects
+        ($H^1(B,G)$ classifies locally trivial $G$-bundles).
+  \item It is a cohomology of a \textbf{mathematical object} (first variable $B$)
+        with \textbf{coefficients} (second variable $G$).
+  \item It may provide examples, aid the general theory, or prove to be
+        merely an alternative language.
+\end{enumerate}
+
+%---------------------------------------------------------------------
+\section{Net Cohomology and Superselection Theory}
+%---------------------------------------------------------------------
+
+\subsection{The Superselection Criterion}
+
+In AQFT, one considers representations $\pi$ of the observable net which
+are equivalent to the vacuum representation $\pi_0$ when restricted to
+the spacelike complement of any double cone $O$:
+\begin{equation}
+  \pi|_{\mathcal{O}'} \simeq \pi_0|_{\mathcal{O}'}
+  \quad\text{for all double cones } \mathcal{O}.
+\end{equation}
+This means there exist unitaries $V_\mathcal{O}$ intertwining $\pi$ and $\pi_0$,
+and setting $\rho(A) = V\pi(A)V^*$ yields a localized endomorphism of the net.
+
+\subsection{Simplicial Structure}
+
+Roberts introduces a simplicial structure on the set $K$ of double cones:
+\begin{itemize}[nosep]
+  \item A \textbf{0-simplex} is an element $a \in K$.
+  \item A \textbf{1-simplex} $b$ consists of three elements $(d_0 b, d_1 b, |b|)$
+        with $d_0 b, d_1 b \leq |b|$ (the support of $b$).
+  \item A \textbf{2-simplex} $c$ consists of compatible 1-simplices forming a triangle.
+\end{itemize}
+
+Setting $z(b) = V(d_0 b)\, V(d_1 b)^*$, one obtains a \textbf{1-cocycle}:
+\begin{equation}
+  z(d_1 c) = z(d_0 c)\, z(d_2 c),
+\end{equation}
+with $z(b) \in \mathfrak{A}(|b|)$ by Haag duality. This is \emph{net cohomology}---a
+cohomology with local coefficients, analogous to sheaf cohomology.
+
+\subsection{Endomorphisms and Cocycles}
+
+The localized endomorphisms $\rho$ and the 1-cocycles $z$ are related by:
+\begin{equation}
+  z(b) \;\text{intertwines}\; \rho(d_1 b) \to \rho(d_0 b).
+\end{equation}
+In the simplest cases (when $K$ is directed), the categories of localized
+endomorphisms and of 1-cocycles are equivalent.
+
+%---------------------------------------------------------------------
+\section{Early Applications of Cohomology}
+%---------------------------------------------------------------------
+
+\subsection{Solitons in Two Dimensions (1976)}
+
+In two spacetime dimensions, a 1-cocycle of the observable algebra $\mathfrak{A}$
+is also a 1-cocycle of the field algebra $\mathfrak{F}$, but with two possible
+localizations (left or right). If $\rho_L = \rho_R$ for cocycles of $\mathfrak{A}$,
+this need not hold for cocycles of $\mathfrak{F}$---the discrepancy gives rise
+to the \textbf{soliton phenomenon}.
+
+\subsection{Completeness of Sectors (1980)}
+
+For a free field with gauge group $G$, the question arises whether all
+superselection sectors correspond to irreducible representations of $G$.
+Roberts identified two cohomological conditions (A and B) sufficient to
+guarantee completeness.
+
+\subsection{Essential Duality}
+
+Essential duality ($\mathfrak{A}'' = \mathfrak{A}^d$) implies that the
+superselection sectors for $\mathfrak{A}$ are equivalent to those for
+$\mathfrak{A}^{dd}$, considered as $C^*$-categories. Wedge duality can
+imply essential duality.
+
+%---------------------------------------------------------------------
+\section{Superselection Theory on Curved Spacetimes}
+%---------------------------------------------------------------------
+
+\subsection{Topology and Superselection Structure}
+
+On curved spacetimes, the topology and causal structure of the manifold
+can influence the superselection structure. Key results (from work with
+Brunetti, Guido, Longo, and Ruzzi):
+\begin{itemize}[nosep]
+  \item In $d \geq 3$, the causal complement of 1-simplices has the same
+        number of components as in Minkowski space: \textbf{no new solitonic
+        phenomena} in higher dimensions.
+  \item The theory of sectors goes through when the set of regular diamonds
+        $K$ is directed.
+  \item The interesting (and open) case is when $K$ is \emph{not} directed.
+\end{itemize}
+
+\subsection{Homotopy and Path Independence}
+
+Two notions of path arise: the topological one and the combinatorial one
+(concatenation of 1-simplices). Under mild conditions, the two fundamental
+groups coincide:
+
+\begin{theorem}[Ruzzi]
+If $M$ is arcwise connected and Hausdorff, and $K$ is a basis for the
+topology consisting of arcwise and simply connected subsets, then
+$\pi_1^{\mathrm{top}}(M) \cong \pi_1^K(M)$.
+\end{theorem}
+
+A 1-cocycle that is path-independent yields a unitary representation of
+the fundamental group.
+
+\subsection{The Punctured Spacetime Approach}
+
+When Cauchy surfaces are compact, charges cannot be transported to infinity.
+The solution: remove a point $x$ from the Cauchy surface, forming the
+\emph{causal puncture} $K(x)$. The restriction to $K(x)$ behaves like
+Minkowski space, enabling:
+\begin{itemize}[nosep]
+  \item Construction of endomorphisms $\rho_z(x)$ of $\mathfrak{A}^\perp(x)$.
+  \item Definition of the tensor product structure.
+  \item The full DHR machinery (conjugates, symmetry, statistics).
+\end{itemize}
+
+\begin{theorem}[Ruzzi]
+The restriction functor $F(x): Z^1_t(\mathfrak{A}) \to Z^1_t(\mathfrak{A}(x))$
+is full and faithful. It preserves irreducibility.
+\end{theorem}
+
+The open question: are there sectors on $M(x)$ that do not extend to $M$?
+
+\subsection{Tensor Products Without Directed Sets}
+
+A key advantage of the cohomological approach: the tensor product of
+1-cocycles can be defined even when $K$ is not directed, requiring only
+connectedness:
+\begin{equation}
+  (z \otimes z')(b) = z(b)\, \mathrm{Ad}_{z(p)}\bigl(z'(b)\bigr),
+\end{equation}
+where $p$ is a suitable path beginning spacelike to the support of $b$
+and ending in $d_1(b)$.
+
+%---------------------------------------------------------------------
+\section{Conclusion}
+%---------------------------------------------------------------------
+
+Cohomology has evolved into the preferred tool for superselection theory:
+\begin{itemize}[nosep]
+  \item Localized endomorphisms are simpler when $K$ is directed, but
+        require domains of definition when it is not.
+  \item 1-cocycles avoid domain issues and allow direct definition of
+        tensor products.
+  \item On curved spacetimes, path-dependent cocycles arise from modified
+        superselection criteria, producing sectors that depend on the
+        topology of the underlying spacetime.
+  \item Recent work by Brunetti and Ruzzi extends superselection theory
+        to the locally covariant framework using cohomological methods.
+\end{itemize}
+
+\end{document}

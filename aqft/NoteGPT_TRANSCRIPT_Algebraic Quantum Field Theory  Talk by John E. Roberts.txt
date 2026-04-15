@@ -1,0 +1,183 @@
+00:00:00
+with uh Claus pen Haren and Serio doer on the um super selection structure of quantum electrodynamics and I would have been delighted to talk about that had the good ideas been supported by enough results as that's not the case I've had to rely on the retrospective nature of the title to this conference and I will tell you what cohomology has uh um how mology has been used in algebraic Quantum field Theory so first of all uh a brief very brief introduction to chology it's not just used in algebraic
+
+00:00:50
+Quantum field Theory but is an important part of mathematics and is so oquit as to form part of essentially any mathematical Theory it comes in many many varieties but there are also unifying aspects I will begin with an example an example which has a certain similarity with its use in super selection structure the example is the theory of locally trivial G bundles so there is a a bundle F over B and being locally trivial it means that there exists an open covering oi of B and isomorphisms fi from F restricted To Oi to the
+
+00:01:38
+trivial bundle oi cross G then if you just compute f i f j to the minus one in the point XG you find that it has the form X Zig z i j g for X in the intersection of OI and OJ and that zi J satisfies an identity which is written there zi J ZJ K is equal to z i k in the for when oi OJ o k is not empty and this is the one cycle identity furthermore if you're given such a one Co cycle you can construct a bundle F of Zed but the mapping from bundle F of Z corresponding to a one cycle Zed but the
+
+00:02:35
+correspondence from Zed to FZ is not a one one correspondence instead you need the equivalence relations and the two one Co Cycles are equivalent or co- homologous if you can find uh y i in G such that z i j y j is equal to y i z i j for oi intersection OJ nonempty and this corresponds to the equivalence of G bundles and from this one example you can see certain typical features chology has a degree I've written Zed there it would have been better I think to have written n0o because although it's it is
+
+00:03:21
+sometimes Zed it's more typical to have n0 is the uh index for the degree and in low degree as we had an example n is equal to 1 chology classifies something the H1 of BG these are the chology classes and they classify locally trivial G bundles the second point is that chology is the chology of some type of mathematical object this is the first variable B here it's the Czech chology of a topological space then there is the second variable and this these are the coefficients of the chology and here
+
+00:04:02
+that's the group G and how do how can it help it may help to provide examples using this notion of chology you could construct locally trivial fiber bundles locally trivial G bundles it may help you in the general theory and it's very often the case that chology classes which is what you're interested in that these can be computed by chology methods but it may prove just to be on turn ative language and I give you one example the problem of the existence of a field algebra and a gauge group boils down
+
+00:04:39
+with a little simplification to asking whether the 6j symbols of the relevant tensor category which form a three Co cycle are actually a three Co three Co boundary if that is the case then there are three J symbols which can be used to embed the category in the category of Hilbert spaces I Pro this result in 1972 and I was very pleased at the time but I must say it had nothing to do with the solution of the problem which came many many years later um it was essentially of no use at all so let's pass on to Super selection
+
+00:05:24
+Theory as you probably all know there is you begin with a super selection Criterion that you look at representations which space like to some double cone are equivalent to the vacuum representation space likee to that double cone um and this for all all double cones o this means that there exists a unitary which depends upon the double cone which intertwines from PI to Pi 0 and you identify Pi 0 of a with a then you set row of a is equal to V Pi of a V Star and row becomes an endomorphism of the local net localized
+
+00:06:06
+in O and that's the way things went they might have gone a little differently one might have used chology so let's think about that it's uh to begin with we have to we have this set of double cones o and I will Define for you what a zero Simplex of this set of double cones o that's simply an element of the of K A one Simplex a one Simplex should be thought of as a as an interval and that consists of three elements three elements because they are the two vertices of the interval and the
+
+00:06:42
+interval itself with the property that the two vertices are smaller than the than the interval the interval is the support of this one Simplex B the there is a two simplex and so that will be therefore a a triangle and to define a triangle you need the three one simplies which are the um sides of the triangle and they have to satisfy compatibility conditions which are written there which simply say that the the vertices correspond and then there has to be a further element corresponding to the triangle itself which is this um the
+
+00:07:22
+support of C which has to be larger than all the um all the other simplest all yeah then if you pick now I've written a instead of O because a is just an element of K as o was and you set Z of B is equal to V of d0 of b v of D1 of B Star then you get a one Co cycle Z of D1 of C is equal to zed of D of C the C is missing Z of D2 of c um and it follows from Duality that Zeta B is an element of the local algebra a of the support of B so that this is a chology which is a little bit more complicated than the
+
+00:08:10
+chology I started with because it has local coefficients as does sheep chology and this type of chology I have called I have called net chology now um there are also these endomorphisms why a with the property that Zed of B is an intertwiner from y of D1 of B to Y of d0 of B so we've got back to the endomorphisms which were on the on the last slide um and uh we see here this simplicial structure we have that a simplicial the simplies of K that's a typical feature of of chology um and it was there in the first example
+
+00:09:01
+because there one Simplex would be indices i j with the property that oi OJ is uh non-empty the intersection of OI OJ is non empty and similarly for for two simplies uh however of course there's one comment to make here that if you think of this as a starting point for the theory of of super selection rules then it requires more Concepts and it looks more complicated although it's very natural to look at it this way but for this reason I think that uh um the work most of the early work on super
+
+00:09:40
+selection Theory let's say the work also of buul and fren Harkin on conik localization this was done in this picture of localized endomorphisms and not in the picture of of uh one Co Cycles now um so chology didn't play such a a large role initially there were certain results uh first one was actually where I introduced this type of chology it's the only paper I ever wrote on two dimensions and the main feature there was this explanation of of solitons how they fit into this picture and
+
+00:10:30
+uh we're in two space dimensions and we have a which is the observable algebra and it's included in F which is the field algebra and now I take a a one cycle if this one cycle is a one cycle of of a then it's also a one cycle of f now when you're in two uh dimensions then there are two sets of localized endomorphisms which are associated with a um with the one Co cycle because you can localize it on the left or you can localize it on the right so you have two sets of of localized
+
+00:11:06
+endomorphisms y l of a and uh y r of a now if this you start with a one Co cycle of a satisfying the which comes from the super selection criteria then you will find that y l of a is equal to y r of a however if you look at this one same oneco cycle as a oneco cycle of f then there is no reason for that to happen why elev can be different from y r of a and that's the Solon phenomenon uh this was rediscovered um many years later by R and and Longo and called Alpha induction then a a second problem that
+
+00:11:59
+was solved using this uh this chology was the question of the completeness of sectors which is 1980 um for the free field that was so to speak a question it wasn't obvious how to find a solution to that you have a free field with a gauge Group G so the observables are defined as the fix Point algebra under the gaug group and it's easy to see that there is a sector corresponding to each irreducible representation of G so the question was whether in fact there were other sectors which um and
+
+00:12:44
+uh you can give these two conditions A and B of A chological nature which guarantee that there are no other sectors and this is so you take the intersection of the algebra F of o plus the support of B primed for all B primed with the same boundary as B and this has to turn out to be the algebra which is generated by o and d0 of B and that generated by o and D1 of B that's the first condition this for o b the second condition is says that if you have a space like separation o of D d0 of B is
+
+00:13:25
+space like to O of D1 of B then uh the algebra that is generated by F of o plus d0 of B and F of o plus D1 of B is canonically isomorphic to F of O d0 of B tensor with f of o plus D1 of b um and these are abstract conditions but they're abstract conditions that can be verified in the case of the of the free field now I um many years later I gave this problem of the of completeness of super selection us for the Streeter and wild model to cholly for his his dissertation and it's not an easy
+
+00:14:07
+problem and if he had to continue working onto this when after he had got his his doctor's degree and I think what I've heard from him he's now at the point of submitting a prer with a positive solution to this to this problem uh another early use of chology which I must admit you don't need to use chology is the concept of essential Duality Duality a is equal to a where ad is defined as written up there essential Duality like essential self jointness is defined as a is equal to a d and the
+
+00:14:53
+result was that the super selection sectors for a are equal equivalent to the super selection sectors for add I should say that these zed1 of a and Z1 of add are thought of here as uh as sea star categories and because they're not only the co Cycles themselves but they're the co- boundaries or the the mappings between these these Co cycles and uh an interesting feature of essential Duality is that wedge Duality which is uh to be satisfied can imply essential Duality and another result is that the
+
+00:15:35
+set of representations which satisfy essential Duality that this is because you can Define it for other representations as well this is actually closed under direct sums and uh and sub representations and that's of interest if you want to do super selection sector relative to some state which is not a pure State um um for example a temperature State uh in the absence of Duality representation satisfying the super selection Criterion which I consider as a an object of another sear category rep perpendicular
+
+00:16:13
+of a this yields the one code cycle in the Dual net uh with an index T which denotes path independent path independent Cycles but this is not a very useful result because um the dual net may not be local so you can't go further and Define tensor products and things like that in now let me come to curved SpaceTime I mean I think this this revitalized super selection Theory because it gave a whole new uh field of research and there is an obvious question you might ask right from the beginning that is how does topology how
+
+00:17:00
+does the topology and causal structure of SpaceTime affect the super selection structure and I think the first paper which attacked this was a paper by wio Longo fish and myself in uh 2001 and I should say that uh uh only about a third of the paper is about super selection Theory the other is are aspects of field theory on curved space time um and two results there are listed first of all that that the uh um causal complement of these uh uh um one simplies that they have the same number of components as is the as is in
+
+00:17:53
+minkovski space and this means that there are no new solitonic phenomena that would be solitonic phenomena naturally if you were in Two space-time Dimensions but in higher Dimensions there are no such phenomena um so that's a negative aspect of this idea that a causal structure can affect the super selection structure um the theory of sectors was shown in this paper that the series of sectors go through if the uh uh set of of regular diamonds they were what replaced the double cones in this investigation
+
+00:18:30
+if this set is is directed uh and it involved quite a standard hology but the interesting part of the problem was remained open here sets was not directed now um one result which connects um topology of the space time with the one Co Cycles this is the following first of all that you define the notion of path but there are two Notions of path one is the usual topological notion of a path the other one you start from this partially ordered set the set of uh in this case of uh regular diamonds or
+
+00:19:22
+whatever you will um and you define a path to be concatenation of one simplies in the obvious way one simplies is so is an interval an ordered interval and uh I will always suppose that this K is path connected as in Thea is the case for regular diamonds and both Notions of path lead to a notion of homotopy group so you can have homotopy group defined for M and a homotopy group defined for K I mean here the first homotopy group fundamental group um and there is result with which connects these two if you start with a A
+
+00:20:02
+space-time manifold which is arcwise connected or and housed off and if K is the basis for the topology of M and consists itself of arcwise and Simply Connected subsets of M then the two chology groups coincide this is a result of of Roi uh now if you take a one Co cycle and if you have two paths p and q and these paths are equivalent or homotopic then in fact Z of P must equal to Z of Q so one cycle depends only on the um homotopy class of the path one cycle is extended to paths in the obvious way you because a path is
+
+00:20:48
+a concatenation of of one simplies um and if you set for the equivalent the homotopy class of a path you define and one Co cycle Zed you define e Zed of this uh homotopy class to be Z of B then you get a map from one Co Cycles which are equivalent in b h0 or another way of saying that which are path independent to equivalent unitary representations of the homotopy group now uh there is one physical problem when K is not Direct because in that case uh well let's say when the Kosh Koshi surfaces of M are compact instead
+
+00:21:37
+of being locally compact um you there is no Infinity you cannot transport charges to or from infinity and that plays an important role in in super selection uh Theory and I suggested a uh a solution to this namely that you should remove one point from the space I thought of pass to the Koshi to a Koshi surface and removing one point from that Koshi surface but the way that it was then done by Roi uh is better which is to define the causal puncture of this k at a point x these are simply the set of elements of
+
+00:22:19
+K whose closures are are space likee to to X and that's corresponds the to the same idea it's uh thought of in four dimensions instead of in in three dimensions and you can also think in terms of a subset of the space-time manifold you you define M ofx to be M with uh a set X of X removed X of X this is simply the set of points that can be joined to X by a uh a causal a causal curve and it can also be thought of in terms of the the main of dependence of a Koshi surface with the point with a
+
+00:23:03
+point removed and uh considered as a uh SpaceTime m ofx is globally hyperbolic but uh there is one small snag namely that an an element o of K ofx need not be a diamond of of M ofx um still K of X is a basis for the topology of M ofx and uh m of X being arcwise connected K of X is pathwise connected now uh this is a a more complicated setting for doing super selection Theory and there is a strategy which is first that you should look at the super selection sectors for K of X for all X and then glue the results together to describe
+
+00:23:54
+the super selection theory for for K and the advantage of studying K of X is that it behaves in much the same way as uh as minkovski space so uh you've got the algebra of observables and you denote by a ofx the Restriction of this algebra observables to The partially ordered set K ofx and you assume that a ofx satisfies satisfies Duality m and uh in fact uh one Co cycle is always path independent on K of X each x m and that implies that it is also path independent as on K and as I said that is the same as one
+
+00:24:52
+Co cycl being trivial in in B ofh so that holds in an arbitrary four-dimensional globally hyp bolic space time and you now have will have one coyes Z of X for for each x uh path independent and you want to extend them to uh a path independent one Co cycle on a and the condition is very simple it's the most natural condition that you have the two uh one Co Cycles should coincide where they must namely when the support of B is contained in the intersection of K of X1 and K of X2 and there is a a
+
+00:25:34
+similar result for arrows between oneco cycles and the super selection Theory really comes alive when the endomorphisms are introduced in the sense that you need tensor product structure if you don't have tensa product structure the information that is contained in the sear category alone is asn't tell you tell you very little um but here it is so that this K of X is not necessarily directed I mean remember that was the problem that we we had K is usually not directed and that was the case that we're intending to examine um
+
+00:26:20
+but in this case you can Define these uh endomorphisms by a a slight variance on the traditional definition it's it's defined the the endomorphism as usual is defined as being locally given by the by the one Co cycle that's this formula y z of a in a is equal to zp a zp star that is defined as an all a of O with o uh space like with o1 space like to O um and there are conditions on the path um and this definition does not depend on the chosen path and letting o shrink to X it extends to an enom morphism of the
+
+00:27:13
+algebra sear algebra a perpendicular of X which is the C algebra generated by the a of o1 with o1 in K of X and the fact that this definition Works does not depend upon the uh the K ofx being uh directed because that name not with the case it depends upon the fact that the um these o containing X that they are directed they direct it downwards so that you can can Define this consistently and when you've done it you find the relations that you have between uh um localized endomorphisms and one
+
+00:27:59
+cycle that the one cycle is a um intertwines between the uh two endomorphisms the one in DP and the one in d0 p this for any path and then you also find the usual localization property of uh um endomorphisms localized endomorphisms and at this point you you can can introduce the tensor product formula Z1 of T of uh of uh a of X by the usual formula so the tensor product of two one Co Cycles Zed and zed1 in B this is given you by Z of B then you have the endomorphism y z in D1 of B this acts in Z1 of B
+
+00:28:57
+and but to find your good tensor product you need of course the tensor product on the arrows that's T and S are two arrows but that's uh very similar T tensor product with s in a this is T of a y z of a acting on S of a um and this composition law um makes z1t of ax into a TENS SE star category well um and of the course there are many more aspects to uh to Super selection theory that I haven't yet touched on I mentioned some here briefly um although I must admit that they don't have anything to do with it particularly
+
+00:29:51
+to do with the subject of one Co Cycles here it's chology um but uh a gaug group then you can define a conjugate of it in a a very simple way it means that um y of d0 B if you have to find using a simple object then this is actually an automorphism and being an automorphism you can invert it so if you take ZB star and then imply y z d0 b to the minus1 then you get a conjugate one Co cycle of the of the cycle Zed um then I this T sear category that we have got one can also Define a symmetry corresponding to the um
+
+00:30:49
+permutation of two of two charges I won't there is nothing particular new about that in this in this context and it gives you what is called a symmetric TSA category and I is the identity one code cycle and this is irreducible and uh if every simple object has a conjugate as it as it does then every object with finite statistics also has a also has a conjugate and that is a a result which is uh can be proved using the analogy in group theory if you take you want to look at a conjugate representation of a a finite dimensional
+
+00:31:38
+unitary representation of a group then it's enough to look at the its determinant and to invert its determinant and then look at the um Define in terms of that determent to define a conjugate and then there is this result that if you have a symmetric tensor sear category with with conjugates with subobjects and direct sums and if each object has a statistical phase one I mean that is it corresponds just to bons instead of Fons then T is actually isomorphic to the symmetric tens sear category of finite
+
+00:32:25
+dimensional unitary representations of a compact group unique up to isomorphism that is the result of CIO DOA and myself which was used at this point then to define a field algebra and uh oh don't know whether I can recall that back toit we wait a second okay I mean I don't know whether um so we're working it too hard today not so hot inside no it's not hot inside at all me it's must be where where is it hot then up there in the Box it's hot we yeah uh-huh okay countdown okay we're back where we were
+
+00:34:56
+um I mean the results here and the results connected with it to the so to speak the uh large part of the theory of super selection sectors what we were dealing with before is a much much smaller part of this and they've been inserted at this point because at this point we can um these results apply to the theory a ofx the theory on the punct should space time the um I think I've let's go back conjugates there we are um so this was the the strategy that we want uh results not for not for a ofx
+
+00:35:56
+but we want results for the co hology of um Z1 T of a and you have for this you have to look at the results for Z1 T of a of X for all X um and uh if you you start then with a one cycle Z1 T of a and you let y z of X in a denote the endomorphism of this algebra a of perpendicular of X um the C star algebra associated with the Restriction of Zed to Z1 T of a of X and these are endomorphisms which depend on X um we haven't defined them for the the theory on the whole SpaceTime however they are compatible I
+
+00:36:55
+mean in the in the obvious sense that if you look at Zed of in X1 of a and restrict it to a of O then that equals y of Zed of x2 in a restricted to a of O whenever you look at some o which is in the intersection of X of K1 and uh X of K2 um but that's just the intersection it's not k mean and uh furthermore if you have a a path in K of X1 to K of X2 then y z of X of a of Z of p is equal to y z X2 of a of Z of P then another result I didn't explain to you the the Symmetry for Z1 of T of
+
+00:37:50
+ax but you can get a symmetry for uh Z1 T of a by defining e of Z Z1 in the point a Epsilon of this this is the Symmetry to be Epsilon of X of Zed Z1 uh provided you take X to be um space like to to a so this is defined for then for all a of course um there is also then the result of this uh C star category z1t of a um that all the objects in it with finite statistics have conjugates and there is of course an obvious question you would like to know how the super selection structure of uh zed1 how the super selection structure
+
+00:38:49
+on the manifold m is related to the super selection structure on the manifold M of X when you've removed a point and and there is a result there very interesting result that the that there is a a restriction tensor functor F ofx between the two sear categories and this is full and faithful so what does this mean this meant that if you had a a super selection sector for on the manifold M then there would be a corresponding super selection sector on the manifold M ofx and further it would well they it's also you need the
+
+00:39:30
+irreducibility goes over into irreducibility but that's part of saying that it's um it's full and faithful what what you don't know what you don't know is whether there is a whether there are super selection sectors of on M ofx which do not extend to um to a super selection sector of of M and this is the the problem of the of the equivalent of local intertwiners and Global intertwiners now the last part of this talk has been based on the paper of gutti the homotopy of posets net chology
+
+00:40:18
+and the theory of super selection sectors in globally hyperbolic space times I mean he completed the work that was started in this other the paper that I mentioned I think I probably missed one slide somewhere but I don't know where it is um and there has been further work by brunetti and ruty on super selection sector on super selection theory in the context of locally covariant field Theory and this too makes use of chology and I as I in the I think the latest paper which I have not seen but I have
+
+00:40:59
+so I rely on what RI has been telling me there are is a um and there are oneco cycles that are path dependent you remember in this part we showed that the oneco Cycles were path independent and this comes about I mean again it's the theory on curved space time this comes about by changing the super selection criteria um and this gives one then uh examples where you have uh super selection sectors which depend upon the topology of the underlying SpaceTime manifold and uh as I say I think we can
+
+00:41:42
+conclude that in the course of the years cohomology has turned into the preferred tool for tackling problems in super selection Theory and when you can ask what the the reason for this is I mean the localized endomorphisms look much simpler you have a category of localized endomorphisms and you have a category of of oneco cycles and uh in the simple cases these two categories are equivalent to each other um and that's the one alternative I know to using chology is to use endomorphisms and endomorphisms
+
+00:42:22
+certainly work well therefore are also more simpler when the underlying partially ordered set K is directed and in that case you get endomorphisms of a of M in the case of K of X we also got endomorphisms we got endomorphisms at a per of X and but they didn't depend upon it being being directed um they depended upon the set of of double cones um a set of uh diamonds but in in in general an endomorphism will need a domain of of definition and of course as we know from the theory of unbounded operators this
+
+00:43:13
+is a big nuisance um and what you need endomorphisms for you need them to get get this tensor product structure going but the tensor product structure can also be defined directly in terms of these these Cycles I mean I wrote down the formula with endomorphisms but here is a Formula which just involves oneco Cycles because you can substitute the endomorphisms with oneco Cycles so to define the product of Z and zed1 um this is uh you take the Z of B the one one cycle and you take not Zed one of B but you take the adjoint action of
+
+00:44:02
+Zed of p on Z of one of B for p a suitable path suitable meaning that the path begins spacelike to the support of b and ends in D1 of B and uh there is a similar formula for the tensor product of arrows in zed1 of bay and here we we do not need K to be directed but just just connected so I think this is the reason now as I said I I have skipped one slide maybe I should go back and see what was on this I mean I one thing that I know know that I must have skipped it because I haven't uh explain to you what this set
+
+00:44:46
+K is in uh ah here we are this at least this is one this is the uh this is this approach the first approach to to Super selection sector in weo atal this was based on the notion of a regular Diamond which I didn't explain to you uh and these have the disadvantage that the causal compliments may not be pathwise connected and ruty improve Matters by taking K to be the set of diamonds now I mean it's uh the words are very similar but the definitions are are different there is a definition which is given there but it's
+
+00:45:26
+of course if you read it like that it's a it becomes a little a little technical this um so being a diamond it should be based on some Koshi surface and the set on the koshal surface is denoted by by G and this set on the Koshi surface is the inverse image of a ball in three space um under uh differentiable coordinates on the for the koser surface and then you take the domain of dependence of G to get the regular diamond and this K is a a base for the topology of m a diamond is open and relatively
+
+00:46:17
+Compact arcwise and Simply Connected and uh this domain is itself a globally hyperbolic SpaceTime with and the space like Koshi surface is just G and furthermore the causal complement of a diamond is H pathwise connected in in K so so okay so I've the two adjacent slides I have explained and therefore I assume there is nothing else which is missing and that's the end of my talk Sor there any questions for me U you mentioned the problem of completeness of sector yes and in the case of conformal f theory on the circle
+
+00:47:25
+this problem was approached by by Longo and muga and kav gashi in terms of the subdivision of the C inter which in theological picture means you have a pair of two simply yes right yeah but if I remember correctly in order to prove their result these friends needed a careful analysis of the subfactor which corresponds to the two intervals and the commutant of the complt mhm uh so I wonder where this uh is hidden in the coic approach well I mean I I'm I quoted cholly that's the only thing I did I
+
+00:48:12
+mean I I in uh yes um that was a case of two Dimensions where you have the Streeter and wild model yes now um but so if it's buried anywhere it's buried in the work of cholly yeah but it's not not the complete answer no it's not the complete answer no I think that's always a a relatively difficult question which depends upon the case I or or as I showed there can be conditions which are sufficient to to uh imply it yes any other questions or comments okay if not let us thank our
+
+00:48:57
+speaker again
+

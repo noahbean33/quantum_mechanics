@@ -1,0 +1,297 @@
+00:00:00
+on the deformation of operator algebras and the construction of quum fields thank you yeah algebraic Quantum Fe Theory 50 years old uh today or 52 as we learned that seems to be quite a long period for me and a special occasion to celebrate so I'm very happy to be here and have the opportunity to speak here thanks a lot to the organizers for that as I have of course experienced only a short time of these 50 years uh really working in the field it seems appropriate that I do not try to give some review as we had uh yesterday but
+
+00:00:44
+rather talk about a subject inside aabra eon of 3 which is which is rather new namely uh constructive aspects and more precisely deformations of operator algebras and the relation to the problem of constructing Quantum field theories okay yeah in many lectures today uh we heard uh what algebraic Quantum fi theory has achieved in the past and this is quite tremendous I mean starting from some physically well motivated principle principles in mostly mathematically rigorous terms it has been uh there has been
+
+00:01:31
+developed a clear framework for relativistic Quantum Fieldy in an algebraic language and inside this field uh well people have mainly focused on the analysis of some model independent General properties of quantum field theories yeah that's what most of the work has been devoted to and today we have a wealth of tools and methods available for once we are given such a net such a model to extract the relevant physical information for example the particle content we can compute cross-sections and look at the charge
+
+00:02:10
+structure can do short distance limit and many many more yeah so once we are given such a concrete model we have many tools available to analyze it yeah that's good but on the other hand the rigorous construction of such models is a difficult topic which has not been address that much in algebraic Quantum field theory in these first 50 years but only recently and uh well this will be the topic of my talk yeah I should mention that this problem of constructing uh explicit models is not a problem of
+
+00:02:48
+algebraic quantum feeld theory but of quantum feeld theory in general yeah any approach experiences these difficulties in in really rigorously defining interacting Quantum Fe theories and well the same is true here in the algebraic setting yesterday in Claus Reen hang's talk we heard uh how one can how one can construct interacting theories on minkovski space or on a curved background in a perturbative way you starting from a free Theory and taking the classical agang density as an input to describe the interaction of the
+
+00:03:26
+theory to be constructed there is a way how to uh Define in a perturbative setting uh interacting theories and that works very well but seems at the moment to be limited to uh perturbation Theory so the convergence of this perturbation series is not under control um and well I think it's fair to say what we are really lacking today is a good Quantum description of possible interactions of possible relativistic interactions I mean one and one can view this uh perturbative Quantum field the as follows in my opinion it's easy to
+
+00:04:06
+describe a classical interaction you just pick a l density but it's very difficult to turn it in a well consistent manner to a Quantum field three this renormalization is the difficult part and well the uh this may be due to the to the problem that we choose here classical classical data describe the interaction in the way to the quantum world is in the Rel istic case very difficult yeah there's one exception to this namely there's a certain class of models where we have a good Quantum description of possible
+
+00:04:38
+interactions namely when when thinking about interaction one thinks about Collision experiments yeah cross-sections and colliders uh okay so the S Matrix that's a Quantum object it might be a good good object to describe interactions yeah unfortunately usually it's much too complicated to be manageable although there is this one class of models uh where the situation is nice it's in two space-time Dimensions where the S Matrix is simple enough namely factorizing no particle production so special for two Dimensions
+
+00:05:12
+such that you can really take it as an input yeah and sove the inverse scattering problem so that's a nice situation but special and uh particular to two Dimensions unfortunately yeah so I will speak at the end of the talk briefly about this so this is work initiated by sh in a long program and then Carri it out by myself in collaboration with bus during my PhD yeah but um the main part of the talk is going to be devoted to a different subject namely to the construction of field3 on say four dimensional space
+
+00:05:47
+time or Dimension will not be very important say four dimensional makovski space and uh the question is what is a good good way to implement the interaction yeah that's our problem as we heard in Roberto's talk in algebraic quy well one might think okay the objects we are interested in are algebra yeah Nets of algebra that's a very complicated uh object but somehow a good input for constructing such data might be of algebraic nature as well some inclusion of algebras for example and we heard that uh for example
+
+00:06:22
+for field theories on the circle half CID modular inclusions are good initial data for starting the construction yeah in this talk I will focus on the construction of models on mikowski Space without conform symmetry but in spirit similar to this to this construction on the circle oh yeah so uh yeah some short preliminary slide which is I I think most of you if not everybody has seen this before yeah so in the following wedge regions play a significant role and that's not very complicated it's just this shaded Reg
+
+00:07:00
+region here which I of course can draw only in two Dimensions yeah extends to the to Infinity on the right if you like formulas it's just given by this inequality here X1 strictly larger than the absolute value of x0 and translationally invariant in the remaining Direction so depending on dimension of space time so this region I would call the right wedge and in general any point transform of that region I will call a witch yeah okay and why do I want to consider such w edes well to give you a very rough
+
+00:07:33
+motivation well first of all these regions are big yeah compare them to point like localized objects to points yeah they are huge bigger and the bigger you might think roughly speaking the easier to construct observers localized in them yeah because the locality is really the uh the important issue when you want to construct interacting theories the the sharper localized the more difficult it gets and wedges are big so it's comparative easy to construct something in them yeah but it's not only that they are big they are
+
+00:08:05
+also small in a certain sense namely two such wedges you can space like separate yeah they are not too big you can at least two of them you can space like separate okay so now uh to the basic constructive idea um yeah well the aim is of course to construct a net of say sear algebra for Norman alas on minkovski bace which satisfies all these properties we've heard many times before like locality and covariance isoton so all these properties would just guarantee it's it can be consistently interpreted as the
+
+00:08:44
+observables of a relativistic Quantum system yeah so this is what we want to construct and as I said already it's a very difficult object it's loads of algebras yeah each space space time region one algebra so that's complicated yeah so we somehow have to reduce the degree of complexity if you want to construct this and it can be done yeah and the message is well these complicated local Nets can be constructed from just a single algebra namely such a wedge algebra containing observat which we
+
+00:09:15
+think about being localized in this region WR and an action of the point group so how can this be done we consider some say sear algebra the topological properties won't be very important in this talk yes you can think about unitless star algebra if you like yeah uh so some algebra like this B with some automorphic action of the point career group Alpha on it and a subalgebra a and well what do I mean by this data B is like the algebra of all local observers yeah some global object or just uh B of AG of some
+
+00:09:53
+representation space if you like the subalgebra a is supposed to describe all The Observers local in this wedge and okay Alpha this action of the PO group is just the relativistic symmetry which you have on the big algebra so if this interpretation should hold two things must be satisfied two conditions which I call the isoton and locality condition yeah familiar so first of all assume I have some point transformation so a shift X and the L transformation Lambda such that this right wedge is shifted inside itself
+
+00:10:28
+yeah well in that case if a is localized in the wedge it must be transformed inside itself yeah we have no other choice yeah so this is the first condition we must satisfy otherwise the interpretation of being localized in the witch won't be possible and on the other hand if you have a point Gade transformation which uh grabs this right wedge and transform transforms it into the cause a complement then Einstein causality tells us well the algebra in the wedge must be transformed into something in the commutant yeah so
+
+00:11:02
+that's our second condition yeah and for short I would call such a system such an inclusion of algebras and such a p action on the bigger one a wtge algebra yeah that's our initial data and okay I I motivated that these are necessary conditions um for for a being localized in the right wge but it's also sufficient namely if you consider this map yeah you you take this trans Point G transformed wedge and map it to the point G transformed algebra and if these two conditions hold then this is a well defined otonis local
+
+00:11:40
+covariant net of in this case sear algebras yeah so that's already uh quite a bit yeah I mean such a such a big net we can construct from a single ala say one inclusion yeah okay these are all the observ localized in wlik regions if we want extend to smaller regions we can take intersections yeah just Define the algebra of a region which is an intersection of a family of wedges to be the intersection of the corresponding algebras this extends all these properties also to this extended net with a problem that such algebras might
+
+00:12:15
+be small because they are defined as intersections I will mention this problem in the end so now the constructive task is the following give a wedge algebra satisfying these two properties ioty and locality and you might think of this as as being given by an interaction free Theory then the task is construct a new wedge algebra so a new inclusion maybe new uh action of the point Care Group such that the two conditions are still satisfied and that we can generate a new net and this new net should be
+
+00:12:49
+interacting so we can do scattering Theory and we hope to find a s magic which is not the identity but some non-trivial interaction going on yeah so that's the constructive problem in uh this approach yeah and well one might have many different or no ideas how to do this yeah here we want to be a bit more uh specific and well start from something which we think of a free system and do some kind of perturbation Theory yeah we want to continuously deform such a wedge algebra with a deformation parameter setting it to zero
+
+00:13:23
+is the old old system and L making larger and larger goes to some interacting situation yeah so it's some kind of perturbation theory for which us what we are aiming at and well for concreteness just think of this B is well think of a as being represented on some h space and then B just take B of H all bounded operator on this h space and Alpha just uh think of being uh unitarily implemented on on this hbert space by unitaries yeah then uh well having once again H scattering theory in mind you see that you are to
+
+00:13:59
+keep Alpha fixed yeah because you may think of working on say the incoming particle States and there we know well the representation of the point group does not change yeah it's it's the same again as on Fox bace so we will keep this Alpha fixed but deform this inclusion that's what we want to do um yeah before I uh start to describe this in more detail let me give you a very short overview of your of the development of these particular kind of uh deformation yeah it started in a joint work with
+
+00:14:33
+haral yeah where our motivation was quite different namely we considered a free field theory on movi bace so as simple as it gets and wanted to understand how can we put this free field theory on makovski space on a non-commutative makovski space yeah so you might have heard of non-commutative makovski space yeah non-commuting coordinates and well we found a certain way how to do this using just CCR technique are anation creation operators this was then generalized tremendously by buhot and Summers yeah
+
+00:15:09
+they well they found a procedure called W convolutions I will explain in the uh well five or six slides yeah which can be applied not only to a free Theory but to any net yeah or well just a deformation procedure for certain operators yeah which gives the same effect for these free field theories that we had discussed before so this is in an operator algebraic language and they were also able to prove that these two consisteny conditions I mentioned are stable under this deformation that's the important Point yeah afterwards uh
+
+00:15:44
+har and I reconsider the subject and looked at the particular case of Whitman Quantum field theories yeah so we we heard yesterday in jakob's talk about the Bas AA and representations of that with respect to Whitman State this were the setting we were considering and we we saw this uh wared convolutions of bus and Summers they can be understood as the effect of introducing a new product on the bman algebra um and now well now we are in more less a final status of this deformation I hope yeah where we merge
+
+00:16:19
+the two point the two last points yeah so we want an operator algebraic understanding of what's going on and moreover uh we discovered that this can be understood by introducing a new product not on the basman algebra but on some cister algebra of this cister algebra b I mentioned yeah so this is a connection between these two points of view we introduce a new product uh in the abstract setting which is uh a known procedure called refill deformations I will review it and then uh reobtain these uh these uh earlier works of BU
+
+00:16:54
+Sumer the war convolutions yeah so this is work in progress yeah they are many unpolished points still available still around yeah but the main message I I think is already clear yeah okay first I need to explain what these refill de deformations are and then apply to the case of deformations of w alas so re deformations is a general deformation procedure for sea algebra introduced by Reel obviously that's why the name yeah was designed uh with quantization in mind yeah as a generalization of Y quantization and the
+
+00:17:34
+setting is as follows you consider a sear algebra with a strongly continuous automorphic action I call beta I guess yeah of the translations and you pick as a deformation parameter just some anti-semitic re real D * D Matrix and then you introduce a new product yeah the C algebra has a product but you introduce a new product depending on this parameter Theta by this integral formula yeah so you shift your A and B with your action and integrate against this FY ker here and well it's clear that this integral does not converge
+
+00:18:09
+absolutely or in any nice sense because it's just constant and Norm yeah the integrant yeah but it can be defined in an oscillatory sense if the dependence of the integrant on these uh p and X is smooth yeah and this can be achieved by going to a smooth dense subalgebra of B yeah then you can give nice meaning to this integ integral and in the end just just uh calculate with it as if it was a usual integral yeah you have to check all these steps but usually you can treat it as an ordinary integral and well a point I would like
+
+00:18:43
+to stress is this product was designed to deform commutative C algebras I mean uh obser algebras of a classical system to obser Alas of a Quantum system non-commutative ones but in its general form done by refill it can also be app to non-commutative B in the beginning yeah that's what we want to do just uh some properties of the product I would like to recover uh but my microphone well works so here the formula for the product again what do we know some main results are well first of all if you
+
+00:19:21
+take the deformation parameter to zero it's the old product not very exciting then for any choice of deformation parameter it's an associative product on this smooth subalgebra yeah the star operation works as before if you have an identity it stays an identity beta is still an automorphic action also with respect to the new product and in the end you can complete this deformed smooth algebra to a deformed CA algebra by finding some appropriate deformed sea Norm on it okay this will not so not be so
+
+00:19:54
+important in this talk foration to Quantum Fe Theory uh I also want to briefly mention something about States and representations of this de algebra yeah so we have a procedure ref tells us we take one sear algebra and get a new one yeah depending on this parameter and because we have a new product this also introduces a new positive cone yeah squares are different yeah in the old algebra squares of this type are positive operators B Star B with the new one B Star B but with respect to the new product and this is uh usually very
+
+00:20:29
+different notion of positivity yeah the consequence is if you have a state a positive functional on B on the old algebra it's usually not positive on the new algebra yeah I mean it's just a different notion of positivity which you need and okay that's a problem yeah if you have have a nice State on your old system say vacuum state or whatever it maybe is not a state at all on the new system yeah a recent result in this context is however that any state you have on the old azbar can be deformed to
+
+00:21:00
+a new state which is positive again on the new one yeah a new result of the fryborg group here kashman but we won't need it because we consider a simpler situation we consider the simpler situation where we only look at translationally invariant States invariant under this action beta yeah this is physically well motivated I mean think of vacuum States or thermal equilibrium States these are translationally invariant it's a simple case but a relevant case yeah and the good thing is in this case you don't
+
+00:21:34
+need to change the state yeah or put differently let uh Omega be an invariant State on your undeformed algebra and introduce a gns data yeah corresponding to that state and U is oh my pointer it works yeah uh these unitaries U of X are the ones implementing the action on the hbert bace on the gns bace yeah then first of all the first message is it stays a state on the deformed algebra because it just does not see the deform product whenever you take a deform product a new product times B and evaluate in Omega
+
+00:22:14
+it's the same as taking the old product yeah this you can compute using the translation in variance of Omega okay and the gns triple of the deformed algebra is closely related to the old one the hbert space okay this is obvious from here does not change change yeah the implementing Vector does also not change but what we are interested in is how does the new representation of the deformed algebra act on the undeformed one yeah so we consider such combinations deformed guy acting on undeformed guy on the invariant vector
+
+00:22:46
+well you get the new product and you just write it out in terms of the unitaries implementing the action yeah so that's your formula how the deformed operators act on this gns base yeah in particular you see if you uh if you drop the B here or say put b equal to the identity then you see ah the deformed operators directly on the invariant state you don't you do not see the deformation yeah because the identity stays in identity okay so this was our formula uh for for the um uh deformed representation let's say
+
+00:23:25
+and now in this setting we can forget about the abstract C star and we can forget about the representation just work concretely on the HT space if you like yeah so we just consider this integral formula and ask ourselves well does it make sense for which kind of operators F on our gns space and which kind of vectors p in our gns B and just uh just as before with the refill technology you see well if f is a Smooth Operator bounded or can also be unbounded in a certain fashion and Si is in the smooth domain of this
+
+00:23:59
+representation then it works as before yeah that's your deformation formula and now to make contact with the w convolutions of BU at Summers well first uh remind uh recall that this U yeah it's uh strongly continuous rius interation because the action was strongly continuous and it's unitary so you have some spe spectral measure joint spectral measure of these four or five or depending on Dimension uh how many uh translation operators you have yeah so you have some joint spectral measure if you insert this in
+
+00:24:35
+this place you for the for the shift U of X well you get such a formula and carrying out the integration over over X gives you a Delta function and you end up with this uh shorter looking integral yeah which if you see it without the line before is not so clear how to understand it yeah I mean you can read you can read it as a definition of this or you can uh do it independent definition of these warp convolution integrals as has been done by bhood Summers yeah but in this setting it turns out that they are really
+
+00:25:07
+equivalent yeah yeah one important effect of this uh state so why I mean I could work in the abstract setting all the time yeah but why why do I choose a state and go to a representation the important effect is here the spectral measure integration over the spectral measure extends only over the spectrum of course yeah H that's how it is defined so we have the Spectrum everywhere here yeah here we only integrate over s and because of the Delta function it also means the P integration is only over the Spectrum
+
+00:25:41
+yeah that's important uh to have in mind um yeah okay so I mean the Spectrum can can of of course have well various shapes depending on the CH on the state you choose yeah you may think of vacuum state where it's in a cone or equilibrium states where it's the full space so that you do not gain anything yeah but depending on the state you choose uh you get a different domain of integration here um okay now let's apply this uh refill technology to the deformations of wedge algebras and uh remember our task
+
+00:26:21
+is we have a given wedge algebra and want deform it to a new one yeah so the old one I just uh recall the two conditions we had yeah the isoton and locality conditions these two okay this we assume we have yeah it's our interaction free system if you like or any Quantum field Theory which we can handle yeah so how to do how to apply reface uh reface deformation procedure well B is already called B so I take this C algebra to deform it yeah no problem with that I need an action of uh Rd yeah of the translations on the big
+
+00:26:56
+algebra but I have it I even have an action of the point array group yeah so I just can take the Restriction to the translations yeah so there I can do my deformation I uh don't have an action of the translation on the small algebra a because usually it's not left invariant under the translations yeah I mean you can shift outside the wtge yeah so it's not invariant yeah but what you can do to come up with a deform Bridge algebra which I denote a Theta is you just take products so with this refill type
+
+00:27:31
+products of elements in the smooth algebra a yeah and generate a a new deform BR algebra like that yeah so that's the definition of the deform R algebra yeah okay these two conditions upstairs they involve Lawrence Transformations yeah it's important to control law transformation because we need to go to the cause a complement yeah and we need to rotate and so on for variant Theory so we somehow need to understand uh what's the relation of law Transformations uh to these ref type products yeah but this is a easy
+
+00:28:09
+computation yeah you just uh look at such a new product a refill time B yeah and act with a point grade transformation so I told you already the translations are still automorphic they act on each factor only but the law Transformations are not yeah they also act on this Matrix Theta in the middle yeah but you can easily compute that yeah so that's the structure of the action of the Lawrence group on on the deformed system yeah and if you now are to satisfy the first condition for the deformed system yeah where we have all
+
+00:28:45
+these refill products well then we and yeah we have these refill products and they they will be deformed by these law Transformations up there yeah so we we need to choose the theeta in such a way that it is not not uh that it's invariant under all Lawrence Transformations which map the wedge inside the wedge yeah if you can achieve that then we are in a good situation for the first condition yeah so how can this be done well it's a matter of choosing uh choosing the right Matrix Theta yeah
+
+00:29:19
+that's a simple Lama yeah you have to compute a bit yeah first you have to ask yourself what are the LA Transformations fixing the wedge yeah there are not that many you have a boost in the X1 Direction This fixes the wedge and you have rotations in the edge yeah and that's it maybe some reflection but let's stay in the identity component yeah and then uh well you look at this this action here of the Lawrence group on the matrices and you have to find a matrix with the same stabilizer group
+
+00:29:48
+but with respect to this different action okay and it can be done yeah and the most interesting four dimensional case it looks like this I mean here you explicitly see in the up upper corner this is the Boost invariant part for the X1 Direction and this is a rotation invariant part for rotations in the two three plane yeah and okay if the dimension is higher than four you have a big rotation group in the edge and so you have to choose a trivial here otherwise it won't work okay but given this choice of theta
+
+00:30:21
+where these Kappa and Capa Prime are still free parameters you can show that whenever you have Lawrence transformation ing the wedge inside the wedge H it sometimes works sometimes not oh yeah it's precisely the same as preserving this particular Matrix yeah and whenever you have a law transformation mapping the wedge into the Cal complement it's precisely the same as mapping this Matrix Theta onto minus Theta yeah okay so the first point tells us let's pick a Theta as described above
+
+00:30:57
+then the isoton condition is no problem for the defont system that's satisfied yeah by choice of theta and the second problem uh the locality condition is related to this point where we see are the the cause a complement corresponds to the to minus the deformation parameter yeah so for for this locality condition we need to consider expressions like that yeah we have minus Theta products and plus Theta products and one way or the other yeah this should be zero for all c yeah that's the condition and uh
+
+00:31:34
+you have to be a bit careful here about the brackets because every such product is associative but they don't mix uh under each other yeah so here you have to play you have to pay attention how to how to place the brackets yeah just like that so this uh should be zero for anyc if a is in the right wedge and B is in the left which that's a condition this locality condition yeah and okay we just compute what it is yeah using Reus formula and well it's a bit of computation but not very
+
+00:32:06
+difficult and you end up with this uh formula yeah this difference this twisted commutator if you like is once again such an oscillatory integral and here you have inside a commutator with respect to the undeformed product just the usual old product with uh shifted A's and B's yeah and then shifted once again outside okay and apply it to some shifted C important to notice is you can express it in terms of an undeformed commutator yeah and the condition of course is if this undeformed commutator for all
+
+00:32:43
+values P vanishes well then you have your locality condition that's what you want yeah but uh usually well this will not be zero for any choice of P yeah because well this is just shifting in arbitrary Direction why why should they commute yeah you can shift in the wrong direction so they in general will not commute only for very particular Theta for Theta to zero for example yeah okay that's why we go in a representation yeah that's why we pick a nice state so let's write the same
+
+00:33:16
+formula down once again but now in the gns representation with respect to a translationally invariant state just the same formula again yeah but only in the on the concrete hbert space setting and here remember the effect is the P integration extends only over the Spectrum corresponding to the state yeah that's the important point so we need to control less conditions yeah we only need to control that this undeformed commutator is zero for all p in the Spectrum yeah which might be a a much weaker condition than the abstract
+
+00:33:52
+one and okay this is also what buh suama saw in their W convolution uh business and they they discovered well if this Kappa this this parameter Kappa appearing in this Matrix if you choose it positive yeah and if you have a vacuum State well then first in a vacuum State yeah your spectrum is in the forward light cone yeah and if you uh choose the Theta with this positive parameter where than this forward light cone is mapped by by the action of this Matrix into the right wedge yeah that's the important part so if you have some a
+
+00:34:27
+local loiz in the right wedge you shift in the same direction again so you stay in the right wedge yeah and if you have a b localized in the left wedge you just get the opposite translation yeah so they are shifted apart uh I mean they are even better causally separated than before yeah so they will commute also in the deformed system yeah so for this choice of the Matrix we we really get a deform wedge Algebra I mean a new system uh satisfying the two conditions yeah in this particular vacuum represent
+
+00:34:58
+ation so here I'm cheating a bit um because well what is a problem you can end up with unbounded operators in this business yeah I mean you always have uh have to take care that this product is first of all all only defined on the smooth sub algebra and this Ral extended sea algebra is really different from the old sea algebra they have dense intersection yeah but well they can if you take products between two arrary elements of the undeformed in the deformed algebra this might not be defined so you can end up with unbounded
+
+00:35:35
+operators and a lot of technical work has to be done to overcome this yeah but I won't talk about it here just uh mention some of the properties uh of the deform system I mean now now uh the constructive part is over yeah we have the new wedge albra and now we want to want to see yeah well what have we constructed in the end yeah we want to extract some some properties now and okay the first idea is of course to do scattering Theory yeah maybe we have nice cross-sections or something really describing an interacting system
+
+00:36:08
+and okay if you have a decent energy momentum Spectrum you can really do uh you can do hro gaing Theory as before for this it's uh important to use two properties first of all you need this R Leader Property yeah and here well remember on the on the vacuum you don't see the effect of the interaction yeah so you still have R leader for all these wedge alas that's no problem and well then you just apply the scattering Theory which was also developed for wedge local operators in this joint
+
+00:36:39
+paper B 2001 where you effectively use that two wedges can be space like separated yeah so two particle scattering can be described in this setting two to two particle scattering and then you can compute what are the S Matrix elements here in an idealized fashion with sharp momenta PQ outgoing P Prime Q Prime ingoing in the deformed setting and compare to the same as Matrix element in the undeformed setting well there's a simple relation but they are not the same yeah that's uh that's the message yeah they differ by a
+
+00:37:16
+face Factor yeah so in particular if you have a free as Matrix before you have a non-trivial s Matrix after the deformation yeah you have these additional face factors it's not a very strong kind of interaction we agree yeah so it's I mean it's only a phas factor yeah so when you think about experiments how to really observe this one usually says yeah time delay you have no particle creation an observable effect observable effect observe that this new because of this choice of the the theory is not fully
+
+00:37:49
+local yeah because otherwise we know it must be lawence andaran I will come to this in a minute now uh well so this uh somehow ends uh the Rea story a bit yeah I mean we saw a general procedure given one wedge algebra how to obtain a new one and extract its properties yeah some change in interaction yeah at least in the two on the two particle level uh now I want to speak about a related but somewhat different deformation procedure other examples of deformations which works with the spasman Ala which yob mentioned
+
+00:38:25
+yesterday yeah so this we we had the definition yesterday the tensor algebra over the Schwartz bace of test functions on y minkovski space yeah so that's not C star that's LF I guess is called this kind of algebra yeah but uh never mind what we now need as an input uh for our deformation is some function so we a function on the upper half plane satisfying a number of conditions I'm not very precise here yeah so you need analyticity conditions analyticity in the open uper half plane for example and
+
+00:39:04
+certain symmetry conditions very similar to what Roberto had in his talk yeah but slightly stronger I guess maybe we should discuss this yeah it's not identical but it's slightly stronger moreover this is on the half plane and not on the Strip but you can transform yeah that's no problem so this is uh one input you need this function and the second input as before Matrix as deformation parameter yeah so Theta somehow tells you strengths of the interaction and R kind of interaction yeah so with these two data we introduce
+
+00:39:40
+a new tensor product on the basman algebra by the following formula so the ti is FY transform yeah it's easier to write down in FY space so I take some two elements of the of this s yeah multiply with a new product take the NS component and evaluate at nend momenta and well up to here it's the old product yeah this is the old product and the new part is uh these deforming factors which you have here yeah loads of factors of this R and the Theta is uh also in the argument yeah so well that's first of all a new
+
+00:40:18
+product and some properties we might check first of all does it work well together with the star and with the identity yeah is it still a star algebra with the old star uh and uni and yes it is if you pick R appropriately yeah I mean here you can read off conditions on R yeah and in particular for the first one I guess I need this R this minus one yeah so so that's maybe maybe different to your setting yeah so this star condition uh well also gives you a condition on the function such that it
+
+00:40:48
+works and if you take this function uh e to the I argument yeah then you end up with a Ral deformation as before yeah because here then the products you get just sums in the exponential and you well end up only with shifts of these two functions yeah then it's the same as before okay so uh up to now similar to uh the refill information construction there we now chose a state uh in the reer setting some translationally invariant and particular vacuum state so here uh we do something similar we also
+
+00:41:25
+pick a state but even much more particular namely we pick the Whiteman State corresponding to the free massive SC Scala field yeah um and then well if you take this particular Whitman State you can show once again it does not see the deformation in the product yeah once again uh if you take a new product or an old product it's the same evaluated in this state no that's particular for this special State I mean yeah here you see already all these products you somehow have to use this Quai free structure Ure
+
+00:41:58
+of this uh of these endpoint functions of the free field and then it works out that they all wiish yeah for a single product okay so but with this choice of State we have the same structure as before yeah we once again have a state which does not see the deform product so we can go to a representation on the same undeformed hbert space and only get deformed field operators in this case yeah um okay and I don't want to talk about many details here but well the structure is very similar you have
+
+00:42:27
+deform field operators on the old hbert space generate for example polinomial algebras localized in wedges and you once again might check well uh so by construction uh it's still otonis but the the question is about locality once again yeah do they commute the wedges which are causally separated and this is where analytic property of R come into play yeah so and this is all once again similar to this SM Matrix business and well then you have your uh deform wedge system again okay satisfies all your properties and you might once
+
+00:43:01
+again check what are uh the features of the defont uh Quantum field Theory and you can once again compute SM Matrix elements yeah remember here in the reer setting they had such a form and by comparison here you now find this function R yeah this appears here as uh as two particle s Matrix yeah so in a way you put in the two particle s Matrix to Sol this okay okay um a more problematic Point local observables yeah so up to now I told you starting from a wedge algebra uh which defines a net yeah you
+
+00:43:38
+deform it in such a way that you can still construct a net from that yeah with all properties you like and net of wedge algebras and there's also this very general feature how to extend it to say double cones or any compa equation yeah just by intersection but because well you do intersections it's a problem uh to ensure a large size of these intersections yeah it might happen that they are small yeah so this is a problem to be addressed and okay thee of yeah yeah I mean refill is a special
+
+00:44:14
+case of what I'm saying here yeah yeah yeah I I will come to this in a second yeah uh so if space time Dimension is larger than two huh then we saw uh you have a laar uh a Breaking of Law and symmetry in the SM Matrix so you know it cannot be a fully logal Quantum F3 yeah this is not possible and this indicates that at least the r Leader Property for double cones is violated yeah for any of these deformations and well I I think uh I learned that BRZ and Steve you have a proof that they are even trivial the
+
+00:44:47
+intersections yeah so even stronger for this reer case yeah for the others not not clear but maybe similar so this indicates well we still have striking non-local feature in the construction yeah we we can go to wedge algebras intersections well then we we somehow see that uh the S Matrix we get is too simple for four dimensions yeah I think you can put it like that and what we need is a more General type of deformation to overcome this yeah this is what we are looking for what we want to find yeah you want to
+
+00:45:22
+find an interaction which is so strong I mean you need particle creation and everything it also on the two particle level that uh this um small size of of the intersections can be overcome yeah so you need more General deformations yeah but the the strategy can proceed in this direction once again I also want to say something about the two-dimensional case which is special because here well in two Dimensions you only have one uh anti- symmetric Matrix up to resing yeah so there's no choice if if you choose an
+
+00:45:56
+anti- symmetric Matrix and the Lawrence symmetry is not broken I mean the Lawrence group is very small in two Dimensions admittedly yeah but it's not broken and there is an infinite family of these functions R which are used for the deformation such that the deform local not net still satisfy the rich Leader Property yeah and actually can be identified with certain integrable models with a factorizing s Matrix involving r on the two particle level yeah so this uh shows you in two dimension the program can be carried
+
+00:46:28
+through to the very end yeah you really end up with say sing Garden model for example can be constructed like that yeah and it's a very different well point of view on this construction I mean you don't need ukian methods and well it's uh well yeah very complementary to other construction techniques and there are a lot of models which we can can construct in this way but not uh with other methods yeah so this just to make some advertisement for the method yeah um okay I think I'm
+
+00:47:01
+almost done let me just conclude with a couple of short remarks so first I hope I have convinced you that these deformations of wedge algebras they provide a new perspective of the problem of constructing interacting Quantum field 3es yeah I mean it's a kind of deformation procedure and well different deformation procedures are of course possible I I think jeffon will also talk about some deformation proced procedure tomorrow but in a per perative setting yeah this is a particular one adapted to this
+
+00:47:32
+wedge local situation the best studied example is in four dimensions uh and it is closely connected to refill deformations uh with an invariant State and leads to wedge local theories with a non-trivial s Matrix which is already something so as an Outlook well what's going on as well in the field from now first we would like to apply these techniques to others to other states maybe for special algebras but to other states and or curved space times special curved space time yeah this Eric Mora
+
+00:48:08
+Morales is working on that um there are well this I should have erased because at first I thought I would not include the Bas algebra case but I told you already yeah so this I've spoken about and the last part is once again in relation to this non commutative SpaceTime business um with the refi deformations I mean you don't need much as an input just an action of the translations yeah and it if you have say minkovski space it's not necessary that you take what you would think are the natural
+
+00:48:42
+translations on this manovski space just any action of the translation group will do yeah I mean automorphic and continuous and so on yeah but with these techniques um the Stefan vman also in collaboration with bars and other people in fror they developed some model of a locally non-commutative SpaceTime yeah uh which was up to now uh well more a deformation of a cesan product of the SpaceTime yeah you deform around the diagonal in the product yeah and it was not so clear how to put a Quantum field
+
+00:49:18
+theory on that because it's not really a deformation of the space time but a deformation of a product of the SpaceTime with itself yeah it was not so clear how to work that out but uh now we saw and this is a joint product with Stefan uh that using the bast algebra uh you you can you can easily apply this uh refill business with this funny compactly supported uh action of the translations and end up with something like a Quantum field the on a locally non-commutative SpaceTime yeah where you
+
+00:49:48
+have just some region in SpaceTime which is non-commutative and apart from that it looks as before yeah and we are investigating what the features of this Theory are but it's well way too early to tell H tell anything about that some problems have to be overcome so and I think I close here a couple of minutes before time thanks for your attention thank you for your are there questions and to introduce this more General deformation with this function R yeah to turn to the yes uh what was the reason why is
+
+00:50:37
+this not possible directly in the re or spatial set I'm still I'm still trying to do it on a sear algebraic level but it's uh I mean well let's go back to this definition I mean basically the problem is so if you have an exponential function here you get sums in the exponent yeah so it depends only on really the overall momentum yeah and here it depends on individual momenta yeah and it's not so clear how to generalize this to a sear setting I mean it's not just an action of the
+
+00:51:08
+translations it's more yeah more detailed in the spatial picture you have Spectrum which is just added when yeah and you just have well so to speak uh translations in the center of mass yeah yeah and that's different here yeah are there any plan plans to form perhaps Twisted cross products or cross products with sa uh more sophisticated groups like part of the form group that for inst yeah yeah well uh a mathematical problem when you when you see at these when you look at these refill informations yeah you have a
+
+00:51:48
+group action so why take Rd take any group yeah that's what you would like to do but it's complicated when the group is not a billion yeah um there are some partial results uh on this translation dilation group yeah which is a bit non ailion only yeah there similar formulas exist but for the general case for example for rotation group not at all yeah there is a sort of balul for the rotation Group by I think that was a Pap by they haven't considered this from the C AR point of view but at least we know
+
+00:52:25
+what the calul is going to be so maybe it's so I don't know this yeah maybe it would be good to look at but so from what I heard uh from people working with Ral deformations well the general idea is where have you the formula so this uh exponential you have to change if you take a different group yeah and well you these integrals are defined in a funny way yeah you have to be very careful that it really makes sense at all yeah so it would be great yeah I mean if you could do for the Lawrence group we would
+
+00:52:56
+be very happy they have a butor I don't want to take up too much okay yeah well maybe you can tell me reference later could you go back to this previous slide that we have just a second um where was that this product yeah if I recall this correctly ination case this is the S Matrix that comes up this one of these factors the modification of the Matrix so could you I mean does it make sense to take any of the inable S Matrix S matri that are know just inserted also also produ yeah I mean uh so not any yeah but well
+
+00:53:49
+if you don't have Bound stes for example no PO but for the simplest case it works it's just the conditions which I need yeah direct check can do this yeah I mean that's how I found it because of my previous work on factorizing ES mates Yeah question yes I would like to know what what type of when you sayous Matrix in theal for case type of for example does it preserve the number of par can you have production no well first of all we can only compute two to two particle scattering because of the size of the
+
+00:54:26
+wedge yeah and there's no production process involved at all it's well just these well it's as in integrable field theories yeah so yeah so no production no no I mean uh preservation of the particle moment yeah and you you cannot for example maybe this was just to reestablish the historical truths concerning constructive theories when mentioned that in 70s and 880s there was based on the lran formalism this huge School of constructive theory Sure sure yeah who produce non-trivial metric but two and three
+
+00:55:11
+dimensions but and nonf factorizable yeah there seems to be a little overlap as far as uh the models are concerns which can be treated with the one or the other method yeah I mean these p52 for example are very nice theories definitely yeah and start from anric of these theories to it's first of all I think they don't know the S Matrix of that theory yeah it must be very complicated involves production and everything so when you think here about well putting maybe not a multiplication operator because if you
+
+00:55:46
+want to change momenta yeah maybe you take some integral operators you run into problems because you want associativity yeah and it's uh strange conditions on integral CS yeah I'm not sure if it can be solved yeah yes comck has for two paring so there is no production of theseion question yeah is following up on check post uhhuh you have hand you for Theory we have time solution and have the representation no well the time translations are not deformed they are the same as before yeah so you have if
+
+00:56:40
+you start with yes I mean here I mean that's maybe quite different to your other approaches the Hamilton is the same as before nonetheless we have interaction how can this work yeah because I mean the way you express the hilon I in local Fields is very different yeah I mean we don't have control over local Fields here but think just of any Quantum field Theory which you believe to be interacting and then go to the say incoming particle space you know then your representation of the pointy group in in particular the
+
+00:57:12
+huttonian is the same as before yeah so from this point of view sorry the same as an operator but not as aun really true yeah true down explicitly and see no no no I mean to write this down explicitly we would need to have these local Fields yeah and this strategy just relies on uh circumventing this problem of constructing local fields which we know is very difficult yeah we go to these uh wed local situation yeah there we can much easier construct and everything works and the local stuff we just do
+
+00:57:49
+algebraically but taking intersections but the individual elements we don't control yeah so this is not a procedure for say Computing a fourpoint function of interacting Theory but rather a scattering Matrix yeah which maybe in the end is more important yeah so are more questions yes well returning to the uh comment conr yeah mat so is there any hope of comp yeah yeah I mean uh so what where you can compare for example CCH Garden yeah because it's nice no bound States yeah so Bond States we haven't treated here
+
+00:58:36
+yeah uh and in cinch Garden well it's the same s Matrix yeah we cannot reproduce any lrin from the net how should we yeah but uh well it's the same s Matrix and so well from this point of view it's the same Theory but uh I mean otherwise it's not clear how you could compare Yeah question [Applause] speak
+

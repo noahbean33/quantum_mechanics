@@ -1,0 +1,303 @@
+00:00:00
+So let's start this afternoon with a talk by Chris FA from the University of York um on something that was alluded to already this morning but the title is as you can see perspectives on locally coariant quantum field theory on curved space and it needs to be somewhat shorter. Yes, it fits on the line. Yes, thank you very much. It's a a great honor to be invited here. So I would like to thank the organizers uh and also for the organization in general of this wonderful conference. This is a talk
+
+00:00:35
+which is about work in progress as you can tell from the title. When I suggested it I clearly neither knew how many perspectives there would be nor from what distance nor even from what angle they would be taken. Uh had I known then what I know now, the true title would be something like two and a half perspectives obliquely from the middle distance. Anyway, so we have to see how it goes. Um this refers to the uh approach to locally covariant quantum field theory that has already been discussed by a number of speakers uh
+
+00:01:13
+including Rhina and Bob and Schnefan and Klaus also. um and I want to investigate two perspectives in particular and the half a perspective is sort of something that emerges from the two taken together. So the question uh is really is this categorical framework that has been invoked uh simply a convenient mathematical package just to say well it fits together nicely in a category or is it something that's useful uh that can be used and is it in fact something that ought to be used or ought not to be
+
+00:01:49
+used. So this is a in a sense a beginning of an investigation uh and I think it's one that maybe uh can go further but we have to wait and see. The second aspect of the talk is really to investigate in what sense this concept of local covariance actually has physical content and in particular the question is whether or not it enforces anything like an idea of doing the same physics in all spaceimes. In Bob's talk this morning, it's very clear that this is what we all have in mind when we're
+
+00:02:25
+doing uh quantum field theory in a curved spaceime or in fact more generally any physical theory in uh fixed background space times. We want them to be in some sense the same theory in different space times. So there's a slogan that goes with this. uh the same physics in all space times is far too long to keep repeating and uh as Rhina pointed out to me it abbreviates rather nicely tobas which is of course German for fun and Rhina is uh my uh co-worker on at least some of this work in which we have had a certain
+
+00:03:03
+amount of fun and I would like to uh share some of that with you today. So For those of you who uh do not know this uh program, this was a television program uh which was essentially the uh German version of candid camera uh vehas but it's a real problem because what do I actually mean when I say I want to do the same physics in all space times in some context this is a very easy question to answer um but in an aiomatic framework I think it's a little harder. And this is where uh we have to
+
+00:03:47
+start. So let's start with one simple observation. If a theory represents the same physics in all spacetimes, then it had better represent the same physics in the same spacetime even when it is perhaps in disguise under a coordinate transformation or diffmorphism. So that is the motivation for applying a or or seeking a generally covariant formulation of physical theories. Of course this goes right back to Einstein. But there's a second thing. I mean this is I wouldn't say this is all there is
+
+00:04:24
+but there is at least one more thing which is that if you have two theories that both claim to represent the same physics in all spaceimes and they coincide in one particular spaceime then they should be equivalent. Okay that seems reasonable. Now an example of this uh which is instructive is the uh lrangeian here. This is the lrangeian of the non-minimally coupled massless just to save space uh scalar field. Now there is a constant in here xi r there is the reichi scala of the uh metric and this
+
+00:05:07
+constant um in a sense well clearly parameterizes a family of lrangeians each of which has a set of equations or one uh field equation in which this sigh appears but when the reichi scala vanishes so in reachi flat space times then that term just drops drops out of the field equation altogether. So we have the same equation of motion and therefore the same classical solutions. However, these should not be regarded as being the same theory because there is a way of distinguishing them even in reachi flat space times
+
+00:05:45
+which is to look at the stress energy tensor. The stress energy tensor even in reachi flat space times contains terms um that are that depend on kai. So these are not the same theory even though their solution spaces coincide in this given spaceime. But now let me give a slightly different version of this uh example. I'm changing here the lrangeian only by virtue of replacing kai x r by a function kasai of r. And in particular I'm going to choose uh sorry zeta now uh to be smooth and to vanish in a
+
+00:06:26
+neighborhood of the origin. Now in a reichi flat spacetime of course we get the same solution space as before uh the same equation same solution space but now because za vanishes in a neighborhood of the origin we cannot distinguish this theory using the stress tensor or any other functional derivative of the action um from the model in which uh za is identically zero. So this would be an instance of where we have two different theories that coincide in certain spaceimes but which clearly are not the same in all
+
+00:07:06
+spacetimes. So that might appear to be a problem for the theas program. But of course what we typically do is uh restrict to actions which depend analytically on the metric. That is typically what we do and there's a good reason because then we can actually um continue from information gained in one spaceime in principle if you have enough of it or arbitrarily much of it but still in this one spaceime you can actually continue to others. So analyticity or qua analyticity or working in some family of uh functions
+
+00:07:41
+from which you may distinguish uh one from another given certain uh information that can be found in one space time. Now of course normally we don't worry about this because we use taste and good experience and we know what we're doing with classical field theories. But I think there is more of a problem when we come to an aimatic system setting. So when we are given a an algebra of observables or or even this functoral description and we wish to know is this the same physics in all space times there is a question to be
+
+00:08:14
+answered. Now I'm actually not going to uh treat what you might call fbas the full umbas problem but a restricted version where we only compare um theories by uh when we can embed one as a sub theory of another. So for this talk, the working definition of the same physics in all space times is something we apply to a class of theories and we say that it has the schbas property if no proper sub theory of a theory in the class can fully account for the physics of the larger theory in any single
+
+00:08:54
+spaceime. Okay. So that's there we have two theories coinciding in one spaceime. If the one is a proper sub theory of another then presumably they do not coincide in all. So that's the working definition. Now I want to uh start by giving a brief uh reminder now uh of what the uh framework of locally covariant theory is in the form uh advanced by uh brunessi frayenhagen and fair in 2003. Between them they have too many syllables so I have to abbreviate them to BFV. that's uh for the rest of
+
+00:09:30
+the talk. So here as has been described this morning uh a locally covariant quantum field theory is a funct from a category of spaceimes to a category of star algebbras. The spaceimes are globally hyperbolic and uh they are equipped with an orientation and a time orientation and there are special embeddings between them that we take as morphisms namely those that are isometric embeddings. um preserving the orientation and time or to time orientation and also so that the image is causally convex which means that if
+
+00:10:07
+we have two points in this set and a causal curve between them it must lie completely within the image of this uh uh of this map. So that's the category of space times. The category of algebbras in a sense is much more flexible. It can be it's typically taken to be star algebbras. Uh of course sea star algebra is a very important special case. Uh and the morphisms are required to be unitpreserving uh star homorphisms that are injective. Now um to keep this at the categorical level um really we're
+
+00:10:45
+talking about monic uh monic maps in the monic morphisms in the category. So that's the framework and as has already been explained uh very nicely uh what's happening here is that to every spacetime there's an algebra of observables to every embedding hyperbolic embedding there is an embedding of the algebbras one in another. So this is embedding the observables on m among the observables on n. And there are coherence conditions uh which express the fact that if you go from one small spaceime to a mediumsiz
+
+00:11:20
+spaceime to a big spacetime in steps that's the same as doing the whole thing in one go. Now in a way this nicely encapsulates one of the um one of the old lessons of algebraic quantum field theory. It's not the algebbras, it's the way they're put together. We had this very nicely in Professor Summer's talk yesterday. Um, category theorists to some extent disregard objects. They're interested in morphisms and even higher structures. And in the way, this is a nice reminder to us that
+
+00:11:53
+in algebraic quantum field theory, it is these embedding morphisms here that are really the object of interest. How the algebbras are put together rather than what they actually are. Now this has uh been around for six years or so and has had quite a number of successes to its name. It's grown out of um the uh spin and statistics theorem uh proved by Ranesh and um also the perturbative field theory uh that we've heard described by Klaus and uh and Bob and uh in which Romeo Brunetti and Stefan Hollands have been very uh
+
+00:12:32
+essentially involved. Of course, um I want to emphasize and I put it in red here. One of the uh items in the BFV paper is that it the formalism naturally gives a notion of a stress energy tensor. You don't need to get this as a functional derivative of the action or anything like that. It comes out of the basic structures of the theory. We will see how this is important. As um uh John Roberts described uh there has been uh considerable progress in super selection theory in this framework. um quantum
+
+00:13:07
+energy inequalities that rhy mentioned have also been studied in the covariant context and used to calculate things to calculate numbers. This is an important point. This is not entire this is not just about formalism. It is a formalism that allows you sometimes even to get numbers in concrete situations. Um I also mention uh the uh Ray Schlleder results obtained by co-anders and I am also conscious that I I I think I have missed a number of other things uh that have uh been achieved in the uh recent
+
+00:13:43
+past. Now I want to give a flavor for the the tools that make the whole thing work. Um one is this the time slice axiom and we distinguish a special class of embeddings. I'm going to call them Koshymorphisms. And the condition is that the image should contain a Koshy surface for the uh ambient space time. Okay, which I denote here by this red line. This is a Koshy surface for N. And we say that the uh theory is obeys a time slice axiom if whenever we have a Koshyorphism, it is converted by the funer into an isomorphism. So that
+
+00:14:20
+is the time slice axiom. Now this has to be put together with a result uh of Bob Wald and uh um also Fulling and Narovich from 1981 which shows how you can connect um space times together. In fact, if you have any two spaceimes with homeomorphic Koshy surfaces, then they are linked by a chain of Koshimorphisms. And you see how I've tried to demonstrate it uh diagrammatically here. You take the top third or so off. So you can embed that as a koshimorphism because there are Koshy surfaces that
+
+00:14:56
+loop around like that. Um you take the bottom third of this spaceime and do the same thing. And then you stick them together. And of course that's the bit that you actually have to work on. Uh in order to find a space time so that the bottom third here is isometric to that and the top third isometric to that and we can glue them together in the middle and get a globally hyperbolic space time. This can be done. And it's fairly clear these two tools together this uh defamation argument and
+
+00:15:27
+the time slice axiom clearly are going to be very powerful in combination. Now I mentioned this stress tensor that comes out of the framework and this is really very clever. What you do is you consider a space-time m your um base spacetime if you like and a perturbed spacetime where I change the metric in by adding a symmetric tensor field that's supported in a compact region over here otherwise these manifolds are exactly the same. So I can certainly find a a region in the p a a spacetime here m minus that can be
+
+00:16:08
+embedded isometrically in here to either spacetime. These are the same function considered as a a map from one manifold to another. Um because we're distinguishing them in this category by a different manifold by a different metric. we need to uh distinguish them. Oops, sorry. Distinguish the morphisms um by a a um an a label and I can do this also in the far future of the uh perturbing metric. And then if we have the time slice axiom, all of these morphisms get turned into isomorphisms, which means that we don't have to worry
+
+00:16:47
+about the direction on the arrows. We can run against it if we wish. And so what they do BFV is start in the top leftand corner and run round like that putting together the morphisms putting in inverses where they need to get right round and back from M to itself via the perturbed spacetime. This is of course an automorphism because it is a product of is a composition of isomorphisms. Very nice. But even nicer is the next thing. you can or they can they could they still can I suppose um functionally differentiate the um this
+
+00:17:25
+morph this uh automorphism with respect to the perturbation and this um then has the interpretation of giving after correction by factors the commutator with a stress tensor how do we know it's a stress tensor in uh BFV they showed that it is symmetric that's not surprising conserved curved which is important. And furthermore in a particular model namely the um free scalar field they check that the standard uh formula for the stress tensor does indeed agree with this um uh functional derivative here. So this is a
+
+00:18:08
+really important thing. This remember starts in general without any action but nonetheless uh you can extract a stress energy tensor at least uh in the sense of a derivation. Okay. So the next question is well can you then extend that to a field but let's uh put that to one side. Now um one of my original motivations was to ask whether we can fruitfully study quantum field theory at the funtorial level to which end I'm going to put all of these theories together and make another category out of them.
+
+00:18:44
+So this is the category in I'm calling it LCT for locally coariant theories in which the objects are functions from the manifolds to the algebbras or spacetime to the algebbras and the morphisms are natural transformations between them. This is uh to category theorist simply a fun category. uh and in the spirit of I'm abbreviating hating that in as fun right um now a natural transformation uh between these theories uh is simply this to every spacetime there has to be a morphism between the two theories what they say
+
+00:19:21
+about this spaceime and then a commuting diagram of the sort we saw in Rhina's talk in the context of quantum fields and this is simply uh the statement that the components of the natural transformation intertwine the actions of the two functors. Now that's the mathematics. Physically what this says is that uh zeta embeds a as a sub theory of uh b and in the special case where every component is an isomorphism we say that za is an equivalence of the two theories. Now examples of this a simple one is
+
+00:20:01
+that if I have any uh theory A and um I choose my category ALG so that it has a tensor product on it. I don't care particularly what but there we part of the specification of the category is a tensor product. Then I can uh define a new functor a to the tensor power of k simply by tensoring together uh k copies of the underlying algebra. So this is certainly something I can do and on the morphisms which is the important thing I simply tensor together the uh k copies of the map that is a funer is easily
+
+00:20:39
+checked. Um and of course unsurprisingly if I have k copies and l copies and l is bigger than k I can put k c copies into l copies and I can do this with a natural transformation the component. So in spacetime m all it does is tensor in an appropriate number of extra factors of the identity on the end of whatever observable we're moving across. This again it's very easy to check is a natural transformation or family a whole family of natural transformations. And here this is one of the places where uh the unit preserving
+
+00:21:17
+nature of the uh funtor is um of the morphisms is very important. There's also a uh a sort of groupoid property, but all it means is that if you go from K copies to L copies to M copies, these natural transformations stick together in exactly the way you would expect. So there is a simple example uh of uh a system where we can have uh sub theories and they are embedded by natural transformations. An example where you cannot is if you have two theories which in Minkovski space reduce to Whiteitman theories um
+
+00:21:55
+and uh which have their distinct mass spectra. These cannot be uh equivalent in fact they well okay um and this is uh an argument given in at least in a special case in BFV. Now this is what I have proposed to study but it raises some immediate questions. So firstly and this might stop us doing it is there any operational content to this and uh this I think is close to the concerns of uh Steve Summer's talk. So, we only ever have access experimentally to one spacetime, namely this one, and actually
+
+00:22:36
+not even complete access to that. But for many purposes, we often assume that we do. Um, but we would have a real problem if you could have two theories that could not be distinguished uh two morphisms between theories that could not be distinguished on the basis of their action in one spaceime. because otherwise how would we know which transformation we're talking about? The other question is have I just opened a very large mathematical can of worms and there are maybe many uncountably many
+
+00:23:09
+and you worry about large sets and models of set theory and who knows what. Um could this actually just be so large as to be ridiculous and no use whatsoever? And also the concrete question can you compute what these hom sets are what are the morphisms from one theory to another in concrete cases. So I want to so show how you can answer these and in fact the first one is is quite easy um very simple arguments um give you three nice little lemras. Firstly, if we have two of these morphisms that agree in some space-time
+
+00:23:47
+m, then they also agree in any spaceime that embeds in M. So the proof of that is is a oneliner. I use the natural property in space-time L to pop that one through. Um the L turns to an M, the B turns to an A. But in spacetime M, I know this is L, the ZA prime M. And then I do the same in reverse to get my zeta l back. But beta b of s is monic. And what that means is I can cancel it from the left. Um so I do that. I get rid of those and then I have that z is z prime. Now the second one. So this is
+
+00:24:30
+that's an inheritance property coming down. uh we also need to go up or at least across and uh that is given by the following property. If I have a koshimorphism between two theories and a theory obeys time slice then again the oops the um equality transfers and this time the argument is is very similar. I use the natural property again to get from za of n to za of m. I turn that into za m prime and go back using the natural. This time I need to cancel from the right and I can do that precisely
+
+00:25:06
+because this is an a of phi is an isomorphism. So that's why I can cancel it this time. That's why I need time slice. And finally, if I put these two together and I invoke the uh def space-time defamation argument, then it's immediate that if I have two spacetimes with homeomorphic Koshy surfaces, then um again we have equality of the zetas. And the proof is simply find space-time defamation and Koshyorphisms. And you'll see that I'm running one way or another through these morphisms. It doesn't
+
+00:25:42
+matter because I have results that allow me to do it either way around. So that's quite uh that gives us a little toolkit. Um I now need to do something slightly more. Um uh John Roberts in his talk mentioned uh diamond spacetimes that are very important in super selection theory. They are domains of determinacies of um open balls that lie in Koshy surfaces. They are very convenient uh for many purposes. If I now take um an a diamond of oops just go back for a moment. Take a diamond of this spaceime. I can of
+
+00:26:21
+course regard it as a spacetime in its own right with a very obvious embedding. And um then I can use this inheritance uh property and deduce that uh zeta uh and zeta prime agree on the diamond now freely floating as a spaceime in its own right. But all diamonds have homeomorphic Koshy surfaces. They are all homeomorphic to a three ball. So now we know immediately that all that the zeta and zeta prime agree on every diamond of every spaceime. Okay. So now we're actually being able to move around quite freely
+
+00:26:59
+in this category. Um and what I need to glue it together again is some sort of additivity property. So if I can generate the algebra of M tilda by uh using the subal algebbras of a m tilda that come by uh regarding these diamonds as freely floating and then using the funtor to embed the resulting algebra in a of m tilda if from those I can generate the whole thing I will call that additivity and then um it's not a great surprise perhaps perhaps to see that we now have gone from equality in one spaceime to equality in all
+
+00:27:42
+spacetimes. So this is this operational um aspect. It actually I think now does make good sense to consider morphisms uh in this category because we can tell them apart on the basis of what happens in one spaceime the only one we have at hand. Now there's another uh useful result here that comes from the relative koshi evolution uh which is that if I take the relative koshi evolution of theory A and the relative Koshy evolution of uh theory B they are nicely intertwined by the action of the natural transformation
+
+00:28:20
+for all pertubations of the space-time preserving global hyperbolicity. I'm not going to show very many diagrams um but just to give you an idea um here it is. These are the di the diamonds are what you use when you consider the relative Koshy evolution in theory A and in theory B. Now we have a natural transformation which puts in edges like that these verticals and horizontals. Every one of the uh trape trapezia we have around the outside commutes by virtue of the natural uh nature of zeta. And uh
+
+00:28:58
+moreover the time slice property means that all of the slanted morphisms are isomorphisms. And that means we can uh run around the inside and then out to the edge or we can go out to the edge and then run around. Okay. And this is just to do with the uh the way the natural transformations work and the fact that in any of those uh trapezia I can reverse the direction of both parallel lines given that they're isomorphisms and the diagram still commutes. So this is a very simple um very simple uh but nonetheless rather
+
+00:29:35
+useful um argument because it shows how tightly the structure of these theories considered as a category uh is bound to the idea of the relative koshi evolution. So what we've got so far is a little theorem that says that if A and B obey the time slice property and A is additive uh we don't need that for B for some reason um then the morphisms between A and B are uniquely determined by components in one spaceime any space time it doesn't have to be Mofovski space it can be any spaceime
+
+00:30:10
+um there is this nice intertwining result for relative Koshy evolution and if I functionally differentiate This translates to the following statement that I can take commutators with the stress tensor of theory A and pop across to theory B using the natural or I can take my observable pop that across using the natural transformation and take commutators with the stress tensor in theory B and it gives me the same answer. Now this was very elementary but it allows the beginning of calculation in concrete cases and I'm going to
+
+00:30:46
+report the result now. I'm not going to go through the proof but if for example we were to take the uh the free the real Klein Gordon equation uh real Klein Gordon field in the version Rhina gave us this morning of mass m and I tensor together n copies of this like that. Then I can ask in particular what are the endomorphisms of this theory? Those are the natural transformations from the theory to itself. The ways in which I can embed this theory as a sub theory of itself. Well, can I do that or not? It
+
+00:31:20
+turns out that I can only do that uh using automorphisms. There is no proper sub there there is no proper sub theory of the theory of n scalar fields that is equivalent to the theory of n scalar fields. That's actually quite reassuring, right? because it means that there is a difference between one field and two fields which otherwise might cause you worries late in the night. Now um we can also compute what this what these automorphisms are. This is a group as with any function the automorphisms
+
+00:31:52
+form a group and it's O N. If you've got a massive field, the only thing you can do, phi here is is standing for the sort of vector of n scalar fields. F is standing for a vector of test functions. The only thing I can do is choose a rotation and rotate the uh fields around. In the case where there is only one field, what this amounts to O1 being Z2, what this amounts to is simply the freedom to switch the field phi for minus fi. That's all there is. That's the only thing one can do in this natural
+
+00:32:33
+transformation language. So this is not such a great big can of worms. It can actually be quite small. In fact, very small, almost uh small as you like. Now that's the massive case. In the massless case, we also have the freedom to rotate around these fields, but there's a little bit more. There's a semiirect product with Rn. And what that amounts to is the freedom to add in a multiple of the identity and um I'm not going to particularly the precise formula is given for the experts. This is the
+
+00:33:07
+advanced minus function. Alpha is a constant. It's regarded here as a constant function on the spaceime. Effectively, this is using this is related to the fact that the classical theory has solutions which are constant everywhere. Okay. Um and you can check that this is an automorphism of the theory. So the interpretation that I draw from this is that this automorphism group is actually quite interesting not just uh just something to calculate. This is in fact the global rigid gauge group of the theory. This is all
+
+00:33:42
+transformations of the theory itself. Uh and it turns out to be exactly what you would want as the global gauge group of um the funtor assigning these field algebbras. Which also means that if there are no gauge transformations, if this group is trivial, we could legitimately say that what we have is a theory where the algebbras are all algebbras of observables. Okay? Okay, there's no there's all fixed out there. Furthermore, the linear fields of the theory will now begin to appear in multiplets corresponding to group
+
+00:34:16
+representations of this automorphism group. And that suggests the beginning of a of a program where you could actually classify all possible fields associated with the theory that we have. more ambitiously. Um I think that I would be very interested to see how super selection theory uh fits into this framework from the top down. Okay, I'm starting at the functoral level. In uh Joseph Rutzy's work uh he started spacetime by spacetime and showed how in in certain spa in large class of space
+
+00:34:51
+times you could uh apply super selection theory and with Romeo Brunetti they then extended this using locally covariant techniques but they find a group that actually changes the sectors change from spacetime to spacetime and that's to do with topological features that are specific to certain space times. So I I wonder uh whether or not what one should aim at is this global gauge group. If you were to do the whole loop of saying start with a field algebra, take the associated observables, try to
+
+00:35:24
+reconstruct from that uh the theory with the gauge group again an algebra of fields with a gauge group. Well, it should be this original automorphism group that you are aiming for. And then the additional structures that Brunetti and Rutzy find have to be understood as as specific features that relate to specific um topologies in uh the various spaceimes might have. So I think I view this as complimentary and it's certainly a long way ahead of what I could actually claim to do at the moment.
+
+00:35:58
+Now I want to move to the second perspective and get back to schbas. So let's have some fun with some funers um through gritted teeth. And um I'm now going to do something which is a little bit strange. This is by the way almost to be understood as well actually it is to be understood as a joke. Um I'm going to take a funtor from the spaceimes to the category of locally covariant theories. This seems to be a strange thing to do. So in if I write it out in full, it's in a funer category from the
+
+00:36:32
+functors from the manifolds to the funers from the manifolds to the algebbras. Okay, that's what it is. What is it? It is a locally covariant choice of locally covariant theory. Every time you give me a spaceime, I give you a fullyfledged theory in all spacetimes. Every time you tell me about an embedding of one spacetime in another, I give you a sub theory embedding of the uh theory in in assigned to space-time m as a sub theory of the spacetime in n. Now this is not at all what you want. We
+
+00:37:07
+are interested in theories that are locally covariant functors from the manifolds to the algebbras. But there is an elementary construction to go from phi to a what I call a diagonal theory a funer that is an actual object of this LCT category. This is how you do it for every spaceime and every hyperbolic embedding of this in in some other one. I just define fi delta of m to be what the theory assigned to spacetime m has to say about spacetime m. Of course, the really interesting thing as ever is the
+
+00:37:44
+morphisms. This formula doesn't look so obvious, but when you look at the natural square, it jolly well is obvious because I need to go from 5 mm m to 5 n. How else would I do it except straight down the diagonal of the natural square. Um, and that is reflected in the formula given there. I'm not going to prove that this is a fun. You then need to just build a a 3x3 diagram and check that the whole diagonal is equivalent to just doing it in two stages. It's a naturality again. But fi delta is a funer and
+
+00:38:22
+therefore according to the rules of the game it is a theory we can take sort of seriously. But this was a choice of theory in every spaceime. There is no guarantee that this is the same theory in each spaceime anymore and indeed it need not be. Here's a construction. Um I'm going to write sigma of M for the Koshy surface of M modulo homeomorphisms. And then if I choose Whoops. If I choose any topological invariant valued in the natural numbers, um it's a topological invariant of the
+
+00:38:59
+Koshy surface which assigns the value one to every uh spacetime with non-compact Koshy surface. Then I can build a theory like this. I just take for each spaceime mu of m copies of whatever theory it was I had in the first place. So this again could be quite general. And for the morphisms between the theories, I just assign this eer remember I had which went between mu of m copies of the theory to mu of n copies of the theory. And my claim is that this is a funtor. The key point uh is really only to make sure that it's
+
+00:39:39
+well defined because remember I I obviously can't can only do this embedding if mu of m is always less than or equal to mu of n. And uh geometrically this this is actually the case because if I have a compact Koshy surface and an embedding of m inn then actually one can prove that the Koshy surface are homeomorphic. So mu of m is equal to mu of n. And uh therefore it follows that I always have this sort of order property whenever m goes into n because either m is uh has non-compact spatial section in which
+
+00:40:16
+case this is one and I don't really care what that is or um m has compact spatial section in which case these two are equal and then the fact that this is a functer follows immediately from that groupoid property that I mentioned that the eaters have. So here's the picture. Take the simplest of all examples of all non-trivial examples. Uh mu of m might be one if the koshi surface is non-compact and two otherwise. Which means that on a little diamond I have assigned one copy of the algebra that I would normally expect.
+
+00:40:55
+But on a cir on a spacetime uh with maybe tooidal spatial section I have two copies of the algebra assigned and this is locally covariant. It is a funtor right? So this is within the rules of the game and we need to worry about what we have just done. Moreover there are natural embeddings both of the theory of one uh copy of a into fi delta into two copies of it. And as you can see in some spaceimes these are going to be isomorphisms not at the same time but not in all. So the schbas property fails in
+
+00:41:36
+LCT. uh there is no schbas or not enough anyway right let's have a think about the properties this is very strange because what we've got here is a theory locally covariant theory that is more than one copy of the field but less than two right one and a bit um it is a funer it also is not so badly behaved if your underlying theory um is has uh time slice and causality. So commutation and space-like separation then so does fi delta. That's not bad. Um the other thing is that you should you should be
+
+00:42:19
+worrying about how do I know that uh actually that and that are not equivalent. Well I already told you that because for example for the scalar field they'd have different automorphism groups right o z2 versus o2. So I know that they cannot be the same in at least in uh in um obvious examples. Now an interesting property occurs when I look at these diamonds again and I ask this by the way M restricted to O is just my notation for regard O as a spacetime in its own right inheriting all of the causal structure
+
+00:42:54
+from M. When I do that uh because the diamonds all have non-compact spatial section they all get mapped to one copy in in themselves which means that our theory fi delta is not additive. It also means that the local algebbras these ones are insensitive to the ambient algebra in which they are put and then might make you think ah it's all right this is just one copy of the theory but in disguise. Okay, so maybe it's not so very exciting. Well, um actually there is something that can distinguish what the ambient degrees of
+
+00:43:33
+freedom are and it's the stress tensor and the relative Koshy evolution because we have this intertwining rule. Remember when I go from one theory to another and if I compute it for a diagonal theory, I find that the relative kosher evolution factorizes into two things. This is the bit you might expect. Remember this theory was concocted by sticking together different theories in different space times. And here is the relative koshi evolution of the theory f of m in spacetime m. So that's might what you
+
+00:44:06
+might expect. This bit is a little bit less expected. It is actually another relative koshi evolution taking place in a different category namely the category LCT. This is a the uh evolution of this funtor that assigns locally coariant theories by spac-time perturbations. Now actually I've not yet constructed any examples where that's anything other than trivial. So let's drop this factor for the moment um and at least study those models where it is trivial. Then we get the nice fact that
+
+00:44:42
+the stress tensor of the diagonal theory in spacetime m is exactly what you're expecting. it is the stress tensor of the theory assigned to that spacetime. In other words, it is the the the stress tensor of the ambient degrees of freedom. So in the example I gave on the diamond I have the stress tensor for one copy and on the di on the um uh this spaceime with tooidal spatial section I have the stress tensor for two. So this relative kosher evolution does what the local algebbras do not and actually
+
+00:45:14
+picks out the ambient degrees of freedom and that of course is how you can begin to put a lid on these things. It suggests we need a new this class of examples suggests we need a new principle and this slide here is the starting point because we can actually use now the relative koshi evolution to define some intrinsic local algebbras based on the stress tensor or the relative koshi evolution. I just take in a of m all those elements that are invariant under the relative koshi evolution. This is based on some compact
+
+00:45:49
+set K. They have to be invariant under the relative Koshy evolution in the causal complement. Now this goes back to what Bob was saying about um fields should not depend on on the spaceime away from that point. Well, actually that isn't implemented in local coariance by itself. It's an additional um an additional uh requirement. So this gives us a a um an intrinsic definition of some algebbras of compact sets. To get algebbras of open sets, which is what we normally like to play with, I um
+
+00:46:24
+um put some of these together. I take all compact subsets of our region O and I generate using these algebbras. I also don't let the K get too big. So I'm going to use insist that they have diamond neighborhoods uh in this uh generation. And then a definition um the theory is going to be what I would call strongly local if um the intrinsic algebra of the open set agrees with the exttrinsic algebra of the local set which is the one assigned by BFV. Namely, treat this uh region as freely floating space. If it's globally
+
+00:47:06
+hyperbolic, treat it as freely floating and consider the subal algebra of a of m you get from the functer. So you are not guaranteed that these should agree. This is the example. But um we can adopt as a new axiom this strong locality property that requires that they do. Now there are some consequences of making this. The first is that the theory is guaranteed to be additive. That comes out uh of the technical way that um we've generated the uh the algebbras of open regions from those of compact
+
+00:47:43
+regions. But we also have the schbas property. um you can prove I'm not going to do it here but that if you have two strongly local theories and a natural between them and in one spaceime we have an the component is an isomorphism then in fact this is a natural equivalence and this is in the restricted sense that I've um uh been talking about today um we can infer two theories are equivalent on the b equivalent on all spaceimes um based on observations made in this one if we restrict ourselves to this
+
+00:48:22
+category of strongly local covariant theories. So this is a category that does actually have the spouse property. Now it's also uh an interesting question to see what happens when we apply the framework to the um diagonal theories. Okay. So what happens for example if we were to uh consider a diagonal theory um which uh has this uh nuisance factor trivial and such that it and all of the five ms that went into building it up are strongly local and then actually there's not that much freedom left. All of those
+
+00:49:14
+component theories turn out to be naturally isomorphic. So you can't use different theories. They are all equivalent. Moreover, this diagonal theory is then itself equivalent to another theory where the morphisms are related to those of uh you know fix some m0sky desitter whichever uh and then composed with uh a component of a natural which is actually a functa is a funer from the spaceimes into the automorphism group in other words the gauge group of the theory uh assigned to theory to spacetime
+
+00:49:56
+m0. So this is a little bit of a twisting perhaps of the theory. It says that there is a little bit of freedom left when you consider this theory and you can you can sort of twist it round as you hop around the algebra. AB of course I haven't shown you that there are any functors in here other than constant ones and that of course raises many interesting questions of a cohomological nature and what we really need to do is to adopt the uh net uh cohomology that uh uh Roberts and Rutzy use we need to
+
+00:50:33
+adapt that instead of looking at post sets of open sets in given spaceime we want to do the same thing but just hopping around in the category. So this framework should generalize well I mean I know from talking to the experts this generalizes um very easily and then you're left with a cohomological problem of computing cohomology classes of this category and with values in uh the gauge group. what you then achieve will be in some way uh not entirely clear to me right now to the net bundles that um uh
+
+00:51:14
+Robertson Rutzy and Vzelli um have uh constructed or described in their work. Now in the particularly simple case if we if we uh uh restrict to the case where the gauge group is trivial and we really are working with theories of observables then um of course this automorphism group is trivial and that's good because it means that these diagonal um theories really are all equivalent to one of them in fixed space time. So that really puts the lid on all of these possibilities. Okay. Strong locality uh is sufficient to reduce it
+
+00:51:53
+from this menagerie of peculiar examples to what you would like to have uh had and in fact what I don't think Rhina or I were quite expecting to get this additional little twist but it is possibly there depending on the solution to the cohomological problem that I mentioned. Now I need of course to give you an example to convince you that any of this works. Um take the Klein Gordon field. Uh as ever there not that many other things we could take frankly. Um and uh let's take a mass a positive mass to
+
+00:52:32
+start with. This is strongly local. when you um look at this algebra the we're looking for the remember for the elements of the field algebra that are invariant under relative Koshy evolution in the causal complement of K and those turn out to be exactly the subal algebra generated by fields smeared with functions supported in K. Now K is compact so this support can stretch right out to the edge. Okay. And this is actually the reason the original reason for this um step from the com well reason realizing firstly that these
+
+00:53:10
+algebbras are probably more properly associated to compact sets than to open sets because we started with an open set and found that the support stretched to the boundary. So really it's about the closure. Um to get what we would normally have for the local algebra, we need to just stretch things out by allowing ourselves to generate stick these local algebbras together, the ones on the compact sets. So that one was strongly local. But life is never entirely simple. And um well after listening to this talk,
+
+00:53:49
+you might think life is hardly ever simple. In fact, um but if you take the massless field and on a Koshy on a spacetime with compact Koshy surface, it doesn't work. There is a mismatch between the intrinsic algebbras and the exttrinsic algebbras. The reason is there's another generator and this generator is uh in a sense pure gauge and it comes from the fact that the massless field always has a constant solution and in non-compact spacetime we actually throw it out because we only consider solutions that are have compact
+
+00:54:29
+support on Koshy surfaces. But here it is in the um compact uh Koshy surface case. Right? So that leaves an interesting question. Should I change my definition or throw away the theory? Now I actually am a little bit down on the massless free field apart from messing up my nice uh idea um because there are other things other problems that crop up from time to time that really annoy you. And one of those is that if you have a static spacetime of whatever dimension and you look for a static ground state the spacetime if the
+
+00:55:08
+spa base section is compact there is no um static ground state because of this zero mode. So this is actually related to other pathologies and at the moment although I am open to changing this view I would like to say that we should live with the fact that well strong locality is as it were the right definition or the foundation of the right definition and we live with the fact that the massless free field does not obey it and but it's a signal for something else going wrong. Now um part of the reason
+
+00:55:44
+for going down this route is um discussions I've been having this week with uh co-anders where we've been looking at the dra equation and you can compute the um local algebbras and uh in the massive case again it's strongly local as you would expect and again as you would expect there are some problems in the massless case and they come from the existence of covariantly constant spinners But covariantly constant spinners only exist in rather special spaceimes. In particular, they have to be vanishing
+
+00:56:18
+reachi scala. So this is destroyed at the moment you start perturbing your spacetime in relative koshi evolution. So in that instance um it seems uh that it is likely that this is a strongly local theory even when the mass is zero. And for that reason I tend to think that this this is a pathology of the massless scalar field. The existence of a a gauge mode that is stable as you perturb the spaceime it doesn't know anything about it carries no energy momentum uh density it's only there in these particular spacetimes and
+
+00:56:56
+that is a pathology I think. So uh I'm nearly at the end of the time. Uh to summarize and outlook um local co-variance it by itself does not enforce but it does and this is a very important thing I think uh open new ways of analyzing quantum field theory. We have seen how the global gauge group appears in a very natural way as the automorphism group of the functer that we start with and that it does carry the interpretation of a global gauge group. There are these uh uh joke theories the diagonal ones which even if you don't
+
+00:57:36
+like strong locality you will well if you don't like strong locality you will have to deal with somehow or other either by saying pursuing uh a path like uh Bob and Stefan and saying I know what the list of fields is from the start or by some other means or living with the fact that these strange things might be there maybe that's not a problem for you strong locality however, does get rid of them nicely. And what I want to emphasize above all is the key role in all of this analysis of the
+
+00:58:08
+relative Koshy evolution and the stress tensor that it engenders through uh uh functional differentiation. Looking ahead somewhat, if we pursue this uh analysis at the funal level, could it be that we really can do quantum field theory in curved spaceimes without the spaceimes? In other words, at this higher level, dipping down for examples or calculations, but formulating many of the concepts at that higher level and seeing how they go. Maybe that might be helpful. Maybe it won't. It has to be
+
+00:58:43
+justified by um by progress. Interesting possibility of doing super selection theory at that level in which you would need the cohomology of the spaceimes. And a final thought, it's been traditionally regarded that quantum field theory in a curved spaceime is hard or awkward or difficult because there are no global symmetries uh of the sort we have available to us in Minkovski space. That is to the traditional view. But I'm beginning to wonder if perhaps quantum field theory in Minkovski space is hard
+
+00:59:19
+because it does not have the relative Koshy evolution and stress tensor that you have in a glo in a locally coariant or even better strongly locally covariant um field theory. And that again building on that perhaps any theory that does have a sufficiently nice stress tensor is already a theory possibly uh defined in all space times with the same physics. Thank you. Thank you very much. That is very clear talk. Are there questions or has they all been answered already or maybe asked the last mention?
+
+01:00:16
+Yeah. Looks like this intensive some additions. Yes. Always try to look. Yes, it could. No, but in a sense there is I would pick up on the the idea of universality. Maybe not quite in the way that you mean. um in in your paper uh the BFV paper, the local net comes for free or at least a local net comes for free. And I think one of the interpretations of of strong locality is that this supplies a job for it to do instead of being one of the possible things that would be the as it were universally preferred uh way
+
+01:01:03
+through which all other local nets uh would have to would have to sit inside as subnetss. Um so there is there is an aspect of universality but uh maybe that's slightly different from what you were thinking about. Yeah. Is there aological obstruction to the difference between or the possible difference between internal and I I um almost certainly so because of the need to get these functors from the locally covariant theories uh uh from from the space times to the locally covariant theories. And for
+
+01:01:53
+example, the very first thing that would go wrong with the construction I gave of this slightly twisted one where you need a functor into the uh into the uh gauge group is that maybe you can put the same space time into a bigger one in two ways. Um and so you have to have agreement on all of those different ways of doing it. And then if you sort of try to trivialize this whole thing, you get a chain of other conditions which are indeed cohomological in in nature. Um so yeah I I think that cohomology is is
+
+01:02:26
+definitely in in its various uh guises is probably the way to investigate this. Yeah. Has anybody considered the joint factors? Yes. Well, um I mean that is uh a very interesting thought because of course there's a long running uh very longunning story a question about whether you can reconstruct the spaceime from the algebra of observables and that is a very nice suggestion but as far as I'm aware no one has no one has uh contemplated it. I think I um as I said this was work in progress uh and a
+
+01:03:17
+little bit of a race to the finishing line. There are some hints of a jointness around the place which I am going to follow up but that that I hadn't thought of and I think it's a very nice a very nice uh thought. What is the name of the category of super? Oh, spam. Yes. Okay, it seems there are no more questions. So, thank you again. Next is
+

@@ -1,0 +1,336 @@
+00:00:01
+she's talking about the can of so yeah yeah thank you very much for the introduction and also I would like to thank the organizers of this nice event for inviting me and also for the opportunity to speak immediately after udol har which is of course a great challenge now actually I want to speak about a subject which uh was for a long time a little bit neglected in the community of algebraic Quantum field Theory namely about the perturbative approach to Quantum field Theory and I want to speak about the relations of the
+
+00:00:41
+algebraic approach to these perturbative uh methods and this is based on several Papers written in collaboration with Romeo brunetti Mel Dutch and Pedro laiten REO now the plan of the talk is the following after an introduction I want to explain the algebraic structure of peror fre normalization as we see it at the moment and this is based on the uh uh on a method which uses uh interactions which are localized in a compact region of SpaceTime this makes the algebraic relation simple but at the end you have
+
+00:01:30
+to remove this space time cut off and this uh is a so-called adiabatic limit and I will describe how this adiabatic limit can be performed in the algebraic framework and I will end with some conclusions and some Outlook now as we already heard in the talk of rudol hark uh Quantum field theory is just quantum theory and uh together with the principle of locality and the principle of locality has of course to be implemented in some way and the way it's implemented is by uh the um concept of the local algebras of
+
+00:02:15
+observables which are associated to regions of SpaceTime and because uh the uh the causal relations in SpaceTime and the algebraic relations in the algebra are closely related uh this was a relation between the algebra and its commutant and the region and its space like complement uh the um algebraic and geometric structures are very near to each other and so there are two different names for this framework namely one is algebraic quum field Theory it's the name of this conference and also the name of our group in
+
+00:02:52
+Hamburg and what is synonymous is local quantum physics so this emphasizes more the uh the relation to locality not so much the algebraic relation but due to the properties of quantum physics both concepts are actually lead to the same structure now the algebraic approach of quantum field Theory uh was very successful in the axotic formulation the reason is that you start from very clear physical principles you can use rigorous mathematics the mathematics of operator algebras and you get a structure which is an qualitative
+
+00:03:40
+agreement with the structure of particle physics which we observe in experiments and uh Rudolf In His talk already reported on the main successes of this approach let me just uh remind you on this so it started with the uh explanation of the multiparticle structure of quantum field Theory um and uh this is remarkable because you see that particles in Quantum field Theory are not fundamental quantities but they are derived entities and they are derived from certain properties of local quantum physics namely you need
+
+00:04:25
+the existence of single particle States defined as states of the mass operator you need local commutativity of observables this could be weakened a little bit but essential so this is the essential structure behind this and you need the fact that space time is homogeneous so you have translation in variance and this is a reason why we observe multi particle States in Quantum field theor and this is in complete agreement with all finding from experiments but it's it's it's based on these uh structural properties
+
+00:05:01
+now another main success of algebra Quantum field theory was the analysis of the structure of super selection sectors and the discovery that this is just a dual object to the uh set of inner symmetries which are in the standard case uh group and another of these successes is the explanation of the origin of particle statistics and uh this was all Alo mentioned in Rudolph's talk the concept of thermal equilibrium States for for infinite systems and the associated modular structure and uh all what comes
+
+00:05:42
+uh follows from this now algebraic Quantum field theory was less successful in the construction of models so as as any axiomatic scheme you need a lot of examples of of interesting examples where these aoms are fulfilled now what are these known examples where the aoms are fulfilled there are first of all free Fields now free Fields I think physicists uh usually uh classify uh qualify free Fields as uninteresting or trivial I think from the mathematical point of view this is completely wrong these are
+
+00:06:24
+highly complicated interesting theories with a lot of internal structure and it's really worth to analyze them and there's also a lot of physics in them so one should not uh say this just neglect what one can yes this is one can analyze them and they are interesting but there are also some other models which one can construct so first of all uh by using methods of constructive Quantum field Theory one can construct certain super renormalizable models and for them to construct all the algebras of observable
+
+00:06:57
+this is mainly the work of glim and Jeffy then one can use the uh conformal Symmetry and to SpaceTime Dimension and this gives already such a restrictive structure that one can use this structure to find a lot of interesting models these are conformal Nets in two dimensions and here I want particular mention the work of kav gashi Longo and and more recently there has also been this construction rigorous construction of integrable models in two Dimensions by Lea so this is already a large family of interesting examples
+
+00:07:41
+which one can analyze unfortunately the examples we would like to analyze namely interacting models in force SpaceTime Dimensions or better models which really describe uh what we see in elementary particle physics like the standard model or say just qcd this is still not possible to construct in this framework now actually Quantum field Theory can say a lot about elementary particle physics and this is due to developments in Quantum field Theory which were somewhat separate from algebraic Quantum field
+
+00:08:23
+Theory so I mentioned a few of them so perhaps most important this is uh perturbative renormalization and an understanding of perturbative renormalization led to the concept of the renormalization group which lets them to a improved uh perturbative formulation of the theory then another very important structural element is the possibility to do Vic rotation so you go from makovski space to ukian space and kield Theory becomes a statistical mechanics so you can use techniques from statistical mechanics to analyze Quantum field
+
+00:09:05
+Theory then another um important uh uh thing is the relation to classical field Theory which uh okay there uh successes and also uh things which were perhaps not as successful as originally hope like the concept of instantons then very important the concept of anomalies which uh we can directly see in the spectrum of Elementary particles and the concept of asymptotic Freedom which explains why qcd is a good candidate for the strong interactions and as on a more technical side there's the use of the path integral which is a
+
+00:09:51
+very elegant way of formulating quantum field Theory and uh is uh widely used okay now so if one looks at all these uh me uh all these items one can ask uh the following questions so one question is what is the relation of algebra Quantum field Theory which is well founded in fundamental principles to these other formulations of quantum field Theory second question can algebraic field Theory be reformulated in a form such that these perturbative and semiclassical techniques can be applied and third question if we are
+
+00:10:38
+successful in doing this will this contribute to General field Theory okay now actually there has already been some work in the past which deals with this problem unfortunately this work has not had not much impact neither on on say the real world outside of algebra Quantum field Theory nor on the world inside Quantum field Theory but uh was very very important for for our investigations and I think these are really nice works so I want to mention the work of Epstein and glaza on renormalization so what is the idea of
+
+00:11:20
+the epin glaza renormalization the idea is that you the uh if you want to introduce interactions you have to Define what time ordered products of fields are and you can use just uh locality properties to define inductively the time ordered products and uh the there's some ambiguity in this uh definition but these ambiguities just uh are characterized by the welln roral renormalization conditions which you have to fix anyhow and this uh way of uh doing renormalized perturbation theory has a lot of advantages it's uh
+
+00:12:07
+mathematically rigorous it starts from very clear Concepts you get an explicit formula for the interacting Fields expressed in terms of formal power series of free Fields unfortunately um it's not so easy in this um approach to formulate gauge theories I will come to this point later and there's also this problem that this uh this approach emphasizes the local property so it's important that the interactions are uh restricted to compact space Time regions and at the end you have to remove the space time
+
+00:12:47
+cut off and then you may run into problems for instance infrared problems and so on and there is one disadvantage which is the uh consequence of the advantage that in this approach there are no no divergences but uh the analyis of divergences led to the concept of the renormalization group here there are no divergences so where is the renormalization group and in particular where are the insights which were gained by the renormalization group uh another work I want to mention is the work of Steinman this is an inductive
+
+00:13:26
+construction of products this can also be done and an direct construction of whitean functions now if I analyze this I think this was more less done at the same time at Asin and glaza yeah that's H yeah so so it's essentially equivalent but it has the advantage that the no SpaceTime cut of uh is introduced but on the other hand this also makes the formula more complicated because you uh have always to prove that certain quantities exist and in case you have infrared problems you cannot directly use
+
+00:14:13
+it okay now I come to a new question which arose in the ' 80s and 9s with the increasing interest in the relation of quantum field Theory and gravity namely if one for the moment uh uh accept that gravity is just uh uh Force which which uh modifies the SpaceTime geometry then you can ask what is the behavior of a Quantum field theory on a given lorenzian manifold and when you try to formulate Quantum Fields here in such a space time you have to find an a a improved incorporation of the principle of
+
+00:15:05
+locality now on the axotic side this is not terribly complicated of course there are problems but uh um they seem to be rather rather easily solvable but when you try to do perturbation theory in the conventional sense then you meet a lot of problems and I listed here just the problems you have namely you start oh you start with the inside that there is no distinguished state which one might call the vacuum in the generic case then the basic concept in Quantum field Theory and relating it to elementary particle physics is absent
+
+00:15:53
+there is no invariant concept of a particle and as a consequence you cannot in the generic case formulate the asmatics so if you say the aim of qu field theory is the computation of the asmx then this becomes meaningless on a generic Loren in SpaceTime and then if you come to practical calculations you want to calculate fan graphs then you see that you don't know what the Fineman propagator is because the fan propagator is defined as a Time ordered the the expectation value of the time mod product of uh the vacuum expectation
+
+00:16:34
+value of the time mod product of fields now in the first moment you could believe that the path integral might be a solution of the problem because if you write down the path integral naively it looks as as if it were um generally covariant because you have an action which is generally covariant you integrate formally over all values of the field this is also a generally covariant notion so uh one might hope that this is a basis for generally coent approach but if you really try to Define this this is of course purely formal if
+
+00:17:15
+you want to try to give a definition what this means you can for instance Give a definition and perturbation Theory so you split your action into a free part and an interacting part and the free part is quadratic in the field so you interpret this the path integral as a gan integral but in the the Gan integral is characterized by a covariance and this covariance is just the fan propagator so you are back to the problem before that there's no distinguished fan propagator and uh furthermore the technique which is very
+
+00:17:50
+popular in qu field theory that you just uh uh avoid the the negative uh coefficient in front of the kovski metric and you compute everything in ukian space this does not work on a generic luren in space time just because there is no uh remanion space which is related to a generic luren in space time so the program one has to to to uh uh fulfill is one has to uh eliminate all these known local features from in the foundation of the theory and actually this was done and this is I think a started F which led to the
+
+00:18:40
+concept of the microlocal spectrum condition which was also already mentioned in the talk of rol Fark just is a local using techniques of microlocal analysis which characterizes that locally the energy is positive and this work had immediate consequences first there was a paper by brunetti Oh by brunetti ker and myself uh where we could use these techniques to construct the the composite Fields Associated to free Fields so uh the the the Vic polinomial of the free field before only the expectation values of
+
+00:19:21
+these fields were known but using these techniques one could also calculate all correlation functions of these objects for instance of energy momentum tensor second using now these techniques together with the uh method of the epin glaza renormalization one could perform the renormalization on a fixed globally hyperbolic SpaceTime this was worked by brunetti and myself in 2000 unfortunately there was one uh big gap which remained namely this was uh that these renormalization conditions which one had to to use to to fix the
+
+00:20:05
+theory were functions of SpaceTime so at every different point you could formulate the rization condition independently of course this is uh not very nice and um but so one would like to use some symmetry to connecting the renormalization conditions at different places but on a fixed uh globally hyperbolic SpaceTime in the generic case there is no isometry so it's not possible to make this uh um to to formulate this condition so how can this be done and this was solved a little bit later by this is was a second
+
+00:20:48
+step namely the introduction of a new principle the principle of local covariant actually the birth of this principle was uh uh meeting in Oba where most of these authors were present and I think also some of the other participants of this meeting had some contribution to this so This arose from discussions there and what is the idea the idea is that one should look not at a single globally hyperbolic space time but at all all globally hyperbolic space times and so in in the in the hastla framework
+
+00:21:35
+of algebraic qu field Theory you have a space time and you have sub regions of the space time here you have just sub regions considered to be space times in their own right and you have embeddings of one SpaceTime into another space time and these embeddings should respect the metric so they should be isometric and also some causality Rel relations which I don't mentioned here and so so instead of having a net on this directed set of of uh of sub regions we have a functor from the category of space times to the category
+
+00:22:15
+of C algebras this is a uh say very straightforward extension of the original harasta framework and the nice thing is that on in this extent framework one has now a a concept which generalizes the concept of symmetry the concept of symmetry for for um fixed generic space time is empty but if you have the family of all space times you can use as a concept the concept of natural Transformations so you have natural Transformations between different functors and uh I don't want to go into the the details just explain the concept
+
+00:23:01
+of a locally covariant field what is a locally covariant field a locally covariant field is just a family of fields for each space time M you have a field f m and if Kai is an embedding of M the space time M into the space time n and Alpha Kai it's just the corresponding embedding of the algebra of observa with a of M into the algebra of Serv afn then these fields f n and F M should be related by this formula so the field f n at the image of the point x under Kai is just f m of X transformed with
+
+00:23:44
+this endomorphism is um um homomorphism Alpha Kai and uh if you see this relation and uh look at the situation say in minkovski space this embeddings could just be PR Transformations then this is just the transformation law for a scalar field and of course instead of scaler Fields you can have Vector fields or spino fields or so on so this is uh this concept of a local uh covariant field and then using this concept uh Stefan Holland and Bob wal were able to complete this program of uh renormalization by making it generally
+
+00:24:31
+covariant and they could also introduce in this framework now the concept of a renormalization group actually there this concept contained a lot of new interesting things which were relevant also for the theory on minkovski space and this was then analyzed in papers by Oh by du myself and by no recent paper by bonetti D myself and led to some new insights into to the structure of the renormalization group now uh actually as was mentioned in HUD of ha talk that not much was done on gaue theories actually fortunately
+
+00:25:14
+this is not completely true recently there was done something so first perhaps one should mention the work of DCH Shar and other people from from surich on the uh um formulation of gauge theories using the epin glaza techniques but this was still not in the uh framework of algebraic Quantum field Theory then there was a paper by Mikel D and myself on uh the form local formulation of Gau theories and there were other papers by Dutch and brener Dutch and Bas on this problem and finally there was very important paper
+
+00:25:55
+with Stefan Holland on the uh formulation perturbative formulation of gauge series on generic Loren and space time which involved all the techniques known in perative gauge theories like BS structures bin vovis structures and so on so here we see that the algebraic formulation is completely has completely Incorporated the uh methods from peration Theory another point I only want to mention briefly is the operator product expansion so the in the axotic uh framework this was uh analyzed by bostelman recently and that it can be
+
+00:26:37
+done in perturbation theory was found by Hollands and is now the basis of a new approach to to the exatic characterization from field Theory I think we will he about this during this conference okay so this was a rather long introduction which was was an survey on the past now let me describe in more technical sense the algebraic structure of perturbative renormalization and for Simplicity I restrict myself now to a scalar field on mikowski Space actually it does not play an important role that
+
+00:27:16
+we have movi space because the framework is generally covariant but some explicit formulas are just taken for makovski space yeah so it's easier to to give explicit formulas if you fix your space time and okay so we start from the space of smooth field configurations which we call E and the our observables are now just functionals which values in the complex numbers functionals on field configurations is values in the complex numbers actually we have no assumption uh about the possible field
+
+00:27:55
+configurations up to smoothness so the behavior at infinitive is completely arbitrary this means that we are interested only in OB oh these are just smooth functions just all smooth functions you have smooth functions on our SpaceTime so just functions yeah so so maps from the mov space to the complex numbers and they all derivatives exist this is the only assumption this space is called E and interpret this as a space of field configurations the observables are functionals now of these field configurations and in order that these
+
+00:28:43
+are well defined functions they should be restricted to having compact support compact support means that they depend only on the values of the field in a compact region of space time so in the same sense as you define a support of for distribution now this is a linear space now on this linear space we introduce a product which we call the Star product which uh is motivated by the language of deformation quantization and the Star product is defined in this way so you uh take this exponential series of diff
+
+00:29:23
+functional differential operators so this is the second functional derivative respect to the field variables F and F Prime and Delta plus is just a two-point function in makovski space and this is just uh uh formally it's the integral of Delta plus of x - Y and here you have the functional derivative respect to f of x and F Prime of Y and uh and the result is again a functional so you at the end of the differentiation you you uh set 5 Prime equal 5 now if you look at this formula you see that this is nothing else than the
+
+00:30:07
+formula for the multiplication of Vic products it's just the Vic theorem the only difference to the Vic theorem is that we don't assume that our Fields satisfy the field equation the free field equation so this is uh but but um up to this this is just the the the vi theor uh we can also have a state on this so we get so we have made our our uh linear space of functionals to a space to an algebra by introducing this product it's an associative product actually uh here I should perhaps add an H bar so this is
+
+00:30:47
+uh I don't worry about the convergence of this sum this is a formal series of differential operators now what is the vacuum the vacuum is very simple it's a linear functional on this uh space and it's just the evaluation of this functional at the field configuration zero okay now this is a free field Theory now we want to introduce interactions and the interactions as I already said uh involve uh that one has to define a Time ordered product so let's us look for first here at this
+
+00:31:29
+formulas so the time ordered product is defined very similar to The Star product the only difference is that you replace the two-point function Delta plus by the Fineman propagator here and because the Fineman propagator and the two-point function coincide if the arguments are time ordered you get that the Star product and the time order product coincides if the support of this function is later than the support of G later in the sense of time and movi space now this time ordered product has actually a nice structure namely it's
+
+00:32:08
+commutative because it f propagator is uh is um symmetric it's associative the proof is more or less the same as for the for the Star product but it is even equivalent to the point VI product this on the space of functionals you have a uh natural Point VI product and the time out of product is actually equivalent to this to this point ver product and the equivalence is described here in this relation you introduce an linear operator T and the time ordered product is related to the point bu product which
+
+00:32:44
+is denoted by this dot here just in this way and what is this time ordering operator capital T defined here say again a structure as a infinite sum of functional differential operators and if you analyze what the sum is it's just the same as evaluating a gan integral with a coari Delta F on this functional actually it's not the evaluation of the integral it's a convolution you take a convolution of the goian measure with with a functional F that's the same as the application of this formal Series this holds of course
+
+00:33:24
+in the sense of formal series and of course this is not really a measure uh you can Define it it as a linear function on polinomial and um in this way you you prove the the equivalence of these two two sides so you see that the time ordered product is directly related to a formal path integral and now I come to the S Matrix now the S Matrix in this sense is now not necessarily this scattering matrix it's just a tool for computing higher order time ordered products so it's a generating functional for time order
+
+00:34:06
+products so it's but in this framework it's nothing else than the exponential function computed via the time order product but the time order product is equivalent to the pointwi product so the time ordered exponential the time ordered exponen it's just the usual exponential uh and uh just transformed by this operator T now again we look what does it mean if we compare this with the formal path integral now we evaluate we apply s now to some interaction V and evaluate this in the vacuum state so by definition
+
+00:34:51
+this is the evaluation of s of V at the field configuration F equal Z but this is just the integral of the Gan measure with the exponential function of the potential the only difference to the standard functional integral is that you here write not the potential itself but the normal ordered potential why is the normal ordering the normal ordering is just the effect of this T minus one yeah so in this framework normal ordering is natural so you start from the normal ordered interaction and you get so this would be just the partition
+
+00:35:32
+function in the language of par and but here uh of course this relation to the right hand side would involve some definition but the left hand side is completely Val defied now how can this s metrix be used in order to Define uh the observables of the interacting Theory now for this purpose you introduce something which uh is corresponds to the Miller operators we know from scattering theory in in um in quantum mechanics Nam we can introduce operators now from the space of f of uh of uh our functionals into itself and this Mel
+
+00:36:21
+operators are characterized by this intertwining relation which is written here yeah so you have the S Matrix apply to F to the interaction V you have the Star product with this interacting field r index V of F and this is defined to be equal to the time ordered product of FS of V with the observable F so the interacting observable corresponding to F under the interaction V is defined by this formula and of course s of V should be unitary so you can invert this relation and just get the definition of
+
+00:36:57
+uh V of f now to to justify this definition you could use different arguments I just uh present here one argument namely assume look at the vacuum expectation value of the left hand side now uh this is just uh the product the operator product of these two observables now assume that you're are in a situation where say the you remove the SpaceTime cut off so the s Matrix becomes a translation invariant so so in the limit the S Matrix Maps the vacuum to the vacuum at least in the case when the vacuum is unique so assume that this
+
+00:37:38
+holds then the relation which is written here is just the gon law formal for the interacting field the vacuum expectation value of the interacting field just the uh functional integral of f divided by the normalization factor yeah so this is the correspond on okay now I come to some important technical Point namely I have written all these functional derivative operators and constructed them with propagators now the propagators are distributions so implicitly I assumed that these functional derivatives are
+
+00:38:20
+smooth functions but the observables we are interested in are local observables and local observables are just polom in the fields integrated with test functions but these are Fields multiplied at the same space time point which is other so if I take the functional derivative you get Delta functions of the differences so they are not smooth so the some of these expression I wrote down are not well defined so what to do now uh first first of all one has uh can use a nice characterization of local functionals by
+
+00:39:03
+the additivity relation AR here so you so you uh so your functions are not no longer linear but they satisfy this kind of relation so if I evaluate this functional on a sum of three field configurations then I can separate this in this form provided the Earth and the Third Field configurations uh um have supports with empty intersection and um if you then look on the behavior of the of the functional derivatives you can easily prove that the derivatives of the local functionals higher order derivatives are
+
+00:39:50
+distributions and several variables and they have support now uh only at coinciding points the uh and the set of coinciding points and and uh in variables we call the thin diagonal and I use the letter d for this okay now the smoothness condition we still can impose on local functions is that the uh remaining Freedom namely along the thin diagonal is smooth and this is can be mathematically expressed by the property of this does no longer work here uh so this is there some pointer uh oh there also two
+
+00:40:44
+pointer the two pointer yeah even better no okay okay so so the condition is is that the the uh the uh local functional is called Smooth if it if its functional derivative exists as distributions whose wave front set is orthogonal to the tangent bundle of the diagonal so this means that that they are as smooth as possible uh for local function just as an example so so if you look at this local fun functional so this is just a field squared integrated with a test function f you take the second functional derivative this is of
+
+00:41:34
+this form and the condition smoothest condition is that this function f is smooth and then one can prove two theorems one is that now if you form the star product of local functionals and you can they generate a certain larger set of functionals you can show that they produce associative star algebra if you do the same for the time ordered products the result is weaker what you can then show is that the time ordered products exist under conditions of the support of course is related to the fact that the time order products
+
+00:42:16
+coincides under certain condition with the Star product and this generates a partial algebra and actually this is very nice because this can be used to do the f rization also on a ukian space and this was recent work by Kell okay now what is renormalization renormalization is the in this framework is just the extension of the S Matrix to smooth local functionals yeah at the beginning it was on only defined on functionals which have smooth uh functional derivatives now we want to extend it to all smooth local
+
+00:43:02
+functionals actually this extension takes a very concrete form and this perhaps should be emphasized namely you can show that this s Matrix is of the following form you can expand it in a in a power Series so the nth order is just the nth order uh time order product and it takes a form of a functional derivative operator actually a sum of functional derivative operators Alpha is a multi-index Delta Alpha is just the uh functional derivative uh nonlinear functional derivative of n's order so so if you insert here n
+
+00:43:48
+function that's fub1 to FN this is just this functional derivative of this product and at the end you uh set all f i equal to five and what is s alpha s Alpha is a certain distribution which is formed from the final propagator and you can get a explicit representation if you just look at the usual graph expansion of the SM Matrix and so you look at all graphs which have vertices 1 to n and this Alpha line Alpha I lines ending at the vertex I then this tensor product is a certain distribution you have of course to say
+
+00:44:30
+how this distribution acts on the right hand side but this is described by the incidence relations of the graph and there's some combinatorial factor which I did not compute here and uh so this is just uh this is a distribution s Alpha is then an extension of this distribution to all uh derivatives which can exist on the right hand side now uh of course we have to apply this multifunctional differential operator to to these smooth and local functionals and what one finds this is not a technical important point one finds that
+
+00:45:13
+the result is of the following form you get a test function in N variable tzot by distributions in the relative variabl so at each vertex you separate your variables in center of mass and relative coordinates and you have here the space of distribution with support zero in the corresponding uh uh number of variables this constitutes this uh space V and the tensor product of D of M of of the test function n variables with v is just the space of possible uh results of these functional derivatives and so the aim is
+
+00:45:54
+to Define this coefficient as Alpha as a linear functional on this uh on this space here now what is the structure of this space it has a natural grading namely these are distribution with support zero so uh they are finite derivatives of the Delta function we just sum the number of derivatives and this gives the grading and so this uh Vector space uh can be decomposed as a direct sum now then can use the main technique of epang glaza renormalization that the asmx satisfies this condition of causal
+
+00:46:32
+separation that the asmcs of uh interaction which follow in time each other can just be multiplied and this then leads to the fact that the s metrix in N order is defined on the complement of the of the thin diagonal by the lower order time ordered products s okay now maybe this is a little bit too technical to go to all details just to indicate what one can done one can just use the usual power power counting and then one can extend this s Alpha as a linear map to this Subspace D Omega where D Omega plus K on the right
+
+00:47:19
+hand side is the space of test functions which vanish at order Omega at the sin diagonal here uh this is maybe misleading uh D this should be D Omega plus K of MN here yeah this is a set of test function with vanish at a certain order and the direct sum this is tensored with the case grade V uh of this space V BK and this gives the space d Omega okay so this is a decomposition which you can do so it's a little bit involved but not Terri ly complicated and uh now the rest is simple how do you
+
+00:48:03
+how can you do renormalization or renormalization just means you already know that s Alpha is defined on this space this is a Subspace of D and you just choose a projection so 1us w is a projection from D to D Omega and the renormalized S Matrix is just defined by the composition of these two maps and all renormalizations of this form this is the generic form of the renormalization so we have reduced this ambiguity of renormalization to the choice of this single projection okay and then one can prove
+
+00:48:38
+the main theorem of renormalization namely if you have two such choices of s Matrix then they're related by a map Z which Maps the set of smooth local functions to itself and The crucial relation is this one here and actually this Z has a similar structure than the S Matrix is again an infinite sum of multi differentiable operators so I wrote the explicit formula here this is z applied to an interaction V is V plus this infinite sum z n is now an N linear differential differential operator similar to the SX the only difference is
+
+00:49:20
+that now this distribution z alpha has support only on the thin diagonal and this is the has a consequence that this produces only local counter terms so the only Freedom you have in the choice of the asthmatics is uh is uh to add local counter terms in every order and the set of all these Maps form the renormalization group and actually if you look into the literature this exactly the renormalization group which was originally postulated by Peterman and stelber it's it's not the rization group
+
+00:49:58
+one finds often in textbooks so perhaps one should call it the stle back Petman rization group but because they con the name perhaps it's fair to call this a renormalization group actually it's really a group so you can find uh in many books the statement Unfortunately they def uh striber and Peter man qued a group it's not unfortunate it's a group yeah you can see it explicitly from this form uh actually this statement also proves that the other formulations are not equivalent yeah to
+
+00:50:38
+this okay now I come to the adiabatic Limit Oh I'm see I come to the end of my time so uh so up to now we have to restrict ourself to interactions which are localized in a compact region of space time now we want to do the adiabetic limit how can this be done now we don't want to introd to to discuss infrared problems yeah so it's just we want to remain in this purely algebraic framework so the first concept we introduced is a concept of a generalized lrin what is a generalized lren now the
+
+00:51:14
+lren should be should lead of course to an action but we need an action with a spice time cut off so this is just the map L from the test function to smooth local functions with compact support and this map should satisfy this additivity relation which we already know for our local functionals yeah but now the entries are test functions and uh and the nice fact is that the space of this generalized LR is invariant under the renormalization group actually this uh it's not necessary that these Maps L are not
+
+00:51:53
+linear because the rization group is non linear so it would then map linear functions into nonlinear functions but the space of generalized lence is invariant moreover of course different lents might lead to the same equations of motion so we call two Lin equivalent if this support of the difference uh applied to some test function s is only localized where the function f is not constant and then one can show that the re renormalization group also respects the equivalence classes so if L is equivalent to L Prime then that compos
+
+00:52:34
+with others equivalent to L Prime okay now we want to construct the observables of the interacting Theory so we uh use as a family which generates the algebra of observable the generating functional for time order products of the interacting observable the interacting observable be constructed with the use of this m operators and the corresponding time ordered products of the interacting Fields is just given by this product of s matri written here and now um this is a relation which uh follows from this causal factorization I
+
+00:53:22
+mentioned before but can show that the dependence of these oh I uh yeah okay it's uh I should perhaps replace the r here by the S it holds for both of them but maybe it would be more logical to use here the S so so um um what holds is the following if the two interactions V1 and V V2 uh coincide in the SpaceTime region O then the two observables Associated to the observable F under this interaction B2 or V1 are equivalent in the sense there is a invertible element u in the algebra which uh which has this property here
+
+00:54:11
+here there should be the Star product so this shows that the algebraic relation of interacting Fields see only the interaction of the same region not the interaction in other regions and then one can perform the adiabatic limit the following way then we look at all interactions which coincide with these uh LR applied to a test function f in the complement of the region o if we insert the test function a test function which is equal to one on o and we use the fact that the algebraic structure in
+
+00:54:55
+this region is independent of the choice of v and then we get the algebra of observables just by looking at the family of all these operators yeah so we Index this family with the interaction in the set we l of O the algebraic relations are the same in all uh uh in all fibers and so this generates a generates a well defined algebra moreover we find also the net structure and also the functor but let this stay for to the net structure at the moment namely if the region o1 is contained in O2 then this corresponding space of
+
+00:55:42
+interactions satisfies the opposite inclusion just because the conditions are are weaker if the region becomes larger and so we can find an embedding of the algebra of observables associated to the l l in o1 to the algebra of observables associated to inter LR l in O2 just by restricting this family to this uh smaller set of interactions and then at the end we do what we always do in algebra field Theory we can perform the inductive limit and get the global algebra of observables of the of the region okay now I wanted to
+
+00:56:26
+to say few words on the action of the renormalization group on observable algebras namely okay maybe this is a little bit too complicated but um so we have S Matrix which is related to the original s matrix by renormalization group transformation Z we apply this not to this object get this one and then we easily see that the the new observable here is related to the old one by replacing the interaction by the transformed interaction under the renormalization group and the observable F by a new observable which is just defined in this
+
+00:57:10
+way here and okay maybe I ski uh this point here just mention the mention the uh uh the result so you find using this construction now an action of the renormalization group on the algebra of observables and here I have written this the explicit form yeah you have this sequence here and you have this sequence here and you can now use this structure to Define an isomorphism between the Nets Associated to the lrin so you have the using the prescription aset construct a net aad index L Lin and you
+
+00:57:58
+have an uh s Matrix S which produces a net a but now with the transformed interaction Z compos with L and the isomorphism is explicitly given by this formula and this is just the algebraic form of the renormalization group equation and uh okay now you apply this to to uh scaling you can algebraic field Theory can you can do scaling just by scaling the regions if you're on makovski Space you can scale your lran you can scale the S Matrix if you take into account properly the dimensional parameters in the free
+
+00:58:49
+action and what you then find is just the central statement of uh the k the monic equation namely the scaled net is isomorphic to the net value uses classical scaling of the lran combined with renormalization group transformation set of row yeah so so this sense this is um gives just the algebraic expression what is done by that by looking at small scales you see different lren uh and you have an explicit formula for this okay now I come to my conclusions actually one can say a lot more so so let me just make a few
+
+00:59:37
+remarks so first of all we have seen that we can construct Nets of algebra's observables for generic interactions in the sense of formal power series we have seen that the renormalization group appears in a natural way as a group of isomorphisms of algebraic Quantum field series we have never met any infrared problem during the whole construction so this can be done completely inde uh uh independent of any uh infrared problem and the choice of the vacuum played no role at all so we could do it in a
+
+01:00:15
+temperature State we can do it in an arbitrary State as we like and uh so so does not depend on the choice of distinguished state is completely State independent moreover this is not only an abstract construction it's completely explicit so this was the reason why I presented this details on these functional differential operators these are completely explicit operations you can use these graphical rules to write to get bookkeeping of all these calculations it's completely explicit and you are not forced to use
+
+01:00:49
+the techniques of epang glaza these techniques of distribution splitting and so on which come become a little bit cumbersome in many practical applications you can use any technique you want because when you remember this formula for the renormalization was just a composition of this distribution as Alpha with this projection now if you regularize your distribution as Alpha you you can uh you just Lo look at a regularization which converges on this Subspace to the uh uh to the distribution as Alpha but uh if it's regularized you can
+
+01:01:34
+then apply this one minus W to this operator and you can have one which is the unrenormalized uh uh asmatics and you have S Alpha combined with W which is a counter term which is local by the property of w yes so this you can use any method of regularization you want and you just know from the beginning that this is a a um valid method and in this way you can prove for instance that um certain regularization methods lead to the correct results and moreover all structures are generally covariant and remain
+
+01:02:13
+meaningful on globally hyperbolic space tyes okay now let me also mention a few open question so there was a big advantage that we don't have to use States but of course there's also disadvantage because you get no information on states by this method so this information on States has to be done independently and the question is what can be done and in the of course in the minkovski space A lot has been done you only have to look into the corresponding papers in particular those of epang glaza and Steinman but uh for
+
+01:02:49
+generic space times not much is known and uh here I would like to mention new work of dapi morti and pamon on using holographic ideas and I think we will also hear something about this during the conference uh another question one might ask is uh can the structural analysis of the acatic theory be applied to the perative setting now this is not so easy to be answered because um in the aromatic Theory you use a full Machinery of operator algebras but here you typically have formal power series and
+
+01:03:29
+uh it's not not clear what's the appropriate mathematical method is but conceptually this should be possible and for instance one could try to use the b f concept of an intrinsic renormalization group and compare it with the perturbative renormalization group I described another question is U we of course we hope that we will not for all times live with these formal power theories so we would like to go beyond formal power theories can we do this now for the classical field Theory which is
+
+01:04:04
+uh the limit H bar to zero of the whole formalism I described this can be done and this uh actually uh involved some some uh uh complications but they have been solved recently and uh Romeo bonetti will talk about this true yeah y and uh and uh one might hope uh that one can do a similar analysis for finite Loop order so this would be zero Loop order so the classical limit of the theory but in finite Loop order you have a similar structure so it could well be that it can be done in finite Loop order
+
+01:04:44
+and this would already be a lot okay and the last remark is uh we Ed the formalism for pation Theory which is very general so in particular particular we had not to assume that our our uh our Lans are pols and the fields and so we could apply this also to for instance to two-dimensional conformal theories to integrable models and even to quantum gravity and the great question which is largely open is of course will this improve our understanding of these models yeah thank you for your attention
+
+01:05:36
+well thank you very much for this very learn talk which takes a lot of digesting and uh you think we still have some a few questions remarks I want to P the question your last remark it is very tempting to hope that you can apply this also to other model space time which are not the classical SP time but the Quant space time yeah be a first step towards qu gravity but either that way or any other way one would guess naturally that you lose locality yeah and isn't this a critical point because if I understand well all
+
+01:06:22
+this formalism is based on strict the form way is there any hope to go beyond that okay I would like to know um certainly it's true that the formalism as it I described it relies on strict locality this was really crucial for the argument on the other hand if you just look at the the the the form explicit formula for renormalization they perhaps can be uh easily generalized to to to to other situations because this was the structure of these multi- differentiable operators and the renormalization group
+
+01:07:01
+had a prescribed structure so so you could perhaps think of doing renormalization such a way that you say well you I want to Define these uh functional derivative operators there's some ambiguity and the ambiguity should be should have a certain form which you define to be local yeah for instance you say it can be expressed in terms of say Star product of fields yeah so so there is some way of uh uh of calling something local on non-commutative SpaceTime and you could use this definition actually I think if
+
+01:07:37
+you look at this work of um gr and venhar probably that's the way they formulate renormalizability of course they restrict this further they only allow counter terms which are of the same form as the terms already appearing in the action here I would admit in principle all local counter terms yeah uh you pointed out uh that formally your Expressions coincide with what with with pass integral yeah but did you ever exploit this fact or did you translate the the later steps to the language of path interal so that one could better
+
+01:08:19
+understand what is going on in renormalization of path integrals uh um okay so in a technical sense the path integral is nowhere used yeah but if you want to understand for instance what people do which use this renormalization group flow equations then you can use just this language so so you can use these formulas I wrote down to to to uh make a dictionary so they have this flow of renormalization uh constants and you can direct directly so they they call something the integration out integrating out degrees of freedom this
+
+01:09:01
+is in this framework just uh um expressed in terms of these uh these s matrixes so the S Matrix here um okay this yeah so if you have if you introduce some regularization of your time ordered product say regularization of the finan propagator you would get a regularized s Matrix and the application of this operator um could be called the integrating out of freedom for these variables and in terms of this you can then derive the flow equation so these operator satisfy the flow equation which is used in this
+
+01:09:42
+rization method yeah how does the disting between renormalizable and nonrenormalizable theories arise okay it arises in the following way here uh uh given a lran you can reach all other lents which are in the orbit of the rization group so rization group acts on the space of lents and you get all the full orbit and renormalizable theories have the properties that the orbit is finite dimensional can you comment and Gage oh yeah um um so um yeah when you introduce gauge theories yeah you um one step is easy
+
+01:10:38
+you you introduce some gauge fixing and then you are just in the framework you can do the same completely same analysis but of course you have to go back yeah because you and this is described by the bis formalism and so what you have to Pro prove in addition is that by using these uh introducing these interactions the B transformation transforms in the appropriate way so that the theory remains BS invariant this is actually rather complicated and this was a work I mentioned of Stefan Holland who proed this in general uh in
+
+01:11:13
+general form go yeah yeah no no you you have to to to uh to to enlarge your system you have not only the gauge Fields you have also the F of Pop of go and and uh so you get a get a l rather large framework with a lot of redundant Fields but in this algebraic framework this does not uh do any harm you can just do every step actually there's one one point where one has to be cautious here this relies heavily on the fact that the classical field equation has a well poed Kushi problem this is not true for all
+
+01:11:54
+all choices of gauge conditions and so it's not clear whether for other choices of the gauge conditions the uh this formalism can be applied to to curved SpaceTime because on makovski Space the situation is better but on a curved space time you are in trouble if the Kushi problem is no longer well posed and then for instance you need this uh herand theorem of propagation of singularities and if you use these uh so for instance other gauges than the fan gauge then it's not clear that that
+
+01:12:28
+this can be done properly there are the proof of the normalizability which use the equation so I'm wondering if one can use this technique to prove normalizability in the which you just mentioned oh uh it's actually this is uh just just the following you you you okay no okay so so so um I described this uh relation of the s Matrix to the path integral and this actually I also uh so we introduced some some cut off Lambda or more generally some regularization of the fer propagator and this leads to an
+
+01:13:39
+time ordered exponential which is more regular yeah and now uh what is the the uh flow equation this is just that you let me see um you can compose now operators like this yeah you take two different scales and you look at these operators if you write this explicitly yeah this is T Lambda the exponential function T Lambda to minus1 T Lambda Prime um here you have the logarithm and here you have t Lambda Prime to the minus one yes operators like this now this is just what one okay maybe I did the order the wrong way
+
+01:14:32
+perhaps I should write the inverse on the left hand side yes so so you have this path integral for restricted uh for a restricted interval name between Lambda Prime and Lambda yeah and and so so you define the interacting potential as the effective potential as s uh I think this was the correct formula this would be the effective potential and you can then look the uh you you look at the derivative with respect to the to Lambda and this is just a flow equation this gives the flow equation and you then you
+
+01:15:19
+can see that this flow equation can be integrated in perturbation Theory this this is just pinsky's argument and then they usually have to show that you can find a solution which satisfies certain boundary conditions here in a sense we are in a better situation because we already know the existence of the limit using the epang glaza techniques because they don't exploit locality so here we exploit locality and locality just gives that the solution exists and even can be classified the possible solutions and uh
+
+01:15:52
+and the the so so so um there they have to introduce these counter terms at hand uh by hand and uh in AB glass we can compute the counter terms yeah but but they can differ only by a finite renormalization group transformation so you also getal yeah yeah yeah yeah yeah yeah so oh um I'm I'm a little bit Prejudice because I've done something on anetic theory in in a very different context so I was wondering if in so usually you have the slow and fast degrees of freedom and the separation of
+
+01:16:38
+scales yeah scales the related by the uh intera by the propagation speed I mean you you blow up the region and in a way you know you could think of making the the interaction more and more instantaneous so the speed of light or whatever goes goes to is that at all accurate or okay no no here here the speed of light is fixed so this is not not not used actually in the uh if an only exploits locality you don't need any cut off yeah so you don't need the separation of degrees of freedom but you
+
+01:17:21
+could in in the way I sketched this here you could introduce some uh some uh decomposition and degrees of freedom and look at this behavior for instance of this effective potential I wrote there but there's a problem so so I think these techniques are um usually done in the ukian framework because there you have a good notion of what it does it mean to have restricted momentum on minkovski Bas this is not a good concept because it's not lence invariant and on the generic space time it's not clear at all what it
+
+01:17:59
+means yeah so so so but U once you introduce some kind of regularization you always get this structure so this is it's not important that this is just an cut of in momentum could for instance you could use it in dimensional regularization so this just the deviation of the dimension from four yeah so so there are a lot of uh possible techniques you could apply and you always get the same uh the same functional equation but why is it called Artic no no the adiabatic means uh means no no this is a misunderstanding the the
+
+01:18:35
+renormalization is only in the ultraviolet there's no infrared renormalization here the renormalization is only so the adiabatic limit only means that you get a theory which is which where the interaction is uh the same in all space time yeah it's um so so we don't analyze in this method the behavior of States at Infinity this has to be done independently this is not analyzed here okay I think we should close if you don't want to take all the things with there are you go through the cafeteria down
+
+01:19:32
+next to the toilets there's a locker
+
