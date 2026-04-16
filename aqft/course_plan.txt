@@ -1,0 +1,165 @@
+# Algebraic QFT in Curved Spacetime: The Final Merged Plan
+
+**Playlist title:** *AQFT in Curved Spacetime — From Wightman to Hollands-Wald*
+**Format:** 12 episodes, 30–55 min each, ~12–15 hours total. EigenChris-style: hand-drawn-style slides, real-time derivations, light-cone/wavefront animations, Penrose diagrams, office-hours voiceover.
+**Audience:** Post-Peskin, post-Carroll. No AQFT or microlocal background assumed.
+**Stack:** SymPy + NumPy/SciPy/Matplotlib (default) · QuTiP (GNS, finite-dim) · EinsteinPy or SageMath manifolds (optional) · Jupyter notebooks shipped per episode.
+**Distribution:** YouTube free; Patreon for PDF notes, problem sets, and the `aqft-curved` notebook repo.
+
+---
+
+## Episode 0 — Prerequisites & Roadmap (10 min)
+
+Wightman axioms in plain English, why curved spacetime breaks them, Hawking/Unruh as the carrot. Link out to EigenChris's GR and standard intro-QFT references. State the playlist's one-line thesis: **the net of algebras is the physics; states are secondary**.
+
+---
+
+## Episode 1 — Why Standard QFT Breaks in Curved Spacetime (35 min)
+
+Hook: *"The vacuum is not special — it's just a label."* Walk the Wightman table, kill each axiom in turn on a generic $(M, g_{ab})$. No global timelike Killing vector → no preferred Hamiltonian → no preferred vacuum. Show $\int T_{00}\,dV$ is not conserved when $\nabla_\mu T^{\mu\nu} = 0$ alone (need a Killing vector to get a conserved current $T^{\mu\nu}\xi_\nu$).
+
+**Calculation:** Bogoliubov for a 1D expanding-universe toy (Bernard-Duncan, $m^2(t) = A + B\tanh(\rho t)$ — has closed form, perfect for a check). Frame the punchline algebraically: *both mode expansions generate the same CCR algebra; they're inequivalent representations*. This is the hook for Episode 2.
+
+**Notebook:** SymPy non-conservation demo on FRW + NumPy Bogoliubov solver; plot $|\beta_\omega|^2$ thermal spectrum.
+
+---
+
+## Episode 2 — The Algebraic Pivot: C\*-Algebras and Smeared Fields (45 min)
+
+The pedagogical pivot. Build C\*-algebras from finite examples first ($M_n(\mathbb{C})$, $C(X)$, $B(\mathcal{H})$, Gelfand duality on a 3-point space drawn explicitly) — three minutes each, no more. Then: $\phi(x)$ is a distribution, $\phi(f) = \int f\phi\,d^4x$ is the honest object. Build the symplectic form $\sigma(f,g) = \int f \cdot Eg$ where $E = E^- - E^+$. *Causal structure is encoded in the symplectic form* — the geometric punchline that justifies everything coming next.
+
+Introduce the Weyl algebra $W(f)W(g) = e^{-i\sigma(f,g)/2}W(f+g)$ and explain why exponentiated form (bounded operators, no domain pathologies). Verify CCR by formal expansion. Visual: "algebra-first" flowchart vs. Wightman's Hilbert-space-first.
+
+**Calculation:** $[\Phi(f), \Phi(g)] = i\Delta(f,g)$ derived from the symplectic form; verify vanishing at spacelike separation.
+
+**Notebook:** SymPy Peierls bracket calculator — input metric → compute $E^\pm$ (closed form for Minkowski/de Sitter, series for Schwarzschild), output $\sigma(f,g)$ for Gaussian test functions. Lattice 1+1D commutator verification with matplotlib heatmap of $[\Phi(x), \Phi(y)]$ light-coning out.
+
+---
+
+## Episode 3 — The GNS Construction: Where Hilbert Spaces Come From (40 min)
+
+The "Aha!" moment. State $\omega: \mathcal{A} \to \mathbb{C}$ (positive, normalized, linear). Build $\mathcal{H}_\omega = \overline{\mathcal{A}/\mathcal{N}_\omega}$ where $\mathcal{N}_\omega = \{A : \omega(A^*A) = 0\}$. Cyclic vector $\Omega_\omega$, GNS triple $(\mathcal{H}_\omega, \pi_\omega, \Omega_\omega)$. *Every state gives you a Hilbert space; there is no privileged one.* This retroactively explains the Episode 1 disagreement — different GNS reps of the same algebra.
+
+**Calculations:** (i) Worked GNS for a qubit with arbitrary density matrix. (ii) Single-mode CCR — coherent vs. vacuum gives unitarily equivalent reps; thermal vs. vacuum on the *infinite* CCR algebra gives inequivalent reps (Haag's theorem foreshadowed). 
+
+Brief aside on factor types — Type III₁ for local algebras in QFT, flagged for Episode 11 callback.
+
+**Notebook:** QuTiP GNS triple from $(\mathcal{A}, \rho)$ for finite $M_n$; verify $\langle\Omega, \pi(A)\Omega\rangle = \text{tr}(\rho A)$. Extend to truncated CCR.
+
+---
+
+## Episode 4 — Globally Hyperbolic Manifolds & Local Covariance (40 min)
+
+Lorentzian causality refresher: $J^\pm$, $D^\pm$, Cauchy surfaces, global hyperbolicity. State KG well-posedness and existence of $E^\pm$ (don't prove). Then **Haag-Kastler axioms**: isotony, microcausality, covariance, time-slice — verify each for the Episode 2 Weyl algebra. Causal-diamond visuals throughout.
+
+Then the modern reformulation: **locally covariant QFT (BFV)** as a functor $\mathcal{A}: \mathbf{Loc} \to \mathbf{Alg}$. Covariance = functoriality, locality = the embedding axiom. Embedding-diagram animation: Schwarzschild patch sitting inside larger spacetime, algebra mapping along. Punchline: *the Weyl construction is a functor — the same recipe works on every globally hyperbolic spacetime*. This is what "background independence in form" actually means.
+
+**Notebook:** SymPy check that the KG operator transforms covariantly under coordinate change on (flat + weak perturbation); print the algebra restriction map for two nested causal diamonds.
+
+---
+
+## Episode 5 — Microlocal Spectrum Condition & Hadamard States (50 min)
+
+Quasi-free states determined by $\omega_2(x,y) = \omega(\phi(x)\phi(y))$. Wightman $i\epsilon$ derived on Minkowski. Why "positive frequency" is the wrong organizing concept on curved spacetime — *but its singularity structure survives*.
+
+**Hadamard condition:** $\omega_2(x,y) \sim \frac{u(x,y)}{\sigma(x,y)} + v(x,y)\log\sigma(x,y) + w(x,y)$ where $\sigma$ is Synge's world function. Derive the Hadamard recursion for $u, v$ from KG. Then the **microlocal version** — wavefront set of $\omega_2$ on the future light cone in cotangent space. Animate it: distribution "lights up" only in future-directed null directions. State Radzikowski's theorem (microlocal ⇔ Hadamard); defer proof.
+
+**Notebook:** (i) SymPy Hadamard recursion for $u, v$ on Schwarzschild — a calculation almost no textbook does explicitly, ships as a standalone artifact. (ii) NumPy two-point function singularity comparison Minkowski vs. Rindler, matplotlib heatmaps.
+
+---
+
+## Episode 6 — The OPE as Fundamental Structure (50 min)
+
+Hollands-Wald move: take the OPE as **axiom**, not as derived perturbative tool. $\Phi(x_1)\cdots\Phi(x_n) \sim \sum_c C^c(x_1,\ldots,x_n; y)\Phi_c(y)$, with coefficients state-independent and locally covariant. "Zoom-in" animation of fields colliding into singular c-number times another field.
+
+**Calculation:** Exact OPE for free massless scalar in flat space:
+$$\Phi(x)\Phi(y) \sim \frac{1}{4\pi^2 \sigma(x,y)} + \text{regular}$$
+Then generalize to curved space using Synge $\sigma$. Connect the OPE leading singularity directly to the Hadamard parametrix from Episode 5 — *they are the same object*, viewed from algebra side vs. state side.
+
+**Notebook:** SymPy series expansion of free two-point function as $x \to y$; plot leading singularity vs. separation; extend to Schwarzschild via analytic Synge approximation.
+
+---
+
+## Episode 7 — Free Fields on Rindler, de Sitter, Schwarzschild & The Unruh Effect (55 min)
+
+The first big payoff video. Build quasi-free Hadamard states on each geometry explicitly. Mode expansions, Bogoliubov between Minkowski and Rindler, **Unruh temperature** $T = a/2\pi$ derived in full. Verify the result is Hadamard (closes the loop with Episode 5). Hartle-Hawking on Schwarzschild as the next-step preview.
+
+**Notebook:** Full Rindler Bogoliubov computation with SciPy quadrature; plot $\langle N_\omega \rangle$ vs. acceleration, overlay $1/(e^{2\pi\omega/a} - 1)$ thermal curve. Visual money shot.
+
+---
+
+## Episode 8 — Renormalization via OPE: No More UV Subtractions by Hand (45 min)
+
+Hollands' perturbative construction: OPE coefficients defined order-by-order with curvature corrections built in from the start. Point-splitting and Hadamard subtraction as the rigorous content of "subtract the singular part." Compute renormalized $\langle\phi^2\rangle$ and $\langle T_{ab}\rangle$; trace anomaly drops out clean. Casimir between plates as the warmup.
+
+Feynman-diagram-style OPE-tree visuals.
+
+**Notebook:** (i) SymPy Hadamard subtraction for $\langle\phi^2\rangle$ on a 2D black hole background, reproducing the Davies-Fulling-Unruh result. (ii) One-loop $\phi^4$ OPE coefficient with curvature dependence printed symbolically.
+
+---
+
+## Episode 9 — Spin-Statistics & PCT Without a Global Vacuum (40 min)
+
+Verch's spin-statistics theorem and Hollands' PCT, both proved using only local covariance + microlocal condition — *no Lorentz group, no global vacuum needed*. CPT acting on a curved Penrose diagram, animated. This episode is where the algebraic framework earns its keep philosophically: it recovers the structural theorems of flat-space QFT without flat-space inputs.
+
+**Notebook:** Numerical commutator vs. anti-commutator for scalar vs. spinor two-point functions on a 1+1D curved metric grid.
+
+---
+
+## Episode 10 — Hawking Radiation from First Principles (55 min)
+
+Second big payoff. Collapse spacetime, no global vacuum, thermal flux at $\mathscr{I}^+$. Full Penrose diagram animation with mode propagation. Bogoliubov across the horizon, Hawking temperature $T = \kappa/2\pi$, surface gravity. Frame algebraically as the Episode 6 OPE coefficients evaluated on the Unruh state.
+
+**Notebook:** Mode-matching across a collapsing-shell spacetime in discretized null coordinates; plot outgoing flux vs. time, recover the thermal spectrum.
+
+---
+
+## Episode 11 — Modular Theory, KMS, Bisognano-Wichmann (50 min)
+
+The deep structural payoff and where Type III from Episode 3 cashes in.
+
+**KMS condition:** $\omega(A\,\alpha_{t+i\beta}(B)) = \omega(BA)$ — temperature defined algebraically via analytic continuation. Equivalent to Gibbs in finite dim, but works on Type III where there's no trace.
+
+**Tomita-Takesaki, lightly:** from cyclic separating $\Omega$ get $S = J\Delta^{1/2}$, modular automorphism $\sigma_t = \Delta^{it} \cdot \Delta^{-it}$. Prove KMS for $\sigma_t$ at $\beta = -1$ in finite dim.
+
+**Bisognano-Wichmann:** modular flow of Minkowski vacuum on the Rindler wedge = boost. Re-derive Unruh as an immediate corollary. Same structure on Schwarzschild gives Hawking-as-KMS. Brief forward pointer to Type II crossed-product story (CLPW, Witten) for anyone who wants to keep going.
+
+**Notebook:** Numerical modular Hamiltonian for free field on a lattice interval (Peschel correlation-matrix method); verify it equals $\int x\, T_{00}(x)\,dx$ — the discrete shadow of Bisognano-Wichmann.
+
+---
+
+## Episode 12 — Frontiers & Outlook (40 min)
+
+Black-hole thermodynamics tied back to Episode 11 modular structure. Entanglement entropy and why it's formally infinite (Type III), and how the Type II crossed-product fixes it. Algebraic holography. Analogue gravity experiments. Open problems: non-perturbative interacting theories on curved space, full quantum gravity. Closing summary table: Wightman vs. Hollands-Wald, side by side.
+
+Call to action: "You now have the tools the experts use." Link to the full notebook repo.
+
+---
+
+## The `aqft-curved` Notebook Repository
+
+| Module | Episode | Stack |
+|---|---|---|
+| `spacetime.py` — metric, Christoffels, $J^\pm$ | 1, 4 | SymPy + EinsteinPy |
+| `kg_solver.py` — FDTD on curved backgrounds | 1, 7 | NumPy (your existing solver) |
+| `causal_propagator.py` — $E^\pm$, $\sigma(f,g)$ | 2 | SymPy + NumPy |
+| `weyl_algebra.py` — symbolic Weyl multiplication | 2 | SymPy |
+| `gns.py` — GNS triple from $(\mathcal{A}, \omega)$ | 3 | QuTiP + NumPy |
+| `hadamard.py` — parametrix recursion for $u, v$ | 5, 8 | SymPy |
+| `ope.py` — symbolic OPE expansion + curvature corrections | 6, 8 | SymPy |
+| `bogoliubov.py` — Rindler/collapse mode-matching | 7, 10 | SciPy |
+| `point_splitting.py` — renormalized $\langle\phi^2\rangle$, $\langle T_{ab}\rangle$ | 8 | NumPy |
+| `modular.py` — Peschel correlation-matrix modular Hamiltonian | 11 | NumPy + SciPy |
+| `penrose_anim.py` — Rindler/collapse Penrose visualizations | 7, 10 | Matplotlib |
+
+---
+
+## What This Final Merge Did
+
+Three plans, one spine. The 12-episode count and EigenChris production specifics (run times, animation style, Patreon model, prerequisites video, thumbnail concept) come from the third plan — that's the *production document*, and it was the most concrete. The 6-lecture conceptual arc (break particle concept → Weyl algebra → GNS → causality → Hadamard → KMS) from the second plan became the *narrative spine* but expanded so each beat got the room it needed. The first plan's contributions: (i) the BFV functorial reformulation gets a real slot in Episode 4 instead of being implicit, (ii) Tomita-Takesaki gets full treatment in Episode 11 rather than being a parenthetical before Bisognano-Wichmann, and (iii) the Hadamard recursion is treated as a *concrete computational artifact* worth shipping, since almost no textbook does it explicitly.
+
+Two structural decisions worth flagging. **OPE moved to Episode 6, before Unruh.** This is the Hollands-Wald commitment — if you treat OPE as fundamental rather than derived, you have to introduce it before the big payoff calculations, otherwise Episodes 7 and 10 read as "old-school Bogoliubov with extra steps." **Modular theory got pulled out of the Unruh episode and given its own slot at Episode 11**, after Hawking. This sequences the payoffs (Unruh in 7, Hawking in 10, modular structure in 11 as the deep "why") instead of front-loading the abstraction. KMS-as-Gibbs and Bisognano-Wichmann then re-derive Unruh and Hawking as corollaries, which is structurally satisfying as the second-to-last episode.
+
+The third plan's Episode 9 (spin-statistics/PCT) survived intact because it's the cleanest demonstration that the algebraic framework recovers flat-space structural theorems without flat-space inputs — it's the philosophical payoff that makes the rest of the framework feel inevitable rather than baroque.
+
+Want me to draft Episode 1 in full — script with timing marks, slide-by-slide outline, complete Bernard-Duncan derivation, and the NumPy notebook — as the pilot?

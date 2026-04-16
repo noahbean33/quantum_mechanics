@@ -57,13 +57,28 @@ Apply $ML$ and $LM$ to any basis vector:
 Since $l_i$ and $m_i$ are just numbers, $l_i m_i = m_i l_i$.  So $ML\mathbf{e}_i=LM\mathbf{e}_i$ for every basis vector.  Any vector is a superposition of basis vectors, so $ML=LM$ on the entire space.
 
 \medskip
-\noindent$(\Leftarrow)$ The converse also holds: if $[L,M]=0$ then a common eigenbasis exists.
+\noindent$(\Leftarrow)$ Suppose $[L,M]=0$.  Let $\mathbf{e}$ be an eigenvector of $L$ with eigenvalue $\ell$: $L\mathbf{e}=\ell\mathbf{e}$.  Then
+\[
+    L(M\mathbf{e}) = ML\mathbf{e} = M(\ell\mathbf{e}) = \ell(M\mathbf{e}),
+\]
+so $M\mathbf{e}$ is \emph{also} an eigenvector of $L$ with eigenvalue $\ell$.  In other words, $M$ maps the $\ell$-eigenspace of $L$ to itself.  Restricting $M$ to that eigenspace gives a self-adjoint matrix on a smaller space, which by the spectral theorem (Lecture~3) has its own orthonormal eigenbasis---and these vectors are simultaneously eigenvectors of $L$ (with eigenvalue $\ell$) and of $M$.  Repeating for each eigenspace of $L$ produces a complete simultaneous eigenbasis.\;$\square$
 
 \subsection{1.3 The uncertainty idea}
 When $[L,M]\neq 0$, there are \emph{no} simultaneous eigenstates.  If you measure $L$ and leave the system in an eigenstate of $L$, that state is \emph{not} an eigenstate of $M$.  A subsequent measurement of $M$ will give a statistical result, \emph{and} it will disturb the value of $L$.  This is the origin of the \textbf{uncertainty principle}: certain pairs of observables cannot both have definite values at the same time.
 
 \medskip
-\noindent\textbf{Engineering analog:} Non-commuting observables are analogous to non-commuting transfer functions in feedback loops---the order of operations matters.
+\noindent\textbf{Physical analog:} Non-commutativity has a visceral demonstration: hold a book and rotate it $90^\circ$ about the $x$-axis, then $90^\circ$ about the $y$-axis.  Now start over and do them in the opposite order---you get a different final orientation.  This is \emph{literally} the same structure: the Pauli matrices generate $SU(2)$ rotations, and their failure to commute is the failure of 3D rotations to commute.
+
+\medskip
+\noindent\textbf{The Robertson uncertainty relation.}  The precise quantitative statement is:
+\[
+    \boxed{\Delta L\cdot\Delta M \;\geq\; \tfrac{1}{2}\bigl|\langle [L,M]\rangle\bigr|,}
+\]
+where $\Delta L = \sqrt{\langle L^2\rangle - \langle L\rangle^2}$ is the standard deviation.  The proof uses the Cauchy--Schwarz inequality on a cleverly chosen inner product (see appendix or a later lecture).  The key insight: the \emph{right-hand side} is the expectation value of the commutator, which is state-dependent.  For the two-level system with $L=X$, $M=Z$:
+\[
+    \Delta X\cdot\Delta Z \;\geq\; \bigl|\langle Y\rangle\bigr|.
+\]
+This is a concrete, verifiable inequality---not a vague statement about ``not knowing both.''
 
 \subsection{1.4 Commutation relations for $X$, $Y$, $Z$}
 The three standard observable matrices satisfy the cyclic commutation relations:
@@ -109,7 +124,7 @@ Starting from a general state $\mathbf{v}(0)=\alpha\,\mathbf{e}_0+\beta\,\mathbf
 The magnitudes $|\alpha|$ and $|\beta|$ are constant; only the relative phase changes.
 
 \subsection{2.3 Equations of motion for expectation values}
-Using $\frac{d}{dt}\langle M \rangle = \frac{i}{\hbar}\langle [H,M] \rangle$ with $H=\frac{\omega}{2}Z$ (setting $\hbar=1$):
+Using $\frac{d}{dt}\langle M \rangle = i\langle [H,M] \rangle$ with $H=\frac{\omega}{2}Z$ (recall $\hbar=1$ throughout):
 \begin{align}
     \frac{d}{dt}\langle X \rangle &= -i\cdot\frac{\omega}{2}\langle[X,Z]\rangle
     = -i\cdot\frac{\omega}{2}\cdot(-2i)\langle Y \rangle = -\omega\langle Y \rangle, \\
@@ -119,14 +134,26 @@ Using $\frac{d}{dt}\langle M \rangle = \frac{i}{\hbar}\langle [H,M] \rangle$ wit
 \end{align}
 Notice that the factors of $i$ cancel, giving real equations for real expectation values.
 
-\subsection{2.4 Precession}
-The equations $\frac{d}{dt}\langle X \rangle=-\omega\langle Y \rangle$ and $\frac{d}{dt}\langle Y \rangle=+\omega\langle X \rangle$ describe \textbf{uniform circular motion} in the $XY$-plane at angular frequency $\omega$.  Combined with $\langle Z \rangle=\text{const}$:
+\subsection{2.4 Precession --- direct derivation}
+The Ehrenfest equations give $\frac{d}{dt}\langle X \rangle=-\omega\langle Y \rangle$, $\frac{d}{dt}\langle Y \rangle=+\omega\langle X \rangle$: uniform circular motion in the $XY$-plane at frequency $\omega$, with $\langle Z \rangle = \text{const}$.  We can also confirm these formulas by direct computation from the time-evolved state $\mathbf{v}(t)$:
+\[
+    \mathbf{v}(t)^\dagger X\,\mathbf{v}(t)
+    = \bigl(\alpha^* e^{i\omega t/2},\;\beta^* e^{-i\omega t/2}\bigr)
+    \begin{pmatrix}0&1\\1&0\end{pmatrix}
+    \begin{pmatrix}\alpha\, e^{-i\omega t/2}\\\beta\, e^{i\omega t/2}\end{pmatrix}
+    = \alpha^*\beta\,e^{i\omega t}+\beta^*\alpha\,e^{-i\omega t}
+    = 2\operatorname{Re}\!\bigl(\alpha^*\beta\,e^{i\omega t}\bigr).
+\]
+Similarly $\mathbf{v}(t)^\dagger Y\,\mathbf{v}(t) = 2\operatorname{Im}(\alpha^*\beta\,e^{i\omega t})$ and $\mathbf{v}(t)^\dagger Z\,\mathbf{v}(t) = |\alpha|^2 - |\beta|^2$.  So:
 \begin{align}
     \langle X \rangle(t) &= 2\operatorname{Re}\!\bigl(\alpha^*\beta\,e^{i\omega t}\bigr), \\
     \langle Y \rangle(t) &= 2\operatorname{Im}\!\bigl(\alpha^*\beta\,e^{i\omega t}\bigr), \\
     \langle Z \rangle(t) &= |\alpha|^2 - |\beta|^2.
 \end{align}
-The expectation-value vector $\bigl(\langle X \rangle,\langle Y \rangle,\langle Z \rangle\bigr)$ traces out a cone---this is \textbf{Larmor precession}, exactly matching the classical result for a magnetic dipole in a uniform field.
+The expectation-value vector $\bigl(\langle X \rangle,\langle Y \rangle,\langle Z \rangle\bigr)$ traces out a cone---this is \textbf{Larmor precession}, exactly matching the classical result for a magnetic dipole in a uniform field.  The direct computation confirms the Ehrenfest result and gives the reader practice with the state~$\to$~expectation-value pipeline.
+
+\medskip
+\noindent\textbf{Important distinction.}  The triple $\bigl(\langle X\rangle,\langle Y\rangle,\langle Z\rangle\bigr)$ is a vector of \emph{real} expectation values living in $\mathbb{R}^3$---the Bloch vector.  It is \emph{not} the state vector $\mathbf{v}\in\mathbb{C}^2$.  The state is a unit vector in a two-dimensional complex space (four real parameters, minus normalization and phase, leaving two); the Bloch vector is a derived quantity that happens to live in ordinary three-dimensional space.  Confusing the two is a common early mistake.
 
 \subsection{2.5 General two-level system matrix}
 The most general self-adjoint matrix on $\mathbb{C}^2$ (up to a constant multiple of $I$) is

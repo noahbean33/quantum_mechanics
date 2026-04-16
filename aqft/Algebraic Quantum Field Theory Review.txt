@@ -1,0 +1,224 @@
+﻿Foundations and Developments in Algebraic Quantum Field Theory in Curved Spacetime: A Comprehensive Literature Review
+The theoretical landscape of quantum field theory in curved spacetime (QFTCS) represents one of the most intellectually demanding and mathematically rigorous intersections in modern physics. At its core, the discipline attempts to reconcile the principles of quantum mechanics with the geometric descriptions of gravity provided by general relativity.1 Unlike the standard formulations of quantum field theory in Minkowski space, which rely heavily on the global symmetries of the Poincaré group, QFT in curved backgrounds must be formulated without the luxury of a preferred vacuum state or a unique notion of "particles".1 This necessity has led to the adoption of the algebraic approach—often termed Local Quantum Physics—as the standard framework for ensuring mathematical consistency and physical insight.6
+Historical Context and the Emergence of the Semi-Classical Paradigm
+The genesis of quantum field theory in curved spacetime can be traced to early attempts to understand how quantum matter behaves in extreme gravitational environments, such as the early universe or the vicinity of black holes.9 While precursor work was conducted as early as the 1930s by Erwin Schrödinger, the field effectively began in the late 1960s and early 1970s.9 Leonard Parker’s seminal contributions between 1969 and 1971 demonstrated that time-dependent gravitational fields in an expanding universe lead to the creation of particle pairs, a prediction that fundamentally challenged the notion of an empty, unchanging vacuum.9
+The most significant impetus for the field, however, was Stephen Hawking’s 1974-1975 discovery of black hole radiation.9 Hawking’s derivation, utilizing the Bogoliubov transformation formalism on a Schwarzschild background, showed that black holes emit thermal radiation with a spectrum corresponding to a specific temperature.10 This temperature,   , where    is the surface gravity, established a profound link between thermodynamics, gravitation, and quantum theory.11 This discovery suggested that the laws of black hole mechanics are not merely analogies to thermodynamics but are identical to them when quantum effects are considered.15
+The mathematical difficulties encountered during these early developments—specifically the observer-dependence of particle definitions and the divergent nature of the stress-energy tensor—necessitated a move away from the traditional Hilbert-space-centric approach.1 By the end of the 1980s, the algebraic framework of Rudolf Haag and Daniel Kastler began to be systematically applied to curved backgrounds.1 This transition marked the birth of algebraic quantum field theory in curved spacetime, a framework that treats the algebra of local observables as the fundamental object of the theory, rather than a specific representation on a Hilbert space.3
+The Mathematical Framework of Algebraic Quantum Field Theory
+The algebraic approach to quantum field theory (AQFT) provides a mathematically rigorous foundation that avoids the pitfalls of non-unique vacuum states and unitarily inequivalent representations.1 In this framework, the physical content of the theory is encoded in the assignment of an algebra of observables to every open, bounded region of the spacetime manifold.8
+Spacetime Geometry and Global Hyperbolicity
+To formulate a well-posed quantum theory, the background spacetime    is typically assumed to be globally hyperbolic.4 This geometric property ensures that the spacetime possesses a Cauchy surface—a spacelike hypersurface    such that every causal curve intersects it exactly once.8 Global hyperbolicity allows for the existence of unique advanced and retarded Green's functions for hyperbolic operators like the Klein-Gordon operator,   , which are essential for defining the commutation relations.8
+A spacetime is globally hyperbolic if and only if it can be foliated as   , where the metric takes the form   , with    being a Riemannian metric on   .8 This structure provides a natural environment for the Cauchy problem, allowing one to evolve field data from a single slice to the entire manifold.6
+The Net of Local Algebras and Haag-Kastler Axioms
+The core of AQFT is the "net" of algebras. For every open region   , one assigns a unital   -algebra   .6 This assignment is subject to several fundamental axioms that ensure the theory respects causality and the underlying geometry:
+Axiom
+	Physical Principle
+	Mathematical Formulation
+	Isotony
+	Localization of information.
+	  
+
+	Locality
+	Einstein causality.
+	  
+
+	Covariance
+	Geometric independence.
+	  
+ for isometries   
+	Time-Slice
+	Dynamical determinism.
+	  
+ for Cauchy surface neighborhood   
+	The   -algebra structure allows for the definition of states as positive normalized linear functionals   .7 The expectation value of an observable    in the state    is given by   . The Gelfand-Naimark-Segal (GNS) construction then provides a representation    of the algebra on a Hilbert space   .3 The critical insight of AQFT in curved spacetime is that one can study the algebra    independently of the state   , effectively circumventing the problem of choosing a "correct" Hilbert space at the outset.3
+The Principle of Local Covariance and Category Theory
+One of the most profound advancements in the last two decades is the formulation of "Locally Covariant Quantum Field Theory".5 This paradigm, introduced by Brunetti, Fredenhagen, and Verch, utilizes the language of category theory to define what it means for quantum field theories on different spacetimes to represent "the same physics".6
+Functors from Spacetimes to Algebras
+In this framework, a quantum field theory is modeled as a covariant functor    from the category    of globally hyperbolic spacetimes (with isometric embeddings as morphisms) to the category    of unital   -algebras.6 This functorial approach ensures that the construction of the field algebra in a region    depends only on the local geometry    and not on the global features of the manifold   .6
+This definition allows for a rigorous treatment of the "relative Cauchy evolution".6 By considering a perturbation of the metric    in a compact region, one can analyze how the algebra changes. This change is related to the quantum stress-energy tensor   , providing a purely algebraic and local derivation of the source term for the Einstein equations.6
+The Fewster-Verch No-Go Theorem
+The categorical approach also led to the proof of a significant "no-go" theorem regarding the existence of preferred states.2 Fewster and Verch demonstrated that, under general assumptions of local covariance and the time-slice axiom, there is no functorial way to assign a "vacuum" state to every spacetime.2 This result solidifies the algebraic viewpoint: because there is no universal vacuum, the theory must be formulated in terms of the algebra of observables, with states chosen based on the specific physical context of each spacetime.3
+Microlocal Analysis and the Characterization of Hadamard States
+Since no unique vacuum exists, it is necessary to identify a class of "physically reasonable" states.8 These are known as Hadamard states, characterized by a specific singularity structure in their two-point functions that mimics the behavior of the Minkowski vacuum at short distances.18
+The Hadamard Form and Geometric Singularity
+The traditional definition of a Hadamard state    for a scalar field involves an expansion of its two-point distribution    in the limit   .16 For a four-dimensional spacetime, the distribution takes the form:
+  
+
+where    is half the square of the geodesic distance between    and   .25 The functions    and    are determined entirely by the local metric and its derivatives (the Seeley-DeWitt coefficients), while    is a smooth function that contains the specific state information.25 This form ensures that the ultraviolet (UV) behavior is universal, which is a prerequisite for the renormalization of the stress-energy tensor and other non-linear observables.18
+Radzikowski’s Microlocal Spectrum Condition
+A revolutionary shift occurred in 1996 when Marek Radzikowski reformulated the Hadamard condition using the tools of microlocal analysis.16 Microlocal analysis studies the "wavefront set" (  ) of a distribution, which identifies not just the locations of singularities but also the directions in the cotangent space along which the distribution fails to be smooth.3
+Radzikowski proved that a state is Hadamard if and only if the wavefront set of its two-point function    satisfies the "Microlocal Spectrum Condition" (  ):
+  
+
+where    denotes that the points are connected by a null geodesic and    is the parallel transport of    along that geodesic, with    representing the future-directed lightcone.4
+This microlocal characterization is powerful because it allows for:
+1. Rigorous proofs of the propagation of singularities: If a state is Hadamard in one region, it remains Hadamard throughout the spacetime.24
+2. Generalization to vector and spinor fields: The condition has been successfully extended to more complex field types.29
+3. Renormalizability: It provides the mathematical foundation for proving that interacting theories can be consistently defined on curved backgrounds.20
+Perturbative Algebraic Quantum Field Theory (pAQFT)
+The construction of interacting quantum field theories in curved spacetime is achieved through Perturbative Algebraic Quantum Field Theory (pAQFT).31 This approach combines the Haag-Kastler axioms with perturbative methods based on formal power series.31
+Deformation Quantization and the Epstein-Glaser Method
+In pAQFT, the transition from classical to quantum fields is viewed as a "deformation quantization" of the classical algebra of observables.5 The standard "interaction picture" of QFT, which relies on a global vacuum and the S-matrix, is replaced by a local, causal construction.31
+The Epstein-Glaser method is central to this framework.31 It defines the time-ordered products of field operators in a way that is intrinsically local.5 Ultraviolet divergences appear as ambiguities in extending these time-ordered products to the diagonal   .31 Because the framework is locally covariant, these ambiguities are limited to local counterterms that correspond to the renormalization of the constants in the Lagrangian (e.g., mass, coupling constant, and curvature couplings).31
+Wick Polynomials and Renormalization Group
+Within pAQFT, observables are treated as "locally covariant Wick powers".31 The microlocal spectrum condition ensures that these Wick products are well-defined as operator-valued distributions.4 The collection of all possible renormalizations forms the "renormalization group," which in the algebraic setting is a group of automorphisms of the field algebra.31 This allows researchers to construct models like    theory or gauge theories with the same level of mathematical rigor as free fields.20
+Renormalization of the Stress-Energy Tensor
+The expectation value of the stress-energy tensor    is the critical quantity for determining the backreaction of quantum fields on the spacetime geometry.8 However, the formal operator for    involves products of field operators at the same spacetime point, making it inherently divergent.27
+Wald’s Axioms for Regularization
+Robert Wald established a set of five minimal conditions that any regularization scheme for    must satisfy to be physically consistent.27 These axioms serve as the benchmark for comparing different mathematical approaches:
+1. Commutator Consistency: The commutator of the regularized stress-energy tensor with the field should be the same as the formal expression.27
+2. Locality and Covariance: The tensor must depend only on the local metric and its derivatives.27
+3. Conservation: The tensor must satisfy   , matching the divergence of the Einstein tensor.27
+4. Minkowski Limit: In flat spacetime and the vacuum state, the expectation value should match the standard normal-ordered result (usually zero).27
+5. Derivative Order: The tensor should ideally not contain derivatives of the metric higher than second order (though this is often unachievable in practice).27
+Comparison of Regularization Schemes
+The literature discusses several rigorous schemes for the stress-energy tensor, many of which have been proven equivalent under certain conditions 27:
+
+
+Scheme
+	Mechanism
+	Advantages
+	Equivalent to
+	Hadamard Point-Splitting
+	Subtracts the singular Hadamard parametrix before taking the limit   .
+	Directly uses the local geometric singularity structure; satisfies all Wald axioms.
+	"Gold standard" for general Lorentzian manifolds.27
+	Local   -function
+	Uses the spectral properties of the wave operator via a generalized zeta function.
+	Automatically produces a conserved tensor and the conformal anomaly.
+	Hadamard point-splitting in static spacetimes.27
+	DeWitt-Schwinger
+	Employs an expansion of the heat kernel in terms of Seeley-DeWitt coefficients.
+	Provides a clear geometric interpretation of the counterterms.
+	Hadamard scheme; accounts for full state-dependence.27
+	Dimensional Regularization
+	Generalizes the manifold dimension to    to handle divergences.
+	Computationally efficient for perturbative calculations.
+	Conjectured to satisfy Wald's axioms 1-3.27
+	The choice between these schemes often depends on the specific geometry. For instance, the Décanini-Folacci scheme offers a particular variation of Hadamard renormalization that is compared in the recent literature with the standard Wald scheme to analyze differences in the finite part of the renormalized tensor.2
+Quantum Field Theory on Black Hole Backgrounds
+The study of quantum fields on black hole backgrounds—particularly Schwarzschild and Kerr metrics—is the most celebrated application of QFTCS.1 It is here that the algebraic approach demonstrates its power in constructing and justifying the existence of physical states on manifolds with horizons.30
+The Unruh, Hartle-Hawking, and Boulware States
+There are three primary states considered for "eternal" black holes, each corresponding to different boundary conditions and physical scenarios 38:
+   1. Boulware State: This state is the vacuum for static observers. It represents a state with no particles at infinity but leads to a divergence of the stress-energy tensor at the event horizon. It is generally considered non-physical for a black hole.39
+   2. Hartle-Hawking (HHI) State: This state describes a black hole in thermal equilibrium with a radiation bath at the Hawking temperature.38 It is regular on both the future and past horizons (   and   ) and is a KMS (thermal) state with respect to the Killing vector   .38
+   3. Unruh State: This state mimics the late-time behavior of a black hole formed by gravitational collapse.30 It is a vacuum on past null infinity (  ) and is regular on the future horizon (  ), but diverges on the past horizon (  ).30
+Rigorous Construction of the Unruh State
+In a major contribution to the field, Dappiaggi, Moretti, and Pinamonti globally constructed the Unruh state for a massless scalar field on Schwarzschild spacetime.30 They utilized a "bulk-to-boundary" reconstruction technique, which encodes the data of the bulk quantum field on the union of the past horizon    and past null infinity   .30
+This construction is significant because the authors rigorously proved that the resulting state satisfies the Hadamard condition everywhere, including the future horizon and the black hole interior.30 This ensures that the state is "perturbatively stable," meaning that small perturbations of the state remain Hadamard, and that the expectation value of the stress-energy tensor is finite.30 This construction provides the mathematical justification for Hawking's original derivation, showing that it is a robust prediction of the theory and not an artifact of the Bogoliubov approximation.38
+Black Hole Thermodynamics and the Wald Entropy
+The Hawking effect reveals that black holes are thermodynamic objects, leading to the formulation of the four laws of black hole mechanics.11 Algebraic quantum field theory has been instrumental in extending these laws to more general theories of gravity.11
+The Noether Charge and Wald Entropy Formula
+In any diffeomorphism-invariant theory of gravity, the entropy    of a stationary black hole is not necessarily proportional to the area   .11 Instead, Wald showed that it is given by the Noether charge associated with the horizon-generating Killing field, evaluated at the bifurcation surface.11 For general relativity, this reduces to   , but for theories with higher-curvature terms (like    or Lovelock gravity), the Wald entropy includes additional geometric corrections.40
+Dynamical Generalizations and Non-Equilibrium States
+Recent research has focused on generalizing the Wald entropy to "dynamical" horizons where the black hole is evolving—for example, during evaporation or the merger of two black holes.40 The "improved" Hollands-Wald-Zhang (HWZ) entropy and the Wall entropy incorporate dynamical corrections like local expansion (  ) and shear of the null generators to ensure the second law of thermodynamics is preserved even in non-equilibrium regimes.40 These constructions rely on the algebraic description of fields near the horizon and the use of covariant phase space methods.43
+Cosmological Applications of AQFT
+Quantum field theory in curved spacetime is also the foundational framework for modern cosmology, specifically for analyzing the evolution of the early universe and the power spectrum of the Cosmic Microwave Background (CMB).8
+Backreaction and the Semi-Classical Einstein Equations
+The problem of "backreaction" addresses how quantum fields or small-scale inhomogeneities affect the homogeneous background of the universe.44 In the algebraic approach, this is modeled using the semi-classical Einstein equations:
+  
+
+where    is a Hadamard state on the Friedmann-Robertson-Walker (FRW) background.8 Dappiaggi, Hack, and Pinamonti have studied these equations for scalar and Dirac fields, investigating whether the quantum stress-energy tensor can drive an inflationary phase (a de Sitter phase) without the need for an ad hoc inflaton potential.8
+
+
+Cosmological Phase
+	Backreaction Source
+	Physical Result
+	Late-time Universe
+	Classical inhomogeneities.
+	Negligible effect; standard   CDM holds.44
+	Inflationary Era
+	Vacuum polarization of quantum fields.
+	Can lead to de Sitter expansion; trace anomaly effects.8
+	Early Structure Formation
+	Fluctuations of the state   .
+	Provides the initial conditions for the CMB power spectrum.26
+	Tensions in the Cosmological Constant and H0
+A recurring theme in the literature is the "tension" in cosmological parameters, such as the Hubble constant    (currently at a 4.4$\sigma$ level between different measurement techniques) and the matter density   .44 Researchers in AQFT are investigating whether a more rigorous treatment of the quantum backreaction and the averaging of the stress-energy tensor could alleviate these tensions, as the standard   CDM model relies on a simplistic, homogeneous treatment of dark energy.44
+Quantum Energy Inequalities (QEIs) and Stability
+One of the most striking features of quantum field theory is that the energy density can be negative.23 This poses a potential threat to the stability of spacetime, as classical general relativity relies on energy conditions (like the Null Energy Condition,   ) to prevent the formation of "time machines" or the avoidance of singularities.23
+Violation of Classical Energy Conditions
+In curved spacetime, simple examples involving free fields demonstrate that the integrated energy density can be negative, as seen in the Casimir effect or the flux of Hawking radiation.23 These violations mean that the classical singularity theorems of Hawking and Penrose do not strictly apply to the semi-classical regime.23
+Derivation of QEIs in AQFT
+To restore stability, physicists have derived "Quantum Energy Inequalities" (QEIs).23 These are lower bounds on the energy density when averaged over a timelike worldline with a sampling function   .23 In the algebraic framework, it has been proven that for any Hadamard state, the averaged energy density satisfies:
+  
+
+where    is a positive constant determined by the sampling function and the local curvature.23 These inequalities imply that while negative energy can exist, it cannot be arbitrarily large or persist for an arbitrarily long time, thereby providing a "self-censorship" mechanism that prevents the gross violation of the laws of thermodynamics and causality on macroscopic scales.23
+Measurement Theory and Local Operations in AQFT
+A recent and growing branch of the literature addresses the question of "measurement" in a relativistic setting.42 Traditional quantum mechanics postulates instantaneous state changes (wavefunction collapse), which is fundamentally incompatible with the causal structure of relativity.42
+The Fewster Measurement Scheme
+Christopher Fewster has developed a causal and covariant measurement scheme within the framework of AQFT.42 This scheme models the measurement of a "system" field by coupling it to a "probe" field in a local spacetime region.42 The key findings are:
+      1. Causality: The update of the state after a measurement is consistent with the causal structure; no information travels faster than light.42
+      2. State Update: The rule for how the state of the system changes is derived from the dynamics of the coupling, rather than being postulated.42
+      3. Impossible Measurements: The framework resolves the pathologies of "impossible measurements" identified by Sorkin, showing that QFT is a robust theory for describing local observers.42
+This measurement theory is particularly relevant for observers carrying Unruh-DeWitt detectors near black hole horizons.42 Research indicates that an infalling detector does not have enough time to "thermalize" with the Hawking radiation before crossing the horizon, which helps reconcile the apparent tension between the thermal nature of the black hole and the equivalence principle (which states that an infalling observer should see a locally Minkowski vacuum).48
+Operator Product Expansion (OPE) as a Fundamental Principle
+In Minkowski space, the Operator Product Expansion (OPE) is a tool for calculating the short-distance behavior of products of fields. Hollands and Wald have proposed that in curved spacetime, the OPE should be elevated to a fundamental status.4
+OPE Axioms and the Spin-Statistics Theorem
+The OPE-based framework suggests that all properties of a quantum field theory are determined by the OPE coefficients, which are required to be locally and covariantly constructed from the spacetime metric.22
+
+
+OPE Requirement
+	Purpose
+	Locality and Covariance
+	Ensures the theory is built from the background metric   .22
+	Microlocal Spectrum Condition
+	Replaces the global spectrum condition (positivity of energy).22
+	Associativity
+	Ensures consistency when expanding products of three or more fields.22
+	Scaling Degree
+	Constrains the strength of singularities at the coincidence limit.22
+	Using this axiomatic OPE framework, Hollands and Wald were able to prove curved-spacetime versions of the Spin-Statistics Theorem and the PCT Theorem.4 This is a major achievement, as these theorems were previously only proven using the global Poincaré invariance of Minkowski space. Their proof shows that these fundamental symmetries are actually consequences of the local, covariant nature of quantum fields.22
+Conclusion and Future Outlook
+The literature review of algebraic quantum field theory in curved spacetime demonstrates that the subject has reached a high level of mathematical maturity and physical depth. By shifting the focus from specific Hilbert space states to the local algebra of observables, the algebraic approach has successfully addressed the conceptual challenges posed by the absence of Poincaré symmetry and the non-uniqueness of the vacuum.
+Key pillars of this success include the Principle of Local Covariance, which allows for a consistent definition of the same physics across all manifolds; the Microlocal Spectrum Condition, which provides a rigorous ultraviolet selection criterion for physical states; and Perturbative AQFT, which generalizes renormalization to curved backgrounds without the use of divergent quantities. The rigorous construction of states on black hole and cosmological backgrounds further confirms that phenomena like Hawking radiation and inflation are robust consequences of combining quantum fields with general relativity.
+Future research is likely to move beyond the semi-classical approximation. The "bottom-up" strategy currently being pursued aims to treat the backreaction not just as a static source term but as a dynamical interaction between the quantum field and the metric, potentially leading to a more unified description of quantum gravity.22 Additionally, the interplay between Hadamard states and the holographic principle suggests that the techniques of microlocal analysis and operator algebras will remain central to the quest for a fundamental theory of spacetime.30 The rigorous foundations laid by the pioneers of AQFT ensure that the theory of quantum fields in curved backgrounds remains the most reliable stepping stone toward the ultimate quantization of gravity.
+Works cited
+      1. Quantum field theory in curved spacetime - Wikipedia, accessed April 15, 2026, https://en.wikipedia.org/wiki/Quantum_field_theory_in_curved_spacetime
+      2. Quantum Field Theory in Curved Spacetime (2nd Edition) - arXiv, accessed April 15, 2026, https://arxiv.org/pdf/2308.14517
+      3. The Formulation of Quantum Field Theory in Curved Spacetime, accessed April 15, 2026, https://igc.psu.edu/os/events/abhayfest/talks/Wald.pdf
+      4. Axiomatic Quantum Field Theory in Curved Spacetime, accessed April 15, 2026, https://web.physics.wustl.edu/symposiums/mwrm/Presentations/wald_robert_linux.pdf
+      5. (PDF) Perturbative Algebraic Quantum Field Theory - ResearchGate, accessed April 15, 2026, https://www.researchgate.net/publication/230613771_Perturbative_Algebraic_Quantum_Field_Theory
+      6. Algebraic quantum field theory in curved spacetimes - arXiv, accessed April 15, 2026, https://arxiv.org/pdf/1504.00586
+      7. Romeo Brunetti Claudio Dappiaggi Klaus Fredenhagen Jakob Yngvason Editors - eBooks, accessed April 15, 2026, https://content.e-bookshelf.de/media/reading/L-3929303-17482a19e3.pdf
+      8. An overview of algebraic quantum field theory on curved spacetimes - PoS - Proceeding of science, accessed April 15, 2026, https://pos.sissa.it/263/098/pdf
+      9. Quantum Field Theory in Curved Spacetime - Topics, accessed April 15, 2026, https://www.phy.olemiss.edu/~luca/Topics/qft/cst.html
+      10. A Rigorous Analysis of Hawking Radiation and Black Hole Thermodynamics: Quantum Field Theory in Curved Spacetime with Astrophysi - ESS Open Archive, accessed April 15, 2026, https://essopenarchive.org/doi/pdf/10.22541/essoar.176659769.95422317/v1?onload=true
+      11. Black hole thermodynamics - Wikipedia, accessed April 15, 2026, https://en.wikipedia.org/wiki/Black_hole_thermodynamics
+      12. Quantum Field Theory in Curved Spacetime (2nd Edition) - arXiv, accessed April 15, 2026, https://arxiv.org/abs/2308.14517
+      13. Introduction to black hole thermodynamics - arXiv, accessed April 15, 2026, https://arxiv.org/html/2512.24929v1
+      14. Unruh effect - Wikipedia, accessed April 15, 2026, https://en.wikipedia.org/wiki/Unruh_effect
+      15. The Thermodynamics of Black Holes - PMC, accessed April 15, 2026, https://pmc.ncbi.nlm.nih.gov/articles/PMC5253844/
+      16. (PDF) Microlocal Analysis of Quantum Fields on Curved Spacetimes - ResearchGate, accessed April 15, 2026, https://www.researchgate.net/publication/330726257_Microlocal_Analysis_of_Quantum_Fields_on_Curved_Spacetimes
+      17. Algebraic quantum field theory - Wikipedia, accessed April 15, 2026, https://en.wikipedia.org/wiki/Algebraic_quantum_field_theory
+      18. LECTURE NOTES ON QFT ON CURVED SPACE-TIMES 1. Introduction, accessed April 15, 2026, https://www.imo.universite-paris-saclay.fr/~gerard/qft/qft-curved-space-times-part1.pdf
+      19. Hadamard states from light-like hypersurfaces, accessed April 15, 2026, https://qft-horizons.sciencesconf.org/data/moretti.pdf
+      20. Notes, accessed April 15, 2026, https://www.rejzner.com/teaching.html
+      21. Algebraic quantum field theory in curved spacetimes, accessed April 15, 2026, https://arxiv.org/abs/1504.00586
+      22. Axiomatic quantum field theory in curved spacetime, accessed April 15, 2026, https://arxiv.org/abs/0803.2003
+      23. Quantum Field Theory in Curved Spacetime - Poznań Spring School in Mathematical Physics, accessed April 15, 2026, https://pss25.wmi.amu.edu.pl/qft.pdf
+      24. Microlocal Analysis of Quantum Fields on Curved Spacetimes – Introduction - EMS Press, accessed April 15, 2026, https://ems.press/content/book-chapter-files/22340
+      25. Simple, physical explanations for Hadamard behaviour of two-point functions, accessed April 15, 2026, https://physics.stackexchange.com/questions/256896/simple-physical-explanations-for-hadamard-behaviour-of-two-point-functions
+      26. Algebraic Quantum Field Theory meets Cosmology, accessed April 15, 2026, https://www.physik.uni-hamburg.de/th2/ag-fredenhagen/dokumente/colloquium-sfb-23-04-2009.pdf
+      27. On the Stress-Energy Tensor of Quantum Fields in Curved ..., accessed April 15, 2026, https://arxiv.org/abs/1202.5107
+      28. [gr-qc/0109048] Comments on the Stress-Energy Tensor Operator in Curved Spacetime, accessed April 15, 2026, https://arxiv.org/abs/gr-qc/0109048
+      29. Microlocal spectrum condition and Hadamard form for vector-valued ..., accessed April 15, 2026, https://arxiv.org/abs/math-ph/0008029
+      30. Rigorous construction and Hadamard property of the Unruh state in ..., accessed April 15, 2026, https://arxiv.org/abs/0907.1034
+      31. Perturbative algebraic quantum field theory - arXiv, accessed April 15, 2026, https://arxiv.org/abs/1208.1428
+      32. Perturbative Algebraic Quantum Field Theory - Apple Books, accessed April 15, 2026, https://books.apple.com/us/book/perturbative-algebraic-quantum-field-theory/id1094755989
+      33. Perturbative algebraic quantum field theory and beyond - arXiv, accessed April 15, 2026, https://arxiv.org/abs/2512.14227
+      34. [1412.5945] Algebraic QFT in Curved Spacetime and quasifree Hadamard states: an introduction - arXiv, accessed April 15, 2026, https://arxiv.org/abs/1412.5945
+      35. Field Theory in Curved Spacetime and the Stress-Energy Tensor, accessed April 15, 2026, https://www.sas.rochester.edu/pas/assets/pdf/undergraduate/field_theory_in_curved_spacetime_and_the_stress-energy_tensor.pdf
+      36. [hep-th/9705060] Direct $ζ$-function approach and renormalization of one-loop stress tensors in curved spacetimes - arXiv, accessed April 15, 2026, https://arxiv.org/abs/hep-th/9705060
+      37. Quantum Field Theory in Curved Spacetime - arXiv, accessed April 15, 2026, https://arxiv.org/html/2308.14517v3
+      38. On the construction of Hartle-Hawking-Israel states across a static bifurcate Killing horizon - Universität Leipzig, accessed April 15, 2026, https://home.uni-leipzig.de/~tet/wp-content/uploads/2014/02/Ko_HartleHawkingStates.pdf
+      39. Infrared Effects and the Unruh State, accessed April 15, 2026, https://par.nsf.gov/servlets/purl/10439832
+      40. A Survey of Black Hole Thermodynamics arXiv:1804.10610v1 [gr-qc] 27 Apr 2018 - Indico, accessed April 15, 2026, https://indico.global/event/6166/attachments/25565/44002/%5BWall%5D_Black_Hole_Thermodynamics.pdf
+      41. Thermodynamical aspects of perturbations of the Unruh state for black holes in formation, accessed April 15, 2026, https://unire.unige.it/bitstream/handle/123456789/13456/tesi35216873.pdf?sequence=1&isAllowed=y&group=an
+      42. Book of Abstracts | Golden Wedding of Black Holes and Thermodynamics, accessed April 15, 2026, https://bht50.github.io/talks/abstracts/
+      43. Dynamical Wald Entropy Explained - Emergent Mind, accessed April 15, 2026, https://www.emergentmind.com/topics/dynamical-wald-entropy
+      44. Backreaction in Cosmology, accessed April 15, 2026, https://d-nb.info/1240903529/34
+      45. Cosmological Applications of Algebraic Quantum Field Theory in Curved Spacetimes - arXiv, accessed April 15, 2026, https://arxiv.org/abs/1506.01869
+      46. Quantum Field Theory and Cosmology, accessed April 15, 2026, https://www.physik.uni-hamburg.de/en/th2/ag-fredenhagen/dokumente/pavia-23-02-2009.pdf
+      47. arXiv:0803.2003v1 [gr-qc] 13 Mar 2008 Axiomatic quantum field theory in curved spacetime, accessed April 15, 2026, https://arxiv.org/pdf/0803.2003
+      48. What Hawking Radiation Looks Like as You Fall into a Black Hole - arXiv, accessed April 15, 2026, https://arxiv.org/html/2501.06609v1

@@ -39,6 +39,9 @@
     \item Measurement is a special case: an apparatus with many degrees of freedom entangles with the system.  There is no practical way to reverse this---which is why measurements appear irreversible even though the underlying evolution is unitary.
 \end{itemize}
 
+\medskip
+\noindent\textbf{The arrow of time in quantum mechanics.}  This is exactly the same mechanism as classical statistical mechanics: microscopically reversible dynamics produces macroscopically irreversible behavior because of the enormous asymmetry in state space.  Ink dispersing in water doesn't spontaneously un-disperse, even though the underlying molecular dynamics is time-reversible---the set of configurations that look ``dispersed'' is overwhelmingly larger than the set that look ``concentrated.''  Quantum measurement is the same story: after the system entangles with an apparatus of $\sim 10^{23}$ degrees of freedom, the set of composite states that ``look like measurement happened'' is overwhelmingly larger than the set that could be reversed.  The quantum arrow of time is the thermodynamic arrow of time, viewed through the lens of entanglement and the partial trace.
+
 % ============================================================
 \section{2. The No-Signaling Theorem}
 % ============================================================
@@ -85,8 +88,10 @@ This collapses the double sum, giving:
     \item \textbf{Locality}: Bob cannot send any signal to Alice by manipulating his own degrees of freedom, regardless of entanglement.
     \item All of Alice's statistical predictions---expectation values, probability distributions---are completely unaffected by Bob's actions.
     \item This holds even for maximally entangled states.
-    \item The proof \emph{critically depends on unitarity}.  If Bob's evolution were non-unitary ($U^\dagger U \neq I$), faster-than-light signaling would become possible---one deep reason why quantum mechanics resists modification.
 \end{itemize}
+
+\medskip
+\noindent\textbf{Why unitarity cannot be modified.}  The proof critically depends on $U^\dagger U = I$.  This is not a technicality---it is a deep structural constraint.  Any deterministic non-unitary modification of quantum mechanics either (a)~violates the no-signaling theorem (and is ruled out by special relativity) or (b)~violates probability conservation (and is ruled out by the meaning of probability).  Unitarity is the \emph{unique consistent option}.  Every serious attempt to modify quantum mechanics either reduces to standard QM in disguise or breaks something fundamental.  This is the closest thing to a \textbf{uniqueness theorem} for the quantum framework: the rules are not arbitrary choices but forced by the requirement that physics be both local and probabilistically consistent.
 
 % ============================================================
 \section{3. The EPR Puzzle}
@@ -98,21 +103,72 @@ Einstein, Podolsky, and Rosen (1935) highlighted the following:
 A composite system can be in a state of complete knowledge (a pure state $\mathbf{v}$), while \emph{each} subsystem is in a state of complete ignorance (maximally mixed density matrix).  We know everything about the whole and nothing about the parts.
 \end{quote}
 
-\noindent Entanglement does \emph{not} allow signaling: the no-signaling theorem proves that Bob's manipulations leave Alice's density matrix unchanged.  The genuinely non-classical feature is that the correlations are stronger than any classical model can produce (Bell's theorem below).
+\noindent We have already \emph{proved} this.  In Lecture~7, \S4.3, we computed that the singlet has $\rho^{(A)} = \frac{1}{2}I$, the maximally mixed state on $\mathbb{C}^2$.  In the language of information theory: the von Neumann entropy of the composite state is $S=0$ (pure state, zero ignorance), while the von Neumann entropy of either subsystem is $S=\log 2 = 1$~bit (maximally mixed, maximum ignorance).  The whole is in a state of zero uncertainty; each part is in a state of maximum uncertainty.
+
+\subsection{3.1 Addressing the common misunderstanding}
+The EPR paper is sometimes summarized as showing that quantum mechanics permits faster-than-light influences.  The no-signaling theorem proved in \S2 shows that this reading is \textbf{wrong}: no measurement Alice performs and no operation Bob applies can transmit information between them.
+
+The genuine puzzle EPR identified is more subtle---it concerns the \emph{correlations} that appear when both parties later compare results, not any ability to signal during the experiment.  Bell's theorem (\S4) is what actually quantifies the puzzle: those correlations are stronger than any classical model can produce.
 
 % ============================================================
-\section{4. Bell's Theorem}
+\section{4. Bell's Theorem (CHSH Form)}
 % ============================================================
 
-\subsection{4.1 The locality constraint}
-Suppose Alice and Bob each have one subsystem of an entangled pair and are separated.  A classical model would assign pre-determined values to all measurement outcomes (``local hidden variables'').
+\subsection{4.1 Setup}
+Alice has two measurement settings $A_0, A_1$ (each a self-adjoint matrix on her subsystem with eigenvalues $\pm 1$).  Bob has two settings $B_0, B_1$.  Define the \textbf{CHSH quantity}:
+\[
+    \boxed{S = \langle A_0 \otimes B_0\rangle + \langle A_0 \otimes B_1\rangle + \langle A_1 \otimes B_0\rangle - \langle A_1 \otimes B_1\rangle.}
+\]
 
-\subsection{4.2 The theorem}
-\textbf{Bell's theorem} shows that no assignment of pre-determined outcomes (no local hidden-variable theory) can reproduce all quantum correlations simultaneously for all measurement choices.
+\subsection{4.2 The classical bound}
+Suppose each measurement outcome is determined by a hidden variable $\lambda$: $A_i(\lambda)=\pm 1$, $B_j(\lambda)=\pm 1$ are pre-determined.  For each fixed $\lambda$:
+\[
+    A_0(B_0+B_1)+A_1(B_0-B_1).
+\]
+Since $B_0,B_1\in\{\pm 1\}$, exactly one of $(B_0+B_1)$ and $(B_0-B_1)$ equals $\pm 2$ and the other equals $0$.  So the expression is $\pm 2A_0$ or $\pm 2A_1$, both bounded by $2$ in absolute value.  Averaging over $\lambda$:
+\[
+    \boxed{|S_{\text{classical}}|\leq 2. \qquad\textbf{(CHSH inequality)}}
+\]
 
-For a singlet state, if Alice measures $Z$ and gets $+1$, Bob must get $-1$.  But for \emph{all} possible measurement orientations simultaneously, the quantum correlations violate Bell inequalities---no classical pre-programming can match them.
+\subsection{4.3 Singlet correlation formula}
+For the singlet state and spin observables along unit directions $\hat{a}$ and $\hat{b}$:
+\[
+    \langle (\vec{\sigma}\cdot\hat{a})\otimes(\vec{\sigma}\cdot\hat{b})\rangle_{\text{singlet}} = -\hat{a}\cdot\hat{b}.
+\]
+This follows from the Lecture~6 results: $\langle X\otimes X\rangle = \langle Y\otimes Y\rangle = \langle Z\otimes Z\rangle = -1$ and all cross-terms vanish.
 
-This is the deep content: \textbf{no local hidden-variable theory can reproduce all predictions of quantum mechanics for entangled systems}.
+\subsection{4.4 Quantum violation}
+Choose measurement directions in the $xz$-plane, equally spaced at $45^\circ$:
+\begin{align*}
+    \hat{a}_0 &= \hat{z}, & \hat{a}_1 &= \hat{x}, \\
+    \hat{b}_0 &= \frac{\hat{z}+\hat{x}}{\sqrt{2}}, & \hat{b}_1 &= \frac{\hat{z}-\hat{x}}{\sqrt{2}}.
+\end{align*}
+Using $\langle (\vec{\sigma}\cdot\hat{a})\otimes(\vec{\sigma}\cdot\hat{b})\rangle = -\hat{a}\cdot\hat{b}$:
+\begin{align*}
+    \langle A_0 B_0\rangle &= -\hat{z}\cdot\tfrac{\hat{z}+\hat{x}}{\sqrt{2}} = -\tfrac{1}{\sqrt{2}}, \\
+    \langle A_0 B_1\rangle &= -\hat{z}\cdot\tfrac{\hat{z}-\hat{x}}{\sqrt{2}} = -\tfrac{1}{\sqrt{2}}, \\
+    \langle A_1 B_0\rangle &= -\hat{x}\cdot\tfrac{\hat{z}+\hat{x}}{\sqrt{2}} = -\tfrac{1}{\sqrt{2}}, \\
+    \langle A_1 B_1\rangle &= -\hat{x}\cdot\tfrac{\hat{z}-\hat{x}}{\sqrt{2}} = +\tfrac{1}{\sqrt{2}}.
+\end{align*}
+Summing:
+\[
+    S = -\tfrac{1}{\sqrt{2}} -\tfrac{1}{\sqrt{2}} -\tfrac{1}{\sqrt{2}} - \tfrac{1}{\sqrt{2}} = -\tfrac{4}{\sqrt{2}} = -2\sqrt{2}.
+\]
+\[
+    \boxed{|S_{\text{quantum}}| = 2\sqrt{2} \approx 2.828 > 2. \qquad\textbf{Bell inequality violated.}}
+\]
+
+\noindent\textbf{This is Bell's theorem in its sharpest form}: a single inequality, derivable from local realism in three lines, that quantum mechanics violates by a factor of $\sqrt{2}$.  This result---verified experimentally with loophole-free tests---won the 2022 Nobel Prize in Physics.
+
+\medskip
+\noindent\textbf{Code says:} The entire CHSH calculation is 20~lines of numpy.  The notebook sweeps over all measurement angles and confirms that $2\sqrt{2}$ is the maximum (see below).
+
+\subsection{4.5 The Tsirelson bound}
+The quantum violation is not unlimited.  For \emph{any} state and \emph{any} measurement choice in quantum mechanics:
+\[
+    |S_{\text{quantum}}| \leq 2\sqrt{2} \qquad\textbf{(Tsirelson bound)}.
+\]
+The singlet with the $45^\circ$ settings achieves this maximum.  Remarkably, there exist mathematically consistent ``post-quantum'' theories (Popescu--Rohrlich boxes) that allow $|S|=4$ without enabling signaling---quantum mechanics is \emph{more constrained} than the no-signaling principle alone requires.  Understanding \emph{why} is an open problem in the foundations of physics.
 
 % ============================================================
 \section{5. Summary}

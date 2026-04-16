@@ -46,17 +46,17 @@ where $H = H^\dagger$ is the system matrix (coefficient matrix of the evolution 
 Call $U(t) = e^{-iHt/\hbar}$ the \textbf{evolution operator}.
 
 \subsection{1.2 Unitarity and norm preservation}
-Since $H$ is self-adjoint, $U$ is unitary: $U^\dagger U = I$.  This is the norm-preservation condition---total probability is conserved at all times.
 
 \begin{theorem}
-The evolution operator satisfies $U^\dagger(t)\,U(t) = I$ if and only if $H = H^\dagger$.
+$U(t) = e^{-iHt/\hbar}$ is unitary ($U^\dagger U = I$) if and only if $H = H^\dagger$.
 \end{theorem}
 
 \noindent\textbf{Proof.}  For an infinitesimal step $\epsilon$: $U(\epsilon) = I - i\epsilon H/\hbar + \mathcal{O}(\epsilon^2)$.  Then $U^\dagger(\epsilon) = I + i\epsilon H^\dagger/\hbar + \mathcal{O}(\epsilon^2)$.  Imposing $U^\dagger U = I$ to first order:
 \[
     I + \frac{i\epsilon}{\hbar}(H^\dagger - H) = I \quad\Longrightarrow\quad H^\dagger = H.\;\square
 \]
-This is the derivation promised in Lecture~1: norm preservation $\Rightarrow$ unitarity $\Rightarrow$ Hermitian generator.
+
+\noindent\textbf{The physics direction:} We \emph{demand} unitarity because probability must be conserved---if $\|\mathbf{v}(0)\|=1$, then $\|\mathbf{v}(t)\|=1$ for all $t$.  Self-adjointness of $H$ is the \emph{consequence}, not the assumption.  This completes the chain promised in Lecture~1: norm preservation $\Rightarrow$ unitarity $\Rightarrow$ Hermitian generator.
 
 \subsection{1.3 Important caveat}
 This describes evolution of an \emph{isolated} system---one not being measured or interacting with anything external.  During a measurement, the state update rule (Lecture~1, Section~3.1) applies instead.
@@ -100,18 +100,43 @@ If $\mathbf{v}(0) = \mathbf{e}_k$, then
 This is a phase rotation---no change in measurement probabilities.  Energy eigenstates are \textbf{stationary}: all observables have time-independent statistics.
 
 \medskip
-\noindent\textbf{Engineering analog:} Energy eigenstates are the \emph{normal modes} of the system.  The eigenvalues $E_k$ play the role of natural frequencies (poles of the system).
+\noindent\textbf{Engineering analog:} Energy eigenstates are the \emph{normal modes} of the system.  Each eigenvalue $E_k$ is an energy, and it determines the oscillation frequency of that mode: $\omega_k = E_k/\hbar$ (or simply $\omega_k = E_k$ with $\hbar=1$).  This is the quantum version of $E = \hbar\omega$---the eigenvalues of $H$ are energies, and their ratios to $\hbar$ are the natural frequencies (poles) of the system.
 
 \subsection{3.2 General solution}
 Expand the initial state: $\mathbf{v}(0) = \sum_k \alpha_k\,\mathbf{e}_k$.  Then
 \[
     \boxed{\mathbf{v}(t) = \sum_k \alpha_k\,e^{-iE_k t/\hbar}\,\mathbf{e}_k.}
 \]
-The \textbf{magnitudes} $|\alpha_k|$ do not change---all time dependence is in the \textbf{relative phases} $e^{-iE_k t/\hbar}$.  Observable dynamics come from interference between terms with different $E_k$.  (The connection $E = \hbar\omega$ relates energy to oscillation frequency.)
+
+\medskip
+\noindent\textbf{The central insight of unitary evolution.}  The magnitudes $|\alpha_k|$ do not change---all time dependence is in the relative phases $e^{-iE_k t/\hbar}$.  In the energy eigenbasis, time evolution is \emph{trivial}: it is $N$ independent phase rotations at $N$ different frequencies $\omega_k = E_k/\hbar$.  Every quantum dynamical phenomenon---Rabi oscillations, interference, beats, revivals---is a consequence of those phase rotations running at \emph{different rates} while the observable being measured has eigenvectors that are \emph{misaligned} with the energy eigenvectors.
+
+If you measure an observable that commutes with $H$, you see no dynamics: the energy eigenbasis is also the eigenbasis of your observable, and the relative phases cancel in $|\mathbf{e}_i^\dagger\mathbf{v}|^2$.  All quantum dynamics comes from measuring observables whose eigenbasis is \emph{misaligned} with the energy eigenbasis.  Misalignment plus phase rotation equals interference equals dynamics.
 
 \medskip
 \noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
-\textbf{Engineering sidebar:} Computing $e^{-iHt/\hbar}$ numerically: diagonalize $H = V\Lambda V^\dagger$, then $e^{-iHt/\hbar} = V\,e^{-i\Lambda t/\hbar}\,V^\dagger$ where $e^{-i\Lambda t/\hbar}$ is diagonal with entries $e^{-i\lambda_k t/\hbar}$.  In Python: \texttt{scipy.linalg.expm(-1j * H * t / hbar)}.}}
+\textbf{Code says:} Computing $e^{-iHt/\hbar}$ numerically: diagonalize $H = V\Lambda V^\dagger$, then $e^{-iHt/\hbar} = V\,e^{-i\Lambda t/\hbar}\,V^\dagger$ where $e^{-i\Lambda t/\hbar}$ is diagonal with entries $e^{-i\lambda_k t/\hbar}$.  In Python: \texttt{scipy.linalg.expm(-1j * H * t / hbar)}.}}
+
+\subsection{3.3 Worked example: Rabi oscillations}
+Set $H = \frac{\omega}{2}X$ (with $\hbar=1$ for simplicity).  Take initial state $\mathbf{v}(0)=\mathbf{e}_0$.  The eigenvectors of $X$ are $\mathbf{x}_\pm = \frac{1}{\sqrt{2}}(\mathbf{e}_0\pm\mathbf{e}_1)$ with eigenvalues $\pm 1$, so the energy eigenvalues are $E_\pm = \pm\omega/2$.
+
+\noindent\textbf{Step 1: expand in energy eigenbasis.}
+\[
+    \mathbf{e}_0 = \tfrac{1}{\sqrt{2}}(\mathbf{x}_++\mathbf{x}_-).
+\]
+\textbf{Step 2: apply phase rotations.}
+\[
+    \mathbf{v}(t) = \tfrac{1}{\sqrt{2}}\bigl(e^{-i\omega t/2}\,\mathbf{x}_+ + e^{+i\omega t/2}\,\mathbf{x}_-\bigr).
+\]
+\textbf{Step 3: compute $\langle Z\rangle(t) = \mathbf{v}(t)^\dagger Z\,\mathbf{v}(t)$.}  Substituting and using $\mathbf{e}_0^\dagger Z\mathbf{e}_0=1$, $\mathbf{e}_1^\dagger Z\mathbf{e}_1=-1$:
+\[
+    \langle Z\rangle(t) = |\alpha_0(t)|^2 - |\alpha_1(t)|^2 = \cos(\omega t).
+\]
+This is the simplest \textbf{Rabi oscillation}---the system oscillates between $\mathbf{e}_0$ and $\mathbf{e}_1$ at frequency $\omega$.  The dynamics arise because $Z$ and $H=\frac{\omega}{2}X$ do not share an eigenbasis ($[Z,X]\neq 0$).
+
+\medskip
+\noindent\fbox{\parbox{\dimexpr\linewidth-2\fboxsep-2\fboxrule}{%
+\textbf{Code says:} Twelve lines of Python produce the $\cos(\omega t)$ curve---the reader's first simulation of a quantum system.  See the companion notebook.}}
 
 % ============================================================
 \section{4. Inner Product Preservation}
@@ -121,10 +146,10 @@ If $\mathbf{u}^\dagger\mathbf{w} = 0$ at $t=0$ (states initially distinguishable
 \[
     \mathbf{u}(t)^\dagger\mathbf{w}(t) = \mathbf{u}(0)^\dagger\,U^\dagger(t)\,U(t)\,\mathbf{w}(0) = \mathbf{u}(0)^\dagger\mathbf{w}(0).
 \]
-The ``overlap'' between any two states is preserved.  States that start orthogonal stay orthogonal; this is the quantum version of information conservation (reversibility).
+The ``overlap'' between any two states is preserved.  Unitary evolution cannot create or destroy \textbf{distinguishability}: two states that could be perfectly told apart at $t=0$ remain perfectly distinguishable forever, and two states that were indistinguishable remain so.  This is the precise sense in which quantum evolution is \textbf{information-preserving}---the foundation of quantum information theory, the reason the no-cloning theorem holds, and the reason Hawking's information paradox is a paradox.
 
 \medskip
-\noindent\textbf{Engineering analog:} Unitary evolution $U^\dagger U = I$ is analogous to a lossless network or power-preserving two-port ($S^\dagger S = I$ in microwave engineering).
+\noindent\textbf{Engineering analog:} Unitary evolution $U^\dagger U = I$ is analogous to a lossless network or power-preserving two-port ($S^\dagger S = I$ in microwave engineering).  Both preserve a quadratic form; both are reversible.
 
 % ============================================================
 \section{5. Expectation Values and Their Dynamics}
@@ -146,16 +171,36 @@ where $[H,L]\equiv HL - LH$ is the \textbf{commutator}.  So:
 \[
     \boxed{\frac{d}{dt}\langle L \rangle = \frac{i}{\hbar}\langle [H,L] \rangle.}
 \]
-This is the expectation-value ODE---the bridge between quantum evolution and classical equations of motion.
+This is the \textbf{Ehrenfest equation}---the bridge between quantum evolution and classical equations of motion.
 
-\subsection{5.3 Energy conservation}
+\subsection{5.3 Worked example: Bloch precession}
+Set $H = \frac{\Omega}{2}Z$ (with $\hbar=1$).  Compute $\frac{d}{dt}\langle X\rangle$ using the commutator $[Z,X] = 2iY$ (Lecture~3, \S7.6):
+\[
+    \frac{d}{dt}\langle X\rangle = i\bigl\langle\tfrac{\Omega}{2}[Z,X]\bigr\rangle = i\cdot\tfrac{\Omega}{2}\cdot 2i\,\langle Y\rangle = -\Omega\,\langle Y\rangle.
+\]
+Similarly, using $[Z,Y] = -2iX$:
+\[
+    \frac{d}{dt}\langle Y\rangle = i\bigl\langle\tfrac{\Omega}{2}[Z,Y]\bigr\rangle = i\cdot\tfrac{\Omega}{2}\cdot(-2i)\langle X\rangle = +\Omega\,\langle X\rangle.
+\]
+And since $[Z,Z]=0$: $\frac{d}{dt}\langle Z\rangle = 0$.  Collecting:
+\[
+    \boxed{\frac{d}{dt}\begin{pmatrix}\langle X\rangle\\\langle Y\rangle\\\langle Z\rangle\end{pmatrix}
+    = \Omega\begin{pmatrix}0&-1&0\\1&0&0\\0&0&0\end{pmatrix}
+    \begin{pmatrix}\langle X\rangle\\\langle Y\rangle\\\langle Z\rangle\end{pmatrix}.}
+\]
+This is \textbf{Bloch precession}---the expectation-value vector rotates around the $z$-axis at angular frequency $\Omega$.  These are exactly the equations NMR engineers solve for nuclear spin precession in a static magnetic field.  The Ehrenfest equation has produced a classical equation of motion from a quantum system, using only linear algebra.
+
+\medskip
+\noindent In a future lecture on continuous systems, the same Ehrenfest equation applied to $H = p^2/2m + V(x)$ will yield $\frac{d}{dt}\langle x\rangle = \langle p\rangle/m$ and $\frac{d}{dt}\langle p\rangle = -\langle V'(x)\rangle$---literally Hamilton's equations for the expectation values.
+
+\subsection{5.4 Energy conservation}
 Set $L=H$:
 \[
     \frac{d}{dt}\langle H \rangle = \frac{i}{\hbar}\langle [H,H] \rangle = 0,
 \]
 since any matrix commutes with itself.  Therefore the \textbf{average energy is conserved} for any time-independent system matrix.
 
-\subsection{5.4 Time-translation invariance}
+\subsection{5.5 Time-translation invariance}
 If $H$ does not depend explicitly on time, the system has \textbf{time-translation invariance}: the same experiment at a later time gives the same statistical results.  A time-dependent $H$ breaks this invariance and energy conservation.
 
 % ============================================================

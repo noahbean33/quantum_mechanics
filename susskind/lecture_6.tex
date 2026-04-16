@@ -118,7 +118,18 @@ $\Psi = \begin{pmatrix}1/\sqrt{2} & 1/\sqrt{2} \\ 0 & 0\end{pmatrix}$, which has
 \[
     \mathbf{v}_{\text{singlet}} = \frac{1}{\sqrt{2}}\bigl(\mathbf{e}_0\otimes\mathbf{f}_1 - \mathbf{e}_1\otimes\mathbf{f}_0\bigr).
 \]
-Coefficient matrix: $\Psi = \frac{1}{\sqrt{2}}\begin{pmatrix}0 & 1 \\ -1 & 0\end{pmatrix}$, which has rank 2.  This cannot be written as a Kronecker product.
+Coefficient matrix:
+\[
+    \Psi = \frac{1}{\sqrt{2}}\begin{pmatrix}0 & 1 \\ -1 & 0\end{pmatrix}.
+\]
+\textbf{Rank check via determinant:}
+\[
+    \det(\Psi) = \frac{1}{2}\bigl(0\cdot 0 - 1\cdot(-1)\bigr) = \frac{1}{2} \neq 0
+    \quad\Longrightarrow\quad \operatorname{rank}(\Psi)=2.
+\]
+This cannot be written as a Kronecker product---the state is entangled.
+
+\textbf{SVD check:}  The singular values of $\Psi$ are $\sigma_1 = \sigma_2 = \frac{1}{\sqrt{2}}$.  Equal singular values means \emph{maximally entangled} by the criterion in \S3.2.  (Verify: $\Psi^\dagger\Psi = \frac{1}{2}I$, so both singular values are $1/\sqrt{2}$.)
 
 % ============================================================
 \section{4. Observables on Composite Systems}
@@ -167,10 +178,35 @@ But for joint measurements of matching observables:
 \]
 \textbf{Calculation of $\langle Z \otimes Z \rangle$}: $Z$ acts on subsystem $A$ and $Z$ acts on subsystem $B$.  On $\mathbf{e}_0\otimes\mathbf{f}_1$: eigenvalues $(+1)(-1)=-1$.  On $\mathbf{e}_1\otimes\mathbf{f}_0$: eigenvalues $(-1)(+1)=-1$.  Both terms give $-1$, so $\langle Z \otimes Z \rangle = -1$.
 
+\textbf{Calculation of $\langle X \otimes X \rangle$}: Apply $X\otimes X$ directly to the singlet.  Since $X\mathbf{e}_0 = \mathbf{e}_1$ and $X\mathbf{e}_1 = \mathbf{e}_0$:
+\begin{align*}
+    (X\otimes X)\mathbf{v}_{\text{singlet}}
+    &= \tfrac{1}{\sqrt{2}}\bigl(X\mathbf{e}_0\otimes X\mathbf{f}_1 - X\mathbf{e}_1\otimes X\mathbf{f}_0\bigr) \\
+    &= \tfrac{1}{\sqrt{2}}\bigl(\mathbf{e}_1\otimes\mathbf{f}_0 - \mathbf{e}_0\otimes\mathbf{f}_1\bigr)
+    = -\mathbf{v}_{\text{singlet}}.
+\end{align*}
+So $\mathbf{v}_{\text{singlet}}$ is an eigenvector of $X\otimes X$ with eigenvalue $-1$, hence $\langle X\otimes X\rangle = -1$.
+
+\textbf{Calculation of $\langle Y \otimes Y \rangle$}: Similarly, $Y\mathbf{e}_0 = i\mathbf{e}_1$ and $Y\mathbf{e}_1 = -i\mathbf{e}_0$:
+\begin{align*}
+    (Y\otimes Y)\mathbf{v}_{\text{singlet}}
+    &= \tfrac{1}{\sqrt{2}}\bigl(i\mathbf{e}_1\otimes(-i)\mathbf{f}_0 - (-i)\mathbf{e}_0\otimes i\mathbf{f}_1\bigr) \\
+    &= \tfrac{1}{\sqrt{2}}\bigl(\mathbf{e}_1\otimes\mathbf{f}_0 - \mathbf{e}_0\otimes\mathbf{f}_1\bigr)
+    = -\mathbf{v}_{\text{singlet}}.
+\end{align*}
+So $\langle Y\otimes Y\rangle = -1$ as well.
+
+\medskip
+\noindent\textbf{Rotational invariance of the singlet.}  The singlet is a \emph{simultaneous eigenvector} of $X\otimes X$, $Y\otimes Y$, and $Z\otimes Z$, all with eigenvalue $-1$.  This is the algebraic expression of its rotational invariance: the singlet is the unique (up to phase) state in $\mathbb{C}^2\otimes\mathbb{C}^2$ that is invariant under simultaneous rotations of both subsystems---which is why it is called a ``singlet'' (spin~0, scalar under rotations).
+
+\medskip
 Correlation: $C(Z,Z) = -1 - (0)(0) = -1 \neq 0$.  Cross-products like $\langle X \otimes Z \rangle = 0$.
 
 \medskip
 \noindent\textbf{Physical meaning:} If you measure the \emph{same} observable on both subsystems, the results are always opposite.  If you measure \emph{different} observables, there is no correlation.
+
+\subsection{5.2 Forward reference: the CHSH inequality and Bell's theorem}
+The singlet correlations computed above are \emph{all the ingredients} for the most important experimental result in the foundations of quantum mechanics: the violation of Bell's inequality.  In a future lecture, we will choose four observables ($Z$, $X$ for Alice, and two rotated observables for Bob), compute the CHSH quantity $\langle A_0 B_0\rangle + \langle A_0 B_1\rangle + \langle A_1 B_0\rangle - \langle A_1 B_1\rangle$ in the singlet, and obtain $2\sqrt{2}$---the Tsirelson bound.  Any local hidden variable theory bounds this quantity by~$2$.  The singlet violates it.  That single calculation, using only the machinery of these six lectures and a $4\times 4$ matrix, proves that the universe is not classical.
 
 % ============================================================
 \section{6. The State Update Rule Revisited}
@@ -184,7 +220,23 @@ Between measurements, the state evolves unitarily via the Schr\"odinger ODE.  At
     \item Immediately after, the state resets to $\mathbf{e}_k$ (Bayesian conditioning).
 \end{enumerate}
 
-If we treat the measuring apparatus as a quantum system too, then the combined system evolves unitarily---the state update emerges naturally from entanglement between the system and apparatus.  This motivates the density-matrix formalism (Lecture~7).
+If we treat the measuring apparatus as a quantum system, then the combined system evolves unitarily---the state update emerges naturally from entanglement between the system and apparatus.
+
+\subsection{6.1 The von Neumann measurement model}
+Take a system in state $\alpha\mathbf{e}_0+\beta\mathbf{e}_1$ and an apparatus initially in state $\mathbf{f}_0$ (the ``ready'' state).  Postulate a unitary interaction $U$ that copies the system's eigenstate into the apparatus pointer:
+\[
+    U(\mathbf{e}_0\otimes\mathbf{f}_0) = \mathbf{e}_0\otimes\mathbf{f}_0, \qquad
+    U(\mathbf{e}_1\otimes\mathbf{f}_0) = \mathbf{e}_1\otimes\mathbf{f}_1.
+\]
+By linearity:
+\[
+    U\bigl((\alpha\mathbf{e}_0+\beta\mathbf{e}_1)\otimes\mathbf{f}_0\bigr)
+    = \alpha(\mathbf{e}_0\otimes\mathbf{f}_0) + \beta(\mathbf{e}_1\otimes\mathbf{f}_1).
+\]
+This is an entangled state (rank 2 whenever both $\alpha,\beta\neq 0$).  The system and apparatus are now correlated: if you ``look at'' the apparatus and find it in state $\mathbf{f}_0$, the system has ``collapsed'' to $\mathbf{e}_0$; if you find $\mathbf{f}_1$, the system is in $\mathbf{e}_1$.  The ``collapse'' is just the conditional state given an observation of the entangled partner---Bayesian conditioning on a correlated variable.
+
+\medskip
+\noindent A real apparatus has $\sim 10^{23}$ degrees of freedom.  Those degrees of freedom decohere the superposition on timescales far shorter than anything we can observe, which is the modern \textbf{decoherence} picture of measurement.  This motivates the density-matrix formalism (Lecture~7).
 
 % ============================================================
 \section{7. Summary}

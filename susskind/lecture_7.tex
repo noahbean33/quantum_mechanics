@@ -88,7 +88,19 @@ Bob's variables have been \textbf{summed over} (``traced out'').  This is \textb
 \end{definition}
 
 \medskip
-\noindent\textbf{Engineering analog:} The partial trace is exactly marginalization over latent variables in probability and statistics.
+\noindent\textbf{Engineering analog:} The partial trace is exactly marginalization over latent variables in probability and statistics.  The correspondence is precise:
+
+\medskip
+\begin{center}
+\begin{tabular}{l|l}
+\textbf{Classical probability} & \textbf{Quantum} \\ \hline
+Joint distribution $p(a,b)$ & Composite state $v(a,b)$ \\
+Marginalization $p(a)=\sum_b p(a,b)$ & Partial trace $\rho^{(A)}_{a,a'}=\sum_b v^*(a',b)\,v(a,b)$ \\
+Marginal distribution $p(a)$ & Reduced density matrix $\rho^{(A)}$ \\
+Independence: $p(a,b)=p_A(a)\,p_B(b)$ & Product state: $v(a,b)=v_A(a)\,v_B(b)$ \\
+Correlated joint & Entangled state
+\end{tabular}
+\end{center}
 
 \subsection{4.1 Properties}
 \begin{itemize}[nosep]
@@ -111,35 +123,67 @@ This is a \textbf{rank-1 projector} $\rho^{(A)} = \mathbf{v}_A\mathbf{v}_A^\dagg
 \]
 If $\boldsymbol{\chi}=\mathbf{v}_A$: eigenvalue $+1$.  If $\boldsymbol{\chi}\perp\mathbf{v}_A$: eigenvalue $0$.  So $(\rho^{(A)})^2 = \rho^{(A)}$.
 
+\medskip
+\noindent\textbf{Concrete example.}  Take $\mathbf{v}_A = \mathbf{e}_0$ and $\mathbf{v}_B = \mathbf{x}_+ = \frac{1}{\sqrt{2}}(\mathbf{f}_0+\mathbf{f}_1)$.  The composite state is $\mathbf{e}_0\otimes\mathbf{x}_+$, with coefficient matrix $\Psi = \frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\0&0\end{pmatrix}$.  Then:
+\[
+    \rho^{(A)} = \mathbf{e}_0\mathbf{e}_0^\dagger = \begin{pmatrix}1&0\\0&0\end{pmatrix}.
+\]
+Alice's reduced state is $\mathbf{e}_0$ regardless of which Bob state was chosen---confirming that in a product state, Alice's description does not depend on Bob.
+
 \subsection{4.3 Entangled state}
 For the singlet $\mathbf{v}_{\text{singlet}}=\frac{1}{\sqrt{2}}(\mathbf{e}_0\otimes\mathbf{f}_1-\mathbf{e}_1\otimes\mathbf{f}_0)$:
 \[
     \rho^{(A)} = \frac{1}{2}\begin{pmatrix}1&0\\0&1\end{pmatrix} = \frac{1}{2}I.
 \]
-This is a \textbf{maximally mixed} state: both eigenvalues are $\frac{1}{2}$.  Alice's subsystem appears completely random---she has \emph{zero} information about her subsystem alone, even though the composite state is perfectly known.
+This is a \textbf{maximally mixed} state: both eigenvalues are $\frac{1}{2}$.
 
-\subsection{4.4 Entanglement criterion via the density matrix}
-The eigenvalues of $\rho^{(A)}$ quantify entanglement.  For a pure state $\mathbf{v}$ of the composite system, $\operatorname{Tr}(\rho^{(A)})^2 = \sum_i \sigma_i^4 / (\sum_i \sigma_i^2)^2$ where $\sigma_i$ are the singular values of the coefficient matrix (Lecture~6).
+\medskip
+\noindent\fbox{\parbox{\dimexpr\textwidth-2\fboxsep-2\fboxrule}{%
+\textit{Alice has zero information about her subsystem alone, even though the composite state is perfectly known.  This is the defining feature of entanglement: the whole can be in a definite state while every part is maximally uncertain.}}}
+
+\subsection{4.4 Purity and entanglement quantification}
+The eigenvalues of $\rho^{(A)}$ are $\sigma_i^2$ where $\sigma_i$ are the singular values of the coefficient matrix (Lecture~6).  Since the state is normalized, $\sum_i \sigma_i^2 = 1$.  The standard scalar measure of how mixed the state is:
+\[
+    \boxed{\textbf{Purity:}\quad \gamma = \operatorname{Tr}(\rho^{(A)})^2 = \sum_i \sigma_i^4.}
+\]
 \begin{itemize}[nosep]
-    \item \textbf{Product state (no entanglement):} one eigenvalue $=1$, rest $=0$.  $\operatorname{Tr}(\rho^{(A)})^2 = 1$.
-    \item \textbf{Maximal entanglement:} all eigenvalues equal ($=1/n$ for dimension $n$).  $\operatorname{Tr}(\rho^{(A)})^2 = 1/n$.
-    \item \textbf{Partial entanglement:} intermediate case.  $1/n < \operatorname{Tr}(\rho^{(A)})^2 < 1$.
+    \item \textbf{Product state (no entanglement):} one eigenvalue $=1$, rest $=0$.  Purity $=1$.
+    \item \textbf{Maximal entanglement:} all eigenvalues equal ($=1/n$ for dimension $n$).  Purity $=1/n$.
+    \item \textbf{Partial entanglement:} intermediate case.  $1/n < \gamma < 1$.
 \end{itemize}
+
+\medskip
+\noindent\textbf{Von Neumann entropy.}  The standard entanglement measure for pure states of bipartite systems is the \textbf{von Neumann entropy}:
+\[
+    S = -\operatorname{Tr}(\rho^{(A)}\log\rho^{(A)}) = -\sum_i \sigma_i^2\log\sigma_i^2.
+\]
+This is exactly the Shannon entropy with the eigenvalues of $\rho^{(A)}$ playing the role of probabilities.  For the singlet: $S = -2\cdot\frac{1}{2}\log\frac{1}{2} = \log 2 = 1$ bit---the maximum for two qubits.  For a product state: $S=0$.
+
+\subsection{4.5 General density matrices and mixed states}
+So far we derived $\rho^{(A)}$ as a partial trace of a pure entangled state.  More generally, a \textbf{density matrix} is any positive semidefinite Hermitian matrix with trace~1.  It represents either:
+\begin{enumerate}[nosep]
+    \item[(a)] a subsystem of an entangled pure state (as above), or
+    \item[(b)] a classical probabilistic mixture: $\rho = \sum_i p_i\,\mathbf{v}_i\mathbf{v}_i^\dagger$, where you don't know which pure state $\mathbf{v}_i$ the system is in.
+\end{enumerate}
+Remarkably, these two interpretations give the \emph{same} mathematical object.  This is the \textbf{purification theorem}: every mixed state on $A$ arises as the partial trace of some pure state on $A\otimes B$ for a suitably chosen $B$.  Classical uncertainty (don't know which pure state) and quantum entanglement (no pure state of the subsystem exists) produce \emph{identical} operational predictions for Alice's local measurements.
 
 % ============================================================
 \section{5. Measurement as Entanglement}
 % ============================================================
 
-A measurement is the process of entangling a system with an apparatus.  Model: the apparatus has two states $\mathbf{f}_0$ (ready) and $\mathbf{f}_1$ (detected).  The interaction:
+A measurement is the process of entangling a system with an apparatus.  Model: the apparatus has two states $\mathbf{f}_0$ (ready) and $\mathbf{f}_1$ (detected).  The measurement interaction is a \textbf{CNOT gate}---the system controls whether the apparatus flips:
 \[
-    \mathbf{e}_0\otimes\mathbf{f}_0 \to \mathbf{e}_0\otimes\mathbf{f}_1, \qquad
-    \mathbf{e}_1\otimes\mathbf{f}_0 \to \mathbf{e}_1\otimes\mathbf{f}_0.
+    U(\mathbf{e}_0\otimes\mathbf{f}_0) = \mathbf{e}_0\otimes\mathbf{f}_0, \qquad
+    U(\mathbf{e}_1\otimes\mathbf{f}_0) = \mathbf{e}_1\otimes\mathbf{f}_1.
 \]
-For a general state $\alpha\mathbf{e}_0+\beta\mathbf{e}_1$, the composite evolves to:
+The apparatus stays in $\mathbf{f}_0$ if it sees $\mathbf{e}_0$ and flips to $\mathbf{f}_1$ if it sees $\mathbf{e}_1$.  For a general state $\alpha\mathbf{e}_0+\beta\mathbf{e}_1$, by linearity:
 \[
-    \alpha\,\mathbf{e}_0\otimes\mathbf{f}_1 + \beta\,\mathbf{e}_1\otimes\mathbf{f}_0.
+    U\bigl((\alpha\mathbf{e}_0+\beta\mathbf{e}_1)\otimes\mathbf{f}_0\bigr) = \alpha(\mathbf{e}_0\otimes\mathbf{f}_0) + \beta(\mathbf{e}_1\otimes\mathbf{f}_1).
 \]
 This is an \textbf{entangled state} between system and apparatus.  Including the apparatus in the quantum description, there is no ``collapse''---only the development of entanglement via unitary evolution.  The state update rule is what you see when you trace out the apparatus.
+
+\medskip
+\noindent\textbf{Code says:} The von Neumann measurement model is a CNOT followed by partial trace.  Fifteen lines of numpy simulate the entire process (see notebook).
 
 % ============================================================
 \section{6. Locality and No-Signaling}
@@ -147,11 +191,31 @@ This is an \textbf{entangled state} between system and apparatus.  Including the
 
 Suppose Alice and Bob share an entangled state and separate to distant locations.
 
-\noindent\textbf{Key result:} Any operation Bob performs on his subsystem alone has \emph{no effect} on Alice's density matrix $\rho^{(A)}$.  Therefore:
+\noindent\textbf{Key result:} Any operation Bob performs on his subsystem alone has \emph{no effect} on Alice's density matrix $\rho^{(A)}$.
+
+\medskip
+\noindent\textbf{Proof (unitary operations).}  Let Bob apply a unitary $U_B$, which acts on the composite system as $I\otimes U_B$.  The new composite state is $(I\otimes U_B)\mathbf{v}$.  Alice's reduced density matrix becomes:
+\begin{align*}
+    \operatorname{Tr}_B\bigl[(I\otimes U_B)|\mathbf{v}\rangle\langle\mathbf{v}|(I\otimes U_B^\dagger)\bigr]
+    &= \operatorname{Tr}_B\bigl[|\mathbf{v}\rangle\langle\mathbf{v}|\,(I\otimes U_B^\dagger U_B)\bigr] \\
+    &= \operatorname{Tr}_B\bigl[|\mathbf{v}\rangle\langle\mathbf{v}|\bigr] = \rho^{(A)},
+\end{align*}
+where the first step uses cyclicity of the partial trace over Bob's space (since $U_B$ acts only on Bob), and the second uses $U_B^\dagger U_B = I$.\;$\square$
+
+\medskip
+\noindent\textbf{Proof (measurements).}  If Bob measures an observable with eigenprojectors $\{P_k\}$ satisfying $\sum_k P_k = I$, the post-measurement ensemble (averaged over Bob's outcomes) gives Alice's density matrix:
+\[
+    \sum_k \operatorname{Tr}_B\bigl[(I\otimes P_k)|\mathbf{v}\rangle\langle\mathbf{v}|(I\otimes P_k)\bigr]
+    = \operatorname{Tr}_B\bigl[|\mathbf{v}\rangle\langle\mathbf{v}|\,(I\otimes \underbrace{\textstyle\sum_k P_k}_{=I})\bigr]
+    = \rho^{(A)}.
+\]
+So neither Bob's unitaries nor his measurements can change Alice's local statistics.  This is the \textbf{no-signaling theorem}---the fundamental reason quantum mechanics is consistent with special relativity.
+
+\medskip
+\noindent Therefore:
 \begin{itemize}[nosep]
     \item Bob cannot send a message to Alice by manipulating his subsystem.
     \item All of Alice's measurement statistics remain unchanged.
-    \item This is the \textbf{no-signaling} property (proof in Lecture~8).
 \end{itemize}
 
 % ============================================================

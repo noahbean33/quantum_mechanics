@@ -82,6 +82,17 @@ where $\tilde{v}(p)$ is the \textbf{Fourier transform}:
 \]
 $\tilde{v}(p)$ gives the amplitude of the frequency-$p$ component in the signal $v(x)$.
 
+\subsection{2.3 The Fourier transform as a matrix}
+In finite dimensions, the change-of-basis matrix has entries $U_{ij} = \mathbf{e}_i^\dagger\mathbf{e}_j'$.  The continuous analog is
+\[
+    U(p,x) = \langle p | x \rangle = \frac{e^{-ipx}}{\sqrt{2\pi}},
+\]
+which is \emph{literally} the Fourier kernel.  The transform $\tilde{v}(p) = \int U(p,x)\,v(x)\,dx$ is matrix multiplication of the change-of-basis matrix against the position-space components.  Unitarity of this ``matrix'' is the identity
+\[
+    \int U(p,x)^*\,U(p',x)\,dx = \int \frac{e^{ipx}}{\sqrt{2\pi}}\cdot\frac{e^{-ip'x}}{\sqrt{2\pi}}\,dx = \frac{1}{2\pi}\int e^{i(p-p')x}\,dx = \delta(p-p'),
+\]
+which is the continuous analog of $U^\dagger U = I$.  The Fourier transform is unitary because the position and momentum bases are both orthonormal.
+
 \medskip
 \noindent\textbf{Engineering connection:} This is the standard Fourier transform from signal processing.  The position representation $v(x)$ is the ``time-domain'' signal; the momentum representation $\tilde{v}(p)$ is the ``frequency-domain'' spectrum.  Parseval's theorem $\int|v(x)|^2 dx = \int|\tilde{v}(p)|^2 dp$ ensures both representations carry the same total probability (energy).
 
@@ -113,6 +124,7 @@ Interchange the order of integration:
 \[
     v(x') = \int v(x)\underbrace{\left(\frac{1}{2\pi}\int e^{ip(x'-x)}dp\right)}_{\text{must be }\delta(x'-x)}dx.
 \]
+\noindent\textbf{Rigor note:} The interchange of integration order is formally correct for Schwartz functions and extends to $L^2$ by density.  The rigorous treatment requires distribution theory (the Gelfand triple / rigged Hilbert space), which we skip.
 This yields the fundamental identity:
 \[
     \boxed{\delta(x-x') = \frac{1}{2\pi}\int_{-\infty}^{\infty} e^{ip(x-x')}\,dp.}
@@ -133,6 +145,23 @@ Any state can be expanded:
 \[
     v(x) = \int v(x')\,\delta(x-x')\,dx'.
 \]
+
+\medskip
+\noindent\textbf{The finite-to-continuous dictionary.}  Every finite-dimensional construction has a continuous analog with $\sum\to\int$ and $\delta_{ij}\to\delta(x-x')$:
+
+\medskip
+\begin{center}
+\begin{tabular}{l|l}
+\textbf{Finite ($\mathbb{C}^N$)} & \textbf{Continuous ($L^2(\mathbb{R})$)} \\ \hline
+Basis vector $\mathbf{e}_i$ & ``Basis vector'' $\delta(x-x_0)$ \\
+Orthogonality $\mathbf{e}_i^\dagger\mathbf{e}_j = \delta_{ij}$ & Orthogonality $\int\delta(x-a)\delta(x-b)\,dx = \delta(a-b)$ \\
+Expansion $\mathbf{v}=\sum_i v_i\mathbf{e}_i$ & Expansion $v(x)=\int v(x')\delta(x-x')\,dx'$ \\
+Coefficient $v_i = \mathbf{e}_i^\dagger\mathbf{v}$ & Coefficient $v(x_0)=\int \delta(x-x_0)v(x)\,dx$ \\
+Resolution of identity $\sum_i\mathbf{e}_i\mathbf{e}_i^\dagger = I$ & Resolution of identity $\int|x\rangle\langle x|\,dx = I$ \\
+\end{tabular}
+\end{center}
+
+\noindent This table is the entire content of ``the spectral theorem extends to the continuous case.''  The machinery is the same; only the index set changes from discrete to continuous.
 
 \subsection{4.2 Momentum basis}
 The momentum observable $\hat{p}$ has eigenfunctions $e^{ipx}/\sqrt{2\pi}$ (plane waves, completely delocalized in position).  The Fourier transform pair:
@@ -171,6 +200,9 @@ This is the \textbf{canonical commutation relation}.  Since $[\hat{x},\hat{p}]\n
 
 \noindent\textbf{Restoring $\hbar$:} $[\hat{x},\hat{p}]=i\hbar$.
 
+\medskip
+\noindent\textbf{What $\hbar$ means.}  The commutator $[\hat{x},\hat{p}]=i\hbar$ has units of action (joule-seconds).  The constant $\hbar \approx 1.05\times 10^{-34}$~J$\cdot$s is not merely a unit-conversion factor---it is the \emph{fundamental scale of non-commutativity}.  In the limit $\hbar\to 0$, position and momentum commute and you recover classical mechanics.  The fact that $\hbar > 0$ in our universe is what makes physics quantum.  The ``size'' of the commutator tells you how non-classical the theory is: for everyday objects, $\hbar$ is negligible compared to the relevant action scales; for electrons in atoms, $\hbar$ dominates.
+
 % ============================================================
 \section{6. Simple System Matrices for Particles}
 % ============================================================
@@ -185,6 +217,9 @@ General solution: $v(x,t)=f(x-ct)$ for any shape $f$.  The entire probability di
 \medskip
 \noindent\textbf{Engineering analog:} This is a pure delay line---the signal propagates without dispersion.
 
+\medskip
+\noindent\textbf{Why not $H=cP$ for massive particles?}  The Hamiltonian $H=cP$ gives $E=cp$, which is negative for $p<0$---there is no lower bound on the energy.  Physical particles with mass require $E\geq 0$, which is why the non-relativistic kinetic energy $H=\hat{p}^2/(2m)$ (always non-negative) is the correct starting point.  The relativistic generalization is the Dirac equation, which uses a matrix-valued Hamiltonian $H = c\boldsymbol{\alpha}\cdot\hat{\mathbf{p}}+\beta mc^2$ to keep energies positive while remaining first-order in time.
+
 \subsection{6.2 Free particle: $H=\hat{p}^2/2m$}
 The standard Schr\"odinger equation for a free particle of mass $m$:
 \[
@@ -194,6 +229,9 @@ Unlike $H=cP$, different frequency components now move at different speeds---the
 
 \medskip
 \noindent\textbf{Engineering analog:} This is a dispersive channel.  The group velocity $v_g = d\omega/dk = \hbar k/m$ depends on wavenumber, so narrow pulses spread.
+
+\medskip
+\noindent\textbf{The Gaussian wave packet} (Lecture~10).  The simplest exactly solvable case: a Gaussian initial condition $v(x,0) \propto e^{-x^2/(4\sigma^2)}$ remains Gaussian under free evolution, but its width grows as $\sigma(t) = \sqrt{\sigma^2 + (\hbar t/(2m\sigma))^2}$.  The position--momentum uncertainty product is exactly $\hbar/2$ at $t=0$ (the minimum allowed by the Heisenberg bound) and increases from there.  This calculation is the bridge between the commutator in \S5.2 and the operational meaning of the uncertainty principle---we carry it out in full in Lecture~10.
 
 % ============================================================
 \section{7. Summary}

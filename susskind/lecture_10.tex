@@ -49,7 +49,7 @@ Therefore no state can be a simultaneous eigenstate of both.
 \end{itemize}
 
 \medskip
-\noindent\textbf{Engineering connection:} This is the \textbf{Gabor limit} (bandwidth--duration product).  In signal processing, a signal cannot be simultaneously narrow in time and narrow in frequency: $\Delta t \cdot \Delta f \geq 1/(4\pi)$.  The quantum uncertainty principle $\Delta x\,\Delta p \geq \hbar/2$ is the \emph{same} mathematical inequality applied to position/momentum instead of time/frequency.
+\noindent\textbf{Engineering connection:} This is the \textbf{Gabor limit} (bandwidth--duration product).  In signal processing, a signal cannot be simultaneously narrow in time and narrow in angular frequency: $\Delta t \cdot \Delta\omega \geq 1/2$.  The quantum uncertainty principle $\Delta x\,\Delta p \geq \hbar/2$ is the \emph{same} mathematical inequality applied to position/momentum instead of time/angular-frequency.  (The connection is exact: $p = \hbar k$ where $k$ is the spatial angular frequency, so the $\hbar$ factors match under the symmetric Fourier convention used in Lecture~9.)
 
 \subsection{1.3 Defining uncertainty}
 The \textbf{uncertainty} (standard deviation) in position is
@@ -89,6 +89,13 @@ This is a quadratic in $\alpha$ that is always non-negative, so its discriminant
     \Delta x\;\Delta p \geq \frac{\hbar}{2}.\qquad\qed
 \]
 
+\medskip
+\noindent\textbf{What saturates the bound?}  Equality holds ($\Delta x\,\Delta p = \hbar/2$ exactly) when $\|\mathbf{w}(\alpha)\|^2 = 0$ for some $\alpha$, i.e.\ $(\hat{x}+i\alpha\hat{p})\mathbf{v}=0$.  In position space this is the first-order ODE $xv(x) + \alpha\hbar\,v'(x) = 0$, which has the unique (normalizable) solution
+\[
+    v(x) \propto e^{-x^2/(2\alpha\hbar)}.
+\]
+The \textbf{Gaussian wave packet is the unique minimum-uncertainty state}.  Every other state has $\Delta x\,\Delta p$ strictly greater than $\hbar/2$.  This is why Gaussians appear everywhere: coherent states in quantum optics are Gaussian, Gabor wavelets are Gaussian, and the harmonic oscillator ground state is Gaussian---all because Gaussians saturate the Fourier uncertainty bound.
+
 % ============================================================
 \section{2. The Schr\"{o}dinger Equation for a Particle}
 % ============================================================
@@ -123,19 +130,40 @@ The allowed energies $E$ and corresponding eigenfunctions $\phi(x)$ depend on th
 Using the Schr\"odinger equation, one can derive how expectation values evolve:
 
 \subsection{3.1 Velocity equation}
+Take $L = \hat{x}$ in the general Ehrenfest formula $\frac{d}{dt}\langle L\rangle = \frac{i}{\hbar}\langle[H,L]\rangle$ (Lecture~4) with $H = \hat{p}^2/(2m)+V(\hat{x})$.  Only the kinetic term contributes:
+\[
+    [H,\hat{x}] = \frac{1}{2m}[\hat{p}^2,\hat{x}]
+    = \frac{1}{2m}\bigl(\hat{p}[\hat{p},\hat{x}]+[\hat{p},\hat{x}]\hat{p}\bigr)
+    = \frac{1}{2m}\bigl(-i\hbar\hat{p}+(-i\hbar)\hat{p}\bigr)
+    = -\frac{i\hbar}{m}\hat{p}.
+\]
+So $\frac{d}{dt}\langle\hat{x}\rangle = \frac{i}{\hbar}\cdot(-\frac{i\hbar}{m})\langle\hat{p}\rangle$:
 \[
     \boxed{\frac{d}{dt}\langle \hat{x} \rangle = \frac{\langle \hat{p} \rangle}{m}.}
 \]
 This is exact.  The velocity of the center of the wave packet equals the average momentum divided by mass.
 
 \subsection{3.2 Force equation}
+Now take $L = \hat{p}$.  The kinetic term commutes with $\hat{p}$; only the potential contributes.  Using the identity $[f(\hat{x}),\hat{p}] = i\hbar\,f'(\hat{x})$ (which follows from $[\hat{x},\hat{p}]=i\hbar$ by the product rule---$\hat{p}$ acts as $i\hbar$ times differentiation with respect to $\hat{x}$):
+\[
+    [H,\hat{p}] = [V(\hat{x}),\hat{p}] = i\hbar\,V'(\hat{x}).
+\]
+So $\frac{d}{dt}\langle\hat{p}\rangle = \frac{i}{\hbar}\cdot i\hbar\langle V'(\hat{x})\rangle = -\langle V'(\hat{x})\rangle$:
 \[
     \boxed{\frac{d}{dt}\langle \hat{p} \rangle = -\left\langle \frac{dV}{dx} \right\rangle.}
 \]
-This is Newton's second law in expectation-value form.
+This is Newton's second law in expectation-value form.  Both derivations use only the canonical commutator from Lecture~9 and the general Ehrenfest formula from Lecture~4.
 
 \subsection{3.3 When does classical mechanics emerge?}
-The expectation value $\langle f(\hat{x}) \rangle$ is \emph{not} the same as $f(\langle \hat{x} \rangle)$.  They agree when the wave packet is well-localized compared to the scale on which $V(x)$ varies.  This requires:
+The expectation value $\langle f(\hat{x}) \rangle$ is \emph{not} the same as $f(\langle \hat{x} \rangle)$.  Taylor-expanding around the mean:
+\[
+    \langle V'(\hat{x})\rangle = V'(\langle\hat{x}\rangle) + \tfrac{1}{2}V'''(\langle\hat{x}\rangle)(\Delta x)^2 + \cdots
+\]
+The deviation from classical behavior is controlled by $(\Delta x)^2 \cdot V'''(\langle x\rangle)$.  Classical mechanics is recovered when
+\[
+    (\Delta x)^2 \cdot |V'''(\langle x\rangle)| \;\ll\; |V'(\langle x\rangle)|,
+\]
+i.e.\ the wave packet is narrow compared to the scale on which the potential's curvature changes.  This requires:
 \begin{itemize}[nosep]
     \item \textbf{Heavy particles}: large $m$ implies small $\Delta x$.
     \item \textbf{Smooth potentials}: features in $V(x)$ much broader than $\Delta x$.
@@ -143,6 +171,11 @@ The expectation value $\langle f(\hat{x}) \rangle$ is \emph{not} the same as $f(
 
 \medskip
 \noindent\textbf{Engineering analog:} This is the ray-optics limit---when the wavelength is much smaller than the feature size, waves propagate like rays (particles).
+
+\subsection{3.4 What Ehrenfest does and does not give you}
+Ehrenfest's theorem gives Newton's laws for \emph{expectation values}---the average position evolves like a classical particle subject to the average force.  It does \emph{not} give a classical trajectory in the sense of a single deterministic position $x(t)$, because the wave packet has nonzero width and that width can grow.
+
+For at most quadratic potentials ($V'' = \text{const}$), the Taylor correction vanishes and the expectation values obey \emph{exact} classical equations.  For non-quadratic potentials, $\langle V'(\hat{x})\rangle \neq V'(\langle\hat{x}\rangle)$ and the classical limit is a \emph{limit} rather than an equality.  The full story involves Wigner functions and semiclassical (WKB) methods, which go beyond these notes.
 
 % ============================================================
 \section{4. Engineering Bridge Table}
@@ -165,7 +198,7 @@ Schr\"odinger ODE $i\hbar\dot{\mathbf{v}} = H\mathbf{v}$ & LTI system $\dot{\mat
 Unitary evolution $U^\dagger U = I$ & Lossless network / power-preserving scattering matrix $S^\dagger S = I$ \\
 Energy eigenstates & Normal modes / poles of the system \\
 Fourier transform (position $\leftrightarrow$ momentum) & Time-domain $\leftrightarrow$ frequency-domain \\
-$\Delta x\,\Delta p \geq \hbar/2$ & Gabor limit $\Delta t\,\Delta f \geq 1/(4\pi)$ \\
+$\Delta x\,\Delta p \geq \hbar/2$ & Gabor limit $\Delta t\,\Delta\omega \geq 1/2$ \\
 Kronecker product $\otimes$ & \texttt{numpy.kron} / composite state space \\
 Schmidt decomposition & SVD of the coefficient matrix \\
 Partial trace (density matrix) & Marginalization over latent variables \\
