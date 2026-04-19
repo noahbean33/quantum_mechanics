@@ -1,0 +1,297 @@
+00:00:00
+welcome back to understanding Quantum information and computation my name is John watus and I'm the technical director for education at IBM Quantum this is lesson number 14 of the series and it's the second lesson of the fourth unit which is on Quantum error correction in the previous lesson we took a first look at Quantum error correction including the nine Cubit Shore code which establishes that Quantum error correction is possible in theory we also discussed the discretization of Errors which allows us
+
+00:00:30
+to correct for arbitrary Quantum errors on cubits by effectively projecting them onto bit flips and phase flips in this lesson we'll discuss the stabilizer formalism which is a mathematical tool through which we can specify and analyze a broad class of quantum error correcting codes known as stabilizer codes this includes the 9 Cubit Shore code along with many other examples including codes that are likely to be much better suited to real world Quantum Computing devices than the shore Cod code not every Quantum error correcting
+
+00:01:03
+code is a stabilizer code but many are including every example that we'll see in this series there are certainly interesting and potentially useful Quantum error correcting codes that aren't stabilizer codes but they tend to be rather more complicated and in any case there's no question that the stabilizer formalism is a Cornerstone in the foundation of quantum error correction and we'll be relying heavily upon it for the remainder of the unit here's a brief overview of the lesson
+
+00:01:31
+we'll start out with a short discussion of poly matrices and tensor products of poly matrices which can represent both operations on cubits as well as measurements of cubits as I'll explain and in this context we often refer to them as observables we'll then go back and have a second look at the repetition code and we'll see how we can describe it through poly operations and observables and that will both inform and lead into a general discussion of stabilizer codes including several
+
+00:01:59
+examples basic properties of stabilizer codes and how we can go about performing the fundamental tasks of encoding detecting errors and correcting those errors we'll begin the lesson with a brief discussion of poly operations mainly to set the stage for the stabilizer formalism but also to observe a few key facts and establish some basic terminology first here are the poly matrices including the 2x2 identity Matrix as well as the three non-identity poly matrices which will denote by capital X X Y and Z throughout the
+
+00:02:32
+remainder of the series all four of these matrices are both unitary and herian and we can identify them with operations on a cubit including operations we might choose to perform as well as errors as we discussed in the previous lesson the non-identity poly matrices X Y and Z anticommute with one another meaning that XY is equal to -1 * YX XZ is equal to negative ZX and YZ is equal to negative z y and you can easily check these relations by doing the multiplications these anti-commutation relations are very simple but they're
+
+00:03:07
+critically important in the stabilizer formalism and elsewhere and specifically as we'll see these minus signs that pop out when we exchange The Ordering of two different non-identity poly matrices in a product correspond precisely to the detection of errors in the stabilizer formalism we also have the multiplication rules listed here each polymatrix is its own inverse which is consistent with the fact that they're both unitary and herian and if you multiply any two different non-identity
+
+00:03:35
+poly matrices together you'll always get plus or minus I times the remaining non-identity polymatrix in particular up to a global phase Y is equivalent to X time Z which explains our focus on x and z errors in Quantum error correction X represents a bit flip Z represents a phase flip and so up to a global phase y represents both of these errors occurring on the same Cubit these four matrices all represent operations or errors or the absence of an error on a single Cubit but it's often convenient to tensor them together
+
+00:04:11
+to perform operations or errors on multiple cubits as a point of terminology whenever we refer to an N Cubit poly operation we mean a tensor product of any n poly matrices such as the examples shown here it's also common to use the term poly operation when there's a global phase but to keep things as simple as possible I'm going to use the term poly operation to mean simply a tensor product of poly matrices the weight of an incubate poly operation is simply the number of non-identity poly matrices in the tensor
+
+00:04:44
+product for example the n-fold tensor product of the 2 x two identity Matrix with itself is a weight zero poly operation a tensor product of two polyx matrices and a whole bunch of identity matrices has weight two and so on intuitively speaking the weight of an N Cubit poly operation is the number of cubits on which it acts non-trivially and it's typical that Quantum error correcting codes are designed so that they can detect and correct errors represented by poly operations up to a certain weight we can
+
+00:05:16
+think about poly operations in various ways including as operations performed intentionally by Quantum Gates as well as errors and we'll also see shortly that poly operations can describe measurements sometimes it's also useful to think about poly operations as generators of certain sets in an algebraic sense that you may recognize if you're familiar with group theory if you're not familiar with group Theory that's okay it's really not essential for this lesson but if you're interested
+
+00:05:43
+in studying Quantum error correction in Greater depth you may find that some basic group theory is very helpful for doing that anyway let's suppose that P1 through PR are n Cubit poly operations so P1 is an ncit poly operation P2 is an ncit poly operation and so on when we refer to the set generated by P1 through p r what we mean is the set of all matrices that we can obtain by multiplying these matrices together in any combination and in any order we choose taking each one as many times as
+
+00:06:17
+we like we'll see a few examples in just a moment but first let me mention the notation that we use to denote this set the set generated by P1 through PR and it's P1 through PR separated by commas inside of angled brackets it does kind of look like we could easily confuse this notation with direct notation but that doesn't generally happen and this is the traditional notation in group Theory here's an example of the set generated by X Y and Z so n is equal to one in this example because there are no
+
+00:06:48
+tensor products and we're taking all three non-identity poly matrices as generators it turns out that there are 16 matrices that can be generated by forming products that include these three matrices and you can reason this through the multiplication rules that we saw earlier specifically we can of course get X Y and Z as well as the identity and in fact we can also get any of these four matrices time I 1 or negative I and that's it this set is commonly known as the poly group we could also consider the set
+
+00:07:24
+generated by just x and z and we end up getting half of the poly group in this case and one final example at least for now we can consider the set generated by X tensor x and z tensor Z so n is equal to two in this case and we end up getting just four elements this time owing to the fact that X tensor x and z tensor Z commute with one another poly matrices and N Cubit poly operations more generally describe unitary operations whether they're errors or they're intentional but they also describe
+
+00:07:57
+measurements to be more precise starting with just the three non-identity poly matrices we can associate each of these matrices with a projective measurement defined in terms of its igen values and igen vectors and here on the screen we have spectral decompositions of these matrices that will help to clarify this in essence when we refer to an X measurement a y measurement or a z measurement we mean the projective measurement defined by the projections onto the igen spaces of these matrices and commonly we think about the igen
+
+00:08:29
+value vales as being the corresponding measurement outcomes for example an X measurement is a measurement with respect to the plus minus basis of a cubit or alternatively we can describe it by the set containing the projections Kat plus BR plus and K minus bra minus a z measurement on the other hand is nothing more than a standard basis measurement although like I said we sometimes identify the igen values with the measurement outcomes and if we do that then the outcomes are plus and minus one as opposed to 0 and one
+
+00:09:04
+respectively we can in fact do something along these lines for arbitrary hermi matrices and the term observable is commonly used in this situation for poly matrices and encubate poly operations more generally we can perform such measurements non-destructively using phase estimation and just to be sure that this diagram is clear here we're performing the measurements non-destructively on the top Cubit whereas the bottom cubit is always initialized to a plus state or in other words a hadamard applied to a
+
+00:09:34
+zero State because that's how phase estimation Works notice that because the I values are just plus one and minus one in this case we only need one control Cubit which is the bottom cubid in this diagram any more than that would just be a waste because there is only one bit of precision to worry about the ion value is either plus one or minus one and the measurement is already perfect just like this the outcome of this measurement by the way meaning the standard basis measurement in the circuit will be zero
+
+00:10:05
+for the plus one igen value outcome which corresponds to the plus state in the case of an X observable and the outcome is one for the minus one ion value or the minus state in this case everything I just said extends naturally to ncit poly operations provided that we keep in mind that when we think about an observable we're talking about measuring the igen values not measuring with respect to a basis of igen vectors for example consider the two Cubit poly operation Z tensor Z once again there are two igen values
+
+00:10:40
+plus one and minus one so the measurement is described by two projections notice in particular that the measurement that we associate with this observable is not the same as measuring both cubits with a z measurement or in other words a standard basis measurement but rather it's a two outcome projective measurement where the projections are onto the spaces spend by all of the IG vectors corresponding to each of the two igen values plus one and minus one another way of thinking about this is that the igen values of a tensor
+
+00:11:12
+product are products of the IG values of the individual matricies that we're taking the tensor products of and because negative 1 * negative 1 is the same as positive 1 * positive 1 for instance this measurement doesn't distinguish between 0 0 and 1 one so if we were to measure say a five plus Bell state with the measurement described by this observable we would be certain to obtain the outcome corresponding to the I Value Plus One and the state would be unchanged as opposed to collapsing to 0 0 or 1 one
+
+00:11:43
+which is what would happen if we performed the standard basis measurements on the two cubits so a zensor z measurement is not the same thing as performing to Z measurements independently but we can in fact perform measurements like this using phase estimat in precisely the same way as before using a single control Cubit as is shown in the circuit diagram which generalizes to any n Cubit poly operation in place of Z tensor Z when we have just Z poly matrices by the way we can simplify the circuit like
+
+00:12:18
+this and what this reveals which is also evident from the projections that Define the measurement is that performing a z tensor Z measurement on two cubits is equivalent to measuring their parity thinking in terms of the standard basis and this generalizes to the tensor product of any number of poly Z matrices next we'll take a second look at the three-bit repetition code this time phrasing it in terms of poly operations this will be our first rather simple example of a stabilizer code and we'll discuss how to generalize this
+
+00:12:49
+notion shortly but it is helpful to see how it works in this simple case first recall that when we apply the 3-bit repetition code to cubits we encode a given Cubit State Alpha 0 plus beta 1 as Alpha 0000 0 plus beta 11 1 1 and we'll give this three Cubit encoding the name Sai for convenience so by definition s is a valid three Cubit encoding of a cubit state but if we want to check this it suffices to check that the following two equations are true the first equation states that applying Z
+
+00:13:22
+operations to the leftmost two cubits of s does nothing to S which is to say that SII is an igen vector of Z tensor Z tensor Identity or just ZZ identity for short with ion value one and the second equation is similar except that Z operations are applied to the rightmost two cubits the idea is if we think about S as a linear combination of standard basis States then the first equation implies that we can only have non-zero coefficients for standard basis states where the leftmost two bits have even
+
+00:13:54
+parity or equivalently are equal and the second equation implies that we can only have non-zero coefficients for standard basis States for which the rightmost two bits have even parity another way to think about this is to view these two poly operations as observables and if we were to measure these two observables using the simplified circuit I mentioned just a moment ago then we would be certain to obtain a measurement outcome corresponding to plus one igen values because s is an igen Vector of both
+
+00:14:23
+observables with igen value one but this simplified version of the combined circuit for independent ly measuring the observables is none other than our parity check circuit for the 3-bit repetition code and so we see that our two equations together are equivalent to the parity check circuit outputting 0 0 which is the syndrome that indicates that no errors have been detected the three Cubit poly operations ZZ identity and identity ZZ are called stabilizer generators for this code and the stabilizer of the code is the set
+
+00:14:56
+generated by the stabilizer generators this set the stabilizer is a fundamentally important mathematical object associated with this code and we'll discuss further the role that it plays as the lesson continues for now I'll just point out that we could have made a different choice for the generators for instance we could have selected Z identity Z in place of either of the generators we did select and the code and the stabilizer would be exactly the same next we'll consider bit flip
+
+00:15:25
+detection for the three-bit repetition code with a focus on the interactions and relationships among the poly operations that are involved namely the stabilizer generators and the errors themselves suppose that we've encoded a cubit using the three-bit repetition code and a bit flip error occurs on the leftmost Cubit this causes our state side to be transformed according to the action of an X operation or X error on the leftmost Cubit as we already know we can detect this error by performing the parody
+
+00:15:58
+checks for the three-bit repetition code or equivalently we can measure the encoding non-destructively treating the stabilizer generators as observables let's start with the first stabilizer generator and see what happens our state has been affected by an X error and we'd like to understand how the measurement of the stabilizer generator as an observable is influenced by this error x and z anticommute whereas everything commutes with the identity Matrix and so it follows that ZZ identity anti-c commutes with X identity
+
+00:16:33
+identity so we get a minus sign when the order is changed and we also know that ZZ identity doesn't do anything to S because s is a valid encoding of a cubit and valid encodings are always plus one igen vectors of both stabilizer generators that leaves us with negative X identity identity applied to S and therefore X identity identity applied to S is an igen Vector of ZZ identity with igen value negative one we can also do something similar with the second stabilizer generator but this time the error commutes with the
+
+00:17:08
+stabilizer generator and so our Corrupted State is again an igon Vector of the stabilizer generator but this time the igen value is positive one so our Corrupted State is an IG Vector of both stabilizer generators and whether the igen value is plus one or minus one is determined by whether the error commutes or anti-c commutes with each stabilizer generator for the first one the error and the stabilizer generator anticommute and for the second one they commute and it's always going to be one or the other because any two
+
+00:17:39
+poly operations either commute or anticommute meanwhile the actual State side doesn't really play an important role here except for the fact that the stabilizer generators act trivially on this state so when we're thinking about the detection of Errors we really don't need to concern ourselves with the specific encoded State all that matters is whether the error commutes or anti-c commutes with each stabilizer generator so let's make a table that has one row for each stabilizer generator
+
+00:18:09
+and one column for each error here I've only included the errors corresponding to a single bit flip as well as no error at all which is indicated by the identity tensed with itself three times we could add more columns for other errors if we wanted but for now we'll focus on just these errors the entry in the table is either plus one or minus one depending on whether the error and the stabilizer generator commute or anticommute so for each error in the table we can look at the corresponding column to see how that
+
+00:18:40
+error will transform any given encoding into a plus one or a minus one igen vector of each stabilizer generator these columns correspond precisely to the syndrome we would obtain from the parity checks which are equivalent to the non-destructive measurements of the stabilizer generators as observables of course the entes in this table are plus ones and minus ones rather than zeros and ones respectively and if you prefer you can think about the syndromes as being the corresponding binary strings rather than Columns of
+
+00:19:09
+plus ones and minus ones but there's a direct correspondence and just to make the connection between the syndromes and the igen values more clear and direct I'm going to refer to these vectors of plus ones and minus ones as syndromes as before the syndromes tell us something about whatever error took place and in particular if we know that one of these four possible errors occurred the syndrome indicates to us which one it was and we can correct it by applying the error again if we choose next I'll say just a little bit
+
+00:19:41
+more about the syndromes and in particular we'll take a closer look at their algebraic aspects our encodings are three Cubit States so they're unit vectors in an eight dimensional complex Vector space and what the four possible syndromes do is to slice this eight dimensional space up into four four two-dimensional subspaces meaning that the vectors in any one of these subspaces will always give us the same syndrome in more detail this diagram illustrates how the eight-dimensional space is divided
+
+00:20:12
+up each stabilizer generator splits the space into two subspaces of equal Dimension namely the space of plus one IG vectors and the space of minus one I vectors for example the plus one vectors of ZZ identity are linear combinations of standard basis States for which the leftmost two bits have even parity and the minus one igen vectors are linear combinations of standard basis States for which the leftmost two bits have odd parity and the situation is similar for the other stabilizer generator except
+
+00:20:43
+that it's the rightmost two bits rather than the leftmost two bits so these four subspaces are easy to describe in this case owing to the fact that this is a very simple code in particular the Subspace corresponding to the syndrome plus one +1 is is the space spend by C 000000 and K 111 which is the space of valid encodings and that's called the code space and in general the spaces are spanned by the standard Bas of states that are shown in the corresponding squares although it's not necessarily as
+
+00:21:15
+clear or as easy to see the syndromes also partition all of the three Cubit poly operations which represent the possible poly errors that could take place into four equal siiz collections depending upon which syndrome that error would cause for example any poly operation that commutes with both stabilizer generators results in the syndrome plus1 plus1 and among the 64 possible three Cubit poly operations there are exactly 16 of them in this category including the three that are mentioned on the
+
+00:21:45
+screen and likewise for the other three syndromes that's not obvious but it is true and this basic property that the syndromes partition both the state space in which the encodings live and all of the possible polyer in the space into equal siiz pieces is something that's true in general for stabilizer codes which will soon Define precisely although it's mostly just an aside at this point it's worth mentioning that poly operations that commute with both stabilizer generators or equivalently
+
+00:22:14
+poly operations that result in the syndrome plus1 +1 but are not themselves proportional to elements of the stabilizer turn out to behave just like single Cubit poly operations on The Logical Cubit that we encoded for example xxx commutes with both stabilizer generators but it's not proportional to any element of the stabilizer and indeed it's clear if you think about this code for a moment that the effect that this operation has on an encoding is equivalent to an X gate on the logical Cubit that was encoded and
+
+00:22:45
+again this is something that generalizes to all stabilizer codes now it's time to Define stabilizer codes in general and the way that it works is that we do something completely analogous to what we just discussed for the three-bit repetition code except that we pick different stabilizer generators which all refer to as P1 through PR for the sake of this explanation these stabilizer generators must all be n Cubit poly operations where n is the number of cubits used for the encoding and we can't just pick any
+
+00:23:16
+old set of stabilizer generators they have to satisfy a few basic conditions first the stabilizer generators Must ALL commute with one another in the case of the three-bit repetition code we didn't bother to take note of this but it is straightforward to observe that ZZ identity and identity ZZ do in fact commute because Z commutes with itself and everything commutes with the identity for stabilizer codes with more complicated stabilizer generators on the other hand including codes where we have
+
+00:23:46
+both x's and Z's appearing in the stabilizer generators this is an important condition that needs to be checked one way to think about the need for this condition is that we're going to be treating the stabilizer generators as obs observables and by requiring that they all commute we're ensuring that the order in which we perform these measurements doesn't matter second the stabilizer generators must form a so-called minimal generating set which means that if we removed any one of them we'd get a smaller
+
+00:24:17
+stabilizer and one way to express this mathematically is shown here on the screen strictly speaking this condition isn't really essential to the way that a stabilizer code Works in an operational sense and sometimes it does make sense to think about non-minimal generating sets as we'll see in the next lesson but for the sake of analyzing stabilizer codes and explaining their properties we're going to assume that this condition is in place basically this condition guarantees that each observable that we
+
+00:24:46
+measure to obtain the syndrome is adding information about possible errors as opposed to being redundant and giving results that could easily be inferred from the other stabilizer generators as observables and finally it must be the case that at least one nonzero Vector is fixed by all of the stabilizer generators and that turns out to be equivalent to demanding that -1 time the identity on N cubits is not contained in the stabilizer that's not obvious but the point is that it is possible to choose a minimal generating
+
+00:25:18
+set of n Cubit poly operations that all commute with one another and yet no Vector is simultaneously a plus one igen vector of all of them and we don't want to concern ourselves with this possibility because codes where there aren't any valid encodings aren't interesting so those are the requirements on the stabilizer generators for a stabilizer code and if we do have a set of generators that satisfy these conditions then we have a valid stabilizer code and we can consider its properties there are many
+
+00:25:47
+different stabilizer codes with various properties that make them interesting or not but they all satisfy certain basic properties that are reminiscent of the ones that we've already observed for the three-bit repetition code we'll take a look at some examples shortly but before that let me mention that when we refer to the code space of a stabilizer code we mean the Subspace of the N Cubit State space that includes every Vector that's simultaneously a plus one igen vector of every one of the
+
+00:26:14
+stabilizer generators this is the Subspace of the en Cubit State space in which valid encodings live and we'll have more to say about this Subspace as the lesson continues now let's take a look at a few examples of stabiliz codes here's the example we've already discussed the ordinary 3-bit repetition code and we can also Express the modified version of that code from the previous lesson which can detect a phase flip instead of a bit flip as a stabilizer code AS is shown here this time the stabilizer generators
+
+00:26:47
+measure XX observables rather than ZZ observables so these are basically parity checks in the plus minus basis rather than the standard basis in both cases we can can immediately see that we have a valid stabilizer code because the stabilizer generators commute these are minimal generating sets and the code space is non-trivial as we already know but we can also see pretty clearly that we can't generate negative -1 time the identity and here's the 9 Cubit Shore code which is also a stabilizer code
+
+00:27:21
+expressed by stabilizer generators in this case we basically have three copies of the three- bit repetition code one for each of the three blocks of three cubits as well as the last two stabilizer generators which take a form that's reminiscent of the circuit that we saw in the previous lesson for detecting phase flips for this code another way of thinking about these last two stabilizer generators is that they take exactly the same form as we have for the three-bit repetition code for phase flips except that we
+
+00:27:51
+substitute XXX for x and the reason for that is that XXX corresponds to an X operation on The Logical Cubit encoded using the 3-bit repetition code but that's an aside and it's not something to worry about right now in case it isn't clear next we'll take a look at a few more examples but before that let me mention that people often omit the tensor product symbols when describing stabilizer codes because it tends to make them easier to read so here's what these codes look like without the tensor product symbols
+
+00:28:24
+but of course these are tensor products and not ordinary Matrix products for instance we're just leading out the tensor product symbols so that it's less cluttered and the patterns are more clear here's another example it's called the 7 Cubit steam code and it has some pretty remarkable features we'll come back to this one from time to time throughout the remaining lessons of the unit but for now we can simply verify that it is a valid stabilizer code in particular the first three
+
+00:28:53
+stabilizer generators clearly commute with one another because Z commutes with itself and the identity commutes with everything and the situation is similar for the last three so it remains to check that if we take one of the Z stabilizer generators and one of the X stabilizer generators then they commute and it's easy enough to go through the nine possible pairings to check that in all of these cases we'll always have an X and A Z matching up in the same position an even number of times so
+
+00:29:23
+the two generators will commute just like xx and ZZ commute it's a minimal generating set and it has a non-trivial code space but I won't try to argue that in this video and instead I'll leave that for you to think about if you wish the 7 Cubit steam code is similar to the 9 Cubit Shore code in the sense that it encodes a single Cubit and allows for the correction of an arbitrary error on one cubit but it only requires seven cubits rather than nine that's not the fewest number of cubits
+
+00:29:53
+required for an error correcting code to encode a cubit and correct for an arbitrary error on on a single Cubit here's a stabilizer code that's usually just called the five Cubit code that also encodes a single Cubit and can correct an arbitrary single Cubit error and five is the smallest number of cubits for which this is possible here's another example of a stabilizer code although it isn't really a code so to speak in the sense that the code space is one-dimensional in particular the code
+
+00:30:24
+space for this code is the space spend by an ebit or in other words a five plus spell state so you can't actually encode any cubits using this code but it's still a valid stabilizer code where the code space happens to be one-dimensional and it's possible to do something similar for a GHz state so those are some examples of stabilizer codes and we'll see infinitely many more examples in the next lesson suppose that we're given a stabilizer code a natural question to ask about it
+
+00:30:56
+perhaps the very first question that comes to mind is how many cubits does it encode that question has a very simple answer and to explain it let's be precise about the stabilizer code being considered we have R and Cubit stabilizer generators P1 through p r that satisfy the three requirements that I mentioned earlier namely that the stabilizer generators all commute with one another this is a minimal generating set so we wouldn't get the same stabilizer if we removed one of the generators and there's at at least one
+
+00:31:28
+nonzero Vector in the code space as the theorem shown on the screen indicates it must then be that the code space of the stabilizer code has Dimension 2 ^ nus r or another way of saying that is that we can encode n minus r cubits using this code So intuitively speaking we have n cubits in our encodings and each stabilizer generator effectively takes a cubit away in terms of how many cubits we can encode this theorem isn't too hard to prove and I'll show you a proof in just a moment but first we'll take a look at just a
+
+00:32:06
+few examples starting with the ordinary 3-bit repetition code we have three cubits in our encodings so n is equal to three and there are R equals 2 stabilizer generators and so we can encode one cubit using this code notice that this is not about which or how many errors can be detected or corrected that's a different matter this is just a statement about the dimension of the codee space for another example consider the 5 Cubit code here we have five cubits and four stabilizer generators so once again the
+
+00:32:41
+code space has Dimension two which means that we can encode one cubit using this code and one more example for now for the ebit stabilizer code we have two cubits and two stabilizer generators so the code space is one-dimensional and as I mentioned mentioned earlier it's the space span by the five plus Bell State we'll see more examples as we continue on including codes where we can encode more than one cubit but for now let's see how we can prove the theorem the first thing that we need to
+
+00:33:13
+observe is that because the stabilizer generators commute and form a minimal generating set and because every poly operation is its own inverse every element in the stabilizer can be expressed in a unique way as a product where we raise each stabilizer generator PK to the power AK where each AK is either Z or one and then we multiply the results together another way to say this is that we get every element of the stabilizer by multiplying together some subset of the stabilizer generators and we never
+
+00:33:43
+get the same stabilizer element from different subsets and one thing that this implies is that the only way to express the N Cubit identity operation in this way is to take all of the powers to be zero next let's Define pi K to be the projection onto the plus one igen space of PK for each K from 1 to R and there's a simple formula for this projection we can simply average PK with the identity on N cubits which effectively leaves the plus one IG values alone and shifts all the minus one IG values to zero I
+
+00:34:17
+values now the code space is defined as the set of all vectors that are simultaneously plus one I vectors of all of the stabilizer generators given that the stabilizer generators commute the projections must also commute and that implies that the product of these projections is also a projection and in particular it's the projection onto the intersection of the subspaces that the individual projections project onto or in other words it's the projection onto the code space we can expand out this product and
+
+00:34:47
+what we get is the average over every element of the stabilizer and finally because the dimension of any Subspace is equal to the trace of the projection onto that Subspace we find that the dimension of the code space is the average of the traces over the elements of the stabilizer but with the exception of the ubit identity operation all of the elements of the stabilizer must have Trace equal to zero because the three non-identity polym matrices all have Trace equal to zero the trace of the N Cubit identity
+
+00:35:18
+operation is 2 to the n and so we find that the dimension of the code space is 2 the nus r which proves the theorem next I'll say just a little bit about how cubits can be encoded using stabilizer codes but to do that we first need to introduce Clifford operations Clifford operations are unitary operations on any number of cubits that can be implemented by Quantum circuits with a restricted set of gates namely hadamard Gates S Gates and controlled knot Gates notice that t gates are not included nor are tofly Gates or fredin
+
+00:35:53
+Gates and not only are those Gates not included in this list but in fact it's not possible to implement those Gates using the ones listed here so they're not Clifford operations poly operations on the other hand are Clifford operations and specifically they can be implemented using sequences of hadam Art and Es Gates so that's a simple way to define Clifford operations but it doesn't really explain why they're defined in this way or what's special about this particular collection of
+
+00:36:23
+gates here's the real reason that Clifford operations are defined like this up to a global phase the ncub Clifford operations are precisely the unitary operations that always transform poly operations into poly operations by conjugation to be more precise an nbit unitary operation U is a Clifford operation up to a global phase Factor if and only if for every ncit poly operation conjugating that poly operation by U gives us plus or minus one times some possibly different n Cubit poly operation
+
+00:36:59
+ation you can easily check that this property is true for hadamar Gates S Gates and c not Gates so it necessarily holds for circuits built from these Gates what's harder to prove is that it goes in the other direction which is that if we're given a particular nbit unitary operation U that satisfies this property then it must be possible to implement it up to a global phase using just hadamard s and cot Gates I won't go through the proof of that implication but it is true and you can look it up if you're
+
+00:37:31
+interested Clifford operations are not Universal for Quantum computation meaning that we can't run arbitrary Quantum computations using just hadamard s and cot gates in fact for a given value of n there are only finitely many n Cubit Clifford operations so it's a discrete set of operations so unlike a universal set of quantum Gates we can't approximate arbitrary unitary operations to any desired level of accuracy and in fact performing Clifford operations on standard basis States followed by
+
+00:38:04
+standard basis measurements can't allow us to perform computations that are outside of the reach of classical algorithms because we can efficiently simulate computations of this form classically this fact is known as the goisman Kil theorem and the standard proof of that theorem is in some sense based on the stabilizer formalism in particular the way that it works is that we can keep track of the way that Clifford operation transform poly operations by conjugation which can be done efficiently and then infer from
+
+00:38:34
+that what the computations do to cubits so what does this have to do with stabilizer codes well a stabilizer code provides us with a code space of a certain Dimension and we have the freedom to use that code space however we choose so nothing forces us to encode cubits into that space in a specific way but it will always be possible ref form an encoding using a Clifford operation as the encoder that's nice because Clifford operations are relatively simple compared with arbitrary unitary operations there are ways to optimize
+
+00:39:11
+their implementation which works along similar lines to the proof of the gsman canil theorem and as a result circuits for implementing them never need to be all that large in particular we can always perform an encoding using a Clifford operation that requires a little bit less than a quadratic number of gates because that's actually true of every Clifford operation so the upshot is that for a given stabilizer code it's always possible to encode cubits efficiently using that code and the mathematical
+
+00:39:41
+tools that are useful for understanding Clifford operations can help with this process for example here's an encoder for the 7 Cubit steam code it's a Clifford operation and as it turns out this one doesn't even need S Gates for General stabilizer codes eror detection works in the following way as before we'll assume that we have n Cubit stabilizer generators P1 through p r and we'll let e be an N Cubit poly operation representing a hypothetical error on an encoding we're only considering poly
+
+00:40:17
+operations as Errors By the way because the discretization of Errors works in the same way for arbitrary stabilizer codes as it does for the 9 Cubit Shore code the way that we check for errors is to measure each of the stabilizer generators as observables there are R stabilizer generators so this means our outcomes where each one is a plus one or a minus one or a binary value if you prefer to associate zero with plus one and one with minus one and these R outcomes together form the syndrome just like we
+
+00:40:49
+had for the three-bit repetition code when R was equal to two in general there are three possible cases for the error e in terms of its detection and they are as follows first it could be that e is in the stabilizer meaning that is possible to generate E from the stabilizer generators or slightly more generally it could be that e is equivalent to a stabilizer element up to a global phase in this case e isn't really an error at all because it has no effect in the code space other than to possibly
+
+00:41:22
+inject a global phase which doesn't have any effect so we don't need to worry at all about errors like this whatever non-trivial action it might have happens outside of the code space so it doesn't concern us much more of a concern is the possibility that e is not in the stabilizer even up to a global phase but nevertheless it does commute with every single one of our stabilizer generators remember that it's the anti-commutation of the error with a stabilizer generator that causes a minus
+
+00:41:53
+one to appear somewhere in the syndrome but that doesn't happen in this case so this is an error that actually does change vectors in the code space in some non-al way and we know this because otherwise it would be proportional to a stabilizer element but it goes undetected by the code so this is the bad case we have an error that may potentially be changing whatever Quantum information we've encoded but the code is oblivious to this fact for example for the three-bit repetition code XXX falls into this
+
+00:42:26
+category and the last possibility is that the a e anti-c commutes with at least one of the stabilizer generators and this means that the code detects this error because we'll get a syndrome with at least one minus one somewhere in it which indicates that something is wrong and we'll need to try to correct this error somehow so those are the possibilities as a point of terminology when we refer to the distance of a stabilizer code what we mean is the minimum weight of a poly operation falls
+
+00:42:58
+into the second category meaning that it changes the code space in some non-trivial way but the code doesn't detect this and when we say that a stabilizer code is an nmd stabilizer code using double square brackets as is shown on the screen what that means is that encodings are n cubits in length the code is capable of encoding M cubits so the code space has Dimension 2 the m and its distance is D so an error has to have weight weit D or more to change the logical state of whatever Cubit we've
+
+00:43:31
+been coded without being detected as an error we'll now take a look at the 7 Cubit steam code as an example and we'll determine what its distance is here are the stabilizer generators for this code and recall that the distance is the minimum weight of an encubate poly operation that commutes with all of the stabilizer generators but is itself not in the stabilizer nor is it proportional to an element of the stabilizer what we'll determine is that this code has distance three the way that we'll determine this
+
+00:44:04
+is to First consider any poly operation having weight at most two and we'll conclude that the only way that it can compute with all six stabilizer generators is for to be the identity which is always an element of the stabilizer so let's suppose that the possibly non-identity polym matricies that form this operation which we'll call P and Q appear in the leftmost two positions this is just one case and we do have to consider all of the other possible locations for these possibly non-identity poly matrices but the
+
+00:44:35
+argument is basically the same for all of the possible locations well by assumption this operation commutes with all sticks stabilizer generators so in particular it commutes with this one and it also commutes with this one Q lines up with the identity Matrix in both of these generators which is why we chose these two and we have identity Matrix IES in the rightmost five positions of this error and so we conclude that P must commute with both x and z because otherwise this error would anticommute with one of these two
+
+00:45:08
+generators but the only polymatrix that commutes with both x and z is the identity so P must be the identity and now that we know that we can choose two more stabilizer generators that have an X and a z in the second position from left and we can draw a similar conclusion about Q so there's no way for a weight atmost 2 error to go undetected by this code unless it's just the identity operation which is in the stabilizer so this isn't actually an error on the other hand there are weight
+
+00:45:42
+three poly operations that commute with all six of these stabilizer generators but aren't proportional to stabilizer elements and here are two examples so we've concluded that this code has distance three the last thing that we'll discuss in this lesson is correcting errors for stabilizer codes as usual we'll assume our code is specified by nbit stabilizer generators P1 through p and let's start by thinking a little bit about all of the possible errors that could take place there are two to the r possible
+
+00:46:15
+syndromes and as I mentioned earlier in the lesson these syndromes partition all of the possible en cupit poly operations into equal siiz collections so that means 4 the N / 2 the r poly operations within each set so when we see a particular syndrome it could be that any one of these four to the N divided by 2 to the r errors is responsible we are overcounting a little bit here though because some of these errors have exactly the same effect on the code space in particular if we have an error E and we multiply e By Any
+
+00:46:48
+stabilizer element s then we're going to get another error that has exactly the same effect in the code space as e so these are equivalent errors the stabilizer has two to the r elements and if we account for this then we find that for each syndrome there are four to the N minus r INE equivalent classes of errors that could have caused that one syndrome and what that means is that unless R is equal to n in which case we have a one-dimensional code space and therefore can't encode any cubits at all
+
+00:47:19
+it's not going to be possible to correct every error that we can detect instead what we have to do is choose just one correction operation for each syndrome in the hopes of correcting just one class of equivalent errors so how should we choose what correction to perform for each syndrome a natural strategy is to choose the lowest weight poly operation that causes whatever syndrome we measure with the idea being that lower weight poly operations represent more likely explanations for that syndrome this might not actually be the
+
+00:47:52
+case for some noise models and another natural strategy is to somehow compute the most likely error that causes the given syndrome but for now we'll just consider the strategy where we attempt to correct errors by selecting the lowest weight poly operation causing the syndrome for a distance D stabilizer code this strategy will always allow us to correct errors having weight strictly less than half of D or in other words weight at most D minus1 over2 and I'll explain briefly why this is this will show for instance that the
+
+00:48:24
+7 Cubit steam code can correct for any weight one poly error and by the discretization of errors this means that just like the 9 Cubit Shore code the steam code can correct for an arbitrary error on one cubit so here's how this works consider that this circle represents all of the possible poly operations that result in the all plus1 syndrome which is the syndrome that suggests that no errors have occurred and nothing is wrong among these operations we have elements of the stabilizer or really
+
+00:48:55
+operations that are proportional to elements of the stabilizer and we also have non-trivial errors that change the code space somehow but they aren't detected by the code and We Know by the definition of distance that every poly operation in this category must have weight at least D because D is defined as the minimum weight of these operations we also have poly operations that cause other syndromes to appear and we could consider each syndrome in turn if we wish but here we're just imagining
+
+00:49:25
+that one such syndrome s has appeared now imagine that e is an eror in this category that has weight strictly less than half of the distance D well we don't know that this is necessarily the minimum weight poly operation in this circle so let's take C to be the minimum weight operation in this set or one of them in case there's a tie so it could be that c is equal to e or possibly not but because C has minimum weight we know that it can't possibly have weight larger than the weight of E because C is also in the set
+
+00:49:59
+and it has minimal weight so the correction operation C must have weight strictly less than half of D so what happens if we apply this correction C to whatever our state becomes after the air e occurs the answer is that the state that we obtain is C * e multiplied to the original encoding because we first multiply by E that was the error and then we multiplied by C to try to correct it and this product must be in the stabilizer or proportional to an element of the stabilizer and here's why first because e and C give us the
+
+00:50:35
+same syndrome C * e must give us the all plus one syndrome that's because for a given stabilizer generator either c and e both commute with that generator or they both anticommute it has to be the same for both because the syndromes are the same and if you think about that for just a moment it implies that c * e must commute with all the stabiliz generators and finally C * e has to be down in the stabilizer because its weight can't be larger than the sum of the weights of c and e and so its weight
+
+00:51:07
+is strictly less than D and this means that we successfully correct e because applying e followed by C does nothing to the code space so that's great but there's just one problem and that is that for stabilizer codes in general it's a computationally difficult problem to compute the lowest weight operation causing a given syndrome and indeed that's true even for classical codes which in this context we can think about as stabilizer codes where we only have identity matrices and polyc matrices appearing as tensor
+
+00:51:40
+factors within the stabilizer generators so unlike the encoding step Clifford operations don't come to our rescue this time and the only reasonable solution is to choose specific codes for which good Corrections can be computed efficiently and there's no recipe for this simply put devising stabilizer codes like this is part of the Artistry of Quantum Code design and that is a good place to stop for this lesson I hope you will join me for the next lesson in which we'll take a look at some specific Quantum Code
+
+00:52:15
+constructions including codes that illustrate the Artistry of Quantum Code design in a pretty spectacular way goodbye for now
+

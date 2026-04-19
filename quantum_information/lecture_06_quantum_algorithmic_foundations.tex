@@ -1,0 +1,193 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\titleformat{\section}{\large\bfseries}{Lecture 6.\thesection}{1em}{}
+
+\title{\textbf{Lecture 6: Quantum Algorithmic Foundations} \\ \large Understanding Quantum Information \& Computation}
+\author{Based on the lectures by John Watrous (IBM Quantum)}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------
+\section{Overview}
+%----------------------------------------------------------------------
+
+This lecture bridges the gap between the query model (Lecture~5) and practical quantum algorithms by establishing the computational framework needed for algorithms like Shor's.  Topics:
+
+\begin{enumerate}
+    \item Motivating examples: integer factorisation vs.\ GCD computation.
+    \item Measuring computational cost: circuit size, Big-$O$ notation, polynomial vs.\ exponential cost.
+    \item Implementing classical computations on a quantum computer (reversible simulation of Boolean circuits).
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\section{Integer Factorisation and GCDs}
+%----------------------------------------------------------------------
+
+\subsection{Integer Factorisation}
+
+\begin{definition}
+Given an integer $N\ge 2$, the \textbf{integer factorisation problem} asks for the prime factorisation $N = p_1^{e_1}\cdots p_k^{e_k}$.
+\end{definition}
+
+\begin{itemize}
+    \item Small numbers (e.g.\ 46 digits): factorable in seconds using algorithms like the quadratic sieve or general number field sieve.
+    \item Large numbers (e.g.\ RSA-1024, a 309-digit / 1024-bit number): \textbf{not currently factorable} by any known classical algorithm.
+    \item The security of the RSA cryptosystem rests on this difficulty.
+\end{itemize}
+
+\subsection{Greatest Common Divisors}
+
+\begin{definition}
+$\gcd(N,M)$ is the largest integer dividing both $N$ and $M$.
+\end{definition}
+
+\textbf{Euclid's algorithm} computes $\gcd(N,M)$ in $O(n^2)$ operations for $n$-bit inputs---comparable to the cost of multiplication.  GCDs for numbers with many thousands of digits can be computed in the blink of an eye.
+
+\paragraph{Key contrast.}  GCD algorithms exploit algebraic structure (iterative reduction); factoring algorithms still essentially \emph{search} for factors.
+
+%----------------------------------------------------------------------
+\section{Measuring Computational Cost}
+%----------------------------------------------------------------------
+
+\subsection{Encoding Inputs as Binary Strings}
+
+Non-negative integers are encoded in binary notation.  The \textbf{input length} $n$ (number of bits) satisfies $n=\lfloor\log_2 N\rfloor+1$; the encoding is logarithmic in the number.
+
+\subsection{Circuit Size}
+
+\begin{definition}
+The \textbf{size} of a circuit is the total number of gates it contains.  This measures sequential computational cost.
+\end{definition}
+
+The \textbf{depth} of a circuit (longest input-to-output path) measures parallel running time, but we focus on size.
+
+\subsection{Standard Gate Sets}
+
+\paragraph{Quantum.}  $\{X,Y,Z,H,S,S^\dagger,T,T^\dagger,\mathrm{CNOT}\}$ plus standard basis measurements.  This is a \textbf{universal gate set}: any unitary on any number of qubits can be approximated to arbitrary precision.
+
+\paragraph{Boolean.}  $\{\mathrm{AND},\mathrm{OR},\mathrm{NOT},\mathrm{FANOUT}\}$.  Universal for deterministic classical computation.
+
+\subsection{Big-$O$ Notation}
+
+\begin{definition}
+$g(n)=O(h(n))$ if there exist constants $C>0$ and $n_0$ such that $g(n)\le C\,h(n)$ for all $n\ge n_0$.
+\end{definition}
+
+\subsection{Cost of Basic Arithmetic}
+
+\begin{center}
+\begin{tabular}{lc}
+\hline
+\textbf{Operation} & \textbf{Cost (Boolean circuit size)} \\\hline
+Addition of two $n$-bit integers & $O(n)$ \\
+Multiplication of two $n$-bit integers & $O(n^2)$ \;(standard); $O(n\log n\log\log n)$ (Sch\"onhage--Strassen) \\
+Division with remainder & $O(n^2)$ \\
+GCD (Euclid) & $O(n^2)$ \\
+Modular exponentiation ($N^K\bmod M$) & $O(n^3)$ \\
+\hline
+\end{tabular}
+\end{center}
+
+All of the above have \textbf{polynomial cost}.
+
+\subsection{Factoring: Classical Costs}
+
+\begin{itemize}
+    \item \textbf{Trial division:} $O(n^2\cdot 2^{n/2})$ --- exponential.
+    \item \textbf{Number field sieve:} $O\!\bigl(\exp(c\,n^{1/3}(\log n)^{2/3})\bigr)$ (conjectured) --- sub-exponential but still exponential.
+    \item No known \emph{polynomial-cost} classical factoring algorithm exists.
+\end{itemize}
+
+\subsection{Polynomial vs.\ Exponential Cost}
+
+\begin{definition}\leavevmode
+\begin{itemize}
+    \item \textbf{Polynomial cost:} $O(n^b)$ for a fixed constant $b$.
+    \item \textbf{Exponential cost:} not $O(2^{n^\epsilon})$ for every $\epsilon>0$.
+\end{itemize}
+\end{definition}
+
+Polynomial cost $\approx$ ``efficient'' (rough guideline).  The existence of a polynomial-cost algorithm demonstrates feasibility on large inputs.
+
+%----------------------------------------------------------------------
+\section{Classical Computation on a Quantum Computer}
+%----------------------------------------------------------------------
+
+\subsection{Motivation}
+
+To use classical subroutines inside quantum algorithms (e.g.\ modular arithmetic inside Shor's algorithm), we need quantum circuits that compute classical functions \emph{cleanly}---without residual ``garbage'' qubits that would destroy interference.
+
+\subsection{Simulating Boolean Gates}
+
+Using only NOT, CNOT, and Toffoli gates (all deterministic and reversible):
+
+\begin{center}
+\begin{tabular}{lcl}
+\hline
+\textbf{Boolean gate} & \textbf{Quantum simulation} & \textbf{Workspace qubits} \\\hline
+NOT & $X$ gate & 0 \\
+AND & Toffoli with workspace $\ket{0}$ & 1 \\
+OR & NOT--Toffoli--NOT (De Morgan) & 1 \\
+FANOUT & CNOT with workspace $\ket{0}$ & 1 \\
+\hline
+\end{tabular}
+\end{center}
+
+A Toffoli gate can be decomposed into $H$, $T$, $T^\dagger$, and CNOT gates (15 gates from the standard set).
+
+\subsection{From Boolean Circuit to Quantum Circuit}
+
+Given a Boolean circuit $C$ of size $T$ computing $F:\{0,1\}^n\to\{0,1\}^m$:
+
+\begin{enumerate}
+    \item Replace each gate of $C$ by its reversible simulation $\to$ circuit $R$.
+    \item $R$ computes $F(x)$ on the output qubits but also produces \textbf{garbage} qubits in state $\ket{G(x)}$.
+    \item To eliminate garbage: introduce $m$ fresh qubits $\ket{y}$, XOR $F(x)$ onto them via CNOTs, then run $R^\dagger$ (reverse of $R$) to uncompute the garbage.
+\end{enumerate}
+
+The resulting circuit $Q$ satisfies
+\[
+    Q\ket{x}\ket{y}\ket{0^K} = \ket{x}\ket{y\oplus F(x)}\ket{0^K},
+\]
+where $K$ is the number of workspace qubits.  This has exactly the form of a \textbf{query gate} $U_F$.
+
+\paragraph{Cost.}  $|Q|=O(T)=O(|C|)$.  The quantum simulation is \emph{linear} in the size of the original Boolean circuit.
+
+\subsection{Implications}
+
+\begin{itemize}
+    \item All polynomial-cost classical computations can be performed on a quantum computer at polynomial cost.
+    \item Quantum algorithms can freely use classical subroutines (addition, multiplication, modular exponentiation, GCD, etc.) as building blocks.
+    \item This is exactly how Shor's algorithm works: it builds quantum circuits for modular exponentiation and evaluates them in superposition.
+\end{itemize}
+
+%----------------------------------------------------------------------
+\section{Summary}
+%----------------------------------------------------------------------
+
+\begin{itemize}
+    \item Computational cost is measured by circuit size; \textbf{polynomial cost} is the benchmark for efficiency.
+    \item Basic arithmetic (addition, multiplication, GCD, modular exponentiation) all have polynomial-cost classical algorithms.
+    \item Integer factorisation has no known polynomial-cost classical algorithm.
+    \item Any Boolean circuit of size $T$ can be converted into a ``clean'' quantum circuit (query-gate form) of size $O(T)$, enabling classical subroutines inside quantum algorithms.
+    \item This foundation sets the stage for \textbf{Shor's algorithm} (Lecture~7).
+\end{itemize}
+
+\end{document}

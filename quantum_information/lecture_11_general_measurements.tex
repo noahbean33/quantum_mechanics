@@ -1,0 +1,191 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\titleformat{\section}{\large\bfseries}{Lecture 11.\thesection}{1em}{}
+
+\title{\textbf{Lecture 11: General Measurements} \\ \large Understanding Quantum Information \& Computation}
+\author{Based on the lectures by John Watrous (IBM Quantum)}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------
+\section{Overview}
+%----------------------------------------------------------------------
+
+This lecture completes the trio of general-description tools by introducing the most general notion of quantum measurement.  We progress through three levels of generality:
+
+\begin{enumerate}
+    \item \textbf{Standard basis measurements} (Lecture~1).
+    \item \textbf{Projective measurements} (Lecture~3).
+    \item \textbf{General measurements / POVMs} (this lecture).
+\end{enumerate}
+
+We also discuss \textbf{instruments} (measurements that describe both the outcome probabilities \emph{and} the post-measurement state).
+
+%----------------------------------------------------------------------
+\section{Recap: Projective Measurements}
+%----------------------------------------------------------------------
+
+A projective measurement is defined by projections $\{\Pi_k\}$ with $\sum_k\Pi_k=I$.  On state $\rho$:
+\[
+    \Pr(k) = \tr(\Pi_k\,\rho),
+    \qquad
+    \rho_k = \frac{\Pi_k\,\rho\,\Pi_k}{\tr(\Pi_k\,\rho)}.
+\]
+Projective measurements are \emph{repeatable}: measuring a second time yields the same outcome.
+
+%----------------------------------------------------------------------
+\section{POVMs: Positive Operator-Valued Measures}
+%----------------------------------------------------------------------
+
+\begin{definition}[POVM]
+A \textbf{POVM} (positive operator-valued measure) is a collection of positive semidefinite operators $\{P_1,\dots,P_m\}$ satisfying
+\[
+    \sum_{k=1}^{m}P_k = I.
+\]
+The operators $P_k$ are called \textbf{POVM elements} or \textbf{measurement operators}.
+\end{definition}
+
+When a POVM is applied to a state $\rho$, outcome $k$ occurs with probability
+\[
+    \Pr(k) = \tr(P_k\,\rho).
+\]
+
+\begin{remark}
+A POVM specifies \emph{only} the outcome probabilities.  It does not, by itself, specify the post-measurement state.  For that, we need an \textbf{instrument} (see below).
+\end{remark}
+
+\subsection{Relationship to Projective Measurements}
+
+Every projective measurement is a POVM (with $P_k=\Pi_k$), but not conversely:
+\begin{itemize}
+    \item POVM elements need not be projections ($P_k^2\neq P_k$ in general).
+    \item The number of outcomes $m$ can exceed the dimension of the Hilbert space.
+    \item POVM elements need not be orthogonal.
+\end{itemize}
+
+\begin{example}[Trine measurement on a qubit]
+Three POVM elements, each rank-1, pointing at $120^\circ$ intervals on the Bloch sphere:
+\[
+    P_k = \frac{2}{3}\ket{\phi_k}\!\bra{\phi_k},\quad k=1,2,3,
+\]
+where $\ket{\phi_1}=\ket{0}$, $\ket{\phi_2}=\frac{1}{2}(-\ket{0}+\sqrt{3}\ket{1})$, $\ket{\phi_3}=\frac{1}{2}(-\ket{0}-\sqrt{3}\ket{1})$.
+Verify: $P_1+P_2+P_3=I$.  This has three outcomes on a two-dimensional system---impossible with a projective measurement.
+\end{example}
+
+\subsection{Naimark's Theorem}
+
+\begin{theorem}[Naimark dilation]
+Every POVM on a system $X$ can be realised by:
+\begin{enumerate}
+    \item Appending an ancilla system $A$ initialised to a fixed state.
+    \item Applying a joint unitary $V$ on $XA$.
+    \item Performing a \emph{projective} measurement on a subsystem.
+\end{enumerate}
+\end{theorem}
+
+Hence POVMs add no new computational power beyond projective measurements + ancillae, but they are a very convenient abstraction.
+
+%----------------------------------------------------------------------
+\section{Quantum Instruments}
+%----------------------------------------------------------------------
+
+\begin{definition}[Quantum instrument]
+A \textbf{quantum instrument} is a collection of completely positive (CP) maps $\{\Phi_1,\dots,\Phi_m\}$ such that $\sum_k\Phi_k$ is trace-preserving.
+
+When applied to state $\rho$:
+\begin{itemize}
+    \item Outcome $k$ occurs with probability $\Pr(k)=\tr\bigl(\Phi_k(\rho)\bigr)$.
+    \item Post-measurement state given outcome $k$: $\rho_k = \Phi_k(\rho)/\tr\bigl(\Phi_k(\rho)\bigr)$.
+\end{itemize}
+\end{definition}
+
+The POVM associated with an instrument is $P_k = \sum_j K_{k,j}^\dagger K_{k,j}$ where $\Phi_k(\rho)=\sum_j K_{k,j}\rho\,K_{k,j}^\dagger$.
+
+\begin{example}[Projective measurement as instrument]
+$\Phi_k(\rho)=\Pi_k\,\rho\,\Pi_k$.  Single Kraus operator per outcome: $K_k=\Pi_k$.
+\end{example}
+
+\begin{example}[L\"uders instrument]
+For a POVM $\{P_k\}$, the L\"uders instrument is $\Phi_k(\rho)=\sqrt{P_k}\,\rho\,\sqrt{P_k}$.  This is one of many instruments compatible with a given POVM.
+\end{example}
+
+%----------------------------------------------------------------------
+\section{Distinguishing Quantum States}
+%----------------------------------------------------------------------
+
+\subsection{Minimum-Error State Discrimination}
+
+Given: $\rho_0$ with prior probability $p_0$ and $\rho_1$ with $p_1=1-p_0$.  Design a two-outcome POVM $\{P_0,P_1\}$ to maximise
+\[
+    p_{\text{correct}} = p_0\tr(P_0\rho_0)+p_1\tr(P_1\rho_1).
+\]
+
+\begin{theorem}[Helstrom]
+The optimal success probability is
+\[
+    p_{\text{correct}}^* = \frac{1}{2}\bigl(1+\|p_0\rho_0-p_1\rho_1\|_1\bigr),
+\]
+where $\|\cdot\|_1$ denotes the trace norm.  The optimal measurement projects onto the positive and negative eigenspaces of $p_0\rho_0-p_1\rho_1$.
+\end{theorem}
+
+For pure states $\ket{\psi}$, $\ket{\phi}$ with equal priors:
+\[
+    p_{\text{correct}}^* = \frac{1}{2}\bigl(1+\sqrt{1-|\!\braket{\psi}{\phi}\!|^2}\bigr).
+\]
+Perfect discrimination ($p^*=1$) iff $\braket{\psi}{\phi}=0$ (orthogonal), consistent with Lecture~3.
+
+\subsection{Unambiguous State Discrimination}
+
+An alternative paradigm: allow an ``inconclusive'' outcome, but demand zero error when a definite answer is given.  This is possible for non-orthogonal states at the cost of a non-zero inconclusive probability.
+
+%----------------------------------------------------------------------
+\section{Relationship Between the Three Measurement Types}
+%----------------------------------------------------------------------
+
+\[
+    \text{Standard basis} \;\subset\; \text{Projective} \;\subset\; \text{POVM (general)}.
+\]
+
+\begin{center}
+\begin{tabular}{lccc}
+\hline
+\textbf{Property} & \textbf{Std.\ basis} & \textbf{Projective} & \textbf{POVM} \\\hline
+Elements are projections & Yes & Yes & Not necessarily \\
+Elements are orthogonal & Yes & Yes & Not necessarily \\
+$\#$outcomes $\le$ dimension & Yes & Yes & Can exceed \\
+Repeatable & Yes & Yes & Not necessarily \\
+Post-measurement state specified & Yes & Yes & Need instrument \\
+\hline
+\end{tabular}
+\end{center}
+
+%----------------------------------------------------------------------
+\section{Summary}
+%----------------------------------------------------------------------
+
+\begin{itemize}
+    \item A \textbf{POVM} $\{P_k\}$ with $\sum_k P_k=I$ defines the most general quantum measurement (outcome probabilities $\tr(P_k\rho)$).
+    \item A \textbf{quantum instrument} additionally specifies the post-measurement state.
+    \item \textbf{Naimark's theorem}: every POVM can be implemented with ancillae + a projective measurement.
+    \item \textbf{Helstrom's theorem} gives the optimal success probability for distinguishing two states.
+    \item POVMs, channels, and density matrices together form the complete general description of quantum information.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,396 @@
+00:00:01
+- Welcome to Understanding Quantum Information and Computation. My name is John Watrous, and I'm the technical director of IBM Quantum Education. The purpose of this series is to provide you with a solid understanding of quantum information and computation, and that means getting into the technical details of quantum information and seeing how quantum computing really works, what it can do and what it can't do. If you haven't already watched the overview video for this series, I encourage you to check that out.
+
+00:00:29
+In that video, you'll find information about what sort of background preparation is recommended for this series, as well as an outline of the topics to be covered. Also, be sure to check out the Qiskit textbook, which covers the same material as this video series in a written form, and it also includes interactive components and interfaces to hardware and software designed to help you to better understand quantum information and computation. You'll find links to the overview video and the Qiskit textbook in the description.
+
+00:00:59
+This is lesson one of unit one of the series. Unit one covers the basics of quantum information, and in the first lesson of this unit, we'll focus on how quantum information works for single systems, meaning that we have just one physical system or a device of some sort that stores quantum information and we're considering how that one system or device works in isolation. In the lesson following this one, we'll discuss how quantum information works when we have multiple systems and that will allow us
+
+00:01:28
+to describe interesting and important concepts such as quantum algorithms that make use of multiple qubits and quantum protocols involving multiple individuals that process quantum information and transmit it back and forth to one another. But before getting into those discussions, it makes sense to start with the comparatively simple setting of a single system in isolation, partly because it's good to start simple, but also because as we will see, the description of how quantum information works
+
+00:01:57
+for single systems in isolation leads very naturally and logically to the description of how quantum information works for multiple systems. Here's a brief overview of the lesson. We're gonna start by discussing classical information. Now, the purpose of this lesson is not to explain how classical information works, it's to explain how quantum information works, but to explain how quantum information works, it's very helpful to begin with classical information and to use it as a familiar point of reference
+
+00:02:31
+when we discuss quantum information. At a mathematical level, quantum and classical information actually have pretty similar descriptions with some key differences, of course. In fact, quantum information really isn't separate from classical information at all. It's an extension of classical information. The fact of the matter is, at least in my view, that you really can't understand quantum information if you don't understand classical information, so starting with classical information makes sense.
+
+00:03:03
+I do expect that this content will be familiar to some viewers, but even if you are familiar with it, I don't recommend that you skip it. In addition to highlighting the aspects of classical information that are most relevant to understanding quantum information, we're gonna introduce the Dirac notation in this part, which is a standard way that we're gonna use to describe vectors and matrices throughout the series. As it turns out, the Dirac notation isn't specific to quantum information.
+
+00:03:30
+It can equally well be used in the context of classical information as well as many other settings where vectors and matrices arise. We'll then move on to quantum information, and specifically, we'll discuss the representation of quantum states as vectors, a simple type of measurement called a standard basis measurement, and unitary operations, which describe discreet time changes in quantum systems. Again, all in the setting of single systems. Before we get started with lesson itself, it will be helpful to clarify
+
+00:04:07
+that there are actually two descriptions of quantum information, the simplified description, which is what we'll be focusing on in this lesson and throughout this first unit and the general description, which is covered in a later unit, specifically in the third unit of the series. The simplified description, true to its name, is simpler and it's typically learned first. In the simplified description, as I've already suggested, quantum states are represented by vectors and operations are represented by unitary matrices.
+
+00:04:38
+This description of quantum information is sufficient for an understanding of most quantum algorithms, for instance, so it isn't oversimplified, it's the real thing. However, as we will discover as we go along, it does have some limitations. For instance, if we wanna model the effects of noise on quantum systems, this description turns out to be lacking. The general description, on the other hand, is more general and ultimately, it's more powerful in a mathematical sense. In this description,
+
+00:05:13
+quantum states are represented by a special class of matrices called density matrices, and more general class of measurements and operations can be described including noise, for instance. It's entirely consistent with the simplified description and in fact, you can essentially view the simplified description as a special case of the general description, and it also includes classical information as a special case. It's also really quite beautiful in how it all works, so I strongly encourage you
+
+00:05:44
+to learn about this general description when the time is right, but the simplified description is the more natural place to start, and so that is what we will do. We're going to begin by talking about classical information with an eye on the aspects of classical information that are most relevant to quantum information and the way that it's described mathematically. Imagine that we have a physical system or a device of some sort that stores information. We're gonna give this system the name X,
+
+00:06:15
+but there's nothing important about this name. We could use any other name if we preferred, but just to pick a name, we're gonna call the system X. We're gonna make an assumption about X, which is that there is a finite set of classical states that X can possibly be in at any given moment. Here, when I refer to a classical state, I mean a configuration of the system that can be recognized and described unambiguously without any uncertainty or error. Really, this is something that you can think about intuitively.
+
+00:06:47
+At a mathematical level, we simply define the set of classical states, we choose it however we want to or in whatever way best describes the device that we're working with. Let us give the name sigma to this set of classical states, and again, let me emphasize that we're assuming that sigma is a finite set. The set of classical states of this system X is not infinitely large like the set of all natural numbers. It's finite, and that's just an assumption that we're making. For example, it could be that X is a bit,
+
+00:07:21
+in which case, the classical state set is the set containing two elements: zero and one. Sometimes we refer to this set as the binary alphabet. Another example is that X is an ordinary six-sided die, in which case, the classical states are the numbers one through six. Of course, we're talking about an abstraction here. An actual six-sided die may have many different attributes such as its precise position, its orientation, its temperature, and so on. But with respect to the information that's most typically relevant
+
+00:07:56
+when we're talking about a six-sided die, the classical states are the numbers one through six indicated by the number of dots on whichever side of the die is facing up. If X is a switch on a standard sort of electric fan that you might have in your home, then perhaps the classical states are the settings high, medium, low and off. These are just examples. We could imagine systems having different classical state sets than these, but hopefully, they convey the idea that this notion of a classical state
+
+00:08:28
+is something that should be familiar and can be understood in simple and intuitive terms. Mathematically speaking, the set of classical states is just a finite set, and of course, this set must also be non empty as well. There has to be at least one classical state that the system can be in and there has to be at least two classical states if the system is going to be useful at all for storing information. Now, in some situations, we might know that X is in some particular state, but in many situations,
+
+00:09:00
+that arise in the setting of information processing, there may be uncertainty about the classical state of a system at a particular moment so that each possible classical state has some probability associated with it. For example, if X is a bit, then perhaps it's the case that X is in the classical state zero with probability three quarters and it's in the state one with probability one quarter. We're going to refer to this as a probabilistic state, and we could express this probabilistic state,
+
+00:09:31
+as you see right here, simply by indicating what the probabilities are for the different classical states. A more succinct way to express this probabilistic state is by a vector, specifically the representation that you see right here is a column vector, and this vector indicates what the probabilities are for the two possible classical states. To be more specific, the first entry indicates what the probability is for X to be in the state zero, and the second entry tells us what the probability is
+
+00:10:04
+for the system to be in the state one. This is simply the natural way to order the binary alphabet, or at least, it's the way that we are trained to do this. With zero first and one second. Going forward, we're gonna use the term probability vector to indicate a vector like this. Specifically, it's a vector whose entries are all non-negative real numbers and where the sum of the entries is equal to one, so it makes sense to think about these entries as being probabilities. Here in this example,
+
+00:10:36
+there are just two entries because there's just two classical states of the system we're talking about, but in general, there could be any number of entries with the understanding being that there's one entry for each classical state of whatever system we're talking about. We're going to continue discussing classical information, probability vectors and so on in just a moment, but first, it's gonna be really helpful to introduce some notation for describing vectors known as the Dirac notation.
+
+00:11:05
+In fact, this is just the first part of the Dirac notation. There are a couple of other aspects of the Dirac notation that we'll see a little bit later in the lesson. This notation is gonna be quite central to the way that we describe quantum information, so it's essential to understand how it works, but fortunately, it's very simple and it really doesn't have anything specifically to do with quantum information, so we can introduce it now in the familiar context of classical information.
+
+00:11:35
+As before, we assume that we have a set sigma of classical states of some system, and let's assume that we have an ordering of these classical states, just like how we refer to an ordering of the binary alphabet in the previous example. Another way of saying this is that the elements of sigma are placed in correspondence with the integer from one to however many elements are contained in sigma, which is what this notation right here with two bars around sigma means. That's the number of elements in the set sigma.
+
+00:12:06
+So there's a first state, a second state, and so on. The specific ordering or correspondence that we choose isn't actually gonna matter all that much. What's really important is that we have an ordering and we stick to it. For many classical state sets that we'll encounter, there will be a standard ordering just like we have with the binary alphabet, and if there isn't a standard ordering, we can just choose one. But whatever it is, the understanding is that we stick to it. Now, here's the notation that's being introduced.
+
+00:12:44
+For any choice of a classical state a from our set sigma, we write this right here, which is read as ket a to mean the column vector that has a one in entry corresponding to a and a zero for all other entries. For example, if we return to the binary alphabet, which, as you might have guessed, is a very important example that we'll return to again and again. Then ket zero and ket one are the vectors that are defined right here. Ket zero is the vector that has a one in the entry corresponding to the classical state zero,
+
+00:13:20
+which is the first entry, and a zero for all other entries, and in this case, there's only one other entry. Similarly, ket one is this vector right here where we have a one in the entry corresponding to one, which is the second entry, and a zero for all other entries, which, again, is just one entry. Here's another example. In this example, we have a classical state set sigma corresponding to the four suits in a standard deck of playing cards: clubs, diamonds, hearts, and spades. In this case,
+
+00:13:56
+there really isn't a universally agreed upon ordering of these suits. For many card games, there is no ordering at all. They're just four different suits and that's all that matters, and there are different card games that do order these suits in different ways, but it doesn't really matter. We can just choose an ordering like the one that you see right here. This happens to be alphabetical ordering according to the names of these four suits written in English, Assuming that we've picked this particular ordering,
+
+00:14:25
+then we define these four vectors: ket clubs, ket diamonds, ket hearts, and ket spades as you see right here, and these vectors correspond to the general description that you see up here. Given that we've chosen this particular ordering for these four suits. We can do the same thing for any classical state set that we choose. Keeping in mind that classical state set always means finite and non empty set. Vectors of this form are called standard basis vectors, and it's a very basic fact about vectors
+
+00:14:58
+that every vector can be expressed in a unique way as a linear combination of standard basis vectors. For instance, going back to the example from just a moment ago, the probability vector we saw can be expressed as you see right here. It's basically just an alternative way of expressing vectors that's gonna be very handy for several reasons going forward. And with that notation now in our hands, let's return to the discussion of classical information and probabilistic states, in particular.
+
+00:15:32
+And let's consider what happens when we measure a system while it's in some probabilistic state. We might not ordinarily refer to a measurement or the act of measuring something in a classical setting, but the term makes sense. In essence, when we talk about measuring the system X in this context, we just mean that we look at it and we recognize whatever state it's in. Of course, when we look at the system, we don't see a probabilistic state, we see a classical state, and the particular classical state that we see
+
+00:16:04
+is one that we can imagine is chosen randomly according to the probabilities. Now, you might object on philosophical grounds to the idea that the classical state we see is somehow chosen at random at the moment that we measure or we look at the system, the system simply was in some particular classical state all along and we just happen to have learned what the state was, but for the sake of thinking about the mathematical framework we're working with, it's okay to think about it this way
+
+00:16:33
+and doing so will allow us to draw a parallel with quantum information a little bit later. Let's suppose that the classical state that we see is the classical state a, which could be any state in our set sigma. This changes the probabilistic state of X in general, at least from our point of view. The probabilities no longer have any significance because we now know what the classical state of X is. It's a, and there's no longer any uncertainty about this. So we would now say this that the probability
+
+00:17:06
+that the system is in the state a is one. We know this because we just looked at it and we saw that the classical state is a, so the new probabilistic state of X is one in which the probability of being in the classical state a is equal to one. And that probabilistic state is represented by the probability vector ket a. We have a one in the entry corresponding to the classical state a and a zero in all other entries. For example, if we again consider the situation where X is a bit and we have the same probabilistic state as before,
+
+00:17:44
+then if we measure X, we can imagine that a transition takes place. With probability three quarters, we see the classical state zero, and by measuring, we transition to ket zero being our probabilistic state, and with probability one quarter, we transition to ket one. You can think about this as a transition of knowledge if you prefer as opposed to an actual physical transition, but what's important for the sake of this lesson is to recognize how the mathematics works. It's kind of trivial actually,
+
+00:18:18
+but by recognizing this triviality, the analogous description for the quantum setting might seem a little bit less mysterious. One final note is that to another person who didn't happen to see what the classical state of X was when we measured it, the probabilistic state naturally wouldn't change as a result of us having measured it. That's okay. Different individuals can have different knowledge of a particular system and correspondingly choose different probabilistic states to represent their knowledge of that system.
+
+00:18:50
+In the last part of this discussion of classical information, we'll talk about classical operations that can be performed on a system, starting with deterministic operations. When we perform an operation on a system, its state generally changes as a result, and in this context, the word deterministic means that the result of performing the operation depends entirely on whatever classical state the system was in prior to the operation being performed. In other words, there's no element of chance
+
+00:19:22
+when a deterministic operation is performed, so there's no randomness or uncertainty involved. In mathematical terms, deterministic operations are described by functions. Every function f of the form that you see right here, which means that both the input and the output of the function correspond to elements of our classical state set sigma describes a deterministic operation. The classical state a is transformed into the state f of a for each choice of a state a. For every function f of this form,
+
+00:19:55
+there will always be a unique matrix M satisfying this condition that you see right here, and that is that by multiplying M to the vector ket a gives us the vector ket f of a, and that's true for every choice of a classical state a. It's not too hard to write down an explicit description of M given whatever function f of this form we've chosen. It will always have exactly one, one in each column with every other entry equal to zero. And here's the formula. The b, a entry of M is equal to one
+
+00:20:28
+if b is equal to f of a and otherwise, it's equal to zero, and by this, we mean this is the entry of M whose row corresponds to b and whose column corresponds to a. We'll see a few examples in just a moment, and we'll see why this formula works. Now, it might not be clear why we would want to take a function and express it as a matrix like this, but it does make sense to do this. One of the reasons, and perhaps, it's the main reason, is that if we have a system in a probabilistic state
+
+00:21:02
+and we perform a deterministic operation on that system, then the resulting probabilistic state can be obtained by matrix-vector multiplication, i.e., if our system is in a probabilistic state that's represented by some probability vector v and we perform the deterministic operation described by M on that system, then the resulting probabilistic state will be given by M times v. Here, by the way, this arrow with a little bar on it like this is just a common notation in mathematics for indicating how one thing gets mapped to
+
+00:21:35
+or transformed into another thing. You could just use an ordinary arrow, but this is conventional and it's recognizable and maybe it's a little bit more specific than just an arrow, which could mean many different things. Now let's take a look at an example or a collection of examples, really. Let's consider what happens when we take our classical state set sigma to be once again the binary alphabet. There aren't too many different functions of the form we've been discussing
+
+00:22:03
+when this is our classical state set and to be more precise, there are just four functions of this form. Here, those four functions are described by their so-called tables of values. The first table describes the first function, which we've named f1. For each possible input on the left, we list the corresponding output on the right, so f1 of zero is equal to zero, and f1 of one is, again, equal to zero, and that is to say that f1 is the constant zero function. It always takes the value zero.
+
+00:22:38
+The second function f2 is the identity function. The output is always equal to the input as you can see from the second table. The third function f3 is described by the third table. f3 of zero is equal to one, and f3 of one is equal to zero. This function is better known as the not function or logical negation. We sometimes also call it a bit flip because it flips zero to one and one to zero. The last function f4 is, again, a constant function just like the first one, but this one is the constant one function
+
+00:23:14
+because it always takes the value one. And those are the only four functions from the binary alphabet to itself. Here are the four matrices that correspond to these four functions that are described by the formula from before, which you can see right here, and if you're so inclined, you can pause the video and check this. Just remember that with matrices, the order of the indices is always rows first, column second. So the b, a entry corresponds to row b and column a or the row that corresponds to the classical state b
+
+00:23:50
+and the column that corresponds to the classical state a. So for example, if we look at the first function, we have the f1 of zero is equal to zero and correspondingly, the zero, zero entry of M1 is equal to one. Well, the one, zero entry which is right here is equal to zero, and you can do the same thing for the case where the input is equal to one and similarly, for the other three functions. You can also check that this formula from before is true and you can just go one by one through all the different possibilities to verify this.
+
+00:24:28
+And in fact, if you think about the way that matrix multiplication works, really you can just kind of eyeball this. When you multiply a matrix to a standard basis factor like this, you can imagine that you're taking the input and dropping it into the top of one of the matrices in whichever column corresponds to the classical state inside of the ket, and the output that you get is simply that column as a probability vector. So for example, M3 multiplied to ket zero gives you zero, one as a probability vector, which is ket one.
+
+00:25:06
+M3 multiplied to ket one gives you one, zero, which is ket zero and so on. We'll discuss operations on probabilistic states more in just a moment, but first, let's introduce the second part of the Dirac notation. This is gonna be helpful for talking about operations and thinking about them as major Cs, and it's also gonna be a standard tool that we'll continue to use going forward. The setup is just like it was before. We have whatever classical state set sigma that we're working with
+
+00:25:36
+and we assume that we have some way of ordering those classical states. We then write this thing that you see right here where this time the angled bar is on the left rather than the right to mean the row vector having a one in the entry that corresponds to a and a zero for all of the other entries corresponding to all the other classical states. So the difference between this thing and ket a is that this is a row vector and ket a is a column vector, but otherwise, the vectors are defined in a similar way.
+
+00:26:07
+We read this as bra a, I'm not sure if that's supposed to be funny, but the idea is that the names bra and ket are two halves of the word bracket, and we'll have more to say about that in just a moment. But first, let's take a look at a very quick example. For the binary alphabet, we have that bra zero is this row vector right here analogous to ket a, except it's a row vector instead of a column vector and bra one is this vector right here. Now in general, if we multiply a row vector to a column vector,
+
+00:26:42
+just thinking about these as matrices that happen to have just one row or just one column, then we get a one by one matrix, which we can think about as being a scaler. Here, by the way, you should think about these stars as representing arbitrary numbers. In particular, if we multiply the row vector bra a to the column vector ket b, then there are two things that can happen. One is that a and b are equal, so they're the same classical state, in which case, the ones will line up and the product will be equal to one
+
+00:27:22
+or it could be the case the a and b are different, and so the ones don't line up and the product is equal to zero. A simple way of expressing these observations is like this right here. And just to keep things tidy, we write this product like this with just one bar in the middle and it means exactly the same thing as this right here. And now you can see how the bra and the ket go together to form a bracket, which is also called an inner product, and that's something that's quite important
+
+00:27:55
+that we'll come back to in lesson number three. Multiplying a column vector to a row vector, on the other hand, gives us a matrix as you can see right here. So for example, going back yet again to the binary alphabet, if we multiply ket zero to bra zero, what we get is this matrix right here, and we can go through the other possibilities to see what happens. Ket zero times bra one gives us this matrix right here where the one has now moved over to this position. Ket one, bra zero looks like this
+
+00:28:31
+and here's ket one, bra one. What we see happening is that there is just a single one in a matrix that's otherwise all zeros, and the position of that one is determined by which classical states we choose in the bra and the ket. More precisely, and this is true in general, for any choice of a classical state set, the matrix that we get by multiplying ket a to bra b is the matrix with a one in the a, b entry and a zero for all other entries. And now that we have both the first and the second parts
+
+00:29:05
+of the Dirac notation, we have a very handy tool for connecting operations with matrices. So let's go back briefly to deterministic operations and recall that a bit earlier in the lesson, it was stated that for every function f of this form right here, we have a deterministic operation that transforms a into f of a for each possible classical state a. And we said that for any function like this, there's always a unique matrix M that acts like this on standard basis states. Using the Dirac notation,
+
+00:29:39
+we can now very easily express this matrix like you see right here, and we can see how sometimes it's possible to work with matrices entirely within the framework of the Dirac notation without ever explicitly converting to vectors and matrices, meaning rectangles filled with numbers. In this case, we can check that the required formula is true by multiplying M to ket a. We substitute our expression for M like this and we can remove the parenthesis and snap together the bra b with a ket a like this.
+
+00:30:15
+And that's because matrix multiplication is linear, in this case, in the first argument and it's associated so we can remove the parentheses. And now, recalling that we have a fixed a that we're talking about as we sum over all of the possible choices of b, this bracket right here is always gonna be equal to zero when b is not equal to a, so there won't be any contribution to the sum, and when b is equal to a, the bracket will be equal to one and so we'll be left with this one term right here.
+
+00:30:47
+That's the formula we wanted and so we have a very nice and simple way of expressing a function as a matrix. In addition to deterministic operations, we also have operations that themselves introduce randomness or uncertainty about the classical state of a system. We use the term probabilistic operation to mean operations like this, and to be precise, when we say probabilistic operation, we mean operations that might introduce randomness, so deterministic operations are actually a special case of probabilistic operations
+
+00:31:19
+that just don't happen to introduce any randomness. Here's a simple example where some randomness is introduced. This is an operation on a single bit. The way that it works is that if the classical state of the bit is a zero, then nothing happens. The bit stays as a zero, but if the classical state of the bit is a one, then the operation flips the bit to zero with probability equal to 1/2. There's no special name for this operation, at least not that I'm aware of. It's just an example,
+
+00:31:48
+but you could imagine performing this operation on a bit. Just like deterministic operations, probabilistic operations can be represented by matrices and their actions on probabilistic states are given by matrix-vector multiplication just like before. This time, it's not necessarily the case that the matrices have exactly one, one in each column and zeros otherwise. Probabilistic operations are more generally represented by stochastic matrices. These are matrices whose entries are all non-negative real numbers
+
+00:32:20
+and where the entries in each column sum to one. That's equivalent to saying that stochastic matrices are matrices where every column forms a probability vector. That makes sense when you think about the action of a matrix on a standard basis vector. You consider whatever classical state you wish and you imagine dropping that state into the top of the matrix in whatever column corresponds to that classical state, and that column tells you what the probabilistic state is that comes out as a probability vector.
+
+00:32:51
+The probabilistic operation in our example, for instance, is described by this matrix right here. If we perform this operation on the classical state zero, then the probabilistic state we get is given by the first column, which is, again, the classical state zero or equivalently, the probabilistic state where zero occurs with probability one. If instead, we perform this operation on the classical state one, then we effectively just randomize the bit and correspondingly, we get this probability vector here
+
+00:33:21
+where the probability for each of the possible states is equal to 1/2. In general, if we perform this operation on any probabilistic state, then the effect is essentially just a weighted average between the two columns because that's how a matrix-vector multiplication works. It's linear, so we just average the two possible outcomes accordingly. When we think about probabilistic operations in this way, it's natural to think about them as potentially introducing or injecting randomness.
+
+00:33:52
+We can just read the columns one by one and we can see the randomness that they introduce for each possible classical state. You can also think about probabilistic operations in a slightly different way, which is that they're random choices of deterministic operations. For instance, in our example, we can think about this operation as being equivalent to flipping a fair coin and either performing the constant zero function or the identity function each with probability 1/2, and you can see that reflected right here by this equation.
+
+00:34:24
+That's always possible for any probabilistic operation, and it's pretty intuitive. If you made random choices as part of some process, you could always imagine making those random choices in advance and then hard coding those choices into some collection of deterministic operations. It's sometimes quite helpful to think about probabilistic operations in this way, and we'll see an example of this down the road in a couple of lessons. The last thing to say about classical information
+
+00:34:52
+for this lesson concerns composing probabilistic operations, which just means performing one after the other. Let's suppose that we have some system named X and M1 through Mn are stochastic matrices representing probabilistic operations on X. Imagine first that we have a probability vector v, which represents a probabilistic state of X at some moment, and then we first apply the first probabilistic operation to X, which is represented by the matrix M1, and then we apply the second probabilistic operation,
+
+00:35:24
+which is represented by M2. If we do that, then the probability vector we get after applying just the first operation is M1 times v, and then when we apply the second operation, the resulting probability vector is M2 multiplied to whatever vector we obtained after applying M1. So it looks like this. Now, matrix multiplication is an associative operation, which means that it doesn't matter where we put these parentheses. So we could just as easily put the parentheses like this. That's very simple,
+
+00:35:58
+but it's also interesting because it reveals that we can think about the operation where we first apply M1 and then we apply M2 as a single operation. In other words, the probabilistic operation we get by composing the first and second probabilistic operation is represented by the matrix product, M2 times M1, and that's the same operation regardless of what probabilistic state we started with. We don't need to know anything about the probability vector v to think about or to describe this composed operation.
+
+00:36:29
+Notice that the order here is M2 on the left and M1 on the right, which is because the matrix on the right, M1, is the one that gets multiplied to the vector v, whereas M2 gets multiplied to whatever vector we get after multiplying by M1. So we always have to keep in mind that the order in some sense gets reversed. The operation performed first is the one on the right and the operation that gets performed last or in this case, second, is the one on the left. If we don't stop with the second operation
+
+00:36:59
+and we apply all of them in order starting with the first and ending with the last one, which is Mn, then the composition of all of these operations together is given by this product that you see right here, and you see that the ordering once again is reversed for exactly the same reason as before. So in short, compositions of probabilistic operations are represented by products of stochastic matrices that represent them. Keeping in mind that this is the ordering of the matrices in the product.
+
+00:37:29
+You will always get a stochastic matrix by taking a product of stochastic matrices like this, and sometimes we express this fact by saying that the stochastic matrices are closed under multiplication, and the way that you can think about this is that you can't get out of the set of stochastic matrices by multiplying them because the set is closed. Getting back to the ordering of the matrices in this product, it's important to note that the ordering really does matter. Matrix multiplication is not commutative.
+
+00:37:56
+If you change the ordering of the matrices in the product, you might change the result, and we don't need to look any further than the deterministic operations to see this. Here's a simple example of two stochastic matrices, both of which represent deterministic operations where the ordering matters. M1 represents the constant zero function. Assuming, we're imagining that these two operations are on bits, just like in the example from earlier. M2 represents the not operation or a bit flip.
+
+00:38:30
+If you perform M1 first and then you perform M2, the result is this matrix right here, which represents the constant one function. If you set a bit to zero and then you flip it, it's the same thing as just setting that bit to one. On the other hand, if you perform M2 first and then you perform M1, this is the result right here, and this makes sense because if you flip a bit and then you set it to zero, it's the same thing as just setting it to zero. It didn't matter that you flipped it.
+
+00:38:58
+Obviously, these two matrices are not the same, and so we have a very simple example revealing that the order does matter. Of course, this is not surprising at all. We all know that the order in which operations are performed matters or at least, it can matter. For example, if you light a match and then you blow on it, the result is very different from blowing on the match first and then lighting it. At this point, we've talked quite a lot about classical information and now it's finally time to discuss quantum information.
+
+00:39:28
+And what we'll find is that mathematically speaking, quantum information works in a very similar way to classical information with some key differences. The first key difference is right at the start, how we define a state, in this case, a quantum state of a system, and there is a sense in which this one choice how we define a quantum state largely determines how quantum information works. We'll also define how measurements and operations work, and in the next lesson, we'll discuss how quantum information works
+
+00:40:00
+not just for single systems but for multiple systems, but these things actually follow pretty naturally once the notion of a quantum state of a single system in isolation has been established. Here's the definition. A quantum state of a system is represented by a column vector whose indices are placed in correspondence with the classical states of that system. So we're assuming here that the system we're talking about has some set of classical states, just like when we talked about classical information
+
+00:40:29
+and probabilistic states. The entries in a quantum state vector are complex numbers as opposed to the probabilistic case where the entries are non-negative real numbers. And this time, the sum of the absolute values squared of the entries must equal one as opposed to the sum being equal to one as we have in the probabilistic case. The complex numbers that appear in a quantum state vector are sometimes called amplitudes and they play a role that's similar to probabilities, but they aren't probabilities
+
+00:40:59
+and they don't have the same interpretation. Now, I can't give you a good reason for why quantum states should be defined like this other than to say that physicists have discovered that this definition is physically relevant and it allows us to describe and model quantum mechanical systems. In other words, we choose this definition because it works, not because there are any particular reasons why quantum states should be defined like this. With respect to the mathematics of this notion
+
+00:41:31
+of a quantum state, the first step towards understanding it and working with it is to recall this definition for the Euclidean norm of a vector, which you can think of geometrically as the length of a vector, just like you would think about the length of a two-dimensional real vector if you drew it on a piece of paper as an arrow starting from the origin in the usual way. Specifically, if we have a column vector v like this, which we assume has complex number entries, alpha one through alpha n,
+
+00:42:00
+then the Euclidean norm of v is defined like you see right here. This is the notation we use for the Euclidean norm putting these double bars around whatever vector we're talking about. In this case, it's v, and the way the Euclidean norm is defined is that it's the square root of the sum of the absolute values squared of the entries of the vector. So another way to define what a quantum state vector is is that a quantum state vector is a column vector having complex number entries whose Euclidean norm is equal to one,
+
+00:42:33
+which is to say that it's a unit vector with respect to the Euclidean norm. That's because the sum of the absolute value squared is equal to one if and only if the Euclidean norm is equal to one. The square root doesn't change anything when the sum of the absolute values squared is equal to one. So that's what a quantum state vector is. It's a column vector with indices that correspond to the classical states of a system having complex number entries and Euclidean norm equal to one.
+
+00:43:03
+What that means or what it implies or how we should interpret this notion is a different matter and in some sense, the study of quantum information and computation is an exploration of what this definition implies, at least, in terms of information processing. This is simply the starting point. As an aside, let me mention that there are other so-called norms besides the Euclidean norm and this notation right here with the double bars around a vector doesn't always mean the Euclidean norm. In different contexts,
+
+00:43:35
+this notation could refer to a different norm. For example, the sum of the absolute values with no squares or square root is a different norm, often called the one norm. There are quite a lot of different norms, in fact. Sometimes you'll see this notation being used with a subscript after the second set of bars that provides more information about what norm we're talking about. And when we do that, it's pretty typical that the number two as a subscript means the Euclidean norm. But in this series,
+
+00:44:07
+whenever we have a column vector like this, this double bar notation all by itself means the Euclidean norm. Here are a few examples of quantum state vectors and these particular quantum state vectors are qubit state vectors, which means that the classical states of our system are zero and one. The word qubit is short for quantum bit, which is really just a bit that can be in a quantum state. The first two examples are really simple. The standard basis vectors ket zero and ket one are quantum state vectors.
+
+00:44:42
+They're both column vectors, and the indices correspond to the classical states is zero and one, and the entries of these vectors are complex numbers. For these particular vectors, the entries are zero and one, which are real numbers, and in fact, they're integers, but they're also complex numbers that happen to have imaginary part equal to zero. Each vector has one entry equal to one and one entry equal to zero. So when we sum the absolute values of the entries, we get one in both cases.
+
+00:45:12
+So the conditions required for these vectors to be quantum state vectors are satisfied. The next two examples are very commonly encountered qubit states called the plus state and the minus state. They're denoted as you see here on the screen, either with a ket plus or a ket minus like this, and they're defined as you can see right here. Again, the entries of these vectors are complex numbers. This time, they're either positive one over square root of two or negative one over square root of two,
+
+00:45:41
+and when we sum the absolute values squared, we get 1/2 plus 1/2, which is one. By the way, putting a plus sign or a minus sign inside of a ket like this might seem a little strange because these aren't classical states of our system, but this notation is used nevertheless, and we'll come back to this momentarily. But for now, in short, we can use the Dirac notation to put whatever name we want for a vector inside of a ket. The vector doesn't have to be a standard basis vector when we use the Dirac notation.
+
+00:46:14
+Here's a final qubit state example for the moment, anyway. It's a quantum state vector of a qubit that doesn't have a special name, and it's not particularly significant. The entries of this vector are one plus two times i over three and negative 2/3. These are complex numbers, and if you compute the absolute values squared of these two entries, you'll get 5/9 for the first one and 4/9 for the second one. So the sum of the absolute value squared is equal to one. And here's one last example.
+
+00:46:46
+This time for a system whose classical states are the four card suits. I don't know why we would have a system whose classical states are the four card suits being in a quantum state, but it is possible in principle and it's just meant as an example. The entries corresponding to the different suits are 1/2 for clubs, negative i over two for diamonds, zero for hearts because it doesn't appear in the sum and one over square root of two for spades. And here's what it looks like as a column vector,
+
+00:47:18
+assuming that we've ordered the classical states as we did before, which is the order that you see right here. Taking the absolute value squared of these entries gives one quarter for the first one, also one quarter for the next one. The absolute value squared of zero is equal to zero, so that entry doesn't contribute to the sum. And finally, for the last one, we get 1/2. So the sum is equal to one as is required for this vector to be a quantum state vector. Now just a moment ago, we used the notation ket plus and ket minus
+
+00:47:48
+to referred to two qubit state vectors that aren't standard basis vectors. And I'd like to return to this point briefly and explain how the Dirac notation is used for arbitrary vectors and not just for standard basis vectors. As I've already mentioned, we can use whatever name we want inside of a bra or ket to refer to a vector. Kets are column vectors and bras are row vectors just like before. As an example, the Greek letter psi is very commonly used inside of a ket to refer to some arbitrary vector,
+
+00:48:19
+and here, we're using it to give a name to the state vector from before that doesn't have a special name. When we do this, the let our psi doesn't necessarily have any meaning all by itself. It's just the name of a vector, and it's inside of a ket to help us to clarify that it's a column vector. This can be a little bit confusing sometimes, and there is a potential for ambiguity if the letter psi could be associated with a classical state of some system for instance, but it generally doesn't cause any problems,
+
+00:48:48
+and you don't have to use the Dirac notation like this if you don't want to. Using a lower case letter such as u, v, or w without a ket is also a fine way to denote a column vector or more specifically, a quantum state vector. It's your choice what notation you use to express yourself. You just need to make sure that number one, the meaning of what you are trying to express is clear to others. And number two, that you understand what others are trying to express even when their preferences for notation
+
+00:49:16
+aren't the same as yours. There is one very important rule for using the Dirac notation for arbitrary vectors and that is that if you have a column vector that you've decided to write as ket psi, for instance, or it could be a different name inside of a ket, then the row vector bra psi is understood to be the conjugate transpose of the vector ket psi. And here, this is written as an equation where this dagger right here refers to the conjugate transpose. What that is specifically is the row vector you get by,
+
+00:49:45
+number one, transposing the vector, meaning that you flip the vector on its side and you change it from a column into a row without actually changing the entries. And number two, taking the complex conjugate of each of the entries. You can actually perform those two operations, the transpose and the entry-wise complex conjugate in either order or those two operations commute. So for the vector in this example, given that we've decided to call this vector ket psi, it's understood that bra psi means this vector right here
+
+00:50:13
+where we've transposed the vector by turning ket zero and ket one into bra zero and bra one, and we've taken the complex conjugate of each entry, which is why one plus two times i over three turns into one minus two times i over three right here. Here's what these vectors look like when they're written explicitly as a column vector and a row vector. Notice, by the way, that this rule is consistent with the notation we use when we have classical states inside of the bra and the ket.
+
+00:50:41
+In that case, the entries are all zero except for one, one, and so taking the complex conjugate doesn't do anything in that case. We've now seen how quantum states are represented as vectors, but it's not clear at this point what the meaning or the implications are in terms of what you can do with the system in a quantum state or how you can interact with it. The first thing we need to do to bring these issues into focus is to discuss measurements. Intuitively speaking, measurements provide a mechanism
+
+00:51:10
+for extracting classical information from quantum systems. When we look at a system when it's in a quantum state, we don't see a quantum state just like we don't see probabilistic states, we see classical states, and this notion of a measurement is what provides the interface. If we, as humans, want to know something about a quantum system, we have to measure it, and in doing so, we'll extract classical information about whatever quantum state that system was in. There are different notions of measurements.
+
+00:51:41
+The difference is one of generality really, and we're going to start with the simplest and most basic one, which is typically called a standard basis measurement. We will generalize this in subsequent lessons. We'll talk about so-called projective measurements in lesson three, and then later on in the third unit of the series, we'll talk about general measurements, which are also called positive operator valued measures or POVMs for short. But for now, we'll restrict our attention
+
+00:52:07
+to standard basis measurements. When a measurement is performed on a system, there will be some set of possible outcomes of that measurement, which are classical outcomes, and in the case of a standard basis measurement, those possible outcomes are precisely the classical states of whatever system is being measured. Each of those classical states will be the outcome of the measurement with some probability, and that probability is the absolute value squared of the entry corresponding to that classical state
+
+00:52:35
+of whatever quantum state vector the system was in immediately prior to being measured. We know that the absolute value squared of any complex number is a non-negative real number, and we know from the definition of quantum state vectors that the sum of the absolute value squared of the entries of a quantum state vector is equal to one. So this makes sense. Each classical state will appear as the outcome of the measurement with some probability and the probabilities sum to one. Here are a few examples.
+
+00:53:03
+First, suppose we have a qubit in the plus state. If we measure this qubit with respect to a standard basis measurement, we get either a zero or a one as the outcome. The probability of getting a zero is the absolute value squared of one over root two, which is 1/2, and that's the same probability of getting a one. So if you measure a plus state, you'll get a uniform random bit. If the system is in a minus state rather than a plus state, then measuring works in exactly the same way. The probabilities are, again, 1/2
+
+00:53:35
+for each possible outcome. The only difference here is that the plus sign turned into a minus sign, but when we take the absolute value, nothing changes. If we measure this qubit state, the probability to get the outcome zero is the absolute value squared of one plus two times i over three, which is 5/9, and the probability to get the outcome one is the absolute value squared of negative 2/3, which is 4/9. And finally, measuring the standard basis state, ket zero gives the outcome zero with certainty,
+
+00:54:06
+and likewise, measuring the state ket one yields the outcome one with certainty. That's because the absolute value squared of one is one. Similar to what we had in the probabilistic setting. We can associate these quantum states, ket zero in ket one, with the system being in those classical states, and this example is consistent with that interpretation. Now, just like we had in the probabilistic setting, if we measure a system when it's in a quantum state, then the state will change, in general,
+
+00:54:35
+as a result of having performed that measurement. In particular, and again, this is exactly like we had in the probabilistic setting. If we measure a system and the outcome of the measurement is the classical state a, then the new quantum state of the system becomes ket a. So for this state right here, for instance, we see the same kind of behavior that we had in the probabilistic setting. If we measure then with probability 5/9, we obtain the outcome zero, in which case, the state transitions to ket zero,
+
+00:55:05
+and with probability 4/9, the outcome is one, and the state transitions to ket one. Sometimes this phenomenon is referred to as a collapse of the quantum state, and it's the kind of thing that keeps people that study the foundations of quantum mechanics awake at night. But from a purely mathematical perspective, it's really quite simple and very much analogous to what we have in the probabilistic case. The source of tension here, in some sense, concerns the fundamental nature of quantum states
+
+00:55:34
+and what they represent and how they differ from probabilistic states. But at a mathematical level, this is perhaps what you might expect. Notice, by the way, that if you measured a second time, then you would get exactly the same result as you did for the first measurement. So there's a limit on how much classical information can be extracted from a quantum state, and we'll come back to this point soon in another lesson. We've talked about quantum states as well as measurements, specifically standard basis measurements,
+
+00:56:03
+which provide a way to extract classical information from quantum states. The remaining topic for this lesson is operations, specifically unitary operations, which describe how quantum states of systems can be changed. Naturally, given that quantum state vectors are different from probability vectors, you would expect that set of allowable operations on quantum states is different than what we have for classical information, and indeed, that's the case. Whereas operations on probabilistic states
+
+00:56:35
+are represented by stochastic matrices, operations on quantum state vectors are represented by unitary matrices. Here's the definition of unitary matrices. A square matrix U having complex number entries is unitary if it satisfies the equalities that you see right here. The dagger represents the conjugate transpose, which we already saw for vectors when we talked about the Dirac notation a few moments ago. Here we're performing the conjugate transpose on a matrix rather than a vector, but it's essentially the same thing.
+
+00:57:10
+We transpose the matrix, which just means that we swap rows and columns, so the JK entry becomes the KJ entry, and also we take the complex conjugate of each entry. Also, this notation right here means the identity matrix. These two equalities right here are actually equivalent. If you have one, then you automatically have the other. They're both equivalent to saying that you is invertible, and the inverse is equal to the conjugate transpose. That's only true for square matrices, by the way.
+
+00:57:42
+If you have a matrix that isn't square, then one of those two equalities might be true, but then the other one won't be true. But here, we're talking about square matrices. So this is the standard definition for unitary matrices, and it's nice because it's easy to check if a matrix is unitary. You just multiply the matrix to its conjugate transpose on either side, and you see if you get the identity matrix. There's an equivalent way to characterize unitarian matrices, and that is that a square matrix is unitary
+
+00:58:14
+if and only if it never changes the Euclidean norm of any vector when you multiply. An N by N matrix U is unitary if and only if the Euclidean norm of U times v is equal to the Euclidean norm v for every n-dimensional column vector v with complex number entries. And therefore, if v is a quantum state vector, then U times v is also a quantum state vector because quantum state vectors are simply the vectors having Euclidean norm equal to one. In fact, we can say a little bit more, which is that the unitary matrices
+
+00:58:47
+are precisely the matrices that always transform quantum state vectors into quantum state vectors. That's a similar situation to what we have for stochastic matrices and probability vectors. The stochastic matrices are precisely the matrices that always transform probability vectors into probability vectors. So once we've decided that operations should be represented by matrices, which is the same as saying that transformations act linearly on vectors representing states, these choices for the sets of allowable operations
+
+00:59:17
+follow naturally, at least, in a mathematical sense. Now let's take a look at some examples of qubit unitary operations. We'll see many more examples of unitary operations in subsequent lessons, including unitary operations and systems having more than two classical states. But for now, we'll focus just on qubit unitary operations. We're going to be seeing these particular examples arising again and again, so it's definitely worth getting to know these operations. The first collection of examples
+
+00:59:48
+are the so-called Pauli operations. These are the operations that correspond to the Pauli matrices, which are shown here. They're all unitary, and you can check that for each one according to the definition from before. These particular matrices happen to be equal to their own conjugate transposes, which is to say that they're all Hermitian matrices. So checking that they're all unitary, in this case, is a matter of squaring each one and seeing that the result is the identity matrix.
+
+01:00:19
+The names you see for these matrices are pretty standard, and you'll also see sigma x, sigma y, and sigma z called simply X, Y, and Z. Do be aware, though, that the capital letters X, Y, and Z are also commonly used for other purposes, even in the context of quantum information, but they are very common names for these matrices. The sigma x or X operation is also called a bit flip or a not operation, which we've already seen in the classical context. And the sigma z or Z operation is also called a phase flip.
+
+01:00:53
+And here, you can see the action of these operations on the standard basis factors, which kind of explains where these names come from. Certainly, it makes sense to refer to sigma x as a bit flip based on this action right here. It simply flips the bit from zero to one or one to zero. It also makes sense to call sigma z a phase flip based on this action right here. But if that's not crystal clear at the moment, that's okay. We'll encounter this operation over and over and the significance of putting a minus sign
+
+01:01:23
+in front of the ket one basis vector and not ket zero and why that's called a phase flip will be more clear later on. The next example is the Hadamard operation, which is represented by this matrix right here, which is pretty much always named H. Checking that H is unitary is once again a straightforward calculation, which if I step out of the way, you can see right here. Similar to the Pauli matrices, H is its own conjugate transpose. So we have this equality right here, and when we perform the multiplication,
+
+01:01:55
+we get the identity matrix as is required. The third example is really an entire class of unitary operations known as phase operations. These are operations represented by any matrix that takes this form that you see right here where theta is any real number. So this entry right here will always be some complex number on the unit circle. Matrices like this are always unitary, which I will leave to you to verify. This time, the conjugate transpose won't be equal to the original matrix unless this number here happens to be a one or a minus one,
+
+01:02:30
+in which case, we end up with either the identity matrix or sigma z, which we've already encountered. Specifically, transposition won't do anything to this matrix, but taking the complex conjugate of each entry changes this entry right here to e to the minus i theta. These two particular operations right here are particularly important examples of phase operations. For the first one, we take theta to be pi over two, and we get this matrix right here. This is commonly called an S operation or an S gate
+
+01:03:00
+when we're talking about circuits, which we won't discuss in this lesson, but that's an important topic that's coming up soon. The second one is this operation. It's a T operation or a T gate. And for this one, theta is equal to pi over four. And so when we compute the exponential, we get this value right here, which is one plus i over the square root of two. Here are just a few quick examples to see a couple of these operations in action. Here's the action of the Hadamard operation
+
+01:03:28
+on ket zero and ket one. If we go through the matrix-vector multiplication, we see that what we obtain are the plus state and the minus state respectively. If we perform the Hadamard operation on the plus state and the minus state, on the other hand, we get back to ket zero and ket one. So if we clean things up a little bit, we can see the action more clearly. The Hadamard operation transforms back and forth between the zero state and the plus state and between the one state and the minus state.
+
+01:04:01
+Concerning these two equations right here, notice that this gives us a simple way to detect the difference between a plus state and a minus state. As we saw earlier in the lesson, if we measure a plus state and a minus state with respect to the standard basis measurement, we get a uniform random bit in both cases, which doesn't help us to detect the difference. But if we perform a Hadamard operation and then we measure, we'll see a zero if the original state was a plus state and a one if the original state was a minus state.
+
+01:04:32
+So these two states are indeed different, and they can be discriminated perfectly by the method that I just described, which is to first perform a Hadamard operation and then to measure. Going back to the example of a qubit state we saw before that isn't particularly special, we can see what the Hadamard operation does to the state by converting to the forms that you see right here and performing the multiplication. And here is the result which we can convert back to the Dirac notation if we wish,
+
+01:05:04
+and that's one way to compute these sorts of actions. Here's another example that illustrates that you don't always have to convert explicitly to a matrix vector form. You can also perform these computations directly using the Dirac notation. This example concerns the T operation, and here it is right here just for reference. This operation has this action right here on standard basis states. And if we want to compute the action of the T operation on a plus state, for instance, we can start by expanding the definition of the plus state
+
+01:05:38
+and then use linearity to express the result as you see right here. We can now just plug in these expressions up here, do just a little bit of simplification for the second term, and we obtain the result. If for whatever reason we'd like to apply a Hadamard operation to the result, we can do a similar thing. First, we substitute the expression for T acting on the plus state and we use linearity like we did before. And now, if we substitute the expressions we already have for the Hadamard operation acting on ket zero and ket one,
+
+01:06:14
+we obtain this. And now, we can expand the plus state and the minus state to get this expression right here, which we can simplify just by adding, and here is the final result. There's nothing particularly special about this example. It's just meant to illustrate this alternative but equivalent way of calculating the actions of these operations. You can use whichever way is more convenient in the situation at hand. One final point about unitary operations is that compositions of unitary operations are represented
+
+01:06:47
+by matrix multiplication just like in the probabilistic setting, i.e., you can compute the action of a sequence of unitary operations by simply multiplying the matrices together. And what you'll get is a single unitary matrix representing the combined action of the sequence of operations. Just like we had for stochastic matrices, the unitary matrices are closed under multiplication, so you'll always get a unitary matrix when you compose unitary operations. You have to make sure you multiply the matrices
+
+01:07:19
+in the correct order. But the way it works is just like it was for stochastic operations where the matrix for the first operation you perform will always appear on the right-hand side of the matrix product, and the last one will appear on the left-hand side. So just like before, the order is reversed in the sense that you compose from right to left rather than left to right. Here's an interesting example that gives rise to an operation known as the square root of not operation. Suppose that we first apply a Hadamard operation
+
+01:07:52
+followed by an S operation, followed by another Hadamard operation. The combined action of these three operations is described by this product. Here's the first Hadamard operation, here's the S operation, and here's the second Hadamard operation. If we perform the matrix multiplication, which isn't shown here explicitly, but you can do this for yourself if you wish, the result is this matrix right here. It's a unitary matrix, and we can either check that directly or we can trust in the fact
+
+01:08:22
+that the unitary matrices are closed under multiplication. It has to be unitary because these three matrices are unitary as we've already seen. We don't have any particular quantum state vector in mind here. We can imagine performing this sequence of operations on any quantum state vector, and this matrix describes the action. The reason why this combined operation, meaning the one described by this matrix right here is called a spirit of not operation, is that by performing it twice, we get a not operation,
+
+01:08:55
+or in other words, a sigma x or an X operation. Performing the operation twice is represented by squaring the matrix or multiplying it to itself. And if you do this, you'll see that the result is the Pauli x matrix. And that's kind of peculiar, and it gives you just a hint that you can do some interesting things with quantum information that you can't do with classical information. There's no classical operation, meaning one represented by a stochastic matrix that gives us a not operation if we perform it twice.
+
+01:09:27
+So it's a nice example that reveals that quantum operations behave very differently from classical operations. And that's it for lesson one. In this lesson, we discussed how quantum information works for single systems in isolation, and in the next lesson, we'll talk about how quantum information works for multiple systems. Thanks for watching. If you have any questions, feel free to leave them in the comments section below.
+

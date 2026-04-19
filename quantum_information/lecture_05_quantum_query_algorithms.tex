@@ -1,0 +1,290 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\titleformat{\section}{\large\bfseries}{Lecture 5.\thesection}{1em}{}
+
+\title{\textbf{Lecture 5: Quantum Query Algorithms} \\ \large Understanding Quantum Information \& Computation}
+\author{Based on the lectures by John Watrous (IBM Quantum)}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------
+\section{Overview}
+%----------------------------------------------------------------------
+
+This lecture opens the second unit (Quantum Algorithms) by introducing the \textbf{query model of computation}---a theoretical ``Petri dish'' for developing quantum algorithmic ideas.  Three progressively more powerful quantum query algorithms are presented:
+
+\begin{enumerate}
+    \item \textbf{Deutsch's algorithm} --- 1 query vs.\ 2 classically.
+    \item \textbf{Deutsch--Jozsa algorithm} --- 1 query vs.\ $2^{n-1}+1$ deterministic classical queries (and the Bernstein--Vazirani variant).
+    \item \textbf{Simon's algorithm} --- $O(n)$ queries vs.\ $\Omega(2^{n/2})$ classically (exponential separation).
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\section{The Query Model of Computation}
+%----------------------------------------------------------------------
+
+\subsection{Standard vs.\ Query Computation}
+
+In ordinary computation the entire input (a binary string) is given directly.  In the \textbf{query model}, the input is a function $f:\{0,1\}^n\to\{0,1\}^m$ accessible only through \emph{queries} (evaluations of $f$).  The computational cost is measured by the \textbf{number of queries}.
+
+\subsection{Example Query Problems}
+
+\begin{center}
+\begin{tabular}{lll}
+\hline
+\textbf{Problem} & \textbf{Input} & \textbf{Output} \\\hline
+OR & $f:\{0,1\}^n\to\{0,1\}$ & $1$ if $\exists\,x: f(x)=1$; else $0$ \\
+Parity & $f:\{0,1\}^n\to\{0,1\}$ & $\bigoplus_x f(x)$ \\
+Minimum & $f:\{0,1\}^n\to\{0,1\}^m$ & $\min_x f(x)$ (lexicographic) \\
+Unique search & $f:\{0,1\}^n\to\{0,1\}$ & the unique $z$ with $f(z)=1$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Classical Query Gates}
+
+In a Boolean circuit, a query gate simply evaluates $f$ on a chosen input $x$ and returns $f(x)$.
+
+\subsection{Quantum Query Gates}
+
+\begin{definition}[Standard quantum query gate]
+For $f:\{0,1\}^n\to\{0,1\}^m$, the unitary query gate $U_f$ acts on $n+m$ qubits as
+\[
+    U_f\ket{x}\ket{y} = \ket{x}\ket{y\oplus f(x)},
+\]
+where $\oplus$ denotes bitwise XOR.
+\end{definition}
+
+\begin{itemize}
+    \item $U_f$ is always unitary (in fact, a permutation matrix with $U_f^\dagger = U_f$).
+    \item Setting $\ket{y}=\ket{0^m}$ recovers ordinary evaluation: $U_f\ket{x}\ket{0^m}=\ket{x}\ket{f(x)}$.
+    \item The echoing of $\ket{x}$ and the XOR structure ensure unitarity for \emph{every} $f$.
+\end{itemize}
+
+%----------------------------------------------------------------------
+\section{Deutsch's Algorithm}
+%----------------------------------------------------------------------
+
+\subsection{Deutsch's Problem}
+
+Input: $f:\{0,1\}\to\{0,1\}$.  Output: $0$ if $f$ is constant, $1$ if $f$ is balanced.  Equivalently, compute $f(0)\oplus f(1)$.
+
+Any classical algorithm requires \textbf{2 queries} (even probabilistic ones).
+
+\subsection{The Circuit}
+
+\begin{enumerate}
+    \item Initialise: top qubit $\ket{0}$, bottom qubit $\ket{1}$.
+    \item Apply $H$ to both qubits.
+    \item Apply $U_f$.
+    \item Apply $H$ to top qubit.
+    \item Measure top qubit.
+\end{enumerate}
+
+\subsection{Analysis}
+
+\paragraph{After Hadamards.}
+\[
+    \ket{\pi_1} = \ket{-}\otimes\ket{+}
+    = \ket{-}\otimes\frac{1}{\sqrt{2}}\bigl(\ket{0}+\ket{1}\bigr).
+\]
+
+\paragraph{Phase kickback.}  A key identity: for $a\in\{0,1\}$,
+\[
+    \ket{0\oplus a}-\ket{1\oplus a} = (-1)^a\bigl(\ket{0}-\ket{1}\bigr).
+\]
+Hence the query gate produces
+\[
+    \ket{\pi_2}
+    = \ket{-}\otimes\frac{1}{\sqrt{2}}\bigl((-1)^{f(0)}\ket{0}+(-1)^{f(1)}\ket{1}\bigr).
+\]
+The function value is ``kicked'' into the \emph{phase}.
+
+\paragraph{Simplify.}
+\[
+    \ket{\pi_2}
+    = (-1)^{f(0)}\;\ket{-}\otimes\frac{1}{\sqrt{2}}\bigl(\ket{0}+(-1)^{f(0)\oplus f(1)}\ket{1}\bigr)
+    = (-1)^{f(0)}\;\ket{-}\otimes
+    \begin{cases}\ket{+} & f(0)\oplus f(1)=0,\\ \ket{-} & f(0)\oplus f(1)=1.\end{cases}
+\]
+
+\paragraph{Final Hadamard \& measurement.}
+$H\ket{+}=\ket{0}$, $H\ket{-}=\ket{1}$.  The measurement outcome is $f(0)\oplus f(1)$ with certainty.  \textbf{One query suffices.}
+
+\subsection{The Phase Kickback Phenomenon}
+
+More generally, if $\ket{\psi}$ is an eigenvector of $X$ (bit-flip) with eigenvalue $(-1)^a$, then
+\[
+    U_f\ket{\psi}\ket{x} \;=\; (-1)^{f(x)}\ket{\psi}\ket{x}.
+\]
+The minus state $\ket{-}$ is such an eigenvector (eigenvalue $-1$).  Phase kickback is a recurring technique in quantum algorithms (Deutsch--Jozsa, phase estimation, Shor).
+
+%----------------------------------------------------------------------
+\section{The Deutsch--Jozsa Algorithm}
+%----------------------------------------------------------------------
+
+\subsection{Hadamard on $n$ Qubits}
+
+\begin{proposition}
+\[
+    H^{\otimes n}\ket{x} = \frac{1}{\sqrt{2^n}}\sum_{y\in\{0,1\}^n}(-1)^{x\cdot y}\ket{y},
+\]
+where $x\cdot y = \bigoplus_{k}x_k y_k$ is the \textbf{binary dot product}.
+\end{proposition}
+
+\subsection{The Deutsch--Jozsa Circuit}
+
+\begin{enumerate}
+    \item Top $n$ qubits: $\ket{0^n}$; bottom qubit: $\ket{1}$.
+    \item $H^{\otimes(n+1)}$.
+    \item $U_f$.
+    \item $H^{\otimes n}$ on top $n$ qubits only.
+    \item Measure top $n$ qubits.
+\end{enumerate}
+
+State just before measurement:
+\[
+    \ket{-}\otimes\frac{1}{2^n}\sum_{y\in\{0,1\}^n}\left(\sum_{x\in\{0,1\}^n}(-1)^{f(x)+x\cdot y}\right)\ket{y}.
+\]
+
+\subsection{The Deutsch--Jozsa Problem}
+
+\textbf{Promise:} $f:\{0,1\}^n\to\{0,1\}$ is either \emph{constant} or \emph{balanced} (each output value appears exactly $2^{n-1}$ times).
+
+\textbf{Goal:} Output $0$ (constant) or $1$ (balanced).
+
+\paragraph{Algorithm.} Run the circuit; output $0$ if the measurement yields $0^n$, otherwise output $1$.
+
+\paragraph{Correctness.}
+\[
+    \Pr(y=0^n) = \frac{1}{2^{2n}}\left|\sum_x (-1)^{f(x)}\right|^2
+    = \begin{cases}1 & f\text{ constant},\\ 0 & f\text{ balanced}.\end{cases}
+\]
+
+\textbf{Quantum:} 1 query, zero error.  \textbf{Classical deterministic:} $2^{n-1}+1$ queries.  \textbf{Classical probabilistic:} $O(1)$ queries with bounded error (so the advantage over randomised algorithms is modest).
+
+\subsection{The Bernstein--Vazirani Problem}
+
+\textbf{Promise:} $\exists\,s\in\{0,1\}^n$ such that $f(x)=s\cdot x$ for all $x$.
+
+\textbf{Goal:} Find $s$.
+
+The Deutsch--Jozsa circuit solves this with \textbf{1 query}: the final state collapses to $\ket{-}\otimes\ket{s}$, so the measurement directly yields $s$.
+
+\textbf{Classical:} Any algorithm (even probabilistic) requires at least $n$ queries, since each query reveals at most 1 bit of information about $s$.
+
+%----------------------------------------------------------------------
+\section{Simon's Algorithm}
+%----------------------------------------------------------------------
+
+\subsection{Simon's Problem}
+
+\textbf{Input:} $f:\{0,1\}^n\to\{0,1\}^m$.
+
+\textbf{Promise:} $\exists\,s\in\{0,1\}^n$ such that for all $x,y$:
+\[
+    f(x)=f(y) \;\Longleftrightarrow\; y\in\{x,\;x\oplus s\}.
+\]
+
+\begin{itemize}
+    \item If $s=0^n$: $f$ is one-to-one.
+    \item If $s\neq 0^n$: $f$ is two-to-one; each output has exactly two pre-images $\{w,\,w\oplus s\}$.
+\end{itemize}
+
+\textbf{Goal:} Find $s$.
+
+\subsection{The Circuit}
+
+\begin{enumerate}
+    \item Top $n$ qubits: $\ket{0^n}$; bottom $m$ qubits: $\ket{0^m}$.
+    \item $H^{\otimes n}$ on top qubits.
+    \item $U_f$.
+    \item $H^{\otimes n}$ on top qubits.
+    \item Measure top $n$ qubits $\to$ string $y$.
+\end{enumerate}
+
+(No phase kickback; the bottom register stores $f(x)$ directly.)
+
+\subsection{Analysis of Measurement Probabilities}
+
+The probability of obtaining string $y$ is
+\[
+    p(y) = \frac{1}{2^n}\sum_{z\in\mathrm{range}(f)}
+    \left|\sum_{x:\,f(x)=z}\frac{(-1)^{x\cdot y}}{2^{n/2}}\right|^2.
+\]
+
+\paragraph{Case 1: $s=0^n$ ($f$ one-to-one).}
+Each pre-image has one element, so $p(y)=1/2^n$ for every $y$ (uniform).
+
+\paragraph{Case 2: $s\neq 0^n$ ($f$ two-to-one).}
+Each pre-image $\{w,w\oplus s\}$ contributes
+\[
+    \left|(-1)^{w\cdot y}+(-1)^{(w\oplus s)\cdot y}\right|^2
+    = \left|1+(-1)^{s\cdot y}\right|^2
+    = \begin{cases}4 & s\cdot y=0,\\ 0 & s\cdot y=1.\end{cases}
+\]
+Hence
+\[
+    p(y) = \begin{cases}1/2^{n-1} & s\cdot y=0,\\ 0 & s\cdot y=1.\end{cases}
+\]
+
+\subsection{Classical Post-Processing}
+
+Run the circuit $k=n+r$ times independently, obtaining strings $y^{(1)},\dots,y^{(k)}$.  Form the $k\times n$ binary matrix $M$ with rows $y^{(i)}$.  Then $s$ is in the null space of $M$ over $\mathbb{F}_2$.
+
+Compute $\ker(M)$ via Gaussian elimination modulo~$2$.  With probability $\ge 1-2^{-r}$, the null space is $\{0^n,s\}$ (or just $\{0^n\}$ if $s=0^n$), uniquely determining $s$.
+
+\subsection{Complexity Comparison}
+
+\begin{center}
+\begin{tabular}{lcc}
+\hline
+& \textbf{Quantum} & \textbf{Classical (any)} \\\hline
+Queries & $O(n)$ & $\Omega(2^{n/2})$ \\
+\hline
+\end{tabular}
+\end{center}
+
+This is a \textbf{provable exponential separation}, even against probabilistic classical algorithms.  Simon's algorithm directly inspired Shor's factoring algorithm.
+
+%----------------------------------------------------------------------
+\section{Summary}
+%----------------------------------------------------------------------
+
+\begin{center}
+\begin{tabular}{lccc}
+\hline
+\textbf{Algorithm} & \textbf{Quantum queries} & \textbf{Classical queries} & \textbf{Separation} \\\hline
+Deutsch & 1 & 2 & constant \\
+Deutsch--Jozsa & 1 & $2^{n-1}+1$ (det.) / $O(1)$ (rand.) & exp.\ (det.) \\
+Bernstein--Vazirani & 1 & $n$ & linear \\
+Simon & $O(n)$ & $\Omega(2^{n/2})$ & \textbf{exponential} \\
+\hline
+\end{tabular}
+\end{center}
+
+Key recurring ideas:
+\begin{itemize}
+    \item \textbf{Phase kickback:} encoding function values into phases via an eigenvector ancilla.
+    \item \textbf{Hadamard transform:} converting phase information into measurable amplitude information.
+    \item \textbf{Interference:} constructive for the correct answer, destructive for incorrect ones.
+\end{itemize}
+
+\end{document}

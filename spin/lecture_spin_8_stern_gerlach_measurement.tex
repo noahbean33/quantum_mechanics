@@ -1,0 +1,347 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{mathtools}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Quantum Spin Lecture Notes}
+\lhead{Lecture 8: Stern--Gerlach, Measurement, \& Entanglement}
+\cfoot{\thepage}
+
+% --- Theorem Environments ---
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+
+\title{\textbf{Quantum Spin (8): The Stern--Gerlach Experiment, \\ Measurement, \& Entanglement}}
+\author{Lecture Notes on Quantum Spin}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{The Stern--Gerlach Experiment}
+% ============================================================
+
+\subsection{Basic Setup}
+
+The \textbf{Stern--Gerlach experiment} provides a concrete, physical realization of a quantum spin measurement. The apparatus consists of:
+
+\begin{enumerate}
+    \item \textbf{Particle emitter:} Emits spin-$\frac{1}{2}$ particles (historically, silver atoms) traveling horizontally.
+    \item \textbf{Inhomogeneous magnetic field:} A region where the $z$-component of $\vec{B}$ varies with height: $\frac{\partial B_z}{\partial z} \neq 0$.
+    \item \textbf{Detector screen (back wall):} Records where the particle strikes.
+\end{enumerate}
+
+\subsection{The Deflection Mechanism}
+
+From the previous lecture, the force on a magnetic moment in an inhomogeneous field is:
+\[
+    \vec{F} = \nabla(\vec{\mu}\cdot\vec{B}).
+\]
+
+For a spin-$\frac{1}{2}$ particle whose spin is along $+z$ (spin up), $\vec{\mu} = \mu\,\hat{z}$:
+\[
+    F_z = \mu\frac{\partial B_z}{\partial z}.
+\]
+
+For spin down, $\vec{\mu} = -\mu\,\hat{z}$:
+\[
+    F_z = -\mu\frac{\partial B_z}{\partial z}.
+\]
+
+The spin-up component is deflected upward; the spin-down component is deflected downward.
+
+\subsection{Quantum vs.\ Classical Predictions}
+
+\begin{itemize}
+    \item \textbf{Classical prediction:} Angular momentum $\vec{L}$ can point in any direction $\Rightarrow$ a continuous smear on the detector screen.
+    \item \textbf{Quantum prediction:} Spin is quantized (only up or down along the measurement axis) $\Rightarrow$ exactly \textbf{two discrete spots} on the screen.
+\end{itemize}
+
+The observation of two spots was among the first direct experimental evidence of spin quantization.
+
+\subsection{Quantum-Mechanical Description}
+
+The particle's state is a two-component wavefunction:
+\[
+    \ket{\Psi(t, \vec{x})} = \begin{pmatrix}\psi_\uparrow(t, \vec{x}) \\ \psi_\downarrow(t, \vec{x})\end{pmatrix}.
+\]
+
+Initially, both components overlap spatially (same Gaussian wave packet). As the particle traverses the inhomogeneous field:
+\begin{itemize}
+    \item $\psi_\uparrow$ is deflected upward (feels $+F_z$).
+    \item $\psi_\downarrow$ is deflected downward (feels $-F_z$).
+\end{itemize}
+
+After passing through the field, the two wave packets are \textbf{spatially separated}: $\psi_\uparrow$ is localized near the upper spot, $\psi_\downarrow$ near the lower spot.
+
+% ============================================================
+\section{Why Silver Atoms?}
+% ============================================================
+
+The original Stern--Gerlach experiment (1922) used \textbf{silver atoms}, not lone electrons. There are several important reasons:
+
+\subsection{Eliminating the Lorentz Force}
+
+An electron in a magnetic field experiences the Lorentz force $\vec{F} = q\vec{v}\times\vec{B}$, which would deflect it regardless of spin, overwhelming the much weaker magnetic-moment force. Silver atoms are \textbf{electrically neutral} ($Q_{\text{total}} = 0$), so the Lorentz force vanishes.
+
+\subsection{Silver's Electronic Structure}
+
+Silver (atomic number $Z = 47$) has one \textbf{valence electron} in the $5s$ orbital:
+\begin{itemize}
+    \item All inner-shell electrons are paired (one spin up, one spin down per pair), so their magnetic moments cancel.
+    \item The lone valence electron accounts for the net spin of the entire atom.
+    \item Protons and neutrons also have spin, but $\mu \propto q/(2m)$ and the proton mass is $\sim\!2000\times$ the electron mass, making nuclear magnetic moments negligible in comparison.
+    \item The $s$-orbital has \textbf{zero orbital angular momentum} ($\ell = 0$), so only the intrinsic spin contributes --- no complications from orbital motion.
+\end{itemize}
+
+\subsection{Creating the Inhomogeneous Field}
+
+The varying magnetic field is produced by two permanent magnets:
+\begin{itemize}
+    \item The \textbf{top magnet} has a \emph{pointed} (wedge-shaped) pole face.
+    \item The \textbf{bottom magnet} has a \emph{flat} (rectangular) pole face.
+\end{itemize}
+
+Inside a ferromagnet, all atomic spins are aligned, producing dense, parallel field lines. Outside, the lines must loop back (since $\nabla\cdot\vec{B} = 0$, no magnetic monopoles). The pointed top pole causes field lines to splay outward more rapidly, creating a higher field density near the top than the bottom:
+\[
+    \frac{\partial B_z}{\partial z} \neq 0.
+\]
+
+Two flat pole faces would produce a nearly uniform field ($\partial B_z/\partial z \approx 0$), insufficient for spin separation.
+
+% ============================================================
+\section{Lessons About Quantum Measurement}
+% ============================================================
+
+The Stern--Gerlach experiment illuminates four fundamental lessons about measurement in quantum mechanics.
+
+\subsection{Lesson 1: Measurements Take Time}
+
+Measurement is \emph{not} instantaneous. The particle must travel from the emitter, through the magnetic field region, to the detector. The spatial separation of the spin components develops gradually over this transit time.
+
+\subsection{Lesson 2: Measurements Are Not Perfectly Accurate}
+
+Each spin component arrives at the screen as a Gaussian wave packet with finite width $\sigma$:
+\[
+    |\psi_\uparrow(z)|^2 \propto e^{-(z - z_\uparrow)^2 / 2\sigma^2}, \qquad |\psi_\downarrow(z)|^2 \propto e^{-(z - z_\downarrow)^2 / 2\sigma^2}.
+\]
+
+The tails of the two Gaussians overlap slightly, introducing a small probability of misidentification. However, making the magnets \emph{longer} increases the separation $|z_\uparrow - z_\downarrow|$, making the measurement arbitrarily precise (at the cost of taking longer).
+
+\subsection{Lesson 3: Measurement Is Not Mystical}
+
+Measurement requires a real physical apparatus --- magnets, detectors, careful engineering. Pauli matrices and eigenvectors are mathematical abstractions; nobody has ever ``seen'' a Pauli matrix in the lab. The physics lies in how real devices exploit electromagnetic interactions to extract information about quantum states.
+
+\subsection{Lesson 4: Measurement Works via Entanglement}
+
+This is the deepest lesson and requires the concept of entanglement, developed below.
+
+% ============================================================
+\section{Hilbert Spaces and the Tensor Product}
+% ============================================================
+
+\subsection{Hilbert Spaces for Different Degrees of Freedom}
+
+\begin{definition}[Hilbert Space]
+    A \textbf{Hilbert space} $\mathcal{H}$ is a (complete) inner product space that serves as the space of states for a quantum system.
+\end{definition}
+
+\begin{itemize}
+    \item \textbf{Spin only:} $\mathcal{H}_{\text{spin}} = \mathbb{C}^2$ (two-component complex vectors).
+    \item \textbf{Position only:} $\mathcal{H}_{\text{pos}} = \{f : \mathbb{R}^3 \to \mathbb{C}\}$ (square-integrable wavefunctions).
+    \item \textbf{Both:} $\mathcal{H} = \mathcal{H}_{\text{pos}} \otimes \mathcal{H}_{\text{spin}}$ (functions from $\mathbb{R}^3$ to $\mathbb{C}^2$).
+\end{itemize}
+
+\subsection{The Tensor Product}
+
+\begin{definition}[Tensor Product]
+    The \textbf{tensor product} $\otimes$ combines states from different Hilbert spaces into a joint state. If $\ket{\phi} \in \mathcal{H}_1$ and $\ket{\chi} \in \mathcal{H}_2$, then $\ket{\phi}\otimes\ket{\chi} \in \mathcal{H}_1 \otimes \mathcal{H}_2$.
+\end{definition}
+
+Key properties:
+\begin{enumerate}
+    \item \textbf{Distributive:} $\ket{\phi}\otimes\bigl(\alpha\ket{\chi_1} + \beta\ket{\chi_2}\bigr) = \alpha\,\ket{\phi}\otimes\ket{\chi_1} + \beta\,\ket{\phi}\otimes\ket{\chi_2}$.
+    \item \textbf{General states:} A general state in $\mathcal{H}_1 \otimes \mathcal{H}_2$ is a \emph{sum} of tensor products, not necessarily a single tensor product.
+\end{enumerate}
+
+In our context:
+\begin{itemize}
+    \item $\psi_{\text{init}}(\vec{x}) \otimes \ket{\uparrow}$: a wave packet $\psi_{\text{init}}$ that is spin up.
+    \item $\psi_{\text{init}}(\vec{x}) \otimes \ket{\downarrow}$: the same wave packet, spin down.
+    \item A general state with both spin and position:
+    \[
+        \ket{\Psi} = \psi_\uparrow(\vec{x})\otimes\ket{\uparrow} + \psi_\downarrow(\vec{x})\otimes\ket{\downarrow} \;\longleftrightarrow\; \begin{pmatrix}\psi_\uparrow(\vec{x}) \\ \psi_\downarrow(\vec{x})\end{pmatrix}.
+    \]
+\end{itemize}
+
+% ============================================================
+\section{Entanglement}
+% ============================================================
+
+\subsection{Definition}
+
+\begin{definition}[Product State vs.\ Entangled State]
+    A state $\ket{\Psi} \in \mathcal{H}_1 \otimes \mathcal{H}_2$ is a \textbf{product state} (not entangled) if it can be written as a single tensor product:
+    \[
+        \ket{\Psi} = \ket{\phi}\otimes\ket{\chi}.
+    \]
+    It is \textbf{entangled} if it \emph{cannot} be written in this form, i.e., it requires a sum of tensor products.
+\end{definition}
+
+\subsection{Entanglement as Correlation}
+
+Entanglement is analogous to \textbf{correlation}: knowledge of one degree of freedom provides information about the other.
+
+\begin{itemize}
+    \item \textbf{Product state} $\psi_{\text{init}}(\vec{x})\otimes\bigl(\alpha\ket{\uparrow} + \beta\ket{\downarrow}\bigr)$: knowing the particle's position tells you nothing about its spin. The position and spin are \emph{independent}.
+    \item \textbf{Entangled state} $\alpha\,\psi_{\text{up}}(\vec{x})\otimes\ket{\uparrow} + \beta\,\psi_{\text{down}}(\vec{x})\otimes\ket{\downarrow}$ (with $\psi_{\text{up}} \not\propto \psi_{\text{down}}$): finding the particle at the ``upper'' position implies it is spin up; finding it at the ``lower'' position implies spin down. Position and spin are \emph{correlated}.
+\end{itemize}
+
+% ============================================================
+\section{The Stern--Gerlach Experiment as Entanglement}
+% ============================================================
+
+\subsection{Before the Magnetic Field}
+
+The initial state is a product state:
+\[
+    \ket{\Psi_{\text{init}}} = \psi_{\text{init}}(\vec{x})\otimes\bigl(\alpha\ket{\uparrow} + \beta\ket{\downarrow}\bigr).
+\]
+
+By the distributive property:
+\[
+    = \alpha\,\psi_{\text{init}}(\vec{x})\otimes\ket{\uparrow} + \beta\,\psi_{\text{init}}(\vec{x})\otimes\ket{\downarrow}.
+\]
+
+Both terms share the \emph{same} spatial wavefunction $\psi_{\text{init}}$ --- a product state. Position and spin are uncorrelated.
+
+\subsection{After the Magnetic Field}
+
+Time evolution via the Pauli equation (which is linear) maps each term independently:
+\begin{align}
+    \psi_{\text{init}}(\vec{x})\otimes\ket{\uparrow} &\;\xrightarrow{\text{evolve}}\; \psi_{\text{f},\uparrow}(\vec{x})\otimes\ket{\uparrow}, \\
+    \psi_{\text{init}}(\vec{x})\otimes\ket{\downarrow} &\;\xrightarrow{\text{evolve}}\; \psi_{\text{f},\downarrow}(\vec{x})\otimes\ket{\downarrow}.
+\end{align}
+
+By linearity:
+\[
+    \ket{\Psi_{\text{final}}} = \alpha\,\psi_{\text{f},\uparrow}(\vec{x})\otimes\ket{\uparrow} + \beta\,\psi_{\text{f},\downarrow}(\vec{x})\otimes\ket{\downarrow}.
+\]
+
+Since $\psi_{\text{f},\uparrow}$ and $\psi_{\text{f},\downarrow}$ are spatially separated (different peaks), $\psi_{\text{f},\uparrow} \not\propto \psi_{\text{f},\downarrow}$, so this state is \textbf{entangled}. The measurement apparatus has entangled the spin degree of freedom with the position degree of freedom.
+
+\begin{theorem}[Measurement as Entanglement]
+    The role of a measurement apparatus is to take an initial product state (spin and position uncorrelated) and evolve it into an entangled state (spin and position correlated), so that observing the position reveals the spin.
+\end{theorem}
+
+\subsection{Degree of Entanglement}
+
+The quality of the measurement is related to how well-separated the spatial wavefunctions are. Consider:
+\[
+    \left|\braket{\psi_{\text{f},\uparrow}}{\psi_{\text{f},\downarrow}}\right|^2 = \left|\int \overline{\psi_{\text{f},\uparrow}(\vec{x})}\,\psi_{\text{f},\downarrow}(\vec{x})\,d^3x\right|^2.
+\]
+
+\begin{itemize}
+    \item $\approx 0$ (negligible overlap): \textbf{strong entanglement}, excellent measurement.
+    \item $\approx 1$ (large overlap): \textbf{weak entanglement}, poor measurement.
+\end{itemize}
+
+Making the magnets longer decreases the overlap, improving the measurement.
+
+% ============================================================
+\section{Quantum Measurement Collapse}
+% ============================================================
+
+\subsection{The Puzzle}
+
+After the Stern--Gerlach apparatus, the state is the entangled superposition:
+\[
+    \ket{\Psi_{\text{final}}} = \alpha\,\psi_{\text{f},\uparrow}\otimes\ket{\uparrow} + \beta\,\psi_{\text{f},\downarrow}\otimes\ket{\downarrow}.
+\]
+
+This is a superposition of ``particle at top, spin up'' and ``particle at bottom, spin down.'' Yet we never \emph{observe} the superposition --- we see the particle at one location \emph{or} the other:
+\begin{itemize}
+    \item With probability $|\alpha|^2$: particle found at the upper spot, spin up.
+    \item With probability $|\beta|^2$: particle found at the lower spot, spin down.
+\end{itemize}
+
+This is the \textbf{measurement problem}: why does the superposition ``collapse'' to one outcome?
+
+\begin{remark}
+    This is essentially \textbf{Schr\"odinger's cat} in miniature: why do we see the cat alive \emph{or} dead, but never in a superposition of both?
+\end{remark}
+
+\subsection{Quantum Decoherence: A Partial Answer}
+
+The resolution involves the \textbf{environment}. The full Hilbert space is:
+\[
+    \mathcal{H} = \mathcal{H}_{\text{pos}} \otimes \mathcal{H}_{\text{spin}} \otimes \mathcal{H}_{\text{env}}.
+\]
+
+When the particle hits the detector screen, it displaces atoms in the screen, which displace neighboring atoms, which affect air molecules, etc. The state becomes:
+\[
+    \alpha\,\psi_{\text{f},\uparrow}\otimes\ket{\uparrow}\otimes\ket{E_{\text{f},\uparrow}} + \beta\,\psi_{\text{f},\downarrow}\otimes\ket{\downarrow}\otimes\ket{E_{\text{f},\downarrow}},
+\]
+where $\ket{E_{\text{f},\uparrow}}$ and $\ket{E_{\text{f},\downarrow}}$ are the environmental states corresponding to each outcome.
+
+\begin{proposition}
+    For a macroscopic environment with many degrees of freedom:
+    \[
+        \left|\braket{E_{\text{f},\uparrow}}{E_{\text{f},\downarrow}}\right|^2 \lll 1.
+    \]
+    The environmental states are effectively orthogonal because two ``random'' states in a very high-dimensional Hilbert space have negligible overlap.
+\end{proposition}
+
+This \textbf{three-way entanglement} (position $\otimes$ spin $\otimes$ environment) is the mechanism of \textbf{quantum decoherence}: the environment ``measures'' the experiment, causing the superposition to behave \emph{as if} it had collapsed to a single outcome.
+
+\begin{definition}[Quantum Decoherence]
+    \textbf{Decoherence} is the process by which a quantum system becomes entangled with its environment, causing quantum superpositions to become effectively classical (no observable interference between branches).
+\end{definition}
+
+\begin{remark}
+    Decoherence explains \emph{why we don't see superpositions in everyday life}. It does not, by itself, fully resolve the measurement problem (the question of which specific outcome is realized remains open and is the subject of various interpretations of quantum mechanics). For a thorough treatment, see M.\ Schlosshauer, \emph{Quantum Decoherence} (Springer).
+\end{remark}
+
+% ============================================================
+\section{Summary of the Quantum Spin Series}
+% ============================================================
+
+Over the course of these eight lectures, we have developed a complete picture of quantum spin for spin-$\frac{1}{2}$ particles:
+
+\begin{enumerate}
+    \item \textbf{Lecture 1 (Introduction):} Spin states live in $\mathbb{C}^2$; measurements yield probabilities via inner products; collapse occurs after measurement.
+    \item \textbf{Lecture 2 (Pauli Matrices):} The three Pauli matrices $\sigma_x, \sigma_y, \sigma_z$ compute expectation values and encode the spin observable along each axis.
+    \item \textbf{Lecture 3 (Bloch Sphere):} Every spin state corresponds to a point on the unit sphere via the Bloch vector $\hat{n} = \bra{\psi}\vec{\sigma}\ket{\psi}$.
+    \item \textbf{Lecture 4 (Classical Dynamics):} Classical Larmor precession motivates the quantum Hamiltonian $H = \mathcal{E}\,\hat{n}\cdot\vec{\sigma}$; the gyromagnetic ratio $g \approx 2$ arises from relativistic quantum field theory.
+    \item \textbf{Lecture 5 (Schr\"odinger's Equation):} Three methods for solving the Schr\"odinger equation; the matrix exponential $e^{-iHt/\hbar}$ implements time evolution as a rotation of the Bloch vector.
+    \item \textbf{Lecture 6 (Self-Adjointness):} $H = H^\dagger$ implies conservation of probability, uniqueness of time evolution, real energy eigenvalues, and unitarity.
+    \item \textbf{Lecture 7 (Wavefunctions):} The Pauli equation governs spatial motion with spin; the force $\vec{F} = \nabla(\vec{\mu}\cdot\vec{B})$ on a magnetic moment in an inhomogeneous field.
+    \item \textbf{Lecture 8 (Measurement):} The Stern--Gerlach experiment measures spin by entangling it with position; decoherence via environmental entanglement explains the apparent collapse of the wavefunction.
+\end{enumerate}
+
+\begin{remark}
+    The spin-$\frac{1}{2}$ system, despite being the simplest quantum system ($\mathbb{C}^2$), contains essentially every conceptual feature of quantum mechanics: superposition, measurement, probability, collapse, time evolution, unitarity, entanglement, and decoherence. Mastery of this system provides a foundation for all of quantum mechanics.
+\end{remark}
+
+\end{document}

@@ -1,0 +1,222 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\titleformat{\section}{\large\bfseries}{Lecture 9.\thesection}{1em}{}
+
+\title{\textbf{Lecture 9: Density Matrices} \\ \large Understanding Quantum Information \& Computation}
+\author{Based on the lectures by John Watrous (IBM Quantum)}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------
+\section{Overview}
+%----------------------------------------------------------------------
+
+This lecture opens the third unit of the series, which develops the \textbf{general description} of quantum information.  Whereas the simplified description uses state vectors and unitary matrices, the general description uses \textbf{density matrices} (this lecture), \textbf{quantum channels} (Lecture~10), and \textbf{general measurements / POVMs} (Lecture~11).
+
+The general description is:
+\begin{itemize}
+    \item strictly more expressive (it can model noise, decoherence, partial information),
+    \item fully consistent with the simplified description (pure states and unitaries are special cases),
+    \item free of global-phase ambiguity.
+\end{itemize}
+
+%----------------------------------------------------------------------
+\section{Motivation: Why Density Matrices?}
+%----------------------------------------------------------------------
+
+\subsection{Limitations of State Vectors}
+
+State vectors cannot represent:
+\begin{enumerate}
+    \item \textbf{Classical uncertainty} about which quantum state a system is in (e.g.\ a random mixture of $\ket{0}$ and $\ket{+}$).
+    \item \textbf{Subsystems} of entangled systems---if $(X,Y)$ is in state $\ket{\Phi^+}$, there is no state vector for $X$ alone.
+    \item \textbf{Noisy processes} that cannot be described by unitary evolution.
+\end{enumerate}
+
+Density matrices resolve all three issues.
+
+\subsection{Classical Analogy}
+
+In classical information, a single system can be in a probabilistic state (a probability vector) even when the full compound system is in a definite joint state.  Density matrices play an analogous role for quantum information.
+
+%----------------------------------------------------------------------
+\section{Definition and Basic Properties}
+%----------------------------------------------------------------------
+
+\begin{definition}[Density matrix]
+A \textbf{density matrix} (or \textbf{density operator}) is a square matrix $\rho$ satisfying:
+\begin{enumerate}
+    \item $\rho \succeq 0$ \quad (positive semidefinite: all eigenvalues $\ge 0$),
+    \item $\tr(\rho)=1$ \quad (unit trace).
+\end{enumerate}
+\end{definition}
+
+\begin{definition}[Pure and mixed states]
+\begin{itemize}
+    \item A density matrix is a \textbf{pure state} if $\rho=\ket{\psi}\!\bra{\psi}$ for some unit vector $\ket{\psi}$.  Equivalently, $\rho^2=\rho$ (rank one).
+    \item A density matrix that is not pure is called a \textbf{mixed state}.
+\end{itemize}
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{enumerate}
+    \item $\rho=\ket{0}\!\bra{0}=\begin{pmatrix}1&0\\0&0\end{pmatrix}$: pure state.
+    \item $\rho=\frac{1}{2}\ket{0}\!\bra{0}+\frac{1}{2}\ket{1}\!\bra{1}=\frac{1}{2}I$: the \textbf{maximally mixed state} of a qubit.
+    \item $\rho=\frac{3}{4}\ket{+}\!\bra{+}+\frac{1}{4}\ket{1}\!\bra{1}$: a mixed state representing classical uncertainty.
+\end{enumerate}
+\end{example}
+
+\subsection{Spectral Decomposition}
+
+Every density matrix can be diagonalised:
+\[
+    \rho = \sum_k p_k\ket{\phi_k}\!\bra{\phi_k},
+\]
+where $\{\ket{\phi_k}\}$ is an orthonormal set, $p_k\ge 0$, and $\sum_k p_k=1$.  The eigenvalues $p_k$ form a probability distribution over the eigenstates.
+
+\subsection{Ensemble Interpretation}
+
+A density matrix $\rho=\sum_j q_j\ket{\psi_j}\!\bra{\psi_j}$ (where $\{\ket{\psi_j}\}$ need not be orthogonal and $\sum_j q_j=1$) represents an \textbf{ensemble}: the system is in state $\ket{\psi_j}$ with probability $q_j$.
+
+\begin{remark}
+Different ensembles can yield the \emph{same} density matrix.  Two ensembles are physically indistinguishable if and only if they produce the same $\rho$.  This resolves the global-phase ambiguity: $\ket{\psi}$ and $e^{i\phi}\ket{\psi}$ give the same $\rho=\ket{\psi}\!\bra{\psi}$.
+\end{remark}
+
+%----------------------------------------------------------------------
+\section{Measurements and Density Matrices}
+%----------------------------------------------------------------------
+
+\subsection{Born Rule}
+
+For a projective measurement $\{\Pi_k\}$ on state $\rho$:
+\[
+    \Pr(\text{outcome }k) = \tr(\Pi_k\,\rho).
+\]
+Post-measurement state given outcome $k$:
+\[
+    \rho_k = \frac{\Pi_k\,\rho\,\Pi_k}{\tr(\Pi_k\,\rho)}.
+\]
+
+\subsection{Standard Basis Measurement}
+
+For $\Pi_a=\ket{a}\!\bra{a}$:
+\[
+    \Pr(a) = \bra{a}\rho\ket{a} = \rho_{aa} \quad\text{(the $(a,a)$ diagonal entry of $\rho$)}.
+\]
+
+%----------------------------------------------------------------------
+\section{Unitary Evolution}
+%----------------------------------------------------------------------
+
+If a unitary $U$ is applied to a system in state $\rho$, the new state is
+\[
+    \rho' = U\rho\,U^\dagger.
+\]
+This is consistent with the state-vector picture: $\ket{\psi}\mapsto U\ket{\psi}$ gives $\rho=\ket{\psi}\!\bra{\psi}\mapsto U\ket{\psi}\!\bra{\psi}U^\dagger$.
+
+%----------------------------------------------------------------------
+\section{Reduced Density Matrices (Partial Trace)}
+%----------------------------------------------------------------------
+
+\begin{definition}[Partial trace]
+For a bipartite system $(X,Y)$ in state $\rho_{XY}$, the \textbf{reduced density matrix} of $X$ is
+\[
+    \rho_X = \tr_Y(\rho_{XY}),
+\]
+where $\tr_Y$ denotes the \textbf{partial trace} over $Y$.  For a product of outer products:
+\[
+    \tr_Y\bigl(\ket{a}\!\bra{b}\otimes\ket{c}\!\bra{d}\bigr)
+    = \braket{d}{c}\;\ket{a}\!\bra{b}.
+\]
+Extended to general operators by linearity.
+\end{definition}
+
+\begin{example}
+For $\ket{\Phi^+}=\frac{1}{\sqrt{2}}(\ket{00}+\ket{11})$:
+\[
+    \rho_{XY}=\ket{\Phi^+}\!\bra{\Phi^+}
+    =\frac{1}{2}\bigl(\ket{00}\!\bra{00}+\ket{00}\!\bra{11}+\ket{11}\!\bra{00}+\ket{11}\!\bra{11}\bigr).
+\]
+\[
+    \rho_X = \tr_Y(\rho_{XY}) = \frac{1}{2}\bigl(\ket{0}\!\bra{0}+\ket{1}\!\bra{1}\bigr) = \frac{I}{2}.
+\]
+Each qubit individually is maximally mixed, even though the joint state is pure.  This is the hallmark of entanglement.
+\end{example}
+
+\begin{theorem}
+A pure bipartite state $\ket{\psi}_{XY}$ is a product state if and only if $\rho_X=\tr_Y(\ket{\psi}\!\bra{\psi})$ is a pure state.
+\end{theorem}
+
+%----------------------------------------------------------------------
+\section{Purification}
+%----------------------------------------------------------------------
+
+\begin{theorem}[Purification]
+For every density matrix $\rho_X$ on system $X$, there exists a system $Y$ and a pure state $\ket{\psi}_{XY}$ such that
+\[
+    \rho_X = \tr_Y\bigl(\ket{\psi}\!\bra{\psi}\bigr).
+\]
+Moreover, if $\rho_X=\sum_k p_k\ket{\phi_k}\!\bra{\phi_k}$ (spectral decomposition), one such purification is
+\[
+    \ket{\psi}_{XY} = \sum_k \sqrt{p_k}\,\ket{\phi_k}_X\ket{k}_Y.
+\]
+\end{theorem}
+
+\begin{remark}
+Purifications are not unique: different purifications of the same $\rho_X$ are related by unitaries on $Y$.
+\end{remark}
+
+%----------------------------------------------------------------------
+\section{The Bloch Sphere (Qubit Density Matrices)}
+%----------------------------------------------------------------------
+
+Any qubit density matrix can be written
+\[
+    \rho = \frac{I+\vec{r}\cdot\vec{\sigma}}{2},
+    \qquad \vec{r}=(r_x,r_y,r_z)\in\mathbb{R}^3,\;\|\vec{r}\|\le 1,
+\]
+where $\vec{\sigma}=(\sigma_x,\sigma_y,\sigma_z)$ are the Pauli matrices.  The vector $\vec{r}$ is the \textbf{Bloch vector}.
+
+\begin{itemize}
+    \item $\|\vec{r}\|=1$: pure state (surface of the Bloch sphere).
+    \item $\|\vec{r}\|<1$: mixed state (interior).
+    \item $\vec{r}=\vec{0}$: maximally mixed state $I/2$ (centre).
+\end{itemize}
+
+%----------------------------------------------------------------------
+\section{Summary}
+%----------------------------------------------------------------------
+
+\begin{center}
+\begin{tabular}{lcc}
+\hline
+& \textbf{Simplified} & \textbf{General} \\\hline
+States & $\ket{\psi}$ (unit vector) & $\rho$ (density matrix) \\
+Pure states & all states & $\rho=\ket{\psi}\!\bra{\psi}$ \\
+Mixed states & not representable & $\rho$ with rank $>1$ \\
+Evolution & $\ket{\psi}\mapsto U\ket{\psi}$ & $\rho\mapsto U\rho U^\dagger$ \\
+Measurement probability & $|\!\braket{a}{\psi}\!|^2$ & $\tr(\Pi_a\rho)$ \\
+Subsystems & not directly representable & partial trace $\rho_X=\tr_Y(\rho_{XY})$ \\
+Global phase & ambiguous & absent \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

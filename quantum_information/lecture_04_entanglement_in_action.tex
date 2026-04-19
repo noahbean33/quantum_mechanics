@@ -1,0 +1,303 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\titleformat{\section}{\large\bfseries}{Lecture 4.\thesection}{1em}{}
+
+\title{\textbf{Lecture 4: Entanglement in Action} \\ \large Understanding Quantum Information \& Computation}
+\author{Based on the lectures by John Watrous (IBM Quantum)}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------
+\section{Overview}
+%----------------------------------------------------------------------
+
+This lecture concludes the first unit (Basics of Quantum Information) by examining three foundational examples in which \textbf{entanglement} plays a central role:
+
+\begin{enumerate}
+    \item \textbf{Quantum Teleportation} --- transmitting a qubit using classical communication and shared entanglement.
+    \item \textbf{Superdense Coding} --- transmitting two classical bits via one qubit and shared entanglement.
+    \item \textbf{The CHSH Game} --- a non-local game demonstrating that entanglement enables correlations impossible in any classical theory.
+\end{enumerate}
+
+These are not merely illustrative examples; they are cornerstones of quantum information theory.
+
+%----------------------------------------------------------------------
+\section{Preliminaries: Alice, Bob, and Entanglement}
+%----------------------------------------------------------------------
+
+\paragraph{Alice and Bob.}
+Hypothetical agents (sender/receiver, cooperating players, etc.) conventionally labelled $A$ and $B$.  They may be in different locations; the setup specifies what resources they share and what communication is permitted.
+
+\paragraph{The e-bit.}
+When we say Alice and Bob \emph{share an e-bit}, we mean Alice holds qubit $A$, Bob holds qubit $B$, and the joint state is
+\[
+    \ket{\Phi^+}_{AB} = \frac{1}{\sqrt{2}}\bigl(\ket{00}+\ket{11}\bigr).
+\]
+This represents \textbf{one unit of entanglement}.  Compare with \emph{one bit of shared randomness}: a pair of classically correlated bits in state $(1/2,0,0,1/2)^T$, which is \emph{not} entangled.
+
+\paragraph{Classical correlation vs.\ entanglement.}
+Intuitive descriptions (``measuring one instantly affects the other'') do not distinguish $\ket{\Phi^+}$ from classical correlation.  The three examples below \emph{do} distinguish them: each achieves something provably impossible with classical correlations alone.
+
+%----------------------------------------------------------------------
+\section{Quantum Teleportation}
+%----------------------------------------------------------------------
+
+\subsection{The Scenario}
+
+\begin{itemize}
+    \item Alice holds a qubit $Q$ in an unknown state $\ket{\psi}=\alpha\ket{0}+\beta\ket{1}$.
+    \item She wishes to transmit $\ket{\psi}$ to Bob.
+    \item \textbf{Constraint:} Alice can only send \emph{classical} bits to Bob.
+    \item \textbf{Resource:} Alice and Bob share one e-bit ($A$ with Alice, $B$ with Bob).
+\end{itemize}
+
+Without the e-bit, transmitting a qubit via classical communication alone is \emph{impossible} (a consequence related to the no-cloning theorem).
+
+\subsection{The Protocol}
+
+\begin{enumerate}
+    \item Alice applies CNOT with $Q$ as control, $A$ as target.
+    \item Alice applies $H$ to $Q$.
+    \item Alice measures both $Q$ and $A$ in the standard basis, obtaining bits $b$ and $a$ respectively.
+    \item Alice sends $(a,b)$ to Bob (2 classical bits).
+    \item Bob applies $X^a Z^b$ to his qubit $B$.
+\end{enumerate}
+
+Bob's correction operations:
+\[
+\begin{array}{c|c}
+(a,b) & \text{Bob's operation} \\\hline
+(0,0) & I \\
+(0,1) & Z \\
+(1,0) & X \\
+(1,1) & XZ
+\end{array}
+\]
+
+\subsection{Analysis}
+
+The initial three-qubit state (ordering: $B, A, Q$) is
+\[
+    \ket{\Phi^+}_{BA}\otimes\ket{\psi}_Q
+    = \frac{1}{\sqrt{2}}\bigl(\ket{00}+\ket{11}\bigr)_{BA}\otimes\bigl(\alpha\ket{0}+\beta\ket{1}\bigr)_Q.
+\]
+
+\paragraph{After CNOT ($Q\to A$):}
+\[
+    \frac{1}{\sqrt{2}}\bigl(\alpha\ket{000}+\alpha\ket{110}+\beta\ket{011}+\beta\ket{101}\bigr).
+\]
+
+\paragraph{After Hadamard on $Q$:}
+Expand and regroup by isolating the standard basis states of $(A,Q)$:
+\[
+    \frac{1}{2}\Bigl[
+        \ket{00}_{AQ}\otimes(\alpha\ket{0}+\beta\ket{1})_B
+        +\ket{01}_{AQ}\otimes(\alpha\ket{0}-\beta\ket{1})_B
+        +\ket{10}_{AQ}\otimes(\alpha\ket{1}+\beta\ket{0})_B
+        +\ket{11}_{AQ}\otimes(\alpha\ket{1}-\beta\ket{0})_B
+    \Bigr].
+\]
+
+\paragraph{Key observations:}
+\begin{enumerate}
+    \item Each measurement outcome $(a,b)$ occurs with probability $\tfrac{1}{4}$, \emph{independent} of $\alpha,\beta$.
+    \item Bob's qubit after outcome $(a,b)$ is $X^a Z^b\ket{\psi}$ (up to normalisation).
+    \item Applying $X^a Z^b$ corrects to $\ket{\psi}$.
+\end{enumerate}
+
+\subsection{Teleportation with Entangled Inputs}
+
+If $Q$ is entangled with an external system $R$, a similar (but slightly more involved) calculation shows the protocol still works perfectly.  By linearity, once correctness is established for arbitrary $\ket{\psi}=\alpha\ket{0}+\beta\ket{1}$, it extends to entangled inputs automatically.
+
+\subsection{Remarks}
+
+\begin{itemize}
+    \item Teleportation is a \emph{protocol}, not an ``application.''  It implements quantum communication from classical communication + entanglement.
+    \item The e-bit is consumed (``burned up'') during the protocol.
+    \item Cost: 1 e-bit + 2 classical bits $\longrightarrow$ 1 qubit of quantum communication.
+    \item No information about $\ket{\psi}$ is revealed by the measurement outcomes (uniform distribution).
+    \item Alice no longer holds $\ket{\psi}$ after the protocol, consistent with no-cloning.
+\end{itemize}
+
+%----------------------------------------------------------------------
+\section{Superdense Coding}
+%----------------------------------------------------------------------
+
+\subsection{The Scenario}
+
+\begin{itemize}
+    \item Alice has two classical bits $(a,b)$ she wishes to send to Bob.
+    \item \textbf{Resource:} One e-bit (qubit $A$ with Alice, qubit $B$ with Bob).
+    \item Alice may send \emph{one qubit} to Bob (but no classical bits).
+\end{itemize}
+
+By \textbf{Holevo's theorem}, transmitting two classical bits via one qubit is impossible \emph{without} entanglement.
+
+\subsection{The Protocol}
+
+\begin{enumerate}
+    \item Depending on $(a,b)$, Alice applies an operation to her qubit $A$:
+    \[
+    \begin{array}{c|c|c}
+    (a,b) & \text{Alice's gate} & \text{Resulting Bell state} \\\hline
+    (0,0) & I   & \ket{\Phi^+} \\
+    (0,1) & Z   & \ket{\Phi^-} \\
+    (1,0) & X   & \ket{\Psi^+} \\
+    (1,1) & ZX  & \ket{\Psi^-}
+    \end{array}
+    \]
+    \item Alice sends qubit $A$ to Bob.
+    \item Bob applies CNOT ($A$ control, $B$ target), then $H$ on $A$, then measures both qubits.  The measurement outcome is $(a,b)$.
+\end{enumerate}
+
+\subsection{Analysis}
+
+The key insight is that Alice, by acting on her qubit alone, can steer the shared Bell state to \emph{any} of the four Bell states.  Since the Bell states form an orthonormal basis, Bob can perfectly distinguish them.
+
+Bob's decoding circuit (CNOT then $H$) is the inverse of the Bell-state preparation circuit from Lecture~3.  It maps Bell states back to standard basis states:
+\[
+    \ket{\Phi^+}\mapsto\ket{00},\quad
+    \ket{\Phi^-}\mapsto\ket{01},\quad
+    \ket{\Psi^+}\mapsto\ket{10},\quad
+    \ket{\Psi^-}\mapsto\ket{11}.
+\]
+
+\subsection{Remarks}
+
+\begin{itemize}
+    \item Cost: 1 e-bit + 1 qubit of quantum communication $\longrightarrow$ 2 classical bits.
+    \item Teleportation and superdense coding together establish an equivalence:
+    \[
+        1\text{ qubit} + 1\text{ e-bit} \;\longleftrightarrow\; 2\text{ classical bits} + 1\text{ e-bit}.
+    \]
+    \item Without the e-bit, neither conversion is possible.
+\end{itemize}
+
+%----------------------------------------------------------------------
+\section{The CHSH Game}
+%----------------------------------------------------------------------
+
+\subsection{Non-Local Games}
+
+A \textbf{non-local game} involves:
+\begin{itemize}
+    \item Two cooperating players, Alice and Bob, who \emph{cannot communicate} during the game.
+    \item A \textbf{referee} who sends questions and evaluates answers.
+\end{itemize}
+
+Procedure:
+\begin{enumerate}
+    \item Referee sends question $x$ to Alice and $y$ to Bob (chosen randomly).
+    \item Alice responds with $a$; Bob responds with $b$.
+    \item Referee declares win/loss based on a fixed, publicly known rule applied to $(x,y,a,b)$.
+\end{enumerate}
+
+Alice and Bob may agree on any strategy beforehand (including sharing entanglement).
+
+\subsection{CHSH Game Specification}
+
+\begin{itemize}
+    \item Questions and answers are all single bits.
+    \item $(x,y)$ is chosen uniformly at random from $\{0,1\}^2$.
+    \item \textbf{Winning condition:} $a\oplus b = x\wedge y$, i.e.:
+\end{itemize}
+\[
+\begin{array}{c|c}
+(x,y) & \text{Win iff} \\\hline
+(0,0) & a = b \\
+(0,1) & a = b \\
+(1,0) & a = b \\
+(1,1) & a \neq b
+\end{array}
+\]
+
+\subsection{Classical Strategies}
+
+\begin{theorem}
+No classical (deterministic or probabilistic) strategy can win the CHSH game with probability exceeding $\frac{3}{4}$.
+\end{theorem}
+
+\begin{proof}[Proof sketch]
+A deterministic strategy defines functions $a(x)$ and $b(y)$.  The four winning conditions yield four equations in four binary unknowns.  Taking the XOR of all four left-hand sides gives $0$, but the XOR of all four right-hand sides gives $1$---contradiction.  Hence at least one equation must fail, so at most 3 out of 4 cases can be won.
+
+Probabilistic strategies are convex combinations of deterministic ones, so the winning probability is at most the maximum over deterministic strategies, which is $\tfrac{3}{4}$.
+\end{proof}
+
+\subsection{Quantum Strategy}
+
+Define the parameterised state and unitary:
+\[
+    \ket{\chi_\theta} = \cos\theta\,\ket{0}+\sin\theta\,\ket{1},
+    \qquad
+    U_\theta = \begin{pmatrix}\cos\theta & -\sin\theta \\ \sin\theta & \cos\theta\end{pmatrix}.
+\]
+
+\paragraph{Strategy.}
+Alice and Bob share $\ket{\Phi^+}$.
+\begin{itemize}
+    \item Alice applies $U_0=I$ if $x=0$, or $U_{\pi/4}$ if $x=1$, then measures.
+    \item Bob applies $U_{\pi/8}$ if $y=0$, or $U_{-\pi/8}$ if $y=1$, then measures.
+\end{itemize}
+
+\paragraph{Analysis.}
+Using the identity
+\[
+    \bigl(\ket{\chi_\alpha}\otimes\ket{\chi_\beta}\bigr)^\dagger\ket{\Phi^+}
+    = \frac{1}{\sqrt{2}}\cos(\alpha-\beta),
+\]
+one computes the probability that the measurement outcomes agree or disagree.  In every case, the winning probability is
+\[
+    p_{\text{win}} = \frac{2+\sqrt{2}}{4} \approx 85.36\%.
+\]
+
+\begin{theorem}[Tsirelson's inequality]
+No quantum strategy can win the CHSH game with probability exceeding $\frac{2+\sqrt{2}}{4}$.  The strategy above is therefore \textbf{optimal}.
+\end{theorem}
+
+\subsection{Geometric Interpretation}
+
+The four pairs of angles $(\alpha,\beta)$ are arranged so that in the first three cases ($x\wedge y=0$), the angle difference $|\alpha-\beta|=\pi/8$ is small (high probability of equal outcomes), while in the fourth case ($x\wedge y=1$), the angle difference is $3\pi/8$ (high probability of unequal outcomes).  This is precisely the structure needed to maximise the overall winning probability.
+
+\subsection{Significance}
+
+\begin{itemize}
+    \item The CHSH game provides a concrete, \emph{testable} demonstration of Bell's theorem: quantum mechanics is incompatible with local hidden-variable theories.
+    \item Experimental Bell tests (Aspect, Clauser, Zeilinger --- 2022 Nobel Prize in Physics) confirm that quantum strategies achieve the predicted advantage.
+    \item The CHSH game is an instance of the broader and actively researched theory of \textbf{non-local games}.
+\end{itemize}
+
+%----------------------------------------------------------------------
+\section{Summary}
+%----------------------------------------------------------------------
+
+\begin{center}
+\begin{tabular}{lccc}
+\hline
+\textbf{Protocol/Game} & \textbf{Input} & \textbf{Output} & \textbf{Cost} \\\hline
+Teleportation & 1 qubit & 1 qubit (at Bob) & 1 e-bit + 2 cbits \\
+Superdense coding & 2 cbits & 2 cbits (at Bob) & 1 e-bit + 1 qubit \\
+CHSH game & --- & win probability & 1 e-bit; $p_{\max}^Q=\frac{2+\sqrt{2}}{4}>\frac{3}{4}=p_{\max}^C$ \\
+\hline
+\end{tabular}
+\end{center}
+
+All three examples demonstrate capabilities of entanglement that are provably impossible with classical resources alone, establishing entanglement as a genuine physical resource.
+
+\end{document}

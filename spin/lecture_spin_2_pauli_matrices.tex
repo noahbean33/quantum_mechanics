@@ -1,0 +1,280 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{mathtools}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Quantum Spin Lecture Notes}
+\lhead{Lecture 2: Pauli Matrices}
+\cfoot{\thepage}
+
+% --- Theorem Environments ---
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+
+\title{\textbf{Quantum Spin (2): The Pauli Matrices}}
+\author{Lecture Notes on Quantum Spin}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{Motivation: Expectation Values}
+% ============================================================
+
+Recall that for a state $\ket{\psi} = \begin{pmatrix} \alpha \\ \beta \end{pmatrix}$, the probability of measuring spin up (assigned value $+1$) or spin down (assigned value $-1$) along the $z$-axis gives the \textbf{expectation value}:
+\[
+    \langle S_z \rangle = (+1)\,|\alpha|^2 + (-1)\,|\beta|^2 = |\alpha|^2 - |\beta|^2.
+\]
+
+Computing expectation values along $x$ or $y$ requires re-expressing $\ket{\psi}$ in the eigenbasis of those axes, which is cumbersome. The Pauli matrices provide a far more elegant approach.
+
+\subsection{Expectation Value Along $x$ by Decomposition}
+
+Writing $\ket{\uparrow_z}$ and $\ket{\downarrow_z}$ in the $x$-basis:
+\begin{align}
+    \ket{\uparrow_z} &= \frac{1}{\sqrt{2}}\ket{\uparrow_x} + \frac{1}{\sqrt{2}}\ket{\downarrow_x}, \\
+    \ket{\downarrow_z} &= \frac{1}{\sqrt{2}}\ket{\uparrow_x} - \frac{1}{\sqrt{2}}\ket{\downarrow_x}.
+\end{align}
+
+For a general state $\ket{\psi} = \alpha\ket{\uparrow_z} + \beta\ket{\downarrow_z}$, collecting terms in the $x$-basis:
+\[
+    \ket{\psi} = \frac{\alpha + \beta}{\sqrt{2}}\ket{\uparrow_x} + \frac{\alpha - \beta}{\sqrt{2}}\ket{\downarrow_x}.
+\]
+
+Therefore:
+\[
+    \langle S_x \rangle = \frac{1}{2}|\alpha + \beta|^2 - \frac{1}{2}|\alpha - \beta|^2.
+\]
+
+This works but is tedious. The Pauli matrices offer a better way.
+
+% ============================================================
+\section{Constructing the Pauli Matrices}
+% ============================================================
+
+\subsection{The Key Idea: Operators with Eigenvectors}
+
+We seek a linear operator $\sigma_x : \mathbb{C}^2 \to \mathbb{C}^2$ satisfying:
+\begin{enumerate}[label=(\roman*)]
+    \item \textbf{Linearity:} $\sigma_x(\ket{\psi_1} + \ket{\psi_2}) = \sigma_x\ket{\psi_1} + \sigma_x\ket{\psi_2}$.
+    \item \textbf{Eigenvalue equations:}
+    \[
+        \sigma_x\ket{\uparrow_x} = +1 \cdot \ket{\uparrow_x}, \qquad \sigma_x\ket{\downarrow_x} = -1 \cdot \ket{\downarrow_x}.
+    \]
+\end{enumerate}
+
+If such an operator exists, then for any state $\ket{\psi} = \alpha_x\ket{\uparrow_x} + \beta_x\ket{\downarrow_x}$:
+\[
+    \sigma_x\ket{\psi} = \alpha_x\ket{\uparrow_x} - \beta_x\ket{\downarrow_x},
+\]
+and the inner product gives the expectation value directly:
+\[
+    \bra{\psi}\sigma_x\ket{\psi} = |\alpha_x|^2 - |\beta_x|^2 = \langle S_x \rangle.
+\]
+
+\subsection{Finding $\sigma_x$ Explicitly}
+
+The operator $\sigma_x$ swaps the two components of a vector:
+\[
+    \sigma_x \begin{pmatrix} \alpha \\ \beta \end{pmatrix} = \begin{pmatrix} \beta \\ \alpha \end{pmatrix}.
+\]
+
+\textbf{Verification of linearity:}
+\[
+    \sigma_x\left(\begin{pmatrix}\alpha_1\\\beta_1\end{pmatrix} + \begin{pmatrix}\alpha_2\\\beta_2\end{pmatrix}\right) = \begin{pmatrix}\beta_1+\beta_2\\\alpha_1+\alpha_2\end{pmatrix} = \sigma_x\begin{pmatrix}\alpha_1\\\beta_1\end{pmatrix} + \sigma_x\begin{pmatrix}\alpha_2\\\beta_2\end{pmatrix}. \quad\checkmark
+\]
+
+\textbf{Verification of eigenvalue equations:}
+\begin{align}
+    \sigma_x\ket{\uparrow_x} &= \sigma_x \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix} = +1\cdot\ket{\uparrow_x}. \quad\checkmark \\
+    \sigma_x\ket{\downarrow_x} &= \sigma_x \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix} = \frac{1}{\sqrt{2}}\begin{pmatrix}-1\\1\end{pmatrix} = -1\cdot\ket{\downarrow_x}. \quad\checkmark
+\end{align}
+
+% ============================================================
+\section{Matrices: Definition and Multiplication}
+% ============================================================
+
+\subsection{What Is a Matrix?}
+
+A $2 \times 2$ \textbf{matrix} is a linear function that maps one column vector to another:
+\[
+    \begin{pmatrix} a & b \\ c & d \end{pmatrix} \begin{pmatrix} \alpha \\ \beta \end{pmatrix} = \begin{pmatrix} a\alpha + b\beta \\ c\alpha + d\beta \end{pmatrix}.
+\]
+
+The operator $\sigma_x$ can therefore be written as:
+\[
+    \boxed{\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}}
+\]
+
+\subsection{General Matrix Multiplication}
+
+If $A$ is an $m \times n$ matrix and $B$ is an $n \times \ell$ matrix, the product $AB$ is an $m \times \ell$ matrix with entries:
+\[
+    (AB)_{ij} = \sum_{k=1}^{n} A_{ik}\, B_{kj}.
+\]
+
+Important special cases:
+\begin{itemize}
+    \item \textbf{Matrix $\times$ column vector:} An $m \times m$ matrix times an $m \times 1$ column vector yields an $m \times 1$ column vector.
+    \item \textbf{Row vector $\times$ column vector (inner product):} A $1 \times m$ row vector times an $m \times 1$ column vector yields a $1 \times 1$ scalar.
+    \item \textbf{Column vector $\times$ row vector (outer product):} An $m \times 1$ column vector times a $1 \times m$ row vector yields an $m \times m$ matrix.
+\end{itemize}
+
+\subsection{Associativity}
+
+Matrix multiplication is \textbf{associative}: $(AB)C = A(BC)$. This is crucial for manipulating expressions like $\bra{\psi}\sigma_x\ket{\psi}$, which can be evaluated as either $(\bra{\psi})(\sigma_x\ket{\psi})$ or $(\bra{\psi}\sigma_x)(\ket{\psi})$.
+
+% ============================================================
+\section{The Three Pauli Matrices}
+% ============================================================
+
+\begin{definition}[Pauli Matrices]
+    The three \textbf{Pauli matrices} are:
+    \[
+        \boxed{\sigma_x = \begin{pmatrix} 0 & 1 \\ 1 & 0 \end{pmatrix}, \qquad \sigma_y = \begin{pmatrix} 0 & -i \\ i & 0 \end{pmatrix}, \qquad \sigma_z = \begin{pmatrix} 1 & 0 \\ 0 & -1 \end{pmatrix}}
+    \]
+\end{definition}
+
+\subsection{Eigenvalue Verification}
+
+Each Pauli matrix has eigenvalues $+1$ and $-1$, with the corresponding spin-up and spin-down states along that axis as eigenvectors.
+
+\textbf{For $\sigma_y$:}
+\begin{align}
+    \sigma_y\ket{\uparrow_y} &= \begin{pmatrix}0&-i\\i&0\end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix} = \frac{1}{\sqrt{2}}\begin{pmatrix}(-i)(i)\\(i)(1)\end{pmatrix} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix} = +1\cdot\ket{\uparrow_y}. \;\checkmark \\[6pt]
+    \sigma_y\ket{\downarrow_y} &= \begin{pmatrix}0&-i\\i&0\end{pmatrix}\frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix} = \frac{1}{\sqrt{2}}\begin{pmatrix}-1\\i\end{pmatrix} = -1\cdot\frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix} = -1\cdot\ket{\downarrow_y}. \;\checkmark
+\end{align}
+
+\textbf{For $\sigma_z$:}
+Since $\sigma_z$ is diagonal, it simply multiplies each component by its diagonal entry:
+\begin{align}
+    \sigma_z\ket{\uparrow_z} &= \begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}1\\0\end{pmatrix} = \begin{pmatrix}1\\0\end{pmatrix} = +1\cdot\ket{\uparrow_z}. \;\checkmark \\[4pt]
+    \sigma_z\ket{\downarrow_z} &= \begin{pmatrix}1&0\\0&-1\end{pmatrix}\begin{pmatrix}0\\1\end{pmatrix} = \begin{pmatrix}0\\-1\end{pmatrix} = -1\cdot\ket{\downarrow_z}. \;\checkmark
+\end{align}
+
+% ============================================================
+\section{Expectation Values via Pauli Matrices}
+% ============================================================
+
+\begin{theorem}[Expectation Value Formula]
+    For any normalized spin state $\ket{\psi} = \begin{pmatrix}\alpha\\\beta\end{pmatrix}$ and axis $a \in \{x,y,z\}$:
+    \[
+        \langle S_a \rangle = \bra{\psi}\sigma_a\ket{\psi}.
+    \]
+\end{theorem}
+
+Explicitly:
+\begin{align}
+    \langle S_x \rangle &= \bra{\psi}\sigma_x\ket{\psi} = \bar{\alpha}\beta + \bar{\beta}\alpha, \\[4pt]
+    \langle S_y \rangle &= \bra{\psi}\sigma_y\ket{\psi} = -i\bar{\alpha}\beta + i\bar{\beta}\alpha, \\[4pt]
+    \langle S_z \rangle &= \bra{\psi}\sigma_z\ket{\psi} = |\alpha|^2 - |\beta|^2.
+\end{align}
+
+\begin{remark}
+    One can verify that $\bar{\alpha}\beta + \bar{\beta}\alpha = \frac{1}{2}|\alpha+\beta|^2 - \frac{1}{2}|\alpha-\beta|^2$, confirming consistency with the decomposition method.
+\end{remark}
+
+% ============================================================
+\section{Eigenvectors, Eigenvalues, and Terminology}
+% ============================================================
+
+\begin{definition}[Eigenvector and Eigenvalue]
+    If $A$ is a matrix and $\ket{v}$ is a nonzero vector such that
+    \[
+        A\ket{v} = \lambda\ket{v}
+    \]
+    for some scalar $\lambda$, then $\ket{v}$ is an \textbf{eigenvector} of $A$ with \textbf{eigenvalue} $\lambda$.
+\end{definition}
+
+\begin{remark}
+    The prefix ``eigen'' comes from the German word meaning ``same'' or ``own.'' An eigenvector is a vector that the matrix ``keeps the same'' (up to scaling).
+\end{remark}
+
+Summary of eigenvalue structure:
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{c|c|c}
+    \textbf{Matrix} & \textbf{Eigenvalue $+1$} & \textbf{Eigenvalue $-1$} \\ \hline
+    $\sigma_x$ & $\ket{\uparrow_x} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}$ & $\ket{\downarrow_x} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix}$ \\[10pt]
+    $\sigma_y$ & $\ket{\uparrow_y} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix}$ & $\ket{\downarrow_y} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}$ \\[10pt]
+    $\sigma_z$ & $\ket{\uparrow_z} = \begin{pmatrix}1\\0\end{pmatrix}$ & $\ket{\downarrow_z} = \begin{pmatrix}0\\1\end{pmatrix}$
+\end{tabular}
+\end{center}
+
+% ============================================================
+\section{Outer Product Decomposition}
+% ============================================================
+
+Each Pauli matrix can be expressed as a difference of outer products of its eigenstates:
+\[
+    \sigma_a = \ket{\uparrow_a}\!\bra{\uparrow_a} - \ket{\downarrow_a}\!\bra{\downarrow_a}, \quad a \in \{x,y,z\}.
+\]
+
+Correspondingly, the identity matrix satisfies:
+\[
+    I = \ket{\uparrow_a}\!\bra{\uparrow_a} + \ket{\downarrow_a}\!\bra{\downarrow_a},
+\]
+which reflects the conservation of probability: for any axis, $P(\uparrow) + P(\downarrow) = 1$.
+
+\subsection{Explicit Verification for $\sigma_x$}
+
+\[
+    \ket{\uparrow_x}\!\bra{\uparrow_x} = \frac{1}{2}\begin{pmatrix}1\\1\end{pmatrix}\begin{pmatrix}1&1\end{pmatrix} = \frac{1}{2}\begin{pmatrix}1&1\\1&1\end{pmatrix},
+\]
+\[
+    \ket{\downarrow_x}\!\bra{\downarrow_x} = \frac{1}{2}\begin{pmatrix}1\\-1\end{pmatrix}\begin{pmatrix}1&-1\end{pmatrix} = \frac{1}{2}\begin{pmatrix}1&-1\\-1&1\end{pmatrix}.
+\]
+\[
+    \ket{\uparrow_x}\!\bra{\uparrow_x} - \ket{\downarrow_x}\!\bra{\downarrow_x} = \frac{1}{2}\begin{pmatrix}1&1\\1&1\end{pmatrix} - \frac{1}{2}\begin{pmatrix}1&-1\\-1&1\end{pmatrix} = \begin{pmatrix}0&1\\1&0\end{pmatrix} = \sigma_x. \;\checkmark
+\]
+
+% ============================================================
+\section{Inner Products and Outer Products}
+% ============================================================
+
+\begin{definition}[Inner Product vs.\ Outer Product]
+    For column vectors $\ket{u}$ and $\ket{v}$ in $\mathbb{C}^2$:
+    \begin{itemize}
+        \item \textbf{Inner product:} $\braket{v}{u} = \bra{v}\ket{u}$ is a $1 \times 1$ scalar (a number).
+        \item \textbf{Outer product:} $\ket{u}\!\bra{v}$ is a $2 \times 2$ matrix.
+    \end{itemize}
+\end{definition}
+
+The naming is intuitive: in the inner product $\bra{v}\ket{u}$, the brackets face \emph{inward}; in the outer product $\ket{u}\!\bra{v}$, they face \emph{outward}.
+
+% ============================================================
+\section{Spin Along an Arbitrary Direction}
+% ============================================================
+
+Given a unit vector $\hat{n} = (n_x, n_y, n_z) \in \mathbb{R}^3$, the operator for spin measurement along $\hat{n}$ is:
+\[
+    \hat{n} \cdot \vec{\sigma} = n_x\,\sigma_x + n_y\,\sigma_y + n_z\,\sigma_z = \begin{pmatrix} n_z & n_x - in_y \\ n_x + in_y & -n_z \end{pmatrix}.
+\]
+
+The state that is always spin up in the $\hat{n}$ direction is the eigenvector of $\hat{n}\cdot\vec{\sigma}$ with eigenvalue $+1$.
+
+\begin{remark}
+    This connection between arbitrary spatial directions and $2\times 2$ matrices is the foundation of the \textbf{Bloch sphere}, which will be developed in the next lecture.
+\end{remark}
+
+\end{document}

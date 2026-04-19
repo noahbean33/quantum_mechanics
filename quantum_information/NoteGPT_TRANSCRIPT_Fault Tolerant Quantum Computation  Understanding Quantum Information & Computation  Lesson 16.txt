@@ -1,0 +1,222 @@
+00:00:01
+Welcome back to understanding quantum information and computation. My name is John Wattress and I'm the technical director for education at IBM Quantum. This is the 16th and final lesson of the series and the topic of the lesson is fall tolerant quantum computing. Over the course of the three previous lessons, we've seen several examples of quantum error correcting codes which can detect and allow us to correct quantum errors as long as not too many of them occur. If we want to use error correction for quantum
+
+00:00:30
+computing, however, there are still many issues that need to be reckoned with, including the reality that our quantum gates, measurements, and state preparations are themselves likely to be imperfect. So, for instance, if we're going to perform error correction on one or more cubits that have been encoded using a quantum error correcting code, then we're going to have to do that with gates and measurements that themselves have a chance of not working correctly. And that means not only failing to
+
+00:00:58
+detect or correct errors, but possibly introducing new errors. In addition, we also need to perform the actual computations we're interested in performing again with gates that aren't perfect. And we certainly can't risk decoding quantum information for the sake of performing computations and then re-encoding once we're done because errors might strike when the protection of a quantum error correcting code is absent. That means that we have to figure out how to perform quantum gates directly on
+
+00:01:25
+logical cubits that never go without the protection of a quantum error correcting code. This is a tall order, but it is known that as long as the level of noise falls below a certain threshold value, it is in fact possible to perform arbitrarily large quantum computations reliably using noisy hardware, at least in theory. And we'll discuss this critically important fact later in the lesson. Here's a brief overview of the lesson. We'll start out with a basic model for fault tolerant quantum
+
+00:01:54
+computing including a short discussion of noise models along with a general methodology for implementing a quantum circuit fall tolerantly. We'll then move on to the issue of error propagation in fault tolerant quantum circuits and how to control it. In particular, I'll discuss transversal gate implementations which offer a very simple way to control error propagation. Although there is a fundamental limitation that prevents us from using this method exclusively. I'll also talk about a
+
+00:02:24
+different methodology involving so-called magic states which offers a different path to controlling error propagation in fall tolerant quantum circuits. Although it isn't the only known method and finally the lesson concludes with a pretty highle discussion of the threshold theorem which I alluded to just a moment ago. This theorem states that arbitrarily large quantum circuits can be implemented reliably so long as the error rate of all of the components involved falls below a certain finite
+
+00:02:52
+threshold value. In general, this threshold value depends on the error correcting code we use as well as the specific choices we make for fault implementations of quantum gates and measurements but not on the size of the circuit being implemented. And this gives us a good reason to believe that large-scale quantum computations will one day become a reality. We'll begin by discussing a basic model for fault tolerant quantum computing which is naturally based on quantum circuits and quantum error
+
+00:03:22
+correcting codes. For the sake of this discussion, let's imagine that we have a quantum circuit that we hope to implement such as the one shown here. This happens to be a teleportation circuit including the preparation of the EBIT. But the specifics don't really matter for this discussion. And you could imagine that this is any other quantum circuit, possibly a much larger circuit that includes state preparations, unitary operations, and measurements. This circuit, of course, represents an ideal, and an actual
+
+00:03:52
+implementation of it won't be perfect. The natural question to ask is what could possibly go wrong? Well, there's quite a lot that could go wrong. For instance, the state initializations generally won't be perfect. Of course, the unitary gates won't be perfect and neither will the measurements. And moreover, the cubits themselves will be susceptible to noise, including decoherence, at every point in the computation, even when nothing is happening to these cubits and they're simply storing quantum
+
+00:04:25
+information. In other words, pretty much everything could go wrong. There is one exception though or at least that's a typical assumption and that is that any classical computations that are involved are probably not going to be faulty because for all intents and purposes classical computations are basically perfect. So for example, if we run a classical matching algorithm to compute corrections for surface code errors, we really don't need to worry that this classical computation might be
+
+00:04:52
+faulty. But anything that directly involves quantum information could be. Of course, we need a precise model through which we can associate probabilities for various things to go wrong. And if we wanted to, we could come up with as complicated a model as we like to hopefully reflect whatever actually happens in reality. If the model is too complicated, however, it might end up being difficult or impossible to work with or to say anything interesting about. One very simple example of a noise model that people often consider
+
+00:05:23
+is the independent stochastic noise model where errors or faults affecting different components at different moments or in other words, different locations in the circuit are independent. For instance, we could say that every gate fails with a certain probability, that bit flips and phase flips happen to stored cubits with a different probability per unit time and so on. But the assumption is that there's no correlation between different errors. Now, you might object to that model because there probably will be
+
+00:05:53
+some correlations among errors. For instance, there's probably a small chance of a catastrophic error that wipes out all the cubits at once. Or perhaps more likely, there could be errors that are localized but nevertheless affect multiple components. And nobody suggests otherwise. But nevertheless, this model does represent a simple baseline that in essence represents the idea that nature is unpredictable, but it isn't malicious and it's not trying to intentionally ruin quantum computations. There are other arguably
+
+00:06:26
+more realistic noise models that are often considered. And regardless of the model we choose, if it turns out that our model leads us astray and we learn something new about the errors in whatever system we're working with, we can naturally formulate and consider different error models. Next, we'll take a look at a basic strategy for implementing quantum circuits fall tolerantly. So let's consider a given logical quantum circuit, meaning an ideal quantum circuit that we're interested in running. For instance, we
+
+00:06:55
+could consider the same circuit as before, which is now stretched out a little bit because we're going to need a little bit more space for the fall tolerant implementation of it. First off, the state preparations, unitary gates, and measurements won't be performed directly as single gates or as single cubit measurements or state preparations, but rather they'll be performed by so-called gadgets, which could each involve multiple cubits and multiple operations. Here in this diagram, I've
+
+00:07:23
+illustrated this by drawing purple boxes around these things. And you can think of these purple boxes as being like little circuits or operations that are merely labeled by whatever state preparation or gate we intend to implement. Second, we need to protect the cubits using an error correcting code. So it won't be the logical cubits themselves that connect these different gadgets, but rather the gadgets act on the physical cubits that encode these logical cubits. And it's worth stressing here
+
+00:07:52
+that the logical cubits that we care about are never exposed, meaning that these logical cubits will spend their entire lives being protected by whatever quantum error correcting code we're using. And finally, we perform error correction on our encoded cubits repeatedly throughout the computation, basically whenever we have a chance. And it's critically important that we do this. Intuitively speaking, as errors take place, randomness or uncertainty starts to build up in the state of our
+
+00:08:23
+cubits and we need to constantly work to remove this randomness or entropy. And this happens through error correction. So you can kind of think of these error correction steps as being like little logical refrigerators or heat pumps that allow the logical cubits to stay cold so that the computation can work correctly. Once all these choices have been made, meaning the selection of all the gadgets as well as the code and assuming a particular noise model, there's a fundamental question that we can ask
+
+00:08:54
+ourselves and that is, is this actually helping. Are we making things better or are we making things worse? If there's too much noise, we could very well be making things worse, just like the 9Q shore code makes things worse if the chance of an error is too high. But if the noise is below a certain threshold, then all of this extra work will get us somewhere. And as we'll discuss toward the end of the lesson, paths open up for further reduction of the error. In this part of the lesson, we'll
+
+00:09:24
+discuss error propagation in fall tolerant quantum circuits having the basic structure that I just described. This turns out to be a primary concern because if we don't manage to control error propagation, errors will quickly overwhelm our error correction efforts. But if we're able to control the propagation of errors, then our code will stand a much better chance of keeping up so that errors can be corrected at a high enough rate to allow our computations to work. The starting point for this
+
+00:09:54
+discussion is the realization that two cubit gates or multiple cubit gates more generally can propagate errors even when they function correctly. For example, consider a C not gate. And suppose that an X error occurs on the control cubit prior to the C not gate being performed. Well, an X error functions just like an X gate. And we find that the circuit on the left is equivalent to the one on the right where X errors occur on both of the cubits after the C knot. This is a propagation of errors because the unfortunate location of the
+
+00:10:28
+X error on the left effectively turns it into two X errors on the right. And we'll never get around this. As long as we use C not gates, there's always going to be a chance that an X error occurs on the control cubit right before it, which then propagates to two X errors after. But as we'll see, as long as we take steps to limit the damage that this causes, we'll be okay. And by the way, the same phenomenon occurs when we have a Z error on the target cubit just prior to a C knot. And we discussed this
+
+00:10:58
+earlier and you can check these equalities by simply performing the multiplications or you can check them using kisskit. The upshot is that this will in both cases cause correlated errors on multiple cubits. And of course we shouldn't forget that the C not gates themselves could also be faulty which can also cause correlated errors. Adding to our concern, subsequent two cubit gates might propagate these errors even further. For instance, if we have three C not gates like this, just like we find when
+
+00:11:29
+we're measuring Xstabilizer generators, for instance, then a single error can quickly propagate to multiple cubits. And if this happens within a single code block, for instance, meaning a bunch of cubits that together encode a logical cubit, whatever error correcting code we've chosen isn't going to stand a chance because codes are designed to correct lowweight errors, not highway errors like this. And so this is something that we have to keep in mind front and center in fact as we're thinking about the gadgets and the
+
+00:12:00
+error correction steps in fault tolerant quantum circuits. The simplest known way to mitigate error propagation in fault tolerant quantum circuits is to implement gates transversally and I'll explain what that means momentarily. So let's keep the figure of our fault tolerant cir implementation on the screen just as a visual aid. The idea here is that for some quantum error correcting codes, certain gates can be implemented transversally, which means implementing them using gadgets that are tensor products of operations
+
+00:12:33
+where each operation acts only on a single cubit position within each code block. This is easiest to explain through some examples. The first and arguably simplest example is transversal implementations of polyge. The idea is that we'd like to build gadgets for each of the gates in our circuit. And in all cases, those gadgets operate on code blocks like we see for the X and Z gates at the end of our teleportation circuit. Of course, we can't decode, apply a polygate, and then re-encode because that would leave a
+
+00:13:06
+logical cubit unprotected and errors might propagate within the code block as a result of re-encoding. Fortunately, we don't need to do that as long as we use a stabilizer code because every stabilizer code allows for poly operations to be applied directly to our logical cubits. And in fact, we can do that with a tensor product of poly gates on the physical cubits used for the encoding. For example, if we consider the 3x3 surface code that came up at the end of the previous lesson, then we can
+
+00:13:35
+implement X and Z gates on the logical cubit encoded by this code by tensoring together X and Z gates along with identity gates in the patterns that are suggested here. This is a transversal implementation of these gates because every one of these individual gate operations acts only on a single cubit position within each code block. We're only using single cubic gates here, so it's kind of trivial in a way, but in any case, gadgets such as this won't cause errors to propagate. Now, any one of the
+
+00:14:06
+individual gates in a gadget such as this could fail, and that will introduce errors, but will always perform error correction immediately after every gadget. And as long as the error rate is low enough, the error correcting code will correct those errors. And like I said, this is always possible for polygates for every stabilizer code. Although you do have to identify the right pattern of polygates in the gadgets to properly implement whatever logical poly operation you're going for. For another example which does
+
+00:14:36
+involve two cubic gates. This time we can consider transversal implementations of C not gates. In particular, for every CSS code, we can always implement a C not gate between two logical cubits by simply performing C not gates on corresponding pairs of physical cubits. And this satisfies the condition of being transversal because each of these individual C not gates acts only on a single cubit position within each code block. For example, the first C not gate acts only on the topmost cubit within each code block. the second C not
+
+00:15:10
+gates acts only on the second from top cubit and so on. In this case, we could have a propagation of errors because C not gates propagate errors and there's no way to prevent that. But the key is that the error propagation never happens within a single code block. For example, an X error could occur on the top cubit of the top code block right before the gadget is performed and the first C not within the gadget will propagate that error to the top cubit in the lower block. But the two resulting errors are
+
+00:15:41
+now in separate code blocks. So the error correction steps that take place after the gadget will be able to correct those errors individually because those errors only affect a single cubit within each code block. In contrast, if the error propagation happened inside of the same code block, then we might be in trouble because the error propagation is then turning a lowway error into a higher way error that our code may not be able to handle. This implementation doesn't work for nonCSS codes, but as long as we use a
+
+00:16:10
+CSS code, we can always implement C not gates transversely in this way. And for one more example, every Clifford gate can be implemented transversely for the steam code. And in fact for any color code which is one of the really nice things about color codes in particular a hatomar gate on a logical cubit can be implemented by performing hatamar gates individually on each of the physical cubits and a logical sgate can be implemented not by an sgate on each cubit but rather by an s dagger gate on each physical
+
+00:16:44
+cubit. So the upshot is that transversal gate implementations are inherently fault tolerant because they never propagate errors within a single code block which gives the error correction steps a fighting chance to correct whatever errors are introduced or propagated by the gates used for these gadgets. So that's great and it's a really simple way to build fault tolerant gadgets and there are different codes that allow for transversal implementations of different gates such as T gates but unfortunately it's impossible
+
+00:17:15
+for any non-trivial code to implement a universal set of gates transversely which is a fact known as the eastern canel theorem in more technical terms what it says is that as long as our code has distance at least two the set of gates that can be implemented transverse iversally will necessarily generate a discrete set of operations up to a global phase and therefore this set isn't universal because universal gate sets necessarily generate infinitely many operations. I won't explain the proof of
+
+00:17:45
+this theorem which makes use of some basic facts about lee groupoups and lee algebbras which are not prerequisites for this series. But the basic idea is that infinite families of transversal operations can't possibly keep us inside of the code space because minuscule differences in transversal operations are well approximated by lowweight poly operations which the code detects as errors. So we're very happy when we can implement gates transversely. But for whatever code we choose, we know that we
+
+00:18:14
+will always have some gates that we can't implement this way. And so we need to look for alternative gadgets. By the eastern canal theorem, we know that it's not possible to implement a universal set of quantum gates transversely even for a meager distance 2 quantum error correcting code. So we need to find other ways to implement gates fall tolerantly at least for some gates. One well-known way to do this is through the use of so-called magic states. For the purposes of this discussion,
+
+00:18:44
+let's recall the S and T gates which are single cubic gates defined as is shown here on the screen. Let's also observe that first S is a Clifford operation which follows from our definition of Clifford operations. But you can also check that conjugating a polymatrix by S always gives us plus or minus another polyatrix. And second, T is not a Clifford operation. And in fact, if we combine T with Hadamard and Cot, both of which are Clifford operations, we get a universal set of quantum gates. So we can't implement a T gate
+
+00:19:19
+using just Clifford operations and standard basis measurements alone. But we can in fact implement a Tate using Clifford operations and standard basis measurements if in addition we have a copy of the state that's shown here on the screen, which is the Tate applied to a plus state. This state is called a magic state, although it's not unique in that regard. The term magic state is also used to refer to different states that play a similar role to this one in variations of this whole scheme. For instance, this circuit shown
+
+00:19:51
+here does the job. And it's not too difficult to check that. Here's the initial state with the top system on the right. And if we apply the C not gate and simplify, we get the state that's shown here. So if we measure the bottom cubit and get a zero which happens with probability 1/2, we don't perform the escape and the output is t applied to s. And if we measure one which also happens with probability 1/2 of course we do apply the escape and the net result is that the output is again t applied to
+
+00:20:25
+s. This isn't the only way to do this by the way. There are other similar looking circuits that accomplish the same task but it is one way to do it. This is a somewhat simplified example of something known as quantum gate teleportation, which I alluded to back in lesson 4, where teleportation is used not to send cubits, but to apply gates. The connection to teleportation may not be entirely clear here because, like I said, this is a simplified version, which we can get away with because t is
+
+00:20:55
+diagonal. But if you're interested in learning more, the keywords are quantum gate teleportation. And we could also do something similar to implement an S gate where this time the only gates we need are a C not gate and a Zgate along with the measurement which is helpful if we don't have a transversal implementation of an S gate. So that's interesting but it's not entirely clear that this actually helps. In the case of the Tgate implementation, for instance, we're managing to apply a TATE to an input
+
+00:21:26
+state. But to do that, we seem to be applying a TATE to a plus state to get a magic state. And the situation is similar for the Sgate implementation. The point is that we don't necessarily need to first create a plus state and then apply a Tate to get a magic state. There are other possible ways to get this state. And in particular, we can do this without having to worry about propagating errors in whatever computation we're working on because the magic states can be created separately. This allows for a fault
+
+00:21:56
+tolerant implementation of a Tate as I'll now briefly describe. First, we're not actually going to run the simple two cubit circuit shown here, but instead we'll run this circuit using cubits encoded in whatever error correcting code we're using for our fault tolerant implementation. Which means that the unitary gates and the measurements are done by fault tolerant gadgets. And that means we also need our magic states to be encoded as well. So everything will be fault tolerant as long as we can get our hands
+
+00:22:27
+on encoded magic states. We are assuming here by the way that we already have a fall tolerant gadget for an escape. If we were using the steam code for instance, we could simply implement the escape transversely. And for codes for which that doesn't work, one option is to first use this entire scheme to implement an escape fault tolerantly and then use that implementation here. Although that's not the only option. But anyway, getting back to the implementation, the important question that remains is how do we get our hands
+
+00:22:55
+on an encoded magic state given that we don't yet have a fault tolerant implementation of a Tate to make that simple? And the key idea is that we can use a probabilistic process to create encoded magic states. And if it doesn't happen to work out, then that's fine. We can just throw away any failed attempts and try again. And that doesn't disturb the computation we're actually trying to perform because the creation of magic states is done separately. A typical way that this is
+
+00:23:23
+done is through a process known as magic state distillation. And it works like this. We have a certain circuit known as a distiller. We input into this distiller a collection of noisy magic states and then measure all but one of the outputs. And if we condition on all of the measurement outcomes being zero, then what happens is that what comes out is a less noisy magic state, which can then be one of the cubits input into another distiller. And the process continues until we either fail because
+
+00:23:54
+one of the measurement outcomes is non zero and we try again or we have a magic state of sufficiently high quality that we can safely use it to implement a Tate in the computation that we care about. There are different known ways to build a distiller like this, but they all work in basically the same way, which is that they're decoders for stabilizer codes, meaning that they're inverses of encoding circuits, which is nice because it means that the distiller can be a Clifford operation. And finally, this
+
+00:24:23
+distillation process is actually something that takes place at the logical cubit level. So in reality, it's all done using gadgets for the distiller and the measurements. This process does have to start somewhere. But as long as the noise rate isn't too high, it is possible to create noisy but good enough magic states to start it off. For instance, by applying an actual noisy T gate to a cubit in a plus state and then encoding that cubit. So that was a very high level description, but hopefully I've given
+
+00:24:52
+you a rough idea of how this works. It's quite a bit more complicated than implementing gates transversely, but nevertheless, it offers a way to implement a universal set of quantum gates fall tolerantly, whereas transversal gate implementations alone can't do that. It's sometimes claimed that the overhead for using magic states to implement gates fault tolerantly along these lines would be very high where the vast majority of the work goes into distilling magic states and running the actual computation is more of an
+
+00:25:21
+afterthought. But that's actually not so clear and there have been detailed analyses that reveal that this method could be in fact practical. There are several other known schemes for implementing gates fall tolerantly. Code deformation and code switching are names associated with some of these schemes and new ways continue to be developed and refined but I won't describe those methods in this lesson. There is another important issue concerning fault tolerant implementations of quantum circuits and
+
+00:25:48
+it concerns the error correction steps themselves. So this is not about implementing gates. It's about doing the actual error correction. The problem is that if we think about the simple circuits that we first saw in lesson 14 for measuring stabilizer generators based on phase estimation, we find that they're not themselves fault tolerant because they could potentially cause errors to propagate within a single code block. This goes back to the idea that anything involving quantum information is
+
+00:26:18
+susceptible to errors and that includes the circuits that are themselves meant to correct errors. This seems rather problematic, but there are in fact multiple solutions known to this problem. I'll mention just a few of them, although I won't explain any of them in detail. And by the way, if you're getting the idea that fault tolerant quantum computing is complicated and there are a lot of details to worry about, then that's certainly understandable because it's true. There are a lot of moving parts
+
+00:26:44
+here and my intention with this lesson is not to explain all of the details but rather to give you just a basic introduction to how it all works. One method for fault tolerant quantum error correction is known as shore error correction named after Peter Shore who first proposed this method. The idea is to perform each syndrome measurement using a so-called cat state, which is the same thing as a GHC state when we have three cubits, but it can be generalized to any number of cubits that matches the weight of the stabilizer
+
+00:27:13
+generator that we're intending to measure. In particular, the circuit shown here works for measuring a stabilizer generator. And it can be shown that this method doesn't cause errors to propagate within a code block. It necessitates creating the cat state itself. And to make it work reliably in the presence of errors and potentially faulty gates, the method actually requires that we repeatedly run circuits like this and make inferences about where different errors may have occurred during the
+
+00:27:39
+process. An alternative method is known as steam error correction which was first proposed by Andrew Stein and this method works differently and it only works for CSS codes. In this method, we don't actually perform the syndrome measurements on the encoded quantum states in the circuit that we're trying to run, but instead we intentionally propagate errors to a workspace system and then measure that system and classically detect errors. This figure shown here shows how to do this for X errors in which case the workspace
+
+00:28:08
+cubits are initially set to an encoding of a plus state. So this is basically a transversal implementation of a C not gate which should do nothing because the target is in a plus state. But if there were X errors in the top cubits, they'll propagate down to the lower system and they'll be detected. There's also a similar method for detecting Z errors and that isn't shown here. There's also a related method known as canel error correction first proposed by Manny Canil and it's based on teleportation rather
+
+00:28:36
+than a transversal C not and that allows it to work for arbitrary stabilizer codes and not just CSS codes. The last thing that I'll discuss in this lesson is a very important theorem known as the threshold theorem. Here's a somewhat informal statement of the theorem. It says that if we have any quantum circuit having n gates where n can be as large as we like, then it's possible to implement that circuit with high accuracy using a noisy quantum circuit provided that the level of noise
+
+00:29:07
+is below a certain threshold value that's independent of n. And moreover, it isn't too expensive to do this in the sense that the size of the noisy circuit required is on the order of n times some constant power of the logarithm of n. To state the theorem more formally requires being specific about the noise model, which I won't do in this lesson. It can for instance be proved for the independent stochastic noise model that I mentioned earlier where errors occur independently at each possible location
+
+00:29:37
+in the circuit with some probability that's strictly smaller than this threshold value. But it can also be proved for more general noise models where there can be correlations among errors. Now, this is a theoretical result and the typical way that it's proved doesn't necessarily translate to something that we would actually do in practice, but it's nevertheless a very important theorem in practical terms. And the reason for this is that it basically says that there's no fundamental barrier to performing
+
+00:30:06
+quantum computations using noisy components. As long as the error rate for these components is below this threshold value, they can be used to build reliable quantum circuits of arbitrary size. Another way to say it is that if the theorem wasn't true, it's hard to imagine large scale quantum computing ever becoming a reality. There's a lot of technical details involved in formal proofs of this theorem, which I won't attempt to communicate. But I will try to explain the basic idea at a high level. And I'll
+
+00:30:37
+also try to loosely connect the basic idea to what we might expect to happen in practice. So let's suppose that this is our circuit. It's the same circuit that we've been talking about for the entire lesson. But again, we can imagine that our circuit is significantly larger and more complicated than this. We'd like to implement this circuit, but all of our components are noisy. And assuming we're using the independent stochcastic noise model just for simplicity, there's some
+
+00:31:02
+probability P with which errors occur independently at each possible location. If the circuit was significantly larger than the reciprocal of this probability P, then we could be pretty sure that a direct implementation of it wouldn't work correctly. So we go through all of the business of implementing the circuit fall tolerantly as I've discussed up to this point in the lesson and we ask ourselves the question that I raised earlier which is are we making things better or are we making things worse?
+
+00:31:29
+Well if the probability P that represents the error probability for each of our components is too large then this isn't going to help just like the 9Q short code doesn't help if the error probability is above 3 and a/4% or so. In particular, we've now made the circuit larger. So there are a lot more locations where errors could strike. However, if P is small enough, this is going to help. And what we'll effectively do is to reduce the error probability for the logical computation
+
+00:31:56
+that we're performing. So let's think about this in just a little bit more detail. And to see the main ideas in as simple a setting as possible, let's suppose that we use the 7 cubit steam code for error correction, which allows for the correction of up to one error per code block. So in order for a logical error to occur in the original circuit, we'll have to have at least two errors falling into the same code block for our fault tolerant implementation. Keeping in mind that there are a lot of
+
+00:32:25
+different ways to have two or more errors in the same code block, it can be argued that the probability of a logical error at each location in the original circuit is at most C * P ^ 2 where C is a number that depends on the code and on the gadgets that we use. But critically, it does not depend on the size of the original circuit. So if P is smaller than the reciprocal of C which is the number that we can take as our threshold value then this translates to a reduction in error. So our hard work in implementing the
+
+00:32:56
+circuit fall tolerantly is paying off. However this new error rate might still be too high for the entire circuit to work correctly. So we need to do more. In practice a natural thing to do at this point is to choose a better code and better gadgets to drive the error rate down to a point where the implementation is likely to work. Theoretically speaking, a simple way to argue that this is possible is to concatenate. In other words, we think about the fault tolerant implementation of the original circuit as a new logical
+
+00:33:28
+circuit. And then we implement it fault tolerantly. And then we do this again and again as many times as we need. And it turns out that this reduces the error very quickly. And that's how the threshold theorem is typically proved on paper. I'll give you just a very rough idea for how the error rate decreases leaving out the many technical details required to prove this formally. We start with the error probability P for our original components. And if we implement the circuit fall tolerantly, the error
+
+00:34:00
+decreases by a factor of C * P. If we then treat our fault tolerant implementation as a logical circuit and implement it fault tolerantly, we get a similar decrease in the error rate. But if we think about the effective error rate for the original circuit, we find that it drops even further because now we're replacing the error rate P by C * P ^ 2 because that's the effective error rate after the first level fault tolerant implementation. Specifically, after just a little bit of algebra, we
+
+00:34:31
+find that the error goes down to CP cubed * P. And if we do it again, we now have an error rate of CP ^ 7 * P. And if we continue to do this for a total of K levels, what we find is that the error shrinks doubly exponentially in K. So we don't need to do this very many times to make the error rate extremely small. Meanwhile, the circuits are growing in size, but the size only increases singly exponentially in K because with each level of fault tolerance, the size of our circuit grows by at most a factor
+
+00:35:04
+that's determined by the maximum size of our gadgets. And when it's all put together and an appropriate choice for the number of levels of concatenation is made, we obtain the threshold theorem. But like I already suggested, there are a lot of details required to make this formal. So what is this threshold value in reality? Well, it depends on the code and on the gadgets we use for the steam code along with magic state distillation. It's minuscule and probably unlikely to be achievable in
+
+00:35:34
+practice. But using surface codes and state-of-the-art gadgets, it's been estimated to be around 1%. Which isn't bad. And as new codes and methods are discovered, we can reasonably expect it to increase while simultaneously the level of noise in the components we build will decrease. Reaching the point at which large scale quantum computations can be implemented fault tolerantly will not be easy and it will not happen overnight. But this theorem together with the advances in quantum codes and in quantum
+
+00:36:05
+hardware that we've witnessed to date provide us with the optimism that we need to continue to push forward to reach this ultimate goal of building a large-scale fall tolerant quantum computer. And that is the end of the lesson and the end of the series. I sincerely hope you found value in the series and if you have, please consider recommending it to a colleague or friend. Also, be sure to check out IBM Quantum Learning for additional courses and tutorials, and subscribe to the Kiskuit YouTube channel if you haven't already,
+
+00:36:37
+so you can stay uptodate with our future content releases. Thank you for watching.
+

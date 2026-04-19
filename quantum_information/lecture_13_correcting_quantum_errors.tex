@@ -1,0 +1,207 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\titleformat{\section}{\large\bfseries}{Lecture 13.\thesection}{1em}{}
+
+\title{\textbf{Lecture 13: Correcting Quantum Errors} \\ \large Understanding Quantum Information \& Computation}
+\author{Based on the lectures by John Watrous (IBM Quantum)}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------
+\section{Overview}
+%----------------------------------------------------------------------
+
+This lecture opens the fourth and final unit of the series: \textbf{Quantum Error Correction}.  The central question is:
+
+\begin{center}
+\emph{Can we protect quantum information against noise, even though we cannot copy quantum states?}
+\end{center}
+
+The answer is \emph{yes}, and the key idea is to encode quantum information \emph{redundantly} into entangled states of multiple qubits.  Topics:
+
+\begin{enumerate}
+    \item Classical repetition codes (warm-up).
+    \item Why na\"ive repetition fails for qubits.
+    \item Quantum error-correcting codes: the 3-qubit bit-flip code and the 3-qubit phase-flip code.
+    \item The Shor (9-qubit) code as the first code correcting arbitrary single-qubit errors.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\section{Classical Repetition Codes}
+%----------------------------------------------------------------------
+
+\subsection{The Idea}
+
+Protect a classical bit against a single bit-flip error by encoding it redundantly:
+\[
+    0 \;\longrightarrow\; 000, \qquad 1\;\longrightarrow\; 111.
+\]
+If at most one of the three bits is flipped, \textbf{majority vote} recovers the original bit.
+
+\subsection{Formalisation}
+
+\begin{definition}[Repetition code]
+The \textbf{$n$-bit repetition code} encodes one logical bit into $n$ physical bits:
+\[
+    0\mapsto \underbrace{00\cdots 0}_{n},\qquad 1\mapsto \underbrace{11\cdots 1}_{n}.
+\]
+It can correct up to $\lfloor(n-1)/2\rfloor$ bit-flip errors via majority decoding.
+\end{definition}
+
+%----------------------------------------------------------------------
+\section{Obstacles to Quantum Error Correction}
+%----------------------------------------------------------------------
+
+Three features of quantum information make error correction seem impossible at first:
+\begin{enumerate}
+    \item \textbf{No-cloning theorem:} we cannot copy an unknown quantum state, so na\"ive repetition $\ket{\psi}\to\ket{\psi}\ket{\psi}\ket{\psi}$ is forbidden.
+    \item \textbf{Continuous errors:} quantum errors are not just bit flips; a qubit can be rotated by an arbitrary (continuous) amount.
+    \item \textbf{Measurement disturbance:} measuring a quantum state to diagnose errors generally destroys the encoded information.
+\end{enumerate}
+
+All three obstacles can be overcome.
+
+%----------------------------------------------------------------------
+\section{The 3-Qubit Bit-Flip Code}
+%----------------------------------------------------------------------
+
+\subsection{Encoding}
+
+We encode \emph{one logical qubit} into \emph{three physical qubits}:
+\[
+    \ket{0}_L = \ket{000}, \qquad \ket{1}_L = \ket{111}.
+\]
+An arbitrary logical state $\alpha\ket{0}+\beta\ket{1}$ is encoded as
+\[
+    \ket{\psi}_L = \alpha\ket{000}+\beta\ket{111}.
+\]
+Note: this is \emph{not} cloning $\ket{\psi}$.  The state $\alpha\ket{000}+\beta\ket{111}$ is entangled and differs from $(\alpha\ket{0}+\beta\ket{1})^{\otimes 3}$.
+
+The encoding circuit uses two CNOT gates: the logical qubit controls two ancilla qubits initialised to $\ket{0}$.
+
+\subsection{Error Model}
+
+We assume at most one of the three qubits suffers a bit-flip ($X$ error).  There are four cases: no error, $X$ on qubit~1, $X$ on qubit~2, $X$ on qubit~3.
+
+\subsection{Syndrome Measurement}
+
+\begin{definition}[Syndrome]
+The \textbf{syndrome} is classical information extracted by measuring certain operators that reveals \emph{which} error occurred, without revealing any information about the encoded state $\alpha,\beta$.
+\end{definition}
+
+For the 3-qubit bit-flip code, the syndrome operators are $Z_1 Z_2$ and $Z_2 Z_3$ (parity checks on pairs of qubits).
+
+\begin{center}
+\begin{tabular}{ccc}
+\hline
+\textbf{Error} & $Z_1 Z_2$ & $Z_2 Z_3$ \\\hline
+None ($I$) & $+1$ & $+1$ \\
+$X_1$ & $-1$ & $+1$ \\
+$X_2$ & $-1$ & $-1$ \\
+$X_3$ & $+1$ & $-1$ \\
+\hline
+\end{tabular}
+\end{center}
+
+Each error produces a unique syndrome $\to$ the error can be identified and corrected by applying the appropriate $X$ gate.
+
+\paragraph{Key point.}  The syndrome measurements are \emph{joint} measurements on pairs of qubits.  They reveal parity information but not the values of $\alpha$ and $\beta$, so the encoded state is preserved.
+
+\subsection{Limitations}
+
+The 3-qubit bit-flip code corrects only $X$ errors.  It cannot handle phase-flip ($Z$) errors.
+
+%----------------------------------------------------------------------
+\section{The 3-Qubit Phase-Flip Code}
+%----------------------------------------------------------------------
+
+\subsection{Encoding}
+
+\[
+    \ket{0}_L = \ket{+++}, \qquad \ket{1}_L = \ket{---},
+\]
+or equivalently $\ket{0}_L = H^{\otimes 3}\ket{000}$, $\ket{1}_L = H^{\otimes 3}\ket{111}$.
+
+\subsection{Error Correction}
+
+A $Z$ error in the $\{\ket{+},\ket{-}\}$ basis acts like a bit flip: $Z\ket{+}=\ket{-}$, $Z\ket{-}=\ket{+}$.
+
+Syndrome operators: $X_1 X_2$ and $X_2 X_3$ (parity checks in the $X$-basis).
+
+\subsection{Limitations}
+
+Corrects only $Z$ errors.  Cannot handle $X$ errors.
+
+%----------------------------------------------------------------------
+\section{The Shor Code (9-Qubit Code)}
+%----------------------------------------------------------------------
+
+\subsection{Construction}
+
+Shor's code \emph{concatenates} the phase-flip code with the bit-flip code:
+\begin{enumerate}
+    \item First, encode against phase flips: $\ket{0}_L\to\ket{+++}$, $\ket{1}_L\to\ket{---}$.
+    \item Then, encode each $\ket{+}$ and $\ket{-}$ against bit flips using the 3-qubit repetition: $\ket{+}\to\frac{1}{\sqrt{2}}(\ket{000}+\ket{111})$, $\ket{-}\to\frac{1}{\sqrt{2}}(\ket{000}-\ket{111})$.
+\end{enumerate}
+
+Result: 1 logical qubit encoded into 9 physical qubits.
+\begin{align}
+    \ket{0}_L &= \frac{1}{2\sqrt{2}}\bigl(\ket{000}+\ket{111}\bigr)^{\otimes 3}, \\
+    \ket{1}_L &= \frac{1}{2\sqrt{2}}\bigl(\ket{000}-\ket{111}\bigr)^{\otimes 3}.
+\end{align}
+
+\subsection{Error Correction Capability}
+
+\begin{theorem}
+The Shor code can correct any single-qubit error on any one of the 9 physical qubits.  This includes:
+\begin{itemize}
+    \item Bit-flip errors ($X$),
+    \item Phase-flip errors ($Z$),
+    \item Combined bit-and-phase errors ($Y=iXZ$),
+    \item Arbitrary single-qubit errors (by linearity).
+\end{itemize}
+\end{theorem}
+
+\paragraph{Handling continuous errors.}
+Any single-qubit error can be written $E = \alpha_0 I + \alpha_1 X + \alpha_2 Y + \alpha_3 Z$.  The syndrome measurement \emph{projects} the error onto one of the discrete Pauli errors $\{I,X,Y,Z\}$.  After syndrome measurement and correction, the encoded state is restored exactly.  This is why continuous errors do not pose a fundamental obstacle.
+
+%----------------------------------------------------------------------
+\section{The Error Discretisation Principle}
+%----------------------------------------------------------------------
+
+\begin{theorem}[Error discretisation]
+If a quantum error-correcting code can correct a set of errors $\{E_1,\dots,E_r\}$, then it can correct \emph{any} error in the linear span of $\{E_1,\dots,E_r\}$.
+\end{theorem}
+
+Since $\{I,X,Y,Z\}$ spans all $2\times 2$ matrices, a code that corrects all single-qubit Pauli errors automatically corrects \emph{all} single-qubit errors (including continuous rotations).
+
+%----------------------------------------------------------------------
+\section{Summary}
+%----------------------------------------------------------------------
+
+\begin{itemize}
+    \item Quantum error correction is possible despite no-cloning, continuous errors, and measurement disturbance.
+    \item The \textbf{3-qubit bit-flip code} corrects $X$ errors; the \textbf{3-qubit phase-flip code} corrects $Z$ errors.
+    \item The \textbf{Shor (9-qubit) code} concatenates the two and corrects \emph{any} single-qubit error.
+    \item \textbf{Syndrome measurements} diagnose errors without disturbing the encoded information.
+    \item The \textbf{error discretisation principle} reduces continuous errors to discrete Pauli errors.
+\end{itemize}
+
+\end{document}

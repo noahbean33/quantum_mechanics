@@ -1,0 +1,352 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\titleformat{\section}{\large\bfseries}{Lecture 3.\thesection}{1em}{}
+
+\title{\textbf{Lecture 3: Quantum Circuits} \\ \large Understanding Quantum Information \& Computation}
+\author{Based on the lectures by John Watrous (IBM Quantum)}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------
+\section{Overview}
+%----------------------------------------------------------------------
+
+This lecture introduces the \textbf{quantum circuit model}, a standard framework for describing quantum computations, protocols, and interactions.  We also develop the essential mathematical machinery of \textbf{inner products}, \textbf{orthonormality}, and \textbf{projections}, and then use these tools to establish several fundamental limitations of quantum information:
+
+\begin{enumerate}[label=(\roman*)]
+    \item Global phases are physically irrelevant.
+    \item The \textbf{no-cloning theorem}: quantum states cannot be copied.
+    \item Non-orthogonal quantum states cannot be perfectly discriminated.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\section{The Quantum Circuit Model}
+%----------------------------------------------------------------------
+
+\subsection{Circuits as Models of Computation}
+
+A \emph{circuit} is composed of \textbf{wires} (carrying information) and \textbf{gates} (operations on that information).  Information flows left-to-right; cycles are not allowed.
+
+\begin{itemize}
+    \item \textbf{Boolean circuits:} wires carry bits; gates are logic operations (AND, OR, NOT, fan-out).
+    \item \textbf{Arithmetic circuits:} wires carry numbers; gates are $+$, $\times$.
+    \item \textbf{Quantum circuits:} wires represent \emph{qubits}; gates represent \emph{unitary operations} and \emph{measurements}.
+\end{itemize}
+
+\subsection{Quantum Circuit Conventions}
+
+\begin{enumerate}
+    \item Each horizontal line represents a qubit; double lines represent classical bits.
+    \item Time flows left$\to$right.
+    \item \textbf{Ordering convention:} bottom-to-top in the diagram $\leftrightarrow$ left-to-right in a tensor product.  (Equivalently: rotate the diagram clockwise to read qubit order top-to-bottom.)
+    \item Single-qubit gates are drawn as labelled squares (e.g.\ $H$, $S$, $T$, $X$, $Z$).
+    \item Controlled gates: a filled circle ($\bullet$) on the control qubit, connected by a vertical line to the target gate.
+\end{enumerate}
+
+\subsection{Composing Gates}
+
+If a circuit applies gates $U_1,U_2,\dots,U_k$ in order, the overall unitary is
+\[
+    U = U_k \cdots U_2\,U_1.
+\]
+When a gate acts on a subset of qubits, tensor with $\mathbb{I}$ on the remaining qubits.
+
+\begin{example}
+A circuit on two qubits $X$ (bottom), $Y$ (top):
+\begin{enumerate}
+    \item Hadamard on $Y$: $\;\mathbb{I}\otimes H$.
+    \item CNOT with control $Y$, target $X$: $\;\mathrm{CNOT}_{Y\to X}$.
+\end{enumerate}
+Combined unitary:
+\[
+    U = \mathrm{CNOT}_{Y\to X}\;(\mathbb{I}\otimes H).
+\]
+On input $\ket{00}$ this produces the Bell state $\ket{\Phi^+}$.
+\end{example}
+
+\subsection{Standard Gate Symbols}
+
+\begin{center}
+\begin{tabular}{lll}
+\hline
+\textbf{Gate} & \textbf{Symbol} & \textbf{Description} \\\hline
+Hadamard & $H$ in a box & Single-qubit \\
+CNOT & $\bullet$---$\oplus$ & Two-qubit \\
+SWAP & $\times$---$\times$ & Two-qubit \\
+Toffoli & $\bullet$---$\bullet$---$\oplus$ & Three-qubit (CC-NOT) \\
+Fredkin & $\bullet$---$\times$---$\times$ & Three-qubit (C-SWAP) \\
+Arbitrary $U$ & $U$ in a rectangle & Any number of qubits \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection{Incorporating Classical Bits and Measurements}
+
+Measurement gates convert qubits to classical bits.  When the post-measurement qubit is discarded, we use a shorthand: qubit wire in, classical (double) wire out.
+
+%----------------------------------------------------------------------
+\section{Inner Products}
+%----------------------------------------------------------------------
+
+\begin{definition}[Inner product]
+For two column vectors $\ket{\psi}=\sum_a \beta_a\ket{a}$ and $\ket{\phi}=\sum_a \alpha_a\ket{a}$ over the same classical state set $\Sigma$,
+\[
+    \braket{\psi}{\phi}
+    = \bra{\psi}\ket{\phi}
+    = \sum_{a\in\Sigma}\overline{\beta_a}\,\alpha_a.
+\]
+\end{definition}
+
+\paragraph{Geometric interpretation.}  For real unit vectors, $\braket{\psi}{\phi}=\cos\theta$, where $\theta$ is the angle between them.  In particular $\braket{\psi}{\phi}=0$ iff the vectors are perpendicular.
+
+\subsection{Properties of the Inner Product}
+
+\begin{enumerate}[label=(\alph*)]
+    \item \textbf{Norm connection:} $\braket{\psi}{\psi}=\|\ket{\psi}\|^2$.
+    \item \textbf{Conjugate symmetry:} $\braket{\psi}{\phi}=\overline{\braket{\phi}{\psi}}$.
+    \item \textbf{Linearity in second argument:}
+    \[
+        \braket{\psi}{\alpha_1\phi_1+\alpha_2\phi_2}
+        = \alpha_1\braket{\psi}{\phi_1}+\alpha_2\braket{\psi}{\phi_2}.
+    \]
+    \item \textbf{Conjugate linearity in first argument:}
+    \[
+        \bra{\beta_1\psi_1+\beta_2\psi_2}\ket{\phi}
+        = \overline{\beta_1}\braket{\psi_1}{\phi}+\overline{\beta_2}\braket{\psi_2}{\phi}.
+    \]
+    \item \textbf{Cauchy--Schwarz inequality:}
+    \[
+        |\!\braket{\psi}{\phi}\!| \;\le\; \|\ket{\psi}\|\;\|\ket{\phi}\|,
+    \]
+    with equality iff $\ket{\psi}$ and $\ket{\phi}$ are linearly dependent.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\section{Orthogonality and Orthonormality}
+%----------------------------------------------------------------------
+
+\begin{definition}\leavevmode
+\begin{itemize}
+    \item Two vectors are \textbf{orthogonal} if $\braket{\psi}{\phi}=0$.
+    \item A set of vectors is an \textbf{orthogonal set} if every pair of distinct vectors in the set is orthogonal.
+    \item An \textbf{orthonormal set} is an orthogonal set of unit vectors:
+    \[
+        \braket{\psi_j}{\psi_k} = \delta_{jk}.
+    \]
+    \item An \textbf{orthonormal basis} is an orthonormal set that spans the full vector space.
+\end{itemize}
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{enumerate}
+    \item $\{\ket{0},\ket{1}\}$: orthonormal basis for $\mathbb{C}^2$.
+    \item $\{\ket{+},\ket{-}\}$: orthonormal basis for $\mathbb{C}^2$.
+    \item The Bell basis $\{\ket{\Phi^+},\ket{\Phi^-},\ket{\Psi^+},\ket{\Psi^-}\}$: orthonormal basis for $\mathbb{C}^4$.
+    \item $\{\ket{0},\ket{+}\}$ is \emph{not} orthogonal ($\braket{0}{+}=1/\sqrt{2}\neq 0$).
+\end{enumerate}
+\end{example}
+
+\begin{proposition}[Extension of orthonormal sets]
+Any orthonormal set of $m<n$ vectors in an $n$-dimensional space can be extended to an orthonormal basis by adding $n-m$ additional vectors (e.g.\ via Gram--Schmidt).
+\end{proposition}
+
+\subsection{Connection to Unitary Matrices}
+
+\begin{theorem}
+For a square matrix $U$, the following are equivalent:
+\begin{enumerate}[label=(\roman*)]
+    \item $U$ is unitary.
+    \item The columns of $U$ form an orthonormal basis.
+    \item The rows of $U$ form an orthonormal basis.
+\end{enumerate}
+\end{theorem}
+
+\begin{remark}
+Combining this with the extension proposition: given any orthonormal set of $m$ vectors, there exists a unitary matrix whose first $m$ columns are those vectors.
+\end{remark}
+
+%----------------------------------------------------------------------
+\section{Projections and Projective Measurements}
+%----------------------------------------------------------------------
+
+\subsection{Projection Matrices}
+
+\begin{definition}
+A square matrix $\Pi$ is a \textbf{projection} (or \textbf{projector}) if:
+\begin{enumerate}
+    \item $\Pi^\dagger = \Pi$ \quad (Hermitian),
+    \item $\Pi^2 = \Pi$ \quad (idempotent).
+\end{enumerate}
+\end{definition}
+
+\begin{example}
+For a unit vector $\ket{\psi}$:
+\[
+    \Pi = \ket{\psi}\!\bra{\psi}
+\]
+is a rank-1 projection.  More generally, for an orthonormal set $\{\ket{\psi_1},\dots,\ket{\psi_m}\}$:
+\[
+    \Pi = \sum_{k=1}^{m}\ket{\psi_k}\!\bra{\psi_k}
+\]
+is a projection onto the subspace spanned by the set.  Every projection takes this form (including $\Pi=0$ for the empty set).
+\end{example}
+
+\subsection{Projective Measurements}
+
+\begin{definition}
+A \textbf{projective measurement} is defined by a collection of projections $\{\Pi_1,\dots,\Pi_m\}$ satisfying
+\[
+    \sum_{k=1}^{m}\Pi_k = \mathbb{I}.
+\]
+When measuring state $\ket{\psi}$:
+\begin{enumerate}
+    \item Outcome $k$ occurs with probability
+    \[
+        p_k = \|\Pi_k\ket{\psi}\|^2 = \bra{\psi}\Pi_k\ket{\psi}.
+    \]
+    \item Conditioned on outcome $k$, the post-measurement state is
+    \[
+        \frac{\Pi_k\ket{\psi}}{\|\Pi_k\ket{\psi}\|}.
+    \]
+\end{enumerate}
+\end{definition}
+
+\begin{example}[Standard basis measurement as projective measurement]
+$\Pi_a = \ket{a}\!\bra{a}$ for each $a\in\Sigma$.  Then $\sum_a\Pi_a=\mathbb{I}$, and $p_a = |\!\braket{a}{\psi}\!|^2 = |\alpha_a|^2$.  The post-measurement state is $\ket{a}$ (up to a global phase).
+\end{example}
+
+\begin{example}[Partial measurement]
+Measuring qubit $X$ while doing nothing to qubit $Y$: use projections $\Pi_a = \ket{a}\!\bra{a}\otimes\mathbb{I}_Y$ for $a\in\{0,1\}$.
+\end{example}
+
+\begin{example}[Bell-basis projective measurement]
+Two outcomes with projections
+\begin{align}
+    \Pi_0 &= \ket{\Phi^+}\!\bra{\Phi^+}+\ket{\Phi^-}\!\bra{\Phi^-}+\ket{\Psi^+}\!\bra{\Psi^+}, \\
+    \Pi_1 &= \ket{\Psi^-}\!\bra{\Psi^-}.
+\end{align}
+$\Pi_0$ projects onto the symmetric subspace; $\Pi_1$ onto the antisymmetric one-dimensional subspace.
+\end{example}
+
+\begin{remark}
+Any projective measurement can be implemented using unitary operations and standard basis measurements (plus ancilla qubits).  Thus projective measurements add no extra computational power, but are a very convenient abstraction.
+\end{remark}
+
+%----------------------------------------------------------------------
+\section{Global Phases}
+%----------------------------------------------------------------------
+
+\begin{definition}
+Two quantum states $\ket{\psi}$ and $\ket{\phi}$ \textbf{differ by a global phase} if $\ket{\phi}=\alpha\ket{\psi}$ for some $\alpha\in\mathbb{C}$ with $|\alpha|=1$.
+\end{definition}
+
+\begin{theorem}
+States that differ by a global phase are \textbf{physically indistinguishable}: they produce identical outcome probabilities for every projective measurement and remain related by a global phase after any unitary operation.
+\end{theorem}
+
+\begin{proof}[Sketch]
+$\Pr_\phi(k)=\|\Pi_k\ket{\phi}\|^2 = \|\alpha\,\Pi_k\ket{\psi}\|^2 = |\alpha|^2\|\Pi_k\ket{\psi}\|^2 = \Pr_\psi(k)$.  Applying $U$: $U\ket{\phi}=\alpha\,U\ket{\psi}$, so the states remain related by the same global phase.
+\end{proof}
+
+\begin{remark}
+A \emph{relative} phase (e.g.\ the sign difference between $\ket{+}$ and $\ket{-}$) \emph{is} detectable and has physical significance.
+\end{remark}
+
+%----------------------------------------------------------------------
+\section{The No-Cloning Theorem}
+%----------------------------------------------------------------------
+
+\begin{theorem}[No-cloning]
+Let $X$ and $Y$ have the same classical state set $\{0,\dots,d-1\}$ with $d\ge 2$.  There is no unitary $U$ on $XY$ such that
+\[
+    U\bigl(\ket{\psi}\otimes\ket{0}\bigr) = \ket{\psi}\otimes\ket{\psi}
+    \qquad\text{for all quantum states } \ket{\psi} \text{ of } X.
+\]
+\end{theorem}
+
+\begin{proof}
+Suppose $U$ clones every standard basis state: $U(\ket{a}\ket{0})=\ket{a}\ket{a}$ for $a\in\{0,1\}$.  By linearity,
+\[
+    U\bigl(\ket{+}\ket{0}\bigr)
+    = \tfrac{1}{\sqrt{2}}\bigl(\ket{00}+\ket{11}\bigr).
+\]
+But correct cloning would require
+\[
+    U\bigl(\ket{+}\ket{0}\bigr) = \ket{+}\ket{+}
+    = \tfrac{1}{2}\bigl(\ket{00}+\ket{01}+\ket{10}+\ket{11}\bigr).
+\]
+These are not equal, contradiction.
+\end{proof}
+
+\begin{remark}\leavevmode
+\begin{itemize}
+    \item Cloning \emph{specific, known} states (e.g.\ standard basis states) is possible (CNOT copies computational basis states).
+    \item Approximate cloning is possible but subject to quantitative bounds.
+    \item A no-cloning theorem also holds classically for probabilistic states (same linearity argument), but is rarely remarked upon since copying \emph{known} classical bits is trivial.
+\end{itemize}
+\end{remark}
+
+%----------------------------------------------------------------------
+\section{Discrimination of Quantum States}
+%----------------------------------------------------------------------
+
+\begin{theorem}
+Two quantum states $\ket{\psi}$ and $\ket{\phi}$ can be \textbf{perfectly discriminated} (i.e.\ distinguished with zero error probability) if and only if they are \textbf{orthogonal}: $\braket{\psi}{\phi}=0$.
+\end{theorem}
+
+\subsection{Perfect discrimination $\Rightarrow$ orthogonality}
+
+Suppose a unitary $U$ (with ancilla qubits initialised to $\ket{0\cdots 0}$) and a single-qubit measurement perfectly discriminate $\ket{\psi}$ from $\ket{\phi}$:
+\begin{align}
+    U\bigl(\ket{\psi}\ket{0\cdots 0}\bigr) &= \ket{0}\ket{\pi_0}, \\
+    U\bigl(\ket{\phi}\ket{0\cdots 0}\bigr) &= \ket{1}\ket{\pi_1}.
+\end{align}
+Taking the inner product of both sides:
+\[
+    \braket{\psi}{\phi}\cdot\underbrace{\braket{0\cdots 0}{0\cdots 0}}_{=1}
+    = \braket{0}{1}\cdot\braket{\pi_0}{\pi_1}
+    = 0,
+\]
+since $\braket{0}{1}=0$.  Hence $\braket{\psi}{\phi}=0$.
+
+\subsection{Orthogonality $\Rightarrow$ perfect discrimination}
+
+If $\braket{\psi}{\phi}=0$, choose any unitary $U$ whose first two columns are $\ket{\psi}$ and $\ket{\phi}$ (possible by the extension proposition).  Then $U^\dagger\ket{\psi}=\ket{0\cdots}$ and $U^\dagger\ket{\phi}=\ket{1\cdots}$, so measuring the first qubit perfectly discriminates the two states.
+
+Alternatively, use the projective measurement $\{\Pi_0,\Pi_1\}$ with
+\[
+    \Pi_0 = \ket{\psi}\!\bra{\psi}, \qquad \Pi_1 = \mathbb{I}-\ket{\psi}\!\bra{\psi}.
+\]
+Then $\Pr(\text{outcome }0\mid\ket{\psi})=1$ and $\Pr(\text{outcome }0\mid\ket{\phi})=0$ whenever $\braket{\psi}{\phi}=0$.
+
+%----------------------------------------------------------------------
+\section{Summary}
+%----------------------------------------------------------------------
+
+\begin{itemize}
+    \item The \textbf{quantum circuit model} describes computations via qubit wires and unitary/measurement gates; time flows left-to-right and qubit ordering is bottom-to-top.
+    \item The \textbf{inner product} $\braket{\psi}{\phi}$ is the fundamental tool connecting geometry (angles, orthogonality) with quantum measurement probabilities.
+    \item \textbf{Projective measurements} generalise standard basis measurements; they are defined by a set of projections summing to $\mathbb{I}$.
+    \item \textbf{Global phases} are undetectable and can be ignored.
+    \item The \textbf{no-cloning theorem} prohibits a universal quantum copying machine.
+    \item Non-orthogonal states \textbf{cannot} be perfectly discriminated; orthogonal states \textbf{can}.
+\end{itemize}
+
+\end{document}

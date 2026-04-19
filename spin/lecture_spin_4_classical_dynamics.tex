@@ -1,0 +1,306 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{mathtools}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Quantum Spin Lecture Notes}
+\lhead{Lecture 4: Classical Dynamics in a Magnetic Field}
+\cfoot{\thepage}
+
+% --- Theorem Environments ---
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+
+\title{\textbf{Quantum Spin (4): Classical Dynamics in a Magnetic Field \\ \& Motivating the Schr\"odinger Equation}}
+\author{Lecture Notes on Quantum Spin}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{The Central Questions of Physics}
+% ============================================================
+
+All of physics can be reduced to two questions:
+\begin{enumerate}
+    \item \textbf{What are the physical states?} For quantum spin: two-dimensional complex vectors $\ket{\psi} \in \mathbb{C}^2$.
+    \item \textbf{How do they evolve in time?} This is what we now address.
+\end{enumerate}
+
+The answer to the second question: a \textbf{magnetic field} causes a quantum spin state to change in time. Before treating this quantum mechanically, we build intuition from classical physics.
+
+\subsection{Setup}
+
+Throughout these notes, the physical situation is:
+\begin{itemize}
+    \item An external magnetic field $\vec{B}$ permeates the region.
+    \item A point-like electron with spin state $\ket{\psi(t)}$ sits in this field.
+    \item No external electric field ($\vec{E}_{\text{ext}} = 0$), so the electron remains stationary.
+    \item We study only how the \emph{spin state} evolves --- not the spatial motion.
+\end{itemize}
+
+% ============================================================
+\section{Classical Model: The Charged Spinning Sphere}
+% ============================================================
+
+\subsection{The Model}
+
+We model the electron as a charged spinning sphere of uniform charge density, spinning with angular frequency $\vec{\Omega}_{\text{spin}}$. The angular momentum $\vec{L}$ points along the spin axis.
+
+\subsection{Forces from the Magnetic Field}
+
+The \textbf{Lorentz force law} for a charge $q$ moving with velocity $\vec{v}$ in a magnetic field $\vec{B}$ is:
+\[
+    \vec{F} = q\,\vec{v} \times \vec{B}.
+\]
+
+For a spinning charged sphere in a uniform $\vec{B}$:
+\begin{itemize}
+    \item Different parts of the sphere move with different velocities.
+    \item The forces on opposite sides are \textbf{equal and opposite} $\Rightarrow$ \textbf{no net force} (center of mass stays put).
+    \item However, the forces create a \textbf{net torque} $\vec{\tau}$ on the sphere.
+\end{itemize}
+
+\subsection{Torque Calculation}
+
+Recall $\vec{\tau} = \vec{r} \times \vec{F}$. For the sphere:
+\begin{itemize}
+    \item On the left half: $\vec{r} \times \vec{F}$ points into the screen.
+    \item On the right half: $\vec{r} \times \vec{F}$ \emph{also} points into the screen.
+    \item The torques \textbf{add} (unlike the forces, which cancel).
+\end{itemize}
+
+% ============================================================
+\section{Larmor Precession}
+% ============================================================
+
+\subsection{The Physics}
+
+Since $\vec{\tau} = \frac{d\vec{L}}{dt}$ and $\vec{\tau} \perp \vec{L}$, the angular momentum vector $\vec{L}$ traces out a circle around the magnetic field $\vec{B}$. This is \textbf{Larmor precession}: the angular momentum of a spinning charge precesses around the external magnetic field.
+
+\subsection{Classical Complications: Wobbling}
+
+In the classical case, the total angular velocity is $\vec{\Omega}_{\text{total}} = \vec{\Omega}_{\text{spin}} + \vec{\Omega}_{\text{precession}}$, introducing wobbling. However, if $\Omega_{\text{spin}} \gg \Omega_{\text{precession}}$, the wobbling is negligible and Larmor precession is the full story.
+
+\subsection{Quantum Simplification}
+
+In quantum mechanics, there is \emph{no wobbling} --- the spin state undergoes pure Larmor precession around $\vec{B}$. Heuristically, one can think of the quantum electron as ``spinning infinitely fast,'' so the precession angular momentum is negligible.
+
+% ============================================================
+\section{Torque on a Current Loop}
+% ============================================================
+
+\subsection{Setup: Square Current Loop}
+
+Consider a square loop of wire with side length $L$, carrying a total charge $Q$ circulating with velocity $v$, placed in a uniform external field $\vec{B} = (B_x, B_y, B_z)$.
+
+The current in the loop is:
+\[
+    I = \frac{Qv}{4L},
+\]
+since the period of one full circuit is $T = 4L/v$.
+
+\subsection{Computing the Torque}
+
+Using $\vec{F} = q\vec{v}\times\vec{B}$ and $\vec{\tau} = \vec{r}\times\vec{F}$ for each segment, and summing over all four sides, the total torque is:
+\[
+    \vec{\tau}_{\text{total}} = \frac{QvL}{4}\begin{pmatrix}-B_y \\ B_x \\ 0\end{pmatrix} = IA\begin{pmatrix}-B_y \\ B_x \\ 0\end{pmatrix},
+\]
+where $A = L^2$ is the area of the loop and $I = Qv/(4L)$ is the current.
+
+\subsection{The Magnetic Dipole Moment}
+
+\begin{definition}[Magnetic Dipole Moment]
+    The \textbf{magnetic dipole moment} of a current loop is:
+    \[
+        \vec{\mu} = I\,\vec{A},
+    \]
+    where $\vec{A}$ is the area vector (magnitude = area, direction = normal to the loop via the right-hand rule).
+\end{definition}
+
+The torque takes the elegant form:
+\[
+    \boxed{\vec{\tau} = \vec{\mu} \times \vec{B}.}
+\]
+
+\begin{remark}
+    This formula is valid for \emph{any} shape of current loop, not just squares. Any planar loop can be decomposed into a grid of tiny squares; internal currents cancel, and the areas and torques add up.
+\end{remark}
+
+% ============================================================
+\section{Energy of a Current in a Magnetic Field}
+% ============================================================
+
+\subsection{Work Done by the Field}
+
+Consider the square loop tilted at angle $\theta$ to $\vec{B}$. The magnetic force on each side is constant and horizontal (independent of $\theta$), with magnitude $F = \frac{Q}{4}vB$.
+
+When the loop rotates from angle $\theta_1$ to $\theta_2$:
+\[
+    W = 2F\Delta x = \frac{QvBL}{4}(\cos\theta_2 - \cos\theta_1) = \mu B(\cos\theta_2 - \cos\theta_1).
+\]
+
+This can be written as:
+\[
+    W = \vec{\mu}\cdot\vec{B}\big|_{\theta_2} - \vec{\mu}\cdot\vec{B}\big|_{\theta_1} = -\Delta U,
+\]
+where $\Delta U = U(\theta_2) - U(\theta_1)$.
+
+\subsection{Potential Energy}
+
+From $W = -\Delta U$ (conservation of energy), we obtain:
+\[
+    \boxed{U = -\vec{\mu}\cdot\vec{B}.}
+\]
+
+This is the potential energy of any current distribution (of arbitrary shape) in an external magnetic field.
+
+\subsection{Gyroscope vs.\ Pendulum Analogy}
+
+\begin{itemize}
+    \item A \textbf{spinning charged sphere} in a magnetic field behaves like a \textbf{gyroscope}: $\vec{\mu}$ precesses around $\vec{B}$ (due to angular momentum from spinning).
+    \item A \textbf{current-carrying wire} in a magnetic field behaves like a \textbf{pendulum}: $\vec{\mu}$ swings back and forth (negligible angular momentum from the tiny electrons).
+\end{itemize}
+
+% ============================================================
+\section{From the Spinning Sphere to the Ring and Sphere}
+% ============================================================
+
+\subsection{Spinning Ring of Charge}
+
+For a ring of mass $m$, charge $Q$, radius $R$, spinning with rim velocity $v$:
+\begin{align}
+    L &= mvR, \\
+    I &= \frac{Qv}{2\pi R}, \\
+    A &= \pi R^2.
+\end{align}
+
+The magnetic moment:
+\[
+    \mu = IA = \frac{QvR}{2} = \frac{Q}{2m}\cdot mvR = \frac{Q}{2m}L.
+\]
+
+As a vector equation:
+\[
+    \boxed{\vec{\mu} = \frac{Q}{2m}\vec{L}.}
+\]
+
+\subsection{Spinning Sphere of Charge}
+
+A spinning sphere is an infinite stack of spinning rings. If the charge-to-mass ratio $Q/m$ is constant throughout the volume, then $\vec{\mu} = \frac{Q}{2m}\vec{L}$ holds for the sphere as well (since both $\vec{L}$ and $\vec{\mu}$ are additive).
+
+Therefore, the energy of a spinning charged sphere in an external magnetic field is:
+\[
+    \boxed{U = -\frac{Q}{2m}\vec{L}\cdot\vec{B}.}
+\]
+
+% ============================================================
+\section{Motivating the Schr\"odinger Equation}
+% ============================================================
+
+\subsection{Quantum Time Evolution}
+
+A quantum spin state $\ket{\psi(t)} = \begin{pmatrix}c_1(t)\\c_2(t)\end{pmatrix}$ evolves according to the \textbf{Schr\"odinger equation}:
+\[
+    \boxed{i\hbar\frac{d}{dt}\ket{\psi(t)} = H\ket{\psi(t)},}
+\]
+where $H$ is a $2\times 2$ matrix called the \textbf{Hamiltonian}.
+
+\subsection{Dimensional Analysis}
+
+\begin{itemize}
+    \item $i$ is dimensionless.
+    \item $\hbar$ has dimensions of energy $\times$ time (equivalently, angular momentum).
+    \item $\frac{d}{dt}\ket{\psi}$ has dimensions of $1/\text{time}$ (since $\ket{\psi}$ is dimensionless).
+    \item Therefore $H$ must have dimensions of \textbf{energy}.
+\end{itemize}
+
+\subsection{Constructing $H$: An Educated Guess}
+
+We take the classical energy $U = -\frac{Q}{2m}\vec{L}\cdot\vec{B}$ and ``quantize'' it:
+
+\begin{enumerate}[label=\textbf{Step \arabic*:}]
+    \item \textbf{Charge:} For an electron, $Q = -e$, so $-Q/(2m) = e/(2m)$.
+    \item \textbf{Angular momentum:} In quantum mechanics, the spin angular momentum is $\vec{L} \to \frac{\hbar}{2}\vec{\sigma}$, where $\vec{\sigma} = (\sigma_x, \sigma_y, \sigma_z)$ are the Pauli matrices.
+    \item \textbf{Dot product:} $\vec{L}\cdot\vec{B} \to \frac{\hbar}{2}(B_x\sigma_x + B_y\sigma_y + B_z\sigma_z) = \frac{\hbar}{2}\vec{B}\cdot\vec{\sigma}$.
+\end{enumerate}
+
+This yields:
+\[
+    H = \frac{ge}{2m}\cdot\frac{\hbar}{2}\bigl(B_x\sigma_x + B_y\sigma_y + B_z\sigma_z\bigr) = \frac{ge\hbar}{4m}\,\vec{B}\cdot\vec{\sigma},
+\]
+where $g \approx 2$ is the \textbf{gyromagnetic ratio} ($g$-factor).
+
+\begin{remark}
+    The fact that $\hbar$ has units of both energy$\times$time \emph{and} angular momentum is not a coincidence --- it connects the Schr\"odinger equation (time evolution) with spin angular momentum.
+\end{remark}
+
+% ============================================================
+\section{The Gyromagnetic Ratio and QFT}
+% ============================================================
+
+\subsection{Why $g \approx 2$?}
+
+Classically, one would expect $g = 1$. The factor of $g \approx 2$ was first explained by \textbf{Paul Dirac} (1928) through his relativistic wave equation for the electron, which correctly accounts for special relativity.
+
+\subsection{Corrections from Quantum Field Theory}
+
+The $g$-factor is not exactly $2$ but slightly larger. The first correction was computed by \textbf{Julian Schwinger} (1947):
+\[
+    g = 2 + \frac{\alpha}{\pi} + \mathcal{O}(\alpha^2),
+\]
+where $\alpha$ is the \textbf{fine-structure constant}:
+\[
+    \alpha = \frac{e^2}{4\pi\epsilon_0\hbar c} \approx \frac{1}{137.036}.
+\]
+
+The fine-structure constant provides a dimensionless measure of electromagnetic coupling strength.
+
+\subsection{Feynman Diagrams}
+
+In quantum field theory, the $g$-factor is computed by summing over \textbf{Feynman diagrams} --- pictorial representations of particle interactions:
+\begin{itemize}
+    \item The simplest diagram (one vertex) gives $g = 2$ (Dirac's result).
+    \item The next diagram (one internal photon loop) contributes $+\alpha/\pi$ (Schwinger's correction).
+    \item Higher-order diagrams contribute terms of order $\alpha^2, \alpha^3, \ldots$
+\end{itemize}
+
+Since $\alpha \approx 1/137 \ll 1$, higher-order corrections are increasingly small. The $g$-factor has been experimentally verified to \textbf{15 decimal places}:
+\[
+    g \approx 2.002\,319\,304\,361\,82\ldots
+\]
+
+\subsection{The Four Realms of Physics}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{c|c|c}
+     & \textbf{Slow} ($v \ll c$) & \textbf{Fast} ($v \sim c$) \\ \hline
+    \textbf{Big} & Newtonian Mechanics & Special/General Relativity \\
+    \textbf{Small} & Quantum Mechanics (QM) & Quantum Field Theory (QFT)
+\end{tabular}
+\end{center}
+
+The Schr\"odinger equation belongs to QM. It can be \emph{motivated} from classical mechanics but not rigorously \emph{derived} from it. A rigorous derivation requires QFT (the deeper theory). The Schr\"odinger equation is to QM what $F = ma$ is to Newtonian mechanics: a postulate justified by experimental success.
+
+\end{document}

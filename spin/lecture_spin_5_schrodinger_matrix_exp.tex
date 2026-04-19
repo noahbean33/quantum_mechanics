@@ -1,0 +1,333 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{mathtools}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Quantum Spin Lecture Notes}
+\lhead{Lecture 5: Schr\"odinger's Equation \& Matrix Exponentiation}
+\cfoot{\thepage}
+
+% --- Theorem Environments ---
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+
+\title{\textbf{Quantum Spin (5): Schr\"odinger's Equation \\ \& Matrix Exponentiation}}
+\author{Lecture Notes on Quantum Spin}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{Setup and Review}
+% ============================================================
+
+A point-like electron with spin state $\ket{\psi(t)} = \begin{pmatrix}c_1(t)\\c_2(t)\end{pmatrix}$ sits in an external magnetic field $\vec{B}$. The Schr\"odinger equation governing time evolution is:
+\[
+    i\hbar\frac{d}{dt}\ket{\psi(t)} = H\ket{\psi(t)},
+\]
+equivalently:
+\[
+    \frac{d}{dt}\ket{\psi(t)} = -\frac{i}{\hbar}H\ket{\psi(t)}.
+\]
+
+The Hamiltonian is $H = \mathcal{E}\,(\hat{n}\cdot\vec{\sigma})$, where:
+\begin{itemize}
+    \item $\vec{B} = B\hat{n}$ ($\hat{n}$ is a unit vector, $B = |\vec{B}|$),
+    \item $\mathcal{E} = \frac{ge\hbar B}{4m}$ is a constant with dimensions of energy,
+    \item $\hat{n}\cdot\vec{\sigma} = n_x\sigma_x + n_y\sigma_y + n_z\sigma_z$ is a $2\times 2$ matrix.
+\end{itemize}
+
+% ============================================================
+\section{Method 1: Direct Solution}
+% ============================================================
+
+\subsection{Example: $\vec{B}$ Along the $y$-Axis}
+
+Let $\hat{n} = \hat{y}$, so $H = \mathcal{E}\,\sigma_y = \begin{pmatrix}0 & -i\mathcal{E} \\ i\mathcal{E} & 0\end{pmatrix}$.
+
+Initial condition: $\ket{\psi(0)} = \begin{pmatrix}1\\0\end{pmatrix}$ (spin up along $z$).
+
+The Schr\"odinger equation becomes two coupled ODEs:
+\begin{align}
+    \dot{c}_1(t) &= -\frac{\mathcal{E}}{\hbar}\,c_2(t), \label{eq:ode1}\\[4pt]
+    \dot{c}_2(t) &= +\frac{\mathcal{E}}{\hbar}\,c_1(t). \label{eq:ode2}
+\end{align}
+
+\subsection{Decoupling}
+
+Differentiate \eqref{eq:ode1} and substitute \eqref{eq:ode2}:
+\[
+    \ddot{c}_1 = -\frac{\mathcal{E}}{\hbar}\dot{c}_2 = -\frac{\mathcal{E}^2}{\hbar^2}\,c_1.
+\]
+Similarly, $\ddot{c}_2 = -\frac{\mathcal{E}^2}{\hbar^2}\,c_2$. These are simple harmonic oscillator equations with angular frequency $\omega = \mathcal{E}/\hbar$.
+
+\subsection{General Solution and Initial Conditions}
+
+The general solutions are:
+\begin{align}
+    c_1(t) &= A\cos\!\left(\frac{\mathcal{E}}{\hbar}t\right) + B\sin\!\left(\frac{\mathcal{E}}{\hbar}t\right), \\
+    c_2(t) &= C\cos\!\left(\frac{\mathcal{E}}{\hbar}t\right) + D\sin\!\left(\frac{\mathcal{E}}{\hbar}t\right).
+\end{align}
+
+Using initial conditions $c_1(0) = 1$, $c_2(0) = 0$ and the original ODEs (guess and check):
+\[
+    \boxed{\ket{\psi(t)} = \begin{pmatrix}\cos\!\left(\dfrac{\mathcal{E}}{\hbar}t\right) \\[8pt] \sin\!\left(\dfrac{\mathcal{E}}{\hbar}t\right)\end{pmatrix}.}
+\]
+
+\subsection{Verification}
+
+\begin{itemize}
+    \item $|c_1|^2 + |c_2|^2 = \cos^2(\mathcal{E}t/\hbar) + \sin^2(\mathcal{E}t/\hbar) = 1$ for all $t$. $\checkmark$
+    \item $\dot{c}_1 = -(\mathcal{E}/\hbar)\sin(\mathcal{E}t/\hbar) = -(\mathcal{E}/\hbar)c_2$. $\checkmark$
+    \item $\dot{c}_2 = +(\mathcal{E}/\hbar)\cos(\mathcal{E}t/\hbar) = +(\mathcal{E}/\hbar)c_1$. $\checkmark$
+\end{itemize}
+
+\subsection{Physical Interpretation: Larmor Precession}
+
+Evaluating $\ket{\psi(t)}$ at key times (with $T_0 = \hbar/\mathcal{E}$):
+
+\begin{center}
+\renewcommand{\arraystretch}{1.5}
+\begin{tabular}{c|c|c}
+    $t$ & $\ket{\psi(t)}$ & Direction \\ \hline
+    $0$ & $(1,\; 0)^\top$ & $+z$ \\
+    $\frac{\pi}{4}T_0$ & $\frac{1}{\sqrt{2}}(1,\; 1)^\top$ & $+x$ \\
+    $\frac{\pi}{2}T_0$ & $(0,\; 1)^\top$ & $-z$ \\
+    $\frac{3\pi}{4}T_0$ & $\frac{1}{\sqrt{2}}(-1,\; 1)^\top$ & $-x$ (up to phase) \\
+    $\pi T_0$ & $(-1,\; 0)^\top$ & $+z$ (negated)
+\end{tabular}
+\end{center}
+
+The Bloch vector traces a circle in the $xz$-plane, precessing around the $y$-axis (the direction of $\vec{B}$). After a full $2\pi$ rotation, $\ket{\psi} \to -\ket{\psi}$ --- the state is \emph{negated} (a signature of spin-$\frac{1}{2}$).
+
+% ============================================================
+\section{Method 2: Eigendecomposition}
+% ============================================================
+
+\subsection{Finding Eigenstates of $H$}
+
+Since $H = \mathcal{E}\,\sigma_y$, the eigenstates of $H$ are those of $\sigma_y$:
+\begin{align}
+    H\ket{\uparrow_y} &= +\mathcal{E}\ket{\uparrow_y}, \\
+    H\ket{\downarrow_y} &= -\mathcal{E}\ket{\downarrow_y}.
+\end{align}
+
+\subsection{Eigenstates Yield Immediate Solutions}
+
+If $H\ket{\phi} = E\ket{\phi}$, then:
+\[
+    \ket{\phi(t)} = e^{-iEt/\hbar}\ket{\phi}
+\]
+solves the Schr\"odinger equation. (Verification: $i\hbar\frac{d}{dt}\ket{\phi(t)} = E\,e^{-iEt/\hbar}\ket{\phi} = H\ket{\phi(t)}$.)
+
+The two solutions are:
+\begin{align}
+    \ket{\psi_1(t)} &= e^{-i\mathcal{E}t/\hbar}\ket{\uparrow_y}, \\
+    \ket{\psi_2(t)} &= e^{+i\mathcal{E}t/\hbar}\ket{\downarrow_y}.
+\end{align}
+
+\subsection{Linearity and Superposition}
+
+Because the Schr\"odinger equation is \textbf{linear}, any linear combination of solutions is also a solution:
+\[
+    \ket{\psi(t)} = \alpha\ket{\psi_1(t)} + \beta\ket{\psi_2(t)}.
+\]
+
+To match the initial condition $\ket{\psi(0)} = \begin{pmatrix}1\\0\end{pmatrix}$:
+\[
+    \begin{pmatrix}1\\0\end{pmatrix} = \alpha\ket{\uparrow_y} + \beta\ket{\downarrow_y} \implies \alpha = \beta = \frac{1}{\sqrt{2}}.
+\]
+
+Therefore:
+\[
+    \ket{\psi(t)} = \frac{1}{\sqrt{2}}e^{-i\mathcal{E}t/\hbar}\ket{\uparrow_y} + \frac{1}{\sqrt{2}}e^{+i\mathcal{E}t/\hbar}\ket{\downarrow_y}.
+\]
+
+Expanding and using Euler's formula yields the same answer as Method 1:
+\[
+    \ket{\psi(t)} = \begin{pmatrix}\cos(\mathcal{E}t/\hbar) \\ \sin(\mathcal{E}t/\hbar)\end{pmatrix}. \quad\checkmark
+\]
+
+% ============================================================
+\section{Method 3: Matrix Exponentiation}
+% ============================================================
+
+\subsection{Motivation via Time Stepping}
+
+From a first-order Taylor expansion:
+\[
+    \ket{\psi(t + \delta t)} \approx \ket{\psi(t)} + \delta t\,\frac{d}{dt}\ket{\psi(t)} = \left(I - \frac{i}{\hbar}\delta t\, H\right)\ket{\psi(t)}.
+\]
+
+Breaking time $t$ into $n$ small steps of size $t/n$:
+\[
+    \ket{\psi(t)} \approx \left(I - \frac{i}{\hbar}\frac{t}{n}H\right)^n \ket{\psi(0)}.
+\]
+
+Taking $n \to \infty$ and using the identity $e^A = \lim_{n\to\infty}\left(I + \frac{A}{n}\right)^n$:
+\[
+    \boxed{\ket{\psi(t)} = e^{-iHt/\hbar}\ket{\psi(0)}.}
+\]
+
+\subsection{Rigorous Definition of the Matrix Exponential}
+
+\begin{definition}[Matrix Exponential]
+    For a square matrix $A$:
+    \[
+        e^A \coloneqq \sum_{n=0}^{\infty} \frac{A^n}{n!} = I + A + \frac{A^2}{2!} + \frac{A^3}{3!} + \cdots
+    \]
+    where $A^0 = I$ (the identity matrix).
+\end{definition}
+
+\subsection{Key Property}
+
+\begin{theorem}[Differentiation of the Matrix Exponential]
+    \[
+        \frac{d}{dt}e^{tA} = A\,e^{tA}.
+    \]
+\end{theorem}
+
+\begin{proof}
+    \[
+        \frac{d}{dt}e^{tA} = \frac{d}{dt}\sum_{n=0}^{\infty}\frac{t^n A^n}{n!} = \sum_{n=1}^{\infty}\frac{n\,t^{n-1}A^n}{n!} = A\sum_{n=1}^{\infty}\frac{t^{n-1}A^{n-1}}{(n-1)!} = A\,e^{tA}. \qedhere
+    \]
+\end{proof}
+
+This immediately implies $\ket{\psi(t)} = e^{-iHt/\hbar}\ket{\psi(0)}$ solves the Schr\"odinger equation.
+
+\subsection{Computing Matrix Exponentials}
+
+\subsubsection{Method A: Diagonalization}
+
+If $A = M D M^{-1}$ where $D$ is diagonal, then $A^n = MD^nM^{-1}$ and:
+\[
+    e^A = M\,e^D\,M^{-1}, \quad \text{where } e^D = \operatorname{diag}(e^{\lambda_1}, e^{\lambda_2}, \ldots).
+\]
+
+\subsubsection{Method B: Using $A^2 = -I$ (Generalized Euler Formula)}
+
+If $A$ is a matrix satisfying $A^2 = -I$, then:
+\[
+    \boxed{e^{\theta A} = \cos\theta\, I + \sin\theta\, A.}
+\]
+
+\begin{proof}
+    Separate the Taylor series into even and odd powers:
+    \[
+        e^{\theta A} = \sum_{n=0}^{\infty}\frac{(\theta A)^n}{n!} = \underbrace{\sum_{k=0}^{\infty}\frac{(-1)^k\theta^{2k}}{(2k)!}}_{=\cos\theta}\,I + \underbrace{\sum_{k=0}^{\infty}\frac{(-1)^k\theta^{2k+1}}{(2k+1)!}}_{=\sin\theta}\,A,
+    \]
+    using $A^{2k} = (-I)^k = (-1)^kI$ and $A^{2k+1} = (-1)^kA$. \qedhere
+\end{proof}
+
+\begin{remark}
+    This is the matrix analog of Euler's formula $e^{i\theta} = \cos\theta + i\sin\theta$, since $i^2 = -1$ parallels $A^2 = -I$.
+\end{remark}
+
+% ============================================================
+\section{Applying Matrix Exponentiation to Spin}
+% ============================================================
+
+\subsection{The Time Evolution Operator}
+
+We need to compute $e^{-iHt/\hbar}$ where $H = \mathcal{E}(\hat{n}\cdot\vec{\sigma})$.
+
+Define $A = -i(\hat{n}\cdot\vec{\sigma})$. Then $-iHt/\hbar = (\mathcal{E}t/\hbar)\,A$.
+
+\subsection{Verifying $A^2 = -I$}
+
+\begin{align}
+    A^2 &= (-i)^2(\hat{n}\cdot\vec{\sigma})^2 = -(\hat{n}\cdot\vec{\sigma})^2.
+\end{align}
+
+Computing $(\hat{n}\cdot\vec{\sigma})^2$ explicitly (with $|\hat{n}|=1$):
+\[
+    (\hat{n}\cdot\vec{\sigma})^2 = \begin{pmatrix}n_z & n_x-in_y \\ n_x+in_y & -n_z\end{pmatrix}^2 = \begin{pmatrix}n_x^2+n_y^2+n_z^2 & 0 \\ 0 & n_x^2+n_y^2+n_z^2\end{pmatrix} = I.
+\]
+
+Therefore $A^2 = -I$. $\checkmark$
+
+\subsection{The General Formula}
+
+Applying the generalized Euler formula:
+\[
+    \boxed{e^{-iHt/\hbar} = \cos\!\left(\frac{\mathcal{E}t}{\hbar}\right)I + \sin\!\left(\frac{\mathcal{E}t}{\hbar}\right)\bigl(-i\,\hat{n}\cdot\vec{\sigma}\bigr).}
+\]
+
+\subsection{Verification with the $y$-Axis Example}
+
+For $\hat{n} = \hat{y}$: $-i\sigma_y = -i\begin{pmatrix}0&-i\\i&0\end{pmatrix} = \begin{pmatrix}0&-1\\1&0\end{pmatrix}$.
+
+\[
+    e^{-iHt/\hbar} = \begin{pmatrix}\cos(\mathcal{E}t/\hbar) & -\sin(\mathcal{E}t/\hbar) \\ \sin(\mathcal{E}t/\hbar) & \cos(\mathcal{E}t/\hbar)\end{pmatrix}.
+\]
+
+Acting on $\ket{\psi(0)} = \begin{pmatrix}1\\0\end{pmatrix}$:
+\[
+    \ket{\psi(t)} = \begin{pmatrix}\cos(\mathcal{E}t/\hbar)\\\sin(\mathcal{E}t/\hbar)\end{pmatrix}. \quad\checkmark
+\]
+
+% ============================================================
+\section{Time Evolution as Rotation}
+% ============================================================
+
+\subsection{$\vec{B}$ Along the $z$-Axis}
+
+If $\hat{n} = \hat{z}$, then $H = \mathcal{E}\,\sigma_z$ and:
+\[
+    e^{-iHt/\hbar} = \begin{pmatrix}e^{-i\mathcal{E}t/\hbar} & 0 \\ 0 & e^{+i\mathcal{E}t/\hbar}\end{pmatrix}.
+\]
+
+Acting on a general state $\ket{\psi} = \begin{pmatrix}\cos\frac{\theta}{2} \\ e^{i\phi}\sin\frac{\theta}{2}\end{pmatrix}$:
+\[
+    \ket{\psi(t)} = \begin{pmatrix}e^{-i\mathcal{E}t/\hbar}\cos\frac{\theta}{2} \\ e^{i(\phi + 2\mathcal{E}t/\hbar)}\sin\frac{\theta}{2}\end{pmatrix} \sim \begin{pmatrix}\cos\frac{\theta}{2} \\ e^{i(\phi + 2\mathcal{E}t/\hbar)}\sin\frac{\theta}{2}\end{pmatrix},
+\]
+where $\sim$ denotes equality up to a global phase. The polar angle $\theta$ is unchanged; the azimuthal angle increases as $\phi \to \phi + 2\mathcal{E}t/\hbar$. The Bloch vector \textbf{rotates around the $z$-axis}.
+
+\subsection{General Rotation Formula}
+
+\begin{theorem}[Spin Rotation]
+    The matrix
+    \[
+        U(\hat{n}, \varphi) = e^{-i\varphi\,\hat{n}\cdot\vec{\sigma}/2}
+    \]
+    implements a \textbf{rotation of the Bloch vector} around the axis $\hat{n}$ by angle $\varphi$.
+\end{theorem}
+
+\subsection{Two Key Takeaways}
+
+\begin{enumerate}
+    \item \textbf{Time evolution in a magnetic field \emph{is} a rotation.} The Bloch vector precesses around $\hat{n}$ (the direction of $\vec{B}$) at a rate determined by $\mathcal{E}/\hbar$.
+    \item \textbf{The matrix exponential gives an explicit rotation formula.} Once $e^{-iHt/\hbar}$ is computed, applying it to \emph{any} initial state immediately yields the time-evolved state.
+\end{enumerate}
+
+\subsection{Connection to Quantum Computing}
+
+In the language of quantum computation:
+\begin{itemize}
+    \item The time evolution operator $U(t) = e^{-iHt/\hbar}$ is a \textbf{quantum gate}.
+    \item A spin state is a \textbf{qubit}.
+    \item Any computational operation on a qubit can be realized by choosing an appropriate magnetic field direction $\hat{n}$ and duration $t$.
+\end{itemize}
+
+\end{document}

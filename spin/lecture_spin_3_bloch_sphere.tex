@@ -1,0 +1,283 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{mathtools}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Quantum Spin Lecture Notes}
+\lhead{Lecture 3: The Bloch Sphere}
+\cfoot{\thepage}
+
+% --- Theorem Environments ---
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+
+\title{\textbf{Quantum Spin (3): The Bloch Sphere}}
+\author{Lecture Notes on Quantum Spin}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{Overview}
+% ============================================================
+
+The \textbf{Bloch sphere} provides a powerful geometric correspondence between quantum spin-$\frac{1}{2}$ states (vectors in $\mathbb{C}^2$) and unit vectors in ordinary three-dimensional space ($\hat{n} \in \mathbb{R}^3$, $|\hat{n}|=1$). This correspondence allows us to visualize any spin state as a point on the unit sphere.
+
+The key idea: a quantum state $\ket{\psi}$ corresponds to the direction $\hat{n}$ such that measuring spin along $\hat{n}$ always yields spin up ($100\%$ probability).
+
+% ============================================================
+\section{Spherical Coordinate Parametrization}
+% ============================================================
+
+A unit vector $\hat{n} \in \mathbb{R}^3$ can be parametrized by two angles:
+\begin{itemize}
+    \item $\theta \in [0, \pi]$: the \textbf{polar angle} between $\hat{n}$ and the $z$-axis.
+    \item $\phi \in [0, 2\pi)$: the \textbf{azimuthal angle} between the projection of $\hat{n}$ onto the $xy$-plane and the $x$-axis.
+\end{itemize}
+
+The Cartesian components are:
+\[
+    \boxed{n_x = \sin\theta\cos\phi, \qquad n_y = \sin\theta\sin\phi, \qquad n_z = \cos\theta.}
+\]
+
+% ============================================================
+\section{The Correspondence}
+% ============================================================
+
+\subsection{From $\hat{n}$ to $\ket{\psi}$: The Spin-Up State Along $\hat{n}$}
+
+Given a direction $\hat{n}$ specified by $(\theta, \phi)$, the quantum state that is always measured spin up along $\hat{n}$ is:
+\[
+    \boxed{\ket{\uparrow_{\hat{n}}} = \begin{pmatrix} \cos\dfrac{\theta}{2} \\[6pt] e^{i\phi}\sin\dfrac{\theta}{2} \end{pmatrix}.}
+\]
+
+The convention is that the first component is real and non-negative.
+
+\subsection{From $\ket{\psi}$ to $\hat{n}$: The Bloch Vector}
+
+Given a state $\ket{\psi}$, the corresponding unit vector (the \textbf{Bloch vector}) is:
+\[
+    \boxed{\hat{n} = \begin{pmatrix} \bra{\psi}\sigma_x\ket{\psi} \\ \bra{\psi}\sigma_y\ket{\psi} \\ \bra{\psi}\sigma_z\ket{\psi} \end{pmatrix} = \bra{\psi}\vec{\sigma}\ket{\psi},}
+\]
+where $\vec{\sigma} = (\sigma_x, \sigma_y, \sigma_z)$ is the ``vector of Pauli matrices.''
+
+\begin{remark}[Phase Ambiguity]
+    States $\ket{\psi}$ and $e^{i\gamma}\ket{\psi}$ (differing by an overall phase) correspond to the \emph{same} Bloch vector $\hat{n}$, since all expectation values are unchanged.
+\end{remark}
+
+\begin{definition}[Bloch Sphere]
+    Since $\hat{n}$ is a unit vector ($|\hat{n}| = 1$), all Bloch vectors lie on the unit sphere $n_x^2 + n_y^2 + n_z^2 = 1$. This sphere is the \textbf{Bloch sphere}.
+\end{definition}
+
+% ============================================================
+\section{Eigenvector Characterization}
+% ============================================================
+
+\subsection{Spin Along $\hat{n}$ via $\hat{n}\cdot\vec{\sigma}$}
+
+Recall that the operator for spin measurement along $\hat{n}$ is:
+\[
+    \hat{n}\cdot\vec{\sigma} = n_x\sigma_x + n_y\sigma_y + n_z\sigma_z = \begin{pmatrix} n_z & n_x - in_y \\ n_x + in_y & -n_z \end{pmatrix}.
+\]
+
+Using $n_x + in_y = e^{i\phi}\sin\theta$, this becomes:
+\[
+    \hat{n}\cdot\vec{\sigma} = \begin{pmatrix} \cos\theta & e^{-i\phi}\sin\theta \\ e^{i\phi}\sin\theta & -\cos\theta \end{pmatrix}.
+\]
+
+\begin{theorem}
+    The state $\ket{\uparrow_{\hat{n}}}$ is the eigenvector of $\hat{n}\cdot\vec{\sigma}$ with eigenvalue $+1$.
+\end{theorem}
+
+\begin{proof}
+    Multiply:
+    \[
+        (\hat{n}\cdot\vec{\sigma})\ket{\uparrow_{\hat{n}}} = \begin{pmatrix} \cos\theta & e^{-i\phi}\sin\theta \\ e^{i\phi}\sin\theta & -\cos\theta \end{pmatrix} \begin{pmatrix} \cos\frac{\theta}{2} \\ e^{i\phi}\sin\frac{\theta}{2} \end{pmatrix}.
+    \]
+
+    Top component:
+    \[
+        \cos\theta\cos\frac{\theta}{2} + \sin\theta\sin\frac{\theta}{2} = \cos\!\left(\theta - \frac{\theta}{2}\right) = \cos\frac{\theta}{2}.
+    \]
+
+    Bottom component:
+    \[
+        e^{i\phi}\!\left(\sin\theta\cos\frac{\theta}{2} - \cos\theta\sin\frac{\theta}{2}\right) = e^{i\phi}\sin\!\left(\theta - \frac{\theta}{2}\right) = e^{i\phi}\sin\frac{\theta}{2}.
+    \]
+
+    Therefore:
+    \[
+        (\hat{n}\cdot\vec{\sigma})\ket{\uparrow_{\hat{n}}} = \begin{pmatrix}\cos\frac{\theta}{2} \\ e^{i\phi}\sin\frac{\theta}{2}\end{pmatrix} = +1 \cdot \ket{\uparrow_{\hat{n}}}. \qedhere
+    \]
+\end{proof}
+
+\subsection{The Spin-Down State Along $\hat{n}$}
+
+The eigenvector of $\hat{n}\cdot\vec{\sigma}$ with eigenvalue $-1$ is:
+\[
+    \ket{\downarrow_{\hat{n}}} = \begin{pmatrix} \sin\dfrac{\theta}{2} \\[6pt] -e^{i\phi}\cos\dfrac{\theta}{2} \end{pmatrix}.
+\]
+
+\subsection{Key Properties}
+
+These two states satisfy all expected relations:
+\begin{align}
+    \braket{\uparrow_{\hat{n}}}{\uparrow_{\hat{n}}} &= 1, & \braket{\downarrow_{\hat{n}}}{\downarrow_{\hat{n}}} &= 1, \\
+    \braket{\uparrow_{\hat{n}}}{\downarrow_{\hat{n}}} &= 0, &&
+\end{align}
+and the outer product decomposition:
+\[
+    \hat{n}\cdot\vec{\sigma} = \ket{\uparrow_{\hat{n}}}\!\bra{\uparrow_{\hat{n}}} - \ket{\downarrow_{\hat{n}}}\!\bra{\downarrow_{\hat{n}}}.
+\]
+
+% ============================================================
+\section{Sanity Checks}
+% ============================================================
+
+\subsection{$\hat{n}$ Along the $x$-Axis}
+
+If $\hat{n} = \hat{x}$, then $\theta = \pi/2$, $\phi = 0$:
+\[
+    \ket{\uparrow_{\hat{n}}} = \begin{pmatrix}\cos\frac{\pi}{4} \\ e^{i\cdot 0}\sin\frac{\pi}{4}\end{pmatrix} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix} = \ket{\uparrow_x}. \quad\checkmark
+\]
+
+\subsection{$\hat{n}$ Along the $y$-Axis}
+
+If $\hat{n} = \hat{y}$, then $\theta = \pi/2$, $\phi = \pi/2$:
+\[
+    \ket{\uparrow_{\hat{n}}} = \begin{pmatrix}\cos\frac{\pi}{4} \\ e^{i\pi/2}\sin\frac{\pi}{4}\end{pmatrix} = \frac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix} = \ket{\uparrow_y}. \quad\checkmark
+\]
+
+\subsection{$\hat{n}$ Along the $z$-Axis}
+
+If $\hat{n} = \hat{z}$, then $\theta = 0$ ($\phi$ is arbitrary):
+\[
+    \ket{\uparrow_{\hat{n}}} = \begin{pmatrix}\cos 0 \\ e^{i\phi}\sin 0\end{pmatrix} = \begin{pmatrix}1\\0\end{pmatrix} = \ket{\uparrow_z}. \quad\checkmark
+\]
+
+\subsection{Spin Up in $-\hat{n}$ Equals Spin Down in $\hat{n}$}
+
+To negate $\hat{n}$, send $\theta \to \pi - \theta$ and $\phi \to \phi + \pi$. Then:
+\begin{align}
+    \ket{\uparrow_{-\hat{n}}} &= \begin{pmatrix} \cos\frac{\pi-\theta}{2} \\ e^{i(\phi+\pi)}\sin\frac{\pi-\theta}{2} \end{pmatrix} = \begin{pmatrix} \sin\frac{\theta}{2} \\ -e^{i\phi}\cos\frac{\theta}{2} \end{pmatrix} = \ket{\downarrow_{\hat{n}}}. \quad\checkmark
+\end{align}
+
+% ============================================================
+\section{Every State Points in Some Direction}
+% ============================================================
+
+\begin{proposition}
+    For any normalized state $\ket{\psi} \in \mathbb{C}^2$ with $\braket{\psi}{\psi} = 1$, there exists a direction $\hat{n}$ such that $\ket{\psi}$ is the spin-up state along $\hat{n}$ (up to a global phase).
+\end{proposition}
+
+\begin{proof}[Sketch]
+    Given $\ket{\psi} = \begin{pmatrix}\alpha\\\beta\end{pmatrix}$, multiply by a global phase $e^{i\gamma}$ to make the first component real and non-negative: $\alpha' = |\alpha| \geq 0$. Write the second component as $e^{i\phi}\beta'$ where $\beta' \geq 0$ is real. The normalization $(\alpha')^2 + (\beta')^2 = 1$ means we can parametrize $\alpha' = \cos\frac{\theta}{2}$, $\beta' = \sin\frac{\theta}{2}$ for some $\theta \in [0, \pi]$. This recovers the standard form.
+\end{proof}
+
+% ============================================================
+\section{Computing the Bloch Vector}
+% ============================================================
+
+For the state $\ket{\psi} = \begin{pmatrix}\cos\frac{\theta}{2} \\ e^{i\phi}\sin\frac{\theta}{2}\end{pmatrix}$, we verify $\hat{n} = \bra{\psi}\vec{\sigma}\ket{\psi}$:
+
+\subsection{$x$-Component}
+
+\begin{align}
+    \bra{\psi}\sigma_x\ket{\psi} &= \begin{pmatrix}\cos\frac{\theta}{2} & e^{-i\phi}\sin\frac{\theta}{2}\end{pmatrix}\begin{pmatrix}e^{i\phi}\sin\frac{\theta}{2}\\\cos\frac{\theta}{2}\end{pmatrix} \\
+    &= e^{i\phi}\cos\frac{\theta}{2}\sin\frac{\theta}{2} + e^{-i\phi}\sin\frac{\theta}{2}\cos\frac{\theta}{2} \\
+    &= 2\cos\phi\cos\frac{\theta}{2}\sin\frac{\theta}{2} = \sin\theta\cos\phi = n_x. \quad\checkmark
+\end{align}
+
+\subsection{$y$-Component}
+
+\[
+    \bra{\psi}\sigma_y\ket{\psi} = i\bigl(-e^{i\phi} + e^{-i\phi}\bigr)\cos\frac{\theta}{2}\sin\frac{\theta}{2} = 2\sin\phi\cos\frac{\theta}{2}\sin\frac{\theta}{2} = \sin\theta\sin\phi = n_y. \;\checkmark
+\]
+
+\subsection{$z$-Component}
+
+\[
+    \bra{\psi}\sigma_z\ket{\psi} = \cos^2\frac{\theta}{2} - \sin^2\frac{\theta}{2} = \cos\theta = n_z. \quad\checkmark
+\]
+
+\subsection{Bloch Vector is a Unit Vector}
+
+A quick manipulation confirms $|\hat{n}| = 1$:
+\[
+    \hat{n}\cdot\hat{n} = \bra{\psi}(\hat{n}\cdot\vec{\sigma})\ket{\psi} = \bra{\psi}\ket{\psi} = 1,
+\]
+using the fact that $\ket{\psi}$ is an eigenvector of $\hat{n}\cdot\vec{\sigma}$ with eigenvalue $+1$.
+
+% ============================================================
+\section{Measurement Probability Formula}
+% ============================================================
+
+\begin{theorem}[Overlap Probability]
+    The probability that a state pointing along $\hat{n}$ is measured to be spin up along direction $\hat{m}$ is:
+    \[
+        \boxed{P(\uparrow_{\hat{m}}) = \bigl|\braket{\uparrow_{\hat{m}}}{\uparrow_{\hat{n}}}\bigr|^2 = \frac{1 + \hat{n}\cdot\hat{m}}{2}.}
+    \]
+\end{theorem}
+
+\subsection{Special Cases}
+
+Let $\vartheta$ be the angle between $\hat{n}$ and $\hat{m}$ (so $\hat{n}\cdot\hat{m} = \cos\vartheta$):
+
+\begin{center}
+\renewcommand{\arraystretch}{1.4}
+\begin{tabular}{c|c|l}
+    $\hat{n}\cdot\hat{m}$ & $P(\uparrow_{\hat{m}})$ & Interpretation \\ \hline
+    $+1$ (parallel) & $1$ & Certain to be spin up \\
+    $0$ (perpendicular) & $1/2$ & Equal probability \\
+    $-1$ (antiparallel) & $0$ & Certain to be spin down
+\end{tabular}
+\end{center}
+
+\subsection{Derivation}
+
+For $\hat{m} = \hat{z}$ and general $\hat{n}$:
+\[
+    \braket{\uparrow_z}{\uparrow_{\hat{n}}} = \begin{pmatrix}1&0\end{pmatrix}\begin{pmatrix}\cos\frac{\theta}{2}\\e^{i\phi}\sin\frac{\theta}{2}\end{pmatrix} = \cos\frac{\theta}{2}.
+\]
+\[
+    P(\uparrow_z) = \cos^2\frac{\theta}{2} = \frac{1 + \cos\theta}{2} = \frac{1 + \hat{n}\cdot\hat{z}}{2}.
+\]
+The general formula follows by replacing $\hat{z}$ with $\hat{m}$ and $\cos\theta$ with $\hat{n}\cdot\hat{m}$.
+
+% ============================================================
+\section{Summary}
+% ============================================================
+
+\begin{enumerate}
+    \item Every spin-$\frac{1}{2}$ state corresponds to a point on the \textbf{Bloch sphere} --- a unit sphere in $\mathbb{R}^3$.
+    \item The \textbf{Bloch vector} $\hat{n} = \bra{\psi}\vec{\sigma}\ket{\psi}$ identifies the direction along which $\ket{\psi}$ is always spin up.
+    \item The \textbf{spin-up state} along $\hat{n} = (\sin\theta\cos\phi,\;\sin\theta\sin\phi,\;\cos\theta)$ is:
+    \[
+        \ket{\uparrow_{\hat{n}}} = \begin{pmatrix}\cos\frac{\theta}{2}\\e^{i\phi}\sin\frac{\theta}{2}\end{pmatrix}.
+    \]
+    \item Measurement probabilities are governed by $P(\uparrow_{\hat{m}}) = \frac{1 + \hat{n}\cdot\hat{m}}{2}$.
+    \item The Bloch sphere makes the geometry of quantum spin as concrete as a classical direction vector.
+\end{enumerate}
+
+\end{document}

@@ -1,0 +1,255 @@
+00:00:00
+welcome back to understanding Quantum information and computation my name is John wattrus and I'm the technical director for education at IBM Quantum this is the 11th lesson of the series and it's the third lesson in the third unit which is on the general formulation of quantum information this lesson is about measurements which represent an interface between Quantum and classical information when a measurement is performed on a system while it's in a Quantum State classical information is
+
+00:00:29
+extracted revealing something about that Quantum State and generally changing or destroying that state in the process in a simplified formulation of quantum information which was discussed in the first unit of the series we typically restrict our attention to projective measurements including the simplest type of measurement standard basis measurements it is however possible to generalize the notion of a measurement and that turns out to be a pretty useful thing to do in this lesson we'll talk about
+
+00:00:59
+measurements in full generality including how they're described in mathematical terms and how they fit into the general formulation of quantum information toward the end of the lesson we'll also take a look at a couple of fundamental Notions connected with measurements namely Quantum State discrimination and Quantum State tomography so let's get started here is an overview of the lesson as we often do we'll start with the basics including a couple of different but equivalent ways that we
+
+00:01:28
+can describe measurements in math mathematical terms in particular we can describe measurements by collections of matrices and we can also describe them as channels which I alluded to in the previous lesson we'll also discuss partial measurements or in other words measurements that are performed on just one part of a larger compound system then we'll move on to neymark theorem which is a fundamental fact concerning measurements that basically says that General measurements can always be implemented in a simple way
+
+00:02:00
+that's reminiscent of Stein spring representations of channels in short General measurements can always be implemented by first introducing an initialized workspace system then performing a unitary operation and finally performing a standard basis measurement on the workpace system this turns out to be pretty easy to prove and we'll see how that goes and we'll also see how this connects to so-called non-destructive measurements which I'll describe finally in the last part of the
+
+00:02:30
+lesson we'll discuss Quantum State discrimination and Quantum State tomography we'll begin with mathematical descriptions of measurements measurements provide us with an interface between Quantum and classical information when a measurement is performed on a system while it's in some Quantum State classical information about that Quantum state is extracted in addition the quantum state is generally changed or possibly destroyed completely initially we'll focus our attention on so-called destructive measurements where
+
+00:03:04
+a Quantum State goes in and just classical information comes out so there's no specification of the postmeasurement quantum state of the system that was measured intuitively speaking we can imagine that a destructive measurement destroys whatever system was measured so its state after the measurement takes place isn't specified this doesn't literally mean that physical devices are necessarily destroyed it's just a mathematical description and it's a very useful one because it helps to keep things simple
+
+00:03:36
+and to focus in on the essential mathematical aspects of measurements there are in particular two equivalent ways to describe destructive measurements which I mentioned during the overview of the lesson one way to describe a destructive measurement is by a collection of matrices where in particular we have one Matrix for each possible measurement outcome a second way to describe a destructive measurement is by a channel where the input is the state of whatever system is being measured and the output is always
+
+00:04:09
+a diagonal density Matrix which we can interpret as a description of a probability distribution over the possible classical measurement outcomes the two descriptions are equivalent and that's pretty useful because it allows us to pick whichever description is more convenient in a given situation we'll also talk about non-destructive measurements where in addition to a classical measurement outcome postmeasurement Quantum state of the system that was measured is also specified non-destructive measurements
+
+00:04:42
+are important and they arise frequently but there is a sense in which they're somehow not as fundamental as destructive measurements in mathematical terms in particular as it turns out non-destructive measurements can always be described as compositions of channels and destructive measurements and with we'll see how that works a bit later in the lesson now let's take a look at how measurements meaning destructive measurements can be described as collections of matrices throughout this discussion
+
+00:05:13
+we'll suppose that X is a system that's being measured and just for the sake of Simplicity we'll make a couple of assumptions first we'll assume that the classical State set of X consists of the integers from 0 to n minus one for some positive integer n and the possible outcomes of the measurement are the integers from 0 to M minus one again for some positive integer M there doesn't need to be any relationship between the numbers n and M they're both arbitrary positive integers and of course we could replace
+
+00:05:44
+these sets by arbitrary classical State sets if we wanted to do that first let's recall how projective measurements work which we first talked about back in the third lesson of the series given that we're assuming that the measurement outcome are the integers from 0 to n minus one we describe a projective measurement by a collection of projections Pi 0 through Pi M minus one that's sum to the identity Matrix and these matrices all have rows and columns corresponding to the classical
+
+00:06:14
+states of X or in other words these are all n byn matrices if x is in a Quantum State that's described by a Quantum State Vector s then each possible measurement outcome a appears with probability equal to the ukian norm squ of Pi a multiplied to the vector s the ukian norm squar of any Vector is equal to the inner product of that Vector with itself so we get the expression that's shown on the screen and we can simplify that just a little bit by using the fact that Pi a is a projection so multiplying it to
+
+00:06:49
+itself doesn't do anything and finally we can rewrite the expression we've obtained in a slightly different way using the cyclic property of the trace again as is shown on the screen and if it's not clear why we want to write the expression like this the short answer is that we'd like to understand how projective measurements work for density matrices and in particular by linearity we have that if the state of X is described by a density Matrix row rather than a Quantum State Vector s then the
+
+00:07:21
+probability for the outcome a to appear is given by the trace of the projection Pi a times the density Matrix row that has to be the case because as we've seen we can always think about a density Matrix as being a weighted average of pure States and if we average the corresponding probabilities we get this expression because the trace is a linear function so that's the expression we're going for and we can clean things up just a little bit to focus in on density matrices the main point of doing this by
+
+00:07:55
+the way is to establish a point of reference to what we've already learned and to see that this description of projective measurements is in fact a special case of a more General description of measurements that we're about to see so what I'll do now is to replace this description of how projective measurements work for density matrices with the description for General measurements so we can understand the relationship and here it is a general measurement not necessarily A projective measurement is described by
+
+00:08:26
+a collection of positive semi-definite matrices p 0 through PM minus one that's sum to the identity and if this measurement is performed on X while it's in a state described by a density Matrix row then each outcome a appears with probability equal to the trace of PA * Row in short the only thing that's changed is that we've relaxed the condition on these matrices in particular the matrices don't need to be projection matrices they just need to be positive semi-definite and correspondingly I've
+
+00:08:57
+replaced the letter Pi with the letter p because Pi is a conventional name for a projection whereas I like to use the letter P for positive semi-definite matrices this is a generalization of the description we had for projective measurements by the way because projection matrices are always positive semi-definite and in fact they can alternatively be defined as positive semi-definite matrices whose igen values can only be zero and one we can observe that this definition makes sense in that we always obtain a
+
+00:09:30
+probability Vector for the outcome probabilities in the following way first these numbers that I referred to as outcome probabilities are always non- negative real numbers that's because both PA and row are positive semi-definite and the trace of the product of two positive semi-definite matrices is always a non- negative real number and I'll leave that for you to think about why that is and second the numbers have to sum to one because the trace is linear the matrices p 0 through PN minus1 are
+
+00:10:04
+required to sum to the identity and density matricies have Trace equal to one so regardless of what density Matrix row we started with the outcome probabilities will indeed always form a probability Vector now let's take a look at a few examples I already mentioned that projective measurements are a special case of General measurements because projections are always positive semi-definite but it's nice to start simple so let's begin with a standard basis measurement of a cubit we can represent a standard basis
+
+00:10:38
+measurement of a cubit by two matrices p 0 and P1 defined as is shown on the screen p 0 is z bra zero and P1 is k1 bra one these are both positive semi-definite matrices and indeed their projections and they clearly sum to the identity so together they describe a measurement if we apply this measurement to a cubit in a state described by a density Matrix row then the probability for the alcome zero to appear is the trace of p 0 * row and the probability for the outcome one is the trace of P1 * row and by the
+
+00:11:15
+cyclic property of the trace we obtain the two diagonal entries of row as we expect here's another example where this time the matrices aren't projections they are positive semidefinite though and they do happen to be density matrices but that's not important but what is important is that they sum to the identity so together they describe a measurement we can see what happens when this measurement is performed on a cubit in the plus state for instance just to see how it works for one example of a
+
+00:11:47
+state and a calculation of the probabilities is shown on the screen notice in particular that although the plus state is a pure State and we can represent that state by the quantum State Vector cat Plus we do have to plug the density Matrix representation of that state which is C plus BR plus into the formulas to get the probabilities and let me also remark that because we're talking about a destructive measurement there isn't any specification of the postmeasurement quantum state of this Cubit so all we
+
+00:12:18
+have is a specification of the outcome probabilities here's a final example for now and it's a pretty interesting one once again it's a measurement of a single Cubit and to describe it we'll start by defining four quantum State vectors known as the tetrahedral States and the reason that they're called the tetrahedral States is because they correspond to the four vertices of a regular tetrahedron inscribed within the block sphere and to be clear when we say that this is a regular tetrahedron
+
+00:12:50
+we mean a four-sided solid where each of the faces is an equilateral triangle so there's a perfect symmetry here every Edge has the same length and it's the same angle that's formed between any two adjacent edges and now we can define an interesting measurement with four possible outcomes as is shown on the screen or in words we can take our matrices to be the density Matrix representations of these states divided by two now these are definitely positive semi-definite matrices because their
+
+00:13:23
+density matrices divided by two and you could go through the arithmetic to check that they do in fact sum to the identity but another way to see that is to think about the Symmetry if we average these four states together we get the completely mixed state which is at the center of the block sphere but because we're dividing each one by two rather than four we get twice the completely mixed state which is the identity I won't say anything more about this measurement for now except to observe that it isn't a projective
+
+00:13:53
+measurement but it is a nice example and we'll see it come up again later in the lesson another way to describe general measurements is as channels as we'll now discuss the idea here is that classical probabilistic States can be represented by diagonal density matrices and so because measurement outcomes are classical we can think about measurements as being channels where the output is always a diagonal density Matrix that describes the measurement outcome so let's take a look at this in
+
+00:14:26
+a little bit more detail if we think abstractly about about a general measurement we can describe that measurement as a channel fi the input system for the channel is whatever system X is being measured and the output system is a system y whose classical States correspond to the measurement outcomes which we're taking to be the integers from 0 to n minus one for some positive integer M and because measurement outcomes are classical we require that for every input density Matrix Row for the system
+
+00:14:58
+X the output five row must be a diagonal density Matrix for example if we think about a standard basis measurement of a cubit and we think about that measurement as being described by a channel we can express it as we have here on the screen if the input density Matrix is row then we'll get the outcome zero with probability equal to bra 0o row cat Zer and we'll get the outcome one with probability bra one row Kat one and so if we express these classical measurement outcomes as density matrices
+
+00:15:31
+we'll get this expression for the corresponding Channel and it turns out that it's none other than the completely def phasing Channel and that's consistent with the idea that the completely def phasing Channel represents an extreme form of decoherence which can mean different things but when I use that term I'm talking about the tendency for Quantum States to become classical because the environment around whatever system we're talking about is watching in some sense or in other words it's measuring
+
+00:16:02
+so measurement outcomes can be described as channels as I've just described but this is not just a possibility it's a characterization of General measurements and what I mean by that is the following of course there are channels that don't represent measurements because the output might not always be a diagonal density Matrix but if it is the case that the output of a channel is always a diagonal density Matrix regardless of what input State row we choose then it is necessar possible to
+
+00:16:30
+express that channel in the form that's shown on the screen for some choice of a measurement meaning a collection of positive semidefinite matrices that sum to the identity and that's nice for multiple reasons including the fact that it basically tells us that our definition of measurements as collections of matrices isn't missing anything another way of saying that is that this way of thinking about measurements as channels is operational or axiomatic perhaps in the sense that it captures what a measurement should be
+
+00:17:01
+which is a physical process that transforms Quantum information into classical information and it turns out that it's completely equivalent to our first description of measurements which is purely algebraic I won't go through the proof of the equivalence in this video but it isn't difficult and if you're interested you can find the proof in the written material for the lesson which is linked in the video description we've discussed what happens when a general measurement is performed
+
+00:17:27
+on a system in a given state at least for the case of destructive measurements next we'll talk about partial measurements meaning that just one part of a compound system is measured to be precise let's suppose that we have a pair of systems XZ that together are in a state described by a density Matrix row and a measurement described by a collection of positive semi-definite matrices that sum to the identity is performed on the system X alone naturally this results in in a measurement outcome and because we're
+
+00:18:01
+talking about destructive measurements we can imagine that the process of measurement destroys the system X but we still have the system Z to worry about and we need to understand how the measurement of X affects the state of Z first let's talk about the outcome probabilities because we're talking about a measurement of the system X alone the probabilities for different outcomes to appear can only depend on the state of X in isolation which is to say that they can only depend on the reduced state of
+
+00:18:35
+X in particular the probability for a given outcome a to appear is given by the same formula from before which is the trace of PA times the reduced state of X which we denote by Row subx the state row subx is obtained from row by tracing out Z so we can make that substitution and although it might not be immediately obvious the question we get can alternatively be written as is shown on the screen it's the trace of PA tensored with the identity Matrix on the system Z * row now that's an equality that's
+
+00:19:11
+definitely worth taking some time to verify it's intuitive we're not doing anything at all to Z so it makes sense that the identity on Z should show up like this but it can also be verified algebraically and I will leave that to you along with the suggestion to First consider the case that row is is a tensor product of two matrices and then use linearity to conclude that it must work for all row and I'll also say that it does not depend on the fact that PA is positive semi-definite or that row is
+
+00:19:40
+a density Matrix this is an equality that would work for any choice of matrices in place of PA and row as long as they have the right dimensions for the expression to make sense and now let's see how the state of Z is affected by the measurement and the natural approach in my view is to think about the measurement as a channel here's the channel that we associate with our measurement and we're thinking about this as a channel from the system X to a new system y whose classical States correspond to the
+
+00:20:13
+measurement outcomes so in this formula Sigma represents a state of the system X alone if we apply this channel to the system X while the pair XZ is in the state row then we'll obtain the density Matrix that we have right here again take as much time as you need to verify this and again my suggestion is to First consider the case that row is a tensor product of two matrices and then use linearity now we saw this type of state where the first system is classical and the second system is quantum as an
+
+00:20:49
+example in the density Matrix lesson each a occurs with some probability and that's the trace of the second tensor Factor so you can think about these second tensor factors as being density matrices multiplied by probabilities so to obtain the state of Z conditioned on obtaining a particular measurement outcome a we simply divide out the probability or in other words we normalize the second tensor Factor by dividing it by its own Trace so in summary if we perform a measurement on X while the pair XZ is in
+
+00:21:27
+the state row this is what happens first each outcome a appears with probability equal to the trace of PA tensored with the identity time row and second conditioned on obtaining a particular measurement outcome a the state of Z is given by the expression shown on the screen which is what we get by normalizing The Matrix we just saw a moment ago and that's the same thing as dividing the matrix by the probability for a to appear I should mention that this only makes sense if the probability is non zero because otherwise we're
+
+00:22:00
+dividing by zero but that's okay because we don't need to concern ourselves with things that don't happen in this part of the lesson we'll discuss a simple but fundamental theorem about measurements known as Neymar's theorem in short what it says is that any measurement can be implemented as the figure on the screen suggests putting this in words a given General measurement on a system X can be implemented in the following way we first introduce an initialized workspace system y whose classical
+
+00:22:33
+states are the possible measurement outcomes which we're assuming are numbered 0 through n minus one then a unitary operation U is performed on the pair YX and then a standard basis measurement is performed on y so everything is basically set in stone here except for the choice of U and what the theorem says is that it is in fact possible to choose this unitary operation U so that the probabilities for the different outcomes always agree with the given General measurement now let's see how Neymar's
+
+00:23:09
+theorem is proved and it isn't difficult we just need to make a good choice for the unitary operation U and verify that it works but first we need a basic fact from Matrix Theory which is that for any positive semi-definite Matrix P there's always a unique positive semi-definite Matrix Q such that Q s is equal to P in general there could be many matrices that squared to give us P but there's always just one of them that's positive semi-definite the notation we use to denote this Matrix is the square root of
+
+00:23:42
+p and that's also how we refer to it in words if you want to calculate the square root of P for some positive semi-definite Matrix P by the way you can do that by first calculating a spectral decomposition of p and then replacing each of the igen values by its square root and leaving the igen vectors alone the igen values are all non- negative so this makes sense and it's pretty easy to see that the Matrix we get is in fact positive semi-definite and squares to P the fact that it's Unique is a
+
+00:24:13
+different matter it's not difficult to prove that using some basic facts about matrices but it's kind of tangential to the lesson and we'll just take that part as being given and now that we have that Concept in hand it's pretty easy to spef ify a unitary operation U that works any unitary Matrix that matches the pattern that's shown on the screen will in fact work the first n columns assuming X has n classical States like before are obtained by stacking the square roots of the matrices that describe the
+
+00:24:46
+measurement on top of one another and the remaining columns can be whatever we want it doesn't make any difference as long as the entire Matrix is unitary and by the way if you're noticing a resemblance to the connection between Krauss and Stein spring representations of channels that's not coincidental and in fact what we have here is essentially a special case of that where our cross matricies all happen to be positive semi-definite so there are two things we need to check the first is that this
+
+00:25:23
+choice of you actually works and the second is that it's possible to choose the unspecified columns in a way that makes you unitary so let's start with the first one here's the state that we start with the bottom system Y is initialized to the zero State while the top system starts in the state row and then we perform U which means that we conjugate by U we can write this all out in terms of block matrices as is shown on the screen we have U on the left UD dagger on the right and K zero bra zero tensored with
+
+00:25:59
+row in the middle which takes the form that we have here where we have Row in the upper left hand corner and zeros everywhere else and if you think about this product for a moment it's evident that the unspecified entries of you don't matter at all because they're always getting multiplied by zero entries of this Matrix in the middle and if we work through the multiplication what we get is this Matrix that's shown right here described as a block Matrix or alternatively we can express it using direct notation
+
+00:26:31
+like this that is in fact the more convenient form for us so let's focus in on this expression and for the sake of convenience let's give this Matrix which is a density Matrix the name Sigma the last step is the standard basis measurement on y so let's calculate the reduced state in y and that's easy given the expression we have we simply Trace out X which corresponds to the second tensor Factor so the probability for any given outcome a to appear is the diagonal entry corresponding to a we can write
+
+00:27:09
+that like this and it equals the trace of the square root of PA * row * the square root of PA and by the cyclic property of the trace we get the trace of PA * row which is what we were hoping for so the probabilities for the different outcomes to appear are correct they always agree with the original measurement that we started with the second thing we need to check is that it's possible to fill in the unspecified Columns of U in such a way that it becomes unitary this follows from the fact that
+
+00:27:42
+the first n columns which are the ones that are formed by the square roots of the matrices that describe the measurement are orthonormal and that can be checked pretty directly the relevant details are here on the screen so pause the video and take a few moments to think about that if you wish but as I suggested before it's actually a special case of something that we encountered in the previous lesson and that is the proof so far in the lesson we've kept our focus on destructive measurements
+
+00:28:12
+meaning that there's no specification of the postmeasurement quantum state of the system that was measured for a non-destructive measurement on the other hand there's not only a classical measurement outcome but also a postmeasurement Quantum state of the system that was measured and as we'll see there's a natural connection to Neymar's theorem there are in fact different ways to formulate non-destructive measurements in mathematical terms but we'll start with one formulation that
+
+00:28:40
+basically comes directly from Neymar's theorem consider a general measurement meaning a destructive one described by a collection of positive semi-definite matrices p 0 through PN minus one that's sum to the identity we can then turn this measurement into non-destructive measurement simply by considering the implementation of this measurement that we discussed in the context of Neymar's theorem we introduce a new system y interact it with X through a unitary operation U and then perform a standard
+
+00:29:13
+basis measurement on y so the system X is still there and we can consider its state and based on the analysis that we went through we can determine that the postmeasurement state of X conditioned on getting a particular measurement outcome a is given by a density Matrix that looks like this in words we conjugate by the square root of the corresponding measurement Matrix and then normalize another way to formulate non-destructive measurements which is more General is in terms of cross matrices of channels and this is the
+
+00:29:55
+definition of measurements you'll find in the well-known textbook of Neil in Trang for instance suppose that m0 through m m minus1 are square matrices that satisfy the equation that's shown on the screen which is to say that we could think about these matrices as being cross matrices that describe a channel in fact these matrices do describe a channel but they also describe a non-destructive measurement and the way that it works when a system in a given State row is measured is first the outcome probabilities are
+
+00:30:28
+given by the equation shown on the screen each outcome appears with probability equal to the trace of ma * row * ma dagger and conditioned on the alcome a appearing the state of the measured system looks like this non-destructive measurements of this sort can be implemented in a similar way to what we had for Neymar's theorem and I'll leave that for you to think about if you choose it is possible to generalize the concept of a non-destructive measurement even further than this for example
+
+00:31:01
+there's a concept of a so-called Quantum instrument that's sometimes quite useful but I won't cover that in this video in the last part of the lesson I'll briefly discuss two tasks that are associated with measurements Quantum State discrimination and Quantum State tomography there's quite a lot to be said about both of these Concepts and we're really just going to be scratching the surface so let's start by clarifying what these terms refer to and how they differ first is quantum State
+
+00:31:31
+discrimination the idea here is that we have a known collection of quantum states of some system along with probabilities associated with these states so to be precise let's assume that row 0 through row M minus1 are density matrices representing possible Quantum states of a system X and p 0 through PN minus one are probabilities associated with these states so if we collect the probabilities into a single Vector we get a ability Vector a succinct way of saying this by the way is that we have an ensemble of quantum
+
+00:32:04
+States and now an abstract way that we can think about Quantum State discrimination as a task or as a problem is that first a number between Z and N minus one is chosen randomly according to the probabilities the system X is then prepared in the state corresponding to the randomly selected number and the goal is to determine by means of a measurement of X which number was chosen so we have a finite number of Alternatives along with a prior and the goal is to determine which alternative actually
+
+00:32:37
+happened for some choices of states and probabilities this may be easy and for others it may not be possible to do this without some chance of making an error and there are various specific questions that we could ask such as what is the minimum probability of making an error and what does a measurement that achieves this minimum probability of error look like Quantum State tomography on the other hand is different here we have an unknown Quantum state of a system so there's typically no prior or any information
+
+00:33:08
+about possible Alternatives this time however it's not a single copy of the state that's made available but rather many independent copies are made available which is to say that for some possibly large number n we have n identical systems X1 through xn that are each independently prepared in the state row and this time the goal is to find an approximation of this unknown Quantum State as a density matrix by measuring the systems so in summary in Quantum State discrimination we have a single copy of
+
+00:33:40
+the state and we're trying to discriminate among a finite number of known Alternatives and in Quantum State demography we have many independent copies of an unknown Quantum State and the goal is to find a description of that state or at least a decent approximation of it quantum State discrimination is interesting because it abstracts a type of situation that commonly arises in computation and cryptography for instance where one alternative out of a finite set of possibilities has taken place and we or somebody else is trying
+
+00:34:10
+to figure out which one it was by measuring a Quantum system the simplest non-trivial case is where there are just two Alternatives meaning that m is equal to two so the task is to discriminate between a pair of States this case turns out to be essentially a completely solid problem assuming that the goal is to minimize the chance of an incorrect discrimination there's an optimal choice for a measurement and it's often called the hellstrom measurement it's a projective measurement in fact and it can be
+
+00:34:42
+described as follows first we consider the weighted difference between the two Alternatives meaning p 0 * row 0 minus P1 * Row one so we're multiplying the probability of drawing each of these two states to the states themselves and we're taking the difference that's a herian matrix because it equals its own conjugate transpose so it has a spectral decomposition and we know in particular that the igen values are all real numbers so let's assume that we have a spectral decomposition written in the
+
+00:35:15
+form that's shown on the screen what we do next is to collect the igen values into two sets where all of the positive IG values are in one set and all of the negative IG values are in the other to be precise let's take s0 to be the set of all the indices k for which the corresponding igen value Lambda K is non- negative and let S1 be the remaining indices which are the ones corresponding to negative IG values it doesn't actually matter which set contains the indices corresponding to any zero I values here we're making
+
+00:35:47
+an arbitrary choice to include the minus zero but it wouldn't make any difference if some or all of them were included in S1 instead all that really matters is that we're separating the positive and negative IG values and finally we Define two projections Pi 0 and Pi 1 as is shown on the screen in words Pi 0 is the projection onto the Subspace spend by the igen vectors corresponding to non- negative IG values and Pi 1 is projection onto the space expanded by the igon vectors corresponding to negative IG
+
+00:36:21
+values these are indeed projections and if we add them together we get the identity Matrix because the igen vectors S 0 through S N minus one form an orthonormal basis if this measurement is performed in the situation at hand meaning that the state being measured is row 0 with probability p 0 and Row one with probability P1 then it turns out that the probability of a correct identification has a pretty simple formula in terms of the igen values Lambda 0 through Lambda n minus one I won't go through the details of
+
+00:36:53
+the calculation in this video you can consult the written content Linked In the video description if you're interested or see if you can convince yourself that this formula is indeed correct we can also Express this probability using a matrix Norm commonly called the trace Norm it's a similar notation to the ukian norm for vectors except that we have a subscript of a one to indicate that it's the trace Norm the trace Norm is very important and it's very commonly encountered in Quantum
+
+00:37:22
+Computing but I won't say too much more about it in this lesson one way to define it for herian matrices is that it's the sum of the absolute values of the igen values and so you can think about this second equality as following directly from that definition the trace arm can also be defined in other ways that are more General and we'll encounter the tracor again in the next lesson this is in fact the best that you can do this measurement is optimal assuming your goal is to maximize the chance of a
+
+00:37:52
+correct guess that fact is sometimes called the hellstrom Holo theorem and it's also sometimes just called hellstrom's theorem so you can't beat this measurement in terms of correctness probability and it's nice because there's a simple recipe for the measurement itself and an exact formula for the correctness probability in terms of the trace Norm the trace Norm is often used as a way of measuring the observable difference between density matrices for precisely this reason and when people
+
+00:38:23
+refer to the trace distance between States they're typically referring to one half times the trace Norm of the difference between the two density matrices which here corresponds to the case where p 0 and P1 are both 1/2 which is a natural case to consider Quantum State discrimination for two states is optimally solved by the heal from measurement for which we have a simple recipe and a simple formula for the correctness probability so what happens when we want to discriminate among three or more
+
+00:38:54
+States in this case we don't have a formula in general for an optimal choice of a measurement or a simple expression for the maximum probability of correctness it is however possible to find a good approximation of an optimal measurement with the help of a computer and in particular that can be done using a really fascinating and Powerful optimization technique known as semi-definite programming but it's not something that you can feasibly Implement using a pencil and a piece of paper for
+
+00:39:22
+instance on the other hand if somebody gives you a description of a measurement and they claim to you that this measurement is optimal for a Quantum State discrimination task then it actually is very easy to either verify or falsify that claim and that could be done using the so-called Holo Yan Kennedy LAX conditions I won't explain what they are in this video but they are simple conditions and it's pretty cool that this is possible here's an example which connects back to the tetrahedral states
+
+00:39:54
+that we saw earlier in the lesson suppose we're giving one of these four states selected at random with probability one quarter for each one and our goal is to determine which state that we're given it's not surprising perhaps but the best choice you can make for a measurement to do this is the tetrahedral measurement you can't always do something like this for an arbitrary collection of pure States but because of the symmetries involved here this does work and we actually get a valid
+
+00:40:23
+measurement and through the Holo un Kennedy LAX conditions that I mentioned a few moments AG ago it turns out to be quite straightforward to prove that this is indeed an optimal choice of a measurement specifically what happens here is that the measurement is always correct with probability 1/2 which isn't bad because there are four Alternatives so the probability of a correct guess is twice as good as random guessing and it happens to be the best that you can do for these states now I'll say just a little bit
+
+00:40:52
+more about Quantum State tomography where we have many independent copies of an unknown Quantum state and the goal is to find an approximation of the density Matrix that describes that state there are actually several different variants of this problem that depend on your assumptions and in particular on what sorts of measurements you allow for instance we could demand that each system is measured individually and the results are combined somehow to arrive at a description of the density Matrix or we could allow all of the
+
+00:41:23
+systems to be measured together as a single compound system which is much better in theory but it's also much more demanding from a technological standpoint in addition to the choices one makes for the measurements there's also an important consideration which is how to reconstruct a description of the density Matrix from whatever data you get from the measurements I won't go into details about this my point is simply to suggest that Quantum State tomography is really more of an umbrella concept having many
+
+00:41:54
+different variants as opposed to being a single procedure there's been a great deal of research into this problem including some fairly recent breakthrough results that connect the number of copies n to the accuracy of the approximation that can be obtained and it continues to be an interesting and active area of research to finish off the lesson let's take a look at Quantum State tomography for cubits and how we can do it so let's suppose that row is a density Matrix representing a state of a
+
+00:42:25
+single Cubit and X1 through xn are cubits that have all been independently prepared in the state row and for the sake of this discussion let's assume that n is large what we can do is to divide the systems into three roughly equal piles and for the first pile we'll perform a measurement with respect to the plus minus basis for each outcome corresponding to plus we'll score plus one and for each outcome corresponding to minus we'll score minus one a more succinct way to describe this measure
+
+00:42:58
+is that it's a poly X measurement because the plus and minus states are IG vectors of the poly X Matrix and the corresponding igen values are plus one and minus one and in fact that's also a much more common way to describe it and indeed the expected value for the score is equal to the trace of Sigma x * row now we don't necessarily learn what this expected value is but if we average the scores we obtain over lots and lots of Trials we're pretty likely to get a decent approximation to the this
+
+00:43:27
+expected value by the law of large numbers and there are some well-known statistical bounds that we can throw at this if we want to be more quantitative about that statement we do something similar with Sigma y on the second third of the systems the only thing that changes here is that we use the plus I and minus I states which are igen vectors of Sigma Y and similarly for Sigma Z for which the standard basis vectors are IG vectors and then finally we can use the formula that's shown on the screen which
+
+00:44:00
+tells us what the coefficients should be if row is written as a linear combination of poly matricies and by substituting our approximations for these coefficients and possibly adjusting them a little bit to make sure that we get a positive semi-definite Matrix we get an approximation to row of course there are details that I haven't gone into such as the accuracy of the approximation and the degree of confidence that we can hope to have in it but hopefully that gives you a big basic idea of one way that tomography
+
+00:44:29
+can be performed on a cubit it's also possible to do Cubit tomography using the touch or hedral measurement and in fact this turns out to be quite simple and elegant at least in mathematical terms what we can do is to perform just this one measurement alone on all of the independent copies of our unknown Quantum State and by using the remarkable formula shown right here we can come up with an approximation of our state by estimating the trace of PK * Row for each K by the fraction of times the corresponding measurement outcome
+
+00:45:05
+appears again this only works because of the perfect symmetries that we have among these four states and there are in fact some really fascinating unsolved problems that relate to generalizations of this approach to larger systems and that's a good place to stop the lesson thank you for watching and I hope that you will join me for the next lesson which is about purifications and Fidelity goodbye for now
+

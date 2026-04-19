@@ -1,0 +1,232 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\titleformat{\section}{\large\bfseries}{Lecture 7.\thesection}{1em}{}
+
+\title{\textbf{Lecture 7: Phase Estimation and Factoring} \\ \large Understanding Quantum Information \& Computation}
+\author{Based on the lectures by John Watrous (IBM Quantum)}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------
+\section{Overview}
+%----------------------------------------------------------------------
+
+This lecture presents two of the most important results in quantum computing:
+
+\begin{enumerate}
+    \item The \textbf{quantum phase estimation} (QPE) procedure --- a general method for approximating eigenvalues of unitary operators.
+    \item \textbf{Shor's algorithm} for integer factorisation, obtained by applying QPE to the \emph{order-finding problem}.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\section{The Spectral Theorem for Unitary Matrices}
+%----------------------------------------------------------------------
+
+\begin{theorem}[Spectral theorem, unitary case]
+Every $N\times N$ unitary matrix $U$ admits a \textbf{spectral decomposition}
+\[
+    U = \sum_{k=1}^{N}\lambda_k\ket{\psi_k}\!\bra{\psi_k},
+\]
+where $\{\ket{\psi_1},\dots,\ket{\psi_N}\}$ is an orthonormal basis of eigenvectors and each eigenvalue $\lambda_k = e^{2\pi i\theta_k}$ lies on the unit circle ($\theta_k\in\mathbb{R}$).
+\end{theorem}
+
+Key consequence: $U\ket{\psi_k}=\lambda_k\ket{\psi_k}$.
+
+%----------------------------------------------------------------------
+\section{The Phase Estimation Problem}
+%----------------------------------------------------------------------
+
+\begin{definition}[Phase estimation]
+\textbf{Input:}
+\begin{itemize}
+    \item A description of a unitary quantum circuit implementing $U$ on $n$ qubits.
+    \item A single copy of an $n$-qubit state $\ket{\psi}$.
+\end{itemize}
+\textbf{Promise:} $\ket{\psi}$ is an eigenvector of $U$ with eigenvalue $e^{2\pi i\theta}$, $\theta\in[0,1)$.
+
+\textbf{Output:} An $m$-bit approximation $y/2^m$ to $\theta$.
+\end{definition}
+
+Approximations are understood modulo~$1$ (wrapping around the unit circle).
+
+%----------------------------------------------------------------------
+\section{Warm-Up: Single-Bit Phase Estimation}
+%----------------------------------------------------------------------
+
+Construct a controlled-$U$ gate.  Apply the circuit:
+\begin{enumerate}
+    \item Ancilla qubit $\ket{0}$; eigenvector register $\ket{\psi}$.
+    \item Hadamard on ancilla $\to$ $\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})\ket{\psi}$.
+    \item Controlled-$U$: $\frac{1}{\sqrt{2}}(\ket{0}\ket{\psi}+e^{2\pi i\theta}\ket{1}\ket{\psi})$.
+    \item Hadamard on ancilla, then measure.
+\end{enumerate}
+
+\paragraph{Phase kickback.}  The eigenvalue $e^{2\pi i\theta}$ is ``kicked'' into the phase of the ancilla:
+\[
+    \frac{1}{\sqrt{2}}\bigl(\ket{0}+e^{2\pi i\theta}\ket{1}\bigr)\otimes\ket{\psi}.
+\]
+The eigenvector $\ket{\psi}$ is \emph{unchanged} and can be reused.
+
+\paragraph{Measurement probabilities.}
+\[
+    \Pr(0)=\cos^2(\pi\theta),\qquad \Pr(1)=\sin^2(\pi\theta).
+\]
+This yields a 1-bit approximation: $\theta\approx 0$ or $\theta\approx 1/2$.
+
+%----------------------------------------------------------------------
+\section{Higher-Precision Phase Estimation}
+%----------------------------------------------------------------------
+
+To obtain an $m$-bit approximation, use $m$ ancilla qubits and controlled powers of $U$:
+
+\begin{enumerate}
+    \item Ancilla register: $m$ qubits, each initialised to $\ket{0}$.
+    \item Apply $H$ to each ancilla qubit.
+    \item Apply controlled-$U^{2^k}$ from ancilla qubit $k$ to $\ket{\psi}$, for $k=0,1,\dots,m-1$.
+    \item Apply the \textbf{inverse Quantum Fourier Transform} (QFT$^\dagger$) to the ancilla register.
+    \item Measure the ancilla register.
+\end{enumerate}
+
+After step~3, the state of the ancilla register (by repeated phase kickback) is
+\[
+    \frac{1}{\sqrt{2^m}}\sum_{y=0}^{2^m-1}e^{2\pi i\theta y}\ket{y}.
+\]
+If $\theta = y_0/2^m$ exactly for some integer $y_0$, the inverse QFT produces $\ket{y_0}$ with certainty.  Otherwise, we obtain a close approximation with high probability.
+
+%----------------------------------------------------------------------
+\section{The Quantum Fourier Transform}
+%----------------------------------------------------------------------
+
+\begin{definition}[QFT]
+The \textbf{Quantum Fourier Transform} on $m$ qubits is the unitary
+\[
+    \mathrm{QFT}\ket{x} = \frac{1}{\sqrt{2^m}}\sum_{y=0}^{2^m-1}e^{2\pi i\,xy/2^m}\ket{y},
+    \qquad x\in\{0,\dots,2^m-1\}.
+\]
+Its inverse satisfies $\mathrm{QFT}^\dagger\ket{y}=\frac{1}{\sqrt{2^m}}\sum_x e^{-2\pi i\,xy/2^m}\ket{x}$.
+\end{definition}
+
+\subsection{Circuit Implementation}
+
+The QFT on $m$ qubits can be implemented with:
+\begin{itemize}
+    \item $m$ Hadamard gates,
+    \item $\binom{m}{2}$ controlled phase-rotation gates $R_k = \operatorname{diag}(1,\,e^{2\pi i/2^k})$,
+    \item optional SWAP gates for bit-reversal.
+\end{itemize}
+
+Total gate count: $O(m^2)$.  Since $m$ is typically $O(n)$ (the number of bits of precision), the QFT is \textbf{efficient}.
+
+\begin{remark}
+The classical Fast Fourier Transform (FFT) requires $O(N\log N)$ operations on $N=2^m$ numbers.  The QFT acts on $2^m$-dimensional amplitudes using only $O(m^2)=O((\log N)^2)$ gates---an exponential improvement, though the outputs are amplitudes, not directly readable classical data.
+\end{remark}
+
+%----------------------------------------------------------------------
+\section{Phase Estimation: Full Procedure and Accuracy}
+%----------------------------------------------------------------------
+
+\begin{theorem}
+The phase estimation procedure with $m$ ancilla qubits produces an $m$-bit estimate $\tilde\theta = y/2^m$ satisfying
+\[
+    |\tilde\theta - \theta| \le \frac{1}{2^m}
+\]
+with probability at least $1-\epsilon$, provided a modest number of additional ancilla bits (of order $\log(1/\epsilon)$) are used.
+\end{theorem}
+
+\paragraph{Cost.}  The dominant cost is implementing the controlled-$U^{2^k}$ gates.  If $U$ can be implemented with a circuit of size $T$, then $U^{2^k}$ requires at most $2^k\cdot T$ gates (or fewer with repeated squaring techniques).  Total cost: $O(m^2 + m\cdot T)$.
+
+%----------------------------------------------------------------------
+\section{From Phase Estimation to Factoring: Shor's Algorithm}
+%----------------------------------------------------------------------
+
+\subsection{The Order-Finding Problem}
+
+\begin{definition}
+Given positive integers $a$ and $N$ with $\gcd(a,N)=1$ and $a<N$, the \textbf{order} of $a$ modulo $N$ is the smallest positive integer $r$ such that
+\[
+    a^r \equiv 1 \pmod{N}.
+\]
+\end{definition}
+
+The order-finding problem asks: given $a$ and $N$, find $r$.
+
+\subsection{Reduction: Factoring $\to$ Order Finding}
+
+\begin{theorem}[Classical reduction]
+There is a polynomial-cost classical algorithm that, given access to an order-finding subroutine, computes the prime factorisation of any composite integer $N$.
+\end{theorem}
+
+\paragraph{Sketch.}
+\begin{enumerate}
+    \item Choose a random $a$ with $1<a<N$.  If $\gcd(a,N)>1$, we found a factor.
+    \item Otherwise, find $r=\operatorname{ord}(a,N)$ using the order-finding subroutine.
+    \item If $r$ is even, compute $\gcd(a^{r/2}\pm 1,\,N)$.  With probability $\ge 1/2$, this yields a non-trivial factor.
+    \item Repeat/recurse to obtain the full prime factorisation.
+\end{enumerate}
+
+\subsection{Quantum Order Finding via Phase Estimation}
+
+Define the unitary $U_a\ket{x} = \ket{ax\bmod N}$ on an $n$-qubit register (with $2^n > N$).
+
+\begin{proposition}
+$U_a$ has eigenvectors
+\[
+    \ket{u_s} = \frac{1}{\sqrt{r}}\sum_{k=0}^{r-1}e^{-2\pi i\,sk/r}\ket{a^k\bmod N},
+    \qquad s=0,1,\dots,r-1,
+\]
+with eigenvalues $e^{2\pi i\,s/r}$.
+\end{proposition}
+
+\paragraph{Key insight.}  We do \emph{not} need to prepare individual eigenvectors.  The state $\ket{1}$ can be written
+\[
+    \ket{1} = \frac{1}{\sqrt{r}}\sum_{s=0}^{r-1}\ket{u_s}.
+\]
+Running phase estimation on $U_a$ with input $\ket{1}$ randomly samples one of the eigenvalues $e^{2\pi i\,s/r}$, yielding an approximation to $s/r$ for a random $s$.
+
+\paragraph{Recovering $r$.}  From the measured approximation $y/2^m\approx s/r$, apply the \textbf{continued fractions algorithm} to $y/2^m$ to recover $s/r$ (and hence $r$) exactly, provided $m$ is large enough ($m=O(n)$ suffices).
+
+\subsection{Shor's Algorithm: Complete Procedure}
+
+\begin{enumerate}
+    \item Choose random $a$; check $\gcd(a,N)$.
+    \item Build quantum circuit for controlled-$U_a^{2^k}$ (modular exponentiation).
+    \item Run phase estimation with $m=O(n)$ ancilla qubits and input $\ket{1}$.
+    \item Apply continued fractions to the measurement outcome to extract $r$.
+    \item Use $r$ to factor $N$ via the classical reduction.
+\end{enumerate}
+
+\begin{theorem}[Shor, 1994]
+Shor's algorithm factors an $n$-bit integer in $O(n^3)$ quantum gates plus $O(n^3)$ classical operations (polynomial cost).
+\end{theorem}
+
+This is an \emph{exponential} speedup over the best known classical factoring algorithms.
+
+%----------------------------------------------------------------------
+\section{Summary}
+%----------------------------------------------------------------------
+
+\begin{itemize}
+    \item The \textbf{spectral theorem} guarantees that every unitary has an orthonormal eigenbasis with unit-circle eigenvalues.
+    \item \textbf{Phase estimation} approximates eigenvalues using phase kickback + the inverse QFT; cost is polynomial in precision.
+    \item The \textbf{QFT} on $m$ qubits requires $O(m^2)$ gates.
+    \item \textbf{Shor's algorithm} reduces factoring to order finding, and solves order finding via phase estimation applied to modular exponentiation, achieving polynomial cost.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,405 @@
+00:00:00
+- Welcome back to Understanding Quantum Information and Computation. My name is John Watrous and I'm the Technical Director for Education at IBM Quantum. This is the seventh lesson of the series and in this lesson we'll discuss the phase estimation problem and how we can solve it with a quantum computer. We'll then apply phase estimation to the problem of integer factorization, which we discussed in the previous lesson. What we'll obtain is Shor's algorithm, which allows integers to be factorized at polynomial cost
+
+00:00:32
+or in polynomial time if we prefer to think in terms of the time required rather than the number of elementary operations we need. This is the crown jewel of quantum algorithms in some sense, and while factorized large integers may have limited utility for most people, it remains one of the most compelling pieces of evidence that we have for the hypothesis that quantum computers will offer striking advantages over classical computers. Here's an overview of the lesson. We'll start with a definition
+
+00:01:01
+of the phase estimation problem itself, and then we'll discuss a method for solving this problem with a quantum computer. We'll take it one step at a time, beginning with what you can think of as a kind of a warmup. In the phase estimation problem, the goal is to approximate a certain real number and in this warmup part we'll see how we can get a very low precision approximation to this number. This isn't going to be good enough for factoring when we apply our solution to the phase estimation problem
+
+00:01:31
+to integer factorization, we're actually going to need a pretty high precision approximation, but it's nevertheless useful to begin with this sort of a warmup just to get a sense for how the whole thing works. We'll then discuss the issue of how we can get more precision, and this will lead very naturally to an operation known as the Quantum Fourier transform. We'll see exactly what this operation is and how it can be implemented with a quantum circuit. And once we have it, we'll be able to apply it to phase estimation
+
+00:02:01
+to come up with a general procedure for solving the problem with very high precision. Then in the last part of the lesson, we'll see how a solution to the phase estimation problem allows us to factor integers efficiently. And specifically what we'll get is Shor's algorithm for integer factorization, or at least something that's equivalent to Shor's algorithm. The way that this works is that we basically give ourselves a stepping stone, which is yet another problem called the order finding problem.
+
+00:02:30
+And in particular we'll see how we can solve the order finding problem using the phase estimation procedure and then we'll see how we can factor integers by solving the order finding problem. We're going to begin with a special case of a theorem called the Spectral theorem, and specifically we're going to focus on what the theorem tells us for unitary matrices. The spectral theorem is a very important theorem from linear algebra and functional analysis. It tells us something interesting
+
+00:02:59
+about how certain linear mappings can be expressed in a certain form, it's often called a spectral decomposition, that's useful for many reasons. And like I said, we're going to focus on what this theorem tells us for unitary matrices. The spectral theorem is more general than this. It doesn't work for all matrices, but it does work for a class of matrices called normal matrices, which include all unitary matrices as well as some matrices that aren't unitary. But just to keep things simple,
+
+00:03:30
+we'll restrict our attention to unitary matrices for now because that's all we need for the purposes of this lesson. Here's a statement of the spectral theorem just for unitary matrices. Suppose that U is an N by N unitary matrix. What the theorem says is that there must exist an orthonormal basis of vectors, psi one through psi N, along with N complex numbers Lambda one through Lambda N, all lying on the complex unit circle so that U can be expressed as we have in this equation. This is called a spectral decomposition of U,
+
+00:04:07
+as I've already mentioned, and it can be very convenient to know that U can be written in this way. It can sometimes be convenient to have these vectors and these numbers when we're working with a particular unitary matrix U, and it can also be very useful simply to know that such an expression is always possible as a way of proving certain things about unitary matrices for instance. In this statement of the theorem, each of these numbers, Lambda one through lambda N, is written in a particular way
+
+00:04:34
+as E to the power two pi I times theta where each of the thetas theta one through theta N is a real number, and we'll come back to this way of writing each of these numbers in just a little bit. An important thing to notice about these vectors and numbers is that each vector psi K must be an eigenvector of the matrix U with corresponding eigenvalue lambda K. Which means that if we multiply psi K by U, what we get is lambda K times psi K. So what U does to each of these vectors is simply to multiply it
+
+00:05:06
+by the corresponding number lambda K. In general for some arbitrary vector, this won't be how U works, but eigenvectors are special. And what the theorem tells us is that there is in fact an ortho normal basis of these eigenvectors. This equation down here by the way, follows from the expression that we have for U from the theorem, together with the fact that the vectors are orthonormal. If you multiply the expression of U to any psi K and use the orthonormality of the vectors, you'll get a sum in which all of the terms are zero
+
+00:05:38
+except for one of them, and the one term that we're left with looks like this. Now we can define the phase estimation problem. The problem is a little bit unusual as we'll see. We're given two things. First, we're given the description of a unitary quantum circuit, that acts on N qubits for some choice of N, and when we say that this is a unitary circuit, we just mean that all of the gates are unitary, so there are no measurements in this circuit. Second, we're given an N Qubit state psi,
+
+00:06:14
+and that's the unusual part. We actually have a quantum state input for this problem, and it's a single copy of this state. For all the other computational problems we've talked about in this series, the input has been classical, either in the form of a string of bits or as a black box. And that's not surprising because the computational problems that we encounter in our daily lives tend to be classical, 'cause those are the problems we care most about. The way that you can think about this problem
+
+00:06:43
+is that it's something that appears or is likely to appear as a sub problem. And the phase estimation procedure we'll eventually come up with is something that we generally use as a sub-routine inside of some larger computation, presumably one for a classical problem that we care about. Now, this is going to be a promise problem and the state psi isn't just any old quantum state. We're promised that psi is an eigenvector of whatever unitary operation U it is that the given circuit describes.
+
+00:07:17
+And the goal is to find or approximate the eigenvalue that corresponds to the eigenvector psi. Let's state the problem a little bit more precisely. The input consists of a unitary quantum circuit on N qubits, which can be encoded as a string of bits using whatever method we prefer for encoding quantum circuit descriptions, along with an N Qubit state psi. We can call the circuit whatever we want, but what really matters in terms of the statement of this problem is the unitary operation itself
+
+00:07:52
+that's performed when the circuit is run, and that unitary operation is described by the Matrix U. But we're not given U as a matrix, we're just given the description of a quantum circuit that implements U. The promise, as I've already stated, is that psi is an eigenvector of U. So if we ran our circuit on psi, we'd get psi coming out multiplied by whatever the eigenvalue is, which would be a global phase in that situation. And finally, the output of the problem is an approximation to the eigenvalue
+
+00:08:26
+corresponding to psi, and specifically we're looking for an approximation to the real number theta, between zero and one, including zero, but not including one that satisfies the equation that we have on the screen. To explain this way of parameterizing the eigenvalue corresponding to pis, and also to clarify what we mean by an approximation, let's draw a picture of the complex unit circle. We can put the numbers one, I, negative one, and negative I in their usual places and we can consider
+
+00:08:59
+some arbitrary point on the circle parameterized by theta as we have in the problem statement. This is the point we get if we start at one and rotate by an angle of two times pi times theta, so the angle isn't theta, it's two pi theta, and another way of thinking about it is that if we start at one and we travel a distance of two pi theta on the circle itself, we'll get to our point, E to the two times pi times theta. Every point in the complex unit circle can be represented in this way for a unique choice of theta.
+
+00:09:33
+And that's because we go all the way around circle as theta goes from zero to one, and if we went all the way to theta equals one, we'd be back where we started at theta equals zero, so that's why we include zero, but we don't include one. Just to make sure that each point on the complex unit circle corresponds to a unique value of theta in the range that we're considering. There are various ways that we could imagine approximating a particular value of theta, but the way that we'll do it
+
+00:09:59
+is to approximate theta with a fraction, where the denominator is two to the power M for some choice of a positive integer M, and the numerator is an integer y between zero and two to the M minus one. You can think about this as an mbit approximation to theta if you wish, and we could write this number in binary notation where we have a binary point followed by the binary representation of Y. I say binary point by the way rather than decimal point because decimal means base 10 and I'm talking about base two here, but it's the same idea.
+
+00:10:35
+But in any case we can also just think about it as a fraction like it appears on the screen. And to be clear, when we think about approximations in this context, it should be understood that values of theta near zero and values of theta near one are in fact close together. So for example, if theta is equal to 0.99 and we approximate this value of theta by the value zero, then that's a pretty good approximation in the sense that it's within one of our hundred of the actual value, when we wrap around the circle
+
+00:11:05
+and go back to zero when we get to one. The term modular one is sometimes used to describe the situation, where we're essentially equating theta equals one with theta equals zero. The point is that we really care about the location of the point E to the two pi I theta on the unit circle, and thinking about this way of approximating theta makes sense when we have that aim in mind. The problem statement itself, as it appears on the screen, isn't specific about how good the approximation to theta needs to be,
+
+00:11:36
+but that's something that we can fine tune depending upon our needs. In some situations we might be satisfied with a low precision approximation to theta, and in other situations we might demand a very high precision approximation, and the problem statement itself can be refined accordingly. Next we'll see how we can solve the phase estimation problem with a quantum computer and we'll start with a warmup. This won't be our final solution to the problem. What we'll do is to make use
+
+00:12:05
+of the phase kickback phenomenon to try to learn something about the eigenvalue corresponding to a given eigenvector. Recall that in the phase estimation problem we're given the description of a unitary quantum circuit for some operation U, and what we do first is to use this circuit description to create a new circuit that implements a controlled U operation like is pictured on the screen. This is pretty simple to do. What we can do is to add a control Qubit, which is pictured on the top in this diagram
+
+00:12:37
+and use this new control Qubit as a control for every single gate that appears in our circuit. So all of the gates are applied if this control Qubit is set to one, and none of them is applied if the control Qubit is set to zero, That means that we're going to need a controlled version of every gate that appears in the circuit U, but we don't need to think about these new controlled gates as single gates if we don't want to. They could be implemented as small circuits made out of gates from whatever gates set
+
+00:13:04
+we've chosen to use. And once we have a controlled version of U, we can consider running this circuit, where we first put the control Qubit into a superposition of zero and one, apply the controlled U gate to the eigenvector side that we're given, and then apply a Hadamard gate to the control and measure. We'll see why it makes sense to do this as we go through the analysis, but even before we get to the details, we can immediately see a similarity with Deutsche's algorithm for instance,
+
+00:13:35
+where we're applying a couple of Hadamard gates and measuring as a way of effectively probing what it is that some given operation is doing here. It's a controlled unitary rather than a query gate, but there are very similar ideas at play. So let's see what the circuit does. The initial state is the eigenvector psi, tensored with the zero state for the control Qubit, applying the first Hadamard gate transforms the state of the top Qubit to a plus state and we can expand the entire state as is shown right here.
+
+00:14:14
+We then apply the controlled U operation and what that does is to apply U to psi when the control Qubit is set to one, but not when it's set to zero. So we get the state pi two that's written on the screen. We can simplify the state using the fact that psi is an eigenvector of U with eigenvalue e to the two pi I theta. So we get that eigenvalue multiplying the second term, but not the first. And we can simplify using the bilinearity of the tensor product. So what we have here is the phase kickback phenomenon,
+
+00:14:48
+but this time it's happening for some arbitrary eigenvector psi of some arbitrary unitary operation U, s opposed to a not operation being applied to a minus state more specifically. So that's the state after the controlled U operation is applied. By the way, it's worth taking a moment to notice that the state of the bottom end Qubits is still the eigenvector psi. Which is great because that gives us the opportunity to use it again if we choose. Then the second Hadamard gate is performed
+
+00:15:20
+and here is the state that we get. And I haven't shown all the details of the derivation here, but if you apply the Hadamard gate and simplify, this is what you should get. So that's the state just prior to the measurement. So we can focus on this state to see what we can learn about theta by measuring. And if we measure the top Qubit or the rightmost Qubit, these are the probabilities that we get for the two outcomes. And here have used a couple of basic formulas that relate sins and cosines to complex exponentials
+
+00:15:52
+to express these probabilities in terms of sins and cosines. Specifically, the probability to get zero is the cosine squared of pi times theta and the probability to get one is the sin squared of the same angle. And this makes sense because the sin squared plus the cosine squared of any angle is equal to one. So our probabilities sum to one as we expect. And here is a plot of these probabilities as a function of theta. To be clear, this is a plot of the probabilities themselves as opposed to a plot depicting
+
+00:16:27
+a single probability distribution for instance. For example, if theta is equal to one half, then the probability that we get the outcome one which is drawn in purple is equal to one while the probability to get the outcome zero, which is drawn in blue, is zero. On the other hand, if theta is equal to one quarter or three quarters, then we have that each of the two outcomes is equally likely. And of course for all choices of theta, the sum of the probabilities is equal to one as we've already observed.
+
+00:16:59
+So we don't learn exactly what theta is from this procedure, but it does give us some information about theta. And if we imagine a situation in which we're promised that theta is equal to zero or theta is equal to one half, this procedure will tell us exactly which one of the two possibilities it is. So that's a simple way that we can use the phase kickback phenomenon to learn something about the eigenvalue. So how can we learn more about the eigenvalue? Well, this is a situation in which we can let ignorance be our guide.
+
+00:17:32
+Because there really aren't too many things that we can do. We don't know much of anything about the eigenvector sin, and we also don't know much about the operation U. We have a circuit for U, but for all we know it's a horrible, confusing mess that we won't be able to make any sense of by examining it. But one natural option is to run the circuit multiple times. In particular, we could try to do exactly the same thing that we just did, except that instead of applying just a single controlled U operation,
+
+00:18:03
+we apply that operation twice. Or we could apply it any number of times, but let's start with twice just to see what happens. Well, it's actually pretty simple what happens. By applying the controlled U operation twice, we're effectively just squaring the eigenvalue because it'll get kicked into the phase of the top Qubit two times rather than just once. And so when we think about the outcome probabilities as a function of theta, we're essentially just doubling the frequency.
+
+00:18:33
+For each possible choice of theta, the outcome probabilities are the same as they would be if we doubled theta and then took the fractional part to get a number between zero and one. For example, if theta is equal to one half, then the eigenvalue is negative one. So by applying U twice we're effectively squaring the eigenvalue and the result is the same as it would be for theta equals zero. Which is that the probability for the outcome zero, pictured in blue, is equal to one, and the probability for the outcome one,
+
+00:19:02
+pictured in purple, is equal to zero. This is very simple, but we can in fact get some additional information about theta by doing this. For example, if we know in advance that either theta is equal to zero or theta equals one quarter, then this circuit will reveal to us which of the two possibilities it is. On the other hand, we can no longer distinguish the case that theta is equal to zero from the case that theta equals one half. So this procedure isn't strictly better than the one from before when we had a single control U gate
+
+00:19:34
+but by also running this circuit we can gain additional information. It's not immediately clear how the additional information we can get by iterating the controlled U operation multiple times can be reconciled with the information we get by performing it just once, and in fact there are multiple ways we could proceed. For instance, there's a technique called iterative phase estimation, which involves running circuits like the ones that we've seen, along with some minor variations on them,
+
+00:20:03
+to come up with an approximation to theta. But I'm gonna describe what could be called a more traditional approach, where we use a single quantum circuit that has multiple control qubits that control different numbers of iterations of the unitary operation U. First I'll describe how this works for two control qubits and then a bit later we'll generalize it to more than two control qubits. Here's a quantum circuit that uses two control qubits. The top control Qubit controls a single U operation
+
+00:20:35
+while the second from top Qubit controls two copies of U. So what we're doing is combining the two circuits that we saw previously, in a way that makes use of the single copy of the eigenvector psi that we have. You'll notice however that the Hadamard gates after the controlled U operations have been removed and there are no measurements yet. What we're going to do is to see how this circuit works and then we'll figure out what we should do with the top two qubits in order to learn as much as possible
+
+00:21:06
+about the value theta that we're trying to approximate. After the Hadamard gates performed, we had the state that's shown on the screen. And this is going to be a convenient way of writing the state to see what happens next. A zero and A one are bits, and if we think about the top two qubits as being a two Qubit register, we're thinking about A zero, which corresponds to the top Qubit as being the lesser significant bit, and A one which corresponds to the lower control Qubit as being the more significant bit.
+
+00:21:41
+After the first controlled U operation is performed, we obtain this state. The classical state corresponding to the top control Qubit is a zero, so the result of the phase kickback can be expressed in this way. Then after the second and third controlled U operations are performed, we obtain this state. The idea is the same as for the first one, except this time we're applying the control U operation twice. So we multiply A one by two in the exponent to reflect this. And now we can simplify this expression
+
+00:22:17
+by thinking about the bits A one and A zero together as an integer between zero and three using binary notation. That is when we think about the two bit string, A one A zero, as the binary encoding of an integer, what we get is two times A one plus A zero. And the understanding is that when we write Cat X, we're talking about X written as a binary string of length too using binary notation. So now let's focus on these two control qubits to figure out what we can learn about theta from them at this point.
+
+00:22:50
+The remaining N qubits are still in the same state psi that we were originally given, which is really a wonderful thing about this approach because like I said before, we can use that state again if we want to gain even more information about theta. But for now, let's just think about what we can learn from these two control qubits. To help us to figure out how to proceed, let's imagine that we're promised that theta is equal to Y over four for some integer y between zero and three.
+
+00:23:21
+In general, theta may not be one of these four values, but this is a natural case to consider. We saw in the original single control Qubit version of the procedure that if we were promised that theta is either zero or one half the circuit would reveal which one it was. And we also noticed that in the version where we applied the controlled U operation twice, we could perfectly discriminate the case that theta equals zero from the case that theta equals one quarter. So we might hope that with our new circuit
+
+00:23:49
+we can discriminate these four cases. In essence, what we're doing is that we're using the notion of a promise problem to make the problem easier, so that we can see how to proceed. And that's not a bad idea, in general. If you have a problem and you don't know how to solve it, try making it easier. If you can solve the easier problem, the insight you gain might be helpful in solving the more general problem. And if you can't solve the easier problem, you're probably not ready for the more general problem.
+
+00:24:19
+So keep on making it easier until you can solve it. Anyway, getting back to our problem, let's define a two Qubit state for each of the possible values of Y. In other words, phi Y is equal to the state shown on the top of the screen when theta is chosen specifically to be Y over four. And here are those four states written out explicitly. So just to reiterate, if theta is equal to Y over four for Y being zero, one, two, or three and we run our circuit, we're going to be left with one of these four states,
+
+00:24:55
+whichever one corresponds to the right value of Y. And we just wanna figure out which one it is. And the question is, is this possible? And the answer to that question is yes, because these four states are orthogonal. If you compute the inner product between any pair of them, you'll get zero. And because they're orthogonal, they can be perfectly discriminated by a projective measurement. And in particular we can express such a measurement by defining one projection for each vector like we have here.
+
+00:25:30
+This always works, anytime we have an orthonormal basis, and you can check this against the definitions we saw in lesson three for this specific case if you're so inclined. So we conclude that it is possible to accomplish our task, which is to learn the value of Y from the state that's shown on the top of the screen. And if we'd like to do that with a quantum circuit, we can proceed as I'll now explain. First we can define a unitary matrix V whose columns are the four vectors listed in order.
+
+00:26:03
+That matrix will have the action described on the bottom of the screen, on the standard basis states, and we can write down the matrix to see what it looks like. Because V maps each standard basis state, kappa Y to the vector phi Y, we have that by applying V dagger, or in other words V inverse to phi Y will transform back the other way to the corresponding standard basis state. So what we can do is to apply V dagger to whatever state we obtained from our circuit. And then if we perform a standard basis measurement,
+
+00:26:37
+we'll get the number Y that we're looking for, expressed as a string of length two in binary. Before we go any further, let's talk a bit more about the unitary matrix V. This is a special matrix and you may have seen it before. It's the matrix associated with a linear operation on four dimensional vectors known as the discrete Fourier transform. To be more precise, the discrete Fourier transform can be defined for any positive integer dimension, and we'll take a look at it in general in a few moments.
+
+00:27:10
+And this is what it looks like specifically when the dimension is equal to four. We can think about the discrete Fourier transform in different ways. We can think about it purely abstractly as a linear mapping on vectors that can be represented by a matrix. And we can also think about it as a computational problem where we're given a vector, and we want to compute the result of applying this linear mapping. That turns out to be an incredibly important computational problem, and there's a highly efficient algorithm
+
+00:27:45
+for performing that computation known as the fasts Fourier transform. In fact, this is such an important problem in signal processing for example, that the fasts Fourier transform is considered by many to be one of the most important and consequential algorithms ever discovered. We can also think about the discrete Fourier transform as a unitary quantum operation that can be applied to a quantum state vector. And when we think about it in that way, we call it the quantum Fourier transform, or QFT for short.
+
+00:28:18
+Mathematically speaking, it's essentially the same thing as the discrete Fourier transform, but we call it the quantum Fourier transform just to clarify that it's an operation being applied to a quantum state vector. So let's change the name of our matrix, from V to QFT four to reflect the fact that the operation that we've come up with is in fact the quantum Fourier transform. So here's the complete circuit for learning the value of Y when we're promised that theta equals Y over four
+
+00:28:50
+for Y being zero, one, two, or three. And just to make sure it's clear, we're applying the inverse of the quantum Fourier transform, or in other words QFT four dagger to map one of the four possible states back to the standard basis state, cat Y, so that we can recover Y by measuring. So that's the circuit we get from thinking about the promised version of the phase estimation problem, where we're promised that theta is zero, one quarter, one half, or three quarters, but there's nothing that prevents us
+
+00:29:23
+from running this circuit for an arbitrary value of theta. And if we do that, here are the probabilities for the four possible outcomes that we obtain. Each of the four possible values for Y has its own color, and the plot tells us what the probabilities are for each one as a function of theta. So for instance, if theta is equal to three quarters, we'll get the outcome three with probability one, well the probabilities for the other three outcomes are all zero as we already know from thinking about
+
+00:29:55
+the promise version of the problem. If theta is close to three quarters but not exactly three quarters, there will be some non-zero probability associated with the other outcomes, but we'll still get the outcome three with high probability. So even though theta may not be equal to Y over four, we can still think about the outcome we get from the measurements divided by four as being a guess or an approximation for theta. The guess may be wrong, but nevertheless it is providing us with information.
+
+00:30:28
+And one thing that we can learn from the plot is that best approximations always have the highest probabilities associated with them. When I say best approximation, I mean whatever value of Y over four is closest to the true value of theta, in the modular one sense. The worst possible case is that theta is exactly halfway between two values of Y over four. For example, if theta is equal to three eighths or 0.375, in this case we see that the approximations one quarter and two quarters or one half are equally good.
+
+00:31:04
+So in this particular case there are actually two best approximations rather than one. And we're equally likely to get the outcome one and the outcome two. The other two outcomes zero and three, which don't give very good approximations to theta when we divide by four, actually do appear with some probability which appears to be just under 10% in both cases. So this procedure isn't perfect, but it does provide us with information. And it's noteworthy that regardless of theta, we're always guaranteed to draw
+
+00:31:35
+either the best approximation or one of the two best approximations when there's a tie, with probability that appears to be just above 40%. And the closer that theta is to the approximation, the higher the probability to see the corresponding value of Y. And that's a pretty significant improvement over using a single control Qubit. This is in fact the phase estimation procedure when we choose to use two control qubits. And what we'll do next is to generalize this procedure in a natural way,
+
+00:32:06
+where we don't stop with just two control qubits but we use however many control qubits we choose. And what we'll see is that by generalizing the procedure, by adding more control qubits, we'll be able to get more and more accurate approximations of theta. And that will be the general phase estimation procedure. In order to generalize the phase estimation procedure from two control qubits to however many we choose, we're going to need to understand how the quantum Fourier transform
+
+00:32:35
+is defined for other dimensions. And we're also gonna need to discuss how it can be implemented with a quantum circuit. Here's the definition of the quantum Fourier transform when the dimension is an arbitrary positive integer N. Here we're thinking about this operation as being an operation on a system whose classical states are zero up to N minus one. And here the matrix that describes this operation has been expressed using the direct notation. We can also describe it in terms of its action on standard basis states,
+
+00:33:09
+just to connect it with what we already saw when N is equal to four. So here's what it looks like when N is equal to one, which isn't a very interesting case. Here it is for N is equal to two, and you'll notice what we get in this case is a Hadamard operation. Here's the quantum Fourier transform for N equals three. For N equals four, which we've already seen. And for one last example, here it is when N is equal to eight. Just like we had before for the N equals four case, These are the matrices that we associate
+
+00:33:46
+with the discrete Fourier transform for each of the dimensions. But we call it the quantum Fourier transform when we want to think about it as a quantum operation. Sometimes by the way, the leading factor of one over the square root of N is not included when we think about the discrete Fourier transform as a matrix, but we need that factor here to make sure that we get a unitary matrix. There's also sometimes a minus sign in each of the exponents, but not always. It's basically just a personal preference
+
+00:34:16
+that doesn't change the fundamental nature of the transform. But in any case, we'll define the quantum Fourier transform as it's written here on the screen. There's a very useful shorthand notation that's common and we'll make use of it a bit later in the lesson. And that is to define a complex number omega N, like we have here. Specifically as e to the two pi I over N, which can also be written using signs and cosines as we have right here. Sometimes we call this number an N through of unity
+
+00:34:52
+because when we raise it to the power N, we get one. Here's a figure that shows a few examples. Omega one is equal to one, omega two is equal to negative one, and omega four is equal to I. In general to get omega N, we can imagine slicing up the unit circle into N equal size pieces like it's a pizza being shared by N people and omega N is at the corner of the first piece, assuming that the other corner of that piece is at one. So in particular as N gets larger and larger, the pieces will get smaller and smaller,
+
+00:35:28
+and omega N will get closer and closer to one. And now if we use that notation we can express the quantum Fourier transform in a slightly cleaner way. Sometimes this notation helps to keep things simple as we will see happening a bit later in the lesson. There's an efficient quantum circuit implementation of the quantum Fourier transform when N is a power of two, which we'll now take a look at. Although we tend define the quantum Fourier transform for any dimension N, we're only gonna need it
+
+00:35:59
+in the case that N is a power of two, in order to generalize the phase estimation procedure. The implementation will make use of controlled phase gauge which are depicted as we have here on the screen. They look like two controls connected together along with a number which is alpha in this case. And the action of this gate is described by the matrix that's shown here. These are literally controlled phase gates, meaning that we have a control Qubit that controls a phase gate. We saw phase gates way back in lesson one.
+
+00:36:33
+But for phase gates specifically, it doesn't actually matter which Qubit is the control and which is the target. And we saw that in lesson two, for the specific case of a Z gate. And now that we have that notion, we can move on to how the quantum Fourier transform can be implemented. The implementation is recursive in nature and perhaps the easiest way to describe it in simple terms is to give an example that can easily be generalized. Here's how we can do it when N is equal to 32. So there are five qubits.
+
+00:37:08
+To be clear, we're associating the standard basis states of these five qubits with the integers between zero and 31 using binary notation. The first thing we do is to perform the quantum Fourier transform for N equals 16 to all of the qubits except for the least significant Qubit, which is the one on the top. And that's the recursive part of the construction. So to implement this operation, we have to follow the same pattern but with one fewer Qubit. And in the base case we have just a single Qubit
+
+00:37:38
+for which the quantum Fourier transform is just a Hadamard gate. Once we apply the QFT on all of the qubits except for the top one, we apply a bunch of controlled phase gates using the phases that are indicated in the diagram. We then apply a Hadamard gate to the top Qubit, and shuffle the qubits around a little bit using some swap gates. These swap gates have the effect of cyclically permuting the qubits which is needed to make the construction work. We can follow exactly the same pattern for other choices of N provided they're powers of two,
+
+00:38:12
+where we always start the controlled phase gates with alpha being pi over two for the bottom Qubit and dividing by two each time moving left in the diagram to get the subsequent phases. Now it's not at all obvious that this construction works. And I'm not gonna explain why it works in this video. If you're interested in seeing the details for why it works, you can find them in the written content for the lesson. I will say however that what's being exploited here is the basic structure of discrete Fourier transforms
+
+00:38:43
+and in fact it's exactly the same structure that allows the fast Fourier transform to work. Another way to say this is that if we look at the fast Fourier transform, we can think about it in terms of quantum circuits. And this is the circuit that we get. So how many gates do we need in total for this implementation? To figure that out, let's let SM be the number of gates that we need when we have M qubits. When M is equal to one, we just need a single gate because the QFT is just a Hadamard operation in this case.
+
+00:39:21
+If M is at least two, then these are the gates that we need. First we need SM minus one gates for the quantum Fourier transform on M minus one qubits, whatever that number happens to be. We also need M minus one controlled phase gates, M minus one swap gates, and one additional Hadamard gate. So here's an expression of SM in both cases when M is equal to one and when M is at least two. This is an example of what's called a recurrence relation and they show up very commonly in the analysis of algorithms.
+
+00:40:07
+This particular one happens to be very simple and it has a so-called closed form expression, which we can obtain by summing. To be precise, the value of SM is the sum of the first M consecutive odd integers, which equals M squared, as you may have either encountered before or maybe you just noticed that at some point in your life. And it happens to be pretty easy to prove this formula is true by induction on M in case you're interested in a formal proof. So that's it. We can implement the quantum Fourier transform
+
+00:40:38
+on M qubits using M squared gates. Just a couple of very quick additional remarks. First we don't actually need all of the swap gates that I've described. It is possible to effectively push them all out to the end as long as we adjust which qubits the controlled phase gates act on appropriately. And if we do that we'll only need M over two swap gates in total rounding down. We'll still have a quadratic cost, but the number of gates can be reduced in this way nevertheless. And one final remark is that
+
+00:41:13
+we can actually make the cost even less if we're willing to settle for a pretty good approximation. For example, when M gets large, a lot of the controlled phase gates are pretty close to the identity operation, and eliminating the ones that are very close can save us quite a lot on gates while still giving us a pretty good approximation. It is also possible to approximate the quantum Fourier transform with very shallow circuits, meaning ones with small depth, in case that's something that we wish to do.
+
+00:41:42
+And now that we know what the quantum Fourier transform is for different dimensions, as well as how it can be implemented w hen the dimension is a power of two, we can go back to the phase estimation procedure and see how it can be generalized where we use some arbitrary number M of control qubits. Here's what the procedure looks like as a quantum circuit for an arbitrary choice of M. We have M control qubits on top, which we assume are all initialized to the zero state. We apply a Hadamard gate to each one of them
+
+00:42:13
+and then each of them is used as a control Qubit to apply some power of the unitary operation U, where we double the number of times U is applied for each control Qubit. Here in this diagram I've indicated this by including the powers on U inside of the boxes rather than showing the controlled U gate being applied that many times, as a way of both making the diagram more clear and saving on space so that it fits on the screen. Now the first thing that we need to notice about this procedure is that it might become very expensive.
+
+00:42:46
+In particular we're doubling the number of times each U operation gets applied for each control Qubit. And if the way that we do this is simply to iterate a controlled U gate however many times we need, we're going to get a huge circuit. It'll be exponentially large in the number M. That's a major limitation in general, and in particular it limits our ability to get precise approximations of eigenvalues. In the specific case of factoring though, which we'll get to shortly, it turns out that we're very fortunate
+
+00:43:17
+and we can play a trick that allows us to avoid this exponential blow up in cost. But in general for arbitrary unitary operations U, this won't be possible and we'll pay a steep price for increasing the number of control qubits. I'm not going to go through a detailed analysis of the circuit in this video and instead I'll just mention that there is a fairly simple expression for the state just prior to the measurements which is shown here on the screen. From that state we can get an expression
+
+00:43:48
+for the probabilities of the various outcomes, and it happens to look like this. And once we have this expression, we can reason about it, and really this expression is all we need to carry on. Like I said, I'm not gonna get into the details in this video, but you can find them in the written content for the lesson and it turns out that it's actually not that complicated, so check it out if you're so inclined. If we do go through the analysis, what we find is that the situation is not all that different from the M equals two case,
+
+00:44:18
+except that we get more precision. In particular, we can think first about the probability to get the very best or one of the two best approximations, which we can express like we have here. You can ignore this subscript of a one on the absolute value if you like. This is just a symbol that we can use to remind ourselves that we're talking about approximations on the circle where we think about theta equals zero and theta equals one as being the same. The point here is that we're thinking about
+
+00:44:48
+whatever choice of Y makes Y over two to the power M as close as possible to theta. And once again, just like we had for the M equals two case, we're guaranteed to get this outcome Y with probability at least 40%. In fact, the probability is at least four over pi squared, which is a little bit more than 40%. 10 is not a bad approximation to pi squared when you're in a hurry. And that's actually pretty remarkable. What we're talking about is getting the very best approximation to theta
+
+00:45:19
+as a fraction Y over two to the power M where Y is an integer. And we're getting the very best approximation with probability greater than 40%. We can also think about approximations that are worse. Specifically let's imagine that Y isn't quite so good, and more specifically let's suppose that there's a better approximation to theta of the same form that lies between theta and Y over two to the M, which can be expressed as is written on the screen. In such a case the probability to get this Y
+
+00:45:56
+will be relatively small, at most 25%. It'll actually be lower than that, but 25% is what we get from a pretty simple analysis, but it's good enough. As an example. Here's the plot we get when we use three control qubits rather than two. This time I'm only plotting the probabilities for the outcomes three, four, and five because I don't want the figure to be too messy. When theta is equal to one half for instance, we're guaranteed to get the outcome four. And so we take our approximation to be four eighths
+
+00:46:31
+or one half because two to the power three is eight. And in this case we're exactly right. And as long as theta is closer to one half than it is to say three eighths for instance, we get the outcome four with a probability higher than the outcome three. And with probability, again larger than 40%. Here's the plot when M is equal to four. And the curves actually look pretty much identical, except that now we've zoomed in by a factor of two. So now the outcomes that are plotted include seven, eight, and nine
+
+00:47:05
+and we're taking the approximation to be one of these numbers divided by 16 rather than eight. And I'll show one more plot where we increase to M equals five. And again we're gonna be zooming in by a factor of two. And here it is. Once again the curves look pretty much identical, but we're effectively doubling our precision. And as before we obtained the very best approximation to theta, with probability greater than 40%. That's pretty amazing. But if 40% is not good enough as a measure of confidence,
+
+00:47:42
+what we can do is to run the procedure a small number of times, and take the mode of the outcomes, meaning the one that appears most frequently. And if we do that, we'll be extremely likely to end up with a very good approximation to theta. Remember by the way that every time we run the phase estimation procedure we have that the eigenvector comes out unchanged. So it is available for us to run the procedure multiple times like this. In short, we're gathering statistics about theta, and the point is that by doing this
+
+00:48:16
+we can get a very precise approximation to theta with very high confidence, and we don't need that many iterations of the procedure to do this. And that is how the phase estimation procedure works. In the last part of the lesson, we'll apply the technique of phase estimation to the integer factorization problem. As I mentioned at the start of the video, the way this works is that we consider an intermediate problem known as the order finding problem. We'll see how we can solve the order finding problem
+
+00:48:47
+using phase estimation, and then we'll briefly discuss how solving the order finding problem allows us to factor integers efficiently. The second part is completely classical and I'll only summarize the basic idea in this video. But let's begin with the order finding problem. First, let's get some handy notation in place. For every positive integer N, we define ZN to be the integers zero through N minus one. So for instance, Z one has a single element which is zero, Z two has elements zero and one,
+
+00:49:24
+z three has elements zero, one and two, and so on. So ZN is a set. But we can also think about it as more than a set. We can think about arithmetic operations like addition and multiplication on ZN by defining them modular N. For example, let's suppose N is equal to seven. We have that three and five are elements of Z seven and if we multiply them together we get 15 which leaves a remainder of one after dividing by seven. Sometimes we express this by writing that three times five is congruent to one module seven,
+
+00:50:03
+like is written here. But we can also simply write that three times five equals one. Of course three times five isn't normally equal to one, it's equal to 15. But when it's clear that we're working in Z seven meaning that multiplication is defined modular seven, we can simply write that three times five equals one. Now among the elements of ZN for any positive N, some of them will have GCD equal to one with N and some won't. And the elements that do have GCD equal to one with N are special.
+
+00:50:37
+and we write ZN star to refer to the set of just these elements. So for example, here's Z 21 star. among the elements of Z 21, which there are 21 of course, it turns out that 12 of them have GcD equals of one with 21 and the rest don't. In particular anytime that we have an element of Z 21 that's divisible by either three or seven, we skip it. There are various reasons why this set is special, and one of the reasons is that anytime we have an element of ZN star and we consider the positive integer powers of that number,
+
+00:51:15
+we will always eventually hit the number one, where just like before we're talking about multiplication modular N. the smallest positive integer power that gives us one is called the order of that element. For example, think about the element A equals four in Z 21 star. four times four is 16, which is not equal to one modular of 21, but if we multiply by four one more time, we get 64, and 64 modular 21 is equal to one. So the order of four modular 21 is three. Getting to one like this always happens
+
+00:51:53
+for all of the elements of ZN star. And by the way, it never happens for elements of ZN that aren't in ZN star. So having GCD equal to one with N like this is both necessary and sufficient for this to happen. And just to finish up the example of N equals 21, here are the smallest positive integer powers for which this works for each element of Z 21 star, and they can each be checked one by one. And now we can state the order finding problem, which is simply to find the order for a given element in ZN star.
+
+00:52:30
+To be precise, the input is two positive integer A and N for which the GCD is equal to one, and the output is the smallest positive integer R such that A to the power R is congruent to one modular N, or equivalently the smallest positive integer R for which A to the R is equal to one. Assuming we're doing arithmetic in ZN. This is believed to be a computationally difficult problem, no efficient classical algorithm is known for solving it. And as we'll discuss the problem is at least as hard as integer factorization
+
+00:53:05
+in the sense that if we have an algorithm for solving order finding, we would be able to use that algorithm to solve the integer factorization problem efficiently. In fact, it goes the other way as well, meaning that if you happen to have an algorithm for factoring, you can use it to solve the order finding problem. So the two problems are in some sense equivalent in terms of their computational difficulty. Now we'll see how we can solve the order finding problem on a quantum computer using phase estimation.
+
+00:53:34
+To make a connection between the problems, let's imagine that we have a system whose classical state set is AN. For any choice of an element A in ZN star, we'll define an operation MA like we have here. In words what MA does is to multiply by A, and here the multiplication is modular N. And for the remainder of this lesson, you should always think about expressions inside of cats as being computed modular N, just so we can keep things simple and we don't have to keep on writing mod N over and over.
+
+00:54:11
+This is a unitary operation, but that's only true because A is in ZN star. If the GCD of A and N isn't one, this operation won't be unitary. Here's an example. If N is equal to 15 and A is equal to two, which is in Z 15 star, then this is the action of M two. And if you examine this example for a few moments, you'll see that what's happening is that the elements of ZN are just getting permuted by this action. So it's both deterministic and unitary, which is to say that as a matrix,
+
+00:54:47
+MA is a permutation matrix. And here's the main idea. The eigenvalues of MA are very closely connected with the order of A. And by using phase estimation to approximate these eigenvalues closely enough we can determine the order of A. So what exactly are the eigenvectors and the eigenvalues of MA? Well, we're not going to need all of them, we only need some of them. Let's start off with an easy example. Here's an eigenvector of MA, we've named it size zero, and it's given by the sum of cat one, cat a,
+
+00:55:29
+cat A squared, and so on up to cat A to the power R minus one, all divided by the square root of R to make it a unit vector. Here R is the order of A. And I'll reserve the letter R for the order of A for the rest of the lesson. So whenever you see R, that's the order of A for whatever A we're talking about. The eigenvalue associated with this eigenvector is one. And we can verify that by applying MA to this vector to see what we get. MA multiplies by A, so we just need to increase each of the exponents by one and this is what we get.
+
+00:56:10
+But the order of A is R, so A to the power R equals one. And we can make that substitution. But that's the same vector that we started with. All we've done is to shuffle the cuts around but we're taking the sum so this doesn't change anything. So MA times psi zero is equal to psi zero. So it's an eigenvector of MA with eigenvalue one. That's a very simple example of an eigenvector and to identify more of them, let's recall the same notation that we had earlier in the lesson.
+
+00:56:43
+Omega R is the complex number on the unit circle we get by taking E to the power of two times pi times I divided by R. Last time we had an N rather than an R, but it still works the same way for R in place of N. We need this number because it's going to be appearing in the other eigenvectors of MA that we'll identify. And now that we've recalled that notation, we can observe that this vector named psi one is also an eigenvector of MA. It's similar to psi zero, we have exactly the same cats
+
+00:57:16
+and we're summing them up and dividing by the square of R. But this time we have various phases multiplying each of the cats. Omega R to the negative one for A, omega R to the negative two for A squared, and so on up to omega R to the power negative R minus one for A to the power R minus one. So the power of omega R is always negative one times whatever power of A appears inside of the cat. I won't go through it in detail, but it is shown on the screen in case you'd like to re-watch the video
+
+00:57:50
+and pause as needed. But if we do the multiplication and we simplify again using the fact that A to the power R is equal to one as well as the very important fact that omega to the power R is equal to one, what we'll find is that we again have an eigenvector of MA. This time as we do the simplification, we'll need to pull out a factor of omega R to see that indeed we have an eogenvector and that vector of omega R represents the eigenvalue associated with this eigenvector. So that's a second eigenvector eigenvalue pair of NA.
+
+00:58:29
+We can identify additional eigenvectors using exactly the same reasoning, And in fact, if we simply replace omega R with omega R to the power J for each J between zero and R minus one, we'll always get an eigenvector, and the associated eigenvalue will be omega R to the power J. So this actually includes psi zero and pis one, which we already saw as well as R minus two, other eigenvector, eigenvalue pairs. They all work in basically the same way, and to verify them, we just need to know that A to the power R equals one
+
+00:59:05
+as well as omega R to the power R equals one. There are other eigenvectors of MA like cat zero for instance, but they aren't going to be useful to us and we don't need to worry about them. We only need to worry about psi zero through psi R minus one. Let's focus on psi one for a moment, just to try to understand why it is that we care about these eigenvectors and what they can tell us about the order R, which is what we're trying to find. Supposing that we're given the eigenvector psi one,
+
+00:59:37
+we can attempt to learn R in the following way. First, we perform phase estimation on this eigenvector using a quantum circuit that implements the operation MA. What we get is an approximation to theta, which is one over R in this case. And second because we're looking for R and we have an approximation to one over R, the natural thing to do is to compute the reciprocal and to round it off to the nearest integer. We have to round like this because R has to be an integer. But we don't have one of our R exactly,
+
+01:00:15
+we just have an approximation to it. But if the approximation is good enough, we'll get R when we round, which is what we're looking for. And now the question is how much precision do we need to correctly determine R by computing the reciprocal and rounding? Or in other words, how accurate does our approximation need to be to make this all work? Well, it turns out that we do need a pretty accurate approximation. For example, we can't afford to confuse one over R with one over R plus one,
+
+01:00:52
+or one over R minus one for instance. In those two fractions, one over R plus one and one over R minus one are pretty close to one over R when R is large. But although we do need a pretty accurate approximation, we don't need a ridiculously accurate approximation, and it can be shown that if our approximation satisfies the inequality that we have here on the screen, then rounding off will give us the right answer. I won't try to argue that in this video, but it is shown in the written material for the lesson
+
+01:01:23
+in case you're interested in the details. And if that's the accuracy that we're going for, then it suffices to use a number of control qubits in the phase estimation procedure that's equal to two times the length of N plus one. Where as we had in the previous lessons, the length of N is the number of bits that we need to express N in binary. By the way, if we're content to get the best approximation with probability at least 40% and we don't try to increase our confidence
+
+01:01:53
+like I described earlier, then we don't actually need the plus one. But in any case, we have that the number of control qubits we need is linear in the length of N written as a binary string. We've seen that if we have the eigenvector psi one, we can use phase estimation to find R, provided we use enough accuracy. Unfortunately it's not so easy to get our hands on this eigenvector. So let's ask a different question. Suppose we don't have psi one, but rather we have psi for a random choice of J.
+
+01:02:29
+Can we still figure out what R is? Or at the very least can we figure out something about R? And the answer is yes, we can figure out something about R, at least on average. What we can do is to try to figure out J over R using a very similar method to the one that we just saw, but with a key difference. First, we'll do exactly the same thing we did before, which is to run the phase estimation procedure on the eigenvector psi J. And what we'll get is an approximation to J over R, as opposed to one over R, which is what we had before.
+
+01:03:07
+But now we have a small problem, because computing the reciprocal won't give us R, it will give us R over J. And by the way, we're not assuming that we know what J is, we're simply given psi J for a random J, and we're not told what J is. So what can we do? Well, it turns out that there's a well-known classical algorithm that can help us, called the continued fraction algorithm. And what this algorithm can do is to take our approximation Y over two to the M and tell us which fraction U over V,
+
+01:03:42
+written in lowest terms, and where U and V are both integers smaller than N is closest to our approximation. It's a truly fascinating algorithm, and if you're interested in it, you should definitely check it out. It's very closely connected to Euclid's algorithm for computing GCDs in fact. But I won't say anything more about it in this video. The point of this is that if we have a good approximation to some fraction for which the numerator and denominator aren't too big,
+
+01:04:14
+the algorithm can recover the fraction, and that's what we're doing here. And now we're left with exactly the same question as before, which is how much precision do we need? And it turns out that exactly the same bound that we had before works in this case. And so choosing M in exactly the same way as before works here as well. Now this isn't necessarily going to tell us R. What we'll learn if we use enough precision, is J over R, but that will be a fraction in lowest terms.
+
+01:04:48
+So we could get unlucky in the sense that this random choice of J could have common factors with R, and they'll be hidden from us. In the worst case for instance, we could get J equals zero and we will learn absolutely nothing. But that is literally the only case where we learn nothing. In general, we'll at least get a non-trivial factor of R, and if we're able to draw random samples and get psi J for different choices of J, we can in fact recover R with high probability by computing the least common multiple
+
+01:05:19
+of all of the denominators that we observe. And this actually doesn't require very many samples at all. The bottom line is that some choices of J will hide factors of R, but random choices of J won't be able to hide the factors of R for long. So that is the idea. It remains to consider the implementation and in particular to figure out how much it costs. The essence of the idea, to compute the order of a given element A and ZN star is to apply the phase estimation procedure to the operation MA.
+
+01:05:56
+Let's figure out what the cost of doing this is as a function of the length of capital N, which I'll denote by little n. Here's a circuit for phase estimation. We're going to need little n qubits on the bottom part of the circuit to encode elements of ZN in binary. So we have N control qubits on top and little n qubits on the bottom, which is nice because that matches with the names that we used earlier in the lesson. In order to count the number of gates that we need for the entire circuit,
+
+01:06:27
+let's focus first on the cost of the controlled unitary operations. If we use the techniques from the previous lesson, lesson six, we can implement MA using big O of little n squared gates using efficient classical algorithms for arithmetic modular N. I'll skip the details in this video, but like several other things I've talked about, you can read more about it in the written material for the lesson. It's not enough though to implement just MA. We also need to implement MA squared,
+
+01:07:00
+MA to the fourth power, to the eighth power, and so on all the way up to MA to a power that's exponential in M. And we know we're going to need to take M to be linear in little n to get enough precision. This is a big concern, and I raised it earlier. If we were to implement powers of MA by simply iterating MA, we'd be in trouble because all these iterations of MA would incur exponential cost. Fortunately, we can play a trick to avoid this blow up in cost. What we can do is as follows,
+
+01:07:35
+for each power K that we need. First, we compute A to the power K, modular N. This is the modular exponentiation problem that I mentioned in lesson six. And it can be solved efficiently. And this is something that we can do with a classical computer. This computation doesn't need to be performed by a quantum circuit at all. So let's let B be the result. So B is an element of ZN star. And second, in place of MA to the power K, we just use a circuit for MB. And that's it. B is just some element of ZN star,
+
+01:08:13
+So the cost to implement MB is big O of little n squared. In a nutshell, what we're doing is exponentating in ZN rather than exponentating a quantum circuit. But the actual operation we get is the same either way. It's just multiplication by A, K times. This is kind of a miracle in fact. And we wouldn't be able to solve the order finding problem or effect integers efficiently with a quantum computer if it wasn't for this. And now that we know that each of the controlled unitary operations,
+
+01:08:45
+including the powers, can be implemented at cost big O events squared, we can count the total number of gates we need. We have N Hadamard gates, and because M is equal to big O of little n, the cost is big O of little n. We have M controlled unitary operations that each have cost big O of N squared. So the total cost here is big O of N cubed. And finally, the quantum Fourier transform has cost big O of n squared. So the total cost is big O of N cubed. In particular, we see that even with our module exponentiation trick,
+
+01:09:22
+the cost of the controlled unitary operations dominates. But nevertheless, the cost is polynomial in little n. There are also some classical computations required, like computing the modular exponentiations and running the continued fraction algorithm, but those computations also have polynomial cost. And in fact, they can be done in big O of N cubed operations as well. There's only one remaining issue, and that is that we need to get our hands on one of these eigenvectors. How can we do this?
+
+01:09:58
+The solution is actually very simple. We don't run the circuit on an eigenvector. We just run it on the state one, meaning the binary encoding of the number one, which we're thinking about as an element of ZN. So let's make that replacement in the diagram. The reason this works is because of this equation right here. The state cat one is in fact a uniform superposition of the R eigenvectors that we've been talking about. And that's not immediately obvious, but if you calculate the sum, you should get cat one.
+
+01:10:34
+And if we run the circuit on this state, the output that we'll get will be exactly the same as if we'd randomly chosen J and run the procedure on the eigenvector psi J. Again, that's not obvious, but an analysis reveals it to be true. And finally, that is it. We have an efficient quantum algorithm for order finding. There's one very short part of the lesson remaining and a concerns the relationship between integer factorization and order finding. I mentioned that if we can solve
+
+01:11:05
+the order finding problem efficiently, then we can also factor integers efficiently. And I want to very briefly give you the main idea for how this works. It's completely classical. This part actually has nothing to do with quantum computing. Here's a method for finding a non-trivial factor of a given positive integer N. And by the way, this method only works when N is an odd number, and it's not a prime number raised to a power. Those two cases when N is even or a prime power can be handled separately.
+
+01:11:39
+There are efficient classical methods for both detecting and handling those two cases. This method is probabilistic. It might fail, but the probability of failure will be at most a half, and we can simply run it multiple times independently to reduce the probability of error exponentially fast. First, we choose A between two and N minus one at random, uniformly. Then we compute the GCD of A and N. And if the GCD happens to be larger than one, then we've just been incredibly lucky. The GCD will be a factor of N
+
+01:12:18
+and we can just output it and stop. Otherwise, the algorithm continues on and we now know that A is in ZN star. And now we compute the order of A, which is where we need a quantum computer. Or maybe we have a different way to compute the order. The algorithm doesn't really care where it comes from, but the only way that we know how to do this efficiently is with a quantum computer. If the order of R is even, then we compute the GCD of A to the power R over two minus one with N. And if that GCD is larger than one,
+
+01:12:54
+then again we have a factor of N, so we output it and we stop. Otherwise the algorithm has failed. And in that case, we can go back to the start and choose a different A and hope for a better outcome the next time around. And that's it. And by the way, once we found a factor of N, we can recurs on both that factor and divide it by that factor until we have a prime factorization of N. So why should this work? Well, there are two main points. The first is that because A to the power R is congruent to one modular N,
+
+01:13:33
+we have that N divides A to the power R minus one. Those two statements are actually equivalent. This is the definition of mod N that you'll find in number theory books. Second, if R is even, then this equation that we have here is true. This is the well-known formula for a difference of squares. In fact, the equation is true for all R, but we need R over two to be an integer in step four. And so if we put the two facts together, we see that every prime factor of N must divide one of the two expressions in parentheses,
+
+01:14:08
+because that's the only way that N can divide the product. Now, it could be that every single prime factor of N divides the first expression in parentheses and not the second, but for our random A, that's not very likely. And so when we compute the GCD in step four, we're likely to get the product of some of the prime factors of N, but not all. To analyze this carefully requires some number theory, but it is pretty basic number theory. So if you find number theory to be interesting and you'd like to learn more about it,
+
+01:14:41
+try working through this analysis. Working through things like this is an excellent way to learn more, but I will leave that to you. And that's the end of the lesson. In this lesson, we covered the phase estimation problem, how we can solve it efficiently on a quantum computer, and how we can apply the solution to obtain a polynomial cost quantum algorithm for integer factorization. I hope you'll join me for the next lesson, which is on Grover's quantum searching algorithm. Goodbye until then.
+

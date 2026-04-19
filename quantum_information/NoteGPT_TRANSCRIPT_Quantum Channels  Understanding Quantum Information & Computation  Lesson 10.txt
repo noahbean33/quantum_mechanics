@@ -1,0 +1,372 @@
+00:00:00
+welcome back to understanding Quantum information and computation my name is John watus and I'm the technical director for education at IBM Quantum this is the 10th lesson of the series and it's the second lesson in the third unit which is on the general formulation of quantum information this lesson is about channels which represent changes in systems that store Quantum information this includes useful operations like ones performed by unitary Gates and Quantum circuits as well as changes that we might prefer to
+
+00:00:32
+avoid like noise we can also describe measurements as channels and that's something that we'll get into in the next lesson the term Channel comes to us from information Theory which among other things studies the information carrying capacity of noisy communication channels so when we think about channels we're thinking abstractly about communication channels it might seem kind of odd to think about a complicated computation as a communication Channel but we need a word to refer to the general notion of a
+
+00:01:06
+process that changes information in some way and For Better or Worse the word channel has stuck no doubt due in large part to the enormous impact that information Theory and in particular the work of Claude Shannon in the 1940s has had on Quantum information and computation here is an overview of the lesson we'll start with the basics including the definition of what a channel is as well as how unitary operations in the simplified formulation of quantum information can be described as channels we'll also talk about the
+
+00:01:36
+fact that convex combinations of channels are channels and if you're wondering why this notion of convexity keeps coming up it's because it really is a fundamentally important mathematical notion in the theory of quantum information we'll also see some examples of channels specifically Cubit channels which will reappear from time to time throughout the remainder of the lesson in the second part of the lesson we'll talk about three different ways that we can represent channels mathematically and in particular we'll
+
+00:02:02
+talk about Stein spring representations Krauss representations and Choy representations which are named after three people whose work was important in the development of these different representations and in the third and final part of the lesson we'll discuss a mathematical proof that establishes that these three representations are in fact equivalent as well as the fact that they all correctly characterize the definition of what a channel is it's a really cool mathematical proof in my
+
+00:02:27
+opinion and hopefully it will add some clarity to these different presentations how they relate and how they work in general we'll start with the basics and address the question what are channels as I already suggested at the start of the lesson channels describe changes specifically discreete time changes in systems that store Quantum information here when we refer to a discrete time change we're just thinking about a change that occurs between two distinct moments in time as opposed to a
+
+00:02:55
+continuous process for instance that makes sense to think about over infinitesimally small time time periods channels include useful operations like unitary operations that are performed by Quantum Gates and circuits as well as changes due to noise for instance for the purposes of this lesson though we're mostly going to be thinking about channels in abstract mathematical terms and there won't be any particular need to distinguish between what's useful and what's not typical names for channels
+
+00:03:20
+include the uppercase Greek letters fi Sai andai and we'll use different letters to refer to some specific channels in a simple situation in which we have some system that's in a state described by some density Matrix row and we apply a channel f to that system the result is a system whose state is described by the density Matrix fi of row so we're thinking about a given Channel fi as being a function that can be applied to density matrices of a particular size or in other words density matrices of a particular system
+
+00:03:51
+that we're applying this channel to there are a couple of requirements that channels must satisfy in order to be considered valid channels First channels are linear mappings this is completely analogous to the situation we have both in the simplified formulation of quantum information where operations on Quantum State vectors are necessarily linear as well as in the standard formulation of classical information where probabilistic operations are linear you could choose to question this basic
+
+00:04:17
+requirement of linearity if you really wanted to but if we want a theory that's consistent with both probability Theory and the choice to represent Quantum states with density matrices then we don't really have any choice and we just have to accept that channels are linear the second requirement is that channels transform density matrices into density matrices that makes perfect sense because if we've chosen to represent states of systems with density matrices and we apply a channel to a system
+
+00:04:42
+that's in some State then the result has to be a valid State and therefore represented by a density Matrix there's a very important point to add here though and that is that this requirement has to be true not only if we apply a channel to an isolated system whose state is described by a density Matrix but also if we have a compound system whose state is described by some density Matrix and we apply the channel to just part of that system so those are the requirements that we place on channels
+
+00:05:11
+and we can see that they are very much analogous to the requirements that we have for operations in both the simplified formulation of quantum information and the standard formulation of classical information in the simplified formulation of quantum information operations are represented by unitary matrices because they correspond precisely to the linear Maps that always transform Quantum State vectors into Quantum State vectors for a given system and similarly probabilistic operations are represented by stochastic
+
+00:05:39
+matrices because those are the ones that always transform probability vectors into probability vectors here we're working with density matrices and there is this added requirement concerning compound systems that turns out not to be necessary for Quantum State vectors or probability vectors but otherwise the requirements are analogous and in some sense our forced Upon Us by the choice to represent Quantum states by density matrices here are some further details about channels including a convention
+
+00:06:08
+for how we'll think about the input and output systems of a channel throughout the lesson as well as some more detail about the requirement that channels always transform density matrices into density matrices first every channel is assumed to have an input system and an output system we can name these systems however we choose but throughout this lesson I'm going to use the name X to refer to the input system and the name y to refer to the output system conceptually speaking the channel
+
+00:06:35
+transforms the input system into the output system so the input and output systems never simultaneously coexist we start with x the channel is applied or performed and the result is that X has been transformed into y whose state is determined by the linear mapping associated with the channel the input and output systems for a channel don't need to be the same and in particular they don't need to have the same number of classical States however it can be that the input and the output systems
+
+00:07:02
+are actually the same system or in other words x equals y in which case we're simply imagining that fi is changing the state of the system and indeed this is very often the situation that we're interested in but this possibility is consistent with the first bullet point in the sense that we never have the input and output systems existing as two separate systems at the same time and in any case it's going to be convenient for the purposes of this lesson to use different letters namely X and Y to
+
+00:07:30
+refer to the input and output systems just to help us to keep things straight now let's go into a little bit more detail about the requirement that channels always transform density matrices into density matrices let's suppose that we introduce a new system Z into the picture let's give the name gamma to the classical State set of this new system imagine now that we form a new compound system ZX consisting of the new system together with the input system X of a channel fi and suppose that this compound system is
+
+00:08:00
+in a state described by a density Matrix row this can be an arbitrary Quantum state of this pair but whatever state it is it's always possible to express the density Matrix Row in the form that's shown on the screen where both A and B range over the classical State set gamma and each row AB is some Matrix whose rows and columns correspond to whatever the classical State set of X is and we don't need to give that classical State set a name at this point just to be clear each row AB is not necessarily a
+
+00:08:30
+density Matrix on its own but the entire Matrix row is necessarily a density Matrix when we apply the channel 5 to the system X it gets transformed into Y and so we're left with the pair zy and the way that we determine the state of this pair after performing fi on just X is to evaluate the linear mapping fi on each of the matrices row a another way to say this is that we take the tensor product of the mapping fi with the identity mapping on Square matrices having rows and columns corresponding to gamma and that in turn
+
+00:09:04
+corresponds to doing nothing to this new system Z but this is an equivalent description and it doesn't necessitate going into any details about tensor products of mappings of this form they do however work in a pretty straightforward way that's analogous to how they work for vectors and matrices one way to think about this visually is in terms of block matrices and if we make the simplifying assumption that the classical stat set gamma consists of the integers between 0 and N minus one for
+
+00:09:32
+some positive integer M then it becomes easy to write all of this down as is shown right here and now to reiterate the requirement that we're placing on five in order for it to be a valid Channel we must always obtain a density Matrix from this process and this has to be true regardless of what choice we make for the system Z as well as the choice we make for row provided that it's a density Matrix that might seem like a pretty strict requirement and it might also seem like it's very difficult
+
+00:10:00
+to check but as we'll see by the end of the lesson it's actually not so strict or difficult to check and in particular we have nice mathematical characterizations for this condition which are connected with the different representations that we'll talk about a bit later in the lesson now let's take a look at some examples of channels starting with an entire category of channels called unitary channels in simple terms these are unitary operations just like we have in the simplified formulation of quantum
+
+00:10:28
+information viewed as channels to be precise suppose that U is a unitary Matrix that represents a unitary operation on a system X so in the simplified formulation of quantum information we would multiply this Matrix to a given Quantum State Vector to determine the action that that operation has on that Quantum State the way that this works for density matrices is that we multiply the density Matrix on the left by U and on the right by U dagger in mathematical terms we refer to this operation as conjugation by The
+
+00:10:59
+Matrix U this is consistent with KSI brasai being the density Matrix that describes the state represented by the quantum State Vector s and it's pretty easy to check that in particular if we were to perform U on the quantum State Vector Ki then we'd get U * Ki and its density Matrix representation is given by that Vector times its conjugate transpose which is U * Ki * brasai * U dagger when we evaluate the conjugate transpose of U * Ki so the way that this channel is defined makes sense for Pure States and when we
+
+00:11:34
+combine this with linearity we see that it makes sense for density matrices in general owing to the fact that every density Matrix can be expressed as a convex combination of pure States this definition always gives us a valid channel for any choice of a unitary operation u in particular conjugating by a unitary Matrix like this doesn't change the trace of a matrix and if we conjugate any positive semi-definite matrix by any Matrix at all we'll get another positive semi-definite Matrix and it's pretty easy to get that
+
+00:12:04
+directly from the definition of positive semi-definite matrices so density matrices always get mapped to density matrices and all of this remains true even if we tensor you with the identity Matrix of any size which is equivalent to applying this channel to just part of a compound system here's a really simple example of a unitary Channel suppose we take U itself to be the identity Matrix this is very obviously a valid Channel called the identity Channel doing nothing at all is certainly a linear
+
+00:12:32
+operation and if we start with a density Matrix and we do nothing to it it's still going to be a density Matrix so this is a valid Channel people use different symbols to denote this channel sometimes it's exactly the same symbol we use for the identity Matrix which can be a little bit confusing but it generally isn't here I'm using the letters ID short for identity just to avoid any confusion and this notation is also pretty common it might seem like a very boring Channel but in the context
+
+00:13:00
+of information transmission it's actually a perfect Channel where the receiver gets exactly what the sender sends which is typically what one wants most in that context another way we can obtain lots of examples of channels is to take convex combinations of channels or in other words to average them together and the fact that we can do this is an important aspect of channels to explain this in more detail let's start with two channels F0 and 51 let's say along with a real number P between 0
+
+00:13:30
+and one and just to be clear we're assuming that these two channels have the same input system which is X as well as the same output system which is y and now consider what happens if we decide to apply the first channel F0 with probability p and otherwise with the remaining probability 1 minus P we apply the second Channel F1 for instance maybe we randomly choose a bit with those probabilities and then use this random bit to determine which channel to apply by doing this we're effectively applying
+
+00:13:59
+a new Channel which we might call sigh that's given by a convex combination of the two channels that we started with and which we can express as is written on the screen we can always take linear combinations of linear Maps like this by the way and the way that a linear combination of linear Maps is defined on a given input is that we just take the same linear combination of the outputs that might look sort of trivial but it makes sense the output we get from this hypothetical scenario is simply the
+
+00:14:28
+weighted average of the outputs we would get from the two original channels nevertheless this is a new channel and if ph0 and 51 were indeed valid channels then for sure this new mapping will also be a valid Channel another way to say that in mathematical terms is that the set of all channels from a given input system to a given output system is convex and that's an important mathematical property of channels we can do this more generally if we have M channels 5 0 through f m minus one say along with the probability vector that
+
+00:14:59
+tells us what the probability is for each Channel then we get a new channel by averaging the channels accordingly so in some sense this is an endless source of new channels for example the class of so-called mixed unitary channels is what we get by taking convex combinations of unitary channels that is if we have M unitary matrices u0 through u m minus one all having the same size along with the probability Vector then if we take the weighted average of the channels corresponding to the individual unit
+
+00:15:29
+matrices as is shown here on the screen then we'll get a channel and channels that can be written like this are called mixed unary channels not every channel is a mixed unitary Channel we can't get every channel this way but they do come up quite a lot next we'll look at a few specific examples of channels these will all be examples of channels from one cubit to one cubit which are called Cubit channels for short the first one is called the Cubit reset Channel and the idea is that this channel resets a cubit
+
+00:16:02
+to the zero State here we're using the capital Greek letter Lambda to denote this Channel and the way that you can remember what this channel does is to think about the block sphere Capital Lambda kind of looks like an arrow pointing up and the zero state is at the top of the block sphere so it's as if it's pointing to the location of the output the way it's defined in mathematical terms is that Lambda of row equals the trace of row time c0 bra 0 so if we evaluate it on any density me
+
+00:16:29
+Matrix row we'll get the zero State as a density matrix it's natural to wonder why we need the trace couldn't we simply Define Lambda of row to be cat zero bra zero without the trace of row in front and the answer to that question is no channels need to be linear maps and it wouldn't be linear if we removed the trace of row also keep in mind that sometimes we need to know how a channel works as a linear mapping on non- density Matrix inputs for example as we saw earlier if we want to know what a
+
+00:16:57
+channel does when we apply it to a compound system system we need to evaluate that channel on the individual blocks of a larger block Matrix and although the entire block Matrix may be a density Matrix the individual blocks generally won't be so let's see exactly what this channel does when we apply it to just one part of a compound system and more specifically what it does when we apply it to one of two cubits that form an ebit to be precise suppose A and B are cubits that as a pair are in the
+
+00:17:25
+five plus Bell State and we apply Lambda to say the first Cubit a to figure out what happens let's first Express the five plus State as a density Matrix and for the sake of this example let's use direct notation to do that here's the five plus State as a Quantum State vector and here's what we get when we multiply this Vector to its conjugate transpose and expand it all out we can then apply the channel to the first Cubit and evaluate what we get here's Lambda applied to the first Cubit and
+
+00:17:52
+here's what we get when we evaluate each of the terms the trace of k0o br0 is one and so is the trace of cat 1 bra 1 so in those two cases the output of the channel is cat 0 bra 0 and that explains the two terms in the answer the trace of Kat zero bra one on the other hand is zero as is the trace of Kat 1 bra zero and so those two terms evaluate to zero and therefore don't contribute anything to the answer we can now simplify a little bit and what we obtain is the zero State for the first Cubit which is
+
+00:18:24
+a and the completely mixed state for the second Cubit which is B notice in particular that we did not get a plus state for B which wouldn't necessarily have been a bad guess if we didn't know anything about density matrices and we just looked at the quantum State Vector representation of the state but that's not how this channel works and there isn't any channel that could possibly work that way the channel Lambda is called the Cubit reset Channel but the way it works is really more like
+
+00:18:48
+throwing the input cubit in the trash and replacing it with a fresh cubit in the zero state but this in fact is the only Cubit channel that always outputs the zero State here's another example of of a cubit Channel known as the completely def phasing Channel this one is denoted by Delta and the way that it works is that it leaves the diagonal entries of any 2x2 matrix alone and zeros out the off diagonal entries Delta is the Greek letter equivalent of D in the Latin alphabet and that's short for
+
+00:19:16
+diagonal so that's one way to remember what this channel does we can alternatively Express this channel using direct notation as is shown on the screen and just to be clear the output is always a 2X two Matrix so in particular the two zero outputs refer to the all zero 2x two Matrix we often do this and we've seen this before in this series the symbol zero is generally used perhaps Ambiguously to mean the zero element of whatever thing we're talking about whether it's scalers vectors
+
+00:19:45
+matrices or whatever let's do the same thing that we did previously for the Cubit reset Channel and see what happens if we apply this channel to half of an ebit the setup is the same so I won't go through that part and the result is the state shown on on the screen which is essentially a shared random bit so what this channel did was basically to convert an ebit into a perfectly correlated pair of classical random bits and that's consistent with a more General interpretation of this channel
+
+00:20:12
+by zeroing out the off diagonal inges of a density Matrix we're effectively throwing away the quantum stuff in a density Matrix leaving a diagonal density Matrix that represents a classical probabilistic State another way to think about this is that this channel represents a perfect noiseless classical channel that transmits a bit so if we put a zero state or a one state or a convex combination of those two states into the channel then that state comes out unchanged but if you try to put a Quantum State into it like a plus
+
+00:20:40
+state for instance it's as if the channel measures that state with a standard basis measurement and then transmits the classical result one final example of a cubit channel is the completely depolarizing Channel what this channel does is to always output the completely mixed state so it's similar in some sense to the Cubit reset Channel except that we get a rather less useful completely mixed state out rather than an initialized Cubit a natural way to think about this channel is that it
+
+00:21:08
+represents an extreme form of noise and as far as Cubit channels are concerned it really doesn't get any noisier than this I don't have a good pneumonic to share for remembering what this one does other than to say that Omega is the last letter of the Greek alphabet and it's sometimes associated with the end of all things and perhaps this is what happens to all cubits eventually as far as noise goes it's pretty extreme but one thing that we can do is to consider a convex combination of this Channel and the
+
+00:21:37
+identity Channel with perhaps a small probability Epsilon for complete depolarization this is a less extreme form of noise where a given Cubit state will mostly be left alone but there is some small chance that it becomes completely mixed geometrically we can think about this as a slight contraction of the block sphere toward the center and by the way we can do something similar with the completely def phasing Channel to model the process of decoherence for instance where things become slightly more classical through
+
+00:22:04
+some process so those are three basic examples of Cubit channels and we'll come back to them mainly as a source of examples throughout the remainder of the lesson next we'll discuss mathematical representations of channels starting with a basic question linear mappings from vectors to vectors can always be represented by matrices in a familiar way which is that the action of the linear mapping is described by matrix Vector multiplication but channels are linear mappings from matrices to
+
+00:22:34
+matrices not vectors to vectors so in general how can we express channels in mathematical terms sometimes for special channels we'll have a simple formula that describes them and that was the case in the examples of Cubit channels that we already discussed but that isn't practical in general because there won't always be such a nice formula as a point of comparison in the simplified formulation of quantum information we use unitary matrices to represent operations on Quantum State vectors
+
+00:23:03
+every unitary Matrix represents a valid operation and every valid operation can be expressed as a unitary Matrix so in essence what this question is asking is how do we do this for channels and the answer to this question is that there are in fact multiple ways to represent channels in mathematical terms in particular we'll discuss three different ways of representing channels that are named after three individuals whose work played an important part in their development hin spring Krauss and Choy
+
+00:23:30
+first we'll see how these different representations work and then in the last part of the lesson we'll see how the three representations relate and in particular how we can convert between them we'll also see that these representations precisely capture the requirements that we have on channels namely that they're linear mappings and that they always transform density matrices into density matrices even when they're applied to just one part of a compound system first up are Stein spring
+
+00:23:57
+representations Willam Forest Stein spring was a mathematician who didn't work on Quantum information and Stein spring representations as I'll describe them are in some sense just a derivative of his work on operator theory in the 1950s but this work was most certainly an important part of the development of the mathematics that Quantum channels are based on the idea behind this way of representing channels is that every channel can be implemented in a certain way that I'll now describe first we form
+
+00:24:27
+a compound system consisting of the input to whatever Channel we're implementing together with an initialized workspace system then a unitary operation is performed on The Compound system and finally whatever part of the resulting compound system corresponds to the output of the channel is left alone or output and the rest is discarded or traced out it's helpful to express this in the form of a diagram and it's simplest to start with the special case in which the input and the output systems are the same this diagram
+
+00:24:58
+by the way is just like a Quantum circuit diagram except that the wires represent arbitrary systems and not necessarily single cubits so we start with the input system X being in some State row we introduce an initialized workspace system W and in this diagram I'm presuming that Zer is a classical state of w and we're taking k0 to be the initialized state of the system but we could alternatively fix any pure state of w and view that as the initialized state we then perform some unitary operation on the pair WX X and then
+
+00:25:30
+Trace out the workspace system and output X here in the diagram by the way I'm using the ground symbol from electrical engineering to indicate that W is being discarded that's not necessarily conventional and you won't find that symbol in kcit there you just ignore the cubits that you're not interested in the point is that I just want to have a symbol that makes it clear that we're discarding the system for the purposes of this discussion in general we don't necessarily need the
+
+00:25:55
+input and the output systems to be the same so we can have for instance an output system y along with a garbage system G that gets traced out in order for U to be unitary it has to be a square Matrix so there's an assumption here that the pair g y together has the same number of classical States as the pair WX for example maybe these systems consist of cubits and the input system X consists of 5 cubits and W consists of 10 cubits say so U is a unitary operation on 15 cubits it could then be
+
+00:26:29
+that y consists of just four cubits which means that g consists of 11 cubits or maybe these aren't cubits at all all that's important is that WX together and gy together have the same number of classical States so that you can be unitary a description of a channel like this is called a Stein spring representation of the channel now it's pretty straightforward to argue that any mapping fi that can be described in this way is in fact a valid channel in particular if we start with the density
+
+00:26:58
+Ma Matrix and then tack on an additional workspace system then we'll certainly be left with a density Matrix we already observed that applying a unitary operation gives us a valid Channel and if we have a density Matrix of a compound system and we Trace out one of the systems then again we'll be left with a density Matrix so when we compose these steps we'll be guaranteed that it always transforms density matrices into density matrices and it's also linear what's not at all clear at this point is
+
+00:27:27
+that every channel can indeed be implemented in this way for some choice of the workspace system and the garbage system as well as the unitary operation U of course but that is true and we'll see why by the end of the lesson here's an example of a Stein spring representation for the completely def phasing Cubit Channel and to be clear now the wires are cubits and this is an ordinary controlled knate it's very simple the input Cubit is on the top and we introduced a workspace Cubit initialized to the zero
+
+00:27:59
+statee we then perform a controlled knot operation where the input Cubit is the control and the workspace Cubit is the Target and then the workspace Cubit is traced out intuitively speaking it makes sense that this should implement the completely def phasing Channel because the controlled notate kind of acts like a standard basis measurement on the top Cubit by copying its classical State onto the bottom Cubit and then the result gets thrown away but we can also go through a calculation and of course it's a good
+
+00:28:30
+idea to do that because we really shouldn't put too much trust in our intuition we can start by writing down the density Matrix representation of the two cubits after the workspace Cubit has been introduced and notice that we're using the kuit ordering Convention as usual where the bottom Cubit is the left one and the top Cubit is on the right we can express this density Matrix explicitly as an actual 4x4 Matrix as is shown on the screen and then we compute the effect that the controlled notot gate has on
+
+00:29:04
+this density Matrix so we conjugate by the unitary Matrix associated with this gate once again keeping in mind the kuit ordering convention so this is the correct unitary Matrix and the result is shown here in effect the controlled noock gate permuted the entries of our original Matrix around a little bit so now the possibly non-zero entries are in the four corners it remains to compute the partial trace and we could do that directly from the Matrix but an alternative is to convert to the direct
+
+00:29:38
+notation as is shown on the screen and then it becomes pretty easy to evaluate what happens when we Trace out the Cubit on the left within each term and the result is that just the terms corresponding to the diagonal entries of row survive and so we've def phased the Cubit as expected as always check this for yourself yourself at your own pace if you choose to do that it's a good example to get some practice working with density matrices and with partial traces that's not the only way to
+
+00:30:10
+implement the completely def phasing Channel here's an alternative Stein spring representation for this channel I won't go through the calculation in detail in this video but I will show it briefly in case you'd like to pause the video and have a closer look the way it works is similar to the first one but the details are different this time we start with a hadamar gate on the workspace Cubit which puts it into a plus State and if we expand out the tensor product we get the Matrix that's shown on the
+
+00:30:42
+screen to apply the control zgate we conjugate by the associated unitary Matrix and the result of doing that is to inject some minus signs into the Matrix in particular the last row and the last column both get multiplied by Nega 1 and this time it would be pretty messy to convert to direct notation so we'll compute the partial Trace directly when we Trace out the first of two cubits what we end up getting is the sum of the two diagonal 2x two blocks and so the final result is again that we've defaced the
+
+00:31:23
+Cubit that was quick and if you're not used to these sorts of calculations then take your time and do it slowly speed is not important here to finish off this example let me mention that there is a pretty simple idea behind this implementation which is pretty nicely expressed by the last step of the calculation that we just skimmed through more succinct way of saying this is that if we average a given Cubit density Matrix with that density Matrix conjugated by the poly Z Matrix then that's the same thing as def
+
+00:31:55
+phasing so the completely def phasing Channel happens to be a mixed unitary Channel where we either do nothing or in other words we perform the identity operation or we perform a zgate each with probability 1/2 good to know so in summary we have two different Stein spring representations of the completely def phasing Channel and that tells us something important which is that Stein spring representations are not unique and in fact there are infinitely many of them for any given Channel Next we discuss cross
+
+00:32:29
+representations of channels which give us a convenient formulaic way of expressing channels through matrix multiplication and addition cross representations are named after Carl Krauss who is a physicist who among other things worked out a lot of the basic mathematical details of channels and the general formulation of quantum information more broadly in general a cross representation is an expression of a channel taking the form shown here on the screen in particular we have a collection of matrices which here are
+
+00:32:57
+named a z through a n minus one for some positive integer n and they specify the action of the channel on any given input row according to the formula in short we conjugate row by each of these matrices which are often referred to as cross matrices in this context and then we sum up the result and that gives us the output all these matrices have to have the same dimensions and specifically their columns must correspond to the classical states of the input system and the rows must correspond to the
+
+00:33:26
+classical states of the output system if that's the case then when we take the product AK * row * AK dagger for any choice of K we get a square Matrix whose rows and columns correspond to the classical states of the output system and so it makes sense that the expression produces a density Matrix of the output system now it is not the case that for an arbitrary choice of these cross matrices that we get a valid Channel there is however a pretty simple condition on the matrices that guarantees that we will get a valid
+
+00:33:55
+Channel and that condition is the formula displayed right here specifically if we sum up the product of AK dagger * AK over all the values of K then we must get the identity Matrix and that will be the identity Matrix whose rows and columns correspond to the classical states of the input system so that condition must be satisfied in order for the mapping defined by the first equation to be a valid Channel and it turns out that every channel does in fact have a representation that takes this form as long as we take n to be
+
+00:34:27
+large enough here are a few examples of cross representations starting with the Cubit reset Channel we can obtain a cross representation for this channel by using two cross matrices c0 bra 0 and c0 bra one so n is equal to two in this example we can plug these choices into the general formula and we have just two terms so it's easy to write out the sum and if we simplify and recognize that the expression in parenthesis is the trace of row then we see that we obtain the Cubit reset Channel we can also
+
+00:34:58
+check that the required condition on these matrices is met and that's a simple matter of plugging the CR matrices into the equation and evaluating and we get the identity Matrix as is required for another example let's again take a look at the completely def phasing Channel taking the matrices cat 0 br0 and Cat one bra one works and that can be checked by expanding out the sum and seeing pretty directly that we get what we need and again the required condition is met an alternative is to take a z to be the
+
+00:35:27
+identity Matrix ided < tk2 and A1 to be Sigma Z / < tk2 and if we evaluate we see that again we get the completely def phasing Channel based on the observation we made about this channel a little bit earlier in the lesson and once again the required condition is pretty straightforward to check as an exercise to work through if you would find that to be helpful consider the completely depolarizing Channel which outputs the completely mixed state for every density Matrix input for this one four cross matrices
+
+00:35:57
+are required it's not possible to come up with a cross representation where n is three or less here's one choice that works and here's another so the exercise is to verify that these choices work as well as to check that the required condition is satisfied it's worth pointing out that the second alternative basically says that it's possible to completely depolarize a cubit or in other words to completely randomize it by randomly choosing one of the four poly matrices including the identity and applying the
+
+00:36:26
+corresponding unitary operation to the Cubit and so the completely depolarizing channel is another example of a mixed unitary channel the last of the three Channel representations that we'll cover is the Choy representation manduin Choy is a mathematician who works on Matrix Theory and other topics and the Choy representation is named in his honor based on a really elegant paper that he published in 1975 that in some sense ties all the stuff together the choit representation of a channel f is a
+
+00:36:55
+single Matrix that's conventionally denoted jfi and specifically if the input system has n classical States and the output system has M classical States then the chy representation of f will be an n * m by n * m Square Matrix before I tell you exactly how the Matrix is defined I'd like to mention a couple of its Key properties which motivate the representation in a way that the actual definition itself might not at least on the surface first unlike both Stein spring representations and cruss
+
+00:37:26
+representations the chy representation is a so-called faithful representation which means that every channel has just one of them and that's pretty important because it says that two channels are the same if and only if their Choy representations are the same so if you have two different descriptions of channels such as two different Stein spring representations or two different cruss representations or perhaps one of each and you want to know if they are in fact the same channel you can just
+
+00:37:53
+compute the Choy representation and check whether or not they're equal the second property is that they are simple to check conditions on the Choy representation that are true if and only if we have a valid channel that property isn't quite so special we can say the same thing about the other two representations but it's a good property to have nevertheless and we'll discuss it further in more detail shortly one more thing to note about the Cho representation is that although we are
+
+00:38:17
+representing a channel by a matrix this Matrix does not directly represent the channel as a linear mapping in fact it's actually more natural to associate the Choy representation with the density Matrix that represents a certain State than it is to think about the Choy representation as describing a linear mapping it is however possible to recover the action of the channel from its Tri representation using a pretty simple formula but it's not so simple as ordinary matrix multiplication that's enough of a
+
+00:38:45
+preamble let's get to the actual definition suppose that we have a channel fi from a system X to a system Y and assume that the classical State set of the input system X is Sigma we're not going to need to refer to the classical State set of the the output system so for the definition there's no need to name that one the Choy representation of fi is then defined by the expression shown here on the screen we have a sum that ranges over all classical States A and B for the input system and we're
+
+00:39:12
+summing k a bra B tensored with the channel fi applied to k a bra B so this representation is defined by a formula and there are a couple of different ways that we can think about this formula before I discuss them however let me mention that sometimes the chart representation is defined in a slightly different way where the ordering of the two tensor factors is reversed meaning that fi of k a bra appears as the first tensor Factor rather than the second but the two different ways of doing it are
+
+00:39:40
+equivalent up to this simple symmetry but what that means is that when you're using this representation it's a good idea to clarify which ordering you're using this ordering is the way it's done in kcit and it's also better for describing the representation visually in terms of block matrices so this is the one that going to go with to be more precise about the block Matrix description if we assume that the classical State set Sigma consists of the integers from zero up to n minus one
+
+00:40:06
+for some positive integer n then we can alternatively write jfi as a block Matrix as is shown right here on the screen in other words the Choy representation of fi is the Matrix we get by evaluating fi on each of the input matrices that have exactly one entry equal to one with all of their entries zero and then arranging them into a Matrix in a pretty natural way it may not be clear a priori why we would want to form a matrix like this but it does turn out to be very useful one thing to notice is that the
+
+00:40:38
+set containing the matrices k a bra b as a and b both range over all integers from 0 to n minus one forms a basis for the space of all n byn matrices so if you have this Matrix then you can certainly determine what fi does to an arbitrary n byn matrix by linearity specifically by taking appropriate linear combinations of the blocks so the Matrix jfi does in fact uniquely determine fi as a linear mapping another way to think about the Cho representation of a channel is that it represents a state as a density
+
+00:41:12
+Matrix when it's normalized specifically by dividing it by the number of classical states of the input system which I'll continue to denote by lowercase n this will always give us a density Matrix which is often referred to as the choice state of the channel here's how this works in more detail imagine first that we have two identical copies of the input system and we consider the quantum State Vector s displayed on the screen which represents a so-called maximally entangled state of
+
+00:41:41
+this pair of identical systems for instance if Sigma is the binary alphabet then this is a f+ state but we can think about an analogously defined state for any choice of Sigma and what we get is a state that's highly entangled and in fact it's as entangled as you can get given this choice of systems to obtain the density Matrix representation of the state we multiply the state Vector to its conjugate transpose as usual and this is what it looks like and finally if we think about the Choy
+
+00:42:09
+representation of the channel divided by n then we see that it's the state that we would obtain if we were to apply the channel fi to the second system in the form of a figure here's what this looks like we have two copies of the system X in this maximally entangled State s the channel f is applied to the second system which is the one on the top in the diagram and the resulting state is the choice state of five of course we wouldn't normally give the same name to two different systems like this it's generally not
+
+00:42:39
+helpful to give the same name to two different things but it does make sense in this case just to make this connection with Choy representations there are a couple of implications that we can immediately draw from this way of looking at Choy representations one is that because the choice state is a density Matrix assuming that f is a valid Channel we conclude that the Choy representation of fi must be positive semi-definite remember that it's a requirement that we place on channels that they always transform density
+
+00:43:07
+matrices into density matrices and this is just one special case of this the second implication is that if we take the choice state for any channel fi and then discard the output system y then we must be left with the completely mixed state on the input system X that's because applying a channel to a system and then throwing the resulting system into the garbage is equivalent to just throwing the original system into the garbage and if we were to do that with our maximally entangled State the
+
+00:43:34
+density Matrix we'd be left with would be the identity Matrix divided by n or in other words the completely mixed state for the system X the idea in more mathematical terms is that composing any Channel with the trace on the output system must be equal to the trace on the input system and that's because channels must preserve Trace by virtue of the fact that they're linear mappings that always transform density matrices into density matrices once we have this equation we can clear the denominator n
+
+00:44:03
+from both sides to get a slightly cleaner condition in words performing the partial trace on the output system of the Choy representation of a channel must give us the identity Matrix on the input system so in summary Cho representations of channels are always positive semi-definite and if we Trace out the output system we're necessarily left with the identity Matrix on the input system as a turns out these are not only necessary conditions but they're also sufficient meaning that if I is some arbitrary linear mapping and
+
+00:44:35
+these two conditions both happen to be true then it must in fact be that fi is a valid Channel and we'll see why that is the case by the end of the lesson let's take a look at a few examples starting with the completely def phasing channel to compute the Choy representation it's just a matter of evaluating the formula the completely defacing Channel leaves k a bra B alone when a equal B and otherwise the output is zero so the terms in the sum that survive are the ones where a equals B
+
+00:45:04
+and the result is expressed on the screen using direct notation we can also view it as a block Matrix Delta leaves diagonal entries alone and zeros out off diagonal entries and so we're left with a matrix having ones in the upper left and lower right hand Corners with all of their entries being zero and that's consistent with the first expression for another example let's consider the completely depolarizing Channel again we can start by writing down the formula and just like in the previous example we
+
+00:45:33
+don't get any contribution to the sum when a is not equal to B and this time when a equals B we get the completely mixed state and we can simplify that to obtain 1/2 * the 2x2 identity Matrix tensor to itself which is 1/2 * the 4x4 identity Matrix we can also think about it in terms of block matrices and naturally we get the same result and as a last example let's consider the identity channel for a single Cubit it's an easy one here's the formula and of course the identity Channel doesn't do
+
+00:46:02
+anything at all and we can think of the result as being twice the density Matrix associated with a f+ state and that's consistent with what we expect by thinking about the choice state of this Channel and here it is as a block Matrix notice in particular that the Choy representation of the identity channel is not the identity matrix it's this Matrix we've now seen three different ways to represent channels in mathematical terms namely Stein spring representations cross representations and Choy
+
+00:46:32
+representations and we also have the definition of a channel which is that a channel is a linear mapping that always transforms density matrices into density matrices even when the channel is applied to just part of a compound system a very natural and very important question to ask at this point is how do we know these things are all equivalent for instance how do we know that every mapping described by any one of these representations is in fact a valid Channel and how do we know that we're
+
+00:46:58
+not leaving any channels out the remainder of the lesson describes how all of this can be reasoned mathematically if you're willing to accept the equivalence of these things and you're not interested in how it can be reasoned then you should feel free to skip the rest of the video but I personally think the argument is pretty slick and it's a good example of a particular style of mathematical proof that comes up from time to time in the theory of quantum information I won't go through all of the details some of them
+
+00:47:23
+I'll leave for you or you can find them in the written content for this lesson where everything is is written out in detail but I do hope to present a reasonably clear picture of how it all works what we want to do is to prove the equivalence of a collection of statements and the way that we can do this is to set up a cycle of implications in particular we'll start with the definition of a channel meaning a linear mapping that always transforms density matrices into density matrices from this definition we can reason that
+
+00:47:50
+the Choy representation of this channel must satisfy the two conditions we've already discussed and in fact we've already done this this this was discussed in the context of the choice state of a channel we then forget all about the definition and we work from the Choy representation and given our two conditions on Choy representations we conclude that there must exist a cross representation of the mapping fi we then do an analogous thing we forget about Choy representations and we work
+
+00:48:17
+from an arbitrary cross representation and from it we can reason that there must be a Stein spring representation for the mapping fi and by the way these arguments will be mechanical in some sense which allows us to actually perform the conversions according to the arrows for specific channels if we want to do that the last implication is to reason that if we have a Stein spring representation for a mapping fi then that mapping must in fact be a valid Channel and again we already did that this time in the context of Stein spring
+
+00:48:45
+representations altogether these four implications reveal that these four things are all equivalent because you can start from any one of them and follow the implications transitively to get to any of the other ones we'll start with the first implication which is that if we have a channel fi meaning a linear map that always transforms density matrices into density matrices then it has a Cho representation that satisfies the two conditions that we identified earlier namely that it's positive semi-definite
+
+00:49:15
+and if we Trace out the output system we get the identity on the input system and as I mentioned a moment ago we've already covered this implication in the context of choice States in particular when we divide the Cho represent ation of a channel by n the number of classical states of the input system then we get a density Matrix and moreover the reduced state of the input system X for that state is the completely mixed state or in other words the identity Matrix divided by n clearing the denominator gives us our
+
+00:49:43
+two conditions so this implication is pretty quick and easy because we already covered it now let's take a look at the second implication this time we start with the Choy representation of a mapping which we assume satis the two requirements and our goal is to come up with a cross representation for this mapping that satisfies the requirement that we talked about earlier this implication is quite mechanical in a sense we'll need a little bit of linear algebra and it'll mainly come down to manipulating
+
+00:50:12
+matricies and vectors in a pretty clever way it starts with the assumption that the Choy representation is positive semi-definite which is the first of the two requirements that we're assuming are in place the notion of a positive semi-definite Matrix is fundamentally important in Quantum information and not just in the context of density matrices it's absolutely critical here we wouldn't be able to make this work without it in particular the assumption that jfi is positive semi-definite
+
+00:50:40
+allows us to express it in the form shown on the screen for some choice of vectors s0 through S N minus one and some choice of a positive integer n and let me note explicitly that these are not necessarily unit vectors one way that we can get our hands on an Expression like this is from the spectral the theorem for positive semi-definite matrices which was discussed in the previous lesson here we don't see any IG values appearing explicitly like we had in a spectral decomposition but remember that the IG
+
+00:51:08
+values of positive semi- different matrices are always non- negative real numbers and also keep in mind that we're not requiring these vectors S 0 through S N minus one to be unit vectors so what we can do is to take the square roots of the igen values and multiply them into the unit igen vectors we get from a spectrally comp position to get these vectors s0 through S N minus1 it's actually not important for this proof that these vectors are orthogonal we do get that from a spectral decomposition
+
+00:51:38
+but we're not going to use that here and if we had some different expression of jfi like this that didn't come from the spectral theorem then that would be just fine we now decompose each of these vectors as is shown on the screen and this is just like we would do if these vectors were Quantum State vectors of a pair of systems XY and and we were performing a standard basis measurement on the X system to be clear we're not measuring anything here we're just writing these vectors in this form which
+
+00:52:05
+is always possible and now here comes the trick we Define cruss matrices a0 through a n minus one by plucking the K A's off of the front of these vectors s0 through S N minus one flipping them around so they become bra A's rather than K A's and sticking them out to the right hand side as is shown in the equation on the screen one way to think about this is that we're basically folding up these vectors to form matrices so that if we stacked The Columns of AK on top of one another we'd
+
+00:52:34
+get back s so these matrices have exactly the same entries as the corresponding vectors but we've just rearranged the entries differently so that we get matrices but we can also think about these metrices purely symbolically in terms of direct notation as is written here and now at this point there's an obvious question why should this work well let's not dwell too much on why it works let's just verify that it does to do this let's define a new mapping which is the mapping defined by
+
+00:53:02
+these matrices where we're treating them as cross matrices what we can now do is to compute the Choy representation of this new mapping and we'll see that it's equal to the Choy representation of the mapping F that we started with and because Choy representations are faithful this means that the two mappings are in fact equal I won't go through the algebra in this video you can verify that yourself it's quite mechanical and it's good practice and everything you need for that is right
+
+00:53:30
+here on the screen we haven't said anything yet about the two second conditions in the two boxes but they turn out to be equivalent and one way to establish that is to verify the equation displayed here on the bottom of the screen the letter T here by the way refers to Matrix transposition which you can alternatively think about as the linear mapping that turns k a bra B into k b bra a and it's just something that's needed to make the formula work so in summary there's definitely some algebra
+
+00:53:59
+needed for this implication but like I said it's all pretty mechanical basically index gymnastics as some people refer to this sort of thing but if you work through it and you give your brain a chance to digest it you may find that you come away with a better understanding of how Choy representations and cross representations relate the third implication allows us to go from a cross representation of a mapping fi where the usual condition is in place to a Stein spring representation this one is pretty
+
+00:54:28
+similar in spirit to the previous implication in the sense that it's mechanical and it can be viewed and verified in purely algebraic terms the idea is actually pretty simple what we can do is to take our cross matrices and form part of a larger matrix by stacking them on top of one another like is shown on the screen once it's filled out this will give us the unitary Matrix U for a Stein spring representation unitary matrices have to be square matrices so we'll have to fill out as many remaining
+
+00:54:56
+columns as we need to do that but it won't actually make any difference what they are as long as we get a unitary Matrix if we momentarily put aside the concern that U is unitary and just focus on the linear mapping that's defined by the Stein spring representation we get from this Matrix U then what we find is that the mapping is equal to the original mapping fi defined by the cross representation that we started with that's another part of the proof that I won't go through in this video you can
+
+00:55:23
+find the details in the written content for this lesson but you may alternatively wish to take some time and work through it for yourself just keep in mind as usual for the series that we're using kets ordering convention to interpret the diagram so w and G will correspond to the tensor factors on the left hand side in the equations and by the way if you do go through it you'll find that because we have k0o bra zero as the tensor Factor on the left hand side in the equation that we need to verify the only portion
+
+00:55:53
+of U that has any relevance is the part given by the CR maty so as long as we fill out the columns of you in a way that makes it unitary then we're good but of course this requires that the columns formed by a0 through a n minus one when we stack them on top of one another are orthonormal and this is where the condition that we place on Cross representations comes into play and indeed it's precisely equivalent to the columns being orthonormal the relevant mathematical relationships needed to draw this
+
+00:56:21
+conclusion are shown down here on the bottom of the screen so go ahead and pause and verify if you Choose Or again consult the written content for further details in short what's going on here in both this implication and in the previous one is that we're describing the same mathematical operations in different but equivalent ways the Beating Heart for all of it essentially is matrix multiplication the fourth and final implication establishes that if we have a Stein spring representation for some
+
+00:56:51
+mapping then that mapping must in fact be a valid Channel and as I indicated earlier we we already covered this implication when we discussed Stein spring representations in summary and in slightly different terms introducing an initialized workspace system is a valid Channel That's because tensoring a fixed density Matrix to a given density Matrix always gives us a density Matrix and it's a linear mapping by the bilinearity of tensor products unitary operations are always valid channels as I discussed
+
+00:57:20
+earlier in the lesson tracing out a system is a valid Channel because the partial Trace is a linear mapping that always transforms density matrices into density matrices and finally compositions of channels are always channels which is quite simple but definitely worth observing in its own right and with the four implications we just covered we've established the equivalence of our three Channel representations along with the original definition of a channel in particular we started with the
+
+00:57:49
+definition of a channel we saw how that definition implies that its Cho representation necessarily satisfies two basic conditions then we we saw how those conditions allow us to find a Krauss representation which in turn allows us to find a Stein spring representation and finally we saw that the existance of a Stein spring representation reveals that we do in fact have a valid channel of course there are technical details in there and it's not necessarily simple especially when you're seeing it for the first time
+
+00:58:17
+but what's interesting and noteworthy here is that these implications are set up in a way that does in fact make things as easy as possible and in mathematics you should never feel feel any shame in taking the easy way out for example it's not at all obvious that every channel has a Stein spring representation or a crow representation but it is relatively easy to conclude that the Choy representation of every channel satisfies the two conditions that we've associated with it and that
+
+00:58:43
+allows us to follow a more or less algebraic path to the other two representations in a similar vein the last implication from a Stein spring representation back to the definition is also relatively straightforward and it allows us to conclude that we only get channels and no other mappings from Choy representations assuming that the required conditions are met and as I alluded to before the way that we argue these implications are sufficiently mechanical to allow us to easily convert between the representations and if you
+
+00:59:13
+go back to some of the examples that we covered earlier in the lesson you'll find that it is in fact possible to convert between the representations sometimes quite easily and directly and that is the end of the lesson which has been all about channels we talked about what they are and we took a look at some basic examples we discussed three ways that channels can be represented and we dove into some technical details that establish the equivalence of these representations I hope you'll join me for the next lesson
+
+00:59:41
+which is all about measurements in the general formulation of quantum information goodbye until then
+

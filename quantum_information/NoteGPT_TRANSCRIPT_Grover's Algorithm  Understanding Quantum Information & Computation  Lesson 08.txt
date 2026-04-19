@@ -1,0 +1,291 @@
+00:00:01
+welcome back to understanding Quantum information and computation my name is John watus and I'm the technical director for education at IBM Quantum this is the eth lesson of the series and it's the last lesson in the second unit of the series which is on Quantum algorithms we've talked about the query model of computation including Quantum algorithms that offer provable advantages over classical algorithms within that model we've discussed foundational Concepts connected with Quantum algorithms and how we can
+
+00:00:31
+measure computational cost and in the previous lesson we discussed phase estimation and Shores algorithm in this lesson we'll discuss Grover's algorithm which provides a quadratic advantage of quantum over classical algorithms for so-called unstructured search problems which I'll describe once we get into the lesson these are all foundational topics concerning Quantum algorithms there are other Quantum algorithms as well as general paradigms that Unite different Quantum algorithms and Quantum algorithmic techniques and
+
+00:01:04
+if you're interested I encourage you to check out the quantum algorithm Zoo which categorizes known Quantum algorithms and includes many references to original research papers that have contributed to their development for this series however we're just going to stick with the fundamentals and starting with the next lesson we'll move on to a new topic but first let's talk about Grover's algorithm here is the lesson overview we'll begin with a short discussion of the computational problem that we'll be
+
+00:01:34
+addressing which is unstructured search intuitively speaking you can think about the unstructured search problem as searching through a collection of items that isn't sorted and hasn't been ordered in a useful way then we'll discuss Grover's algorithm which is a Quantum algorithm that offers a quadratic advantage over classical algorithms and we'll get into precisely what that means shortly a very High Lev description of how this algorithm works is that first there's an initialization step and then
+
+00:02:06
+an operation that I'll refer to as the grover operation is iterated some number of times and then finally a measurement takes place that reveals a candidate solution to the search problem I'll explain what the grover operation is and how it can be implemented on a quantum computer and then we'll go through an analysis of this operation to better understand what it does and why it's useful for searching the third part of the lesson is concerned with the number of iterations in Grover's algorithm or in other words
+
+00:02:38
+the number of times the grover operation should be applied presuming that we wish to maximize the likelihood that the algorithm succeeds in finding whatever it is that we're searching for while simultaneously minimizing its cost we'll start with the unique search problem which is a special case in which there's exactly one solution to our search problem and then we'll consider consider what happens when there are multiple Solutions and finally I'll conclude the lesson with a few brief remarks about
+
+00:03:08
+Grover's algorithm and its generalizations let's begin with the computational problem that we'll be addressing throughout the lesson first as we often do we're going to let Sigma denote the binary alphabet and we'll use this notation for the entirety of the lesson so I won't keep reminding you suppose that we have a function f that Maps binary strings of some length n to the binary alphabet our assumption is that we can easily evaluate this function for example maybe we have a Boolean circuit
+
+00:03:44
+for this function whose size is polinomial In N now this doesn't mean that this is necessarily a simple function in any sense or that we have a particularly good understanding of this function for instance maybe we have a rather complicated and messy Boolean ccle circuit for computing F that allows us to evaluate it on different input strings but doesn't necessarily have a nice form that's designed to make our lives easier our goal is to find a solution by which we mean a binary string of length
+
+00:04:14
+n that causes F to evaluate to one in general this is a very difficult computational problem or at least we suspect that is very difficult in particular if the input is in fact the description of a Boolean circuit for Computing the function f then this is a so-called NP complete problem one way that we can formalize this problem is as a query problem and indeed for the purposes of this lesson it's reasonable to think about this problem purely in the context of the query model but when we think about where or when this
+
+00:04:48
+problem might arise in practice it's arguably more natural to think about f as being computed by a Boolean circuit as we saw in lesson six though we can connect these two points of view through the construction that we went through for taking a Boolean circuit and converting it into a Quantum circuit for implementing a query operation or a query gate in any case conceptually speaking the input to the problem is this function f and we're looking for a solution if there is one and if there
+
+00:05:19
+isn't a solution meaning that F turns out to be the constant zero function then the correct output is to report that there are no Solutions this is is an unstructured search problem in the sense that there's nothing special about F that makes it easy to find a solution it's not like we're searching through data that's already been ordered or that's been loaded into a data structure of some sort that facilitates searching and there's no promise on the function f that might help
+
+00:05:49
+us one way to think about it is that it's like searching for a particular phone number in a phone book as opposed to searching for a name which is much easier presuming that the names have been alphabetized in Practical terms it's not really about searching through data which we tend to organize and store in a manner that makes searching easy it's more representative of searching for a solution to a complicated equation for instance or perhaps searching for the combination that opens a
+
+00:06:20
+lock as an aside it is sensible to think about this problem in the context of the query model regardless of how we might feel about the Practical relevance of that model of course there aren't oracles or blackboxes in real life but until we learn otherwise complicated and mysterious Boolean circuits are kind of like black boxes now let's think about algorithms for solving this unstructured search problem and we're going to be doing this in the query model just for the sake of Simplicity if we have a Boolean circuit
+
+00:06:54
+for our function rather than a black box then we can still run query algorithms on it but of course we can't rule out the possibility that some new algorithm is discovered for this problem that isn't based on making queries but we won't concern ourselves with that possibility first just a little bit of notation the total number of input strings to the function f is 2 to the little n where little n is the length of the input strings to F and Hereafter I'm going to let Big N be this number 2 to
+
+00:07:26
+the little n it's pretty common that people use capital letter like this to denote two to the power of the lowercase version of that letter we're going to be talking about the number capital N quite a lot so this is just going to be convenient and it'll help to keep things a little bit neater and again this notation holds for the entire lesson now of course we can solve the search Problem classically by simply iterating through all of the possible end bit strings in whatever order we
+
+00:07:58
+choose evaluating F on each one of them if we find a solution at any point we can stop but in the worst case we'll end up evaluating F on every single input string so this requires n meaning capital N queries we could choose to measure the cost of this computation in a different way not just in terms of the number of queries but the number of queries represents the number of times we have to evaluate the function f and it's reasonable to expect that the evaluations of f will dominate the cost
+
+00:08:29
+C of this computation this is in fact the best we can do with a deterministic algorithm and again this is in the context of the query model if we've queried every input string except for one of them and F has taken the value zero on all of them so far how can we be sure that the last string isn't solution and the answer is that we can't so we do need all n queries in the worst case we could also use Randomness that can offer some very minor improvements such as reducing the expected number of queries needed to
+
+00:09:06
+find a solution when one exists or we could effectively trade correctness probability for a reduction in queries but however you slice it we'll still need a number of queries that's linear in N So classically speaking we need a linear number of queries meaning linear in capital N Grover's algorithm is a Quantum algorithm for search that does better it requires just bigo of the square root of n queries those queries happen in superposition so it isn't Magic but it is a significant improvement over what's
+
+00:09:40
+possible classically and this is what's meant by a quadratic Advantage can this quadratic advantage of quantum over classical be turned into an actual advantage in a practical sense probably not anytime soon but in the distant future who knows but even if if Grover's algorithm doesn't ever lead to a practical Advantage for searching it is nevertheless an important part of the foundation of quantum algorithms that's well worth understanding before we move on to Grover's algorithm itself we need to
+
+00:10:13
+talk briefly about so-called phase query Gates many Quantum algorithms in the query model are naturally expressed using phase query Gates and we'll see that Grover's algorithm is a specific example let's start with a quick view of ordinary query gates for a function f of the form that we've been talking about the query gate UF is defined onst standard basis States as is shown on the screen and for superpositions of standard basis States the action is determined by linearity and it's worth reminding
+
+00:10:47
+ourselves that from a Boolean circuit for f we can in fact build a circuit for this operation UF at a cost that's linear in the size of the Boolean circuit the phase query gate for f on the the other hand which will denote by the name ZF operates like this in particular this gate operates on little n cubits as opposed to little n plus one cubits and it basically just automatically kicks the function value into the phase rather than xoring the output value onto an additional Cubit like we have for
+
+00:11:21
+UF so if we think about what happens when we use phase Kickback on a UF gate we're basically just implementing a ZF G we need a minus State and it costs one evaluation of UF but we do in fact get the minus State back and we can use it for the next one if we want to or we could just throw it away so that's what a phase query gate is now if we're just given a phase query gate ZF and this is the only way that we have access to the function f then we can't actually recover a UF gate but if we have a
+
+00:11:56
+controlled version of ZF then we can build a UF gate and I'll leave that one to you as an exercise in addition to the phase query gate for the function f we're also going to need a phase query gate for the nbit or function or in other words the function that takes value zero when it's given the l0o string and otherwise it takes the value one and explicitly the way that zor works on standard basis States is shown here on the screen this gate doesn't have any depend on the function f so it doesn't require
+
+00:12:31
+any queries and one way that we can build a Quantum circuit that implements this operation is by doing something similar to what we did for the function f except that we start with a Boolean circuit that computes the or function on n Bits And now that we have these Gates we're ready to move on to the next section now we'll discuss Grover's algorithm beginning with a description of the algorithm we start by initializing little n cubits each to the plus state or in other words we put these cubits
+
+00:13:02
+into an equal superposition of all binary strings of length n what we're going to do is effectively to steer the state of these cubits toward a solution so it's intuitive that we start in this state because we don't know anything about the function f yet at this point every string is equally likely to be a solution and that's reflected by the fact that these cubits are in an equal superp position of all strings and then we iterate we repeatedly apply the grover operation which is really the heart of the
+
+00:13:32
+algorithm and I'll describe it in just a moment we apply this operation a total of T times where T is some non- negative integer but this number isn't actually specified by the algorithm itself we have to choose T somehow and in the next section we're going to talk about good choices for T but for now we can think about this number of iterations t as being arbitrary and Fin finally we measure in the standard basis and that gives us a candidate solution there's no guarantee that it is
+
+00:14:06
+a solution but if we choose T well then the probability to get a solution can be made large and here is the grover operation itself which we've named G it's a composition of operations all of them on N cubits so this is an N Cubit operation first we have a ZF gate or in other words a phase query gate for the input function f followed by a layer of hadamard gates and then we have zor which is the phase query gate for the or function and finally another layer of hatar gates so we see that one iteration in
+
+00:14:45
+step two can be implemented by a circuit having the form shown here on the screen and here we have four cubits by the way but in general we can have any number of cubits a key thing to note here is that we need one query of f to implement G we need one query to implement ZF and none of the other operations have any dependence on F so they don't require any queries so this number T that represents the number of times we apply G in step two also represents the number of queries we need here's a typical way that we might
+
+00:15:19
+use Grover's algorithm but it's certainly not the only way like I said before the first thing that we need to do is to choose T and we'll get into that in the next section for whatever T we choose we run Grover's algorithm for T iterations and we get a candidate solution X there's no guarantee that X is really a solution but we can spend one additional query to check if we have a solution then we can output that solution and stop and otherwise we can either try again possibly with a different choice of T
+
+00:15:52
+but not necessarily or we can give up and report that there aren't any solutions like a I said before this is not the only way the algorithm might be used but this is a natural way of applying it to the search problem next we'll see what the grover operation actually does to the state of the N cubits that it acts on let's think of our n cubits as forming a single register which I'll name Q just to pick a name remember that what we do first in Grover's algorithm is to put Q into a
+
+00:16:24
+uniform superposition of all nbit strings and we do that by applying hatar Gates to n cubits in the all zero State we then iterate the grover operation G and then measure it's going to be helpful to partition the set of all nbit strings into two sets a z and A1 a Zer contains all of the strings that cause F to evaluate to zero and A1 contains all of the strings that cause F to evaluate to one another way to say that is that A1 contains all the solutions to our search problem while a z contains all of the
+
+00:17:01
+non-solutions we'll be especially interested in two Quantum States one is the uniform superposition over all of the non-solutions that's k a z and the other is uniform over all the solutions and that one is Kat A1 I should point out that these definitions only make sense when these sets are non-empty because otherwise we're summing up zero things and dividing by zero and as we go through this analysis of Grover's algorithm we will be making that assumption we can very easily figure out what
+
+00:17:31
+Grover's algorithm does when f is either the constant zero function or the constant one function by treating them as special cases but I will leave that for you to do on your own not surprisingly if every string is a solution we will indeed obtain a solution when we measure and if there aren't any solutions then we won't obtain one because in that case there aren't any but for the sake of this analysis we're going to assume that both of these sets are nonm empty so that these
+
+00:17:59
+definitions of these two states make sense by the way this is a pretty common notation whenever we have a non-empty finite set s we can write c s to mean the uniform superposition over the elements of that set just like we have here so let's collect these definitions like this and we'll see how they connect to Grover's algorithm the first step of Grower's algorithm is the initialization step which puts Q into a uni form superposition over all nbit strings and just to give this state an easily
+
+00:18:34
+recognizable name I'm going to call it cat u u is short for uniform it's important for the sake of the analysis that we first note that this uniform State Catu is contained in the Subspace spanned by the two vectors K a0 and K A1 in particular if we take the linear combination of these two states that's shown here on the screen we'll get cat U now the key to the entire analysis is the fact that the state of Q remains in this two-dimensional Subspace no matter how many times we apply the grover
+
+00:19:13
+operation so everything is going to boil down to what happens in a two-dimensional Subspace now let's see what the grover operation does and in particular what it does to vectors in the two-dimensional Subspace spanned by cat a0 and K A1 it's helpful to imagine that g is split into two parts one part is the ZF gate and the other part is the zor gate sandwiched between two layers of hadamard gates here's the definition of ZF from before and it's pretty straightforward from that definition to see that its
+
+00:19:52
+action on our two states the uniform superpositions of non-solutions and solutions is simply to put a minus sign in front of K A1 well nothing happens to K a0 and that's all we really need to know about ZF for the sake of this analysis for the second part which is the Z orgate sandwi between two layers of hatar gates let's start by recalling how zor is defined one way to write it is as is shown on the screen this is the same expression as before and another way to express it using the direct
+
+00:20:26
+notation is like this and you can verify this expression just by thinking about how the operation on the right hand side acts on standard basis States in particular it does nothing to the all zero State and every other standard basis state gets a minus sign which agrees with the definition of Z or so if we sandwich this operation between two layers of hadamard gates then we get a similar expression except that in place of the all zero standard basis State we now have our uniform sub position k u and that's because H tensor
+
+00:21:01
+n transforms the L zero standard basis state to k u and also H tensor n is its own conjugate transpose so it works in a similar way acting from the right on the bra rather than the cat and now we're going to figure out what G does to our two vectors a0 and A1 using the facts that we've just observed let's start with a0 first let's sub itute the expression we obtained for the Z orgate sandwiched between two layers of hadamar Gates next we can use the fact that ZF does nothing to cat a z so we can get rid of the ZF
+
+00:21:41
+operation and now using the description of cat U that we have up here along with the fact that K a0 and K A1 are orthogonal unit vectors we can compute the product of this bra right here and this cat and what we get is the square root of the number of nons Solutions divided by n we can use this fact to evaluate what we get and by substituting in our expression for cat U and simplifying we get the final result that's shown here on the screen in particular notice that this Vector is contained in the
+
+00:22:15
+two-dimensional Subspace span by K a0 and K A1 as I suggested before and moreover the coefficients happen to be real numbers as always verify this at your own pace if you choose to do that I tend to go through these sorts of things quickly in these videos with the expectation that you'll pause the video to give it some thought if you choose to do that so let's clean this up so that we can save the final result for later and now we'll do something similar for the vector k A1 we can use the same expression of G
+
+00:22:51
+as before and this time the ZF gate injects a minus sign which here is reflected by the fact that we've swapped the two terms in the operation in parenthesis we then proceed in a very similar way and the final result is similar except that the two coefficients are swapped and we now have a minus sign in front of one of them which is just how the algebra works out and again you can check this at your own pace notice that once again we have a real linear combination of our two vectors K a0 and
+
+00:23:27
+K A1 we'll clean this one up as well and we'll put the end result together with the other one and now we can see how G acts on the Subspace spanned by our two vectors one way to do that is to express it in terms of the 2x2 matrix M that's shown here on the screen and just to be clear what we're doing here is we're associating the first row and the First Column with K a0 and the second row and column with Kat A1 so far in the series we we really just used matrices to describe the way
+
+00:24:00
+that operations work on standard basis States but it is common to use matrices to describe the actions of linear maps on different sets of vectors not just standard basis States and here we're talking about what the operation G does to the vectors K a0 and K A1 we can say more about what G does to vectors in the span of K a0 and K A1 if we take a closer look at this Matrix M and in particular what we'll find is that m is a rotation Matrix meaning that its action on this two-dimensional space
+
+00:24:33
+can be described as a rotation by some fixed angle there are a couple of different ways to see this and one is to observe that this Matrix M can be expressed as the square of a matrix that looks somewhat simpler that might be hard to spot if we're just looking at M by itself but this isn't something that we need to discover on our own we just need to verify it and we can do that by simply squaring The Matrix on the right another way to write the Matrix on the right not including the square is
+
+00:25:04
+shown on the screen and this is the typical way to describe a rotation by a given angle Theta as a matrix the precise angle by which we're rotating happens to be the inverse sign of the square root of the number of solutions divided by n and by the way because this is the first time that we're seeing it let me point out that this angle is very important it's going to keep keep showing up as we continue with this analysis the argument of the inverse sign is a number between 0 and 1 and
+
+00:25:37
+specifically the way that we're interpreting the inverse sign here is that it's the angle between 0 and Pi / 2 that gives us the argument when we take the sign so that's one way to think about this Matrix that we squared to get M and because squaring The Matrix is the same thing as applying it twice we see that M can alternatively be written as a rotation not by an angle of theta but by two * Theta because by squaring we rotate by an angle of theta twice a different way to verify all this
+
+00:26:10
+by the way in case it's helpful is to start with this final expression of M and use the double angle formulas from trigonometry to obtain the original expression of M and this is the expression of M which describes the action that g has on the Subspace Spann by K a0 and K A1 that's going to be most useful going forward now returning to Grover's algorithm itself after the initialization step but before we perform any applications of G the state of our n Cubit register Q is Catu the uniform superposition over all nbit
+
+00:26:46
+strings and here we have the same expression of cat u in terms of K a0 and K A1 as before but now that we've identified this angle Theta we see that that we could alternatively write k u as cosine Theta * k a 0 plus sin Theta * K A1 that's clear for the coefficient of K A1 and for the other coefficient we just need to observe that the size of a0 plus the size of A1 is n and then we can just get it from some basic trigonometry so that's the state we start with and the first time that we
+
+00:27:24
+apply G we rotate by an angle of 2 * Theta so the total angle becomes 3 * Theta and if we apply G again the angle increases to 5 Theta because we've effectively rotated by an additional angle of 2 Theta and so on so after T applications of G we can represent the state that we get as is shown on the screen where the angle of our state is equal to 2T + 1 * Theta that's 2 * Theta for each application of G along with an additional Theta because that's the state we started in we can also think about the action of
+
+00:28:00
+the grover operation in geometric terms and this helps to shed some light on how it works and why its effect is to rotate the state of the register Q here's the main idea the grover operation is a composition of the two parts that we've already identified one is ZF and the other is z or send between two layers of hadamar gates these two parts are reflections and when we compose two Reflections we obtain a rotation so let's see how this works in more detail first let's focus on ZF and we're
+
+00:28:42
+going to restrict our attention to the same two-dimensional Subspace that we've been talking about meaning the one that's spanned by cat a0 and Kat A1 as we already observed the action of ZF on this space is quite simple it does nothing to cat a z and it puts a minus sign in front of K A1 this is a reflection and specifically it's a reflection about the line parallel to K a0 which we'll call L1 just to give it a name to see why it's a reflection it helps to draw a picture here we have our two vectors K
+
+00:29:19
+a0 and K A1 which are orthogonal unit vectors and we can think about the screen as consisting of all of the real linear combinations of these two vectors so the circle represents all of the unit vectors for which the coefficients of these two vectors are real numbers here's the line L1 which is parallel to K a0 and if we consider some arbitrary Vector s on this circle then the effect of applying ZF is to reflect about this line as is Illustrated on the screen simply because we do nothing to k
+
+00:29:51
+a z and we put a minus sign in front of K A1 in the special case that s is k a zero for instance nothing happens when we perform this reflection and when s is K A1 the reflection takes us all the way to negative K A1 and that's consistent with the action of ZF so ZF is a reflection that can be visualized as we have here the second part of G which is z or sandwich between two layers of hatar gates can be expressed as 2 * K Bru minus the identity Matrix as we've already scene and again this is a
+
+00:30:30
+reflection this time about the line L2 parallel to k u rather than K a0 we can visualize this operation in a similar way to ZF here's the vector k hypothetically so this is the line L2 parallel to K and once again the action on an arbitrary Vector S is to reflect it about the line which is L2 in this case and finally as I mentioned before whenever we compose two Reflections we obtain a rotation and specifically it's a rotation by twice the angle between the lines of reflection so let's draw a similar
+
+00:31:15
+picture to what we had before here are the lines of reflection which have the angle Theta between them and if we take some arbitrary Vector s reflected around the first line L1 and then reflected about the second line L2 then the net effect will be to rotate the vector s by an angle of twice Theta and this is something that's true in general and you can try it out on some additional examples of your own to see that this is indeed the way it works anyway hopefully this helps you to get some intuition as to why the grover
+
+00:31:51
+operation has the effect of rotating vectors next we'll turn to the issue of choosing the the number of iterations T in Grover's algorithm let's start by thinking about how the analysis we've seen so far which reveals what the grover operation does when we apply it repeatedly to the uniform superposition relates to the task that we're hoping to solve which is to find a solution to our search problem or in other words any string contained in the set A1 in short we're basically going to set
+
+00:32:22
+a Target and then figure out how many times to apply the grover operation to get close to that Target first let's imagine that we have any state that's a linear combination of our two vectors K a0 and K A1 if we perform a standard basis measurement on this state we're going to get an outcome in the set A1 which is the set of solutions to our search problem with probability equal to the absolute value squar of whatever coefficient we have for K A1 and for the vector that's shown on the screen that
+
+00:32:55
+coefficient is beta this is is intuitive if we were to measure the state K a0 we'd get a random nons solution and if we measured K A1 we'd get a random solution so if we measure this state right here we'll get a random non-solution with probability absolute value of Alpha squ and a random solution with probability absolute value of beta squ but we can also just take a moment to work it out here's the State written out so that we can see what the entries of this Vector are for standard bis
+
+00:33:28
+States so if we measure these are the probabilities to obtain each possible outcome and to get the probability to obtain a solution we sum the probabilities for all of the possible solutions which gives us the absolute value of beta squar as expected now we've already analyzed what happens when we run Grover's algorithm for T iterations we get the state that's shown here on the screen so because the coefficient of K A1 is the S of 2T + 1 * Theta where once again here is this very important angle Theta we
+
+00:34:07
+will see a solution with probability sin^2 of 2T +1 * Theta we'd like to make that probability large ideally as close to one as we can so as we're rotating the state vector by iterating G we'll think about K A1 as the target state and we'll try to pick T so that we land close to this state and as we're doing this it's good to keep in mind that we'd also like to minimize T because that's the number of queries we need to make so if we want to make this probability close to one and minimize T
+
+00:34:46
+it Mak sense to try to make the angle of our state Vector close to Pi / 2 because that's the smallest angle that makes the square of the sign large so it's basically our first opportunity to make the probability large as we're rotating the state Vector now we can't necessarily hit this angle pi over 2 exactly because T has to be an integer but if we think about it approximately and solve for t as if it were inequality then we see that ideally choosing T to be pi over 4 * Theta minus
+
+00:35:20
+12 makes sense but of course T must be a non- negative integer so what we'll do is to take the closest integer to what we're imagining is this ideal value which is the floor of pi divided 4 * Theta taking the floor by the way just means that we throw away any fractional part so in other words it's the largest integer that's less than or equal to whatever it is that we're taking the floor of according to this expression if the ideal value happens to be halfway between integers we'll round up but that
+
+00:35:56
+won't actually matter at all for for the sake of this lesson so going forward we're going to be focusing on this particular choice of T but there is one other important consideration that we need to make which is that this specification of T depends on how many solutions there are because the angle Theta depends on the number of solutions Hereafter I'm going to use the letter s to refer to the number of solutions or in other words the size of the set a one just for the sake of convenience anyway the point is that our
+
+00:36:33
+expression for T the value that we're hypothesizing should be good depends on Theta and Theta depends on S which is the size of the set A1 this isn't a problem if we know in advance how many solutions there are but if we don't know how many solutions there are in advance we don't know what Theta is so we can't pick T like this and we'll have to do something different I'll come back to the situation where we don't know s a little bit later but to start let's focus on the situation in
+
+00:37:01
+which we do know how many solutions there are beginning with unique search where there's guaranteed to be a single unique solution that we're looking for I mentioned the unique search problem as an example of a query problem back in lesson five the input is a function f from nbits to one bit there's a unique n bit string that causes F to evaluate to one and the goal is to Output that string so this is equivalent to the unstructured search problem we've been talking about but with the promise that there's
+
+00:37:37
+exactly one solution and in fact this is the only version of the search problem that love Grover considered in his original 1996 paper that introduced Grover's algorithm for Unique search we have that s equals 1 and therefore this important angle Theta is equal to the inverse sign of the square root of 1 n when n is large this value is approximately theare root of 1/ N and that's because for smaller and smaller angles the sign function starts to look more and more like the identity function if we substitute that
+
+00:38:13
+approximation into our selection for T we see that t is approximately the floor of pi over 4 * the < TK of n that's good because we're on track to be using Big O of the square root of n queries though at this point we've yet to take a look at exactly how well the algorithm performs let's take a look at an example where capital N is 128 which is 2 ^ 7 so our function f is from Seven bits to one bit and we're assuming that there's a unique solution but to figure out how
+
+00:38:48
+well the algorithm works we really only need to concern ourselves with the angle Theta which we can calculate it's approximately 0.08 85 radians which is a little bit more than 5° and if we plug that value into our expression for T we get eight so we're thinking about what happens when we search for a unique solution out of 128 possibilities using eight queries we can draw a picture to illustrate how the state changes over time as we perform iterations of the grover operation as before we have the states K
+
+00:39:24
+a0 and K A1 and in this particular case meaning unique search we have that Kat A1 is in fact the standard basis State corresponding to the unique solution whatever it happens to be well K a0 is the uniform superposition over all strings besides the unique solution here's the uniform superposition over all strings which we can write as cosine Theta K a0 plus sin Theta K A1 and it makes sense that K a0 and K U are close in this case because as we just observed a moment ago K a0 is almost the uniform superposition over
+
+00:39:59
+all strings there's only one string missing and that's the unique solution applying G again rotates by an additional 2 Theta so this is where we are after two iterations here's three 4 5 6 7 and 8 and now we see that we're pretty close to Kat A1 so if we stop and measure at this point we'll be quite likely to get the unique solution and in fact in this case there's only about a half a percent chance that we don't get the unique Solution on the other hand if we were to
+
+00:40:35
+continue applying the grover operation more than the recommended eight times then the probability to get a solution would go back down and over time it would oscillate as the state goes around the circle so it's important that we stop the iterations at the right time if we want to succeed with high probability let's think about about the probability that our choice for T reveals the unique solution more generally for different values of n we'll write pn1 to denote the probability that Grover's algorithm
+
+00:41:08
+succeeds in finding a unique solution for each possible value of n the one means one solution and we'll extend this notation to other numbers of solutions shortly here's a table of these probabilities for small powers of two it's starts with Nal 2 and the probability is 1 12 which isn't very good but then for Nal 4 the probability is exactly one so it actually works perfectly in this case it's a great exercise by the way to explicitly go through how these two cases work particularly the case that n is equal to
+
+00:41:46
+four in that case we're searching for one solution out of four possibilities we need just a single query and it works perfectly as n get gets larger we do see some fluctuations the probabilities go up and down a little bit but they appear to be getting closer to one and indeed that is true it can be proved analytically that the probability is always at least 1 - 1 / n so that's good the algorithm isn't perfect we're not guaranteed to get a solution but it's quite likely particularly for large
+
+00:42:20
+values of n as well as the very interesting anomaly that happens when n is equal to 4 I should also point out that we can always run the entire algorithm including the measurements as many times as we choose and if any one of the runs succeeds we'll get a solution so if these probabilities aren't good enough we can easily boost them by just running the algorithm again in fact even if these probabilities were all equal to 1/2 for instance we'd still have a useful searching algorithm now let's consider what
+
+00:42:51
+happens when there are multiple Solutions we'll start with a similar example example to the one before again n is equal to 128 but this time the number of solutions s is four rather than 1 again we can calculate Theta and T and we get that Theta is about 01777 or a bit more than 10° and T is four this time so the angle is about twice the value from the previous example and T is half of what it was we can draw a picture like before here's where we start here's one iteration two three and
+
+00:43:36
+four this time we're very close to cat A1 and the probability to get a solution this time turns out to be greater than 99.9% but if we didn't know any better and we thought that there was only one solution we would take T to B8 like before we'd rotate almost all the way around to negative K a0 and that would lead to a very small probability of success so that's a further example showing that there are good choices of T and bad choices of T and here we see that a good choice for S equals 1 turns
+
+00:44:11
+out to be a very bad choice for S equal 4 but assuming that we do know s in advance and we choose T according to our specification then it turns out that Grover's algorithm will find a solution with probability at least 1 - x over n and often it'll be much larger than that it's also at least s Over N but that's actually much less interesting what's more interesting is that as the fraction s Over N gets small the bound on the probability of success gets closer and closer to one now as I've already remarked several
+
+00:44:46
+times the number T represents not only the number of iterations of the grover operation we perform but also the number of queries we're making so how does this number depend on s and n first let's start with the fact that the inverse sign of X is always at least X provided that X is between Z and 1 that's pretty easy to show if you happen to know the tailor series for the inverse sign function but there are other ways to reason it and we're just going to take this as given because it's
+
+00:45:20
+true that means that Theta is at least the square root of s/ n and consequently T is at most < / 4 * the < TK of n / s so that's actually even better than Big O of root n the larger s is in comparison to n the fewer queries we need to make and in a way it's not surprising that this fraction shows up like this given that its reciprocal defines Theta and at the end of the day Theta is really all that matters for this analysis as we've just seen Grover's algorithm Works quite well when we know
+
+00:45:58
+in advance how many solutions there are but what if we don't know how many solutions there are there's one pretty simple approach and that is to just choose the number of iterations randomly and specifically choosing T uniformly at random between one and the floor of pi over 4 * root n turns out to be a pretty good way to do this the upper end of this range is roughly the number of queries we would choose for Unique search and actually it's exactly the right number in most cases this is when the angle Theta is as
+
+00:46:34
+small as it can possibly be excluding the trivial case when there aren't any solutions the idea here is that instead of carefully aiming our state Vector at K A1 like we did when we knew how many solutions there were we're basically rotating by a random angle as if we're just giving the state Vector a random spin if there happens to to be just one solution then our random spin could push the state Vector close to K A1 but it might also just go part way there and if there happens to be many solutions then
+
+00:47:07
+our random spin could potentially send the state Vector around the circle multiple times so we don't expect this to reveal a solution with a probability close to one but the chance that this leads to a solution if there is one turns out to be pretty good it's always at least 40% in fact that's not obvious but it is the case it certainly isn't shocking though because a truly random angle would have a 50% chance of finding a solution anyway 40% is not bad and remember that we can always boost the
+
+00:47:40
+probability of finding a solution by repeating the process choosing T independently each time by doing this the chances of not finding a solution when there is one decreases exponentially in the number of times we repeat so if we want a 99% % chance to find a solution what we can do is to run this simple approach 10 times again with t chosen independently each time naturally if we don't find a solution we output no Solutions if there aren't any solutions we won't find one and so in that case
+
+00:48:13
+we'll always output the correct answer which is no Solutions if there are solutions we might fail to find one and incorrectly declare that there are no Solutions but the probability of that happening can be made very small we also have as I mentioned a few moments ago that this requires a number of queries or evaluations of f that's Big O of root n so using Grover's algorithm we can still solve the search problem with high probability with Big O of root end queries even if we don't know in advance
+
+00:48:45
+how many solutions there are there's also a more sophisticated approach that can lead to a reduction in the number of queries as the number of solutions grows I won't describe it in detail though and instead I'll just focus on the main idea we start with capital T being equal to one we then run Grover's algorithm for a random number of iterations but where the upper bound is T so the first time we get to step two we're going to run Grover's algorithm with one iteration but T is going to be
+
+00:49:17
+growing if we find a solution then we output that solution and we stop and if we don't find a solution we make t larger and try again and at some point before T gets too large we'll terminate the process and we'll declare that there aren't any solutions it's the same basic idea as we have in the simple approach where we're giving the state Vector random spins essentially but here we're starting out with lighter spins first where T is small just in case there are a lot of
+
+00:49:47
+Solutions in this way we won't waste queries by making the state go around and around the circle by spinning too hard but if it doesn't work meaning that we don't find a solution we try again but we spin a little bit harder or potentially a little bit harder to make this work the rate of increase of T has to be chosen carefully and one way to make it work is to replace T by the ceiling of 54s time T So T is being increased exponentially and intuitively we can think about it as spinning 25% harder each
+
+00:50:22
+time and it's important for the analysis that t increases exponentially like this why 54s you might ask well it's just a number that works and there's actually a range of values that work but two doesn't work for instance doubling T each time is too fast of an increase to take full advantage of the benefits of lighter spins anyway the point of this more sophisticated method is that it gives the same ASM totic bound on the number of queries we require as we had before Big O of the square root of n / s but we
+
+00:50:55
+don't don't need to know in advance how many solutions there are and by the way we can stop this process when T gets to root n so if there aren't any solutions we'll reach that conclusion after bigo of root end queries and that is how we can choose the number of iterations in Grover's algorithm to conclude the lesson I'll make just a few brief remarks about Grover's algorithm first within the query model Grover's algorithm is ASM totically optimal what what that means is that
+
+00:51:27
+it's not possible to come up with a query algorithm for solving the search problem or even the unique search problem specifically that uses ASM totically fewer than Big O of root end queries in the worst case that's something that can be proved rigorously and there are in fact multiple known proofs of this fact interestingly this was known even before Grover's algorithm was discovered Grover's algorithm matched the already known lower bound on the number of queries required from time to time people do come up with
+
+00:51:59
+approaches that they believe are ASM totically Superior to Grover's algorithm but there's always either a mistake or an assumption about the function f and how it can be accessed or some other problematic issue that renders the claim incorrect if you're working properly within the query model you can't beat Grover's algorithm for unstructured search second Grover's algorithm is quite broadly applicable in the sense that the square root speed up that Grover's algorithm offers for
+
+00:52:29
+the unstructured search problem can be obtained in a variety of different settings for example sometimes it's possible to use Grover's algorithm on top of another algorithm to get a quadratic Improvement beyond the performance of that algorithm Grover's algorithm is also quite commonly used as a sub routine inside of other Quantum algorithms as just one simple example we can use Grover's algorithm to get a quadratic advantage over classical algorithms for the minimum problem that I mentioned in
+
+00:52:59
+lesson five and finally the technique used in Grover's algorithm where we have two Reflections that are composed and iterated to rotate a Quantum State Vector can be generalized in a pretty Major Way an example is a technique known as amplitude amplification where a process that generalizes Grover's algorithm can be applied to another quantum algorithm to essentially boost its success probability quadratically faster than would be possible classically and that technique has broad applications in
+
+00:53:31
+Quantum algorithms so it may be true that Grover's algorithm isn't likely to lead to a practical Quantum Advantage anytime soon if ever but Grover's algorithm is without a doubt a fundamentally important and broadly applicable Quantum algorithm and it's representative of a more General technique that has many uses and that's it for this lesson and for this unit of the series which has been on Quantum algorithms we discussed the query model and how we can connect it to a more
+
+00:54:01
+standard model of computation along with some other foundational Concepts concerning how we can measure computational cost we then covered phase estimation and factoring and then finally Grover's algorithm as I've already suggested there's a lot more to learn about Quantum algorithms but in this series we'll move on to a different topic in the next unit in particular we'll take a look at the general formulation of quantum information where Quantum states are represented by matrices of a certain
+
+00:54:32
+sort known as density matrices as we'll see this formulation turns out to be very useful and indeed essential for understanding some aspects of quantum information and it also happens to be quite beautiful from a mathematical Viewpoint so I hope you'll join me for unit three and goodbye until then
+

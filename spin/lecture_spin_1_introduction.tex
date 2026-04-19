@@ -1,0 +1,362 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{mathtools}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Quantum Spin Lecture Notes}
+\lhead{Lecture 1: Introduction to Quantum Spin}
+\cfoot{\thepage}
+
+% --- Theorem Environments ---
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+
+\title{\textbf{Quantum Spin (1): Introduction}}
+\author{Lecture Notes on Quantum Spin}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{Motivation}
+% ============================================================
+
+Quantum spin for spin-$\frac{1}{2}$ particles (electrons, protons, neutrons) is often described through analogies: ``spin is \emph{like} the particle is actually spinning, but not really,'' or ``spin is \emph{like} an angular momentum vector, but not really.'' These analogies, while intuitive, obscure the mathematical simplicity of quantum spin.
+
+The goal of these notes is to describe \emph{what spin is} --- not merely what it is like. The only prerequisite is familiarity with complex numbers.
+
+% ============================================================
+\section{Review of Complex Numbers}
+% ============================================================
+
+\begin{definition}[Complex Numbers]
+    The set of \textbf{complex numbers} $\mathbb{C}$ consists of all numbers of the form $z = a + bi$, where $a, b \in \mathbb{R}$ and $i^2 = -1$. Here $a = \operatorname{Re}(z)$ is the \textbf{real part} and $b = \operatorname{Im}(z)$ is the \textbf{imaginary part}.
+\end{definition}
+
+\begin{definition}[Complex Conjugate]
+    If $z = a + bi$, the \textbf{complex conjugate} is $\bar{z} = a - bi$.
+\end{definition}
+
+\begin{definition}[Magnitude Squared]
+    The \textbf{magnitude squared} of $z$ is
+    \[
+        |z|^2 \coloneqq \bar{z}\, z = (a - bi)(a + bi) = a^2 + b^2.
+    \]
+    Since $a, b \in \mathbb{R}$, we have $|z|^2 \geq 0$, with equality if and only if $z = 0$.
+\end{definition}
+
+% ============================================================
+\section{Vectors in $\mathbb{R}^3$: A Quick Review}
+% ============================================================
+
+\subsection{Components and Basis Vectors}
+
+A familiar vector $\vec{L} \in \mathbb{R}^3$ is specified by three real components:
+\[
+    \vec{L} = \begin{pmatrix} L_x \\ L_y \\ L_z \end{pmatrix} = L_x\,\hat{\imath} + L_y\,\hat{\jmath} + L_z\,\hat{k},
+\]
+where the standard basis vectors are
+\[
+    \hat{\imath} = \begin{pmatrix}1\\0\\0\end{pmatrix}, \quad
+    \hat{\jmath} = \begin{pmatrix}0\\1\\0\end{pmatrix}, \quad
+    \hat{k} = \begin{pmatrix}0\\0\\1\end{pmatrix}.
+\]
+
+\subsection{The Dot Product}
+
+The \textbf{dot product} of $\vec{v}, \vec{u} \in \mathbb{R}^3$ is
+\[
+    \vec{v} \cdot \vec{u} = v_x u_x + v_y u_y + v_z u_z \in \mathbb{R}.
+\]
+Key properties:
+\begin{itemize}
+    \item Symmetry: $\vec{v} \cdot \vec{u} = \vec{u} \cdot \vec{v}$.
+    \item Basis orthonormality: $\hat{\imath} \cdot \hat{\imath} = 1$, $\hat{\imath} \cdot \hat{\jmath} = 0$, etc.
+    \item Component extraction: $v_x = \vec{v} \cdot \hat{\imath}$, $v_y = \vec{v} \cdot \hat{\jmath}$, $v_z = \vec{v} \cdot \hat{k}$.
+    \item Geometric meaning: $\vec{v} \cdot \vec{u} = |\vec{v}|\,|\vec{u}|\cos\theta$, measuring how much two vectors ``overlap.''
+\end{itemize}
+
+% ============================================================
+\section{Quantum Spin Vectors}
+% ============================================================
+
+\subsection{Two Key Differences from Classical Vectors}
+
+Quantum spin vectors differ from ordinary $\mathbb{R}^3$ vectors in two fundamental ways:
+\begin{enumerate}[label=\textbf{\arabic*.}]
+    \item \textbf{Dimension:} Spin vectors are \textbf{2-dimensional}, not 3-dimensional.
+    \item \textbf{Components:} Spin vectors have \textbf{complex} components, not real.
+\end{enumerate}
+
+That is, quantum spin states are elements of $\mathbb{C}^2$, not $\mathbb{R}^3$.
+
+\subsection{Notation: Kets and Basis States}
+
+In Dirac notation, the basis vectors for spin-$\frac{1}{2}$ are written as \textbf{kets}:
+\[
+    \ket{\uparrow} = \begin{pmatrix} 1 \\ 0 \end{pmatrix}, \qquad
+    \ket{\downarrow} = \begin{pmatrix} 0 \\ 1 \end{pmatrix},
+\]
+read as ``spin up'' and ``spin down.'' A general spin state is
+\[
+    \ket{\psi} = \alpha\ket{\uparrow} + \beta\ket{\downarrow} = \begin{pmatrix} \alpha \\ \beta \end{pmatrix} \in \mathbb{C}^2,
+\]
+where $\alpha, \beta \in \mathbb{C}$.
+
+\begin{remark}
+    Despite the unfamiliar notation, the mathematics is essentially the same as for ordinary vectors --- just with two complex components instead of three real ones.
+\end{remark}
+
+% ============================================================
+\section{The Inner Product on $\mathbb{C}^2$}
+% ============================================================
+
+\subsection{Definition}
+
+The analog of the dot product for spin vectors involves complex conjugation:
+
+\begin{definition}[Inner Product on $\mathbb{C}^2$]
+    For $\ket{\psi_1} = \begin{pmatrix} \alpha_1 \\ \beta_1 \end{pmatrix}$ and $\ket{\psi_2} = \begin{pmatrix} \alpha_2 \\ \beta_2 \end{pmatrix}$, the \textbf{inner product} is
+    \[
+        \braket{\psi_2}{\psi_1} = \bar{\alpha}_2\,\alpha_1 + \bar{\beta}_2\,\beta_1 \in \mathbb{C}.
+    \]
+\end{definition}
+
+\subsection{Properties}
+
+\begin{itemize}
+    \item The inner product is a single complex number (not a vector).
+    \item \textbf{Conjugate symmetry} (not full symmetry):
+    \[
+        \braket{\psi_1}{\psi_2} = \overline{\braket{\psi_2}{\psi_1}}.
+    \]
+    \item The inner product of a state with itself is real and non-negative:
+    \[
+        \braket{\psi}{\psi} = |\alpha|^2 + |\beta|^2 \geq 0.
+    \]
+\end{itemize}
+
+% ============================================================
+\section{Dual Vectors (Bras)}
+% ============================================================
+
+\begin{definition}[Dual Vector / Bra]
+    Given a ket $\ket{\psi} = \begin{pmatrix} \alpha \\ \beta \end{pmatrix}$, the \textbf{dual vector} (or \textbf{bra}) is obtained by complex conjugating the components and transposing to a row vector:
+    \[
+        \bra{\psi} = \begin{pmatrix} \bar{\alpha} & \bar{\beta} \end{pmatrix}.
+    \]
+\end{definition}
+
+The inner product can then be written as a matrix product:
+\[
+    \braket{\psi_2}{\psi_1} = \begin{pmatrix} \bar{\alpha}_2 & \bar{\beta}_2 \end{pmatrix} \begin{pmatrix} \alpha_1 \\ \beta_1 \end{pmatrix} = \bar{\alpha}_2 \alpha_1 + \bar{\beta}_2 \beta_1.
+\]
+
+\begin{remark}[Origin of the Names]
+    This notation was invented by Paul Dirac. A ket $\ket{\psi}$ is a vector; a bra $\bra{\psi}$ is a dual vector. Placing them together, $\braket{\psi_2}{\psi_1}$, forms a \textbf{bra-ket} (bracket) --- the inner product.
+\end{remark}
+
+In matrix language:
+\begin{itemize}
+    \item A ket is a $2 \times 1$ matrix (column vector).
+    \item A bra is a $1 \times 2$ matrix (row vector).
+    \item Their product $\braket{\cdot}{\cdot}$ is a $1 \times 1$ matrix (a number).
+\end{itemize}
+
+% ============================================================
+\section{Measurements and Probability}
+% ============================================================
+
+\subsection{The Experimental Setup}
+
+An experimenter can ask one question about an electron's spin: \emph{Is the spin up or down with respect to a particular axis?}
+
+\begin{itemize}
+    \item There are only \textbf{two possible outcomes}: spin up or spin down.
+    \item A theorist can only predict the \textbf{probabilities} of each outcome --- not which one will occur with certainty.
+\end{itemize}
+
+\subsection{Probability Rules}
+
+Given a state $\ket{\psi} = \begin{pmatrix} \alpha \\ \beta \end{pmatrix}$, the measurement probabilities along the $z$-axis are:
+\begin{align}
+    P(\text{spin up along } z) &= |\alpha|^2 = \bigl|\braket{\uparrow_z}{\psi}\bigr|^2, \\[4pt]
+    P(\text{spin down along } z) &= |\beta|^2 = \bigl|\braket{\downarrow_z}{\psi}\bigr|^2.
+\end{align}
+
+Special cases:
+\begin{itemize}
+    \item $\ket{\psi} = \ket{\uparrow_z} = \begin{pmatrix}1\\0\end{pmatrix}$: always measured spin up ($100\%$).
+    \item $\ket{\psi} = \ket{\downarrow_z} = \begin{pmatrix}0\\1\end{pmatrix}$: always measured spin down ($100\%$).
+\end{itemize}
+
+\subsection{Normalization}
+
+Since probabilities must sum to 1:
+\[
+    |\alpha|^2 + |\beta|^2 = 1 \quad \Longleftrightarrow \quad \braket{\psi}{\psi} = 1.
+\]
+A state satisfying this condition is called \textbf{properly normalized} or a \textbf{physical state}.
+
+% ============================================================
+\section{Spin States Along Other Axes}
+% ============================================================
+
+The states that are always spin up or down along each axis are:
+
+\begin{center}
+\renewcommand{\arraystretch}{1.6}
+\begin{tabular}{c|c|c}
+    \textbf{Axis} & $\ket{\uparrow}$ & $\ket{\downarrow}$ \\ \hline
+    $x$ & $\dfrac{1}{\sqrt{2}}\begin{pmatrix}1\\1\end{pmatrix}$ & $\dfrac{1}{\sqrt{2}}\begin{pmatrix}1\\-1\end{pmatrix}$ \\[8pt]
+    $y$ & $\dfrac{1}{\sqrt{2}}\begin{pmatrix}1\\i\end{pmatrix}$ & $\dfrac{1}{\sqrt{2}}\begin{pmatrix}1\\-i\end{pmatrix}$ \\[8pt]
+    $z$ & $\begin{pmatrix}1\\0\end{pmatrix}$ & $\begin{pmatrix}0\\1\end{pmatrix}$
+\end{tabular}
+\end{center}
+
+The factors of $1/\sqrt{2}$ ensure normalization: $\braket{\psi}{\psi} = 1$.
+
+\subsection{General Measurement Rule}
+
+For \emph{any} axis $a \in \{x, y, z\}$:
+\[
+    P(\text{spin up along } a) = \bigl|\braket{\uparrow_a}{\psi}\bigr|^2, \qquad
+    P(\text{spin down along } a) = \bigl|\braket{\downarrow_a}{\psi}\bigr|^2.
+\]
+
+\subsection{Orthogonality}
+
+Along every axis, the spin-up and spin-down states are orthogonal:
+\[
+    \braket{\uparrow_a}{\downarrow_a} = 0 \quad \text{for } a \in \{x, y, z\}.
+\]
+
+\subsection{Context-Dependent Definite Spin}
+
+Whether a particle has a definite spin depends on which axis you measure. For example, $\ket{\uparrow_x}$ has definite spin along $x$ (always up), but along $z$ it yields:
+\[
+    P(\text{up along } z) = \left|\frac{1}{\sqrt{2}}\right|^2 = \frac{1}{2} = 50\%.
+\]
+We say $\ket{\uparrow_x}$ is in a \textbf{superposition} of the $z$-axis eigenstates:
+\[
+    \ket{\uparrow_x} = \frac{1}{\sqrt{2}}\ket{\uparrow_z} + \frac{1}{\sqrt{2}}\ket{\downarrow_z}.
+\]
+
+% ============================================================
+\section{Worked Example}
+% ============================================================
+
+Consider the state
+\[
+    \ket{\psi} = \frac{3}{5}\ket{\uparrow_z} + \frac{4i}{5}\ket{\downarrow_z} = \begin{pmatrix} 3/5 \\ 4i/5 \end{pmatrix}.
+\]
+
+\textbf{Normalization check:}
+\[
+    \braket{\psi}{\psi} = \left(\frac{3}{5}\right)^2 + \left(\frac{4}{5}\right)^2 = \frac{9}{25} + \frac{16}{25} = 1. \quad \checkmark
+\]
+
+\textbf{Probabilities along the $z$-axis:}
+\[
+    P(\uparrow_z) = \left|\frac{3}{5}\right|^2 = \frac{9}{25} = 36\%, \qquad
+    P(\downarrow_z) = \left|\frac{4}{5}\right|^2 = \frac{16}{25} = 64\%.
+\]
+
+\textbf{Probabilities along the $x$-axis:}
+\begin{align}
+    P(\uparrow_x) &= \left|\braket{\uparrow_x}{\psi}\right|^2 = \left|\frac{1}{\sqrt{2}}\left(\frac{3}{5} + \frac{4i}{5}\right)\right|^2 = \frac{1}{2}\left(\frac{9}{25} + \frac{16}{25}\right) = 50\%, \\
+    P(\downarrow_x) &= 50\%.
+\end{align}
+
+\textbf{Probabilities along the $y$-axis:}
+\begin{align}
+    P(\uparrow_y) &= \left|\braket{\uparrow_y}{\psi}\right|^2 = \left|\frac{1}{\sqrt{2}}\left(\frac{3}{5} + \frac{4i}{5}\cdot(-i)\right)\right|^2 = \left|\frac{1}{\sqrt{2}}\cdot\frac{7}{5}\right|^2 = \frac{49}{50} = 98\%, \\
+    P(\downarrow_y) &= \frac{1}{50} = 2\%.
+\end{align}
+
+This state is nearly aligned with the $+y$ direction.
+
+% ============================================================
+\section{Quantum Measurement and Collapse}
+% ============================================================
+
+\subsection{The Collapse Postulate}
+
+After a measurement is performed, the state \textbf{collapses} onto the measured outcome:
+
+\begin{itemize}
+    \item If the initial state is $\ket{\psi} = \alpha\ket{\uparrow} + \beta\ket{\downarrow}$ and spin up is measured, then the post-measurement state becomes $\ket{\uparrow}$.
+    \item Subsequent identical measurements will yield spin up with $100\%$ probability.
+\end{itemize}
+
+\subsection{Collapse Prevents State Determination}
+
+Collapse prevents an experimenter from determining the quantum state $(\alpha, \beta)$ of a single electron with arbitrary precision. Each measurement alters the state, making it impossible to reconstruct the original state from repeated measurements on the \emph{same} particle.
+
+\subsection{Intermediate Measurements Disturb the State}
+
+Consider an electron initially in state $\ket{\uparrow_z}$:
+\begin{enumerate}
+    \item Measuring along $z$: $100\%$ spin up.
+    \item Now insert an intermediate $x$-axis measurement (yielding up or down, each $50\%$), \emph{then} measure along $z$ again.
+    \item Result: $50\%$ spin up, $50\%$ spin down along $z$ --- the intermediate measurement has destroyed the original information.
+\end{enumerate}
+
+% ============================================================
+\section{Global Phase Invariance}
+% ============================================================
+
+If $|z| = 1$ (i.e., $z = e^{i\theta}$ for some $\theta \in \mathbb{R}$), then the states $\ket{\psi}$ and $z\ket{\psi}$ are \textbf{physically indistinguishable}: all measurement probabilities are identical.
+
+\begin{proposition}
+    For any $z \in \mathbb{C}$ with $|z| = 1$ and any axis $a$:
+    \[
+        \bigl|\braket{\uparrow_a}{z\psi}\bigr|^2 = |z|^2 \bigl|\braket{\uparrow_a}{\psi}\bigr|^2 = \bigl|\braket{\uparrow_a}{\psi}\bigr|^2.
+    \]
+\end{proposition}
+
+The factor $z = e^{i\theta}$ is called an \textbf{overall (global) phase} and is unobservable.
+
+% ============================================================
+\section{Spin Quantum Number and Angular Momentum}
+% ============================================================
+
+The spin quantum number $s$ of a particle determines the dimension of its state space:
+\[
+    \dim = 2s + 1.
+\]
+
+\begin{center}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{c|c|c|c}
+    $s$ & $2s+1$ & State space & Angular momentum values ($m_s \hbar$) \\ \hline
+    $0$ & $1$ & $\mathbb{C}^1$ & $0$ \\
+    $1/2$ & $2$ & $\mathbb{C}^2$ & $-\hbar/2,\; +\hbar/2$ \\
+    $1$ & $3$ & $\mathbb{C}^3$ & $-\hbar,\; 0,\; +\hbar$ \\
+    $3/2$ & $4$ & $\mathbb{C}^4$ & $-3\hbar/2,\; -\hbar/2,\; +\hbar/2,\; +3\hbar/2$
+\end{tabular}
+\end{center}
+
+Angular momentum is quantized in units of $\hbar$: consecutive values always differ by exactly $\hbar$.
+
+\end{document}

@@ -1,0 +1,402 @@
+00:00:00
+welcome back to understanding Quantum information and computation my name is John watus and I'm the technical director for education at IBM Quantum this is the ninth lesson of the series and it's the first lesson in the third unit which is on the general formulation of quantum information up until now we've been using the simplified formulation of quantum information where Quantum states are represented by complex vectors having ukian Norm equal to one in in contrast in the general formulation of quantum information
+
+00:00:33
+Quantum states are represented by matrices of a certain type known as density matrices this first lesson of the unit focuses on density matrices specifically and we'll get to what they are and how they work as the lesson continues density matrices are extremely useful and they offer various advantages that we'll discuss they allow us to represent a broader class of States than Quantum State vectors can including States of systems that have been affected by noise for instance as well as random
+
+00:01:04
+selections of quantum States we'll also take a look at the Block sphere which gives us a very nice and simple geometric way of thinking about Cubit States and we'll see how it connects with density matrices in a pretty remarkable way through the poly matrices finally we'll discuss density matrices in the context of multiple systems and in particular we'll see how they allow us to describe Quantum States of systems viewed in isolation even when they're correlated with other systems
+
+00:01:35
+and that includes the possibility that they're entangled with other systems this is an important thing to be able to do and it's not easily done within the simplified formulation of quantum information here's an overview of the lesson we'll start with the basics of density matrices including relevant definitions and some examples and we'll also discuss how they connect to Quantum State vectors we'll then talk about convex combinations of density matrices or in other words what happens when we take
+
+00:02:05
+weighted averages of density matrices we'll start with a specific example of the so-called completely mixed state we'll see how classical probabilistic States can be viewed as special cases of density matrices and we'll discuss how the spectral theorem from linear algebra comes into play in this context the third part of the lesson is on the Block sphere which provides a geometric way of viewing states of single cubits as I mentioned at the start of the lesson and in the fourth part of the lesson we'll talk about how
+
+00:02:34
+density matrices work for multiple systems we'll discuss product States and correlated states of different sorts including entangled States as well as the notion of a reduced state which is a density Matrix description of the state of an isolated part of a compound system that can be calculated using an operation known as the partial Trace before we get to the technical content of the lesson itself it's fitting to take just a few moments to motivate the use of density matrices using the simplified
+
+00:03:05
+formulation of quantum information which doesn't involve density matrices we're able to describe Quantum algorithms like shortest factoring algorithm for instance without any difficulties so why should we bother with density matrices or this General formulation of quantum information at all well there are multiple reasons for one density matrices represent a broader class of quantum States than Quantum State vectors do including Quantum states where we have uncertainty or Randomness this is important when we
+
+00:03:36
+want to model the effects of noise on Quantum computations for instance second using density matrices we can describe Quantum states of isolated parts of compound systems such as the states of systems that are entangled with other systems that perhaps momentarily we choose to ignore as I mentioned at the start of the lesson this is not easily or naturally done within the simplified formulation of quantum information a third reason is that when we use density matrices classical information actually emerges as a
+
+00:04:09
+special case so instead of having what is essentially an analogy between probabilistic states and operations on one hand and Quantum State vectors and unitary operations on the other hand we have Quantum and classical information being described together within a single mathematical framework which is pretty much Essential to the mathematical study of quantum information so if you're serious about understanding Quantum information at a mathematical level it's highly recommended that you learn about density
+
+00:04:39
+matrices let's begin with the definition of density matrices for the sake of the definition suppose that X is a system and sigma is its classical State set and recall that when we use that terminology our assumption is that Sigma is finite and non-empty and as always we could choose different names if we wanted to a density Matrix describing a state of the system X is a matrix having complex number entries whose rows and columns have been placed in correspondence with its classical State set and to be clear
+
+00:05:14
+it's the same correspondence for the rows and the columns simultaneously this means that density matrices are always Square matrices and in addition to being Square there are a couple of conditions that need to be satisfied and we'll get to them shortly people usually use certain lowercase Greek letters to name density matrices row is often the first choice and other common choices include lowercase Sigma andai which are shown on the screen this is just a convention but as usual these sorts of conventions are
+
+00:05:47
+helpful because they make things more easily recognizable and now let's talk about the conditions or the requirements that density matrices must satisfy to be valid density matrices there are two of of them and what I'll do is to First just list them and then I'll discuss in Greater detail what they mean the first condition is that density matrices must have unit trace or in other words Trace equal to one and the second condition is that density matrices must be positive semi-definite and in both cases we have
+
+00:06:22
+concise symbolic ways of expressing these two conditions that appear on the screen now let me discuss the two conditions in Greater detail the first condition refers to the trace which is a very important function that's defined for all square matrices and it's simply the sum of the diagonal entries and here's an equation that expresses that explicitly now there's quite a lot to be said about the trace and why it's important but for now let's just observe one very basic property of it which is
+
+00:06:53
+that it's a linear function other properties of the trace will come up and will discuss them as they're needed but to keep our focus on density matrices let's move on to the second requirement and that requirement is that density matrices are positive semi-definite this is also an important concept that arises in many settings in physics chemistry optimization machine learning and other subjects and it can be expressed in several different but equivalent ways one way to express it is to say
+
+00:07:24
+that a matrix row is positive semi-definite if there exists a matrix M such that row is equal to M dagger time M and it turns out that it doesn't matter if we demand that M itself is a square Matrix or if we drop that restriction another way to express what it means for a matrix row to be positive semi-definite is to say that row is herian which means that it's equal to its own conjugate transpose and all of its I values are non- negative real numbers in general herian matrices can only have real number igen values but
+
+00:07:59
+they can be negative but if we include the additional restriction that none of the igen values can be negative we obtain the positive semi-definite matrices and by the way if you're given a matrix and you want to know if it's positive semi-definite then you can determine that by using this characterization it's quite easy to check whether or not a matrix is heran that's something that can just be eyeballed it's more difficult to compute the igen values but that's something
+
+00:08:27
+that's not too difficult to do with a computer because there are very efficient algorithms to do it and the last characterization that I'll mention although there are others is that for every column Vector s having a number of entries that agrees with the number of rows and the number of columns of row the inequality shown on the screen is true in words drai time row time catchi must be a non- negative real number it's not obvious by the way that these characterizations are all equivalent but they
+
+00:09:01
+are and let me note explicitly that the notation that we commonly use to indicate that a matrix row is positive semi-definite looks like row is greater than or equal to zero but this is just a shorthand notation and it doesn't literally mean that row is greater than or equal to zero row is a matrix so that wouldn't make sense and it does not mean that each of the entries of row is greater than or equal to zero in particular there are positive semi-definite matrices whose entries aren't all non- negative and there are
+
+00:09:35
+matrices whose entries are all non- negative but they aren't positive semi-definite the idea behind the notation is that positive semi-definite matrices are like Matrix analoges of non- negative real numbers but this is just notation and what it means is precisely what we've already discussed now let's take a look at a few examples starting with an example of a positive semi-definite Matrix in fact it's quite easy to randomly generate an example of a positive semi-definite matrix by simply
+
+00:10:10
+choosing a matrix M arbitrarily and then Computing M dagger time M for example here's a matrix M that's not particularly special and in fact I randomly generated this matrix by independently choosing the real and imaginary parts of the entries to be integers between negative 9 and positive 9 so any patterns or structure here is purely coincidental by multiplying the conjugate transpose of M to M we get this Matrix right here which is therefore positive semi-definite of course there's a limit
+
+00:10:45
+to how much Insight we can gain from a random example but it does exhibit some features that are common to positive semi-definite matrices more generally in particular you'll notice that the diagonal entries meaning the ones along the line from the upper left to the lower right are all non- negative real numbers and moreover the off diagonal entries are somehow not too large compared to the corresponding diagonal entries meaning the one in the same row and the one in the same column as whatever off diagonal entry we're
+
+00:11:16
+looking at there is more to the story than this though and it's important to recognize that being positive semi-definite is a property of a matrix as a whole and not just a condition on individual end entries so that's an example of a positive semi-definite Matrix and you can very easily generate other examples through a similar methodology now let's take a look at some examples of density matrices where in addition to the positive semidefinite condition we also have that the trace is
+
+00:11:48
+equal to one here are some examples of 2x two density matrices the trace is equal to one in all four cases and we can also see that these are herian matrices so using the second characterization of positive semi-definite matrices from before All That Remains is to check that the igen values are all non- negative I'll leave that for you to check if you wish for 2x two matrices it isn't too difficult to compute igen values by hand but you can also just ask a computer to do it for example you can use the igen
+
+00:12:21
+Val function in the linear algebra package for python we can also obtain a density matrix by simply taking any nonzero positive semi-definite Matrix and dividing it by its trace for example here's the density Matrix we get by dividing the example we saw just a few moments ago by its Trace dividing by the trace like this will always preserve the positive semi-definite property and we'll certainly obtain a matrix having Trace equal to one by virtue of the fact that the trace is a linear function that's just a small collection
+
+00:12:54
+of examples and we'll see more as the lesson continues next we take just a few moments to discuss the interpretation or intuitive meaning of density matrices the first thing to acknowledge is that it may seem a little bit unusual that we're representing the state of a system with a matrix rather than a vector in contrast in the simplified formulation of quantum information we use vectors to represent States whereas matrices specifically unitary matrices represent actions or operations this is just the way the ma
+
+00:13:29
+mathematics works and although you can always think about matrices as describing linear mappings we don't typically associate a direct intuitive meaning to the linear mapping associated with a given density Matrix having said that the fact that density matrices are indeed matrices does turn out to be a critically important aspect of them and we'll see that as we continue on but to briefly mention just one example for now the igen values of a given density Matrix turn not to be very important because
+
+00:14:01
+they describe how much Randomness or uncertainty is inherent to the state that that density Matrix describes a different way to think about density matrices at an intuitive level focuses on the entries of these matrices remember that the rows and Columns of density matrices are placed in correspondence with the classical States of Whatever system we're talking about so for each entry we have one classical State corresponding to the row of that entry and one classical State corresponding to the column of that
+
+00:14:35
+entry for the diagonal entries those two classical states are the same state and that's why the diagonal entries are special and one way we can interpret the diagonal entries is that they're probabilities and specifically there are the probabilities that the corresponding classical state would appear if we were to perform a standard basis measurement on the system whose Quantum State we're describing for the the off diagonal entries on the other hand we have one classical State corresponding to the row
+
+00:15:03
+of that entry and a different classical State corresponding to the column of that entry and very informally speaking these entries describe the degree to which these two classical states are in Quantum superp position as well as the relative phase between them that may make more sense as the lesson continues on and we look more closely at some specific examples and the details may not be clear at this point but please don't let that bother you this is quite informal and it's just meant to be an intuitive idea to keep in
+
+00:15:36
+the back of your mind next we'll take a look at the connection between density matrices and Quantum State vectors which are column vectors having ukan Norm equal to one just to recall the mathematical definition supposing that we have a Quantum State Vector s that represents the state of some particular system the density Matrix that represents the same Quantum state is given by Ki times brasai as is shown here on the screen to be clear about this the indices of Sai correspond in some way to the classical
+
+00:16:09
+States of Whatever system we're talking about and that's going to be precisely the same correspondence we have between the rows and Columns of our density Matrix and the classical states of the system if we imagine that there are n classical states of the system and we think about column and row vectors as matrices then Ki is an N by one Matrix and Brasi is a 1 byn Matrix so when we perform the multiplication we get an N byn Matrix this will always be a positive semi-definite Matrix just by its form in
+
+00:16:42
+fact and it will also have Trace equal to one by virtue of the fact that s is a unit vector and we'll see that in more detail shortly Quantum states that are represented by density matrices of this form are called Pure States here are a few examples first let's consider this state right here which is kind of like a plus State except that the entry corresponding to the classical State one is imaginary if we compute the conjugate transpose we'll pick up a minus sign because the complex conjugate of I is
+
+00:17:18
+minus I and if we do the multiplication we'll get the Matrix that's shown here on the screen it's heran as we can immediately see just by looking at it and it happens to have one ion value equal to one and one ion value equal to zero so it's positive semi-definite and it Trace is equal to one so it is a density Matrix as expected we can compute the density matrices corresponding to the standard basis and the plus minus bases in a similar way and those density matrices are shown here and here's one more example of a
+
+00:17:54
+Quantum State Vector it happened to appear way back in the first lesson of the series and if we compute the conjugate transpose and then multiply we'll get the density Matrix that's shown here once again it's herian and has Trace equal to one and if you compute the IG values you'll find that again it has one IG value equal to one and one igen value equal to zero and by the way that's a common characteristic of All Pure States they always have one I value equal to one and the rest of the IG
+
+00:18:24
+values are all zero in general for a completely arbitrary Quantum State Vector s with any number of entries if we multiply Ki to brasai we'll obtain a density Matrix that looks like this notice in particular that the diagonal entries are always one of the entries of s multiplied to its own complex conjugate which we can alternatively Express as the absolute value squared of that entry and this is one way to see that the trace will always be equal to one it's also consistent with the remark
+
+00:18:57
+I made earlier in the lesson about the diagonal entries of a density Matrix telling us what the probabilities would be to see each possible classical state if we were to perform a standard basis measurement and one final remark there is no issue concerning Global phases for density matrices two Quantum states are identical if and only if their density matrices are equal in particular suppose that we have two Quantum State vectors s and fi that are equ equalent up to a global phase which means that we can express one of
+
+00:19:33
+them F let's say as the other one times some complex number on the unit circle if we compute the density Matrix representation of fi then what we'll find is that the global phase Factor gets multiplied by its own complex conjugate and that gives us one so it effectively disappears and we're left with exactly the same density Matrix that we get from s so that's kind of a nice little bonus and more generally there's no issue concerning equivalence up to Global phases at all when we're
+
+00:20:04
+working with density matrices that's just basically a degeneracy that exists when we use quantum State vectors rather than density matrices to represent Quantum states density matrices possess a key property which is that convex combinations of density matrices represent probabilistic or random selections of quantum States another way of saying that is that density matrices can be averaged together in a meaningful way which is not something that we can do with Quantum State vectors to explain this in more detail
+
+00:20:36
+let's start with the situation in which we have two density matrices row and sigma that represent Quantum states of some system let's imagine that the system is prepared in the state row with probability P for some choice of P between zero and one and otherwise the system is prepared in the state Sigma for example maybe p is 1/2 so we we might imagine that someone flips a Fair coin and if it's heads they perform some process that leaves the system in the state row and otherwise if the coin
+
+00:21:07
+comes up taals they perform a different process that leaves the system in the state Sigma the question now is what is the state of the system and to be clear we're interested in the state of the system in isolation disregarding any other information that might exist about which preparation was performed for example imagine that we don't have access to the coin or the memory of whoever it was that performed the state preparation and the answer to that question is that it's simply the
+
+00:21:37
+weighted average of the two density matrices P * row plus 1 - P * Sigma this by the way is completely analogous to what we would have if row and sigma weren't density matrices but rather were probability vectors representing probabilistic States so this is not something shocking or mysterious but rather it's something that perhaps is familiar from probability Theory we do this kind of averaging all the time when we're calculating probabilities and thinking about classical random selections and
+
+00:22:08
+the point is that this also works for density matrices but note that it does not work for Quantum State vectors that is you can't generally average together two Quantum State vectors like this and hope to get a valid Quantum State vector and if you try you'll usually get a vector that doesn't have ukian Norm equal to one with density matrices however weighted averages like this will always be valid density matrices and more importantly the density Matrix you get will represent that random selection in
+
+00:22:39
+a meaningful way this generalizes to random selections where there are more than two Alternatives in particular if we have M possible density matrices and a probability Vector with M entries one for each density Matrix and a system is prepared in each possible state with the corresponding probability then the weighted average of those density matrices describes the resulting state of the system and by the way when we refer to a convex combination of density matrices this is what we mean a convex combination is simply a linear
+
+00:23:14
+combination where the coefficients form a probability Vector this will always be a density Matrix and a simple and concise way of saying that in mathematical terms is that the set of all density matrices corresponding to a given system is a convex set so if we have say m Quantum State vectors size 0 through S M minus one along with probabilities p 0 through p m minus one that collectively form a probability vector and a system is prepared in the state s k with probability PK for each k then the
+
+00:23:50
+resulting state of the system is described by the density Matrix that's shown here on the screen in particular we're not averaging together together the quantum State vectors themselves but rather we're averaging together the corresponding density matrices in general a state like this will not have a representation as a single Quantum State Vector unless something trivial is happening like all of the quantum State vectors are equivalent up to a global phase or all but one of the probabilities are zero we will not
+
+00:24:20
+obtain a pure Quantum state from such a process rather we'll obtain what's called a mixed Quantum state where there's some inherent uncertainty involved let's take a look at a simple example suppose that we have a cubit and with probability 1/2 the Cubit is prepared in the zero State and otherwise it's prepared in the plus State here's the density Matrix that we get by averaging as I've described we compute the density matrices corresponding to the two possible States multiply by the
+
+00:24:53
+corresponding probabilities and add the results what we get is indeed a den matrix it's heran it traces equal to one and if you compute the igen values of this Matrix you will get two positive real numbers and they happen to be two numbers that should probably be familiar to you by now cosine square of pi over 8 and sin square of pi over 8 or about 0.85 and 0.15 there is no single Quantum State Vector representation of the state it's not a pure state next we'll take a look at one particular density Matrix that
+
+00:25:27
+represents a Quantum state of a single Cubit known as the completely mixed state the state arises frequently so it's good to have a name for it and it's also a good example because it illustrates an important feature of density matrices there is in fact an analogously defined completely mixed state for any system but for now we're going to focus on this state for a single Cubit just to keep things simple suppose that we randomly set the state of a cubit to be either the zero State or the one state each with
+
+00:25:59
+probability equal to 1/2 much like a uniform random bit we can calculate the density Matrix representation of this state in the usual way we take the average of the two density Matrix representations of the states here's how that looks in Matrix form and what we obtain is the identity Matrix divided by two this state is known as the completely mixed state and it basically represents complete or maximal uncertainty about a cubit just like a uniform probability Vector represents maximal uncertainty in the
+
+00:26:33
+classical probabilistic setting in general for an arbitrary system the completely mixed state is the state we obtain by uniformly choosing a standard basis State and the density Matrix representation will be the identity Matrix divided by the dimension or equivalently the number of classical states of that system at this point this is just terminology but if we change the setup a bit we'll see an important feature of density matrices in particular let's suppose that we change the procedure and in
+
+00:27:06
+place of the zero and one standard basis States we substitute the plus and minus States this time we start with the expression that's shown on the screen but if we go through the arithmetic we obtain exactly the same density matrix it's the identity Matrix divided two so it's the same state as before the complete the mixed state this as they say is a feature and not a bug the two procedures are in fact different but if all you have is the resulting Cubit there is no physical way that you can possibly distinguish them
+
+00:27:42
+even in a statistical sense for example if you performed a standard basis measurement on this Cubit after the first procedure was performed you would obviously get the outcome zero with probability 1/2 and the outcome one with probability 1/2 but you'd also get exactly the same out probabilities for the second procedure and the same is true for any other test that you might devise assuming that you're testing just the Cubit itself in general density matrices don't describe how a system was
+
+00:28:11
+prepared they only tell you what will happen if you do things to that system going forward whether that's performing operations or measurements and in fact density matrices are perfect in this regard if two different Alternatives result in the same density Matrix they cannot be discriminated even statistically but if the two density matrices are different then there will be some way to discriminate them not necessarily definitively but in a statistical sense when we use the general formulation of quantum
+
+00:28:44
+information classical information essentially emerges as a special case and I'll now explain how that works specifically we'll see how probabilistic States can be represented by density matrices let's start with classical States beginning with a simple example here are the density Matrix representations of the zero and one standard basis states of a cubit we associate these states with the classical States 0 and one and so we can think about these density matrices as representing those
+
+00:29:18
+States that's very simple and we can easily generalize the example if we have a system whose classical State set is Sigma then classical State a is represented by or is associated with the density Matrix k a bra a that Matrix has a single one in the diagonal entry whose row and column corresponds to the classical State a and every other entry is zero probabilistic states are represented by convex combinations of matrices of this form which is natural given what we know about density matrices and how they work specifically
+
+00:29:58
+that convex combinations of density matrices represent random or probabilistic selections of quantum States for example let's suppose that we have a system X whose classical State set includes the integers 0 through n minus one for some positive integer n of course there's little or no generality lost in assuming that our classical State set has this form if we had a different classical State set we could simply rename the classical States in this way and it's often pretty venient to make the assumption that our
+
+00:30:30
+classical State sets look like this in large part because that makes it easier to write things explicitly in terms of vectors and matrices supposing that we have a probabilistic state of the system X represented by a probability Vector in the usual way we can associate this probabilistic state with a density Matrix as is shown on the screen we take the weighted average of the density matrices corresponding to the different classical States and what what we get is a diagonal density Matrix in particular we see the probabilities
+
+00:31:04
+along the diagonal of this Matrix and every other entry is equal to zero of course this is a density Matrix we expect that to be true but we can also reason it directly it's a herian matrix its Trace is equal to one because the probability sum to one and in the case of a diagonal matrix the IG values are the diagonal entries and they're all non- negative because they're probab abilities also notice that every diagonal density Matrix meaning one whose off diagonal entries are all zero
+
+00:31:36
+must look like this so in a nutshell probabilistic States can be associated with diagonal density matrices notice by the way that this is consistent with the informal interpretation of the entries of density matrices that I mentioned at the start of the lesson in particular nothing is in Quantum superposition here it's basically just classical Randomness and correspondingly all of the off diagonal entries are zero earlier in this series we discussed the spectral theorem and we did that specifically for unitary matrices in the
+
+00:32:11
+context of phase estimation the spectal theorem is more General than that however meaning that it tells us something about a broader class of matrices than just unitary matrices and in particular it applies to a class of matrices called normal matrices which include all matrices as well as unary matrices what we'll do now is to take a look at a different statement of this theorem this time focusing on just positive semi-definite majores and then we'll see that it tells us something very interesting and critically
+
+00:32:43
+important about density matrices suppose p is any positive semi-definite Matrix so that includes any density Matrix as well as any positive semi-definite Matrix that doesn't happen to have Trace equal to one p is positive semi-definite so it has to be square or in other words N by n for some choice of N and we're going to need to refer to that number n so let N be chosen appropriately or another way to say all this is assume p is n byn what the theorem tells us in this case is that there must exist an orthonormal basis of
+
+00:33:20
+vectors which we'll name s0 through S nus one along with non- negative real numbers Lambda 0 through Lambda nus one such that P can be expressed as is shown here on the screen in words if we multiply each Lambda K to Kai k * brasai K and then sum ofall K from 0 to n minus one then we'll get P this is called a spectral decomposition of P each Lambda K is necessarily an igen value of p and each s is a unit igen Vector of P corresponding to that igen value if you look back to lesson 7 on phase
+
+00:33:59
+estimation you'll find a similar theorem for unitary matrices there the igen values are complex numbers on the unit circle rather than being non- negative real numbers but otherwise it's the same idea and these are really just two special cases of a more General theorem known as the spectral theorem it doesn't work for every Matrix you need the Matrix to commute with its own conjugate transpose and that's what it means for a matrix to be normal but we do in fact always have that for both unitary matrices and
+
+00:34:30
+positive semi-definite matrices and for herian matrices more generally where we'll always have relig values but not necessarily non- negative ones so that's a statement of the spectral theorem for just positive semi-definite matrices and now let's see what it tells us about density matrices what it tells us is that for an arbitrary n byn density Matrix we can always express that Matrix as a convex combination of n pure States and moreover we can take those n pure states to be orthogonal that follows quite directly
+
+00:35:04
+from the theorem together with a basic fact from linear algebra which is that the sum of the igen values of any Matrix is always equal to the trace of that Matrix in other words all we're really doing here is renaming the igen values p 0 through PN minus one and then observing that when we do that and collect those IG values into an nend dimensional Vector we necessarily get a ability Vector because they all have to be non- negative and their sum equals the trace of row which is one because
+
+00:35:34
+row is a density Matrix so that's pretty simple but it's really quite fundamental conceptually what it tells us is that every density Matrix no matter how complicated it might seem could arise from first selecting an orthonormal basis of whatever system we're talking about and then randomly choosing a Quantum state from that basis According to some choice for the prob prob abilities if it's not immediately clear on the surface why that's interesting or important that's okay but we do use this
+
+00:36:06
+fact very frequently when we're reasoning about density matrices and in fact expressing a given density Matrix in this way is often the very first thing that we do when we want to understand it better here's an example recall the density Matrix that we came up with earlier where we randomly chose between the zero State and in the plus State each with probability 1/2 which as we calculated has a density Matrix that looks like this the zero State and the plus state are not orthogonal so this isn't a
+
+00:36:40
+spectral decomposition but if we compute one which we can do with a computer or by hand in a case like this then what we get is this expression of our density Matrix where the IG values are these numbers that keep on showing up and where the corresponding IG vectors can be chosen as is shown down here on the screen and again we've seen these vectors before for instance in the context of the chsh game in Lesson Four so that's interesting according to the original expression this state is
+
+00:37:11
+what we get by uniformally choosing between two states the zero State and the plus state but in fact we get exactly the same density matrix by randomly choosing between two pure States but we're very very heavily biasing towards one of them about 85% for the first one and only about 15% for the second one so in some sense there's actually rather less Randomness inherent to the state than it originally might have seemed there's a very nice geometric way of thinking about and visualizing
+
+00:37:40
+Quantum states of a single Cubit known as the block sphere it only works for single cubits for systems having three or more classical States including two or more cubits together it doesn't work anymore so it is quite limited but nevertheless it's it's a great way to think about the states of a single Cubit it could have been introduced way back in lesson one of the series on single systems but it's not really essential to understanding how Quantum information works and it also has a
+
+00:38:11
+really nice connection with density matrices so it fits naturally into this lesson and in fact I'm going to explain it in a somewhat different way than it's perhaps most typically explained by using density matrices to effectively derive it so if you're already familiar with the block sphere this explanation may be a little bit different from the way you first learned about it but in the end it should of course be equivalent we'll start by thinking about the possible pure states of a cubit
+
+00:38:40
+first as represented by Quantum State vectors up to a global phase every Cubit Quantum State Vector can be expressed as is shown here on the screen to be precise we have two real numbers Theta and fi and we'll think about these two numbers as being angles expressed in radians the first number Theta is between 0 and Pi or equivalently it's an angle between 0 and 180° and the second number five is between 0 and 2 pi including 0 but not 2 pi so that's any angle between 0 and 360° the Zero Entry of our Vector is
+
+00:39:21
+cosine of theta / 2 so that's a real number between 0 and 1 and in particular it's necessarily non- negative and the one entry of our Vector is e to the I * 5 * the S of th / 2 and that can be any complex number on or inside the complex unit circle this is always a unit vector or in other words it's a valid Quantum State vector and for any given cubic Quantum State Vector we can always find a vector of this form that's equivalent to that Vector up to a global phase in particular we can always
+
+00:39:55
+multiply the given vector by a global phase to make the Zero Entry a non- negative real number choose whatever Theta Works to give us that entry and then pick five to match the one entry the magnitude of the one entry will always necessarily agree with the sign of theta over two by the assumption that we started with a unit Vector now it isn't quite the case that Theta and F are uniquely determined by whatever Quantum State Vector we started with but it's almost the case there's always going to be a unique value of
+
+00:40:25
+theta between zero and Pi that works and usually there's a unique value of five that works but in two special cases that's not true in particular if we started with a standard basis State then Theta will be either zero or pi and in both cases it doesn't actually matter what f is it's completely irrelevant when Theta is zero the cosine of theta / 2 is 1 and the S of theta / 2 is z so we're multiplying e to the I * F to zero so it doesn't make any difference what f is and if Theta is pi then this time the
+
+00:41:00
+cosine is zero and the S is one so we have e to the I * 5 * kat1 but those vectors are all equivalent up to a global phase so again it doesn't matter what f is however if Theta lies properly between Z and Pi then there's always going to be a unique value of F that works and by the way this possible degeneracy in the value of f for the two special cases will make perfect sense when we see the geometric picture in just a little bit now let's compute the density Matrix associated with a state
+
+00:41:34
+Vector of the form that we just identified so this is going to be a pure state of a cubit to do this we multiply the vector to its conjugate transpose as usual and on the screen is an expression of the Matrix that we get by Computing the conjugate transpose and doing the multiplication now just like every 2x2 matrix there's a unique way to obtain this matx matrix by taking a linear combination of the poly matrices including the identity Matrix in particular we can get this matrix by choosing the coefficients of
+
+00:42:07
+the poly matrices as is shown here on the screen we're putting a two in the denominator because that's going to make everything work out nicely nothing forces us to do this but we can and it's going to be helpful to do that but aside from this cosmetic Choice there is no Freedom here this is the only way to get this matrix by taking a linear combination of poly matrices that's because the poly matrices including the identity Matrix are a basis for the vector space of all 2x2 matrices one way
+
+00:42:37
+to check the correctness of this expression is to make use of some basic trigonometric identities and in particular if I move out of the way for just a moment here we have some identities that will do the trick so if you're so inclined pause the video or take a screenshot and see if you can obtain the second expression of the density Matrix on the bottom from the first so in summary any pure state of a cubit expressed as a density Matrix can be written as a linear combination of poly matrices like is shown on the
+
+00:43:09
+screen for Theta between 0 and pi and F between 0 and 2 pi notice that we have precisely the same degeneracy as before which is that fi is irrelevant when Theta is either zero or pi and this time we can actually see that more clearly because the S of theta is is zero in those two cases and otherwise it isn't it's worth pointing out that in this formula we have Theta appearing as an argument to the sign and cosine functions rather than Theta over 2 as in the original Quantum State Vector version and that's because we use
+
+00:43:42
+those trigonometric identities the first three of which are basically rearrangements of the so-called double angle formulas so the angle effectively gets doubled and now we're finally ready to talk about the block sphere itself let's focus on the three coefficients of the non-identity poly matrices in the numerator of the expression of our density Matrix so we're ignoring the two in the denominator we're also ignoring the identity Matrix because the coefficient on that one never
+
+00:44:13
+changes that happens because that coefficient is determined by the trace of whatever Matrix we're expressing and density matrices always have Trace equal to one now imagine that we have three axes labeled x y and z oriented according to the so-called right- hand rule and consider the point whose coordinates match with the three coefficients and just to be clear this is ordinary three-dimensional space we're talking about where the coordinates are always real numbers the x coordinate corresponds to the
+
+00:44:44
+coefficient of the sigma X poly Matrix in the numerator of our expression which is always a real number because density matrices are herian and likewise for Y and Z what we find is that this point that we obtain is always on the unit sphere or in other words the sphere having radius equal to one and in particular it's the point we get if we start at the point where the positive z- axis intersects the sphere which we can think about as the North Pole rotate down towards the positive x-axis by an angle of theta and then
+
+00:45:17
+rotate towards the positive y- AIS or in other words East by an angle of fi in this context the angle Theta is called the polar angle which is easy to remember because it starts at the pole and F is called the azimuthal angle and together these two angles represent spherical coordinates for the points on the unit sphere and if you wanted to you could also allow the radius to vary to represent arbitrary points in threedimensional space but here we're focusing on points on the unit sphere where the radius is equal to
+
+00:45:50
+one you can also think about Theta as representing latitude except that we go from 0 to 180° from the North Pole to the south pole rather than plus orus 90° from the equator and F represents longitude where we basically Define the prime meridian to be the Meridian that intersects the positive xaxis if you're like me by the way and you have trouble keeping straight which one is latitude and which one is longitude it may be helpful to remember that longitude corresponds to the interval that's longer 2 pi as opposed
+
+00:46:22
+to Pi anyway the point we obtain on the unit sphere from our Cubit State Vector s by thinking about coordinates in this way is the block sphere representation of the quantum State corresponding to SAI and when we think about the entire three-dimensional unit sphere in this way we obtain the block sphere geometrically it's just a unit sphere in ordinary three-dimensional space but in fact that is the geometry of Cubit States there's a perfect one toone correspondence here every pure state of
+
+00:46:56
+a cubit corresponds to a unique point on the sphere and every point on the sphere represents a unique Cubit State up to a global phase when we're working with Quantum State vectors this correspondence does go by other names by the way it's also sometimes called the poar a sphere for instance but in the context of quantum information it's generally referred to as the block sphere notice that we can now see the degeneracy in the angle fi pretty clearly because longitude has no meaning
+
+00:47:25
+at the North and South Poles but aside from the poles every point on the Earth has unique coordinates in terms of latitude and longitude and the same thing is happening here so that is how the block sphere Works in general now let's take a look at a few specific examples of Cubit States and where they lie on the Block sphere let's start with the standard basis these are the points we obtain when the polar angle Theta is zero for the zero State and Pi for the one state these are the two cases where the
+
+00:47:58
+asmuth angle fi is irrelevant as I've already discussed we can also Express the corresponding density matrices as linear combinations of poly matrices in either way we conclude that these two states correspond to the North Pole and to the South Pole of the block sphere the zero state is on the top and the one state is on the bottom next let's find the plus and minus states on the Block sphere again we can either think about Quantum State vectors or or density matrices for Quantum State vectors this
+
+00:48:31
+time the polar angle Theta has to be Pi / 2 in order to get the Zero Entry to be 1/ < tk2 the azimuthal angle F has to be zero for the plus State because the one entry is positive for the plus State and it has to be Pi or 180° for the minus State because that one is negative in that case so these two points lie on the equator of the block sphere the plus state is where the positive x-axis intersects the sphere and the minor state is on the opposite side where the negative x-axis intersects the
+
+00:49:04
+sphere equivalently we can also see from the polymatrix expressions for the corresponding density matrices that the Y and Z coordinates are both zero whereas the x coordinates are positive and negative 1 another example is the plus I minus I basis which is similar to the plus minus basis except that we also multiply the one entry by I the imaginary unit we saw the plus I State earlier in the lesson and the minus I state is defined in an analogous way the polar angle Theta is the same as it was for the plus and minus States pi/
+
+00:49:38
+2 and this time we need to choose the athal angle F so that we get I and negative I rather than 1 and negative 1 and Pi / 2 and 3 Pi / 2 are the right choices to make that happen once again we can also look at the density Matrix descriptions of these states and things are pretty similar to the previous two examples except that this time is the poly y Matrix in place of Z or X so on the Block sphere these two states are located where the y- AIS intersects the sphere and if we clean things up a bit we can see more clearly
+
+00:50:14
+how the Six States we just discussed relate to one another for just one more example or really a class of examples consider the Cubit State vectors that came up earlier and in Lesson Four where the Zero Entry is cosine of alpha for some real number Alpha and the one entry is the S of alpha we can by the way restrict our attention to values of alpha between zero and Pi because any other value of alpha will give us a vector that's equivalent up to a global phase to one where Alpha is in this range if we compute the density matrices
+
+00:50:49
+associated with these states expressed as linear combinations of poly matrices we get the expression that is shown here on the screen that computation isn't shown here but that is what you should get if you go through it and what we find is that these states form a so-called great circle that goes through the poles specifically starting from the North Pole when Alpha is zero going down the prime meridian and hitting the South Pole when Alpha is pi over 2 and then back to the North Pole on the opposite side of the sphere as
+
+00:51:18
+Alpha ranges from pi over 2 to Pi and that all makes sense because number one these are real vectors so the imaginary part is always zero and number two the angle Alpha effectively gets doubled on the Block sphere and once again that can be explained by the use of the double angle formulas we've seen that the block sphere provides a very nice geometric representation for the pure states of a cubit where each point on the sphere corresponds to a unique pure state of a cubit and vice versa when we refer to the block ball
+
+00:51:52
+we're talking about all of the points on the Block sphere as well as the points contained inside of it points on the interior of the block ball also correspond to Cubit States specifically states that are not pure States so in other words these are Cubit states that can be represented by density matrices but not by Cubit State vectors a fundamental aspect of the block ball and the way that the interior points represent impure States is that convex combinations of points inside of the block ball correspond to convex
+
+00:52:23
+combinations of density matrices intuitively speaking this means that the geometry continues to work perfectly even inside of the block ball let's take a look at a couple of examples beginning with the center point of the block ball which represents the completely mixed state the completely mixed state is obtained by averaging the zero and one states which is consistent with the fact that the center of the sphere is exactly halfway between the North Pole and the South Pole and in fact it's halfway
+
+00:52:54
+between any two antipodal points such as the plus and minus States and the plus I and minus I States antipodal points in the block sphere always correspond to orthogonal Pure States and what this reveals or reflects is that we can always write the completely mixed state as the average between any two orthogonal pure Cubit States another way to see this is to think about the poly Matrix representation of the completely mixed state to make this work we have to set the coefficients on all all three
+
+00:53:27
+non-identity poly matrices to be zero and so the corresponding Point inside of the block ball is right in the center at the origin and by the way thinking about poly Matrix representations of density matrices like this actually makes it pretty clear that convex combinations of block ball points correspond to convex combinations of density matrices if we take an average or a weighted average of density matrices and express everything in terms of linear combinations of poly matrices then of course we're just averaging the
+
+00:53:58
+corresponding points because everything is linear in those three coefficients for one more example let's consider the average of the zero State and the plus state which we saw earlier in the lesson we calculated the density Matrix representation which is shown on the screen and we have that the point is in the interior of the block ball halfway between the zero and plus States we also saw that we could express this density Matrix in a different way based on its spectral decomposition and again that is consistent with the
+
+00:54:31
+diagram and the previous examples and that concludes the discussion of the block sphere and block ball people often ask if there's a block sphere or block ball for systems having three or more classical States and the unfortunate answer is not really we can always think about the quantum states of a system in geometric terms similar to The Block ball and we'll get a convex body in a real Vector space but if we have three or more classical States it won't be spherical for instance if we have
+
+00:55:06
+exactly three classical States or a q trit for short we'll get a convex body in an eight-dimensional space but the extreme points of that body which correspond to the pure Quantum states of a CIT will only be four-dimensional if you can visualize taking a four-dimensional manifold in an eight-dimensional space and somehow shrink wrapping it to obtain a convex body and you find that to be a helpful way of thinking about cits then more power to you I guess it's interesting to think about but it's not a ball it's
+
+00:55:38
+more complicated than that in the final part of the lesson we'll briefly discuss how density matrices work for multiple systems density matrices can represent states of multiple systems and this works in a completely analogous way to Quantum State factors in particular just like we have in a simplified formulation of quantum information we can view multiple systems together as if they're single compound systems this time both the rows and Columns of density matrices that represent states of multiple systems are
+
+00:56:11
+placed in correspondence with the cartisian product of the classical State sets of the individual systems for example we can consider density Matrix representations of the Four Bell states which we obtain precisely as we did for other Quantum State vectors earlier in the lesson by multiplying State vectors to their conjugate transposes and the results are shown here on the screen in essence there's really nothing new at a conceptual level although we will see momentarily that there are some
+
+00:56:41
+new things that we can do with density matrices for multiple systems the Notions of Independence and correlations carry over from Quantum State vectors to density matrices and in particular we find that tensor products of dens dity matrices represent Independence between systems we use the same terminology that we did for Quantum State vectors for instance if we have a system X that's prepared in a state row and a system y That's independently prepared in a state Sigma then the state of the pair XY
+
+00:57:14
+together is given by the tensor product of row and sigma we call this a product State and this generalizes in a natural way to more than two systems density matrices that can't be expressed as product States represent correlations between systems and that part is similar to Quantum State vectors but as it turns out there are different types of correlations that can arise when we use density matrices even for just two systems in contrast there's really only one type of correlation we can have for Quantum State vectors and
+
+00:57:46
+that's entanglement to say this another way correlation and entanglement are synonymous for Quantum State vectors but that's not true for density matrices here things are more interesting for instance we can describe correlated classical states with density matrices here's an example of a density Matrix representing a classical random bit shared between Alice and Bob they always have the same classical State Zer or one and the probability is 1/2 for each of the possibilities this is not an entangled
+
+00:58:21
+State entanglement is non-classical but it is a correlated state another example is connected with the notion of an ensemble of quantum states which you can think of as a probability distribution over a finite set of quantum States in particular let's imagine that we have M density matrices row zero through row M minus one all representing possible states of a particular system along with a probability to draw each one if we wanted to we could compute the weighted average of these density matrices by taking a convex comp com of
+
+00:58:57
+them but that wouldn't actually tell us what the individual states were or what the probabilities were what we can do instead and it's quite useful to do this sometimes is to consider a density Matrix of the form shown here on the screen this is a state of two systems where the first system has one classical state for each of the Alternatives and we take the weighted average of M product states where the state of the first system is always classical and essentially labels which of the m States
+
+00:59:26
+we have for the second system if it's not clear exactly why we'd want to think about States like this that's okay it's just an example of a type of correlation where the first system is always classical and the second system can be in a Quantum State a third category of possibly correlated States is the set of so-called separable States in simple terms these are convex combinations of product States and they essentially represent present Quantum states where any correlations between
+
+00:59:59
+the systems are classical correlations one way to think about States like this is that we make a probabilistic selection for a number K and then independently prepare two systems in a Quantum state that can depend on this choice of K what's perhaps most interesting about states of this form is that this is actually how we Define entanglement in mathematical terms in particular entanglement is defined as a lack of separability so if you have a density Matrix and it's not possible to express it in a form
+
+01:00:31
+like this then by definition it's entangled I alluded to this back in Lesson Four and here it is in somewhat greater detail by the way it can be very difficult to figure out if a given density Matrix represents an entangled State even with the help of a computer mathematically and computationally speaking entanglement is actually pretty complicated I mentioned at the start of the lesson that there's a very important thing we can do with density manes and that is to describe the states of
+
+01:01:04
+isolated parts of systems even when they're correlated and possibly entangled with other systems the term reduce state is often used in this context and as a simple example we'll calculate the reduced States for the individual cubits that form an ebit to be precise let's suppose that Alice and Bob share an ebit ALICE holds a cubbit a Bob holds a cubit B and together these two cubits are in a five plus State and the question that we'll address is what is the state of Alice's Cubit a in
+
+01:01:38
+isolation of course we could ask the same question for Bob's Cubit but it's easy to answer that question once we know the answer to this one now it might be tempting to say that we can't describe the state of Alice's cubit in isolation because it's entangled with Bob's Cubit which might somehow forbid us from describing or even thinking about the state of a in isolation but this is false it's true that we can't describe the state of a with a Quantum State Vector because as we'll see it's not in
+
+01:02:08
+a pure state but every system has a state at any given moment that can be described by a density Matrix whether it's entangled with another system or not as a thought experiment just to help us to see what the answer to this question is let's suppose that Bob decides to take his Cubit and travel to the stars and he's never heard from again but imagine that somewhere along the way he decides to perform a standard basis measurement on his Cubit well we know how to calculate the probabilities for him to obtain the two
+
+01:02:42
+possible outcomes and we also know what the state of a will be for each possible outcome and those things are summarized in this table in particular with probability 1/2 a will be left in the zero State and with probability 1/2 a a will be left in the one state and so as was discussed earlier in the lesson this leaves a in the completely mix State and therefore that is the answer to our question now you might object and say that this is dependent on the fact that Bob decided to measure his Cubit and the
+
+01:03:18
+assumption that he does this is part of the story that led us to this answer but if Bob is light years away by the time that he measures nothing that he does could possibly have any influence on any experiment that Alice might decide to perform on her Cubit otherwise we'd have faster than light communication so Alice's Cubit is in the completely mixed state regardless of whether or not Bob measures I should make clear at this point that the notion of a reduced State and the way that they're defined doesn't
+
+01:03:48
+really have any dependence on relativity or the impossibility of faster than light communication this is just a way to explain it in hopefully intuitive terms in reality there's a mathematical definition which we'll see in a more General context in a few moments it's consistent with this answer and coincidentally with the impossibility of faster than light communication and there's also no other definition that could be consistent with Quantum information as we know it now let's consider reduced States in Greater
+
+01:04:20
+generality suppose that we have a pair of systems A and B not necessarily cubits that are together in a pure State represented by a Quantum State Vector s again we're going to focus on the reduce state of the system a and to do this it's going to be helpful to think about the classical states of the system B so let's let gamma be this set of classical states of b as we've discussed before back in lesson two of the series for instance there's a unique collection of vectors f b for each B and Gamma for which the
+
+01:04:54
+expression of s shown on on the screen is correct and in particular there's a simple formula for these vectors we simply multiply the vector s by the tensor product of the identity Matrix corresponding to the system a with bra B for whatever B we're interested in what we're doing here is basically setting ourselves up to calculate what would happen if we were to perform a standard basis measurement on B and again this was covered in lesson two of the series soose we did perform a standard
+
+01:05:27
+basis measurement on B each possible outcome would then appear with probability equal to the ukan norm squared of the corresponding Vector 5 b and conditioned on getting a particular outcome B we normalize the vector 5B to determine the resulting state of a following the same reasoning as in the ebit example from a few moments ago we obtain the expression shown on the screen for the reduced state of a as a density Matrix and by the way the norm squared in the denominator comes from multiplying the normalized vector to its
+
+01:06:02
+conjugate transpose so we pick up the ukian norm twice in the denominator the ukian Norms squared cancel and we're left with a pretty simple expression and in fact if we substitute in our formula for 5B which works for every B we get a formula for the reduced state of the system a in terms of the density Matrix description of the pure state that we started with namely csai brasai so this is our formula for the reduced state of the system a supposing that the compound system AB started in the pure State sigh but we can also use
+
+01:06:41
+the formula more generally in particular let's suppose that the state of ab is given by some density Matrix row which could take the form K SI brai for some Quantum State Vector s but not necessarily it follows basically by linearity that the reduced state of a is determined by the same formula as we had for Pure States except that we substitute whatever density Matrix row we wish as a Shand notation it's pretty common that we denote this reduced state by whatever name we're using for the
+
+01:07:14
+density Matrix Row in this case but we put a subscript indicating the system that we're focusing on so row with a subscript a means the reduced state of a when the compound system is in the the state row superscripts are also sometimes used instead of subscripts it's basically just a personal preference and it means the same thing we've been focusing on the system a just for Simplicity but we can also obtain the reduced state of the system B analogously but where the formula is adapted in the natural
+
+01:07:50
+way everything is symmetric here we're essentially just exchanging the roles of A and B and in particular the sum ranges over the classical states of a this time rather than b and in the formula on the screen we're assuming the classical State set of a is called Sigma all of this generalizes in a pretty straightforward way to three or more systems for example if we have three systems a b and c that are collectively in the state described by the density Matrix row then we can obtain the reduced state of the pair a together by
+
+01:08:25
+the formula that shown here as well as the state of the third system alone which is the second formula and you can consider other combinations and generalize this to however many systems you wish the sums are always taken over the classical State sets of the systems that are being ignored and the pattern is always the same with the density Matrix we started with being sandwiched between the tensor product of the identity Matrix and bras and cats corresponding to standard basis states to conclude the lesson I'll say
+
+01:08:55
+just a a little bit more about the definitions we've just covered the operation on density matrices that describes redu States has a name and it's called the partial trace for two systems A and B the partial Trace over B and the partial Trace over a are as defined here on the screen these are exactly the same formulas that we saw a few moments ago and now we're just thinking about them as functions of row and giving them names the names look like the trace except that there's a subscript which
+
+01:09:28
+tells us which system is being removed or in other words which system is the one whose classical State set we're summing over and is getting sandwiched between a bra and a cat when we take the partial trace of our B for instance which is described by the first Formula we sometimes say that b is traced out and likewise for a intuitively speaking tracing out a system just means that we throw it away or simply ignore it that's one way to define the partial trace and another equivalent way is to
+
+01:10:02
+say that these mappings are the unique linear mappings that satisfy the formulas shown here on the right specifically if we have a tensor product of two matrices M and N let's say and we perform the partial Trace over the first system then what we get is the trace of the first Matrix M times the second Matrix and the condition is symmetric when we Trace over the second system not every Matrix that we would compute the partial trace of is a tensor product like this but every Matrix can be expressed as a linear combination of
+
+01:10:32
+tensor products and we can determine the partial Trace from these conditions together with the fact that these are linear functions and this is why it's called the partial trace this equivalent definition can be quite helpful because we can often use it rather than the original formula here's an example that illustrates this suppose that we have a pair of cubits a in the state whose density Matrix is shown here on the screen this happens to be an example of a correlated state where a is either in
+
+01:11:05
+the zero State or the one state each with probability 1/2 so we can think about a as being classical if a is in the zero State then so is B and if a is in the one state then B is in the plus state if we want to know what the reduced state of a is we Trace out B and if we use the second formula from the equivalent definition together with linearity then we can compute this pretty easily in particular the trace of k0 bra 0 is one as is the trace of K plus bra plus so those tensor factors disappear
+
+01:11:39
+and we're left with the completely mixed state along similar lines we can compute the reduce state of B by tracing out a this time it's the first tensor factor that we're performing the trace on so we're using the first Formula from the equivalent definition and we're left with 1/2 * cat 0 bra 0 plus 1/2 * cat plus bra Plus or in other words the same density Matrix that came up a few times previously you would get exactly the same results if you Ed the formulas from the first definition but this is a much
+
+01:12:12
+easier way to do it this all generalizes to three or more systems but for this video I'm going to stop here and leave this for you to consider on your own and that is it for this lesson which is introduced density matrices and describe the basics of how they work we also discussed the block sphere as well as different types of correlations and the notion of a reduced state of a system I hope you'll join me for the next lesson which is about channels which are linear mappings from density
+
+01:12:43
+matrices to density matrices that describe operations on systems goodbye until then
+

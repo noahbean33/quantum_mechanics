@@ -1,0 +1,386 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\titleformat{\section}{\large\bfseries}{Lecture 2.\thesection}{1em}{}
+
+\title{\textbf{Lecture 2: Multiple Systems} \\ \large Understanding Quantum Information \& Computation}
+\author{Based on the lectures by John Watrous (IBM Quantum)}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------
+\section{Overview}
+%----------------------------------------------------------------------
+
+Having described quantum information for a single system in isolation (Lecture~1), we now expand our view to \emph{multiple} systems.  A guiding principle provides tremendous traction:
+
+\begin{center}
+\emph{Two or more systems can always be grouped into a single compound system, which must then obey the single-system rules from Lecture~1.}
+\end{center}
+
+The key mathematical tool that emerges is the \textbf{tensor product}.  As before, we develop classical information first and then pass to quantum information, exploiting the close mathematical parallels between the two settings.
+
+%----------------------------------------------------------------------
+\section{Classical States of Multiple Systems}
+%----------------------------------------------------------------------
+
+\subsection{Two Systems}
+
+Let $X$ have classical state set $\Sigma$ and $Y$ have classical state set $\Gamma$.  We view the pair $(X,Y)$ as a single compound system.
+
+\begin{definition}[Cartesian product]
+The classical state set of the compound system $(X,Y)$ is the \textbf{Cartesian product}
+\[
+    \Sigma\times\Gamma = \bigl\{(a,b) : a\in\Sigma,\; b\in\Gamma\bigr\}.
+\]
+\end{definition}
+
+\begin{example}
+$\Sigma=\{0,1\}$, $\Gamma=\{\clubsuit,\diamondsuit,\heartsuit,\spadesuit\}$.  Then $\Sigma\times\Gamma$ has $2\times 4=8$ elements:
+\[
+    (0,\clubsuit),\;(0,\diamondsuit),\;(0,\heartsuit),\;(0,\spadesuit),\;
+    (1,\clubsuit),\;(1,\diamondsuit),\;(1,\heartsuit),\;(1,\spadesuit).
+\]
+\end{example}
+
+\subsection{More Than Two Systems}
+
+For systems $X_1,\dots,X_n$ with classical state sets $\Sigma_1,\dots,\Sigma_n$, the compound system has classical state set
+\[
+    \Sigma_1\times\cdots\times\Sigma_n
+    = \bigl\{(a_1,\dots,a_n) : a_k\in\Sigma_k\;\forall k\bigr\}.
+\]
+Elements are often written as \emph{strings}: $(a_1,\dots,a_n)\mapsto a_1\cdots a_n$.  For example, three bits yield the eight strings $000,001,\dots,111$.
+
+\paragraph{Lexicographic ordering.}
+Cartesian products are ordered lexicographically (dictionary order), with the leftmost position having highest significance.  For strings of bits this coincides with numerical ordering of their binary encodings.
+
+%----------------------------------------------------------------------
+\section{Probabilistic States of Multiple Systems}
+%----------------------------------------------------------------------
+
+A probabilistic state of the compound system $(X,Y)$ assigns a probability to each $(a,b)\in\Sigma\times\Gamma$.
+
+\begin{example}[Correlated bits]
+Two bits $X,Y$ with
+\[
+    \Pr(00)=\tfrac{1}{2},\quad \Pr(01)=0,\quad \Pr(10)=0,\quad \Pr(11)=\tfrac{1}{2}.
+\]
+The bits always agree; they are \emph{correlated}.
+\end{example}
+
+\subsection{Independence}
+
+\begin{definition}
+Systems $X$ and $Y$ in a joint probabilistic state are \textbf{independent} if
+\[
+    \Pr(X=a,\,Y=b) = \Pr(X=a)\;\Pr(Y=b)
+    \qquad\forall\,a\in\Sigma,\;b\in\Gamma.
+\]
+\textbf{Correlation} is the absence of independence.
+\end{definition}
+
+In vector terms, $(X,Y)$ are independent if and only if the probability vector of $XY$ can be written $\ket{\phi}\otimes\ket{\psi}$ for probability vectors $\ket{\phi}$ of $X$ and $\ket{\psi}$ of $Y$.
+
+\begin{example}
+The state $\bigl(\frac{1}{6},\frac{1}{12},\frac{1}{3},\frac{1}{6},\frac{1}{6},\frac{1}{12}\bigr)^T$ of two bits is a product $\ket{\phi}\otimes\ket{\psi}$ and hence independent.  The correlated state $(1/2,0,0,1/2)^T$ is \emph{not} a product, hence the bits are correlated.  (The zero-product property of $\mathbb{R}$ provides the contradiction.)
+\end{example}
+
+%----------------------------------------------------------------------
+\section{Tensor Products of Vectors}
+%----------------------------------------------------------------------
+
+\begin{definition}[Tensor product of column vectors]
+Let
+\[
+    \ket{\phi}=\sum_{a\in\Sigma}\alpha_a\ket{a},\qquad
+    \ket{\psi}=\sum_{b\in\Gamma}\beta_b\ket{b}.
+\]
+The \textbf{tensor product} is
+\[
+    \ket{\phi}\otimes\ket{\psi}
+    = \sum_{(a,b)\in\Sigma\times\Gamma}\alpha_a\,\beta_b\;\ket{ab}.
+\]
+\end{definition}
+
+\paragraph{Notation.}  Common shorthand:
+\[
+    \ket{\phi}\ket{\psi} \;\equiv\; \ket{\phi}\otimes\ket{\psi}
+    \;\equiv\; \ket{\phi,\psi}.
+\]
+
+\paragraph{Explicit column form.}  If $\ket{\phi}=(\alpha_1,\dots,\alpha_m)^T$ and $\ket{\psi}=(\beta_1,\dots,\beta_n)^T$, then
+\[
+    \ket{\phi}\otimes\ket{\psi}
+    = \begin{pmatrix}\alpha_1\ket{\psi}\\\alpha_2\ket{\psi}\\\vdots\\\alpha_m\ket{\psi}\end{pmatrix}
+    = \begin{pmatrix}\alpha_1\beta_1\\\vdots\\\alpha_1\beta_n\\\alpha_2\beta_1\\\vdots\\\alpha_m\beta_n\end{pmatrix}.
+\]
+
+\paragraph{Standard basis vectors.}
+\[
+    \ket{a}\otimes\ket{b} = \ket{a}\ket{b} = \ket{a,b} = \ket{ab}.
+\]
+
+\subsection{Bilinearity}
+
+The tensor product is \textbf{bilinear}:
+\begin{align}
+    (\ket{\phi_1}+\ket{\phi_2})\otimes\ket{\psi}
+        &= \ket{\phi_1}\otimes\ket{\psi}+\ket{\phi_2}\otimes\ket{\psi}, \\
+    (\alpha\ket{\phi})\otimes\ket{\psi}
+        &= \alpha\bigl(\ket{\phi}\otimes\ket{\psi}\bigr),
+\end{align}
+and likewise in the second argument.  Scalars ``float freely'':
+\[
+    (\alpha\ket{\phi})\otimes\ket{\psi}
+    = \ket{\phi}\otimes(\alpha\ket{\psi})
+    = \alpha\bigl(\ket{\phi}\otimes\ket{\psi}\bigr).
+\]
+
+The tensor product of three or more vectors is defined analogously and satisfies \textbf{multilinearity}.
+
+%----------------------------------------------------------------------
+\section{Measurements of Multiple Classical Systems}
+%----------------------------------------------------------------------
+
+\subsection{Measuring All Systems}
+
+Measuring the entire compound system $(X,Y)$ in a probabilistic state yields an outcome $(a,b)$ with the corresponding probability.
+
+\subsection{Measuring One System}
+
+Suppose $(X,Y)$ is in a joint probabilistic state.  If only $X$ is measured:
+\begin{enumerate}
+    \item \textbf{Outcome probability:}
+    \[
+        \Pr(X=a) = \sum_{b\in\Gamma}\Pr(X=a,Y=b).
+    \]
+    \item \textbf{Conditional state of $Y$:}
+    \[
+        \Pr(Y=b\mid X=a) = \frac{\Pr(X=a,Y=b)}{\Pr(X=a)}.
+    \]
+\end{enumerate}
+
+\paragraph{Dirac-notation recipe.}  Write the state as
+\[
+    \ket{\pi} = \sum_{a\in\Sigma}\ket{a}\otimes\ket{\phi_a},
+    \qquad\text{where}\quad
+    \ket{\phi_a}=\sum_{b\in\Gamma}p_{ab}\ket{b}.
+\]
+Then $\Pr(X=a)=\sum_b p_{ab}$ (sum of entries of $\ket{\phi_a}$), and the conditional state of $Y$ given outcome $a$ is $\ket{\phi_a}$ normalised to a probability vector.
+
+%----------------------------------------------------------------------
+\section{Operations on Multiple Classical Systems}
+%----------------------------------------------------------------------
+
+Operations on compound systems are represented by stochastic matrices whose rows and columns are indexed by $\Sigma\times\Gamma$.
+
+\begin{example}[Controlled-NOT]
+On two bits $(X,Y)$: if $X=1$, flip $Y$; otherwise do nothing.  Action on standard basis states:
+\[
+    00\to 00,\quad 01\to 01,\quad 10\to 11,\quad 11\to 10.
+\]
+$X$ is the \emph{control bit}, $Y$ is the \emph{target bit}.
+\end{example}
+
+\subsection{Independent Operations and Tensor Products of Matrices}
+
+\begin{definition}[Tensor product of matrices]
+If $M$ has entries $\alpha_{a,b}$ ($a,b\in\Sigma$) and $N$ has entries $\beta_{c,d}$ ($c,d\in\Gamma$), then $M\otimes N$ is the matrix with entries
+\[
+    (M\otimes N)_{(a,c),(b,d)} = \alpha_{a,b}\;\beta_{c,d}.
+\]
+\end{definition}
+
+Equivalently, $M\otimes N$ is the unique matrix satisfying
+\[
+    (M\otimes N)\bigl(\ket{\phi}\otimes\ket{\psi}\bigr)
+    = (M\ket{\phi})\otimes(N\ket{\psi})
+    \qquad\forall\;\ket{\phi},\ket{\psi}.
+\]
+
+\paragraph{Explicit block form.}  For $2\times 2$ matrices:
+\[
+    \begin{pmatrix}\alpha_{11}&\alpha_{12}\\\alpha_{21}&\alpha_{22}\end{pmatrix}
+    \otimes N
+    = \begin{pmatrix}\alpha_{11}N&\alpha_{12}N\\\alpha_{21}N&\alpha_{22}N\end{pmatrix}.
+\]
+
+\paragraph{Multiplicativity.}
+\[
+    (M_1\otimes N_1)(M_2\otimes N_2) = (M_1 M_2)\otimes(N_1 N_2).
+\]
+
+\paragraph{Performing an operation on one system only.}
+If $M$ acts on $X$ and nothing is done to $Y$, the combined operation is $M\otimes\mathbb{I}_Y$.
+
+%----------------------------------------------------------------------
+\section{Quantum States of Multiple Systems}
+%----------------------------------------------------------------------
+
+Quantum states of a compound system are column vectors with complex entries, Euclidean norm~$1$, indexed by $\Sigma\times\Gamma$.
+
+\begin{example}
+If $X$ and $Y$ are qubits, valid quantum states include
+\[
+    \ket{00},\quad \ket{01},\quad \frac{1}{\sqrt{2}}(\ket{00}+\ket{11}),\quad\text{etc.}
+\]
+Notation options:
+\[
+    \ket{0}\ket{0} = \ket{0}\otimes\ket{0} = \ket{0,0} = \ket{00}.
+\]
+\end{example}
+
+\subsection{Product States and Entanglement}
+
+\begin{definition}
+A quantum state $\ket{\psi}$ of $(X,Y)$ is a \textbf{product state} if $\ket{\psi}=\ket{\phi}\otimes\ket{\chi}$ for some state $\ket{\phi}$ of $X$ and $\ket{\chi}$ of $Y$.  Otherwise $\ket{\psi}$ is \textbf{entangled}.
+\end{definition}
+
+Product states represent independence; entanglement represents a uniquely quantum form of correlation.
+
+\begin{example}
+The state $\frac{1}{\sqrt{2}}(\ket{00}+\ket{11})$ is \emph{not} a product state.  Proof: suppose $\ket{\psi}=\ket{\phi}\otimes\ket{\chi}$.  The amplitude of $\ket{01}$ is $0$, so $\phi_0\chi_1=0$, implying $\phi_0=0$ or $\chi_1=0$.  But the amplitudes of $\ket{00}$ and $\ket{11}$ are both $1/\sqrt{2}\neq 0$, contradicting either possibility.
+\end{example}
+
+\subsection{Bell States}
+
+The four \textbf{Bell states} form an orthonormal basis for two-qubit state space:
+\begin{align}
+    \ket{\Phi^+} &= \tfrac{1}{\sqrt{2}}\bigl(\ket{00}+\ket{11}\bigr), &
+    \ket{\Phi^-} &= \tfrac{1}{\sqrt{2}}\bigl(\ket{00}-\ket{11}\bigr), \\
+    \ket{\Psi^+} &= \tfrac{1}{\sqrt{2}}\bigl(\ket{01}+\ket{10}\bigr), &
+    \ket{\Psi^-} &= \tfrac{1}{\sqrt{2}}\bigl(\ket{01}-\ket{10}\bigr).
+\end{align}
+All four are maximally entangled.  $\ket{\Phi^+}$ is the archetypal entangled state and represents \emph{one e-bit} of entanglement.
+
+\begin{example}[Multi-qubit entangled states]
+\begin{itemize}
+    \item \textbf{GHZ state} (3 qubits): $\frac{1}{\sqrt{2}}(\ket{000}+\ket{111})$.
+    \item \textbf{W state} (3 qubits): $\frac{1}{\sqrt{3}}(\ket{001}+\ket{010}+\ket{100})$.
+\end{itemize}
+Neither is a product state.
+\end{example}
+
+%----------------------------------------------------------------------
+\section{Measurements of Multiple Quantum Systems}
+%----------------------------------------------------------------------
+
+\subsection{Measuring All Systems}
+
+For a state $\ket{\psi}=\sum_{(a_1,\dots,a_n)}\alpha_{a_1\cdots a_n}\ket{a_1\cdots a_n}$, measuring every system yields outcome $(a_1,\dots,a_n)$ with probability $|\alpha_{a_1\cdots a_n}|^2$.
+
+\subsection{Measuring One System}
+
+Suppose $(X,Y)$ is in state $\ket{\psi}$.  Write
+\[
+    \ket{\psi} = \sum_{a\in\Sigma}\ket{a}\otimes\ket{\phi_a},
+    \qquad \ket{\phi_a}=\sum_{b\in\Gamma}\alpha_{ab}\ket{b}.
+\]
+If only $X$ is measured:
+\begin{enumerate}
+    \item \textbf{Probability of outcome $a$:} $\;\Pr(a) = \|\ket{\phi_a}\|^2 = \sum_b |\alpha_{ab}|^2$.
+    \item \textbf{Post-measurement state of $XY$:} $\;\displaystyle\ket{a}\otimes\frac{\ket{\phi_a}}{\|\ket{\phi_a}\|}$.
+\end{enumerate}
+
+\begin{example}
+Let $\ket{\psi}=\frac{1}{2}\ket{00}+\frac{\sqrt{3}}{2}\ket{01}+\frac{1}{2}\ket{10}$ (two qubits).  
+Write $\ket{\psi}=\ket{0}\otimes\bigl(\frac{1}{2}\ket{0}+\frac{\sqrt{3}}{2}\ket{1}\bigr)+\ket{1}\otimes\frac{1}{2}\ket{0}$.
+
+\begin{itemize}
+    \item $\Pr(X=0)=\frac{1}{4}+\frac{3}{4}=1$ --- \emph{wait}, let us recalculate: actually $\Pr(X=0)=|1/2|^2+|\sqrt{3}/2|^2 = 3/4$ and $\Pr(X=1)=|1/2|^2=1/4$.
+    \item Given $X=0$: state becomes $\ket{0}\otimes\frac{1}{\sqrt{3}}\bigl(\ket{0}+\sqrt{3}\ket{1}\bigr)$.
+    \item Given $X=1$: state becomes $\ket{1}\otimes\ket{0}$.
+\end{itemize}
+\end{example}
+
+%----------------------------------------------------------------------
+\section{Unitary Operations on Multiple Systems}
+%----------------------------------------------------------------------
+
+Unitary operations on compound systems are unitary matrices indexed by $\Sigma\times\Gamma$.
+
+\subsection{Independent Operations}
+
+If $U$ acts on $X$ and $V$ acts on $Y$ independently, the combined operation is $U\otimes V$.
+
+\begin{example}
+Hadamard on $X$, identity on $Y$: $H\otimes\mathbb{I}$.  Identity on $X$, Hadamard on $Y$: $\mathbb{I}\otimes H$.  These are \emph{different} $4\times 4$ matrices.
+\end{example}
+
+\subsection{The SWAP Operation}
+
+For two systems with the same classical state set $\Sigma$:
+\[
+    \mathrm{SWAP}\ket{a}\ket{b} = \ket{b}\ket{a},
+    \qquad
+    \mathrm{SWAP} = \sum_{a,b\in\Sigma}\ket{b,a}\!\bra{a,b}.
+\]
+For two qubits:
+\[
+    \mathrm{SWAP} = \begin{pmatrix}1&0&0&0\\0&0&1&0\\0&1&0&0\\0&0&0&1\end{pmatrix}.
+\]
+The SWAP leaves $\ket{\Phi^+}$, $\ket{\Phi^-}$, $\ket{\Psi^+}$ invariant but maps $\ket{\Psi^-}\mapsto -\ket{\Psi^-}$.
+
+\subsection{Controlled Operations}
+
+\begin{definition}
+Let $X$ be a qubit (control) and $U$ a unitary on system $Y$ (target).  The \textbf{controlled-$U$} operation is
+\[
+    C_U = \ket{0}\!\bra{0}\otimes\mathbb{I}_Y + \ket{1}\!\bra{1}\otimes U
+    = \begin{pmatrix}\mathbb{I}&0\\0&U\end{pmatrix}.
+\]
+If $X=0$, nothing happens to $Y$; if $X=1$, $U$ is applied to $Y$.
+\end{definition}
+
+\begin{example}[Controlled-NOT (CNOT)]
+$U=X$ (Pauli bit-flip).  Matrix for control = first qubit, target = second qubit:
+\[
+    \mathrm{CNOT} = \begin{pmatrix}1&0&0&0\\0&1&0&0\\0&0&0&1\\0&0&1&0\end{pmatrix}.
+\]
+\end{example}
+
+\begin{example}[Controlled-$Z$ (CZ)]
+$U=Z$.  The CZ gate is symmetric with respect to swapping control and target:
+\[
+    \mathrm{CZ} = \operatorname{diag}(1,1,1,-1).
+\]
+\end{example}
+
+\begin{example}[Toffoli gate]
+A controlled-controlled-NOT on three qubits: flip the third qubit if and only if the first two are both~$1$.
+\end{example}
+
+\begin{example}[Fredkin gate]
+A controlled-SWAP on three qubits: swap the second and third qubits if and only if the first qubit is~$1$.
+\end{example}
+
+%----------------------------------------------------------------------
+\section{Summary}
+%----------------------------------------------------------------------
+
+\begin{itemize}
+    \item Multiple systems are described by viewing them as a single compound system whose classical state set is the Cartesian product of the individual sets.
+    \item The \textbf{tensor product} is the fundamental operation connecting the individual system descriptions to the compound system description---for states, measurements, and operations alike.
+    \item \textbf{Product states} (tensor products of individual states) represent independence; states that are \emph{not} product states are \textbf{entangled}.
+    \item The \textbf{Bell states} are the canonical examples of maximally entangled two-qubit states.
+    \item Controlled unitary operations (CNOT, CZ, Toffoli, Fredkin) are fundamental building blocks for quantum circuits.
+\end{itemize}
+
+\end{document}

@@ -1,0 +1,313 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{mathtools}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Quantum Spin Lecture Notes}
+\lhead{Lecture 6: $H$ Is Self-Adjoint \& Consequences}
+\cfoot{\thepage}
+
+% --- Theorem Environments ---
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+
+\title{\textbf{Quantum Spin (6): $H$ Is Self-Adjoint \\ \& The Consequences Thereof}}
+\author{Lecture Notes on Quantum Spin}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{The Adjoint of a Matrix}
+% ============================================================
+
+\begin{definition}[Adjoint (Conjugate Transpose)]
+    If $A$ is an $m \times n$ matrix, its \textbf{adjoint} (or \textbf{conjugate transpose}) $A^\dagger$ is the $n \times m$ matrix with entries:
+    \[
+        (A^\dagger)_{ij} = \overline{A_{ji}}.
+    \]
+    Equivalently, $A^\dagger$ is obtained by transposing $A$ and complex conjugating every entry.
+\end{definition}
+
+\begin{example}
+    For a $2\times 2$ matrix:
+    \[
+        A = \begin{pmatrix}a & b \\ c & d\end{pmatrix} \implies A^\dagger = \begin{pmatrix}\bar{a} & \bar{c} \\ \bar{b} & \bar{d}\end{pmatrix}.
+    \]
+\end{example}
+
+\begin{example}[Adjoint of a Ket]
+    For a column vector (ket):
+    \[
+        \ket{\psi} = \begin{pmatrix}\alpha\\\beta\end{pmatrix} \implies \ket{\psi}^\dagger = \bra{\psi} = \begin{pmatrix}\bar{\alpha} & \bar{\beta}\end{pmatrix}.
+    \]
+    The adjoint of a ket is its corresponding bra (dual vector).
+\end{example}
+
+\subsection{Key Property: Adjoint of a Product}
+
+\begin{theorem}
+    For matrices $A$ ($\ell \times m$) and $B$ ($m \times n$):
+    \[
+        (AB)^\dagger = B^\dagger A^\dagger.
+    \]
+    The order of multiplication reverses under the adjoint.
+\end{theorem}
+
+\begin{proof}
+    The $(k,i)$-entry of $B^\dagger A^\dagger$ is:
+    \[
+        (B^\dagger A^\dagger)_{ki} = \sum_{j=1}^{m}(B^\dagger)_{kj}(A^\dagger)_{ji} = \sum_{j=1}^{m}\overline{B_{jk}}\,\overline{A_{ij}} = \overline{\sum_{j=1}^{m}A_{ij}B_{jk}} = \overline{(AB)_{ik}} = \bigl((AB)^\dagger\bigr)_{ki}. \qedhere
+    \]
+\end{proof}
+
+% ============================================================
+\section{The Pauli Matrices Are Self-Adjoint}
+% ============================================================
+
+\begin{definition}[Self-Adjoint (Hermitian)]
+    A matrix $A$ is \textbf{self-adjoint} (or \textbf{Hermitian}) if $A^\dagger = A$.
+\end{definition}
+
+\begin{proposition}
+    Each Pauli matrix is self-adjoint: $\sigma_x^\dagger = \sigma_x$, $\sigma_y^\dagger = \sigma_y$, $\sigma_z^\dagger = \sigma_z$.
+\end{proposition}
+
+\begin{proof}
+    Direct computation. For $\sigma_y$: transposing swaps the off-diagonal entries $(-i \leftrightarrow i)$, and conjugating negates $i$ back, restoring the original matrix. The others are even simpler since their entries are real.
+\end{proof}
+
+% ============================================================
+\section{The Hamiltonian $H$ Is Self-Adjoint}
+% ============================================================
+
+Recall:
+\[
+    H = \frac{ge\hbar}{4m}\bigl(B_x\sigma_x + B_y\sigma_y + B_z\sigma_z\bigr) = \frac{ge\hbar}{4m}\,\vec{B}\cdot\vec{\sigma}.
+\]
+
+Since $B_x, B_y, B_z \in \mathbb{R}$ and $g, e, \hbar, m \in \mathbb{R}$, and each $\sigma_a$ is self-adjoint:
+\[
+    H^\dagger = \frac{ge\hbar}{4m}\bigl(B_x\sigma_x^\dagger + B_y\sigma_y^\dagger + B_z\sigma_z^\dagger\bigr) = \frac{ge\hbar}{4m}\bigl(B_x\sigma_x + B_y\sigma_y + B_z\sigma_z\bigr) = H.
+\]
+
+\begin{theorem}
+    The Hamiltonian $H$ for a spin-$\frac{1}{2}$ particle in an external magnetic field is self-adjoint: $H^\dagger = H$.
+\end{theorem}
+
+% ============================================================
+\section{Consequence 1: Conservation of Probability}
+% ============================================================
+
+\subsection{Statement}
+
+\begin{theorem}[Conservation of Probability]
+    If $\ket{\psi(t)}$ evolves according to the Schr\"odinger equation with a self-adjoint Hamiltonian $H$, then $\braket{\psi(t)}{\psi(t)}$ is constant in time.
+\end{theorem}
+
+In particular, if $\braket{\psi(t_0)}{\psi(t_0)} = 1$ at some initial time $t_0$, then $\braket{\psi(t)}{\psi(t)} = 1$ for all $t$. Probabilities continue to sum to $1$ forever.
+
+\subsection{Proof}
+
+Compute the time derivative using the product rule:
+\[
+    \frac{d}{dt}\braket{\psi(t)}{\psi(t)} = \left(\frac{d}{dt}\bra{\psi(t)}\right)\ket{\psi(t)} + \bra{\psi(t)}\left(\frac{d}{dt}\ket{\psi(t)}\right).
+\]
+
+From the Schr\"odinger equation:
+\[
+    \frac{d}{dt}\ket{\psi} = -\frac{i}{\hbar}H\ket{\psi}.
+\]
+
+Taking the adjoint of both sides yields the \textbf{dual Schr\"odinger equation}:
+\[
+    \frac{d}{dt}\bra{\psi} = +\frac{i}{\hbar}\bra{\psi}H^\dagger.
+\]
+
+Substituting:
+\begin{align}
+    \frac{d}{dt}\braket{\psi}{\psi} &= \frac{i}{\hbar}\bra{\psi}H^\dagger\ket{\psi} - \frac{i}{\hbar}\bra{\psi}H\ket{\psi} \\
+    &= \frac{i}{\hbar}\bra{\psi}\bigl(H^\dagger - H\bigr)\ket{\psi}.
+\end{align}
+
+Since $H^\dagger = H$:
+\[
+    \frac{d}{dt}\braket{\psi}{\psi} = \frac{i}{\hbar}\bra{\psi}\cdot\mathbf{0}\cdot\ket{\psi} = 0. \qed
+\]
+
+\begin{remark}
+    The proof actually shows something stronger: $\braket{\psi(t)}{\psi(t)}$ is constant for \emph{any} initial value, not just $1$. Even an ``unphysical'' state with $\braket{\psi}{\psi} = 5$ would retain that value under Schr\"odinger evolution.
+\end{remark}
+
+% ============================================================
+\section{Consequence 2: Uniqueness of Time Evolution}
+% ============================================================
+
+\subsection{The Question}
+
+If two solutions $\ket{\psi_1(t)}$ and $\ket{\psi_2(t)}$ of the Schr\"odinger equation agree at some time $t_0$:
+\[
+    \ket{\psi_1(t_0)} = \ket{\psi_2(t_0)},
+\]
+must they agree at \emph{all} times?
+
+\subsection{Why Na\"ive Taylor Expansion Fails}
+
+One might try: expand both solutions to first order, note they agree at $t_0$, so they agree at $t_0 + \delta t$, then ``inductively'' extend. However, this argument is \textbf{invalid} --- you cannot extend an inductive argument through an uncountable infinity of infinitesimal steps.
+
+\begin{example}[A Counterexample to Na\"ive Reasoning]
+    The ODE $\dot{y} = y^{2/3}$ with $y(0) = 0$ has infinitely many solutions:
+    \[
+        y(t) = \begin{cases}0 & t \leq t^*, \\ \frac{1}{27}(t - t^*)^3 & t > t^*,\end{cases}
+    \]
+    for any $t^* > 0$. All agree at $t = 0$ (and to all Taylor orders), yet diverge later. This ODE violates the \textbf{Lipschitz condition}, which guarantees uniqueness.
+\end{example}
+
+\subsection{The Correct Proof}
+
+\begin{theorem}[Uniqueness]
+    If $\ket{\psi_1(t_0)} = \ket{\psi_2(t_0)}$ and both solve the Schr\"odinger equation, then $\ket{\psi_1(t)} = \ket{\psi_2(t)}$ for all $t$.
+\end{theorem}
+
+\begin{proof}
+    Define $\ket{\tilde{\psi}(t)} \coloneqq \ket{\psi_1(t)} - \ket{\psi_2(t)}$.
+
+    \textbf{Step 1:} $\ket{\tilde{\psi}(t)}$ solves the Schr\"odinger equation (by linearity).
+
+    \textbf{Step 2:} At time $t_0$: $\ket{\tilde{\psi}(t_0)} = \ket{0}$, so $\braket{\tilde{\psi}(t_0)}{\tilde{\psi}(t_0)} = 0$.
+
+    \textbf{Step 3:} By conservation of the inner product (Consequence 1): $\braket{\tilde{\psi}(t)}{\tilde{\psi}(t)} = 0$ for all $t$.
+
+    \textbf{Step 4:} Since $\braket{\tilde{\psi}}{\tilde{\psi}} = |\tilde{\alpha}|^2 + |\tilde{\beta}|^2 = 0$ implies $\tilde{\alpha} = \tilde{\beta} = 0$, we conclude $\ket{\tilde{\psi}(t)} = \ket{0}$ for all $t$.
+
+    Therefore $\ket{\psi_1(t)} = \ket{\psi_2(t)}$ for all $t$. \qedhere
+\end{proof}
+
+\begin{remark}
+    The proof crucially uses conservation of the inner product, which itself relies on $H$ being self-adjoint. Even without self-adjointness, uniqueness still holds (by more general ODE theory), but the proof is much harder.
+\end{remark}
+
+% ============================================================
+\section{Consequence 3: Eigenvalues of $H$ Are Real}
+% ============================================================
+
+\subsection{Statement and Proof}
+
+\begin{theorem}
+    If $H$ is self-adjoint, then every eigenvalue of $H$ is a real number.
+\end{theorem}
+
+\begin{proof}
+    Let $H\ket{\psi} = E\ket{\psi}$ with $\ket{\psi} \neq \ket{0}$.
+
+    Taking the adjoint: $\bra{\psi}H^\dagger = \bar{E}\bra{\psi}$, i.e., $\bra{\psi}H = \bar{E}\bra{\psi}$ (since $H^\dagger = H$).
+
+    Now compute $\bra{\psi}H\ket{\psi}$ in two ways:
+    \begin{align}
+        \bra{\psi}\bigl(H\ket{\psi}\bigr) &= E\braket{\psi}{\psi}, \\
+        \bigl(\bra{\psi}H\bigr)\ket{\psi} &= \bar{E}\braket{\psi}{\psi}.
+    \end{align}
+
+    Since $\braket{\psi}{\psi} > 0$ (as $\ket{\psi} \neq \ket{0}$), divide both sides:
+    \[
+        E = \bar{E} \implies E \in \mathbb{R}. \qedhere
+    \]
+\end{proof}
+
+\subsection{Physical Interpretation: Energy Is Real}
+
+In quantum mechanics, the eigenvalues of $H$ are the \textbf{possible energies} a state can have:
+\begin{itemize}
+    \item If $H\ket{\psi} = E\ket{\psi}$, then $\ket{\psi}$ is a state with \textbf{definite energy} $E$.
+    \item A superposition $\ket{\psi} = \alpha\ket{\psi_1} + \beta\ket{\psi_2}$ (where $H\ket{\psi_k} = E_k\ket{\psi_k}$) does \emph{not} have a definite energy --- measuring the energy yields $E_1$ with probability $|\alpha|^2$ and $E_2$ with probability $|\beta|^2$.
+\end{itemize}
+
+The theorem guarantees that all measurable energies are real numbers --- quantum mechanics is strange, but not so strange that you can measure an imaginary energy.
+
+\begin{remark}
+    The statement ``eigenvalues of $H$ are the energies'' is an \textbf{interpretive postulate} of quantum mechanics, not a theorem. It is the quantum-mechanical \emph{definition} of energy. In appropriate limits, it reduces to the classical notion of energy.
+\end{remark}
+
+% ============================================================
+\section{Real Eigenvalues $\Longleftrightarrow$ Probability Conservation}
+% ============================================================
+
+These two consequences are intimately related. For an energy eigenstate $\ket{\psi}$ with eigenvalue $E$:
+\[
+    \ket{\psi(t)} = e^{-iEt/\hbar}\ket{\psi(0)}.
+\]
+\[
+    \braket{\psi(t)}{\psi(t)} = e^{i(\bar{E} - E)t/\hbar}\braket{\psi(0)}{\psi(0)}.
+\]
+
+\begin{itemize}
+    \item If $E \in \mathbb{R}$: $\bar{E} - E = 0$, so $\braket{\psi(t)}{\psi(t)} = \braket{\psi(0)}{\psi(0)}$. Probability is conserved. $\checkmark$
+    \item If $E = a + ib$ with $b \neq 0$: $\braket{\psi(t)}{\psi(t)} = e^{2bt/\hbar}\braket{\psi(0)}{\psi(0)}$, which grows or decays exponentially --- probability is \emph{not} conserved. $\times$
+\end{itemize}
+
+Thus: $E \in \mathbb{R}$ (real energies) $\Longleftrightarrow$ probability conservation.
+
+% ============================================================
+\section{Consequence 4: Time Evolution Is Unitary}
+% ============================================================
+
+The time evolution operator is $U(t) = e^{-iHt/\hbar}$.
+
+\begin{definition}[Unitary Matrix]
+    A matrix $U$ is \textbf{unitary} if $U^\dagger U = I$.
+\end{definition}
+
+\begin{theorem}
+    If $H$ is self-adjoint, then $U(t) = e^{-iHt/\hbar}$ is unitary for all $t$.
+\end{theorem}
+
+\begin{proof}
+    Compute:
+    \[
+        U(t)^\dagger = \left(e^{-iHt/\hbar}\right)^\dagger = e^{+iH^\dagger t/\hbar} = e^{+iHt/\hbar},
+    \]
+    using $H^\dagger = H$. Then:
+    \[
+        U(t)^\dagger U(t) = e^{+iHt/\hbar}e^{-iHt/\hbar} = e^{i(H-H)t/\hbar} = e^0 = I. \qedhere
+    \]
+\end{proof}
+
+\begin{remark}
+    Unitarity of $U(t)$ is the matrix-level statement that inner products are preserved under time evolution: $\braket{U\psi}{U\psi} = \bra{\psi}U^\dagger U\ket{\psi} = \braket{\psi}{\psi}$.
+\end{remark}
+
+\subsection{Summary of the Logical Chain}
+
+\[
+    H = H^\dagger \implies \begin{cases}
+        \text{Probability is conserved} \\
+        \text{Eigenvalues (energies) are real} \\
+        \text{Time evolution is unique} \\
+        \text{Time evolution is unitary}
+    \end{cases}
+\]
+
+All four consequences flow from one mathematical property: the self-adjointness of the Hamiltonian.
+
+\end{document}

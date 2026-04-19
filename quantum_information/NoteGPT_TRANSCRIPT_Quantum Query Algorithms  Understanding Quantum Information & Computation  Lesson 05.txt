@@ -1,0 +1,411 @@
+00:00:00
+- Welcome back to "Understanding Quantum Information and Computation." My name is John Watrous, and I'm the Technical Director for IBM Quantum Education. This is the fifth lesson of the series, and it's the first lesson in the second unit of the series, which is on Quantum Algorithms. In this unit, we'll investigate computational advantages of quantum information, that is, we'll take a look at what we can do with quantum computers and the advantages that quantum computers
+
+00:00:27
+might potentially have over classical computers. We're gonna be focusing on what we can do with a single quantum computer as opposed to a distributed setting, for instance, where multiple quantum computers interact over a network of some sort. There are, in fact, quantum advantages to be found in distributed settings, where communication and cryptography come into play, but we're not going to be talking about those things in this unit. This unit is about quantum algorithms running on single quantum computers.
+
+00:00:58
+Let's start with a natural question. What advantages might a quantum computer potentially offer? The main one is that quantum computers might provide faster solutions to some computational problems. Time is precious, and although the computers we use every day are pretty fast, they're still way too slow to solve certain computational problems just because of the inherent computational difficulty of those problems. This potential that quantum computers might allow us to solve problems that classical computers are too slow to solve
+
+00:01:29
+is really what's driven quantum algorithms research for the past few decades. There are other computational resources besides time that can be considered, like the amount of computer memory required for computations, but quantum computers can't offer too much savings in terms of memory, as it turns out, and classical computer memory is pretty inexpensive particularly compared with quantum memory. So there just isn't very much promise here. We could also think about other resources like the amount of energy needed for computation,
+
+00:02:02
+but you don't actually need much energy at all to compute classically, particularly if you're willing to slow things down. So it really is the time required for computations, that's our main focus. Here's an overview for the lesson, which is about a specific model of computation known as the query model. You can think of this model as being kind of like a Petri dish for developing algorithmic ideas, both quantum and classical. It's not meant to be a practical model that describes the sorts of computational problems
+
+00:02:32
+we encounter in real life. We'll move away from the query model in subsequent lessons of this unit and focus instead on models motivated by more practical notions of computation, but the query model is a very good place to start. It's a simple model that allows us to explore the potential of quantum computers without a lot of technical details getting in the way, and it also allows us to isolate some of the really important ideas behind quantum computing and how it works. Quantum computing did, in fact,
+
+00:03:01
+first develop within this model, and the ideas that were developed within it very directly inspired important quantum algorithms such as Shor's algorithm for factoring. In the first section of the lesson, we'll take a look at specifically what the query model of computation is, and in the second, third, and fourth sections, we'll discuss three quantum query algorithms, namely Deutsch's algorithm, the Deutsch-Jozsa algorithm, and Simon's algorithm, which reveal increasingly impressive advantages
+
+00:03:32
+of quantum computers over classical computers within the query model of computation. To explain the query model of computation, let's first begin with a more standard abstraction of computation. Here's a picture that represents a computation in very simple and basic terms. We have an input, which usually takes the form of a binary string, although we could use other symbols if we wanted to. The input is provided to the computation, which is represented by a blue rectangle in this picture,
+
+00:04:05
+and the result of the computation is that some output is produced, and again, that's most typically a binary string. Of course, this picture is not at all specific about how the computation itself works. We can formulate different specific computational models to do that, such as Turing machines and Boolean circuit, or quantum circuits if we're thinking about quantum computation. It's true that this picture doesn't represent the fact that many of the computers we use every day are continuously receiving input and producing output,
+
+00:04:39
+essentially interacting with us and with other computers through the internet, for instance. But we're not trying to represent those interactions here. This is about modeling isolated computational tasks. For example, the input might be the binary encoding of a number or a representation of a matrix or a description of a molecule or really anything else we have in mind, and there's some computational task being performed on that input alone. The key point here is that the entire input is provided to the computation,
+
+00:05:16
+and nothing about the input is hidden from it. The query model of computation works differently. In the query model, the input is made available in the form of a function which the computation can access by making queries, or in other words, by evaluating the function on different inputs. Here you can see that represented in the form of a picture. Similar to what we had before, the computation is represented by a blue rectangle, but instead of receiving an input directly in the form of a string of bits, for instance,
+
+00:05:49
+it accesses the input by effectively asking questions and receiving answers. We sometimes use the terms oracle and black box to refer to the mechanism that provides the input. There is a distinction between an oracle and a black box in complexity theory, but that won't be relevant at all for the purposes of this discussion. Anyway, these terms are meant to convey the basic idea. In ancient Greece, you could go to an oracle, like the Oracle at Delphi, and ask an important question, and the oracle would answer that specific question,
+
+00:06:28
+but she certainly wouldn't tell you everything that she knew. Along similar lines, when we think about a black box, we have in mind some sort of process or system where we can choose what goes in and we can see what comes out, but we don't have any understanding of its inner workings. And that's the case here. The input to the problem takes the form of a function, and all that we can do is to evaluate that function, but otherwise, we don't have any knowledge or understanding of how it works.
+
+00:07:01
+Throughout the lesson, we'll reserve the letter f for the function that represents the input, and we'll make the assumption that it always takes the form that you see right here. Sigma denotes the binary alphabet, so f is a function from strings of bits to strings of bits, and specifically, we'll assume that the input to f is a string of bits having length n, and the output is a string of bits having length m, where n and m are positive integers. For different problems, we'll have restrictions on n and m,
+
+00:07:34
+but in all cases, the input function will take a form like this. When we say that a computation makes a query, what we mean is that the function f is evaluated once, that is, some string x of length N is selected by the computation, and the string f of x is then made available to it by the oracle or the black box. And finally, the very simple way that we'll measure the computational cost of a query algorithm is to count how many queries it requires. So, although it is true that we are really most interested
+
+00:08:10
+in how long computations take, when we study the query model, we generally keep things simple and just count queries, and that's what we will do in this lesson. Now, let's take a look at a few examples of query problems, meaning computational problems in the query model, and here, by the way, I'm just gonna describe the problems themselves, and at this point, I won't say anything about how to solve them. The first problem is the OR problem. In this case, the input is a function from n bits to just 1 bit,
+
+00:08:43
+so m is equal to 1 for this problem, and the required output for the problem is either 1 or 0. If there is some n bits string x for which f of x is equal to 1, then the correct answer is 1, and otherwise, if f of x is always 0 for every string x, then the correct answer is 0. So if we think about the function f as providing us with random access to two to the n bits, one for each n bit string x, then what the it's asking for is the OR of those bits, and that's why it's called the OR problem.
+
+00:09:21
+Another example is the parity problem, which is similar to the OR problem except that asks for the parity, or in other words, the eXclusive OR of all of the single-bit output values of the function. Another way to say that is that the correct answer is 0 if the number of n bits strings x for which f of x is equal to 1 is even, and the correct answer is 1 if that number is odd. An example of a problem where m is not necessarily equal to 1 is the minimum problem. Here, the function f takes the usual form,
+
+00:09:57
+and there are no restrictions on n and m, and the correct answer is whatever output value of the function comes first in the lexicographic or dictionary ordering of binary strings. Alternatively, if you wanna think about strings of length m as representing non-negative integers in binary notation, then the correct answer is the smallest possible or minimum value that comes out of this function. Sometimes we also consider query problems where we have a promise on the input function, or in other words, some sort of guarantee on it,
+
+00:10:33
+and we don't worry about functions that don't meet that promise. Functions that don't satisfy the promise are considered as "don't care" inputs. And we're just not responsible for what happens on those inputs. Here's an example of a query problem with a promise called unique search. It's related to the OR problem, but it's different. The input function has the same form as for the OR problem, which is that it takes n bits strings to bits. This time, we're promised that there's exactly one string Z
+
+00:11:08
+that causes f to evaluate to 1, with f of x being equal to 0 for every string x besides z, and the correct output is this unique string z. Of course, there are choices for the function f that don't satisfy this condition, but we don't place any requirements at all on algorithms for this problem when they're given such functions as input. We only care about the functions that do satisfy the promise. Now, all four of the problems I just mentioned are pretty natural problems, meaning that it's easy to explain them,
+
+00:11:42
+and it's easy to imagine situations in which a need to solve them might arise, but some query problems aren't like this at all. In fact, sometimes, we consider highly contrived query problems, where it's difficult to imagine that anyone would ever actually wanna solve them. Simon's problem, which we'll see later in the lesson, kind of falls into this category, but there are some other ones that are much worse in some sense, but they, nevertheless, actually turn out to be pretty important
+
+00:12:12
+to the study of the query model. We don't study these problems because we necessarily want to solve them in practice. The way you can think about it is that we are looking for extremes of various sorts, in particular, when we're working within this Petri dish of a model, a natural way to explore quantum algorithmic ideas is to formulate highly-contrived problems, where we can best exploit the power of quantum computers. And this can actually shed a great deal of light on how quantum computers can potentially be useful
+
+00:12:47
+in more practical settings. We can formalize the notion of a query in different ways depending on what computational model we're working with. For example, in the Turing machine model of computation, which we haven't talked about and we won't get into in this series, there's a certain way of formalizing the notion of a query that makes sense for that model. For circuit models, we define special types of gates called query gates, and that's how queries are formally represented.
+
+00:13:23
+For Boolean circuits, there's a very simple way of doing this, which is simply to imagine that we have query gates that evaluate the input function directly, like you can see here on the screen. The idea is that we can use these query gates to build circuits that solve whatever problem we're looking at, and in order to work correctly, the circuits have to give the right answer for whatever input function f is given, assuming that it meets the promise in the case of a promise problem. Here's a simple example of a Boolean circuit
+
+00:13:57
+that solves the parity problem when n is equal to 1, so the input function f is from 1 bit to 1 bit in this case. What this circuit does is to evaluate the function f on the inputs 0 and 1 using these two query gates. It then plugs the two output values it gets from the query gates into the Boolean circuit from lesson three that computes the XOR, which is the same thing as the parity. To be clear, these two input values right here are not inputs into the problem, meaning the parity problem, when we're working with the query model,
+
+00:14:35
+the input to the problem is the function f, and you should think about these two inputs into the circuit as being hard-coded values that never change, they're essentially part of the algorithm. We want to compute the XOR of f 0 and f 1, so we initialized these two wires in this way to make it work. We've used two query gates here, this one and this one, and so the algorithm represented by this Boolean circuit makes two queries, and if we think about the parity problem for a moment for functions from one bit to one bit,
+
+00:15:11
+we see that it's absolutely necessary for any Boolean circuit that solves this problem to make at least two queries. If you only make one query so that you only know one output value of the function f and not the other, you don't actually have any information at all about the parity, because the other output value could equally well be 0 or 1, leading to either of the two possible solutions to the problem. So in terms of the number of queries that it makes, this Boolean circuit is as good as it gets
+
+00:15:40
+for the parity problem when n is equal to 1. There's one other point about query gates that's worth mentioning before we move on, and that is that when we're designing and analyzing query algorithms, we don't worry at all about how query gates are implemented. It's assumed that these query gates are given to us, and the difficulty of building them isn't our concern. You can think of the query gates themselves as being the input if you like, and it's not our job to create the input,
+
+00:16:11
+we're just trying to solve a particular problem given the input. Of course, when f is a function from one bit to one bit, there are only four possible choices, and it would be easy enough to implement any one of them, but in general, for functions with many input bits, it could be extremely difficult to implement query gates for those functions. To be clear, this isn't to say that the issue of how query gates are implemented isn't important, but rather that it isn't considered to be part of the cost of a query algorithm.
+
+00:16:43
+This is consistent with the idea that this isn't really about practical computing or actually building circuits per se, it's about working within a theoretical framework that tells us interesting things about computation. We will have more to say about this when we make the jump from this model to a more standard model of computation, and that's mainly what the next lesson, Lesson 6, will be about. Now let's turn our attention to quantum circuits. For quantum circuits, we're going to change the definition of query gates
+
+00:17:19
+to make them unitary. We want to be able to make queries within quantum circuits and for them to operate linearly on quantum states so that we can effectively make queries in super position. It might seem like we're moving the goalposts, so to speak, by changing what we mean by a query in comparison to what we just saw for Boolean circuits, but there is justification for it that we'll discuss in more detail in the next lesson. For now, it's just a definition. Specifically, the definition is as follows,
+
+00:17:53
+given any function f of the same form as before, meaning that it maps n bits strings to m bits strings, the query gate Uf acts on n + m qubits and is defined by the action described here on standard basis states. We'll see a figure representing this definition in just a moment, but first, let me make clear the notation that's being used here, and that is whenever we use the symbol for the XOR as an operation between two strings of the same length, we're referring to the bitwise eXclusive OR,
+
+00:18:26
+and here you can see an example. In the definition, we have that both y and f of x are strings of length m, so this string right here represents the string we get by XORing those two strings together, one bit at a time, and here's the diagram explaining how these gates work. The top n qubits correspond to the argument of the function. And when they start out in a standard basis state, cat x in this diagram, that standard basis state goes through unchanged and gets echoed as part of the output.
+
+00:19:04
+The bottom m qubits correspond to the output of the function f, and when they start out in any standard basis state, cat y in this diagram, what happens is that the output of the function f of x gets XORed onto the string y. This is what happens for standard basis states, and if we wanna know what happens in general for other quantum states, we use linearity, as we always do. A reason to define query gates like this where we echo the input and we use the bitwise XOR for the output is that these gates are always unitary
+
+00:19:40
+for any choice of the function f. This is, in fact, a deterministic operation. And if we were to express it as a matrix for any choice of a function F, we'd get a permutation matrix, meaning one with a single one in each row and in each column, and all other entries equal to 0. And permutation matrices are always unitary. In fact, for this operation, we'll get that the operation is its own inverse, so Uf dager equals Uf. If all we wanna do with these gates is to evaluate f of x for some string x, that's easy,
+
+00:20:20
+we can just set y to be the all-zero string. So when we take the bit y's eXclusive OR, we end up with just f of x. Here, by the way, you can see the notation that's used to denote the all-zero string. It looks like 0 to the power M, but that's not what it means. It means the string of zeros having length equal to M. When we're talking about strings as opposed to numbers, exponents typically mean that we repeat that string some number of times, so this is 0 repeated m times. It's just a convenient and precise way
+
+00:20:56
+of describing this string. Once again, when we're working with the query model, we aren't worrying about how to implement these query gates. That's the same issue we had with query gates for Boolean circuit. It's not our job to prepare the input, we're given the input in the form of these query gates. I will point out though, that if we know how to implement the function f using a Boolean circuit, then it is possible to translate that implementation pretty directly to a quantum circuit implementation of Uf,
+
+00:21:32
+and we'll see exactly how that works in the next lesson. As an aside, it is quite straightforward to create a Boolean circuit that operates like this, using a single classical query gate for the function f, but that is quite different from having a quantum circuit implementation of this unitary gate. The point, however, is that for classical query algorithms, having a query gate that works like this is, in fact, equivalent to having an ordinary classical query gate for f, in the sense that either one
+
+00:22:05
+can be implemented using the other. In this section of the lesson, we'll discuss Deutsch's algorithm, which is a very simple quantum query algorithm, but it really is a gem. This algorithm comes from a 1985 paper written by David Deutsch, was one of the very first people to work on the theoretical foundations of quantum computing. The algorithm itself represents a very small part of Deutsch's 1985 paper, and in fact, the algorithm we now call Deutsch's algorithm is actually an improved version
+
+00:22:36
+of the algorithm that Deutsch described. It provides a very modest example of how quantum computers can offer computational advantages, but you have to start somewhere, and it really was an important spark that got things started. Deutsch's algorithm solves a query problem that's often called Deutsch's problem in the context of quantum computing, but in fact, it's none other than the parity problem for functions from one bit to one bit, which we've already talked about. As we've already seen,
+
+00:23:09
+there are four functions from one bit to one bit, and they're described here on the screen by their tables of values. The first and last of these functions are constant, while the middle two are balanced in the sense that the two possible output values appear the same number of times. For the two constant functions, we see that the parity, or in other words, the eXclusive OR of the two outputs is 0, and for the two balance functions, the parity of the outputs is 1. So an equivalent way to describe the parity problem
+
+00:23:45
+in this particular case, where the function f takes a single bit as input, or in other words, Deutsch's problem, is like you see here. The input is a function f from one bit to one bit, and the output is 0 if f is constant and 1 if f is balanced. As I've already suggested, every classical query algorithm that solves this problem must make at least two queries to f. If you learn just one of the two output values of f, you still have no information at all about the parity of the two outputs.
+
+00:24:22
+And this, by the way, is true even for classical algorithms that make use of randomness. Randomness can sometimes be very useful for solving query problems, and we'll see an example a bit later in the lesson, but randomness doesn't help here. So our algorithm from before is optimal among classical query algorithms for Deutsch's problem. Now we'll take a look at Deutsche's algorithm, which is a quantum query algorithm that solves Deutsch's problem using a single query. And here is the algorithm described as a quantum circuit.
+
+00:25:00
+We have two qubits initialized like you see here, with the top one initialized to cat 0 and the bottom one initialized to cat 1, and we'll see why we initialize these qubits like this shortly. We perform Hadamard gates on the two qubits, feed them into the query gate, perform another Hadamard gate on the top qubit, and then measure it. And the claim is that the measurement outcome gives us, with certainty, the correct answer to the problem. So let's analyze the circuit one step at a time
+
+00:25:35
+to see exactly how it works. The state of the two qubits after the first layer of Hadamard gates is the tensor product of the minus and plus states. The Hadamard on top maps the 0 state to a plus state, and the Hadamard on the bottom maps the 1 state to a minus state. The top qubit is on the right, and the bottom qubit is on the left, so this is the state that we get. It's very important that the bottom qubit is in a minus state, by the way, this wouldn't work if we initialize the bottom qubit
+
+00:26:07
+to a 0 state instead of a 1 state. We're going to expand this state halfway, like you see here. The reason for doing that isn't clear at this point, but it will be convenient in just a moment. Next, let's think about the state of the two qubits after the query gate is performed. The way the query gate works is that it computes F on the standard basis state of the top qubit and XOR is the value onto the bottom qubit, and here we can see the result of doing that. For the first term, the standard basis state of the top qubit is 0,
+
+00:26:45
+so f of zero gets XORed onto the bottom qubit, and that works by linearity. And it's similar for the second term, except that the standard basis state for the top qubit is 1, so we XOR f of 1 onto the bottom qubit. And at this point, we can simplify this expression by observing the formula that you can see down here, which works when a is either 0 or 1. And we can simply check this for those two values separately. If a is equal to 0, then XORing with a does nothing, and negative 1 to the power 0 is 1,
+
+00:27:19
+so the two sides are equal. And if a is equal to 1, we get cat 1 minus cat 0 when we take the XOR, which is negative 1 times cat 0 minus cat 1. And if we use that formula to simplify our state, where we take a is equal to f of 0 on the left and a is equal to f of 1 on the right, we get the expression that you see right here. So when we compare the two quantum state vectors π1 and π2, we see that what the Uf gate does is effectively to put one of the two values, f of 0 or f of 1, into the exponent of negative 1,
+
+00:27:56
+or in other words, into the phase of each term. This is the reason for initializing the bottom qubit to 1 and performing a Hadamard gate on it to create the minus state, which allows this to happen. It's called the phase kickback phenomenon, and we'll come back to it in a few moments to have another look at it. It's pretty important, and we'll see it happening a few more times in the lesson, as well as in later lessons. We can now simplify by pulling the minus state back outside
+
+00:28:31
+to get the expression that you see right here. As an aside, it's kind of interesting to notice that there isn't actually any entanglement here. Both of these states are product states. So, well, entanglement is extremely interesting, doesn't happen to be playing any role at all in this particular algorithm. Let's clean this up a bit so that we have a little bit more room. What we can now do is to pull a factor of negative 1 raised to the power f of zero outside to get the expression of the state that you see right here.
+
+00:29:08
+You'll notice that right here, we have eXclusive OR of f 0 and f 1 in the exponent of negative 1. We might expect that to be f of 1 minus f of 0 because we pull the factor of negative 1 to the power f of 0 out, but we get the same value if we take the XOR because these are bits, and the only thing that matters when we have an integer in the exponent of negative 1 is whether that integer is even or odd. Another way to express this state is like we have here, where we're just considering the two possible cases
+
+00:29:41
+for the XOR. and that's a convenient way to express the state as we consider the action of the final Hadamard gate together with the measurement. When we perform the last Hadamard gate on the top qubit, the plus state is transformed into a 0 state and the minus state is transformed into a 1 state, which we can write more succinctly like this. And finally, when the measurement is performed, the result we obtain is therefore the XOR of f 0 and f 1, which is the value we're looking for, and that's how Deutsch's algorithm works.
+
+00:30:27
+It's pretty simple, and if we ask ourselves what it is that makes it work, allowing us to compute the parity of two bits with a single query rather than two, a reasonable answer is that it's interference. We're effectively computing f of 0 and f of 1 at the same time, because we first performed the Hadamard gate on the top qubit to put the input into f into a super position of 0 and 1. And by means of the phase kickback together with the final Hadamard gate, we're essentially creating constructive interference
+
+00:31:00
+for the correct answer and destructive interference for the wrong answer. So we don't see the wrong answer, we only see the correct answer. Let me now say a bit more about the phase kickback phenomenon just to see it from a slightly different angle. First, let's observe this very simple formula where b and c are arbitrary binary values. In short, XORing a bit b by the value 1 is the same thing as performing a NOT gate or an x operation on b, and of course, exploring a bit b by the value 0
+
+00:31:34
+doesn't do anything to it, which is the same thing as performing the identity operation on it. And we can express the identity operation as x to the power 0. So if we perform a Uf gate on two qubits in the standard basis state cat b tensor cat a, we obtain this outcome, just by the definition of the Uf gate. and by using the formula, we can alternatively write that state like you see right here. This formula works for all choices of b, so by linearity, it works for an arbitrary state SI in place of cat b.
+
+00:32:16
+And in particular, if we want to, we can choose SI to be the minus state. And now here's the key to why the phase x kickback phenomenon happens. It's because the x operation applied to the minus state gives us negative 1 times the minus state. In mathematical terms, we say that the minus state is an eigenvector of the x operation, with eigen value equal to negative 1. Eigenvectors and eigen values are critically important in linear algebra as well as in quantum information, and we'll have a lot more to say about them
+
+00:32:50
+as the series continues. But for now, all we need is this simple formula. And using it, we can simplify our state vector. And that right there is essentially the phase kickback phenomenon written as a formula. It works because the minus state is an eigenvector of the NOT operation having eigen value negative one. We will generalize this in a pretty major way in Lesson 7, when we turn to the phase estimation procedure, which is what drives Shor's factoring algorithm. We can see this formula in action
+
+00:33:29
+in the analysis of Deutsch's algorithm as follows. Prior to the query gate, our state is the tensor product of the minus and plus states. We then apply the query gate, and expanding out the plus state gives us this state. We now apply the phase kickback formula to get this expression, and then the analysis carries on as before. It's the same as before, but here we're just placing a focus on the phase kickback so that we can recognize it and we can also be ready for it when it comes up again.
+
+00:34:06
+Next we'll turn to the Deutsch-Jozsa algorithm, which is an extension of Deutsch's algorithm that actually solves a couple of different query problems. The advantage that Deutsch's algorithm provides over classical algorithms is pretty modest, one query versus two. The Deutsch-Jozsa algorithm increases that advantage somewhat, and I'll explain what I mean by that when we get there. The Deutsch-Jozsa algorithm can be viewed as a natural and direct way of extending Deutsch's algorithm
+
+00:34:38
+from functions from one bit to one bit to functions from n bits to one bit, or another words, functions of this form. As a quantum circuit, the Deutsch-Jozsa algorithm looks like this, and I'm going to refer to this as the Deutsch-Jozsa circuit just to draw a minor distinction between this circuit and the Deutsch-Jozsa algorithm itself because there's also a classical post-processing step. The idea is that if we run this circuit and then measure, we'll obtain some n bits string y that tells us something about the function f.
+
+00:35:15
+At this point, by the way, I haven't actually said what the query problem is that we might hope to solve with this circuit, that's coming up very soon. But the point is that by running this circuit, we'll gain some information about f that can potentially help us to solve query problems where f is the input. And like I said a moment ago, we can actually use this circuit to solve a couple of different query problems. First, let's take a look at the query problem known as the Deutsch-Jozsa problem,
+
+00:35:45
+which is the problem that the Deutsch-Jozsa circuit was originally intended to solve. The Deutsch-Jozsa problem is a generalization of Deutsch's problem, where the goal is to determine whether a given function is constant or balanced. Notice that this isn't the natural way to generalize the parity problem to functions of this form. Here we're not computing the parity, the task is to output 0 if the function f is constant and 1 if the function f is balanced. The first thing to notice about this problem is that when n,
+
+00:36:21
+the number of input bits to the function f, is at least 2, there are choices for the function that are neither constant nor balanced. For example, here's a function from 2 bits to 1 bit that's neither constant nor balanced. It's not constant because both binary values appear among the outputs, and it's not balanced because the two output values appear with different frequencies. 0 appears three times and 1 appears just once. In order to be balanced, the outputs 0 and 1 have to occur exactly the same number of times.
+
+00:36:57
+The fact that there are functions that are neither constant nor balanced when n is at least 2 is okay though, we're just gonna consider functions like that as "don't care" inputs. So in other words, this is a promise problem. And here's a precise statement of the problem. We're promised that the input function f is either constant or balanced, and the goal is to figure out which one it is. And we're not responsible for what happens if the input doesn't meet the promise.
+
+00:37:29
+The Deutsch-Jozsa algorithm, which solves this problem, is first to run the Deutsch-Jozsa circuit and then output 0 if the string that we obtain from the measurements is the all-zero string and output 1 otherwise. Another way to say that is that we output the OR of the bits that we measure. To analyze the Deutsch-Jozsa algorithm, it'll be helpful to first take a few moments to think about Hadamard gates. We can, of course, describe the Hadamard operation as a matrix, but we can also describe it in terms of its action
+
+00:38:01
+on standard basis states, as you see right here. These two equations can be combined into a single equation, which describes how a Hadamard operation works for a being either of the two binary values, and we can go a little bit further and express what we obtain as a sum like this. Using that formula, we can come up with a formula that describes how a layer of Hadamard gates works, where we apply one Hadamard gate to each of n qubits. Here we're describing this action on standard basis states.
+
+00:38:45
+And to be clear about the notation, when we write h tensor n like this, where the tensor n part is a superscript, what we mean is the n fold tensor product of H with itself, or in other words, n copies of h all tensor together. We're applying this operation to a standard basis state, and here I'm following the convention that Qiskit uses to index binary strings, just because it's a good time to introduce that convention. So x0 is a bit, x1 is a bit, and so on with n bits in total, and the bits are ordered as you see here on the screen.
+
+00:39:23
+You can think about this way of indexing bits as corresponding to their significance if we view strings as representing integers in binary notation, for instance. If we apply a Hadamard gate to each of these qubits, we can alternatively express the result as the n fold tensor product of a Hadamar gate applied to each qubit, and then we can apply our formula to each one of the tensor factors. And here we're using the names y and minus 1 down to y1 in place of b in the formula, so these are binary values.
+
+00:39:58
+And we're making sure to use a new name each time we use the formula. If we then expand everything out using the multilinearity of tensor products, we get the expression that you see right here. And to be clear, the n sums are being combined into a single sum, but we're still summing over all the possible values for the individual binary values. Now let's clean things up so that we can go a little bit further. And the next step is to introduce a new operation on strings called the binary dot product.
+
+00:40:33
+This is an operation on binary strings having the same length. And what the binary dot product of two strings x and y of the same length is, is the eXclusive OR or the parity of the products of the individual bits. You could also say that it's the XOR of the logical and of the individual bits, because the and is the same thing as the product for binary values. Yet another way to describe it is that it's 1 or 0 depending on whether the sum of the products of the individual bits is odd or even.
+
+00:41:07
+It's very much like an inner product if we think about strings as vectors of binary values, but where we compute Modulo-2, or in other words, we take the remainder after dividing by 2. It's not really an inner product though, so it deserves a different name. In the case at hand, we can use the binary dot product to make our formula for the action of a layer of Hadamard gate on standard basis states more succinct, and here it is right here. We're using the fact that because this sum right here
+
+00:41:39
+is appearing in the exponent of negative 1, all that matters is whether or not it's even or odd, but otherwise, it's basically just a condensed version of our formula. By the way, the binary dot product is symmetric in the sense that x dot y and y dot x are equal, so we are free to swap the ordering whenever that's useful. And now that we have that formula, it'll be pretty easy to analyze the Deutsch-Jozsa circuit. We start out with n qubits in the 0 state and the bottom qubit in the 1 state,
+
+00:42:13
+and we perform Hadamard gates on all of them. So this is the state of the n + 1 qubits that we get. We are treating the bottom qubit separately because that's gonna be convenient. And again, we're gonna see the phase kickback phenomenon happening. We can get this expression by using our formula, where we substitute the all-zero string for x and substitute x for y, noting that the binary dot product of the all-zero string with any string is 0. But we can also just reason this directly. We're taking the tensor product of n plus states,
+
+00:42:49
+and this is what we get, tensor to the minus state. Then the UF gate is applied, and here's where the phase kickback phenomenon happens. The value f of x is getting XORed onto the minus state for each x in the sum. So f of x gets kicked into the phase. We now apply another layer of Hadamard gates just to the top n qubits, and this time, we really do need the formula. And when we apply it and do just a little bit of simplification, we get this state right here. So that's our final state just prior to the measurements.
+
+00:43:28
+The state looks a little bit complicated, and it's difficult to simplify it because we don't really know anything about the function f. But remember, that all we really need to know is whether or not the measurements all yield the outcome 0, because that's what determines what our answer is to the problem. If we see that every measurement outcome is 0, we conclude that the function is constant. And if any one of the measurement outcomes is 1, we conclude that the function is balanced.
+
+00:43:59
+So let's calculate the probability to get the all-zero string from the measurements. And that turns out to be the one result that's actually easy to calculate, because the binary dot product of the all-zero string with any string is zero. If we examine our vector and we think about what happens when y is the all-zero string, we get this expression right here for the probability to get the all-zero string from the measurements. And considering the two possible cases where f is constant and f is balanced,
+
+00:44:31
+we see that the probability to get the all-zero string is 1 in the case that f is constant, and zero when f is balanced. When f is constant, the sum is either 2 to the n or negative 2 to the n, and dividing by two to the n and taking the absolute value squared yields 1. And when f is balanced, the sum equals 0. That's because we'll get positive 1 and negative 1 an equal number of times, so they all cancel out. So that's it. The Deutsch-Jozsa algorithm solves the Deutsch-Jozsa problem
+
+00:45:07
+using a single query, and there's no error. Assuming the operations are all done perfectly, it's correct every single time. So how does that compare with what we can do classically? Well, if we insist on a deterministic algorithm that gets the answer correct every single time, then in the worst case, we need 2 to the n minus 1 plus 1 queries, and that's because we have to query the function on more than half of its inputs to be sure about the solution. Even if we query the function on 2 to the n minus 1 different input strings,
+
+00:45:44
+it's possible that we'll see the same output value every single time, and that could be because the function is constant, or it could be that it's actually balanced and we've just been incredibly unlucky having seen the same output value every single time. So that's a huge advantage of quantum over classical, a single query versus exponentially many queries. However, if we use a probabilistic query algorithm and we accept a small probability that it answers incorrectly, then we actually only need a few queries.
+
+00:46:19
+In particular, if we randomly choose k strings and evaluate the function on those random strings, then we are pretty likely to be able to figure out the right answer. Specifically, we answer 0 or constant when we get the same function value every single time and 1 or balanced whenever we see two different function values. If we do that, we'll always be correct when the function is constant because, of course, we'll always see the same output value in this case. And if f is balanced, we're very likely to see two different output values.
+
+00:46:53
+The chance that we don't see both output values in this case is the same as the chance that we have of flipping a coin k times and getting the same result every single time. So for example, if we set k to be equal to 11, the probability of getting a wrong answer is less than a 10th of a percent. So especially when we consider the fact that quantum computers are never going to be perfect in reality, we don't actually get that big of an advantage here, but we're making progress, and we do have a quantifiable advantage
+
+00:47:25
+of quantum over classical that goes beyond Deutsch's algorithm. We can also use the Deutsch-Jozsa circuit to solve a different query problem known as the Bernstein-Vazirani problem. Here's a statement of that problem. The input is a function from n bits to 1 bit, just like the Deutsch-Jozsa problem, and again, it's a promise problem. This time, the promise is that there exists some n bits string s for which the function f works as you see right here, where the output is given by the binary dot product
+
+00:48:02
+of the input with this string s, and the goal is simply to find the string s. So we can imagine that the string s is hidden in some sense, but we can learn about it by making queries to f, and our goal is to find this hidden string. To be clear, most functions won't satisfy this promise, but as usual, we only care about the input functions that do. As it turns out, the Deutsch-Jozsa circuit actually solves this problem right out of the box. If we run it for a function like we have here that satisfies the promise for some string s,
+
+00:48:40
+the measurements will reveal the string s with no post-processing required. So let's see how this works. We've already analyzed the Deutsch-Jozsa circuit, so we can actually just skip right to the end. Here's the expression that we had from before for the state just prior to the measurements, and that expression was valid for any function f. And now, if we substitute in what we're promised about the function f and simplify, we get the minus state for the bottom qubit tensored with cat s for the top n qubits.
+
+00:49:20
+And so we get s when we measure. There is some work to do to perform the simplifications that I've shown here, and I won't go through that in this video, but there is more detail about it in the textbook content for this series, which you can find by following the link in the description of the video, or just try it for yourself for some practice. So what we found is that the Deutsch-Jozsa circuit solves the Bernstein-Vazirani problem with a single query. It's not too hard to show that any classical algorithm,
+
+00:49:55
+whether it's deterministic or probabilistic, needs at least n queries to solve the Bernstein-Vazirani problem for the simple reason that we need n bits of information to recover s, and each query gives us at most 1 bit of information. So we get another advantage of quantum over classical query algorithms, one query for quantum algorithms, n queries for classical algorithms. It's worth taking just a moment to speak about the nomenclature that's used in the context of this problem and a little bit about the history.
+
+00:50:29
+People sometimes refer to the algorithm that I just described as being the Bernstein-Vazirani algorithm, but it's really just the Deutsch-Jozsa circuit, and that's something that was, in fact, very clearly stated in Bernstein and Vazirani's work. So it is a little bit strange that it's called the Bernstein-Vazirani algorithm because it's pretty much the same thing as the Deutsch-Jozsa algorithm minus the post-processing. Bernstein and Vazirani did, however, go a step further.
+
+00:50:55
+They defined a recursive version of this problem, where you basically have to solve instances of the Bernstein-Vazirani problem to unlock new instances of the problem that are arranged in a complicated tree-like pattern. It's a highly contrived problem, but the point is that by defining a problem in this way, they could effectively stretch out the one versus n query separation between quantum and classical. And what they obtained is the very first known example of a so-called super polynomial advantage
+
+00:51:25
+of quantum over probabilistic algorithms. This recursive version of the Bernstein-Vazirani problem also turned out much later to be very interesting in computational complexity theory for different reasons. Anyway, the point is that Bernstein and Vazirani certainly deserve recognition for their important contributions, but it really doesn't make sense to refer to this as the Bernstein-Vazirani algorithm, it's basically just the Deutsch-Jozsa algorithm. In the last part of the lesson, we'll take a look at one more quantum query algorithm
+
+00:51:57
+known as Simon's algorithm. You'll see a clear similarity between this algorithm and the Deutsch-Jozsa algorithm, but it is different, and more importantly, it reveals a much stronger advantage of quantum over classical query algorithms. Specifically, it gives us a provable exponential advantage of quantum over classical algorithms, even probabilistic ones. The problem it solves is a bit artificial, and it's hard to imagine a situation in which solving this problem would be useful, but it did directly inspire Peter Shor's discovery
+
+00:52:34
+of a quantum algorithm for integer factorization, and that very strongly supports this idea of the query model as a Petri dish in which quantum algorithmic ideas can be developed. Let's start with the query problem that Simon's algorithm solves, which, as you might have guessed, is called Simon's problem. Here's a statement of the problem, and we're going to need to unpack it to understand what it's all about. The first thing to notice is that this time, the input function f maps n bits strings to m bits strings
+
+00:53:09
+where m is some positive integer that isn't equal to one in general. It's a promise problem. And like the Bernstein-Vazirani problem, the promise involves some string s that we can view as being a hidden string, and also like the Bernstein-Vazirani problem, the goal is to output this hidden string s. The promise is more complicated this time though, so let's take it apart and understand what it's saying. To begin, let's just read it. It says that there exists a string s having length equal to n
+
+00:53:43
+such that a particular "if" and "only if" condition is true for all choices of n bits strings x and y. Specifically, it must be the case that f of x is equal to f of y if and only if one of two possibilities holds. The first possibility is that x equals y, and the second possibility is that by taking the bitwise eXclusive OR of x in the hidden string s, we get Y. This turns out to be a pretty strict promise in the sense that most functions won't satisfy it. Only very special functions satisfy this condition.
+
+00:54:21
+Now, to get a better grasp on this promise and therefore on the problem itself, we'll consider two main cases. The first case is that s is the all-zero string. In this case, we can simplify the "if" and "only if" statement in the promise because the bitwise eXclusive OR of any string x with the all-zero string is simply the string x. So the condition simplifies to f of x is equal to f of y if and only if x equals y. And that's just another way of saying that f is a one to one function.
+
+00:54:58
+In other words, the string f of x must be unique for each possible string x. So if f is a one to one function, then the promise is indeed satisfied, specifically for s being the all-zero string, and in this case, that's the correct output. The second case is that s is not the all-zero string, and what this implies is that the function f must be two to one. So for every input string x, there's exactly one other string that f maps to the same string that x maps to, and moreover, the other string must be the string we get
+
+00:55:37
+by taking the bitwise eXclusive OR of x with s. Another way of saying this is that every n bit string x has a partner, and that partner is the string that we get by taking the bitwise eXclusive OR with s. Any two partners must give us the same output string if we plug them into f, and no other strings are allowed to give us that same output string. So these are necessarily distinct strings that partners produce. Here's an example of a function like this described by its table of values. So this is a function from 3 bits to 5 bits.
+
+00:56:17
+If we stare at this table of values for a while, we find that the promise is satisfied for the string 011. 000 and 011 are partners. XORing either one of them by s gives us the other, and they take the same output value, which is 10011 in this particular case, and no other strings produce that same output string. 001 and 010 are partners because XORing either one by s gives the other, and they produce the same output value, which again, isn't produced by any other string. And the situation is similar for 100 and 111
+
+00:56:57
+as well as 101 and 110. So if the input to the problem is this function, the correct answer is the string 011. Like I said before, most functions don't satisfy this promise, it's a very specific condition. It should also be noted that if the promise is satisfied, it can only be satisfied for one string s. So there's always only one correct answer to this problem. So that is Simon's problem. Like I said, it's hard to imagine a practical situation in which you'd wanna solve this problem,
+
+00:57:34
+but that isn't the point. The point is to try to figure out what quantum computers are good at, and it turns out that they're far superior to classical algorithms for solving this particular problem. Now let's take a look at Simon's algorithm, which solves Simon's problem. The algorithm consists of running the quantum circuit that you see here several times, followed by a classical post-processing step, and we'll be more specific about what several times means a bit later.
+
+00:58:06
+The circuit looks very similar to the Deutsch-Jozsa circuit, this time because the function f maps n bits to m bits, the query gate is different. Rather than just a single qubit on the bottom, we now have m qubits on the bottom and n on the top like before. A key difference is that we're not setting up a minus state or multiple minus states on the bottom. These bottom qubits are all initialized to the 0 state, and those states go straight into the query gate. So there won't be any phase kickback
+
+00:58:40
+involved in this algorithm, it's just not how this one works. Other than the differences I just mentioned though, it looks very similar to the Deutsch-Jozsa circuit. We apply a layer of Hadamard gates, then we apply a query gate one time, and then we apply another layer of Hadamard gates followed by standard basis measurements of the top n qubits. The idea is that each time we run this circuit and measure, we'll get some string y that tells us something about the hidden string s in Simon's problem.
+
+00:59:14
+And by running the circuit several times independently, we will have gathered enough statistical evidence about s to be able to figure out what it is with high confidence. Now let's analyze the quantum circuit for Simon's algorithm to see what it does. The state after the first layer of Hadamard gates looks like this, similar to what we had for the Deutsch-Jozsa algorithm. Except this time, the bottom m qubits are all in the 0 state rather than in minus states. After the query gate is performed,
+
+00:59:50
+we see that the value f of x has been written onto the bottom or leftmost m qubits, and that's because f of x has been XORed onto the all-zero string. So again, there's no phase kickback happening in this algorithm. We then perform the second layer of Hadamard gates. And using the same formula as before for the action of a layer of Hadamard gates on a standard basis state, cat x in this case, as it was in the original formula, we obtain this state right here, where the action of the Hadamard gates
+
+01:00:23
+has been made more apparent. But if we want to, we can also write the state in a more compact form like we have right here. At this point, we measure the top n qubits to obtain some end bit string y, and we just need to figure out what the probabilities are for the different strings. And that'll help us to understand what information we get from this string y about the string s that's hidden inside of the function f. We're going to need some more room for this, and we really don't need the circuit diagram anymore,
+
+01:00:55
+so let's get rid of it and give ourselves some more space for the analysis. Here's the state just prior to the measurements, which are standard basis measurements of the top or rightmost n qubits. So the measurement corresponds to the second cat. Let's denote by p of y, the probability that the measurements give us the string y for each possible y. And if we follow the rules from Lesson 2, we get that each of these probabilities is the Euclidean norm squared of whatever vector is tensored to the standard basis state,
+
+01:01:29
+corresponding to why in our quantum state vector. That gives us this expression right here. Now, to get a better handle on these probabilities, we're gonna need to make use of some notation, and you might already be familiar with this notation because it's pretty common in mathematics. First, when we refer to the range of the function f, we just mean the set of all the strings that can come out of this function. So it's the set of all f of x ranging over all the possible choices of an input string x.
+
+01:02:02
+Second, we're gonna use this notation that you see right here to mean the set of all the input strings x that f maps to a given string z, for whatever choice of z we wanna consider. It kind of looks like the inverse of the function f, but it's not really the inverse because f is not necessarily invertible. We also see that we have a set as the argument on the left hand side, and in this case, it's the set containing just a single string z, and that's the clue we need to recognize
+
+01:02:33
+that we're not talking about the inverse of the function f, this is called the pre-image. The pre-image can be defined more generally for any set given as an argument, not just the set containing a single element, but this is all that we're gonna need. It's not the greatest notation in the world because it's easy to confuse it with the inverse, but it's clear enough and it's widely used, so we're gonna go with it. And now if we use this notation, we can rewrite the vector
+
+01:02:59
+that we're taking the Euclidean norm squared of to get the probability for measuring each string y. We're doing this because we need to see what the coefficients are for each individual standard basis state, and that's not clear from this expression right here, because, in general, we may have multiple choices of x giving us the same string f of x. In essence, all we're doing is splitting up the sum over x by first summing overall z in the range of f, and then inside of that sum,
+
+01:03:30
+summing over all x in the pre-image of z, or to be more accurate, the pre-image of the set containing the string z. That lets us replace f of x with z inside of the cat right here. And the sum overall, the different strings x that f maps to each z are collected into the coefficient for each cat. We're basically putting strings into bins, summing over the bins, and then summing over the strings in each bin, but that's equivalent to just summing over all the strings. So we do obtain an expression
+
+01:04:04
+that's equivalent to the one that we started with, and now we can compute the Euclidean norm squared. It's just the sum of the squares of the absolute values of the coefficients, and so, we get this expression right here for our probabilities. Of course, give yourself time to verify this, if you choose to do that, it takes time to get used to all this and to be able to perform these calculations, and the more practice you give yourself, the easier it'll become. So far, we haven't actually made use of the promise
+
+01:04:41
+in Simon's problem at all. Our analysis of these probabilities actually works for any function f, but now it's time to think about Simon's problems specifically. We're going to break things down into the same two cases that we had before. The first case is that s is the all-zero string, and the second case is that s is not the all-zero string. In the first case, that s is the all-zero string, things are pretty simple. In this case, as we saw before, we have that f is a one to one function,
+
+01:05:15
+so there's a single string x that gets mapped to each of the strings z in the range of f. That makes the absolute value squared of the sum over those strings equal to 1 because there's just a single term in the sum, it's either plus 1 or minus 1, but it doesn't matter which because we take the absolute value squared, and so we get one. There are 2 to the n elements in the range of f, and we know that because f is one to one, so there's one string in the range for each input string.
+
+01:05:49
+And if we evaluate the entire expression, we find that each string y appears with probability one over two to the n. So in other words, the measurements give us a string y chosen uniformly at random. That might not seem all that useful, but we will, in fact, be able to distinguish this behavior from the behavior we get in the case that s is not the all-zero string, and we'll see how that goes shortly. For now though, we simply observe that if f satisfies the promise in Simon's problem in the case that s is the all-zero string,
+
+01:06:25
+then the result of the measurements is a uniform random string. Now let's move on to the second case, which is that the promise is satisfied for a string s that's not the all zero-string. In this case, as we discussed before, each string z in the range of f has exactly two strings that map to it, because every string has a partner, and each pair of partners maps to some unique string, and specifically, each string's partner is the string we get by XORing with s. So if we pick any string z in the range of f,
+
+01:07:00
+and we give the name w to either one of the strings that f maps to z, then the XOR of w with s is the other string that maps to z. Looking at just the one term in our sum that corresponds to whatever string z in the range that we have in mind, we see that we can write it more explicitly as we have right here. We have two strings in the pre-image of z, w and w XORed with s. So we can write the sum as you see on the screen, and now what we can do is we can pull out a factor of negative 1 to the power w.y.
+
+01:07:38
+That factor is going to be either plus 1 or minus 1, so it goes away when we take the absolute value, and what we're left with is this expression right here. The details aren't all shown here, and it's not necessarily obvious that it works this way, but you can check that these two expressions are equal by going back to the definition of the binary dot product and thinking about what happens when these things are in the exponent of negative 1, not unlike what we had for the Bernstein-Vazirani problem.
+
+01:08:10
+Finally, we can break this expression up into two cases. It's 4 when the binary dot product of s and y is 0, and it's 0 when the binary dot product of s and y is 1. Notice in particular that there's no dependence at all here on w or z, it only depends on s and y. The reason this happens is because of the very specific and special nature of the promise. In essence, this is why the promise was formulated in this way, so it would all work out like this. Again, every string has a partner,
+
+01:08:46
+which we get by XORing with this one hidden string s, and that's what makes this all happen. We can now go back to the expression for the probabilities and plug things in. When s is not the all-zero string, there are 2 to the n minus 1 elements in the range of f, which is half of the number of input strings, and plugging in the values we just calculated gives this formula right here. So this time, y is not a completely random string, but rather y is uniform over exactly half of the n bit strings,
+
+01:09:22
+and specifically, it's uniform over those strings that have binary dot product equal to 0 with s. Now that we know how the circuit for Simon's algorithm works and specifically what the probabilities are for the different measurement outcomes, it remains to explain how this helps us to solve Simon's problem. Summarizing what we just learned, if it's the case that the function f satisfies the promise in Simon's problem, when the hidden string s is the all-zero string, we obtain a completely random string from the measurements,
+
+01:09:56
+where each end bit string y is equally likely. If on the other hand, the function f satisfies the promise for a different string s, one that's not equal to the all-zero string, then we get a random string y having binary dot product equal to 0 with s, and among all of those strings, each y is equally likely. But we'll never get a string y having binary dot product equal to 1 with s. The question becomes, "Is this enough information to determine s?" And the answer, as I've already suggested, is yes,
+
+01:10:32
+provided that we run the circuit enough times. Specifically, let's suppose that we run the circuit k times, where K is equal to n plus r, where r is some number that's going to control the likelihood that we recover s. Just as an example, if we choose r to be 10, we'll be successful with probability greater than 99.9%, so we don't need r to be all that large. In general, the probability of failure is less than the probability of flipping a fair coin r times and getting heads every single time.
+
+01:11:09
+So if 99.9% isn't good enough, then take r to be 20, and the chance of failure is less than one in a million, or choose whatever r makes you comfortable. You can't guarantee a correct solution, but you can make the probability of error negligible for all intents and purposes. Here we are naming these strings y1 through yk, where we're using superscripts to help us to name these strings, just so that we can reserve subscripts to refer to the individual bits of those strings. So these aren't exponents or anything like that,
+
+01:11:43
+these are just the names that we're giving to these k strings. Each one has length n because we got them from running the circuit for Simon's algorithm. So we can write down the individual bits of these k strings like you see right here. What we do now is to create a matrix m, where each entry of this matrix is a bit, and we get these bits from the strings that we just measured, just like as shown right here. So this matrix has k rows and n columns, and its entries are all binary values.
+
+01:12:23
+Now, we don't know what s is. That's what we're trying to find, but just imagine for a moment that we did know s, and we formed a column vector from the bits of s, just like is shown right here. If we were to multiply that vector by m and then take the result modulo-2, or another way of saying that is that we replace addition with the eXclusive OR, then we will necessarily get the all-zero vector. That's because each of the entries in this resulting vector is none other than the binary dot product of s
+
+01:12:58
+with one of the rows of m. If S happens to be the all-zero string, we'll always get the zero vector from the binary dot product. And if s is not the all-zero string, we'll get this from what we know about the probabilities for the strings y1 through yk to appear. In particular, the binary dot product with s is always zero for all of these strings. A simple way of saying that is that this vector formed from the bits of s is always in the null space of the matrix m, assuming that we're doing all of our arithmetic modulo-2,
+
+01:13:34
+but of course, we don't know what s is, we're trying to find s. But what we can do is that we can compute the null space of this matrix m, once again, modulo-2. Specifically, we can do that using the technique of Gaussian elimination, which is the procedure that's often taught in introductory linear algebra courses. It works perfectly well when we do all of our arithmetic modulo-2, and it can be done quite efficiently with a computer. And if we compute the null space of m, given the specific way
+
+01:14:09
+that these k strings have been randomly chosen, we will be able to recover s with probability greater than 1 minus 2 to the negative r. To be specific, what we will see with probability greater than 1 minus 2 to the negative r is that the null space includes the all-zero vector, as it always does for every matrix, as well as the vector corresponding to s, whether it's the all-zero vector or not. And most importantly, no other vectors will appear in the null space. It's actually not too hard to prove this,
+
+01:14:41
+although I won't go through it in detail. The idea is that if we have some other string that isn't the all-zero vector and it isn't s, then each one of the random strings, y1 through yk, is basically going to knock it out of the null space with probability a half. So after k shots, it's not at all likely to survive, and in fact, none of the strings that don't belong are likely to survive. And a very simple fact from probability theory, known as the union bound, can be used to establish that.
+
+01:15:15
+I haven't explained all of the details here, but hopefully, you get the idea that by computing the null space modulo-2 of this matrix m, we are very likely to recover s, and that's how Simon's algorithm solves Simon's problem. There's just one thing left to say about Simon's problem, and it concerns the classical difficulty of this problem, that is, how many queries does a classical query algorithm need to solve Simon's problem? The answer is, a lot, in general. There are different precise statements that can be made
+
+01:15:52
+about the classical difficulty of this problem, and here's just one of them. If we have any probabilistic query algorithm and that algorithm makes fewer than 2 to the power n over 2 minus 1, minus 1 queries, so that's a number of queries that's exponential in n, then that algorithm will fail to solve Simon's problem, with probability at least a half. Sometimes, proving impossibility results like this can be very challenging, but this one isn't too difficult to prove through an elementary probabilistic analysis.
+
+01:16:31
+I won't do that in this video lesson, and I'll just instead focus on the intuition behind it. We're trying to find the hidden string s, but so long as we don't query the function on two strings having the same output value, we'll get very limited information about s. Basically, all we learn is that the hidden string s is not the eXclusive OR of any two distinct strings that we've queried, And if we query the function at fewer than this number of queries, there will still be a lot of choices of s
+
+01:17:06
+that haven't been ruled out. This isn't a formal proof, but that is the basic idea. So in summary, Simon's algorithm provides us with a striking advantage of quantum over classical algorithms within the query model. In particular, Simon's algorithm solves Simon's problem with a number of queries that's linear in the number of input bits n to our function, whereas any classical algorithm, even if it's probabilistic, needs to make a number of queries that's exponential in n
+
+01:17:40
+in order to solve Simon's problem with a reasonable probability of success. It's true that Simon's problem is a somewhat artificial problem that presumably nobody really wants to solve, but that's secondary. Sometimes ideas need to be developed before they're put into practice. And indeed, Peter Shor has clearly stated that it was Simon's algorithm that inspired his now famous quantum algorithm for integer factorization, which we'll see in a couple of lessons. And that is the end of Lesson 5.
+
+01:18:17
+In this lesson, we've taken a look at the query model of computation, and we've seen a progression of examples of quantum algorithms that exhibit advantages over classical algorithms within this model. There is, in fact, a lot more known about the query model and quantum algorithms for other problems that I've not discussed. So if you find this model to be interesting, there's quite a lot more to learn about it. Our next step will be to move away from the query model and toward a model of computation that's more representative
+
+01:18:50
+of the sorts of problems that we might hope to solve in practice. I hope you'll join me for Lesson 6, where will focus mainly on laying down a foundation for studying quantum algorithms. And from there, we'll move on to some specific quantum algorithms, including Shor's algorithm for integer factorization in subsequent lessons. Goodbye until then!
+

@@ -1,0 +1,187 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\titleformat{\section}{\large\bfseries}{Lecture 10.\thesection}{1em}{}
+
+\title{\textbf{Lecture 10: Quantum Channels} \\ \large Understanding Quantum Information \& Computation}
+\author{Based on the lectures by John Watrous (IBM Quantum)}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------
+\section{Overview}
+%----------------------------------------------------------------------
+
+In the simplified description of quantum information, the only allowable state changes are unitary operations.  In reality, quantum systems interact with their environments, leading to \textbf{noise} and \textbf{decoherence}.  This lecture introduces \textbf{quantum channels}---the most general physically realisable transformations on quantum states described by density matrices.
+
+%----------------------------------------------------------------------
+\section{Motivation}
+%----------------------------------------------------------------------
+
+A unitary operation $\rho\mapsto U\rho\,U^\dagger$ is deterministic and reversible.  Many physical processes are neither:
+\begin{itemize}
+    \item A qubit interacting with a thermal bath.
+    \item Transmission of a photon through a lossy fibre.
+    \item Discarding part of a composite system (partial trace).
+\end{itemize}
+
+All of these are described by quantum channels.
+
+%----------------------------------------------------------------------
+\section{Definition of a Quantum Channel}
+%----------------------------------------------------------------------
+
+\begin{definition}[Quantum channel]
+A \textbf{quantum channel} is a linear map $\Phi$ from density matrices on an input system $X$ to density matrices on an output system $Y$ satisfying:
+\begin{enumerate}
+    \item \textbf{Completely positive (CP):} $\Phi\otimes\mathrm{id}_R$ maps positive semidefinite operators to positive semidefinite operators for every reference system $R$.
+    \item \textbf{Trace-preserving (TP):} $\tr\bigl(\Phi(\rho)\bigr)=\tr(\rho)$ for all $\rho$.
+\end{enumerate}
+A map satisfying both conditions is called a \textbf{CPTP map}.
+\end{definition}
+
+\begin{remark}
+Complete positivity is strictly stronger than positivity.  The transpose map $\rho\mapsto\rho^T$ is positive but \emph{not} completely positive---it fails when tensored with an identity on an entangled reference system.
+\end{remark}
+
+%----------------------------------------------------------------------
+\section{Representations of Quantum Channels}
+%----------------------------------------------------------------------
+
+\subsection{Kraus (Operator-Sum) Representation}
+
+\begin{theorem}
+A linear map $\Phi$ is a quantum channel if and only if there exist operators $\{K_1,\dots,K_r\}$ (called \textbf{Kraus operators}) satisfying
+\[
+    \Phi(\rho) = \sum_{k=1}^{r}K_k\,\rho\,K_k^\dagger,
+    \qquad\text{with}\quad
+    \sum_{k=1}^{r}K_k^\dagger K_k = I.
+\]
+\end{theorem}
+
+The trace-preserving condition $\sum_k K_k^\dagger K_k=I$ ensures $\tr(\Phi(\rho))=\tr(\rho)$.
+
+\begin{example}[Unitary channel]
+$\Phi(\rho)=U\rho\,U^\dagger$.  Single Kraus operator $K_1=U$.
+\end{example}
+
+\subsection{Stinespring (Unitary Dilation) Representation}
+
+\begin{theorem}[Stinespring]
+Every quantum channel $\Phi$ on system $X$ can be realised as:
+\begin{enumerate}
+    \item Introduce an environment system $E$ initialised in a fixed state $\ket{0}_E$.
+    \item Apply a joint unitary $V$ on $XE$.
+    \item Discard (trace out) the environment.
+\end{enumerate}
+That is,
+\[
+    \Phi(\rho) = \tr_E\!\bigl(V(\rho\otimes\ket{0}\!\bra{0}_E)V^\dagger\bigr).
+\]
+\end{theorem}
+
+This is the physical picture: the system interacts unitarily with an environment, and the environment is then inaccessible.
+
+\subsection{Choi Representation}
+
+The \textbf{Choi matrix} of $\Phi$ is
+\[
+    J(\Phi) = \sum_{a,b}\Phi(\ket{a}\!\bra{b})\otimes\ket{a}\!\bra{b}.
+\]
+$\Phi$ is completely positive iff $J(\Phi)\succeq 0$, and trace-preserving iff $\tr_Y(J(\Phi))=I_X$.
+
+%----------------------------------------------------------------------
+\section{Important Examples of Quantum Channels}
+%----------------------------------------------------------------------
+
+\subsection{Depolarising Channel}
+
+\[
+    \Phi_p(\rho) = (1-p)\,\rho + \frac{p}{3}\bigl(X\rho X + Y\rho Y + Z\rho Z\bigr),
+    \qquad p\in[0,1].
+\]
+Equivalently, $\Phi_p(\rho)=(1-\tfrac{4p}{3})\rho + \tfrac{4p}{3}\cdot\tfrac{I}{2}$.  With probability $p$, a random Pauli error occurs.
+
+\subsection{Dephasing (Phase Damping) Channel}
+
+\[
+    \Phi_p(\rho) = (1-p)\,\rho + p\,Z\rho Z.
+\]
+Destroys off-diagonal coherences while leaving populations unchanged.
+
+\subsection{Amplitude Damping Channel}
+
+Models energy relaxation (e.g.\ spontaneous emission).  Kraus operators:
+\[
+    K_0 = \begin{pmatrix}1&0\\0&\sqrt{1-\gamma}\end{pmatrix},
+    \qquad
+    K_1 = \begin{pmatrix}0&\sqrt{\gamma}\\0&0\end{pmatrix},
+    \qquad\gamma\in[0,1].
+\]
+
+\subsection{Erasure Channel}
+
+With probability $p$, the qubit is replaced by a ``flag'' state $\ket{e}$ orthogonal to the qubit space, signalling that erasure occurred.
+
+\subsection{Partial Trace as a Channel}
+
+For a bipartite system $XY$, $\Phi(\rho_{XY})=\tr_Y(\rho_{XY})$ is a valid quantum channel from $XY$ to $X$.
+
+%----------------------------------------------------------------------
+\section{Properties of Quantum Channels}
+%----------------------------------------------------------------------
+
+\begin{itemize}
+    \item \textbf{Composition:} the composition of two channels is a channel.
+    \item \textbf{Convexity:} a probabilistic mixture $p\,\Phi_1+(1-p)\Phi_2$ of channels is a channel.
+    \item \textbf{Tensor products:} $\Phi_1\otimes\Phi_2$ (independent channels on separate systems) is a channel.
+    \item Channels map the set of density matrices into itself.
+    \item Unitary channels are the only \emph{reversible} channels.
+\end{itemize}
+
+%----------------------------------------------------------------------
+\section{Quantum Channels and the Simplified Description}
+%----------------------------------------------------------------------
+
+In the simplified description, the state-change rule is $\ket{\psi}\mapsto U\ket{\psi}$ (or $\rho\mapsto U\rho U^\dagger$).  This corresponds to a channel with a single Kraus operator.  The general description strictly extends this:
+
+\begin{center}
+\begin{tabular}{lcc}
+\hline
+& \textbf{Simplified} & \textbf{General} \\\hline
+Operations & Unitary $U$ & Quantum channel $\Phi$ (CPTP) \\
+Reversible? & Always & Only if unitary \\
+Noise modelling & No & Yes \\
+Discarding subsystems & Not described & Partial trace \\
+\hline
+\end{tabular}
+\end{center}
+
+%----------------------------------------------------------------------
+\section{Summary}
+%----------------------------------------------------------------------
+
+\begin{itemize}
+    \item A \textbf{quantum channel} (CPTP map) is the most general physically allowed transformation of quantum states.
+    \item Equivalent representations: \textbf{Kraus operators}, \textbf{Stinespring dilation}, \textbf{Choi matrix}.
+    \item Key examples: depolarising, dephasing, amplitude damping, erasure, partial trace.
+    \item Unitary evolution is the special case of a channel with one Kraus operator; all other channels are irreversible and model noise.
+\end{itemize}
+
+\end{document}

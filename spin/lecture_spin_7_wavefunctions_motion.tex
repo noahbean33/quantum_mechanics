@@ -1,0 +1,277 @@
+\documentclass[11pt,a4paper]{article}
+
+% --- Packages ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{geometry}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\usepackage{mathtools}
+
+\geometry{margin=1in}
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{Quantum Spin Lecture Notes}
+\lhead{Lecture 7: Wavefunctions \& Motion in a Magnetic Field}
+\cfoot{\thepage}
+
+% --- Theorem Environments ---
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{corollary}{Corollary}[section]
+\theoremstyle{remark}
+\newtheorem{remark}{Remark}[section]
+
+\title{\textbf{Quantum Spin (7): Wavefunctions \& Motion in a Magnetic Field}}
+\author{Lecture Notes on Quantum Spin}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+% ============================================================
+\section{Particle Motion Without Spin}
+% ============================================================
+
+Up to this point, we have treated the electron as a stationary object with a spin state $\ket{\psi} \in \mathbb{C}^2$. We now address how electrons \emph{move} through space.
+
+\subsection{The Wavefunction}
+
+\begin{definition}[Wavefunction]
+    The state of a spinless quantum particle is described by a \textbf{wavefunction} $\psi(t, \vec{x})$, where $t \in \mathbb{R}$ is time and $\vec{x} = (x,y,z) \in \mathbb{R}^3$ is position. The wavefunction outputs a complex number:
+    \[
+        \psi : \mathbb{R} \times \mathbb{R}^3 \to \mathbb{C}.
+    \]
+\end{definition}
+
+\begin{definition}[Probability Density]
+    The quantity $|\psi(t, \vec{x})|^2$ is the \textbf{probability density} of finding the particle at position $\vec{x}$ at time $t$. Concretely, the probability of finding the particle in an infinitesimal volume $dV$ around $\vec{x}$ is:
+    \[
+        P(\vec{x} \in dV) = |\psi(t, \vec{x})|^2\, dV.
+    \]
+\end{definition}
+
+\subsection{Normalization}
+
+The total probability of finding the particle \emph{somewhere} in all of space must be $1$:
+\[
+    \int_{\mathbb{R}^3} |\psi(t, \vec{x})|^2\, d^3x = 1 \quad \text{for all } t.
+\]
+
+\subsection{The Free-Particle Schr\"odinger Equation}
+
+The wavefunction evolves according to the \textbf{Schr\"odinger equation} (for a free particle, no external potential):
+\[
+    \boxed{i\hbar\frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2 \psi,}
+\]
+where $\nabla^2 = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}$ is the Laplacian and $m$ is the particle mass.
+
+\subsection{Connection to Classical Kinetic Energy}
+
+Classically, kinetic energy is $T = \frac{p^2}{2m} = \frac{p_x^2 + p_y^2 + p_z^2}{2m}$. In quantum mechanics, momentum becomes a differential operator:
+\[
+    \hat{p}_x = \frac{\hbar}{i}\frac{\partial}{\partial x}, \qquad \hat{p}_x^2 = -\hbar^2 \frac{\partial^2}{\partial x^2}.
+\]
+The right-hand side of the Schr\"odinger equation is thus the quantum kinetic energy operator acting on $\psi$.
+
+% ============================================================
+\section{Gaussian Wave Packets}
+% ============================================================
+
+\subsection{An Important Solution}
+
+A particularly important solution to the free-particle Schr\"odinger equation is the \textbf{Gaussian wave packet}:
+\[
+    \psi(t, \vec{x}) = \frac{\pi^{-3/4}\,\sigma^{-3/2}}{c(t)^{3/2}} \exp\!\left[-\frac{|\vec{x}|^2}{2\sigma^2 c(t)} + \frac{i\,\vec{p}\cdot\vec{x}}{\hbar} - \frac{i\,|\vec{p}|^2 t}{2m\hbar\,c(t)}\right],
+\]
+where:
+\begin{itemize}
+    \item $\sigma > 0$ is the \textbf{initial position uncertainty} (width at $t=0$),
+    \item $\vec{p} = (p_x, p_y, p_z) \in \mathbb{R}^3$ is the \textbf{momentum} (determines the velocity),
+    \item $c(t) = 1 + \frac{i\hbar t}{m\sigma^2}$ is a time-dependent complex factor.
+\end{itemize}
+
+\subsection{Probability Density}
+
+The probability density $|\psi(t, \vec{x})|^2$ is a Gaussian (bell curve) centered at $\vec{x}_{\text{peak}} = \frac{\vec{p}\,t}{m}$:
+\[
+    |\psi(t, \vec{x})|^2 \propto \exp\!\left[-\frac{|\vec{x} - \vec{p}t/m|^2}{\sigma^2 + (\hbar t / m\sigma)^2}\right].
+\]
+
+Key features:
+\begin{enumerate}
+    \item \textbf{Center:} The peak moves at the classical velocity $\vec{v} = \vec{p}/m$.
+    \item \textbf{Width:} The spatial spread at time $t$ is $\Delta x(t) = \sqrt{\sigma^2 + \left(\frac{\hbar t}{m\sigma}\right)^2}$.
+    \item At $t = 0$: $\Delta x(0) = \sigma$ (the initial uncertainty).
+    \item As $t \to \infty$: $\Delta x \approx \frac{\hbar t}{m\sigma}$ (the wave packet spreads).
+\end{enumerate}
+
+\subsection{Real and Imaginary Parts}
+
+While the envelope $|\psi|$ moves smoothly to the right and broadens, the real and imaginary parts of $\psi$ oscillate rapidly. The oscillation frequency encodes the velocity: higher velocity $\Rightarrow$ faster oscillation.
+
+% ============================================================
+\section{Particle Motion with Spin}
+% ============================================================
+
+\subsection{Two-Component Wavefunctions}
+
+When a particle has both spatial degrees of freedom \emph{and} spin, the state is described by a \textbf{two-component wavefunction} (a spinor-valued wavefunction):
+\[
+    \ket{\Psi(t, \vec{x})} = \begin{pmatrix} \psi_\uparrow(t, \vec{x}) \\ \psi_\downarrow(t, \vec{x}) \end{pmatrix},
+\]
+where $\psi_\uparrow$ and $\psi_\downarrow$ are each complex-valued functions of $(t, \vec{x})$.
+
+\subsection{Interpretation}
+
+\begin{itemize}
+    \item $|\psi_\uparrow(t, \vec{x})|^2$: probability density of finding the particle at $\vec{x}$, at time $t$, with spin \textbf{up} along $z$.
+    \item $|\psi_\downarrow(t, \vec{x})|^2$: probability density of finding the particle at $\vec{x}$, at time $t$, with spin \textbf{down} along $z$.
+\end{itemize}
+
+For other spin axes, form linear combinations. For example, the probability density of finding the particle at $\vec{x}$ with spin up along $x$:
+\[
+    P(\vec{x}, \uparrow_x) = \left|\frac{1}{\sqrt{2}}\psi_\uparrow(t, \vec{x}) + \frac{1}{\sqrt{2}}\psi_\downarrow(t, \vec{x})\right|^2.
+\]
+
+\subsection{Normalization}
+
+\[
+    \int_{\mathbb{R}^3}\!\Bigl(|\psi_\uparrow(t, \vec{x})|^2 + |\psi_\downarrow(t, \vec{x})|^2\Bigr)\,d^3x = 1 \quad \text{for all } t.
+\]
+
+% ============================================================
+\section{The Pauli Equation}
+% ============================================================
+
+The time evolution of a spin-$\frac{1}{2}$ charged particle in an electromagnetic field is governed by the \textbf{Pauli equation}:
+\[
+    \boxed{i\hbar\frac{\partial}{\partial t}\begin{pmatrix}\psi_\uparrow \\ \psi_\downarrow\end{pmatrix} = \left[\frac{1}{2m}\!\left(\frac{\hbar}{i}\vec{\nabla} - q\vec{A}\right)^{\!2} I + q\Phi\, I + \frac{q}{2m}\hbar\,\vec{B}\cdot\vec{\sigma}\right]\begin{pmatrix}\psi_\uparrow \\ \psi_\downarrow\end{pmatrix},}
+\]
+where $I$ is the $2 \times 2$ identity matrix.
+
+\subsection{Terms in the Pauli Equation}
+
+\begin{enumerate}[label=\textbf{Term \arabic*:}]
+    \item $\displaystyle\frac{1}{2m}\!\left(\frac{\hbar}{i}\vec{\nabla} - q\vec{A}\right)^{\!2}I$: \textbf{Kinetic energy} including the magnetic vector potential $\vec{A}$ (where $\vec{B} = \nabla \times \vec{A}$). This term:
+    \begin{itemize}
+        \item Governs the spatial motion of the particle.
+        \item Encodes the \textbf{Lorentz force}: $\vec{F} = q\vec{v}\times\vec{B}$.
+        \item Multiplies the identity matrix $I$ (acts on both spin components equally).
+    \end{itemize}
+
+    \item $q\Phi\, I$: \textbf{Electric potential energy}, where $\vec{E} = -\nabla\Phi - \frac{\partial\vec{A}}{\partial t}$. Encodes the \textbf{electric force}: $\vec{F} = q\vec{E}$.
+
+    \item $\displaystyle\frac{q}{2m}\hbar\,\vec{B}\cdot\vec{\sigma}$: \textbf{Spin--magnetic field coupling} (with $g \approx 2$). This is the term we studied in previous lectures. It:
+    \begin{itemize}
+        \item Couples the two spin components $\psi_\uparrow$ and $\psi_\downarrow$.
+        \item Causes spin precession (Larmor precession).
+        \item Gives rise to the \textbf{force on a magnetic moment}: $\vec{F} = \nabla(\vec{\mu}\cdot\vec{B})$ when $\vec{B}$ varies in space.
+    \end{itemize}
+\end{enumerate}
+
+\begin{remark}
+    In the earlier lectures (Lectures 4--6), we studied only Term 3 in isolation, treating the electron as stationary. The Pauli equation is the full picture incorporating spatial motion.
+\end{remark}
+
+% ============================================================
+\section{Force on a Magnetic Moment: $\vec{F} = \nabla(\vec{\mu}\cdot\vec{B})$}
+% ============================================================
+
+\subsection{Qualitative Picture}
+
+When a current loop (or spinning charge) with magnetic moment $\vec{\mu}$ is placed in a \emph{spatially varying} magnetic field $\vec{B}(\vec{x})$:
+\begin{itemize}
+    \item If $\vec{B}$ is uniform: no net force (only torque $\Rightarrow$ precession).
+    \item If $\vec{B}$ varies in space: there is a net force.
+\end{itemize}
+
+Consider a current loop in a field that is stronger at the bottom than the top. The field lines splay outward, creating lateral force components on the current. Using the Lorentz force $\vec{F} = q\vec{v}\times\vec{B}$ on each segment of the loop and summing, one finds a net downward force.
+
+\subsection{Derivation for a Square Current Loop}
+
+Consider a square loop with side $L$, current $I = Qv/(4L)$, area $A = L^2$, centered at the origin in the $xy$-plane, with $\vec{\mu} = IA\,\hat{z}$.
+
+The magnetic field on each segment is found by Taylor expansion to first order in $L$:
+\begin{align}
+    \vec{B}\big|_{\text{bottom}} &\approx \vec{B}_0 + \frac{L}{2}\partial_x\vec{B}, &
+    \vec{B}\big|_{\text{top}} &\approx \vec{B}_0 - \frac{L}{2}\partial_x\vec{B}, \\
+    \vec{B}\big|_{\text{right}} &\approx \vec{B}_0 - \frac{L}{2}\partial_y\vec{B}, &
+    \vec{B}\big|_{\text{left}} &\approx \vec{B}_0 + \frac{L}{2}\partial_y\vec{B}.
+\end{align}
+
+Computing $\vec{F} = (Q/4)\vec{v}\times\vec{B}$ on each segment and summing:
+\[
+    \vec{F}_{\text{net}} = \frac{QvL}{4}\begin{pmatrix}\partial_x B_z \\ \partial_y B_z \\ -\partial_x B_x - \partial_y B_y\end{pmatrix}.
+\]
+
+Using Maxwell's equation $\nabla\cdot\vec{B} = 0$ (i.e., $\partial_x B_x + \partial_y B_y + \partial_z B_z = 0$):
+\[
+    -\partial_x B_x - \partial_y B_y = \partial_z B_z.
+\]
+
+Since $\vec{\mu}\cdot\vec{B} = IAB_z$ and $IA = QvL/4$:
+\[
+    \boxed{\vec{F}_{\text{net}} = \nabla(\vec{\mu}\cdot\vec{B}).}
+\]
+
+\begin{remark}
+    This result crucially depends on $\nabla\cdot\vec{B} = 0$ (no magnetic monopoles). Without this Maxwell equation, the $z$-component would not simplify correctly.
+\end{remark}
+
+\subsection{Generalization}
+
+The force law $\vec{F} = \nabla(\vec{\mu}\cdot\vec{B})$ is valid for:
+\begin{itemize}
+    \item Any shape of current loop (decompose into tiny squares; internal currents cancel).
+    \item A charged spinning sphere with uniform charge-to-mass ratio (decompose into spinning rings).
+    \item A quantum spin-$\frac{1}{2}$ particle (via the Pauli equation).
+\end{itemize}
+
+\subsection{Quick Derivation via Potential Energy}
+
+From earlier lectures: $U = -\vec{\mu}\cdot\vec{B}$. The force is:
+\[
+    \vec{F} = -\nabla U = \nabla(\vec{\mu}\cdot\vec{B}).
+\]
+
+This recovers the same result in one line, though the direct Lorentz-force derivation provides more physical insight.
+
+% ============================================================
+\section{Classical Intuition for Quantum Wave Packets}
+% ============================================================
+
+For Gaussian wave packets, the average position evolves approximately according to classical mechanics:
+\begin{itemize}
+    \item The \textbf{Lorentz force} $\vec{F} = q\vec{v}\times\vec{B}$ deflects the wave packet's trajectory (from Term 1).
+    \item The \textbf{electric force} $\vec{F} = q\vec{E}$ accelerates the wave packet (from Term 2).
+    \item The \textbf{magnetic moment force} $\vec{F} = \nabla(\vec{\mu}\cdot\vec{B})$ deflects the wave packet depending on its spin (from Term 3).
+\end{itemize}
+
+This classical-quantum correspondence (Ehrenfest's theorem) allows us to understand qualitatively how quantum particles move without solving the full Pauli equation.
+
+% ============================================================
+\section{Preview: The Stern--Gerlach Experiment}
+% ============================================================
+
+The magnetic moment force provides the mechanism for the \textbf{Stern--Gerlach experiment}:
+
+\begin{enumerate}
+    \item A particle emitter sends a spin-$\frac{1}{2}$ particle (as a wave packet) into a region with a spatially varying magnetic field ($\partial B_z/\partial z \neq 0$).
+    \item The spin-up component $\psi_\uparrow$ feels an upward force; the spin-down component $\psi_\downarrow$ feels a downward force.
+    \item The two components spatially separate, hitting a detector screen at distinct locations.
+    \item This spatial separation constitutes a \textbf{measurement of spin}.
+\end{enumerate}
+
+Classically, a spinning object could have angular momentum pointing in \emph{any} direction, so one would expect a continuous distribution on the screen. Quantum mechanically, only two spots appear --- direct evidence of spin quantization.
+
+\end{document}

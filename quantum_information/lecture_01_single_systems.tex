@@ -1,0 +1,385 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\titleformat{\section}{\large\bfseries}{Lecture 1.\thesection}{1em}{}
+
+\title{\textbf{Lecture 1: Single Systems} \\ \large Understanding Quantum Information \& Computation}
+\author{Based on the lectures by John Watrous (IBM Quantum)}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------
+\section{Overview}
+%----------------------------------------------------------------------
+
+This lecture introduces the mathematical framework for describing quantum information in the setting of a \emph{single} system in isolation.  We begin with classical information---not because classical information is the end goal, but because it serves as a familiar point of reference whose mathematical structure closely parallels the quantum description.  Two key themes run throughout:
+
+\begin{enumerate}[label=(\roman*)]
+    \item Quantum information is an \emph{extension} of classical information, not something separate.
+    \item The \textbf{Dirac notation} provides a uniform language for both settings.
+\end{enumerate}
+
+We work exclusively within the \emph{simplified description} of quantum information (state vectors and unitary matrices) as opposed to the general description (density matrices and channels), which is deferred to a later unit.
+
+%----------------------------------------------------------------------
+\section{Classical Information}
+%----------------------------------------------------------------------
+
+\subsection{Classical States}
+
+\begin{definition}[Classical state set]
+Let $X$ be a physical system.  A \textbf{classical state} of $X$ is a configuration that can be recognised and described unambiguously.  The set of all classical states of $X$ is denoted $\Sigma$ and is assumed to be a \emph{finite, non-empty} set.
+\end{definition}
+
+\begin{example}\leavevmode
+\begin{enumerate}
+    \item \textbf{Bit.}  $\Sigma = \{0,1\}$ (the \emph{binary alphabet}).
+    \item \textbf{Six-sided die.}  $\Sigma = \{1,2,3,4,5,6\}$.
+    \item \textbf{Fan switch.}  $\Sigma = \{\text{high}, \text{medium}, \text{low}, \text{off}\}$.
+\end{enumerate}
+\end{example}
+
+\subsection{Probabilistic States}
+
+In many information-processing situations there is \emph{uncertainty} about which classical state a system is in.
+
+\begin{definition}[Probability vector]
+A \textbf{probability vector} is a column vector whose entries are non-negative real numbers that sum to $1$.  A probabilistic state of a system $X$ with classical state set $\Sigma$ is represented by a probability vector indexed by $\Sigma$.
+\end{definition}
+
+\begin{example}
+If $X$ is a bit and $\Pr(X=0)=\tfrac{3}{4}$, $\Pr(X=1)=\tfrac{1}{4}$, then the probabilistic state is
+\[
+    \begin{pmatrix} 3/4 \\ 1/4 \end{pmatrix}.
+\]
+\end{example}
+
+%----------------------------------------------------------------------
+\section{Dirac Notation --- Part I: Kets}
+%----------------------------------------------------------------------
+
+\begin{definition}[Ket / standard basis vector]
+Given a classical state set $\Sigma$ with a fixed ordering, for every $a\in\Sigma$ the symbol
+\[
+    \ket{a}
+\]
+(read ``ket $a$'') denotes the column vector with a $1$ in the entry corresponding to $a$ and $0$ elsewhere.  These vectors are called \textbf{standard basis vectors}.
+\end{definition}
+
+\begin{example}
+For the binary alphabet with the ordering $0<1$:
+\[
+    \ket{0} = \begin{pmatrix}1\\0\end{pmatrix}, \qquad
+    \ket{1} = \begin{pmatrix}0\\1\end{pmatrix}.
+\]
+\end{example}
+
+\begin{example}
+For the card-suit set $\Sigma=\{\clubsuit,\diamondsuit,\heartsuit,\spadesuit\}$ in alphabetical order:
+\[
+    \ket{\clubsuit}=\begin{pmatrix}1\\0\\0\\0\end{pmatrix},\quad
+    \ket{\diamondsuit}=\begin{pmatrix}0\\1\\0\\0\end{pmatrix},\quad
+    \ket{\heartsuit}=\begin{pmatrix}0\\0\\1\\0\end{pmatrix},\quad
+    \ket{\spadesuit}=\begin{pmatrix}0\\0\\0\\1\end{pmatrix}.
+\]
+\end{example}
+
+Every vector can be expressed uniquely as a linear combination of standard basis vectors:
+\[
+    \begin{pmatrix}3/4\\1/4\end{pmatrix}
+    = \frac{3}{4}\ket{0}+\frac{1}{4}\ket{1}.
+\]
+
+%----------------------------------------------------------------------
+\section{Measurements in the Classical Setting}
+%----------------------------------------------------------------------
+
+When we \emph{measure} a system in a probabilistic state, we observe a definite classical state $a\in\Sigma$ chosen at random according to the probabilities.  After the measurement, our knowledge updates: the new probabilistic state is $\ket{a}$ (certainty that the system is in state $a$).
+
+\begin{example}
+For a bit in the probabilistic state $\frac{3}{4}\ket{0}+\frac{1}{4}\ket{1}$:
+\begin{itemize}
+    \item With probability $\tfrac{3}{4}$, we observe $0$ and the state becomes $\ket{0}$.
+    \item With probability $\tfrac{1}{4}$, we observe $1$ and the state becomes $\ket{1}$.
+\end{itemize}
+\end{example}
+
+%----------------------------------------------------------------------
+\section{Deterministic Operations}
+%----------------------------------------------------------------------
+
+\begin{definition}
+A \textbf{deterministic operation} on a system with classical state set $\Sigma$ is described by a function $f:\Sigma\to\Sigma$.  It transforms the classical state $a$ into $f(a)$.
+\end{definition}
+
+Every such function has a unique matrix representation $M$ satisfying
+\[
+    M\ket{a} = \ket{f(a)} \quad \forall\, a\in\Sigma,
+\]
+with entries
+\[
+    M_{b,a} = \begin{cases} 1 & \text{if } b = f(a),\\ 0 & \text{otherwise}.\end{cases}
+\]
+
+\begin{example}[Functions on a single bit]
+There are exactly four functions $f:\{0,1\}\to\{0,1\}$:
+\[
+\begin{array}{c|c|c}
+    \text{Name} & f(0) & f(1) \\\hline
+    f_1\text{ (constant 0)} & 0 & 0 \\
+    f_2\text{ (identity)}   & 0 & 1 \\
+    f_3\text{ (NOT / bit flip)} & 1 & 0 \\
+    f_4\text{ (constant 1)} & 1 & 1
+\end{array}
+\]
+Their matrix representations are
+\[
+    M_1 = \begin{pmatrix}1&1\\0&0\end{pmatrix},\;
+    M_2 = \begin{pmatrix}1&0\\0&1\end{pmatrix},\;
+    M_3 = \begin{pmatrix}0&1\\1&0\end{pmatrix},\;
+    M_4 = \begin{pmatrix}0&0\\1&1\end{pmatrix}.
+\]
+\end{example}
+
+If a system is in a probabilistic state $v$, performing the deterministic operation $M$ yields the new probabilistic state $Mv$.
+
+%----------------------------------------------------------------------
+\section{Dirac Notation --- Part II: Bras and Brackets}
+%----------------------------------------------------------------------
+
+\begin{definition}[Bra]
+For every $a\in\Sigma$, the symbol
+\[
+    \bra{a}
+\]
+(read ``bra $a$'') denotes the \emph{row} vector with a $1$ in the entry corresponding to $a$ and $0$ elsewhere.  It is the transpose of $\ket{a}$.
+\end{definition}
+
+\paragraph{Inner product of standard basis vectors.}
+\[
+    \braket{a}{b} = \begin{cases} 1 & a=b,\\ 0 & a\neq b.\end{cases}
+\]
+The notation $\braket{a}{b}$ is the origin of the term \emph{bracket} (bra + ket).
+
+\paragraph{Outer products.}
+The product $\ket{a}\!\bra{b}$ is a matrix with a $1$ in the $(a,b)$ entry and $0$ elsewhere.  Any deterministic operation matrix can therefore be written
+\[
+    M = \sum_{a\in\Sigma} \ket{f(a)}\!\bra{a}.
+\]
+
+\begin{remark}
+One can verify $M\ket{a}=\ket{f(a)}$ directly:
+\[
+    M\ket{a} = \sum_{b\in\Sigma}\ket{f(b)}\!\braket{b}{a} = \ket{f(a)},
+\]
+since $\braket{b}{a}=\delta_{b,a}$.
+\end{remark}
+
+%----------------------------------------------------------------------
+\section{Probabilistic Operations and Stochastic Matrices}
+%----------------------------------------------------------------------
+
+\begin{definition}[Stochastic matrix]
+A matrix is \textbf{stochastic} if all entries are non-negative real numbers and each column sums to $1$ (i.e.\ every column is a probability vector).
+\end{definition}
+
+A probabilistic operation, one that may introduce randomness, is represented by a stochastic matrix.  Deterministic operations are the special case in which every column has exactly one non-zero entry (equal to~$1$).
+
+\begin{example}
+Consider the operation on a bit: if the bit is $0$, do nothing; if it is $1$, flip to $0$ with probability $\tfrac{1}{2}$, remain~$1$ with probability $\tfrac{1}{2}$.  Its matrix is
+\[
+    M = \begin{pmatrix}1 & 1/2 \\ 0 & 1/2\end{pmatrix}.
+\]
+\end{example}
+
+\paragraph{Composition of operations.}
+If $M_1,M_2,\dots,M_n$ are stochastic matrices representing operations performed in that order, the composed operation is
+\[
+    M_n \cdots M_2 \, M_1.
+\]
+Note the reversed order: the first operation is on the \emph{right}.  Stochastic matrices are \textbf{closed under multiplication}: any product of stochastic matrices is again stochastic.
+
+Matrix multiplication is \emph{not} commutative.  A concrete example: $M_1$ = constant~$0$, $M_3$ = NOT.  Then $M_3 M_1 \neq M_1 M_3$.
+
+%----------------------------------------------------------------------
+\section{Quantum States}
+%----------------------------------------------------------------------
+
+\begin{definition}[Quantum state vector]
+A \textbf{quantum state} of a system $X$ with classical state set $\Sigma$ is represented by a column vector
+\[
+    \ket{\psi} = \sum_{a\in\Sigma} \alpha_a \ket{a}, \qquad \alpha_a\in\mathbb{C},
+\]
+satisfying
+\[
+    \|\ket{\psi}\| \;=\; \sqrt{\sum_{a\in\Sigma}|\alpha_a|^2} \;=\; 1.
+\]
+That is, $\ket{\psi}$ is a unit vector with respect to the \textbf{Euclidean norm} (also called $\ell_2$-norm).  The complex numbers $\alpha_a$ are called \textbf{amplitudes}.
+\end{definition}
+
+\begin{remark}
+A probabilistic state is a special case of a quantum state in which every amplitude is a non-negative real number (so that amplitudes equal probabilities).
+\end{remark}
+
+\subsection{Qubit State Examples}
+
+A \textbf{qubit} (quantum bit) is a system with $\Sigma=\{0,1\}$.
+
+\begin{enumerate}
+    \item $\ket{0}$ and $\ket{1}$: standard basis states.
+    \item The \textbf{plus} and \textbf{minus} states:
+    \[
+        \ket{+} = \frac{1}{\sqrt{2}}\bigl(\ket{0}+\ket{1}\bigr), \qquad
+        \ket{-} = \frac{1}{\sqrt{2}}\bigl(\ket{0}-\ket{1}\bigr).
+    \]
+    \item An arbitrary qubit state:
+    \[
+        \ket{\psi} = \frac{1+2i}{3}\ket{0} - \frac{2}{3}\ket{1}.
+    \]
+    Verification: $\bigl|\tfrac{1+2i}{3}\bigr|^2 + \bigl|\tfrac{-2}{3}\bigr|^2 = \tfrac{5}{9}+\tfrac{4}{9}=1$.
+\end{enumerate}
+
+\subsection{Using Dirac Notation for Arbitrary Vectors}
+
+We may place \emph{any} label inside a ket: $\ket{\psi}$, $\ket{+}$, $\ket{-}$, etc.  The crucial rule is:
+
+\begin{center}
+\fbox{$\bra{\psi}$ is always the \textbf{conjugate transpose} of $\ket{\psi}$: \; $\bra{\psi} = \ket{\psi}^\dagger$.}
+\end{center}
+
+For example, if $\ket{\psi}=\frac{1+2i}{3}\ket{0}-\frac{2}{3}\ket{1}$, then
+\[
+    \bra{\psi} = \frac{1-2i}{3}\bra{0} - \frac{2}{3}\bra{1}.
+\]
+
+%----------------------------------------------------------------------
+\section{Standard Basis Measurements (Quantum Case)}
+%----------------------------------------------------------------------
+
+When we perform a \textbf{standard basis measurement} on a qubit in the state
+\[
+    \ket{\psi} = \alpha_0\ket{0}+\alpha_1\ket{1},
+\]
+the outcome is a classical state $a\in\{0,1\}$:
+\begin{itemize}
+    \item Outcome $a$ occurs with probability $|\alpha_a|^2$.
+    \item After obtaining outcome $a$, the state \emph{collapses} to $\ket{a}$.
+\end{itemize}
+
+\begin{example}
+Measuring $\ket{+}=\frac{1}{\sqrt{2}}(\ket{0}+\ket{1})$: each outcome has probability $\tfrac{1}{2}$.  Measuring $\ket{-}=\frac{1}{\sqrt{2}}(\ket{0}-\ket{1})$: same probabilities.  Hence a single standard basis measurement \emph{cannot} distinguish $\ket{+}$ from $\ket{-}$.
+\end{example}
+
+More generally, for a system with classical state set $\Sigma$ in the state $\ket{\psi}=\sum_a\alpha_a\ket{a}$:
+\[
+    \Pr(\text{outcome } a) = |\alpha_a|^2, \qquad \text{post-measurement state} = \ket{a}.
+\]
+
+%----------------------------------------------------------------------
+\section{Unitary Operations}
+%----------------------------------------------------------------------
+
+\begin{definition}[Unitary matrix]
+A square matrix $U$ with complex entries is \textbf{unitary} if
+\[
+    U^\dagger U = U\,U^\dagger = \mathbb{I},
+\]
+where $U^\dagger$ denotes the conjugate transpose.
+\end{definition}
+
+\begin{proposition}
+A matrix $U$ is unitary if and only if $\|U\ket{v}\|=\|\ket{v}\|$ for every vector $\ket{v}$.  In particular, $U$ maps quantum state vectors to quantum state vectors.
+\end{proposition}
+
+\begin{remark}
+This parallels the classical situation: stochastic matrices are precisely the matrices that map probability vectors to probability vectors; unitary matrices are precisely the matrices that map quantum state vectors to quantum state vectors.
+\end{remark}
+
+\subsection{Important Qubit Unitary Operations}
+
+\paragraph{Pauli matrices.}
+\[
+    \sigma_0 = I = \begin{pmatrix}1&0\\0&1\end{pmatrix},\quad
+    \sigma_x = X = \begin{pmatrix}0&1\\1&0\end{pmatrix},\quad
+    \sigma_y = Y = \begin{pmatrix}0&-i\\i&0\end{pmatrix},\quad
+    \sigma_z = Z = \begin{pmatrix}1&0\\0&-1\end{pmatrix}.
+\]
+Actions:
+\begin{itemize}
+    \item $X$ (\textbf{bit flip} / NOT): $X\ket{0}=\ket{1}$, $X\ket{1}=\ket{0}$.
+    \item $Z$ (\textbf{phase flip}): $Z\ket{0}=\ket{0}$, $Z\ket{1}=-\ket{1}$.
+\end{itemize}
+All Pauli matrices are both unitary \emph{and} Hermitian ($U^\dagger=U$, so $U^2=I$).
+
+\paragraph{Hadamard operation.}
+\[
+    H = \frac{1}{\sqrt{2}}\begin{pmatrix}1&1\\1&-1\end{pmatrix}.
+\]
+Action:
+\[
+    H\ket{0}=\ket{+},\quad H\ket{1}=\ket{-},\qquad
+    H\ket{+}=\ket{0},\quad H\ket{-}=\ket{1}.
+\]
+The Hadamard gate transforms between the standard basis and the $\{\ket{+},\ket{-}\}$ basis, enabling the discrimination of $\ket{+}$ and $\ket{-}$: apply $H$ first, then measure.
+
+\paragraph{Phase operations.}
+\[
+    P(\theta) = \begin{pmatrix}1&0\\0&e^{i\theta}\end{pmatrix}, \qquad \theta\in\mathbb{R}.
+\]
+Special cases:
+\begin{itemize}
+    \item $S$ gate ($\theta=\pi/2$): $S = \begin{pmatrix}1&0\\0&i\end{pmatrix}$.
+    \item $T$ gate ($\theta=\pi/4$): $T = \begin{pmatrix}1&0\\0&\frac{1+i}{\sqrt{2}}\end{pmatrix}$.
+\end{itemize}
+
+\subsection{Composition of Unitary Operations}
+
+If $U_1,U_2,\dots,U_n$ are performed in order, the combined operation is
+\[
+    U_n\cdots U_2\,U_1.
+\]
+Unitary matrices are \textbf{closed under multiplication}: $U_n\cdots U_1$ is always unitary.
+
+\begin{example}[Square root of NOT]
+Define
+\[
+    V = H\,S\,H = \frac{1}{2}\begin{pmatrix}1+i & 1-i \\ 1-i & 1+i\end{pmatrix}.
+\]
+Then $V^2 = X$ (the Pauli-$X$ / NOT gate).  There is no stochastic matrix with this property, illustrating a genuinely quantum phenomenon.
+\end{example}
+
+%----------------------------------------------------------------------
+\section{Summary}
+%----------------------------------------------------------------------
+
+\begin{center}
+\begin{tabular}{lcc}
+\hline
+ & \textbf{Classical} & \textbf{Quantum} \\\hline
+States & probability vectors & unit vectors ($\mathbb{C}$, Euclidean norm) \\
+Entries & non-negative reals (probabilities) & complex numbers (amplitudes) \\
+Normalization & $\sum_a p_a = 1$ & $\sum_a |\alpha_a|^2 = 1$ \\
+Measurement outcome $a$ & probability $p_a$ & probability $|\alpha_a|^2$ \\
+Operations & stochastic matrices & unitary matrices \\
+Closure & stochastic $\times$ stochastic $=$ stochastic & unitary $\times$ unitary $=$ unitary \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

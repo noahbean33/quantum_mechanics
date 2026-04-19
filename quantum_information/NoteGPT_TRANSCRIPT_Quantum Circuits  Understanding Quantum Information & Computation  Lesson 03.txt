@@ -1,0 +1,345 @@
+00:00:01
+- Welcome back to Understanding Quantum Information and Computation. My name is John Watrous and I'm the technical director for IBM Quantum Education. This is the third lesson of the series. In the first two lessons, we talked about the basics of quantum information. First for single systems in isolation and then for multiple systems. We also discussed standard basis measurements and unitary operations in both the single and multiple system settings. In this lesson, we'll introduce the quantum circuit model,
+
+00:00:32
+which gives us a standard way to describe quantum computations, and we can also use quantum circuits to describe quantum protocols and other sorts of interactions involving multiple quantum devices. In addition to quantum circuits, we'll also discuss some important mathematical concepts connected with quantum information, and we'll use them to observe a few fundamental limitations on quantum information and what we can do with quantum circuits. That'll set us up well for the lesson following this one
+
+00:00:59
+where we'll see a few very important examples and that will conclude the first unit of the series on the basics of quantum information. Here's an overview of the lesson. We'll start with the quantum circuit model and we'll see how it works. Then we'll talk about the critically important notion of an inner product, as well as orthonormality and projections, which are connected with inner products. We didn't discuss these things in the first two lessons, because we really didn't need to, but now we do.
+
+00:01:30
+Inner products provide us with a mathematical tool that we simply could not do without. We just would not get far in understanding quantum information and computation without inner products. And in the third part of the lesson, we'll take a look at a few important limitations of quantum information. Ultimately, what we want to do is to explore interesting things that we can do with quantum information, but in order to do this effectively, we need to be aware of some things that we can't do.
+
+00:01:57
+In particular, we'll discuss the notion of a global phase and why global phases are irrelevant. We'll see a statement of the no-cloning theorem, which tells us that quantum states can't be copied in general, and we'll see that two quantum states can't be perfectly discriminated from one another unless they're orthogonal, which is a fundamental limitation to be aware of. The first topic for the lesson is the quantum circuit model, which is a model of computation that provides us with a way
+
+00:02:25
+to describe quantum computations. The quantum circuit model is based on a more general notion in computer science of a circuit, and you can define many different models of computation based on this general notion. The basic idea is that a circuit is composed of wires which carry information, and gates, which represent operations that are applied to the information carried by the wires. The term circuit is actually kind of a strange name to use for this sort of a model because the word circuit usually refers to a circular path of some sort.
+
+00:03:02
+But when we talk about circuits as models of computation, we're usually talking about acyclic circuits where circular paths are not allowed. To be more precise, for the purposes of this series, we're going to demand that information always flows from left to right in any circuit. So if you prefer, you can think about circuits as describing sequences of operations where time goes from left to right. Here's an example of a Boolean circuit where the wires carry binary values, either zero or one,
+
+00:03:35
+and the gates represent Boolean logic operations. The wires are represented by lines, and here we have two input bits labeled X and Y, and if we want to know what the circuit does on a particular choice of inputs, we propagate the values on the wires from left to right, depending on the actions that the gates have on the values that are carried by the wires. So for instance, we can take a look at what happens when we start out with the top input wire set to the value one and the bottom input wire set to the value zero.
+
+00:04:08
+These two input wires lead into these two dots right here, which represent fan-out operations, which means that the value is copied so that it can be carried forward along multiple wires. So if we do this, then these two wires take the value one, which is the same as this one, and these two wires take the value zero, which is the same as this one. Here we have a NOT gate which is indicated by the symbol for logical negation, so the value that comes out is a zero, which is the logical negation of one.
+
+00:04:39
+And similarly, the value that comes out of this gate is a one which is the logical negation of zero. These two gates are AND gates, this gate is an OR gate, and if we continue on and propagate the values through the circuit, evaluating the gates appropriately, then we see that the final value on this wire here is a one. So the entire circuit describes a sequence of operations that are composed as the figure suggests, and we end up with a function from two bits to one bit in this particular case.
+
+00:05:11
+But in general, there could be any number of input and output bits. This particular circuit happens to compute the exclusive OR of the two input bits, so the output is a one if and only if exactly one of the two input bits is set to a one and the other one is set to a zero, but that's not really important, it's just an example. It's a basic fact about Boolean circuits that any function from any number of bits to any number of bits can be computed by some Boolean circuit, although sometimes you might need a very large circuit
+
+00:05:43
+to compute the function that you're interested in. There are other styles that are used to describe circuits. For example, this figure represents exactly the same circuit as we had before, using a style that's perhaps more typical in electrical engineering, where there are conventions for the shapes that represent different gates. We aren't going to use this particular style, but we will introduce some symbols of our own for different quantum gates, such as Hadamard gates, Controlled NOT gates,
+
+00:06:12
+Toffoli gates, and so on. Just as an aside, here we can see the origin of the term circuit. In the context of electrical engineering, it's very natural to think about electricity cycling through a circuit. But in this series we're not talking about electricity moving through circuits, we're talking about information moving through circuits. And once again for us, they will always be acyclic, where the information moves from left to right. Here's a different example of a different type of circuit
+
+00:06:47
+called an arithmetic circuit. This time the wires store numbers and the gates represent arithmetic operations such as addition and multiplication. Here you can see an example of an arithmetic circuit. It's not important for the sake of this lesson what it does, it's just an example that's meant to convey the idea that there are different notions of circuits. We can also think about circuits involving randomness, for instance, where the gates represent probabilistic operations, and if you felt like it,
+
+00:07:17
+you could probably sit around all day dreaming up new models of computation based on the notion of circuits. In the quantum circuit model, the wires represent Qubits, and the gates represent both unitary operations and measurements. Here's a very simple example of a quantum circuit. There's just one Qubit in this circuit, which is represented by the horizontal line, and the gates, which are indicated by squares, represent unitary operations that are performed on this Qubit. So there are no measurements in this particular example.
+
+00:07:54
+If we want to give the Qubit a name such as X, we can indicate that in the diagram by putting an X right here, that's optional. Just like we had for the Boolean circuit from a few moments ago, we can think about this circuit as representing a sequence of operations where time goes from left to right. So we start out with X, we apply the first gate, which is a Hadamard gate followed by an S gate, then another Hadamard gate, and finally a T gate. We saw these operations toward the end of lesson one,
+
+00:08:23
+and here you can see their matrix descriptions. So when we perform these four operations in order, which means first H, then S, then H again, and then T, the combined operation is given by this product right here, keeping in mind that the order essentially gets reversed as we talked about in lesson one. If we perform the matrix multiplication, we get this matrix right here, and so the action of the circuit on the Qubit X is described by this unitary matrix. Sometimes we'd like to indicate explicitly
+
+00:08:58
+in a quantum circuit diagram what input we're feeding in, and we can do that as you see right here. In this case, we're inputting Ket 0 into the circuit. That's pretty common. We often take Ket 0 to be the initialized state of a Qubit, but that's not necessary. We could also consider applying the circuit to a different state. If we choose to, we can also indicate the output state that we get like this. Here's another example where this time we have two Qubits named X and Y as you can see in the diagram.
+
+00:09:34
+Here we have a Hadamard gate, which is being applied to the Qubit Y, followed by the gate that's indicated by this symbol right here, which is a Controlled NOT gate. We talked about the Controlled NOT operation in the previous lesson, and here in this diagram we can see that the control Qubit is Y, which is indicated by the small filled in circle, and the target Qubit is X, which is indicated by the large circle with what looks like a plus sign in it. It kind of looks like the symbol for the exclusive OR
+
+00:10:04
+so it makes sense. You can imagine that whatever classical state is stored in Y gets XOR'd onto the Qubit X. And just in the interest of clarity, here's the diagram that shows the action of this gate on standard basis states, where we assume the A and B are binary values. For other states, the action is determined by linearity as always. Now, before we go any further, it will be helpful to explicitly state a convention that we're going to follow concerning how Qubits are ordered in quantum circuit diagrams like this one.
+
+00:10:40
+And the convention is that bottom to top ordering in a quantum circuit diagram is equivalent to left to right ordering as in a tuple or a tensor product. That's a convention we'll follow in the series and it's also the convention that's used in Qiskit. So for this particular circuit right here, we're thinking about it as acting on a pair of Qubits X, Y, X comes first because it's on the bottom, and Y comes last or second in this case, because it's on the top. The way you can think about this visually, in case it helps,
+
+00:11:14
+is to imagine rotating this circuit clockwise so that the inputs are on the top and the outputs are on the bottom, and the ordering of the Qubits will be correct. Sometimes this ordering trips people up, so just be sure to keep this convention in mind. So when we think about the action that this circuit describes, what we have first is a Hadamard gate applied to Y and then a Controlled NOT gate on the two Qubits with Y being the control and X being the target. If we wanna write down a unitary matrix
+
+00:11:43
+that describes the combined action of these two gates, we can do that. First, we consider the Hadamard gate on Y. We're applying the Hadamard gate to Y and doing nothing to X, which is equivalent to performing an identity operation on X. And so the action of the Hadamard gate on both Qubits together is given by the tensor product of the identity matrix and the matrix representing the Hadamard operation on Y. That looks like this, keeping in mind our convention that X comes first and Y comes second, so it's the identity tensored with H.
+
+00:12:20
+Then we apply the Controlled NOT operation, which has this matrix representation, and again, that's consistent with our convention. The second Qubit Y is the control and the first Qubit X is the target. Don't be afraid to pause the video and verify that this makes sense and I'll stop reminding you about that. You can pause these videos, go back and watch parts as many times as you want, adjust the playback speed if you choose, use them in whatever way works best for you. Anyway, when we compose the two operations together,
+
+00:12:50
+the combined action is described by this product right here, and these two matrices are multiplied in this order because the Hadamard is performed first and the Controlled NOT is performed second, and once again, this is consistent with what we talked about in lesson one where the ordering essentially gets reversed. If we perform the matrix multiplication, we get this matrix right here. And we can now read off from this matrix what the circuit does to standard basis states. If we run the circuit on the input 0, 0,
+
+00:13:21
+meaning Ket 0 for the first Qubit, Ket 0 for the second Qubit, the result is the Phi+ Bell state, which we can see from the first column of the matrix. If we feed in 0, 1, we get the Phi- state, one zero gives us the Si+ state, and 1, 1 gives us not Psi-, but -1 X Psi-. The minus sign isn't really significant here. If you didn't want this to be here, you could perform a swap operation on the two Qubits to get rid of it and you wouldn't mess up what happened to the first three standard basis states.
+
+00:13:56
+But it's really not important for the sake of this example. So in summary, the circuit has this action right here on standard basis states. When you're thinking about what a particular circuit does, you don't need to go through the conversion to matrices and multiply them together, you can also trace through the action that the circuit has on particular states, and in many cases this will be the preferred option. In this example, for instance, we can see what the circuit does to the 0, 0 state
+
+00:14:25
+by examining the action of the gates. The initial state, which we've named Pi zero here, just to avoid a name that would be confusing with the Bell states is 0, 0. We apply the Hadamard gate and the state we get is 0+ which we can expand out like this, and then the Controlled NOT operation takes this state to the Phi+ state, which we can see by thinking about the action that the Controlled NOT has on standard basis states, And you can do the same thing for the other three standard basis states or any other state for that matter.
+
+00:15:01
+We can also incorporate classical bits into quantum circuit diagrams. They're indicated by double lines like you see in this diagram. That is A and B are classical bits and X and Y are Qubits. We have the same two unitary gates as in the previous example, and these symbols right here represent standard basis measurements Specifically after the two unitary operations are performed, a standard basis measurement is performed on Y and the result is overwritten to the classical bit, B, and similarly X is measured
+
+00:15:34
+and the result is written to the bit A. Here you can see that the Qubits X and Y continue on after they're measured. It's pretty common though that we don't care all that much about Qubits after they're measured. Sometimes all we care about is the measurement result. And in a case like that, we can use the shorthand style that you see here where measurements have Qubits coming in and classical bits coming out. The understanding here is that once the Qubits are measured, they're just discarded or ignored
+
+00:16:04
+and the classical measurement outcome is carried forward. Now as the series continues, we'll be seeing many examples of quantum circuits and they'll typically be much more complicated than the very simple examples that we just saw. As I mentioned earlier, different symbols are used for different gates. Single cubic gates are usually just written as squares with a letter indicating which operation it is. Sometimes these different gates are color coded to mean different things, but we'll ignore that for now.
+
+00:16:36
+We've already seen the Controlled NOT gate. Swap gates are denoted as you see right here, And Toffoli gates and Fredkin gates are denoted as you see right here. Remember that a Toffoli gate is a controlled Controlled NOT gate and a Fredkin gate is a controlled swap gate. So these symbols are consistent with the idea that a control Qubit is indicated by a solid circle with a line connecting it to the gate it controls. In general, controlled Qubits don't need to be on the top and these gates don't have to act on neighboring Qubits,
+
+00:17:10
+meaning that these gates can be stretched across other Qubits that they don't act on, and we'll see that happening in future lessons. One more thing that we often do when using the quantum circuit model is to view arbitrary unitary operations on any number of Qubits as if they're single gates like you see right here. Just by drawing a rectangle with a label corresponding to whatever unitary operation it is. In this case it's some unitary operation U. Of course, we don't know what U is from this diagram,
+
+00:17:40
+we have to assume that U is defined somehow or that we're considering some arbitrary unitary operation U, perhaps. It could be for example that we just wanna think about U as if it's a subroutine in the interest of clarity. We also use this notation that you see right here for a controlled U operation where the control Qubit is indicated by a solid circle just like we had before. So that's a brief introduction to the quantum circuit model. And as I said before, we will see many more examples of quantum circuits
+
+00:18:11
+as we continue on in the series. In the next part of the lesson, we're going to take a look at inner products, orthonormality and projections, which are very important notions in quantum information and computation. We'll start with inner products. Remember that when we use the direct notation, a Ket is a column vector and a Bra is a row vector, and specifically the Bra vector corresponding to a given column vector is the conjugate transpose of that column vector. So for this vector right here,
+
+00:18:45
+we obtain the corresponding Bra vector by transposing the vector as if it's a matrix, which amounts to laying it on its side and then taking the complex conjugate of each of the entries. Now, suppose that we have two Kets with the same number of entries like this. If we form this bracket right here, which simply means that we take the product of the Bra and the Ket, as if they're matrices, then we obtain this expression that you see right here, which is a scaler, or in other words a complex number.
+
+00:19:22
+This value is called the inner product of these two vectors. You can also think about inner products in terms of vectors of the form that you see right here where the vectors are expressed as linear combinations of standard basis vectors. The inner product of these vectors is defined in the same way as before, Bra Psi times Ket Phi which we can express as a product like this. And if we compute and simplify, we're left with this expression right here for the inner product, which is analogous to what we had before,
+
+00:19:53
+except this time we're taking the sum over elements in our classical state set, which is sigma in this particular case. Here's an example that's meant to give you a geometric picture for how inner products work. Here I've drawn a circle in a two-dimensional space corresponding to a Qubit, and as long as we restrict our attention to vectors having real number entries, we can draw them as points on this plane. Let's take Phi to be this vector right here. It's a unit vector,
+
+00:20:26
+which we can see by computing the Euclidean norm and that's what this circle represents, it's all of the unit vectors having real number entries. Let's also say Psi to be this vector right here, which again is also a unit vector. It's the minus state in fact, but here we're just calling it Psi. If we compute the inner product of these two vectors, we get one minus the square root of three over two times root two, which happens to be approximately -1/4. The value of this inner product is equal
+
+00:20:59
+to the cosine of the angle between the two vectors, which you can see here in the figure. That's something that's generally true for unit vectors. If we have two unit vectors and they both have real number entries, then the inner product between them is equal to the cosine of the angle between them. In particular, if the inner product is equal to zero, like in this example, where we've changed Psi to be this state right here, then the two vectors must be at a 90 degree angle to one another.
+
+00:21:30
+This all generalizes to vectors in any dimension, by the way, as long as the entries are real numbers, it's not just for two dimensional vectors. If we have complex number entries, the picture doesn't really work anymore, but nevertheless, the inner product is every bit as useful as we will see. The inner product has some very important properties and we'll take a few moments to observe some of those properties now. First is a connection between the inner product and the Euclidean norm.
+
+00:21:58
+If we take the inner product of any vector with itself, we get the Euclidean norm squared. So we can alternatively say that the Euclidean norm of a vector is equal to the square root of the inner product of that vector with itself. This isn't a coincidence, this is a fundamental connection, and here we can see that if we didn't have the complex conjugates in the definition of the inner product, then this formula wouldn't be true anymore, and we wouldn't have such a useful notion
+
+00:22:26
+with this fundamental connection to the Euclidean norm. Next, the inner product is conjugate symmetric, which means that if we swap the order of the two arguments, then the value we get for the inner product gets conjugated. That's expressed by this equation right here and is quite straightforward to see why this happens for these two expressions for the inner product of the two vectors in the two possible orders. The inner product is linear in the second argument. Specifically, if we define a vector Phi
+
+00:22:58
+to be this linear combination of two vectors, Phi one and Phi two, then the inner product of any vector Psi with Phi is the same linear combination of the two inner products, and this follows quite directly from the fact that matrix multiplication is linear. And we also have that the inner product is conjugate linear in the first argument, which you can see expressed right here. If Psi is this linear combination of vectors, then if we take the inner product of Psi and Phi, then Bra Psi becomes this vector
+
+00:23:28
+that we see right here where we take the complex conjugate of beta one and beta two, and so this is the result and that's what's meant by conjugate linearity. And the last property of the inner product that I wanna mention is the incredibly useful Cauchy-Schwarz inequality. For any two vectors, Psi and Phi, the absolute value of the inner product can never be larger than the product of the Euclidean norms of the two vectors. And moreover, the only way that the two sides of the inequality
+
+00:23:57
+can be equal is if the two vectors are linearly dependent, which means that one of them is equal to some scaler times the other. This is in fact one of the most widely used inequality in all of mathematics and we use it over and over when we're talking about quantum information, so it's very good to know about. Next, we'll talk about the notions of orthogonality and orthonormality which are connected with inner products and specifically, with inner products of vectors being equal to zero.
+
+00:24:28
+To be precise, if we have two vectors, Psi and Phi, we say that they're orthogonal if their inner product is equal to zero. And the way that we can think about orthogonal vectors intuitively is that they're at right angles to each other, or alternatively, that they're perpendicular to one another. People sometimes use the term orthogonal to refer to things that have nothing to do with each other, like saying that one issue is orthogonal to another, but that's obviously pretty informal
+
+00:24:55
+and not really meaningful in a mathematical sense, but the connection is clear if you think about orthogonal vectors as pointing not in opposite directions, but in completely different directions like north versus west for instance. If we have a set of vectors, we say that the set is an orthogonal set if any two distinct vectors chosen from that set are necessarily orthogonal to one another, which we can express as you see right here, An orthonormal set is simply an orthogonal set of unit vectors.
+
+00:25:30
+Vectors in orthogonal sets don't necessarily need to be unit vectors, and in fact you could even have zero vector being an element of an orthogonal set, but in an orthonormal set, every vector must be a unit vector in addition to the requirement that the set is an orthogonal set. Given what we know about the relationship between the inner product and the Euclidean norm, we can express this condition pretty succinctly as you see right here. And finally, an orthonormal basis is simply an orthonormal set that forms a basis
+
+00:26:03
+for whatever vector space we're talking about. For example, if we take any classical state set sigma and we think about the set of all standard basis vectors, we see that this is an orthonormal set and in fact it's an orthonormal basis for the space of all vectors whose entries correspond to this classical state set sigma. These are all unit vectors and they're orthogonal in pairs, so it's an orthonormal set. and because it's a basis as well, we have that it's an orthonormal basis.
+
+00:26:34
+Orthonormal sets are always linearly independent by the way, so anytime you have an orthonormal set, it will always be an orthonormal basis for some subspace, but in this case, we have a basis for the entire space that we're working with. Another example is the set containing Ket+ and Ket-. These two vectors are orthogonal, their inner product is equal to zero. and they're both unit vectors and they span the two-dimensional space of vector corresponding to a single Qubit, so they form an orthonormal basis for that space.
+
+00:27:09
+Another example is the Bell basis, which is an orthonormal basis for the space of all four dimensional vectors corresponding to two Qubits. The set containing Ket 0 and Ket+ on the other hand, is not an orthogonal set because the inner product between these vectors is non-zero. They're both unit vectors and this is a basis for the vector space corresponding to a Qubit, but we don't have orthogonality. Here's a handy fact about orthonormal sets that we'll make use of from time to time.
+
+00:27:44
+Suppose that we have some orthonormal set of vectors, specifically, let's suppose that we have M vectors in this set, Psi one through Psi M, where we're assuming that these vectors are drawn from some N dimensional vector space, or in other words, each of the vectors has M entries. As I already mentioned, orthonormal sets are always linearly independent, so it can't be that M is larger than N, but it could be that M is smaller than N, and that's the case that we're interested in.
+
+00:28:12
+And what the fact states is that if M is smaller than N, then it's always possible to add additional vectors to the set we started with in order to obtain an orthonormal basis for our space. To be precise, there must necessarily exist vectors Psi M+1 up to Psi N so that the entire collection forms an orthonormal basis. So you can never paint yourself into a corner, so to speak, by somehow choosing an orthonormal set of vectors that can't be extended to form an orthonormal basis. Sometimes you can just look at the set you start with
+
+00:28:46
+and figure out how to extend it to form an orthonormal basis, but an alternative that always works is to use a procedure known as the Gram-Schmidt orthonormalization process to construct these vectors. I won't explain that procedure in this lesson or in this series because the specifics aren't really important for us, but of course you can look it up if you're curious. It's something that can be performed by a computer in case that's relevant, so there's no creativity involved,
+
+00:29:12
+it's just a mechanical procedure. One of the reasons why this is such a handy fact to have is concerned with a close connection that exists between orthonormal bases and unitary matrices. In particular, for any square matrix U, the three conditions that you see here are always equivalent, meaning that they're either all true or they're all false. The first condition says that U is a unitary matrix, which means that both U dagger times U and U times U dagger are both equal to the identity matrix.
+
+00:29:46
+The second condition says that the rows of U form an orthonormal basis and the third condition says that the columns of U form an orthonormal basis. It's actually not too hard to see why this equivalence is true. Just to keep things simple, let's take a look at a three by three matrix U as you see right here, where the entries can be any complex numbers you like. Here on the left hand side I've written U conjugate transposed just for convenience. If we form three vectors from the columns of U,
+
+00:30:16
+which here are named Psi one, Psi two and Psi three, then if we take the product of U dagger and U, you can check that each entry of the product is given by an inner product of vectors as we see right here in this pattern. And now when you think about the condition that U is unitary, which is equivalent to this matrix being equal to the identity matrix, you see that it's equivalent to the three vectors forming an orthonormal set. The diagonal entries all have to be equal to one, so these are necessarily unit vectors,
+
+00:30:47
+and the off diagonal entries have to be zero, so it's an orthogonal set of vectors. So U being unitary is equivalent to the columns forming an orthonormal set, And that has to be a basis because the number of vectors in the set, which is three in this case, agrees with the dimension of the space that we're working in. You can follow a similar argument for the rows instead of the columns to conclude that U being unitary is equivalent to the rows farming an orthonormal basis. It doesn't work quite as nicely
+
+00:31:18
+because we have to make an adjustment to get the complex conjugates to work in the right way, but the idea is the same. An alternative way to go about it, which is pretty straightforward, is to prove that a matrix is unitary if and only if it's transposed as unitary. And here I do mean to say transpose and not conjugate transpose. It's pretty trivial from the definition of unitary matrices, that the conjugate transpose of any unitary matrix is unitary, but it's also the case that the transpose
+
+00:31:45
+of any unitary matrix is unitary. In any case, we have the equivalence between these three conditions on any square matrix U, and we can combine this equivalence with the fact about extending orthonormal sets to form orthonormal bases in order to come up with unitary matrices that do interesting things or fulfill various needs that we may encounter. Specifically anytime we have an orthonormal set of M vectors, there will always exist a unitary matrix U whose first M columns are the vectors from that orthonormal set.
+
+00:32:22
+The remaining columns can always be filled in so that we obtain a unitary matrix by choosing them so that the columns form an orthonormal basis. This will be a pretty handy fact for us to have at our disposal. And one more topic for this section of the lesson is the notion of a projection. A square matrix Pi is said to be a projection or a projection matrix if the two properties that are listed here are both true. This is a capital Pi by the way, it's a pretty typical choice for a letter that's used to denote a projection.
+
+00:32:58
+We often give these typical sorts of names to objects such as matrices just to make them easier to recognize and keep things straight, but you could use whatever name you like. Anyway, the first condition is that Pi is equal to its own conjugate transpose. In general, when we have a matrix that's equal to its own conjugate transpose, we say that it's a Hermitian matrix. So the first condition can alternatively be stated as Pi is Hermitian. The second condition is that if we square Pi, meaning that we multiply Pi to itself, we get Pi again.
+
+00:33:31
+So squaring Pi doesn't do anything to it. The idea of a projection intuitively speaking is that it's similar in spirit to projecting an image onto a screen or dropping a perpendicular onto a line for instance. When you multiply a vector by a projection, what you're doing is in some sense leaving a part of it alone and zeroing out the rest. So if you apply a projection a second time, it doesn't do anything because you've already zeroed out the part that the projection zeroes out.
+
+00:34:02
+An example of a projection is this matrix right here for any choice of a unit vector Psi. We can check that it satisfies the required conditions one at a time. For the first one, we compute the conjugate transpose and this is the conjugate transpose of a product. And so we can use this formula right here for the conjugate transpose of a product to help us. What you get is the product of the conjugate transposes, but the order gets reversed. That happens because of the transposition part. So if we apply that formula,
+
+00:34:37
+we obtain this equality right here and we can then simplify to get back the original matrix. Notice by the way, that we didn't use the fact that Psi is a unit vector. So in fact, this matrix is Hermitian for any vector Psi, not just for unit vectors. And for the second one, we square Pi and we obtain this expression right here and that is equal to the original matrix this time because Psi is a unit vector, so this inner product right here is equal to one and that's where the assumption that Psi is a unit vector
+
+00:35:08
+comes into play. We can generalize this example and start with an orthonormal set. And if we form this matrix right here, where we sum up the projections corresponding to the individual vectors, then we obtain a projection. Here on the screen, you can see calculations that reveal that and I'll leave it to you to examine them if you wish. And along similar lines to the first example, it's the second condition where the orthonormality of the set gets used. What this projection does if you multiply it to a vector,
+
+00:35:42
+is to project that vector onto the subspace that's spanned by this set of vectors, which in an abstract way is like dropping a perpendicular to that subspace, and once you're in that subspace, the projection doesn't do anything. So matrices like this are examples of projections, and now in fact we've exhausted all of the possibilities. Every projection matrix takes this form for some choice of an orthonormal set. The zero matrix is a projection, so we do have to make sure we include that one
+
+00:36:12
+if we want to get every projection. So just to be clear about this, we are allowing the possibility that M equals zero and that gives us an empty sum, which we can interpret as the zero matrix. Now that we have the concept of a projection at our disposal, we can define a more general class of quantum measurements known as projective measurements. This isn't the most general notion of a measurement, but it is significantly more general than standard basis measurements and it's going to be very helpful to incorporate it
+
+00:36:41
+into our description of quantum information. A projective measurement is defined by any set of projections that satisfies the condition that you see right here, which is that the projections sum to the identity matrix. Here M can be any positive integer you like so long as these are all projections and this condition is true, the collection defines a projective measurement. The measurement described by such a collection works as follows when you measure any quantum state Psi. First you get an outcome between one and M,
+
+00:37:13
+where M is the number of projections. For each possible outcome, K, the probability to get that outcome is the Euclidean norm squared of the vector you get by multiplying S by Pi K, the Kth projection. We can also write this quantity as you see right here. This equality comes from the relationship between the Euclidean norm and the inner product together with the fact that Pi K is a projection. From the second form, together with the condition that we have on these projections, we can see right away, by linearity,
+
+00:37:45
+that our probabilities will always sum to one, keeping in mind that Psi has to be a unit vector. And second, assuming that we get the outcome, K, the state of the system collapses to the quantum state we get by normalizing whatever vector we got by projecting. We'll take a look at some examples in just a moment, but before we do that, let me mention that we don't actually need to number the possible outcomes from one to M. We can choose whatever names or symbols we want for the outcomes.
+
+00:38:18
+In particular, if we have a collection of projections that are labeled with symbols from sum set gamma say, and they satisfy the same condition as before, which is that they sum to the identity matrix, then we have a projective measurement that works in exactly the same way as before. The only only difference here is that we're allowing the measurement outcomes to be elements of this set gamma as opposed to the integers from one to M. For our first example of a projective measurement, let's observe that standard basis measurements
+
+00:38:51
+are projective measurements. In this case the set of outcomes of the measurement is the same as the set of classical states of whatever system is being measured. And the set of projections that describes the measurement is this collection right here, assuming that sigma is the classical state set of our system. These are all projections and if we sum them up, we get the identity matrix, so it's a valid projective measurement To see how this works in a little bit more detail, let's suppose that we have some arbitrary state
+
+00:39:26
+that's written in the form that you see right here. The probability for the measurement to yield the outcome A, according to the description from a moment ago, is this value right here, which is equal to the absolute value squared of the corresponding entry of the vector Psi, which is what we expect. Conditioned on the outcome being A, the state of the system becomes this, again, according to the description from a moment ago. If we simplify, we don't quite get the state we expect, which is Ket A.
+
+00:39:58
+Instead we get Ket A multiplied by a scaler, and specifically, this is a scaler having absolute value equal to one, so it's a complex number on the unit circle. This is called a global phase and we'll discuss global phases shortly, but for now in short, this state is equivalent to Ket A. This global phase doesn't actually have any significance at all and we'll see why when we get to the discussion of global phases. So (unclear) this issue of global phases, which we'll talk about in just a moment,
+
+00:40:28
+we see that standard basis measurements are in fact projective measurements. For another example, which is really an extension of the previous example, if we perform a standard basis measurement on a system X and we do nothing to a system Y, just like we talked about in the previous lesson, it's completely equivalent to measuring the system X, Y. With this projective measurement right here. We have these projections corresponding to the classical states of X and we're tensoring with the identity on Y
+
+00:40:58
+which reflects the fact that we're not doing anything to Y. The description for how projective measurements work in general tells us what happens in this example, and I'll leave it to you to check that this is in fact completely equivalent to what we discussed in the previous lesson. This is all very nice because this projective measurement description is cleaner in a way and we see that it fits into this more general picture. Here's one more example of a projective measurement. This one is a measurement of two Qubits.
+
+00:41:33
+For this measurement we have two projections and therefore, two possible outcomes which are zero and one. The projections are defined in terms of the Bell states as you see right here. The first projection is onto the space spanned by the three symmetric Bell states and the second projection is onto the one dimensional space spanned by the Psi- state, which is the anti-symmetric one, or in other words the one that gets multiplied by a minus sign if we perform a swap operation on the two Qubits.
+
+00:42:04
+We'll see later on in the series why this is an interesting measurement. For now, it's just an example that connects with something that we've seen before, which is the Bell basis. One final note on projective measurements is that anytime you have a projective measurement, you can always implement that measurement using unitary operations and standard basis measurements. For this particular example of a measurement, for instance, we can build a quantum circuit that implements the measurement as you see right here.
+
+00:42:32
+We imagine that the top two Qubits are the Qubits that we're measuring with this projective measurement and what we can do is introduce a new Qubit that starts off initialized to the zero state. We perform a Hadamard gate followed by a Fredkin gate, followed by another Hadamard gate, and if we measure this bottom Qubit using a standard basis measurement, the effect will be exactly the same as if we've measured the top two Qubits with the projective measurement from this example. We'll get exactly the same probabilities
+
+00:43:01
+for the two outcomes and the effect that the measurement has on the top two Qubits will be the same as well. That's not at all obvious. An analysis is required to see that and that analysis isn't shown here. As I've already suggested, we will take a closer look at this particular measurement in a later lesson and for now it's just meant as an example. The important point to take away is that something like this is always possible for any projective measurement, so we don't really gain any additional capabilities
+
+00:43:29
+by introducing projective measurements, but it is a very useful concept and we will often speak of projective measurements as we continue on in the series. The last part of this lesson is on a few important limitations of quantum information and what we can do with quantum circuits. The first limitation, which maybe isn't so much of a limitation as it is degeneracy, concerns the issue of global phases that I mentioned a short time ago. Here's the definition of what we mean when we refer to a global phase.
+
+00:44:04
+If we have two quantum state vectors, Psi and Phi, such that one of them is equal to the other one multiplied by some complex number alpha, then we say that the states differ by a global phase or alternatively that they're equivalent up to a global phase. Notice that because quantum state vectors have Euclidean norm equal to one, the only way that this equation can possibly be true is if the absolute value of this complex number is equal to one, so alpha must lie on the unit circle. Let's imagine that we have two quantum states like this
+
+00:44:36
+that differ by a global phase and suppose that we measure the state Phi with a standard basis measurement. The probability to get any outcome A is given by this expression right here, and if we substitute alpha times Psi for Phi, which we can do because we're assuming that they're equal, we obtain this probability. And if we simplify using the fact that alpha lies in the complex unit circle, we obtain this probability. Remember that this is the probability that measuring Phi gives the outcome A,
+
+00:45:07
+but now we see that this is exactly the same as the probability that measuring Psi gives the outcome A, so there's absolutely no difference whatsoever in the probabilities of different outcomes for the two states. A similar argument tells us more generally that for any projective measurement, the probabilities are again identical. So by measuring we can't tell the difference between two states that differ by a global phase, even in a statistical sense. Finally, if we apply any unitary operation to the state Phi,
+
+00:45:38
+then again by substituting, what we will get is exactly the same complex number alpha multiplied to whatever we will get by applying the same unitary operation to the state, Psi. So the two states will still differ by a global phase. The bottom line is that the two states are completely indistinguishable, so there's really no difference between them at all in terms of what we could possibly learn about them from performing unitary operations and measurements and for this reason, we consider these two states to be equivalent
+
+00:46:09
+or if you prefer, that these are just two possibly different vector representations of the same quantum state. Like I said at the start of the discussion, it's basically degeneracy in how quantum states are described by quantum state vectors. In any case, what this means is that we can simply ignore global phases just like we did effectively when we describe standard basis measurements as projective measurements. By the way, this degeneracy only happens in the simplified description of quantum information.
+
+00:46:41
+When we describe quantum states using density matrices, as we will do in the third unit of the series, we will have a unique matrix representation for every quantum state. The issue of global phases simply doesn't arise in the general description of quantum information. It's one more appealing aspect of the general description of quantum information, which I keep alluding to, but regardless, global phases won't bother us because we can just exercise our freedom to ignore them. Here's a very quick example just to make sure
+
+00:47:12
+the notion of a global phase is clear. If we have a minus state, and negative one times a minus state, then these two states differ by a global phase, and in particular we have alpha equals negative one. On the other hand, if we have a plus state and a minus state, then we don't have two states that differ by a global phase. These are orthogonal vectors, so they're linearly independent. To say that two quantum state vectors differ by a global phase is equivalent to saying that the vectors are linearly dependent,
+
+00:47:43
+so certainly these vectors don't differ by a global phase. It's true that the only difference is that this plus sign turns into this minus sign, but that's what we call a relative phase difference. That's different from a global phase because we're not multiplying the entire vector by a complex number. And this is consistent with the fact that we can tell the difference between these states, in particular, if we apply a Hadamard operation and then measure, we'll see a zero if the state was a plus state
+
+00:48:11
+and a one if the state was a minus state. The next limitation of quantum information that we'll see in this lesson is the no-cloning theorem. Here's one statement of the no-cloning theorem and this particular statement of the theorem is pretty concrete and specific, which will make it easier to talk about. There are other more general ways to formulate the no-cloning theorem, but we'll focus on this one for now. We assume that we have two systems X and Y which have the same classical state set.
+
+00:48:42
+which consists of the integer from zero to D-1 where D is at least two. It's not really important what names the classical states have, but by choosing these names it'll help to keep things simple. What's most important here is that there are at least two different classical states, so in other words, we're not worrying about the trivial and uninteresting case where we only have one classical state. What the theorem says is that there's no unitary operation U that we can apply to X, Y
+
+00:49:12
+so that if we initialize Y to the zero state, we effectively copy or clone arbitrary quantum states of X. If we take a look at this expression right here in isolation, what it says is that for all choices of a quantum state vector Psi of X, applying U to Psi tensored with the zero state, gives us Psi tensor Psi, or in other words two independent copies of Psi, so that's what it would mean if we could clone quantum states and what the theorem says is that this is not possible. You can think about this in terms of circuits
+
+00:49:47
+and what the theorem says is that you'll never be able to come up with a gate or a circuit that works as you see here. Where one copy of the state Psi comes in along with a collection of initialized Qubits and two copies of Psi are produced. You can do this for certain choices of the state Psi, but you can never come up with a circuit that works this way for every quantum state Psi, and that's what the theorem says. It's quite easy to prove this theorem, in fact, it essentially boils down to the fact
+
+00:50:18
+that the transformation we're looking for isn't linear, but unitary operations are linear, so it just can't work. Here's an argument in a bit more detail. Suppose that we have a unitary operation U that clones the standard basis states, Ket 0 and Ket one. We know that the classical states zero and one must belong to our classical state set because D is at least two. But this means by linearity that if X is in a plus state, which we can write like this, then the result is this linear combination
+
+00:50:57
+of these two states right here. However, that's not the right behavior. The requirement on U is that U cloned is a plus state, which means that we have to have this equation right here being satisfied. These two states aren't the same and so it doesn't work and that's all there is to it. Just a few additional remarks about the no-cloning theorem. First, this statement of the no-cloning theorem is absolute in some sense. It simply says that a unitary operation U that works exactly like this doesn't exist.
+
+00:51:33
+So you might ask whether or not there exists unitary operation U that does this approximately with respect to some way of describing an approximation to the statement. There are different notions of approximation that one might be interested in and we'll see a couple of them in the third unit of the series, but for these different notions of approximation, there are quantitative statements of the no-cloning theorem that put strong limits on how well you can approximately clone. A second remark is that copying or cloning
+
+00:52:04
+standard basis states most certainly is possible. For example, a Controlled NOT gate copies the standard basis states of a Qubit. This doesn't contradict the no-cloning theorem. The point is that cloning in the sense of the no-cloning theorem requires that this works not only for standard basis states but for all states. A Controlled NOT gate certainly doesn't clone a plus state for instance. And finally, it is worth pointing out that there's also a no-cloning theorem for probabilistic states.
+
+00:52:36
+It's just not something that people talk about or care about. If somebody randomly chooses a bit, for instance, for some arbitrary way of assigning probabilities to the two values and then hands you that bit, of course there's no way for you to obtain two independent samples of that random bit. You just don't know what the probabilities are. You can copy the bit just like a Controlled NOT copies standard basis states, but that's not the same thing as cloning the probabilistic state.
+
+00:53:03
+You just don't have enough information to do that. Whatever random bit you were given doesn't tell you what the probabilities were. It's just a bit. The impossibility of cloning a probabilistic state follows from exactly the same reasoning as in the quantum setting. Cloning is a non-linear process, whereas probabilistic operations, just like unitary operations, are linear. Anyway, it's not surprising that we can't clone on a probabilistic state and somehow it's not as interesting
+
+00:53:31
+as the fact that we can't clone a quantum state, but the point is simply to observe that this is not a uniquely quantum phenomenon. The final limitation of quantum information that we'll discuss in this lesson is that it's not possible to perfectly discriminate two quantum states that aren't orthogonal. Another way of saying this is that if two quantum states can be perfectly discriminated, then they have to be orthogonal. What we mean when we refer to a perfect discrimination of two quantum states, Psi and Phi,
+
+00:54:01
+is that there's some way to tell them apart without any chance of error. In terms of the quantum circuit model, we can express this as you see here on the screen. We have some unitary operation U, which could be implemented as a quantum circuit or we could just think about U abstractly as a unitary operation and force input U takes either the state Psi or the state Phi along with a bunch of initialized Qubits, which you can think of as workspace Qubits that somehow assist in this process of discrimination.
+
+00:54:34
+After U as applied, the top Qubit is measured with respect to a standard basis measurement and here's the perfect discrimination part. If the input state was Psi, then the measurement must give the outcome zero, 100% of the time, and if the input state was Phi, then the measurement must give the outcome one, again with 100% chance. It's not important what the states of these other Qubits are after U was applied. All that matters is this one bit that we get from the measurement because that's the bit that's telling us
+
+00:55:04
+which of the two states we started with. For some choices of states, Psi and Phi, it will be possible to perform a perfect discrimination like this and for others it won't. And what we'll observe is that if it is possible to do this, then Psi and Phi have to be orthogonal states and that means if Phi and Psi are not orthogonal, you can't perfectly discriminate them. So let's see why a perfect discrimination implies orthogonality. We'll start by writing down two equations that express what these two diagrams express.
+
+00:55:40
+If we think about the quantum state, we get after applying U to a bunch of initialized Qubits together with the state Psi, we see that it has to have this form right here, where Pi zero is some quantum state vector representing the state of all of these Qubits except for the top one. We don't have any information about this quantum state, Pi zero, it could be anything, but we know that the entire state has to look like this because that's the only way that the measurement is guaranteed to give the outcome zero, 100% of the time.
+
+00:56:12
+And we have an analogous equation for the second one. This time the top Qubit has to be in the one state and similar to Pi zero, the state Pi one could be anything. And in addition to having no information about Pi one, we also don't know anything about the relationship between Pi zero and Pi one. For all we know, these are just two arbitrary quantum states. What we can do next is to multiply both sides of these equations on both sides by U dagger, meaning the conjugate transpose of U. And if we do that,
+
+00:56:42
+we get the two equations that you see right here. We're using the fact that U dagger times U is the identity matrix. So that's why we don't see U or U dagger on the left hand side of either equation. And now we can consider the inner product between Psi and Phi. It's the same as the inner product of Psi and Phi multiplied to the inner product of the L zero state with itself because the inner product of any state with itself is one and that includes the L zero state. And now if we look at our two equations,
+
+00:57:14
+we see that this expression here is equal to the inner product of the vectors represented by the two equations. And in particular it's the inner product between the left hand sides of these equations. So we can equally well express this inner product as the inner product of the vectors represented by the right hand sides of these equations, because the left hand side is equal to the right hand side for both equations. So we get this expression right here, which is the inner product of the two right hand sides
+
+00:57:43
+of the equations or equivalently, it's the conjugate transpose of the first multiplied to the second. U times U dagger is equal to the identity matrix, because U is unitary and so it goes away. And we can simplify just a little bit to get the product of these inner products. Now remember that we don't know anything about the relationship between Pi zero and Pi one, so we don't know what their inner product is. That's a mystery to us. But whatever it is, we're multiplying it to the inner product
+
+00:58:10
+of Ket 0 and Ket one, which is zero. So the end result is that we obtain the value zero, but that's what we wanted to show, the inner product between Psi and Phi is equal to zero. So the two states are orthogonal. So don't bother trying to perfectly discriminate two non-orthogonal quantum states, you just can't do it. There is a converse to the statement that we just proved, which is that orthogonal quantum states always can be perfectly discriminated, and this is not too hard to see if we make use of a fact
+
+00:58:39
+that I mentioned earlier in the lesson. Specifically if Psi and Phi are orthogonal states, then one thing that we can do is to choose any unitary matrix U whose first two columns are the two states. We know that it's always possible to do this and it doesn't matter for the sake of this task exactly how this unitary matrix is chosen. All that's important is that these are the first two columns. We don't need any additional Qubits. If we simply apply U to the two possible states, then we'll get these two possible outcomes.
+
+00:59:12
+And if we measure the top most Qubit, which remember is the right most Qubit, then we'll get a zero or a one depending on which state we started with. Alternatively, we can consider a projective measurement with outcomes zero to one defined as you see right here. in this case, the measurement actually only depends on Psi. This measurement perfectly discriminates Psi from any state that's orthogonal to Psi. If we measure Psi with respect to this projective measurement, then we'll get the outcome zero with probability one
+
+00:59:44
+as these equations review. And for any state Phi that's orthogonal to Psi, we'll get the outcome one with probability one. I won't go through the details of these calculations, but if you're interested, I encourage you to go through the details on your own. And that is the end of lesson three. We covered a lot of material in this lesson, including quantum circuits, inner products and orthonormality, projections and projective measurements, the fact that global phases don't matter,
+
+01:00:14
+the no-cloning theorem, and the fact that non-orthogonal states can't be perfectly discriminated while orthogonal states can. I hope you'll join me for the fourth lesson soon, which is the last lesson in the first unit of the series. In the fourth lesson, we'll talk about three very important examples, teleportation, superdense coding, and the CHSH inequality or CHSH game as it's sometimes described. Goodbye until then,
+

@@ -1,0 +1,366 @@
+00:00:01
+- Welcome back to Understanding Quantum Information and Computation. My name is John Watrous, and I'm the technical director of Education at IBM Quantum. This is the second lesson of the series. If you haven't already watched the first lesson, be sure to check it out. We'll be building directly on what we talked about in the first lesson, so it's important to have an understanding of that material going into this lesson. Also, be aware that the series includes textbook content in addition to videos,
+
+00:00:28
+and you can find a link to the textbook content in the video description. This is lesson two of unit one of the series. Unit one covers the basics of quantum information. In the previous lesson, we talked about quantum information in the setting of single systems, meaning that we have one system that stores information and we're describing how it works in isolation. We spent a fair amount of time on classical information, mainly to establish a point of reference and to highlight the mathematical similarities
+
+00:00:58
+between quantum and classical information. We also saw how quantum states can be represented by vectors, specifically vectors having complex number entries and Euclidean norm equal to one, and we discussed standard basis measurements and unitary operations. In this lesson, we're gonna expand our view to multiple systems, each of which is capable of storing quantum information. This is not simply a matter of saying that each individual system works as we discussed last time, there is a sense in which the hole
+
+00:01:28
+is greater than the sum of the parts, and that's also true of classical information when probabilities are involved. Multiple systems can interact with one another and they can be correlated with one another for instance, and in the quantum setting, this includes the possibility that the systems are entangled, which is a term that you may have heard about before. Entanglement is a very important phenomenon in quantum information and we'll have a lot more to say about it as the series continues.
+
+00:01:55
+There is a simple principle, however, that offers us quite a lot of traction for thinking about and understanding quantum information for multiple systems, and that is that we can always take two or more systems and put them together or just conceptually think about them together and view them as if they form a single compound system. And when we think about a compound system like this, as if it's a single system, we recognize that it must be described in a way that's consistent with everything we learned
+
+00:02:20
+in the previous lesson on single systems. We'll see how this works and how the description of quantum information from multiple systems emerges pretty naturally from how it works for single systems based on this one principle. Here's an overview of the lesson and it happens to be identical to the previous lessons overview, but this time our focus will be on multiple systems rather than single systems. Just like we did in the previous lesson and for exactly the same reasons, we're going to start with classical information.
+
+00:02:52
+Once again, we'll see very close similarities between the way that quantum and classical information work at a mathematical level. We won't typically focus so much on classical information or start each lesson in the series with classical information like this. Subsequent lessons will tend to be focused much more exclusively on quantum information and computation. But here at the beginning this is a sensible approach and it goes back to the idea that thinking about classical information
+
+00:03:18
+can serve as a valuable source of guidance for understanding quantum information. We're also gonna discuss the important concept of a tensor product in this part of the lesson. Tensor products are critically important in quantum information, but they also arise in the classical setting. Then we'll move on to quantum information and much like in the previous lesson we'll discuss quantum states, standard basis measurements, and unitary operations this time for multiple systems. We'll start by talking about classical states
+
+00:03:49
+of multiple systems. Recall from the previous lesson that a classical state of a system is a configuration of that system that can be recognized and described unambiguously without any uncertainty or error. And in mathematical terms, when we refer to a classical state set, we just mean a finite and non-empty set. We'll begin our discussion of multiple systems by supposing that we have just two systems X and Y. X has some set of classical states which we'll call sigma just like in the previous lesson,
+
+00:04:21
+and y has some set of classical states that we'll call gamma. The set sigma and gamma could be the same set or they could be different, but we're giving them different names, not only because they could be different sets, but also because it'll help us to keep things clear if we give them different names. We'll find that it's pretty easy to generalize this entire discussion from two systems to any number of systems, but by starting with two systems, we can focus on the fundamental ideas
+
+00:04:48
+without getting bogged down in details. Now, imagine that we put X and Y side by side with X in the left and Y on the right, and we view these two systems together as if they form a single compound system. to give this new system a name, we can write it as an ordered pair like this, or we can just juxtapose the two letters like this. These are both common and we can pick whichever one we want or whichever one is more convenient. Either way, we'll read it as XY. A very natural question to ask at this point
+
+00:05:23
+is what are the classical states of this new compound system XY? And the answer to that question is that the classical state set of XY is the Cartesian product of the two classical state sets, sigma and gamma, which you can see defined right here. At a given moment, X has some classical state which is an element of sigma, and Y has some classical state which is an element of gamma, and we're simply thinking about these two states together as if they form a single state, and that's precisely the notion
+
+00:05:54
+that the Cartesian product captures. We have have two elements, one from each of our sets, and we want to think about these two elements together as if they form a single element from a single set. To be clear, there is an assumption here which is that we know which one of our systems is X and which one is Y, and there's no confusion between them. It's not important that X is physically on the left hand side and Y is on the right, but rather that the two systems are distinguishable and that we've decided to order them this way
+
+00:06:24
+just so that we can keep straight which one is which. Here's a very simple example where sigma is the binary alphabet and gamma is the set containing the four card suits. If X stores a binary value and Y stores one of the four card suits, then there are eight possible classical states of the pair XY, which you can see listed right here. For more than two systems, this generalizes in a straightforward way. In particular if X1 through Xn are systems having classical state sets sigma one through sigma n respectively.
+
+00:07:03
+Then if we imagine grouping the n systems together and viewing them as one system, the classical state set is given by the Cartesian product of the n classical state sets sigma one through sigma n. As you can see right here on the screen. The Cartesian product can be defined like this for any number of sets. For example, if we have three systems and they all share the binary alphabet as their classical state set, so in other words we have three bits, then there are eight possible classical states
+
+00:07:32
+of the three bits viewed together as a single system and you can see them listed right here. Each system individually can be in the state zero or one, and we range over all of the possible combinations. An n-tuple of classical states can alternatively be written as a string where we drop the parentheses and the comma like you see right here. And this is particularly sensible when we think about classical states as symbols as in the very common example of the binary alphabet that we keep coming back to.
+
+00:08:02
+Sometimes it's very convenient to do this and it tends to make our expressions simpler and less cluttered. The notion of a string is in fact formalized in mathematical terms through carte and products, so this is really just an alternative notation and not something conceptually different. As an example, let's say that we have 10 bits X1 through X10. That means that the classical state set of the 10 bits together, which you might naturally think about as a 10 bit register in a computer for example,
+
+00:08:32
+is the tenfold Cartesian product of the binary alphabet with a self. And if we write those states like strings, they look like you see right here, there's 1,024 of them, so of course they're not all listed here. These three dots right here are supposed to indicate that there's a pattern that you can deduce and hopefully you get the idea. Now there's a convention that we're going to follow for ordering the the elements of Cartesian product sets, and it's important to clarify this for the sake of
+
+00:08:59
+representing both probabilistic states and quantum states as vectors. The convention is that we order the elements of Cartesian product sets lexicographically, which basically just means dictionary ordering. To be more specific, we start with the assumption that each of the individual sets that we're taking the Cartesian product of already has its own ordering and we think about a given n-tuple or a string as if it's a word and we order them alphabetically. Another way to say this is that the positions within an n-tuple or a string
+
+00:09:31
+decrease in significance from left to right, just like when we write numbers using the digits zero through nine. Here's an example that's meant to clarify this. If we take the Cartesian product between the sets containing one, two, and three and the binary alphabet, we get a set containing six elements and here they're listed in the order that's being described. All of the elements with a one in the first position come before all of the elements with a two in the first position and they come before all of the elements
+
+00:10:00
+with a three in the first position. And whenever two elements agree in the first position, we fall back on the ordering in the second position. So that's the ordering that we use for Cartesian products. Notice that when we use this convention and we write n-tuple as strings, we observed some very familiar patterns. For example, the Cartesian product of the binary alphabet with itself is ordered like you see right here, and you can think about these strings as being ordered numerically if you take these strings as binary encodings
+
+00:10:29
+of non-negative mixtures and this generalizes to any string length. Moving on to probabilistic states, we already know from the previous lesson that a probabilistic state associates a probability with each classical state of a given system. If we have a compound system where we've taken two or more systems and we're viewing them collectively as if they form a single system like we just discussed, then a probabilistic state of this compound system must assign probabilities to the elements
+
+00:11:01
+of the Cartesian product of the individual systems, classical state sets. That's because that is the classical state set of the compound system. For instance, supposing that X and Y are bits, we have this example of a probabilistic state of XY. The probability that both bits are zero is one half and the probability that both bits are one is one half, and so the two bits never disagree. It's a valid probabilistic state of XY, and we can alternatively write it as a vector like you see right here
+
+00:11:37
+and here you can see that we are following the convention that I described a moment ago for ordering these classical states. This is an example of a probabilistic state where X and Y are correlated, and this is the sense in which the hole is greater than the sum of the parts. As I suggested before, it's not simply that we have a probabilistic state of X and a probabilistic state of Y and we put them together, but rather we first put the systems together and then we think about probabilistic states
+
+00:12:06
+of the compound system. To be more precise about correlations among systems. We start by defining the notion of independence, which is essentially the absence of correlation. Here by the way, the term independence refers to statistical independence as opposed to linear independence of vectors for instance. It's fundamental notion in probability and statistics. If we have two systems X and Y and we have some probabilistic state of XY in mind, then we say that X and Y are independent. If the formula that you see right here is true
+
+00:12:42
+for every choice of classical states a and b of X and Y. One way to interpret this condition of independence is that it says that the probability for X to be in any one classical state and the probability for Y to be in some other classical state have absolutely nothing to do with one another. So, learning what state one of the systems is in doesn't affect the probabilities associated with the states of the other system. If you imagine randomly choosing some classical state of X according to some procedure
+
+00:13:13
+and then randomly choosing some classical state of Y according to some other procedure that isn't in any way connected to the one for X, like say if one person flips a coin and another person in a different room rolls a die, then this is the formula that you would use to get the probabilities for different combinations of states to appear. The point of the definition is that independence is when the formula is valid. When we think about probabilistic states in terms of probability vectors, there's a simple formulation of this condition
+
+00:13:47
+specifically if we have a probabilistic state of XY, which we can express as a vector in the direct notation as you see right here. Then to say that X and Y are independent is equivalent to the existence of two probability vectors, cat Phi and cat Psi which by the way we can simply read as Phi and Psi for the sake of brevity representing probabilistic states of X and Y separately that satisfy this equality that you see right here. For all choices of a and b, it's essentially a rephrasing of the definition
+
+00:14:22
+in terms of vectors. For example, here's a probabilistic state of a pair of bits XY for which X and Y are independent. The condition that's required for independence is true for the vectors that you see right here. That is the probability for each possible setting for the two bits is given by the product of the corresponding probabilities for the individual bits. For instance, the probability for both bits to take the value zero is equal to one sixth, which is equal to one quarter times two thirds,
+
+00:14:54
+and likewise for the other three possibilities which can be checked one at a time. For the probabilistic state we saw earlier on the other hand where we have two bits that always agree and take the values zero and one with probability one half we don't have independence and that's why we say that the bits are correlated. Correlation simply means a lack of independence. A simple way to argue that the two bits are not independent is to suppose that they are and to derive a contradiction specifically if the two bits were independent,
+
+00:15:29
+there would have to exist numbers q0, q1, r0 and r1 representing probabilities for the two individual bits so that these equations right here are satisfied. These are the probabilities that come from our vector and these are the equations that must be true by the condition of independence, but if we take a look at this second equality right here, we see that it demands that q0 times r1 is equal to zero, but the only way that the product of two real numbers can possibly be equal to zero is if at least one of those numbers itself is equal to zero.
+
+00:16:03
+This is sometimes called the zero product property of the real numbers. Another way to say it is that the product of two non-zero real numbers is always non-zero. So this equality right here implies that either q0 is equal to zero or r1 is equal to zero, but from the first and the last equalities we see that neither of those two alternatives can possibly be true. If q0 is equal to zero, then this product must equal zero, but it's not equal to zero and if r1 is equal to zero, then this product must be equal to zero,
+
+00:16:36
+but that's not true either. So we have a contradiction and we conclude that X and Y are not independent so they're correlated. The notion of independence that we just discussed and specifically is formulation in terms of probability vectors is closely connected to an operation that can be performed on vectors known as the tensor product. Tensor products can be defined not only for vectors but also for matrices and in fact the notion of a tensor product can be defined for many other sorts of mathematical objects as well.
+
+00:17:07
+They can be described in a pretty abstract way that's both important and useful in pure mathematics, but we can also define tensor products for vectors in a very simple and concrete way, and that's the path that we'll take in this lesson. If we have two column vectors Phi and Psi written in the forms that you see here where sigma and gamma are any choice of classical state sets we like or indices if you prefer, then the tensor product of these vectors is the vector that you see right here.
+
+00:17:40
+We range over all elements of the Cartesian product of the two sets, sigma and gamma, and the entry of this vector that corresponds to each pair ab, which is written as a string right here, is equal to the product of the corresponding entries of these two vectors. In other words, the ab entry of Phi tensor Psi is the product of the a entry of Phi and the b entry of Psi, and that's the meaning of what's written down here. In essence, this is the same operation that we just saw a few moments ago
+
+00:18:12
+when we discussed independence and now we're just giving a name to it. Here's exactly the same example that we saw a moment ago written more explicitly in terms of the tensor product. Again, we have that one sixth is equal to one quarter times one third, one 12th is equal to one quarter times one third and so on. Here, by the way are a couple of alternative ways to write the tensor product of two vectors. When we're using the direct notation and we write two cats next to each other like this,
+
+00:18:46
+it means the tensor product. So you can think about the tensor product as kind of being the default way to multiply to column vectors together. It wouldn't make any sense to think about a product of column vectors like this in terms of matrix multiplication because the dimensions don't work right, so there's really no concern about ambiguity here. We can also write the tensor product like this inside of a cat and it means exactly the same thing. It's the tensor product of the two vectors.
+
+00:19:15
+The first one is very common and in fact it's perhaps more common to write a tensor product like this without the tensor product symbol than it is to include the symbol. The second one is definitely much less common, but it is sometimes quite helpful mainly as a way to eliminate the need for additional parentheses in certain situations. We can also express tensor products explicitly in terms of actual columns of numbers as you see right here, if we take the tensor product of these two column vectors right here,
+
+00:19:46
+then this is the vector that we obtain and you can see that the entries here are products of the entries coming from these two vectors. The ordering of the entries of the tensor product is consistent with the definition from a moment ago provided that we follow the convention that I described earlier for ordering the elements of Cartesian product sets. Following that convention is equivalent to thinking about the indices of the first vector as having higher significance than the indices of the second vector,
+
+00:20:15
+so you can see that as we go through the entries of the tensor product, we have all of the products involving the first entry of the first vector on the left, which is alpha one. Then all of the products involving the second entry of the vector on the left, which is alpha two and so on. Here's an example where the vector on the left has three entries and the vector on the right has four entries so we can see more clearly what's going on. We have three entries in the first vector, so we start by writing down three copies
+
+00:20:45
+of the second vector and then we multiply each one of those copies by the corresponding entry in the first vector like this. We bring the alphas inside like this, and here we're just multiplying vectors by scalers and finally we remove the parentheses from the copies and we form a single column vector like you see right here. As an important aside notice that we have the following formulas for the tensor product of standard basis vectors. If we take the tensor product of cat a and cat b, which we can write with the tensor product symbol
+
+00:21:21
+or without, as you see here, then the result is simply cat ab. If we want to write ab as an ordered pair rather than a string, we can do that and we obtain this expression right here, but it's a lot more common to write this right here where we emit the parenthesis but we leave the comma. There is a sense in which this one with the parenthesis is perhaps more correct, but it's a pretty standard convention in mathematics that parentheses are removed when they aren't necessary or helpful.
+
+00:21:54
+You can think about them as being implicit in this one right here and it's just less cluttered and nicer to look at. The tensor product has an important property which is that it's bilinear and what that means is that it's linear in each of the two arguments provided that the other one is fixed. In a bit more detail it's linear in the first argument which is expressed by these two equations that you see right here, the first one says that if we add two vectors, Phi1 and Phi2 and then take the tensor product with Psi,
+
+00:22:26
+we get the same result if we took the tensor product with Psi first and then we added. The second one says that if we multiply some vector Phi by some scaler alpha and then we take the tensor product with Psi, the result is the same as if we first took the tensor product of Phi and Psi and then we multiply the result by alpha. And we also have linearity in the second argument which is the same except that the roles of the two arguments are swapped. This product of bilinear is pretty straightforward
+
+00:22:54
+to verify from the definition, but it's good to write it down like this because we'll often make use of these formulas. Notice by the way that scaler float freely through tensor products in the sense that's expressed by these qualities that you see right here. That is there's no difference between multiplying the first argument by a scaler alpha in this case multiplying the second argument by that scaler or multiplying the entire thing by that scaler. These equalities follow from these two equations right here
+
+00:23:25
+and because there's no difference between these vectors, we can just write the expression as you see right here with no parentheses because there's no need for them. They're not adding any clarity or removing any ambiguity, so we just remove them and we get a cleaner expression. All of this generalizes to three or more systems. We can define the tensor product of of three or more vectors by generalizing the formula for the tensor product of two vectors in the natural way, which you can see expressed right here.
+
+00:23:53
+Each entry of the tensor product is given by the product of the corresponding entries of the vectors that we're taking the tensor product of. An equivalent way to define the tensor product of three or more vectors is to do it recursively ultimately falling back on the definition of the tensor product between two vectors. So if n is at least three, we can think about the tensor product of n vectors Phi1 through Phi n as being the tensor product between whatever vector we get by taking the tensor product
+
+00:24:22
+of the first n minus one of them with the last vector, and if you want to know what the tensor product of the first n minus one vectors is, you either apply the formula again in case n minus one is at least three or use the definition from before if n minus one is equal to two. The two ways of thinking about tensor products of three or more vectors are equivalent. This time when we have three or more vectors that we're taking the tensor product of, we don't use the term bilinear, we instead use the term multiline, but the idea is the same.
+
+00:24:53
+The tensor product is linear in each of the positions provided that the vectors in all of the other positions are fixed. Moving on to measurements of multiple systems in probabilistic states, we immediately obtain a specification for how measurements work for multiple systems by simply thinking about them collectively as single systems provided that all of the systems are measured. As a simple example, let's suppose that we have two bits X and Y and collectively they're in this probabilistic state right here,
+
+00:25:26
+which we saw before. Naturally, if we measure both of these bits, we'll get the outcome 00 meaning a zero for the first measurement and a zero for the second measurement with probability one half and we'll get the outcome 1,1 with probability one half as well. That's quite straightforward. In essence, measuring all of the systems is equivalent to measuring the entire compound system. If we don't measure all of the systems however, but instead we just measure some of the systems,
+
+00:25:54
+then the situation isn't quite so immediately clear restricting our attention once again to the case of just two systems to see the essence of what's going on in as simple as setting as possible. We can ask the following question, suppose that we have two systems, X and Y that are together as a pair in some particular probabilistic state. What happens if we measure just X and we do nothing to Y? Well, we can answer this question using some basic probability theory. First, we know that the probability
+
+00:26:26
+that the measurement gives a particular outcome has to be given by this formula that you see right here. We can think about the probabilities for each of the classical states of the pair XY as if we did measure both and we sum over all the probabilities that are consistent with X being in whatever classical state a we're interested in. So that's why the sum right here is just over the classical states b of Y. One way to think about this formula is that the probability of seeing a particular classical state of X if we measure it
+
+00:26:56
+has to be consistent with the probability of seeing that state if we had also measured Y, even though we didn't, that's very natural and intuitive. The probability for a measurement of X to yield a particular outcome can possibly depend on whether or not Y was also measured irrespective of the outcome. So that tells us what the probabilities are for the different possible outcomes of the measurement, but what happens to Y or our knowledge of Y as a result? The answer is that there still could exist some uncertainty
+
+00:27:26
+about the state of Y as a result of having measured X and seeing a particular result. And that uncertainty is represented by this formula right here for the conditional probability that Y is in some particular classical state b, given that X is in some classical state, whatever classical state a, we happen to have measured. To be precise, the probability that Y is in some classical state b, given that X is in the classical state a, is equal to the probability that X is in a and Y is in b divided by the probability that X
+
+00:27:59
+is in the classical state a. So if we measure X, we're going to see different classical states with probabilities determined by this formula right here and depending on what outcome we get, we may still have some uncertainty about the classical state of Y and that uncertainty is reflected by this formula right here. There's actually a very easy way to rephrase all of this and to perform calculations for specific cases using the direct notation and it goes like this. We start by writing down the probabilistic state of XY
+
+00:28:34
+as a vector like this, and this is completely general. The entries are denoted by Pab and these could be any numbers so long as the entire vector is a probability vector. We can express cat ab as a tensor product like you see right here and then we can use the bilinear of the tensor product and specifically the fact that it's linear in the second argument to express this vector as you see right here. What we're doing is effectively isolating the standard basis vectors on the left hand side
+
+00:29:05
+and putting whatever we need to on the right hand side to allow that because that's gonna reveal what happens when we measure the first system X. Specifically the probability to get a particular outcome a is the sum over all of the probabilities that appear in the parenthesis next to cat a. And conditioned on getting a particular outcome a, the probability vector that describes whatever uncertainty remains about Y is the vector that was in the parentheses next to a. Except that we have to normalize it
+
+00:29:38
+to make it a probability vector and that is is to say that we have to divide that vector by the sum of the entries in that vector to form a probability vector. Here by the way, the sum is taken overall c in gamma rather than b just to use a different variable name so that there won't be any confusion about the scope of the variables if you will. The sums in the numerator and the denominator should be considered as separate things and we can avoid any chance of confusion about that by using different variables for the two sums.
+
+00:30:11
+Here's a quick example to illustrate how this all works. Suppose XY is a pair of bits in this probabilistic state right here to understand what happens when we measure the first bit and we do nothing to the second, we write the vector as you see right here where cat zero and cat one in the first position are isolated just as we described a few moments ago. The first possibility is that the measurement outcome is zero and the probability of that happening is the sum of the probabilities inside of the parentheses
+
+00:30:44
+that are tensored to cat zero. So we get one 12th plus one quarter, which is one third and conditioned on the outcome zero. The probabilistic state of Y becomes this vector normalized or equivalently divided by the probability that we just calculated, and so what we get is this vector right here. The second possibility is that the measurement outcome is one and the calculation is done in a similar way using the second term in the expression rather than the first term. And if you'd like to verify the details,
+
+00:31:18
+go ahead as always and pause the video to give yourself a moment do that. You can perform the same sorts of calculations to figure out what happens when Y is measured rather than X. It's the same method up to a symmetry between the two systems. This time we write the probability vector like this, isolating the standard basis vectors on the right like you see right here, but otherwise it works in exactly the same way. You can also use this method for more than two systems. It can get a little bit messy just to write down
+
+00:31:54
+all of the required expressions, but conceptually it's exactly the same idea. Finally, for the portion of the lesson on classical information, we'll take a look at operations on probabilistic states of multiple systems. Following the same reasoning that we've now seen a couple of times. We conclude that probabilistic operations on multiple systems are just like probabilistic operations on single systems represented by stochastic matrices. But this time those matrices have rows and columns
+
+00:32:26
+that correspond to the Cartesian product of the individual system's, classical state sets. That is we're simply viewing a compound system as if it's a single system and falling back on the description for how probabilistic operations work for single systems from the previous lesson. Here's an example of an operation called a controlled-NOT operation on two bits X and Y. This is in fact a deterministic operation and the way that it works is that if X is equal to one, then a NOT operation is performed on Y
+
+00:32:59
+and otherwise if X is equal to zero then nothing happens. The bit X is sometimes called a control bit because it determines whether or not the NOT operation is applied to Y and Y is called the target bit because it's the bit that gets acted upon by the NOT operation. You can also imagine swapping the roles of X and Y so that Y becomes the control bit and X becomes the target, but that's a different operation from the one that's described here because the operation isn't symmetric between X and Y.
+
+00:33:29
+They're both called controlled-NOT operations, and we just need to specify which one of the bits is the control bit and which one is the target bit. This operation has the action that you see right here on standard basis states and you can check that action against the definition of the operation. And here is the matrix representation of the operation. When we think about this operation, we have in mind that there are these two separate bits and they play the roles that I just described with X being the control bit
+
+00:33:58
+and Y being the target bit, but there's really nothing about this action here or this matrix representation that demands that we think about these two bits as being separate bits. We could alternatively just think about this operation as being a deterministic operation on a system having four classical states that we've decided to name 0,0, 0,1, 1,0 and 1,1. Here's another example of a probabilistic operation on two bits, which isn't a deterministic operation this time. The operation sets Y to be equal to X
+
+00:34:31
+with probability one half and otherwise it goes the other way and it sets X to be equal to Y. This operation doesn't have a special name it's just meant as an example. And here's the matrix representation of this operation. You can see that it can be expressed as an average of two matrices, one that represents the deterministic operation where Y is set to whatever value is stored in X and the other that sets X to be equal to Y. So here we see that we can take averages of stochastic matrices to obtain new ones
+
+00:35:04
+just like we had in the previous lesson. Now, let's consider the following question. Suppose that we have two probabilistic operations each on its own system described as usual by stochastic matrices and to be precise, let's suppose that M is a probabilistic operation on a system X and N is a probabilistic operation on a system Y. The question is if we simultaneously perform M on X and N on Y, how do we ascribe the effect that this has on the compound system XY? Thinking about about this intuitively for a moment,
+
+00:35:38
+if we simultaneously perform the two operations on their own respective systems, then we are in fact performing an operation on the compound system, so it should be described by some stochastic matrix. The short answer to this question is that the matrix is obtained by taking a tensor product, not between vectors like we talked about earlier, but between matrices in this case, the matrices M and N. So let's take a few moments to discuss tensor products of matrices and then we'll return to this question.
+
+00:36:09
+Here's the definition of the tensor product between matrices and it's very much analogous to the tensor product between vectors. If we suppose that the two matrices that we're working with are written in the forms that you see here so that the entries of M are denoted alpha ab as a and b range over some classical state set sigma and the entries of N are denoted by beta cd as c and d range over some classical state set gamma. Then the product of M and N is the matrix that you see right here.
+
+00:36:42
+What we have is similar to the tensor product between vectors. the rows and columns of M tensor N correspond to pairs of classical states which are written as strings right here, and the entries are products of the corresponding entries of M and N. Here's another way of writing it in terms of the individual entries of these matrices. The ac bd entry of M tensor N is the product of the ab entry of M and the cd entry of N. There's another way of describing M tensor N, which is that it's the unique matrix that transforms
+
+00:37:17
+any vector of the form Phi tensor Psi into the tensor product of M applied to Phi with and applied to Psi, and that has to be true for every choice of these vectors Phi and Psi. One way to think about this is that the tensor product of matrices gets along perfectly with the tensor product between vectors. This is an equation that you would naturally hope is true and indeed it is. In terms of matrices that are written out explicitly, we can define the tensor product as you see here. There's a lot of dots in this equation
+
+00:37:51
+and they're meant to illustrate the pattern, which is the same pattern that we had for vectors except now we have rows and columns as opposed to just column vectors. In case it's not clear, the following example may help. Here we're talking about the tensor product of two two by two matrices. We first write down four copies of the second matrix, one for each entry of the first matrix. We multiply each of these copies of the second matrix by the corresponding entry of the first matrix,
+
+00:38:23
+and then we collect it all into a single four by four matrix as you see right here. We can also define the tensor product of three or more matrices in an analogous way and perhaps the easiest way to express this is as you see right here where we have a formula for each entry of the tensor product, which is simply the product of the corresponding entries. You can also define the tensor product of three or more matrices recursively in terms of the tensor product of just two matrices just like we had for vectors.
+
+00:38:58
+And one final note is that the tensor product of matrices is multiplicative, which means that a product of tensor products is equal to the tensor product of the products. You can think about this as a generalization of the formula from a few moments ago for the action of intensive product of matrices on tensor product of vectors. And again, this is something that we would certainly hope to be true and we can be glad that it is and we'll make use of this fact whenever we need. And now we can return to the question from before
+
+00:39:28
+which asks how we describe the effect of performing an operation M on a system X and an operation N on the system Y together as an operation on the compound system XY. And the answer to that question is that the action is described by the tensor product of M and N. Tensor products represent independence this time between operations as opposed to what we saw before for probability vectors. Here's a quick example. Suppose that we perform the probabilistic operation described by this matrix on a bit X.
+
+00:40:01
+This happens to be an operation that we saw in lesson one and we simultaneously perform a NOT operation on a bit Y. The combined operation on the pair XY is therefore represented by the tensor product of the matrices corresponding to these two operations. Here's the one on X and here's the NOT operation on Y and we get this matrix that you see right here. And you can see that indeed this is a stochastic matrix and that will always be the case. The tensor product of any two stochastic matrices
+
+00:40:30
+or any number of stochastic matrices for that matter will always be stochastic. It is a very common situation that we encounter a situation in which one operation is performed on one system and nothing is done to another system. In this situation, we follow exactly the same prescription with the understanding that doing nothing is represented by the identity matrix. For example, if we have two bits X and Y and we reset the bit X to the zero state, which is the same thing as performing the constant zero function on X
+
+00:41:04
+and we do nothing to Y, then the resulting operation on the par XY is represented by this tensor product right here. All of this generalizes to any number of systems and we'll see some additional examples when we turn to the quantum setting, which works in exactly the same way except that we have unitary matrices rather than stochastic matrices, and that's enough about classical information for now. Now we'll turn our attention to quantum information and how it works for multiple systems.
+
+00:41:33
+The pattern is the same as it was for classical information. We can view multiple quantum systems as single compound systems and apply what we know from the previous lesson. Again, tensor products will play a key role and overall we obtain a description for how quantum information works for multiple systems. That's very much analogous and mathematically similar to what we just saw for classical information. We'll start with quantum states. Quantum states of multiple systems are represented by column vectors
+
+00:42:04
+having complex number entries and Euclid arm equal to one just like quantum states of single systems. This time the indices of the quantum state vectors correspond to the Cartesian product of the classical state sets of the individual systems because again, that is the classical state set of the compound system. For example, if X and Y or Qubits, then the classical state set for the par XY together is the Cartesian product of the binary alphabet with itself, which we can think about as the set up all binary strings
+
+00:42:37
+of length two. So these vectors that you see here are all examples of quantum state vectors of XY. If we want to, we can alternatively write these vectors like this where we have a separate cat for each Qubit where the tensor product between them is implicit. Or we can also write the tensor product symbol explicitly like this if you prefer. And another option is to subscript the cats with the names of the systems that they represent like this. And you can do this with the tensor product symbol or without.
+
+00:43:13
+That can sometimes be very helpful for keeping things straight. These are just different styles for expressing the same vectors and we can pick whichever one we want or whichever we prefer or whichever makes the most sense for the situation at hand. When things get more complicated for instance, we might decide that one of these styles adds clarity and we're free to make whichever choice we want. Tensor products of quantum state vectors are also quantum state vectors. For the case of two systems for instance,
+
+00:43:47
+if Phi is a quantum state vector of a system X and Psi is a quantum state vector of a system Y, then the tensor product of Phi and Psi is a quantum state vector of XY. We call states like this product states and similar to what we saw in the classical probabilistic setting, they represent independence between the systems X and Y. So for instance, if one person has a laboratory in one part of the world and they create a system X and initialize it to the quorum state Phi and another person in another part of the world
+
+00:44:19
+independently initializes a system Y to the quantum state Psi, then if we choose to think about XY as forming a single system even though it's two parts or in different parts of the world, then the compound system XY is in the state Phi tensor Psi. This all generalizes to more than two systems in the natural way. If we have quantum states Psi1 through PsiN of separate systems Xn through Xn, then the tensor product of these n vectors represents a quantum state, which is again called a product state
+
+00:44:52
+of the compound system X1 through Xn. Here's an example of a quantum state of two Qubits. Although it might not look like it immediately. It is an example of a product state because we can write it as a tensor product as you see right here. So it's an example of a product state regardless of how it's written, what's relevant is whether or not it's possible to write it as a tensor product. This quantum state, however, which is again a state of two Qubits is not a product state.
+
+00:45:25
+It's similar in spirit to the example that we saw in the probabilistic setting of two perfectly correlated random bits and the same argument reveals that it can't be written as a tensor product. So let's move this over here and let's take a look at the argument in a little bit more detail. Let's imagine that we could write this state as a tensor product of two vectors Phi and Psi. The entry corresponding to the classical state 0,1 is zero for this vector, which we can see just by looking at it.
+
+00:45:55
+This would imply however, if the vector was a tensor product of two vectors that the zero entry of Phi times the one entry of Psi would be equal to zero, but that means that either the zero entry of Phi or the one entry of Psi is equal to zero or they both could be equal to zero, but that contradicts the fact that these two products here must both be non-zero. They're equal to one of our squared of two. The argument is in fact pretty much identical to what we had in the probabilistic setting.
+
+00:46:23
+There's nothing uniquely quantum about this at all. In any case, what we find is that the original state is not a product state. Notice that it's not important that these two numbers here are one over squared of two. All that matters is that both values are non-zero. This particular quantum state is a very interesting one. It's an example of an entangled state of two Qubits. We'll talk more about entanglement later in the series. Entanglement can be complicated, particularly when we're talking about quantum states
+
+00:46:54
+in the general formulation of quantum information, but here in the simplified description of quantum information entanglement is equivalent to a lack of independence. So for a quantum state vector, if it's not a product state, it's an entangled state and this particular state is commonly viewed as the archetypal example of an entangled quantum state. And in fact, we sometimes think about this state as representing one unit of entanglement, particularly when we're thinking about entanglement
+
+00:47:24
+as a resource that can be used to do interesting things. The quantum state that we just talked about is one of the four so-called bell states, which you can see here along with the names that are commonly used for these states, Phi plus, Phi minus, Psi plus and Psi minus. They're all entangled and they do form a basis for the space of all vectors representing states of two Qubits. So these four vectors together are called the Bell basis. It's a very commonly encountered collection of quantum states named in honor of John Bell,
+
+00:47:58
+who was a physicist who made very important contributions to the study of entanglement in the 1960s. Here are a couple of well known examples of quantum states of three Qubits. The first one is called a GHZ state. It's kind of like the Phi plus state that we just saw except for three Qubits instead of two. And the second example is called a W state and it looks like you see here, so it's uniform over the three binary strings of length three that have exactly one bit set to one. Neither of these states is a product state
+
+00:48:31
+and they both have interesting properties and arise pretty commonly as examples, so they're good to know about and we will see them again. Next we'll talk about measurements of systems in quantum states. Following the same reasoning that we've been following this far in the lesson, which is to think about multiple systems as if they're single systems. We immediately arrive at a description for how measurements of multiple quantum systems work provided that all of the systems are measured.
+
+00:49:04
+That is if we have some quantum state vector Psi that represents a quantum state of an n-tuple systems X1 through Xn and we measure the entire compound system, which is equivalent to measuring every one of the individual systems, then each possible n-tuple of classical states will be the outcome of the measurement with probability equal to the absolute value squared of the entry of Psi that corresponds to that n-tuple. For example, if we have a pair of systems XY in this quantum state right here,
+
+00:49:39
+then if we measure both systems, then we'll get the outcome zero hearts meaning zero for the measurement of X and hearts for the measurement of Y with probability nine 25ths and we'll get the outcome one speeds with probability 16/25. That's really quite straightforward. We're essentially just ignoring the fact that these are two separate systems and we're viewing them as if they're one single system, but this raises the following natural question, which we already considered in the classical setting.
+
+00:50:10
+Suppose that we have two systems X and Y that are collectively in some quantum state and we don't measure both, but we only measure one system. Let's say that we measure the system X and we do nothing to Y. Of course, we can also ask what happens if we measure Y and not X and more generally what happens if we have three or more systems and we measure some proper subset of them. But once we have an answer to this question, we'll have answers to those questions as well. We know that in general a quantum state vector
+
+00:50:41
+of the pair XY takes the form that you see right here, assuming as usual that sigma and gamma are the classical state sets of X and Y respectively. The entries of this vector are denoted by alpha ab ranging over all the possible choices of a and b, and they can be any complex number that cause this vector to be a unit vector. Now we already know that if both systems are measured, then we get the probabilities for the different possible outcomes by taking the absolute value squared of the corresponding entry.
+
+00:51:15
+And so if just X is measured, then the probability to obtain a particular outcome a is given by this expression, we simply some over all of the possible outcomes b, that could be obtained if Y was also measured even though it wasn't. The idea is the same as in the probabilistic setting. The probability to get a particular outcome when X is measured can't possibly depend upon whether or not Y was also measured. So this tells us what the probabilities are for the different possible outcomes.
+
+00:51:46
+In addition, there will be some change in the state of Y as a result of having performed this measurement on X and having obtained a particular outcome. So let's take a look at how this works. Similar to what we did in the probabilistic setting, we can express the quantum state vector Psi as you see right here where Phi a is this vector for each choice of a classical state a of the system X, we're using the bilinear of the tensor product just like before. Only now we've chosen to name these different vectors Phi a,
+
+00:52:18
+just for convenience. We already observed that the probability that the measurement yields each possible outcome a is as you see right here, but now we can see that this probability is equal to the Euclid norm squared of the vector Phi a, and now as a result of the measurement of X giving a particular outcome a, we have that the quantum state of the compound system XY becomes this state that you see right here. Just like we had for single systems, the state collapses in essence, but it doesn't collapse entirely in general,
+
+00:52:54
+it only collapses as far as it needs to in order to be consistent with the measurement of X yielding the outcome a. The quantum state of Y becomes Phi a normalized meaning that we divide by its Euclid norm so that it becomes a unit vector. This is analogous to what happened in the probabilistic setting where instead of dividing by the Euclid norm, we divided by the sum of the entries of Phi a in order to get a probability vector. But here because we're talking about quantum states, we divide by the Euclid norm to get a quantum state vector.
+
+00:53:29
+Let's take a look at a couple of examples to see how this works for a specific state. Here's the state that we'll consider. We're assuming that X and Y are Qubits and they're in this particular state Psi. And let's suppose that X is measured. We begin by writing the state's Psi as you see right here, effectively isolating the standard basis factors of X and tensing them with whatever we need to in order to get the original state. Just like in the general description from a moment ago.
+
+00:54:01
+The probability to obtain the outcome zero is the Euclid norm squared of this vector right here. The thing that we're tensing to cat zero in our expression of the vector Psi. And so the probability is three quarters and conditioned on getting the outcome zero. The quantum state of the pair XY becomes this where we normalize the vector tensor to cat zero, and that's equivalent to dividing by the square root of the probability that we just calculated. We can then simplify and this is what we get.
+
+00:54:38
+The probability to get the measurement outcome one is calculated in a similar way. We take the Euclid arm squared of this vector right here. The thing that's tensed to cat one in our expression of Psi and the resulting probability is one quarter, which it has to be of course, because our probabilities have to sum to one. In this case, the quantum state of XY becomes this where again we're normalizing by dividing by the Euclid norm so that we obtain this quantum state vector as a result.
+
+00:55:12
+The same method is used in a symmetric way, if Y is measured instead of X. Here's the original quantum state vector, and this time because Y is measured instead of X, we express the vector Psi as you see right here, where this time we isolate the standard basis vectors of Y rather than X tensing with whatever we need to to get an expression of Psi. Going through the calculation, which you can check by pausing the video if you like. We see that the probability to get the outcome zero is Phi8 this time, and here's the quantum state vector
+
+00:55:48
+that results conditioned upon getting that result. And the probability to get the outcome one is three eights, in which case this is our quantum state vector. You can use exactly the same method in case you have more than two systems and any proper subset of them are measured. And there's an example in the textbook content for this lesson that you can check out if you're interested. In short, we can always divide the systems into two separate collections, the ones that are measured and the ones that aren't.
+
+00:56:21
+And once we've done that, we fall back on the method method that I've just described, and that's how measurements for multiple quantum systems work. And now finally, we move on to unitary operations on multiple systems. Using the same basic idea that multiple systems can be viewed as single compound systems. We conclude what you see written here on the screen, quantum operations on compound systems are represented by unitary matrices just like we have for single systems and specifically the rows and columns
+
+00:56:53
+of those unitary matrices correspond to the Cartesian product of the classical state sets of whatever collection of systems we're talking about. For example, if we have a system X whose classical states are one, two, and three and Y is a Qubit, then the matrix that you see right here is an example of a unitary matrix that represents an operation on the pair XY. The details of how we order Cartesian products that we talked about before don't really matter for the sake of this example, it's just a six by six matrix that happens to be unitary.
+
+00:57:28
+There's nothing special about it, although it is built out of a couple of important matrices. The point is that you could choose any six by six unitary matrix and it would represent a unitary operation on XY. If we apply a collection of unitary operations independently each on its own system, then the action of them all together on the compound system is given by the tensor product. And here on the screen you can see a more precise statement of that fact. If our unitary operations are described
+
+00:57:59
+by the unitary matrices U1 through Un one for each of our systems, then the combined action on the compound system is given by the tensor product of U1 up to Un. Once again, similar to what we had in the probabilistic setting, an important example is that we apply some unitary operation U to a system X and we do nothing to some other system Y. The operation on XY that we get is U tensored with the identity matrix. The identity matrix describes doing nothing to Y. Sometimes it's helpful to write explicitly
+
+00:58:34
+that this identity matrix corresponds to the system Y, just to make the formulas more clear. And one option is to give the identity matrix a subscript like this that indicates the system that it acts upon. When it's clear enough, though we usually don't bother with a subscript, but when things get more complicated, it can be very helpful. And we can also consider the symmetric case where some unitary operation V is applied to Y and nothing is done to X, and this time the resulting unitary operation on XY,
+
+00:59:06
+is represented by this tensor product here. And once again, we can put a subscript on the identity matrix if it helps. Here are a couple of specific examples. If X and Y are Qubits and we perform a Hadamard operation on X and we do nothing to Y, we get the matrix that you see right here. If on the other hand, we perform the Hadamard operation on Y and we do nothing to X, the ordering of the tensor product is reversed. And so we get the matrix that you see right here. Not every unitary operation on a compound system
+
+00:59:44
+can be expressed as a tensor product. If we have a tensor product, then we have independence. And there are some pretty fundamental examples of operations that certainly don't act independently on multiple systems. For example, if X and Y have the same classical state set, which could be any classical state set sigma, then we can think about the swap operation on the pair XY. This operation doesn't change the ordering of the two systems, we still have X in the left and Y on the right, but rather it represents swapping the contents
+
+01:00:17
+of the two systems. Here you can see that expressed in the form of an equation where we have a tensor product of two quantum states. Another way to write it is as a matrix as we see right here. The way you can think about this description is that it tells you what happens for standard basis vectors. And once we know what happens for standard basis vectors, we know what happens for arbitrary quantum states by linearity, which in fact is also true for this expression right here. So this particular operation right here
+
+01:00:49
+happens to be a deterministic operation as well as a unitary operation. If X and Y are Qubits, for instance, we get this matrix representation right here. Here's an interesting connection between the swap operation and the four Bell states, which are shown right here for convenience. The swap operation leaves the first three of them alone, but it puts a minus sign in front of the Psi minus state, so there's something special about that one. You can check these equations directly by looking at these vectors
+
+01:01:23
+and considering what happens for the standard basis states swapping the two classical states for the first three Bell states doesn't do anything we get the same state we started with. In the fourth case however, the minus sign effectively moves from one term to the other when we perform the swap of the classical states, and that's equivalent to multiplying the vector by minus one. So performing the swap operation somehow kicks out a minus sign from this fourth Bell state. We'll have more to say about these equations later on,
+
+01:01:53
+but now let's move on to another type of operation, which is a controlled operation. We're going to suppose that X is a Qubit and Y is any system you want. If U as a unitary operation on Y, then a controlled U operation on XY is the operation that's expressed right here. First, using the direct notation and then using what's called a block matrix you just imagined filling in this bigger matrix with the smaller ones where these zeros really represent matrices filled with zeros. So each of these four blocks represents
+
+01:02:28
+a matrix having a number of rows and columns that agrees with the number of classical states of Y. The idea of a controlled operation, which we already encountered in the classical setting when we discussed a controlled NOT operation, is that if X is set to zero, then nothing happens to Y. But if X is set to one, then U is applied to Y. So X is called the control Qubit, and Y is called the target system, which in general doesn't have to be a Qubit. For a specific example, which I just mentioned,
+
+01:02:59
+we have a controlled NOT operation. If the first qubit is set to zero, nothing happens. And if the first qubit is set to one, then a NOT operation or equivalently, a sigma X operation is applied to the second Qubit. And here is it's matrix representation. We're talking about two Qubits here, so we could equally well decide that the second Qubit is the control and the first is the target. To describe that operation, we just swap the ordering in the tensor product, and the result is the matrix that you see right here.
+
+01:03:34
+If instead of a controlled-NOT operation, we consider a controlled sigma Z or controlled Z operation. We obtain this matrix representation right here. And for this one, it doesn't actually matter which is the control and which is the target. We get the same result either way. We can go further and we can consider a controlled swap operation. And here we're talking about swapping two Qubits, so we end up with three Qubits when we include the controlled Qubit. Each matrix representation looks like this.
+
+01:04:03
+It's pretty special operation and it's known as a Fredkin operation, or more commonly a Fredkin gate. When we think about it as a gate in a circuit, we'll discuss circuits in the next lesson. The last example is a controlled, controlled-NOT operation, which again is an operation on three Qubits. And here's its matrix representation. This operation is much better known as a Toffli operation or a Toffoli gate. We'll discuss it further and we'll see why both it and the Fredkin can operation
+
+01:04:32
+are very important operations in a later lesson. And that is the end of the second lesson. In this lesson, we discussed how quantum information works for multiple systems. I hope you'll join me for the third lesson soon, which is on quantum circuits protocols and games. Bye until then.
+

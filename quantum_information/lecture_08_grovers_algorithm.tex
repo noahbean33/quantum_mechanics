@@ -1,0 +1,207 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{physics}
+\usepackage{enumitem}
+\usepackage{hyperref}
+\usepackage{titlesec}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+\newtheorem{example}{Example}[section]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}{Theorem}[section]
+
+\titleformat{\section}{\large\bfseries}{Lecture 8.\thesection}{1em}{}
+
+\title{\textbf{Lecture 8: Grover's Algorithm} \\ \large Understanding Quantum Information \& Computation}
+\author{Based on the lectures by John Watrous (IBM Quantum)}
+\date{}
+
+\begin{document}
+\maketitle
+\tableofcontents
+\newpage
+
+%----------------------------------------------------------------------
+\section{Overview}
+%----------------------------------------------------------------------
+
+This lecture covers \textbf{Grover's algorithm}, which provides a \emph{quadratic} speedup for unstructured search problems.  Topics:
+
+\begin{enumerate}
+    \item The unstructured search problem.
+    \item The Grover iteration and its geometric interpretation.
+    \item Optimal number of iterations (unique and multiple solutions).
+    \item Lower bounds and remarks.
+\end{enumerate}
+
+%----------------------------------------------------------------------
+\section{The Unstructured Search Problem}
+%----------------------------------------------------------------------
+
+\begin{definition}
+Given a function $f:\{0,1\}^n\to\{0,1\}$, find a \textbf{solution}: a string $z$ with $f(z)=1$, or report that none exists.
+\end{definition}
+
+Let $N=2^n$ be the total number of input strings.
+
+\begin{itemize}
+    \item The function $f$ may be given as a black box (query model) or as a Boolean circuit.
+    \item No structure is assumed: it is like searching an unsorted phone book by number.
+    \item This is an NP-complete problem when $f$ is specified by a Boolean circuit.
+\end{itemize}
+
+\paragraph{Classical cost.}  Deterministic: $N$ queries (worst case).  Randomised: still $\Theta(N)$.
+
+\paragraph{Quantum cost (Grover).}  $O(\sqrt{N})$ queries---a \textbf{quadratic advantage}.
+
+\subsection{Phase Query Gates}
+
+\begin{definition}
+The \textbf{phase query gate} for $f$ is
+\[
+    Z_f\ket{x} = (-1)^{f(x)}\ket{x}.
+\]
+It can be implemented from a standard query gate $U_f$ via phase kickback (using a $\ket{-}$ ancilla).
+\end{definition}
+
+We also define the phase gate for the OR function on $n$ bits:
+\[
+    Z_{\mathrm{OR}}\ket{x} = \begin{cases}-\ket{x} & x\neq 0^n,\\ \;\;\ket{x} & x=0^n.\end{cases}
+\]
+
+%----------------------------------------------------------------------
+\section{Grover's Algorithm}
+%----------------------------------------------------------------------
+
+\subsection{The Algorithm}
+
+\begin{enumerate}
+    \item \textbf{Initialise:} $\ket{\psi_0}=H^{\otimes n}\ket{0^n}=\frac{1}{\sqrt{N}}\sum_{x\in\{0,1\}^n}\ket{x}$.
+    \item \textbf{Iterate:} Apply the \textbf{Grover operator} $G$ a total of $t$ times.
+    \item \textbf{Measure} in the standard basis to obtain a candidate solution $x$.
+\end{enumerate}
+
+\subsection{The Grover Operator}
+
+\[
+    G = -H^{\otimes n}\,Z_{\mathrm{OR}}\,H^{\otimes n}\,Z_f.
+\]
+Equivalently, $G = (2\ket{\psi_0}\!\bra{\psi_0}-I)\,Z_f$, where:
+\begin{itemize}
+    \item $Z_f$ is the \textbf{oracle}: flips the phase of solutions.
+    \item $2\ket{\psi_0}\!\bra{\psi_0}-I$ is the \textbf{diffusion operator}: reflects about the uniform superposition.
+\end{itemize}
+
+Each application of $G$ requires \textbf{one query} to $f$.
+
+%----------------------------------------------------------------------
+\section{Geometric Analysis}
+%----------------------------------------------------------------------
+
+\subsection{Two-Dimensional Invariant Subspace}
+
+Partition $\{0,1\}^n$ into solutions $A_1=\{x:f(x)=1\}$ and non-solutions $A_0=\{x:f(x)=0\}$.  Let $|A_1|=M$ (number of solutions).  Define normalised states:
+\[
+    \ket{A_0} = \frac{1}{\sqrt{N-M}}\sum_{x\in A_0}\ket{x},
+    \qquad
+    \ket{A_1} = \frac{1}{\sqrt{M}}\sum_{x\in A_1}\ket{x}.
+\]
+
+The initial state lies in the plane spanned by $\ket{A_0}$ and $\ket{A_1}$:
+\[
+    \ket{\psi_0} = \cos\frac{\alpha}{2}\,\ket{A_0}+\sin\frac{\alpha}{2}\,\ket{A_1},
+    \qquad\text{where}\quad \sin\frac{\alpha}{2}=\sqrt{\frac{M}{N}}.
+\]
+
+\subsection{Grover Operator as a Rotation}
+
+\begin{theorem}
+Restricted to $\operatorname{span}\{\ket{A_0},\ket{A_1}\}$, the Grover operator $G$ is a \textbf{rotation by angle $\alpha$}:
+\[
+    G^t\ket{\psi_0} = \cos\!\left(\frac{(2t+1)\alpha}{2}\right)\ket{A_0}
+                     +\sin\!\left(\frac{(2t+1)\alpha}{2}\right)\ket{A_1}.
+\]
+\end{theorem}
+
+The probability of measuring a solution after $t$ iterations is
+\[
+    p(t) = \sin^2\!\left(\frac{(2t+1)\alpha}{2}\right).
+\]
+
+%----------------------------------------------------------------------
+\section{Choosing the Number of Iterations}
+%----------------------------------------------------------------------
+
+\subsection{Unique Solution ($M=1$)}
+
+Here $\sin(\alpha/2)=1/\sqrt{N}$, so $\alpha\approx 2/\sqrt{N}$ for large $N$.
+
+The success probability is maximised when $(2t+1)\alpha/2\approx\pi/2$, giving
+\[
+    t^* = \left\lfloor\frac{\pi}{2\alpha}-\frac{1}{2}\right\rfloor
+        \approx \frac{\pi}{4}\sqrt{N}.
+\]
+
+\begin{theorem}
+Grover's algorithm finds the unique solution with probability $\ge 1-1/N$ using $O(\sqrt{N})$ queries.
+\end{theorem}
+
+\subsection{Multiple Solutions ($M>1$)}
+
+With $M$ solutions, $\alpha = 2\arcsin\sqrt{M/N}$ and the optimal iteration count is
+\[
+    t^* \approx \frac{\pi}{4}\sqrt{\frac{N}{M}}.
+\]
+
+If $M$ is known, we can choose $t^*$ directly.  If $M$ is unknown, \textbf{exponential search} strategies can be employed: try geometrically increasing values of $t$ until a solution is found.
+
+\begin{remark}[Over-rotation]
+Applying $G$ \emph{too many} times causes the state to rotate \emph{past} $\ket{A_1}$ and the success probability decreases.  Grover's algorithm is not monotone---more iterations can be worse.
+\end{remark}
+
+%----------------------------------------------------------------------
+\section{Optimality}
+%----------------------------------------------------------------------
+
+\begin{theorem}[BBBV lower bound]
+Any quantum algorithm that solves the unstructured search problem with bounded error must make $\Omega(\sqrt{N})$ queries.
+\end{theorem}
+
+Hence Grover's algorithm is \textbf{optimal} (up to constant factors) in the query model.
+
+%----------------------------------------------------------------------
+\section{Remarks and Generalisations}
+%----------------------------------------------------------------------
+
+\begin{itemize}
+    \item \textbf{Amplitude amplification.}  Grover's technique generalises: given any quantum algorithm that succeeds with probability $p$, amplitude amplification boosts the success probability to near~$1$ using $O(1/\sqrt{p})$ repetitions.
+    \item \textbf{Practical relevance.}  A quadratic speedup is significant but modest compared to the exponential speedup of Shor's algorithm.  Whether Grover-type speedups will be practically useful depends on hardware advances.
+    \item \textbf{No structure exploited.}  Grover's algorithm treats $f$ as a black box.  For structured problems, more powerful algorithms (like Shor's) may apply.
+    \item \textbf{Quantum minimum finding.}  Grover search can be adapted to find the minimum of a function, yielding a quadratic speedup for optimisation problems.
+\end{itemize}
+
+%----------------------------------------------------------------------
+\section{Summary}
+%----------------------------------------------------------------------
+
+\begin{center}
+\begin{tabular}{lcc}
+\hline
+& \textbf{Classical} & \textbf{Quantum (Grover)} \\\hline
+Queries for search ($M=1$) & $\Theta(N)$ & $\Theta(\sqrt{N})$ \\
+Queries for search ($M$ solutions) & $\Theta(N/M)$ & $\Theta(\sqrt{N/M})$ \\
+\hline
+\end{tabular}
+\end{center}
+
+Key ideas:
+\begin{itemize}
+    \item The Grover operator is a \textbf{rotation} in a 2D subspace.
+    \item Repeated application steers the state toward solutions.
+    \item The $\sqrt{N}$ query count is \textbf{provably optimal} for unstructured search.
+\end{itemize}
+
+\end{document}
